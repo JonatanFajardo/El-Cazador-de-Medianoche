@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Cazador de Medianoche y las Lágrimas Robadas</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="global-reset.js"></script>
 </head>
 <body>
     <header class="main-header">
@@ -15,9 +16,11 @@
                 <a href="index.html" class="nav-link active">Inicio</a>
                 <a href="personajes.html" class="nav-link">Personajes</a>
                 <a href="mundo-magico.html" class="nav-link">Mundo Mágico</a>
+                <a href="mapa-ramificaciones.html" class="nav-link">🗺️ Mapa Interactivo</a>
+                <button onclick="quickResetStory()" class="nav-link" style="background: linear-gradient(135deg, #e74c3c, #c0392b); color: white; border: none; cursor: pointer; padding: 10px 15px; border-radius: 5px;">
+                    🔄 Reiniciar
+                </button>
                 <a href="seccion-01.html" class="nav-link">Sección I</a>
-                <a href="seccion-02.html" class="nav-link">Sección II</a>
-                <a href="seccion-03.html" class="nav-link">Sección III</a>
             </nav>
         </div>
     </header>
@@ -106,13 +109,23 @@
                             Un reino donde especies conscientes coexisten: cuervos con ojos espejo, osos de cristal, 
                             luciérnagas guardianas y tejones mineros, cada uno con su propia cultura y sabiduría.
                         </p>
+                        <a href="mundo-magico.html" class="element-link">Explorar Mundo</a>
+                    </div>
+
+                    <div class="element-card">
+                        <h3 class="element-title">🗺️ Mapa Interactivo</h3>
+                        <p class="element-description">
+                            Sistema de decisiones con 32 rutas únicas, 5 decisiones principales y 2 finales diferentes. 
+                            Explora todas las ramificaciones narrativas y ve cómo tus elecciones impactan la historia.
+                        </p>
+                        <a href="mapa-ramificaciones.html" class="element-link">Ver Mapa Completo</a>
                     </div>
 
                     <div class="element-card">
                         <h3 class="element-title">Artefactos Legendarios</h3>
                         <p class="element-description">
                             Las Lágrimas de Luna, gemas celestiales con poder absoluto de curación, y el arco élfico 
-                            heredado que se calienta ante el peligro, guiando al héroe en momentos cruciales.
+                            heredado que conecta a Axel con la sabiduría de su padre en momentos cruciales.
                         </p>
                     </div>
 
@@ -152,6 +165,29 @@
                     </p>
                     <cite class="quote-source">— El Espíritu del Padre de Axel</cite>
                 </blockquote>
+            </div>
+        </section>
+
+        <section class="quick-access">
+            <div class="container">
+                <h2 class="section-title">🎮 Controles de Historia</h2>
+                <div class="quick-reset-section" style="max-width: 600px; margin: 0 auto;">
+                    <p>¿Ya has comenzado tu aventura? Gestiona tu progreso aquí:</p>
+                    <div class="quick-reset-buttons">
+                        <button class="quick-reset-btn" onclick="showCurrentProgress()">
+                            📊 Ver Mi Progreso
+                        </button>
+                        <button class="quick-reset-btn restart-from-beginning" onclick="quickResetStory()">
+                            🔄 Reiniciar Historia
+                        </button>
+                        <button class="quick-reset-btn" onclick="window.location.href='mapa-ramificaciones.html'">
+                            🗺️ Ver Todas las Rutas
+                        </button>
+                        <button class="quick-reset-btn" onclick="window.location.href='seccion-01.html'" style="background: linear-gradient(135deg, #3498db, #2980b9);">
+                            ▶️ Comenzar/Continuar
+                        </button>
+                    </div>
+                </div>
             </div>
         </section>
 

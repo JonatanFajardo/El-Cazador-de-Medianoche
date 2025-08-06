@@ -14,7 +14,7 @@
 body {
     font-family: 'EB Garamond', 'Georgia', serif;
     line-height: 1.7;
-    max-width: 900px;
+    /* max-width: 900px; */
     margin: 0 auto;
     padding: 30px;
     background-color: #0f0f0f;
@@ -982,6 +982,603 @@ a:hover {
     .whisper-text {
         font-size: 0.9em;
     }
+}
+
+/* === SISTEMA DE VOTACIÓN INTERACTIVA === */
+
+/* Contenedor principal de votación */
+.voting-section {
+    background: linear-gradient(135deg, #2a1a1a 0%, #1a1a2a 50%, #1a1a1a 100%);
+    border: 2px solid #4a4a6a;
+    border-radius: 12px;
+    padding: 30px;
+    margin: 40px 0;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.voting-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #d4af37, #cd853f, #d4af37);
+    animation: votingGlow 3s ease-in-out infinite;
+}
+
+@keyframes votingGlow {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
+/* Encabezado de decisión */
+.decision-header {
+    text-align: center;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.decision-header h3 {
+    font-family: 'Cinzel', serif;
+    color: #d4af37;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+.decision-context {
+    font-family: 'EB Garamond', serif;
+    color: #cd853f;
+    font-style: italic;
+    font-size: 1.1em;
+    text-indent: 0 !important;
+    margin-bottom: 0;
+}
+
+/* Pregunta de decisión */
+.decision-question {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: rgba(192, 192, 192, 0.05);
+    border-radius: 8px;
+    border: 1px solid rgba(192, 192, 192, 0.1);
+}
+
+.question-text {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.2em;
+    color: #e8e8e8;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-indent: 0 !important;
+    font-weight: 500;
+}
+
+/* Opciones de decisión */
+.decision-options {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.option-button {
+    flex: 1;
+    background: linear-gradient(135deg, #2a2a2a 0%, #3a3a3a 100%);
+    border: 2px solid #555;
+    border-radius: 8px;
+    padding: 20px;
+    color: #e8e8e8;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'EB Garamond', serif;
+    font-size: 1em;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.option-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.option-button:hover::before {
+    left: 100%;
+}
+
+.option-button:hover {
+    border-color: #d4af37;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.2);
+}
+
+.option-button:active {
+    transform: translateY(-1px);
+}
+
+.option-a:hover {
+    border-color: #4169e1;
+    box-shadow: 0 8px 20px rgba(65, 105, 225, 0.2);
+}
+
+.option-b:hover {
+    border-color: #32cd32;
+    box-shadow: 0 8px 20px rgba(50, 205, 50, 0.2);
+}
+
+.option-label {
+    display: block;
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: 1.1em;
+    color: #d4af37;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.option-a .option-label {
+    color: #4169e1;
+}
+
+.option-b .option-label {
+    color: #32cd32;
+}
+
+.option-text {
+    display: block;
+    font-size: 1.05em;
+    line-height: 1.5;
+    color: #ccc;
+}
+
+/* Impacto de decisión */
+.decision-impact {
+    margin-top: 20px;
+}
+
+.decision-impact details {
+    background: rgba(212, 175, 55, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 6px;
+    padding: 15px;
+}
+
+.decision-impact summary {
+    font-family: 'Cinzel', serif;
+    color: #d4af37;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.decision-impact summary:hover {
+    color: #cd853f;
+}
+
+.decision-impact p {
+    font-size: 0.95em;
+    color: #bbb;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-indent: 0 !important;
+    margin-top: 10px;
+}
+
+/* Confirmación de decisión */
+.decision-confirmation {
+    text-align: center;
+    padding: 40px 20px;
+    animation: confirmationAppear 0.5s ease-out;
+}
+
+@keyframes confirmationAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.confirmation-icon {
+    font-size: 3em;
+    margin-bottom: 20px;
+    animation: iconPulse 1s ease-in-out infinite;
+}
+
+@keyframes iconPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.decision-confirmation h3 {
+    font-family: 'Cinzel', serif;
+    color: #d4af37;
+    font-size: 1.4em;
+    margin-bottom: 15px;
+}
+
+.decision-confirmation p {
+    font-size: 1.1em;
+    color: #ccc;
+    text-indent: 0 !important;
+    margin-bottom: 20px;
+}
+
+/* Indicador de carga */
+.loading-indicator {
+    width: 200px;
+    height: 4px;
+    background: #333;
+    border-radius: 2px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.loading-bar {
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #d4af37, #cd853f);
+    border-radius: 2px;
+    animation: loadingProgress 2s ease-out forwards;
+}
+
+@keyframes loadingProgress {
+    to { width: 100%; }
+}
+
+/* Indicador de progreso */
+.progress-indicator {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 30px 0;
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.progress-title {
+    font-family: 'Cinzel', serif;
+    color: #d4af37;
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+.progress-count {
+    font-family: 'EB Garamond', serif;
+    color: #cd853f;
+    font-size: 1em;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: #333;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #d4af37, #cd853f);
+    border-radius: 3px;
+    transition: width 0.5s ease;
+}
+
+/* Resumen de decisiones */
+.decisions-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.decision-summary-item {
+    font-family: 'EB Garamond', serif;
+    font-size: 0.9em;
+    color: #bbb;
+    padding: 8px 12px;
+    background: rgba(42, 42, 42, 0.5);
+    border-radius: 4px;
+    border-left: 3px solid #555;
+}
+
+/* Botón de reinicio */
+.reset-container {
+    text-align: center;
+    margin: 40px 0;
+    padding: 25px;
+    background: rgba(139, 0, 0, 0.1);
+    border: 1px solid rgba(139, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+.reset-button {
+    font-family: 'Cinzel', serif;
+    background: linear-gradient(135deg, #8b0000, #a52a2a);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 24px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.reset-button:hover {
+    background: linear-gradient(135deg, #a52a2a, #b22222);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(139, 0, 0, 0.3);
+}
+
+.reset-description {
+    font-family: 'EB Garamond', serif;
+    color: #888;
+    font-size: 0.9em;
+    text-indent: 0 !important;
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+
+/* Responsive para sistema de votación */
+@media (max-width: 768px) {
+    .voting-section {
+        padding: 20px;
+        margin: 30px 0;
+    }
+    
+    .decision-options {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .option-button {
+        padding: 16px;
+        text-align: center;
+    }
+    
+    .decision-header h3 {
+        font-size: 1.3em;
+    }
+    
+    .question-text {
+        font-size: 1.1em;
+    }
+    
+    .progress-header {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+    
+    .decisions-summary {
+        grid-template-columns: 1fr;
+    }
+    
+    .reset-container {
+        padding: 20px;
+        margin: 30px 0;
+    }
+}
+
+/* === CONTENEDORES ESPECÍFICOS PARA VOTACIÓN === */
+
+/* Contenedor de decisión - debe estar presente en cada página de votación */
+#decision-container {
+    margin: 40px 0;
+}
+
+/* Contenedor de progreso - debe estar presente en páginas con sistema de seguimiento */
+#progress-indicator {
+    margin: 30px 0;
+}
+
+/* Contenedor de reinicio - debe estar presente donde se permita reiniciar */
+#reset-container {
+    margin: 40px 0;
+}
+
+/* Estados especiales para las decisiones */
+.decision-made {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.decision-locked .option-button {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.decision-active .option-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.25);
+}
+
+/* Estilos para botones de reinicio mejorados */
+.reset-button {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 20px auto;
+}
+
+.reset-button:hover {
+    background: linear-gradient(135deg, #c0392b, #a93226);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+}
+
+.reset-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(231, 76, 60, 0.3);
+}
+
+.reset-confirmation {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    border: 2px solid #3498db;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    color: #ecf0f1;
+    margin: 20px 0;
+}
+
+.reset-confirmation .confirmation-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.reset-confirmation h3 {
+    color: #3498db;
+    margin-bottom: 10px;
+}
+
+/* Botón de reinicio global en navegación */
+.global-reset-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(231, 76, 60, 0.4);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.global-reset-btn:hover {
+    background: linear-gradient(135deg, #c0392b, #a93226);
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(231, 76, 60, 0.6);
+}
+
+.global-reset-btn::after {
+    content: 'Reiniciar Historia';
+    position: absolute;
+    right: 70px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.global-reset-btn:hover::after {
+    opacity: 1;
+}
+
+/* Botones de reinicio en el mapa de ramificaciones */
+.quick-reset-section {
+    background: #2a2a2a;
+    border: 2px solid #e74c3c;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.quick-reset-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.quick-reset-btn {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(243, 156, 18, 0.3);
+}
+
+.quick-reset-btn:hover {
+    background: linear-gradient(135deg, #e67e22, #d35400);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(243, 156, 18, 0.4);
+}
+
+.restart-from-beginning {
+    background: linear-gradient(135deg, #27ae60, #229954);
+}
+
+.restart-from-beginning:hover {
+    background: linear-gradient(135deg, #229954, #1e8449);
+    box-shadow: 0 5px 15px rgba(39, 174, 96, 0.4);
+}
+
+/* Botón de reinicio en navegación */
+.nav-link button,
+button.nav-link {
+    transition: all 0.3s ease;
+}
+
+.nav-link button:hover,
+button.nav-link:hover {
+    background: linear-gradient(135deg, #c0392b, #a93226) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
 }
 
 /* Fin de estilos */
