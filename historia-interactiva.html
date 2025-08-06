@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Cazador de Medianoche - Historia Interactiva</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="decision-styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- ===================== HEADER Y NAVEGACIÓN ===================== -->
+        <header class="main-header">
+            <h1>El Cazador de Medianoche y las Lágrimas Robadas</h1>
+            <p class="subtitle">Una Historia Interactiva</p>
+        </header>
+
+        <!-- ===================== PANEL DE PROGRESO ===================== -->
+        <aside id="progreso-decisiones" class="progreso-panel">
+            <!-- Contenido generado dinámicamente por JavaScript -->
+        </aside>
+
+        <!-- ===================== CONTENIDO PRINCIPAL ===================== -->
+        <main class="historia-contenido">
+            
+            <!-- ===================== INTRODUCCIÓN ===================== -->
+            <section id="introduccion">
+                <h2>El Encuentro</h2>
+                <p class="texto-narrativo">
+                    Las Montañas Heladas se extendían interminables bajo un cielo plomizo. Axel, gato montés de pelaje gris como la niebla, avanzaba con paso silencioso entre las rocas escarpadas. Su arco élfico, herencia paterna, colgaba de su hombro, y sus ojos heterocromáticos —uno dorado para rastrear movimiento, otro plateado para la visión nocturna— escrutaban constantemente el terreno.
+                </p>
+                
+                <p class="texto-narrativo">
+                    Un gemido débil quebró el silencio de la montaña. Axel se detuvo, sus músculos tensándose instintivamente. El sonido provenía de detrás de una formación rocosa, apenas audible pero inconfundiblemente... desesperado.
+                </p>
+
+                <p class="texto-narrativo">
+                    Al bordear las rocas, la escena se reveló ante él: una mantis religiosa yacía herida entre las piedras, su exoesqueleto verde brillante manchado de hemolinfa dorada. Era más grande de lo normal para su especie, casi tan alta como él, y sus ojos compuestos reflejaban dolor genuino.
+                </p>
+
+                <p class="texto-narrativo enfasis">
+                    "Por favor..." susurró la mantis con voz quebrada. "Ayúdame... busco... las Lágrimas de Luna. Mi madre... está muriendo..."
+                </p>
+
+                <p class="texto-narrativo">
+                    Algo en el instinto cazador de Axel se agitó. Había algo extraño en esta situación, pero la desesperación en la voz de la criatura parecía auténtica. Sus ojos se encontraron con los de ella, y por un momento, el mundo se redujo a esa decisión crucial.
+                </p>
+            </section>
+
+            <!-- ===================== DECISIÓN 1: PRIMERA IMPRESIÓN ===================== -->
+            <div id="decision-1" class="decision-point">
+                <h3 class="decision-title">¿Cómo responde Axel a esta criatura herida?</h3>
+                <div class="decision-buttons">
+                    <button onclick="tomarDecision(1, 'A')" class="decision-btn option-a">
+                        <strong>Confiar completamente</strong>
+                        <span>Guardar el arco y acercarse sin precauciones</span>
+                    </button>
+                    <button onclick="tomarDecision(1, 'B')" class="decision-btn option-b">
+                        <strong>Ayudar con cautela</strong>
+                        <span>Mantener el arco listo mientras se acerca</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- ===================== CONTENIDO POST-DECISIÓN 1 ===================== -->
+            <section id="encuentro-confianza" class="hidden contenido-condicional">
+                <p class="texto-narrativo">
+                    Sin dudarlo, Axel desenganchó su arco y lo dejó cuidadosamente contra una roca. "No te preocupes," murmuró acercándose con las manos abiertas. "Estás a salvo."
+                </p>
+
+                <p class="texto-narrativo">
+                    Los ojos compuestos de la mantis se llenaron de una sorpresa genuina. En todos sus años de manipulación y engaño, raramente había encontrado tanta confianza inmediata. Por un momento —solo un momento— algo en su corazón endulzado por el odio se agitó.
+                </p>
+
+                <p class="dialogo">
+                    "Eres... muy bondadoso," susurró Seraphina, y por primera vez en años, no estaba actuando completamente. "Mi nombre es Seraphina. Y tú eres más noble de lo que esperaba encontrar en estas montañas desoladas."
+                </p>
+
+                <p class="texto-narrativo">
+                    Axel comenzó a examinar sus heridas con cuidado experto. "Soy Axel. Y todos merecen ayuda cuando están heridos. ¿Puedes contarme qué te pasó?"
+                </p>
+            </section>
+
+            <section id="encuentro-cautela" class="hidden contenido-condicional">
+                <p class="texto-narrativo">
+                    Axel mantuvo una mano en su arco mientras se acercaba lentamente. Sus años como cazador solitario le habían enseñado que la supervivencia dependía de la precaución. "Voy a ayudarte," dijo con voz firme, "pero mantendré mis defensas."
+                </p>
+
+                <p class="texto-narrativo">
+                    Seraphina notó inmediatamente la cautela en sus movimientos, la forma en que sus ojos nunca dejaron de evaluar amenazas potenciales. <em>Inteligente,</em> pensó. <em>Este será más desafiante de manipular que los otros.</em>
+                </p>
+
+                <p class="dialogo">
+                    "Comprendo tu precaución," dijo Seraphina con voz cuidadosamente modulada. "En estos tiempos, la confianza es un lujo peligroso. Soy Seraphina, y te agradezco tu ayuda, incluso con tus reservas justificadas."
+                </p>
+
+                <p class="texto-narrativo">
+                    Axel asintió mientras evaluaba sus heridas. "Soy Axel. La precaución me ha mantenido vivo. Ahora, cuéntame: ¿quién te hizo esto y por qué buscas las Lágrimas de Luna?"
+                </p>
+            </section>
+
+            <!-- ===================== DESARROLLO INICIAL ===================== -->
+            <section id="desarrollo-inicial" class="hidden">
+                <h3>La Historia de Seraphina</h3>
+                
+                <p class="texto-narrativo">
+                    Mientras Axel curaba sus heridas con hierbas de su morral, Seraphina comenzó a tejer su historia. Su voz temblaba con dolor calculado, cada palabra elegida para despertar compasión.
+                </p>
+
+                <p class="dialogo">
+                    "Mi madre... está convertida en estatua de mármol por una maldición. Solo las Lágrimas de Luna pueden romper el hechizo. Pero los gatos monteses que custodiaban el camino... me atacaron sin razón. Dijeron que las mantis no merecíamos tal poder."
+                </p>
+
+                <p class="texto-narrativo">
+                    Los ojos de Axel se oscurecieron. Su propia experiencia con la intolerancia entre especies le hizo identificarse con su historia. "Los prejuicios de algunos no representan a todos nosotros. ¿Sabes dónde encontrar las Lágrimas?"
+                </p>
+
+                <p class="dialogo">
+                    "Sí... pero el camino es peligroso. Necesito un compañero fuerte, alguien que entienda tanto la supervivencia como la compasión." Seraphina lo miró directamente. "¿Podrías... ayudarme?"
+                </p>
+
+                <p class="texto-narrativo">
+                    Axel consideró la petición. Las Lágrimas de Luna eran legendarias —gemas celestiales que caían una vez por siglo con poder de curación absoluta. Si realmente podían salvar a una madre...
+                </p>
+
+                <p class="dialogo fuerte">
+                    "Te ayudaré," decidió finalmente. "Nadie debería perder a su madre si hay una forma de evitarlo."
+                </p>
+            </section>
+
+            <!-- ===================== DECISIÓN 2: ALIADOS INICIALES ===================== -->
+            <div id="decision-2" class="decision-point hidden">
+                <h3 class="decision-title">El Sendero se Divide</h3>
+                
+                <p class="decision-context">
+                    Después de un día de viaje, Axel y Seraphina llegaron a una bifurcación del sendero. Seraphina consultó un mapa ancestral de piel curtida, sus ojos brillando con cálculo oculto.
+                </p>
+
+                <p class="decision-context">
+                    "Ambos caminos llevan a las Cuevas Brillantes donde viven los Osos de Cristal," explicó. "Pero podemos obtener ayuda en el camino. Los Zorros Plateros son maestros metalúrgicos, pero desconfiados. Los Murciélagos Bibliotecarios poseen conocimiento ancestral, pero son exigentes."
+                </p>
+
+                <div class="decision-buttons">
+                    <button onclick="tomarDecision(2, 'A')" class="decision-btn option-a">
+                        <strong>Buscar a los Zorros Plateros</strong>
+                        <span>Obtener herramientas y armas mejoradas</span>
+                    </button>
+                    <button onclick="tomarDecision(2, 'B')" class="decision-btn option-b">
+                        <strong>Ir con los Murciélagos Bibliotecarios</strong>
+                        <span>Buscar conocimiento y sabiduría ancestral</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- ===================== CONTENIDO ALIADOS - ZORROS ===================== -->
+            <section id="zorros-confianza" class="hidden contenido-condicional">
+                <h3>La Forja de los Zorros Plateros</h3>
+                
+                <p class="texto-narrativo">
+                    La aldea de los Zorros Plateros se extendía como una red de forjas humeantes entre las rocas. El aire resonaba con el repiqueteo de martillos contra yunques, y el aroma de metal caliente llenaba el ambiente.
+                </p>
+
+                <p class="texto-narrativo">
+                    Ferrum Colaplata, el anciano líder con bigotes de plata pura, recibió a Axel con respeto inmediato. Su confianza abierta había impresionado a los zorros desde el momento de su llegada.
+                </p>
+
+                <p class="dialogo">
+                    "Un gato montés que confía," murmuró Ferrum, sus ojos brillando con aprobación. "Hace tiempo que no veo tal nobleza. ¿Qué buscas en nuestras forjas, hermano?"
+                </p>
+
+                <p class="texto-narrativo">
+                    Cuando Axel explicó su misión, los zorros intercambiaron miradas significativas. Un joven zorro susurró algo sobre "la mantis de las profecías," pero Ferrum lo silenció con una mirada.
+                </p>
+
+                <p class="dialogo">
+                    "Te forjaremos flechas de plata pura," decidió Ferrum. "Pueden atravesar ilusiones y revelar verdades ocultas. Pero a cambio, debes prometer usarlas con sabiduría."
+                </p>
+            </section>
+
+            <section id="zorros-cautela" class="hidden contenido-condicional">
+                <h3>Prueba de los Zorros</h3>
+                
+                <p class="texto-narrativo">
+                    Los Zorros Plateros observaron a Axel con ojos evaluadores. Su cautela natural resonaba con su propia filosofía de desconfianza ganada con experiencia.
+                </p>
+
+                <p class="dialogo">
+                    "La prudencia es sabiduría," asintió Ferrum Colaplata. "Pero debemos probarte antes de otorgar nuestras creaciones. Forja una punta de flecha con tus propias manos. Solo así sabremos si mereces nuestras armas."
+                </p>
+
+                <p class="texto-narrativo">
+                    Durante horas, Axel trabajó en la forja, sus movimientos cuidadosos y precisos. Los zorros observaron no solo su técnica, sino su carácter bajo presión. Cuando terminó, había creado una punta de flecha perfectamente equilibrada.
+                </p>
+
+                <p class="dialogo">
+                    "Bien hecho. Tu cautela no te impide actuar cuando es necesario." Ferrum sonrió. "Te daremos flechas de plata. Pero recuerda: la desconfianza sin acción es cobardía."
+                </p>
+            </section>
+
+            <!-- ===================== CONTENIDO ALIADOS - MURCIÉLAGOS ===================== -->
+            <section id="murcielagos-confianza" class="hidden contenido-condicional">
+                <h3>La Biblioteca Suspendida</h3>
+                
+                <p class="texto-narrativo">
+                    Las cuevas de los Murciélagos Bibliotecarios se extendían como una catedral gótica tallada en la roca viva. Miles de pergaminos colgaban del techo como estalactitas de conocimiento, y el susurro de alas creaba una sinfonía constante.
+                </p>
+
+                <p class="texto-narrativo">
+                    Eco Pergaminada, la matriarca anciana con alas que parecían páginas antiguas, descendió graciosamente hasta Axel. Su confianza inmediata había abierto puertas que usualmente permanecían cerradas a los forasteros.
+                </p>
+
+                <p class="dialogo">
+                    "La confianza es la llave de todo conocimiento verdadero," murmuró Eco con voz que resonaba como pergamino rozando pergamino. "Raramente vemos tal apertura de corazón. ¿Qué sabiduría buscas?"
+                </p>
+
+                <p class="texto-narrativo">
+                    Los murciélagos intercambiaron miradas cuando Axel mencionó a Seraphina y las Lágrimas de Luna. Eco voló hasta un pergamino específico, sus ojos brillando con conocimiento ancestral.
+                </p>
+
+                <p class="dialogo">
+                    "Las profecías hablan de una mantis que buscará las Lágrimas," susurró Eco. "Te daremos flechas bendecidas con anti-engaño. Pero recuerda: la confianza debe ser templada con sabiduría."
+                </p>
+            </section>
+
+            <section id="murcielagos-cautela" class="hidden contenido-condicional">
+                <h3>El Acertijo de los Sabios</h3>
+                
+                <p class="texto-narrativo">
+                    Los Murciélagos Bibliotecarios apreciaron inmediatamente la cautela de Axel. Eco Pergaminada descendió lentamente, evaluando cada aspecto de su comportamiento.
+                </p>
+
+                <p class="dialogo">
+                    "La prudencia es el comienzo de la sabiduría verdadera," asintió Eco. "Pero el conocimiento debe ganarse. Responde este acertijo: ¿Cuándo es la verdad más peligrosa?"
+                </p>
+
+                <p class="texto-narrativo">
+                    Axel reflexionó cuidadosamente antes de responder. "Cuando quien la conoce no está preparado para actuar según ella."
+                </p>
+
+                <p class="dialogo">
+                    "Bien respondido. Tu cautela viene acompañada de sabiduría." Eco sonrió. "Te daremos flechas de anti-engaño y conocimiento sobre las Lágrimas. Pero ten cuidado: la mantis que te acompaña aparece en profecías antiguas."
+                </p>
+            </section>
+
+            <!-- ===================== CAMINO A LOS CUERVOS ===================== -->
+            <section id="camino-cuervos" class="hidden">
+                <h3>Hacia las Cuevas Brillantes</h3>
+                
+                <!-- Contenido con flechas de plata -->
+                <div id="flechas-plata" class="hidden contenido-condicional">
+                    <p class="texto-narrativo">
+                        Las flechas de plata pura brillaban en el carcaj de Axel, cada una grabada con runas de verdad. Los Zorros Plateros le habían advertido que estas flechas podían atravesar cualquier ilusión y revelar la naturaleza real de las cosas.
+                    </p>
+                </div>
+
+                <!-- Contenido con flechas anti-engaño -->
+                <div id="flechas-antiengano" class="hidden contenido-condicional">
+                    <p class="texto-narrativo">
+                        Las flechas anti-engaño zumbaban suavemente en el carcaj de Axel, imbuidas con la sabiduría ancestral de los murciélagos. Cada punta había sido bendecida para revelar verdades ocultas y neutralizar manipulaciones mentales.
+                    </p>
+                </div>
+
+                <p class="texto-narrativo">
+                    El viaje hacia las Cuevas Brillantes los llevó a través de valles neblinosos y senderos serpenteantes. Seraphina parecía conocer el camino perfectamente, guiando a Axel con seguridad que comenzaba a resultarle inquietante.
+                </p>
+
+                <p class="texto-narrativo">
+                    En el aire flotaba una melodía apenas perceptible, como el sonido de una flauta tocada por el viento. Axel se detuvo súbitamente, su corazón latiendo más rápido.
+                </p>
+
+                <p class="dialogo">
+                    "¿Escuchas eso?" murmuró, sus ojos escrutando las montañas circundantes.
+                </p>
+
+                <p class="dialogo">
+                    "¿El qué?" respondió Seraphina, aunque sus ojos se aguzaron. Ella también lo había escuchado.
+                </p>
+
+                <p class="texto-narrativo">
+                    Era una melodía que solo una persona en el mundo conocía. Una canción que su padre les había enseñado a él y a su hermano menor, Ember, como código secreto de emergencia.
+                </p>
+            </section>
+
+            <!-- ===================== DECISIÓN 3: EMBER ===================== -->
+            <div id="decision-3" class="decision-point hidden">
+                <h3 class="decision-title">La Melodía Familiar</h3>
+                
+                <p class="decision-context">
+                    La melodía de flauta se volvió más clara, definitivamente reconocible. Era una canción que su padre solía cantarles cuando eran pequeños, una melodía simple que solo Ember recordaba tocar.
+                </p>
+
+                <p class="decision-context">
+                    Seraphina observaba atentamente la reacción de Axel, calculando. La aparición de otro miembro de su familia no estaba en sus planes originales.
+                </p>
+
+                <div class="decision-buttons">
+                    <button onclick="tomarDecision(3, 'A')" class="decision-btn option-a">
+                        <strong>Investigar la melodía</strong>
+                        <span>Buscar a Ember y descubrir por qué está aquí</span>
+                    </button>
+                    <button onclick="tomarDecision(3, 'B')" class="decision-btn option-b">
+                        <strong>Continuar la misión</strong>
+                        <span>Mantener el foco en salvar a la madre de Seraphina</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- ===================== CONTENIDO EMBER ===================== -->
+            <section id="melodia-ember" class="hidden contenido-condicional">
+                <p class="texto-narrativo">
+                    "Espera," dijo Axel, levantando una mano. "Conozco esa melodía. Es mi hermano."
+                </p>
+
+                <p class="texto-narrativo">
+                    Siguieron el sonido por un sendero lateral que llevaba a un pequeño claro rodeado de pinos. Allí, sentado en una roca con una flauta élfica entre sus manos, estaba Ember.
+                </p>
+            </section>
+
+            <section id="encuentro-hermanos" class="hidden contenido-condicional">
+                <h3>El Reencuentro</h3>
+                
+                <p class="texto-narrativo">
+                    Ember levantó la vista al escuchar pasos, y sus ojos —tan similares a los de Axel pero más cálidos— se llenaron de alivio. Era menor que Axel por tres años, con pelaje castaño rojizo y una complexión más delgada, construida para la velocidad y la diplomacia más que para el combate.
+                </p>
+
+                <p class="dialogo">
+                    "Axel," suspiró Ember, guardando su flauta. "Gracias a los ancestros que te encontré. He estado siguiendo rumores sobre ti durante días."
+                </p>
+
+                <p class="dialogo">
+                    "¿Ember? ¿Qué haces aquí? ¿Cómo supiste dónde encontrarme?"
+                </p>
+
+                <p class="dialogo">
+                    "Los comerciantes hablan de un gato montés que viaja con una mantis religiosa buscando las Lágrimas de Luna. Y yo..." Ember miró a Seraphina con ojos que parecían ver más de lo que ella deseaba, "he escuchado otras historias sobre mantis recientemente."
+                </p>
+
+                <p class="texto-narrativo">
+                    Seraphina se tensó imperceptiblemente. Este hermano menor tenía una presencia diferente, más sutil pero potencialmente más peligrosa para sus planes.
+                </p>
+            </section>
+
+            <section id="dialogo-ember" class="hidden contenido-condicional">
+                <h3>Conversaciones entre Hermanos</h3>
+                
+                <p class="dialogo">
+                    "Ember, te presento a Seraphina. Su madre está maldecida, convertida en estatua de mármol. Las Lágrimas de Luna pueden salvarla."
+                </p>
+
+                <p class="texto-narrativo">
+                    Ember estudió a Seraphina con la mirada penetrante de quien había dedicado su vida a leer intenciones ocultas. Como mediador diplomático, había desarrollado una sensibilidad especial para detectar engaños.
+                </p>
+
+                <p class="dialogo">
+                    "Es una causa noble," dijo Ember cuidadosamente. "Pero hermano, ¿has considerado por qué tantas mantis han sido vistas en territorio de gatos monteses recientemente? Los reportes que he escuchado..."
+                </p>
+
+                <p class="dialogo interruption">
+                    "Mi especie está desesperada," interrumpió Seraphina, su voz cargada de emoción calculada. "Cuando una familia sufre, a veces tomamos riesgos que normalmente no consideraríamos."
+                </p>
+
+                <p class="texto-narrativo">
+                    Axel notó la tensión sutil entre su hermano y Seraphina. Ember tenía razón en ser cauteloso —siempre había sido el más diplomático y observador de los dos— pero la desesperación de Seraphina parecía genuina.
+                </p>
+
+                <p class="dialogo">
+                    "Si vamos a hacer esto," dijo finalmente Axel, "es mejor que vayamos juntos. Ember, ¿puedes dejar a tu familia por unos días?"
+                </p>
+
+                <p class="dialogo">
+                    "Luna Suave y los gemelos están seguros en Valle Tranquilo. Y francamente," Ember miró directamente a Seraphina, "creo que necesitas que alguien cuide tus espaldas en esta misión."
+                </p>
+            </section>
+
+            <section id="continuar-solo" class="hidden contenido-condicional">
+                <p class="texto-narrativo">
+                    Axel miró hacia la dirección de la melodía, sintiendo un tirón en su corazón. Pero su compromiso con Seraphina era claro, y cada momento perdido podría significar la muerte de su madre.
+                </p>
+
+                <p class="dialogo">
+                    "No puedo desviarme ahora," decidió firmemente. "Si Ember necesita ayuda, tendrá que esperar. Una vida depende de que lleguemos a tiempo."
+                </p>
+
+                <p class="texto-narrativo">
+                    Seraphina sintió una oleada de satisfacción. Sin la interferencia del hermano diplomático, Axel seguiría siendo completamente suyo para manipular.
+                </p>
+
+                <p class="texto-narrativo">
+                    La melodía se desvaneció en la distancia mientras continuaron su camino hacia las Cuevas Brillantes, sin saber que Ember los siguió a distancia, preocupado por los rumores que había escuchado sobre mantis asesinas.
+                </p>
+            </section>
+
+            <!-- ===================== LLEGADA A LOS CUERVOS ===================== -->
+            <section id="llegada-cuervos" class="hidden">
+                <h3>El Bosque de los Cuervos Espejo</h3>
+                
+                <p class="texto-narrativo">
+                    Después de obtener las Lágrimas de Cristal de los Osos de Cristal —una prueba que había revelado más sobre el carácter de cada uno— el grupo llegó al Bosque de los Cuervos Espejo.
+                </p>
+
+                <p class="texto-narrativo">
+                    Los árboles se alzaban como columnas negras contra el cielo crepuscular, y cientos de cuervos los observaban desde las ramas con ojos que reflejaban como espejos. Se decía que estos cuervos podían mostrar verdades ocultas en sus reflejos.
+                </p>
+
+                <p class="texto-narrativo">
+                    Fue entonces cuando apareció Lyra.
+                </p>
+            </section>
+
+            <section id="revelacion-lyra" class="hidden">
+                <h3>La Verdad Revelada</h3>
+                
+                <p class="texto-narrativo">
+                    Una gata montés de pelaje negro con manchas doradas emergió de entre los árboles. Sus ojos brillaban con determinación férrea y dolor apenas contenido. En su mano portaba evidencia que cambiaría todo.
+                </p>
+
+                <p class="dialogo fuerte">
+                    "¡Axel!" gritó Lyra, "¡Aléjate de esa mantis! ¡Es una asesina!"
+                </p>
+
+                <p class="texto-narrativo">
+                    El mundo de Axel se detuvo. Seraphina se tensó como un resorte, sus músculos preparándose para huir o luchar.
+                </p>
+
+                <p class="dialogo">
+                    "Mi nombre es Lyra Cazavientos. He estado siguiendo el rastro de esta mantis durante semanas. Ha matado a seis gatos monteses, incluyendo..." su voz se quebró ligeramente, "a mi hermana Luna Platino."
+                </p>
+
+                <p class="texto-narrativo">
+                    Los cuervos comenzaron a agitar sus alas, y en sus ojos reflejantes, Axel pudo ver imágenes fragmentarias: Seraphina acechando, matando, usando siempre la misma historia de la madre maldecida.
+                </p>
+
+                <p class="dialogo defensiva">
+                    "¡Son mentiras!" exclamó Seraphina, pero su voz había perdido su tono desesperado anterior. "¡Esta gata está celosa de nuestro vínculo!"
+                </p>
+
+                <p class="texto-narrativo">
+                    Lyra arrojó algo al suelo: una garra de mantis manchada de sangre, y varios mechones de pelaje de gatos monteses diferentes.
+                </p>
+
+                <p class="dialogo">
+                    "La evidencia habla por sí misma. Y hay más: ella lidera una red de 47 mantis que han declarado guerra genocida contra nuestra especie. Su plan es usar las Lágrimas de Luna no para sanar, sino para aumentar su poder y completar la masacre."
+                </p>
+
+                <p class="texto-narrativo">
+                    El aire se llenó de una tensión que parecía capaz de cortarse con cuchillo. Seraphina miraba entre Axel y Lyra, calculando sus opciones, su fachada finalmente desmoronándose.
+                </p>
+            </section>
+
+            <!-- ===================== DECISIÓN 4: CONFRONTACIÓN O ESPIONAJE ===================== -->
+            <div id="decision-4" class="decision-point hidden">
+                <h3 class="decision-title">La Verdad Revelada</h3>
+                
+                <p class="decision-context">
+                    Las palabras de Lyra resonaban en el aire como campanas fúnebres. La evidencia era abrumadora, pero Seraphina aún no había admitido nada. Sus ojos mostraban una mezcla de pánico, ira y... ¿arrepentimiento?
+                </p>
+
+                <p class="decision-context">
+                    Axel sentía como si el mundo se hubiera volcado. Todo en lo que había creído, toda la compasión que había sentido por esta criatura, ¿había sido mentira? Pero algo en los ojos de Seraphina le decía que la historia era más compleja.
+                </p>
+
+                <div class="decision-buttons">
+                    <button onclick="tomarDecision(4, 'A')" class="decision-btn option-a">
+                        <strong>Confrontar directamente</strong>
+                        <span>Exigir la verdad completa ahora mismo</span>
+                    </button>
+                    <button onclick="tomarDecision(4, 'B')" class="decision-btn option-b">
+                        <strong>Fingir ignorancia</strong>
+                        <span>Seguir el juego para descubrir sus verdaderos planes</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- ===================== CONTENIDO POST-REVELACIÓN ===================== -->
+            <section id="confrontacion-directa" class="hidden contenido-condicional">
+                <h3>La Confrontación</h3>
+                
+                <p class="texto-narrativo">
+                    Axel se irguió completamente, su arco apareciendo en sus manos con un movimiento fluido. Sus ojos heterocromáticos brillaron con una mezcla de traición y determinación.
+                </p>
+
+                <p class="dialogo fuerte">
+                    "¿Es cierto?" Su voz cortó el aire como una hoja. "¿Mataste a esos gatos monteses? ¿Tu madre realmente está maldecida, o todo ha sido una mentira?"
+                </p>
+
+                <p class="texto-narrativo">
+                    Por un momento, el rostro de Seraphina mostró una vulnerabilidad genuina. Luego, como si se quitara una máscara, su expresión se endureció en algo frío y calculador.
+                </p>
+
+                <p class="dialogo fria">
+                    "Mi madre SÍ está convertida en estatua," dijo lentamente. "Pero no por una maldición. Los gatos monteses la mataron junto con el resto de mi familia hace dos años. Las Lágrimas de Luna pueden traerla de vuelta... y darme el poder para vengar cada muerte."
+                </p>
+
+                <p class="texto-narrativo">
+                    La confesión cayó como una piedra en agua tranquila, enviando ondas de shock a través del grupo.
+                </p>
+
+                <p class="dialogo">
+                    "Seis gatos monteses por veintitrés mantis," continuó Seraphina. "¿Te parece injusto el intercambio, Axel? Porque apenas hemos comenzado."
+                </p>
+            </section>
+
+            <section id="estrategia-espionaje" class="hidden contenido-condicional">
+                <h3>El Doble Juego</h3>
+                
+                <p class="texto-narrativo">
+                    Axel mantuvo su expresión cuidadosamente neutral, aunque por dentro su mundo se tambaleaba. Miró brevemente a Lyra y le hizo una seña casi imperceptible: <em>sigue mi juego</em>.
+                </p>
+
+                <p class="dialogo controlada">
+                    "Lyra, aprecio tu preocupación, pero has seguido pistas falsas," dijo Axel con voz firme. "Seraphina ha estado conmigo todo este tiempo. No puede ser responsable de esos crímenes."
+                </p>
+
+                <p class="texto-narrativo">
+                    Los ojos de Seraphina mostraron sorpresa y alivio. Lyra, después de un momento de confusión, captó la estrategia.
+                </p>
+
+                <p class="dialogo reacia">
+                    "Tal vez... tal vez me equivoqué," murmuró Lyra. "Pero mantendré mis ojos abiertos."
+                </p>
+
+                <p class="texto-narrativo">
+                    Esa noche, mientras Seraphina dormía, Axel, Lyra y Ember (si estaba presente) se reunieron en secreto. El plan era simple: seguir con la charada, permitir que Seraphina los llevara hasta su red completa, y descubrir la verdadera extensión de la conspiración antes de actuar.
+                </p>
+
+                <p class="dialogo susurrada">
+                    "Es arriesgado," admitió Lyra. "Si descubre nuestro engaño..."
+                </p>
+
+                <p class="dialogo susurrada">
+                    "Entonces descubriremos qué tan peligrosa es realmente," respondió Axel. "Y cuántas vidas podemos salvar si jugamos bien nuestras cartas."
+                </p>
+            </section>
+
+            <!-- ===================== POST-REVELACIÓN ===================== -->
+            <section id="post-revelacion" class="hidden">
+                <h3>Consecuencias de la Verdad</h3>
+                
+                <p class="texto-narrativo">
+                    Los días siguientes estuvieron cargados de tensión. El grupo continuó hacia el Templo Celestial donde se encontraban las verdaderas Lágrimas de Luna, pero ahora cada conversación, cada gesto, cada mirada estaba cargada de significados ocultos.
+                </p>
+
+                <p class="texto-narrativo">
+                    Seraphina, sintiéndose parcialmente desenmascarada, comenzó a mostrar su verdadera personalidad: brillante, calculadora, pero también profundamente herida. Sus momentos de vulnerabilidad genuina se alternaban con períodos de fría determinación.
+                </p>
+
+                <p class="texto-narrativo">
+                    Fue durante esta tensa travesía que llegó el mensaje urgente para Ember.
+                </p>
+            </section>
+
+            <!-- ===================== DECISIÓN 5: DILEMA DE EMBER ===================== -->
+            <div id="decision-5" class="decision-point hidden">
+                <h3 class="decision-title">El Dilema Familiar</h3>
+                
+                <div id="ember-presente-decision" class="hidden contenido-condicional">
+                    <p class="decision-context">
+                        Un halcón mensajero llegó con noticias devastadoras: Valle Tranquilo, donde vivía la familia de Ember, estaba siendo atacado por una alianza de Águilas Doradas. Luna Suave y los gemelos Sol y Sombra estaban en peligro mortal.
+                    </p>
+
+                    <p class="decision-context">
+                        Ember sostuvo el mensaje con manos temblorosas. Sus principios pacifistas se enfrentaban contra su amor paternal. Podía salvar el mundo ayudando a detener a Seraphina, o podía salvar a su familia.
+                    </p>
+
+                    <div class="decision-buttons">
+                        <button onclick="tomarDecision(5, 'A')" class="decision-btn option-a">
+                            <strong>Ember regresa con su familia</strong>
+                            <span>La familia es lo primero, sin importar las consecuencias</span>
+                        </button>
+                        <button onclick="tomarDecision(5, 'B')" class="decision-btn option-b">
+                            <strong>Ember confía en las defensas del valle</strong>
+                            <span>Terminar esta misión puede salvar muchas más vidas</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="ember-ausente-decision" class="hidden contenido-condicional">
+                    <p class="decision-context">
+                        Sin Ember presente, Axel y Lyra debían decidir su siguiente movimiento. Seraphina había revelado parcialmente sus cartas, pero su plan completo seguía siendo un misterio.
+                    </p>
+
+                    <div class="decision-buttons">
+                        <button onclick="tomarDecision(5, 'A')" class="decision-btn option-a">
+                            <strong>Buscar más aliados</strong>
+                            <span>Necesitan más ayuda antes del enfrentamiento final</span>
+                        </button>
+                        <button onclick="tomarDecision(5, 'B')" class="decision-btn option-b">
+                            <strong>Continuar directamente al templo</strong>
+                            <span>Cada momento perdido es peligroso</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===================== CONTENIDO EMBER SE VA ===================== -->
+            <section id="ember-se-va" class="hidden contenido-condicional">
+                <h3>La Separación de los Hermanos</h3>
+                
+                <p class="dialogo angustiada">
+                    "Lo siento, Axel," susurró Ember, sus ojos llenos de lágrimas. "Son mis hijos. No puedo dejarlos morir por principios abstractos cuando puedo hacer algo concreto para salvarlos."
+                </p>
+
+                <p class="texto-narrativo">
+                    Axel abrazó a su hermano fuertemente. "Ve. Protege a tu familia. Yo terminaré esto."
+                </p>
+
+                <p class="dialogo">
+                    "Toma esto," Ember le entregó una flecha especial, tallada con runas de pacificación. "Si llega el momento final con Seraphina... esta flecha no mata. Puede paralizar, dar una última oportunidad para la redención."
+                </p>
+
+                <p class="texto-narrativo">
+                    Con esas palabras, Ember partió hacia Valle Tranquilo, dejando a Axel con una nueva carga: la posibilidad de elegir misericordia incluso en el momento más oscuro.
+                </p>
+            </section>
+
+            <section id="ember-se-queda" class="hidden contenido-condicional">
+                <h3>El Sacrificio del Mediador</h3>
+                
+                <p class="texto-narrativo">
+                    Ember cerró los ojos, sus manos temblando mientras sostenia el mensaje. Cuando los abrió, había una nueva determinación en ellos.
+                </p>
+
+                <p class="dialogo resoluta">
+                    "Luna Suave es fuerte. Valle Tranquilo tiene defensas. Pero si Seraphina completa su plan genocida, no habrá valle seguro en ninguna parte para mis hijos."
+                </p>
+
+                <p class="texto-narrativo">
+                    Quemó el mensaje, las llamas reflejándose en sus ojos. "Terminaremos esto juntos, hermano. Por todos los niños que no tienen la oportunidad de defenderse."
+                </p>
+
+                <p class="texto-narrativo">
+                    Esa decisión cambiaría a Ember para siempre. El peso de elegir el mundo sobre su familia lo marcaría, pero también le daría una nueva fuerza moral que influenciaría cada decisión posterior.
+                </p>
+            </section>
+
+            <section id="despedida-ember" class="hidden contenido-condicional">
+                <p class="dialogo">
+                    "Cuida de Axel," le dijo Ember a Lyra antes de partir. "Y recuerda que Seraphina, por todo el daño que ha causado, también es víctima de una tragedia. No dejes que el odio te consuma como la consumió a ella."
+                </p>
+            </section>
+
+            <section id="ember-continua" class="hidden contenido-condicional">
+                <p class="texto-narrativo">
+                    La presencia continua de Ember cambió la dinámica del grupo. Su perspectiva diplomática y su doloroso sacrificio personal añadieron una dimensión de compasión incluso hacia Seraphina, que comenzó a notar que no todos los gatos monteses eran los monstruos que ella había imaginado.
+                </p>
+            </section>
+
+            <!-- ===================== PREPARACIÓN FINAL ===================== -->
+            <section id="preparacion-final" class="hidden">
+                <h3>Los Aliados Finales</h3>
+                
+                <p class="texto-narrativo">
+                    Antes de enfrentar el Laberinto de los Tejones y llegar al Templo Celestial, el grupo necesitaba preparación adicional. Dos opciones se presentaron para obtener la ayuda final que necesitarían.
+                </p>
+
+                <p class="texto-narrativo">
+                    Seraphina, ahora parcialmente desenmascarada pero aún con cartas ocultas, observaba estas decisiones con interés calculador. Cada aliado que obtuvieran cambiaría sus propias estrategias.
+                </p>
+            </section>
+
+            <!-- ===================== DECISIÓN 6: ALIADOS FINALES ===================== -->
+            <div id="decision-6" class="decision-point hidden">
+                <h3 class="decision-title">La Preparación Final</h3>
+                
+                <p class="decision-context">
+                    Antes del enfrentamiento final en el Templo Celestial, el grupo puede buscar ayuda de dos poderosas comunidades. Cada una ofrece ventajas diferentes pero mutuamente excluyentes.
+                </p>
+
+                <p class="decision-context">
+                    Las Arañas Tejedoras del Destino pueden proporcionar mapas detallados del templo y conocimiento sobre las verdaderas capacidades de Seraphina, pero exigen secretos personales a cambio. Los Conejos Herbolarios ofrecen protección mental contra manipulación y hierbas de claridad, pero son vulnerables si Seraphina descubre su ubicación.
+                </p>
+
+                <div class="decision-buttons">
+                    <button onclick="tomarDecision(6, 'A')" class="decision-btn option-a">
+                        <strong>Buscar a las Arañas Tejedoras</strong>
+                        <span>Obtener conocimiento completo a costa de secretos personales</span>
+                    </button>
+                    <button onclick="tomarDecision(6, 'B')" class="decision-btn option-b">
+                        <strong>Ir con los Conejos Herbolarios</strong>
+                        <span>Protección mental pero riesgo de exposición</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- ===================== CONTENIDO ALIADOS FINALES ===================== -->
+            <section id="encuentro-arañas" class="hidden contenido-condicional">
+                <h3>Las Tejedoras del Destino</h3>
+                
+                <p class="texto-narrativo">
+                    La Colonia de las Arañas Tejedoras del Destino se extendía en una red de túneles subterráneos iluminados por telarañas bioluminiscentes. Destina Sedahilos, la araña ancestral, recibió al grupo con ojos que brillaban como constelaciones.
+                </p>
+
+                <p class="dialogo misteriosa">
+                    "Veo que vuestros caminos están entrelazados con los de la mantis," murmuró Destina. "Pero el conocimiento que buscáis tiene un precio. Un secreto profundo de cada uno a cambio de la verdad completa."
+                </p>
+
+                <p class="texto-narrativo">
+                    Uno por uno, compartieron sus secretos más guardados. Axel reveló su miedo de convertirse en el cazador solitario y amargado que había sido su padre. Lyra confesó que había amado en secreto a uno de los gatos monteses que Seraphina había matado.
+                </p>
+
+                <p class="texto-narrativo">
+                    Y Seraphina, sorprendentemente, susurró: "Mi mayor miedo es que cuando termine mi venganza, descubra que no soy mejor que quienes mataron a mi familia."
+                </p>
+
+                <p class="dialogo reveladora">
+                    "Ahora os daré lo que buscáis," dijo Destina. "Seraphina lidera una red de cuarenta y siete mantis, pero no todas están comprometidas con el genocidio. Muchas la siguen por miedo o desesperación. Y las Lágrimas de Luna... responden a la verdad más profunda del corazón de quien las toca."
+                </p>
+            </section>
+
+            <section id="encuentro-conejos" class="hidden contenido-condicional">
+                <h3>Los Herbolarios Empáticos</h3>
+                
+                <p class="texto-narrativo">
+                    El Pueblo de los Conejos Herbolarios era un oasis de paz en medio del caos. Trébol Raíztierna, el anciano líder con orejas adornadas de flores, recibió al grupo con una sonrisa cálida que inmediatamente calmó sus nervios tensos.
+                </p>
+
+                <p class="dialogo empática">
+                    "Siento el dolor en vuestros corazones," murmuró Trébol, sus ojos brillando con comprensión. "Tanto el dolor de la traición como el dolor de la pérdida. Dejad que nuestras hierbas aclaren vuestras mentes para el enfrentamiento que viene."
+                </p>
+
+                <p class="texto-narrativo">
+                    Los conejos prepararon una mezcla especial de hierbas que proporcionaría inmunidad parcial contra la manipulación mental. Pero más importante, su presencia empática comenzó a afectar incluso a Seraphina.
+                </p>
+
+                <p class="dialogo suave">
+                    "He visto mucho odio," dijo Trébol directamente a Seraphina. "Pero también veo dolor no sanado. El odio es solo dolor que se ha vuelto hacia afuera. Las Lágrimas de Luna pueden sanar ambos, si se les permite."
+                </p>
+
+                <p class="texto-narrativo">
+                    Por primera vez en años, Seraphina sintió que alguien veía más allá de sus acciones hacia el corazón herido que las motivaba.
+                </p>
+            </section>
+
+            <section id="mapas-detallados" class="hidden contenido-condicional">
+                <p class="texto-narrativo">
+                    Las arañas proporcionaron mapas detallados del Templo Celestial, mostrando rutas secretas y ubicaciones de trampas. También revelaron que el templo mismo respondía a las intenciones de quienes entraban: se volvería un laberinto mortal para corazones llenos de odio, pero se abriría fácilmente para aquellos con intenciones puras.
+                </p>
+            </section>
+
+            <section id="hierbas-proteccion" class="hidden contenido-condicional">
+                <p class="texto-narrativo">
+                    Los conejos proporcionaron hierbas especiales que protegerían al grupo contra la Danza Hipnótica de Seraphina y otras formas de manipulación mental. Pero más importante, las hierbas les darían claridad emocional para ver más allá del ciclo de venganza hacia posibilidades de redención.
+                </p>
+            </section>
+
+            <!-- ===================== ENTRADA AL TEMPLO ===================== -->
+            <section id="entrada-templo" class="hidden">
+                <h3>El Templo Celestial</h3>
+                
+                <p class="texto-narrativo">
+                    Después de navegar el Laberinto de los Tejones con la ayuda de Groundbreaker y su gente, el grupo finalmente llegó al Templo Celestial. La estructura antigua se alzaba como una montaña tallada, con espirales que parecían alcanzar las estrellas mismas.
+                </p>
+
+                <p class="texto-narrativo">
+                    En el interior, columnas de mármol blanco sostenían un techo que mostraba las constelaciones en movimiento. Y allí, en el centro de un círculo de luz lunar perpetua, flotaban tres gemas perfectas: las Lágrimas de Luna.
+                </p>
+
+                <p class="texto-narrativo">
+                    Pero no estaban solos. El espíritu del padre de Axel se materializó, sus ojos brillando con una mezcla de orgullo y preocupación.
+                </p>
+
+                <p class="dialogo espiritual">
+                    "Hijo mío," murmuró el espíritu, "has llegado hasta aquí. Pero esta decisión final debe ser solo tuya. Las Lágrimas de Luna responderán a la verdad más profunda de tu corazón. Elige sabiamente."
+                </p>
+
+                <p class="texto-narrativo">
+                    Seraphina se adelantó, sus ojos fijos en las gemas. Por primera vez, su máscara había desaparecido completamente, mostrando toda la complejidad de su dolor, su ira y su desesperación.
+                </p>
+            </section>
+
+            <!-- ===================== DECISIÓN 7: MOMENTO FINAL ===================== -->
+            <div id="decision-7" class="decision-point hidden">
+                <h3 class="decision-title">El Momento Final</h3>
+                
+                <p class="decision-context">
+                    Las Lágrimas de Luna flotan ante Axel, irradiando poder puro. Seraphina se encuentra a su lado, toda pretensión finalmente abandonada. Sus ojos muestran siglos de dolor, años de odio, pero también un destello de la persona que una vez fue.
+                </p>
+
+                <p class="decision-context">
+                    "Puedo tomarlas," susurra Seraphina. "Puedo traer de vuelta a mi familia y tener el poder para que nunca más seamos víctimas. Pero tú... tú podrías usarlas para algo diferente. Para romper este ciclo."
+                </p>
+
+                <p class="decision-context">
+                    El espíritu del padre de Axel espera. Lyra tiene una flecha lista. El momento que determinará el destino de ambas especies ha llegado.
+                </p>
+
+                <div class="decision-buttons">
+                    <button onclick="tomarDecision(7, 'A')" class="decision-btn option-a">
+                        <strong>Usar las Lágrimas para curar</strong>
+                        <span>Sanar a la madre de Seraphina y romper el ciclo de odio</span>
+                    </button>
+                    <button onclick="tomarDecision(7, 'B')" class="decision-btn option-b">
+                        <strong>Confrontar una última vez</strong>
+                        <span>Exigir que Seraphina renuncie a su venganza primero</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- ===================== FINALES ===================== -->
+            <section id="final-redencion" class="hidden contenido-condicional">
+                <h3>El Poder de la Compasión</h3>
+                
+                <p class="texto-narrativo">
+                    Sin vacilación, Axel tomó las Lágrimas de Luna. El poder fluyó a través de él como luz líquida, y supo instintivamente lo que debía hacer.
+                </p>
+
+                <p class="dialogo determinada">
+                    "Seraphina," dijo con voz firme pero gentil, "esto no traerá de vuelta a tu familia. Pero puede darte la oportunidad de honrar su memoria de una manera que los haría orgullosos."
+                </p>
+
+                <p class="texto-narrativo">
+                    Las gemas brillaron con luz cegadora, y en ese resplandor, la estatua de mármol de la madre de Seraphina comenzó a cambiar. No regresó a la vida —las Lágrimas no podían deshacer la muerte— pero se transformó en algo hermoso y vivo: un jardín de flores de cristal que brillarían eternamente con amor maternal.
+                </p>
+
+                <p class="texto-narrativo">
+                    Seraphina cayó de rodillas ante la transformación, lágrimas verdaderas corriendo por su rostro por primera vez en años.
+                </p>
+
+                <p class="dialogo quebrada">
+                    "Ella... ella habría querido que fuera mejor que esto," susurró. "Que fuera quien ella me enseñó a ser, no lo que el odio me convirtió."
+                </p>
+
+                <p class="texto-narrativo">
+                    El poder restante de las Lágrimas fluyó hacia Seraphina, no dándole fuerza para la venganza, sino sanando las heridas más profundas de su alma. Por primera vez desde la masacre, pudo recordar a su familia con amor en lugar de solo dolor.
+                </p>
+            </section>
+
+            <section id="final-confrontacion" class="hidden contenido-condicional">
+                <h3>La Justicia Antes que la Misericordia</h3>
+                
+                <p class="texto-narrativo">
+                    Axel se interpuso entre Seraphina y las Lágrimas, su arco tensado con una flecha apuntando directamente a su corazón.
+                </p>
+
+                <p class="dialogo firme">
+                    "Antes de que toques esas gemas," dijo con voz que no admitía discusión, "debes renunciar a tu venganza. Debes ordenar a tu red de mantis que se detengan. Y debes responder por las seis vidas que has tomado."
+                </p>
+
+                <p class="texto-narrativo">
+                    Seraphina lo miró con ojos que mezclaban ira y sorpresa. "¿Después de todo lo que hemos pasado juntos, aún no entiendes? ¡Mi familia murió! ¡Veintitrés vidas inocentes!"
+                </p>
+
+                <p class="dialogo">
+                    "Y has tomado seis en respuesta. ¿Cuándo termina, Seraphina? ¿Después de doce? ¿Después de veintitrés? ¿Después de que todas nuestras especies se extingan mutuamente?"
+                </p>
+
+                <p class="texto-narrativo">
+                    El enfrentamiento duró horas, cada uno presentando argumentos, cada uno defendiendo su visión de justicia. Finalmente, agotada por años de odio y confrontada con la futilidad de la venganza infinita, Seraphina se desplomó.
+                </p>
+
+                <p class="dialogo resignada">
+                    "Tienes razón," susurró. "El ciclo tiene que terminar. Pero no sé cómo ser otra cosa que no sea lo que el dolor me hizo."
+                </p>
+
+                <p class="texto-narrativo">
+                    Solo entonces Axel bajó su arco y permitió que las Lágrimas de Luna obraran su magia, sanando no solo la estatua de la madre, sino comenzando el lento proceso de sanar el corazón de Seraphina.
+                </p>
+            </section>
+
+            <!-- ===================== EPILOGOS ===================== -->
+            <section id="epilogo-compasivo" class="hidden contenido-condicional">
+                <h3>Epílogo: Nuevos Comienzos</h3>
+                
+                <p class="texto-narrativo">
+                    Seis meses después, el Valle de la Reconciliación había crecido alrededor del jardín de cristal que una vez fue la madre de Seraphina. Gatos monteses y mantis religiosas trabajaban juntos para construir algo que ninguna de las especies había visto antes: una comunidad verdaderamente integrada.
+                </p>
+
+                <p class="texto-narrativo">
+                    Seraphina, ahora conocida como Sera la Sanadora, utilizaba sus habilidades para mediar conflictos entre especies. El proceso de sanación personal era lento y a veces doloroso, pero cada día elegía la compasión sobre la venganza.
+                </p>
+
+                <p class="texto-narrativo">
+                    Axel había encontrado su propósito no como cazador solitario, sino como protector de esta nueva comunidad. Su arco élfico ahora colgaba en paz la mayoría del tiempo, usándose más para enseñar a jóvenes de ambas especies que para combatir.
+                </p>
+
+                <div id="final-con-ember" class="hidden contenido-condicional">
+                    <p class="texto-narrativo">
+                        Ember había regresado con Luna Suave y los gemelos, que ahora jugaban libremente con larvas de mantis y cachorros de gato montés sin distinción. Su decisión de quedarse había sido vindicada: el mundo era efectivamente un lugar más seguro para sus hijos.
+                    </p>
+                </div>
+
+                <p class="texto-narrativo">
+                    El último párrafo del diario de Axel esa noche decía: "Hoy Seraphina me enseñó a una joven mantis cómo tallar. Dijo que quería crear algo hermoso en lugar de destruir algo precioso. Creo que padre estaría orgulloso de ambos."
+                </p>
+            </section>
+
+            <section id="epilogo-justicia" class="hidden contenido-condicional">
+                <h3>Epílogo: Justicia Templada con Misericordia</h3>
+                
+                <p class="texto-narrativo">
+                    El proceso de sanación fue más lento y difícil, pero quizás más sólido por ello. Seraphina había enfrentado completamente las consecuencias de sus acciones antes de recibir la oportunidad de redención.
+                </p>
+
+                <p class="texto-narrativo">
+                    Establecieron el Consejo de Especies Múltiples, donde representantes de gatos monteses, mantis religiosas y otras criaturas se reunían para resolver conflictos antes de que escalaran a violencia. Seraphina servía como mediadora, su experiencia con tanto el dolor como la venganza la convertía en una voz poderosa para la resolución pacífica.
+                </p>
+
+                <p class="texto-narrativo">
+                    El jardín de cristal de su madre se había convertido en un memorial no solo para las mantis que habían muerto, sino para todas las víctimas del ciclo de venganza, incluyendo los seis gatos monteses que Seraphina había matado.
+                </p>
+
+                <p class="texto-narrativo">
+                    "La justicia sin misericordia es crueldad," había escrito Axel en el memorial. "Pero la misericordia sin justicia es impunidad. Solo cuando abramos ambas podremos romper los ciclos que nos destruyen."
+                </p>
+            </section>
+
+            <!-- ===================== FINALES ESPECIALES ===================== -->
+            <section id="final-heroe-perfecto" class="hidden contenido-condicional">
+                <h3>El Héroe de la Compasión Total</h3>
+                
+                <p class="texto-narrativo fuente-especial">
+                    La historia de Axel se convirtió en leyenda no por su habilidad con el arco, sino por su capacidad para ver bondad incluso en los corazones más oscuros. Había confiado desde el primer momento, buscado las mejores herramientas, encontrado a su hermano, enfrentado la verdad directamente, trabajado con los aliados más sabios, y elegido la sanación por encima de todo.
+                </p>
+
+                <p class="texto-narrativo fuente-especial">
+                    Las generaciones futuras contarían la historia del Cazador de Medianoche que enseñó al mundo que la verdadera fuerza no radica en la capacidad de destruir, sino en la valentía de sanar.
+                </p>
+            </section>
+
+            <!-- ===================== HISTORIA COMPLETA ===================== -->
+            <section id="historia-completa" class="hidden">
+                <h3>Historia Completa</h3>
+                
+                <div class="historia-resumen">
+                    <p class="texto-narrativo">
+                        Has completado tu versión personal de "El Cazador de Medianoche y las Lágrimas Robadas". Tu serie única de decisiones ha creado una historia que refleja tus valores y elecciones.
+                    </p>
+                    
+                    <div id="resumen-decisiones" class="resumen-final">
+                        <!-- Contenido generado dinámicamente -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===================== OPCIONES FINALES ===================== -->
+            <section id="opciones-finales" class="hidden">
+                <div class="opciones-finales">
+                    <h3>¿Qué quieres hacer ahora?</h3>
+                    <div class="opciones-botones">
+                        <button onclick="reiniciarHistoria()" class="btn-opcion">
+                            Comenzar una Nueva Historia
+                        </button>
+                        <button onclick="window.location.href='index.html'" class="btn-opcion">
+                            Explorar el Mundo de la Historia
+                        </button>
+                        <button onclick="mostrarTodasLasRutas()" class="btn-opcion">
+                            Ver Todas las Posibles Rutas
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- ===================== SCRIPTS ===================== -->
+    <script src="decision-system.js"></script>
+    <script>
+        // Funciones adicionales específicas de esta página
+        function mostrarTodasLasRutas() {
+            alert('¡Función en desarrollo! Pronto podrás explorar todas las 128 rutas posibles.');
+        }
+        
+        function actualizarResumenFinal() {
+            const resumen = document.getElementById('resumen-decisiones');
+            if (resumen && window.decisionSystem) {
+                const decisiones = window.decisionSystem.decisiones;
+                const ruta = decisiones.join('');
+                
+                resumen.innerHTML = `
+                    <h4>Tu Ruta Única: ${ruta}</h4>
+                    <p>Has creado una de las 128 historias posibles. Cada decisión ha influenciado el desarrollo de los personajes y el final de la historia.</p>
+                    ${window.decisionSystem.generarListaDecisiones()}
+                `;
+            }
+        }
+        
+        // Llamar cuando la historia esté completa
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(actualizarResumenFinal, 1000);
+        });
+    </script>
+</body>
+</html>
