@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Mágico - El Cazador de Medianoche</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos específicos para el mapa del mundo */
+        .world-map-container {
+            position: relative;
+            background: linear-gradient(135deg, #2d4a3e 0%, #1a2f23 30%, #0f1a13 70%, #0a0f0c 100%);
+            border: 3px solid var(--accent-gold);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            overflow: hidden;
+            min-height: 900px;
+            box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
+        }
+
+        /* Elementos topográficos base */
+        .terrain-base {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                /* Montañas del norte */
+                radial-gradient(ellipse 400px 150px at 25% 15%, rgba(139, 69, 19, 0.3) 0%, transparent 70%),
+                radial-gradient(ellipse 300px 120px at 15% 20%, rgba(105, 105, 105, 0.4) 0%, transparent 60%),
+                radial-gradient(ellipse 350px 100px at 35% 18%, rgba(128, 128, 128, 0.3) 0%, transparent 65%),
+                
+                /* Cordillera central */
+                radial-gradient(ellipse 200px 300px at 85% 25%, rgba(105, 105, 105, 0.5) 0%, transparent 70%),
+                radial-gradient(ellipse 180px 250px at 88% 30%, rgba(169, 169, 169, 0.3) 0%, transparent 60%),
+                
+                /* Bosques */
+                radial-gradient(ellipse 300px 200px at 70% 45%, rgba(34, 139, 34, 0.4) 0%, transparent 75%),
+                radial-gradient(ellipse 250px 180px at 60% 40%, rgba(0, 100, 0, 0.3) 0%, transparent 70%),
+                
+                /* Valles */
+                radial-gradient(ellipse 200px 150px at 40% 35%, rgba(85, 107, 47, 0.3) 0%, transparent 80%),
+                radial-gradient(ellipse 180px 120px at 35% 60%, rgba(107, 142, 35, 0.2) 0%, transparent 75%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* Ríos y cursos de agua */
+        .water-course {
+            position: absolute;
+            background: linear-gradient(90deg, transparent 0%, rgba(70, 130, 180, 0.6) 20%, rgba(100, 149, 237, 0.8) 50%, rgba(70, 130, 180, 0.6) 80%, transparent 100%);
+            border-radius: 50px;
+            z-index: 2;
+            box-shadow: 0 0 10px rgba(70, 130, 180, 0.4);
+        }
+
+        .river-main {
+            top: 300px;
+            left: 200px;
+            width: 450px;
+            height: 8px;
+            transform: rotate(-15deg);
+        }
+
+        .river-branch {
+            top: 180px;
+            left: 350px;
+            width: 200px;
+            height: 5px;
+            transform: rotate(-45deg);
+        }
+
+        .river-south {
+            top: 500px;
+            left: 300px;
+            width: 300px;
+            height: 6px;
+            transform: rotate(10deg);
+        }
+
+        /* Cadenas montañosas detalladas */
+        .mountain-range {
+            position: absolute;
+            z-index: 3;
+            opacity: 0.7;
+        }
+
+        .mountain-peak {
+            position: absolute;
+            width: 0;
+            height: 0;
+            z-index: 4;
+        }
+
+        .peak-north-1 {
+            top: 80px;
+            left: 150px;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            border-bottom: 60px solid rgba(169, 169, 169, 0.8);
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5));
+        }
+
+        .peak-north-2 {
+            top: 70px;
+            left: 200px;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            border-bottom: 70px solid rgba(192, 192, 192, 0.9);
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5));
+        }
+
+        .peak-north-3 {
+            top: 85px;
+            left: 280px;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 50px solid rgba(169, 169, 169, 0.7);
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5));
+        }
+
+        .peak-east-1 {
+            top: 120px;
+            left: 820px;
+            border-left: 35px solid transparent;
+            border-right: 35px solid transparent;
+            border-bottom: 80px solid rgba(220, 220, 220, 0.9);
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5));
+        }
+
+        .peak-east-2 {
+            top: 140px;
+            left: 770px;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            border-bottom: 60px solid rgba(192, 192, 192, 0.8);
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5));
+        }
+
+        /* Áreas forestales */
+        .forest-area {
+            position: absolute;
+            border-radius: 50%;
+            z-index: 3;
+            opacity: 0.6;
+        }
+
+        .forest-main {
+            top: 200px;
+            left: 500px;
+            width: 280px;
+            height: 200px;
+            background: radial-gradient(ellipse at center, rgba(34, 139, 34, 0.7) 0%, rgba(0, 100, 0, 0.4) 50%, transparent 100%);
+        }
+
+        .forest-west {
+            top: 350px;
+            left: 100px;
+            width: 200px;
+            height: 150px;
+            background: radial-gradient(ellipse at center, rgba(46, 125, 50, 0.6) 0%, rgba(27, 94, 32, 0.3) 60%, transparent 100%);
+        }
+
+        /* Elevaciones del terreno con sombreado */
+        .elevation-high {
+            position: absolute;
+            background: radial-gradient(ellipse at 30% 30%, rgba(245, 245, 245, 0.1) 0%, rgba(169, 169, 169, 0.3) 40%, transparent 100%);
+            border-radius: 50%;
+            z-index: 2;
+        }
+
+        .elevation-medium {
+            position: absolute;
+            background: radial-gradient(ellipse at 40% 40%, rgba(205, 205, 205, 0.1) 0%, rgba(139, 139, 139, 0.2) 50%, transparent 100%);
+            border-radius: 50%;
+            z-index: 2;
+        }
+
+        .map-location {
+            position: absolute;
+            background: rgba(212, 175, 55, 0.9);
+            border: 2px solid var(--accent-gold);
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+            animation: pulse 2s infinite;
+        }
+
+        .map-location:hover {
+            transform: scale(1.5);
+            background: var(--accent-moonlight);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.8);
+            z-index: 15;
+        }
+
+        .map-location::after {
+            content: attr(data-name);
+            position: absolute;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.9);
+            color: var(--accent-gold);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+            border: 1px solid var(--accent-gold);
+        }
+
+        .map-location:hover::after {
+            opacity: 1;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(212, 175, 55, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+        }
+
+        /* Rutas entre ubicaciones mejoradas */
+        .path {
+            position: absolute;
+            transform-origin: left center;
+            z-index: 6;
+            opacity: 0.8;
+        }
+
+        .road-main {
+            height: 4px;
+            background: linear-gradient(90deg, transparent 0%, rgba(139, 69, 19, 0.7) 10%, rgba(160, 82, 45, 0.9) 50%, rgba(139, 69, 19, 0.7) 90%, transparent 100%);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .road-secondary {
+            height: 3px;
+            background: linear-gradient(90deg, transparent 0%, rgba(105, 105, 105, 0.6) 15%, rgba(128, 128, 128, 0.8) 50%, rgba(105, 105, 105, 0.6) 85%, transparent 100%);
+        }
+
+        .path.dangerous {
+            height: 2px;
+            background: linear-gradient(90deg, transparent 0%, rgba(178, 34, 34, 0.8) 20%, rgba(220, 20, 60, 1) 50%, rgba(178, 34, 34, 0.8) 80%, transparent 100%);
+            box-shadow: 0 0 6px rgba(220, 20, 60, 0.5);
+            animation: danger-pulse 3s ease-in-out infinite;
+        }
+
+        .path.secret {
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, rgba(147, 112, 219, 0.4) 25%, rgba(186, 85, 211, 0.7) 50%, rgba(147, 112, 219, 0.4) 75%, transparent 100%);
+            opacity: 0.5;
+            animation: secret-shimmer 4s ease-in-out infinite;
+        }
+
+        @keyframes danger-pulse {
+            0%, 100% { opacity: 0.8; }
+            50% { opacity: 1; box-shadow: 0 0 12px rgba(220, 20, 60, 0.8); }
+        }
+
+        @keyframes secret-shimmer {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.7; }
+        }
+
+        /* Regiones del mapa */
+        .region {
+            position: absolute;
+            border: 2px dashed rgba(192, 192, 192, 0.3);
+            border-radius: 15px;
+            background: rgba(42, 42, 42, 0.2);
+            z-index: 2;
+        }
+
+        .region-label {
+            position: absolute;
+            top: 10px;
+            left: 15px;
+            color: var(--accent-silver);
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            opacity: 0.8;
+        }
+
+        /* Tipos de ubicaciones */
+        .map-location.mountain { background: #87ceeb; }
+        .map-location.valley { background: #9370db; }
+        .map-location.cave { background: #48d1cc; }
+        .map-location.forest { background: #32cd32; }
+        .map-location.clearing { background: #ffd700; }
+        .map-location.underground { background: #8b4513; }
+        .map-location.temple { background: #fff8dc; }
+        .map-location.dangerous { background: #ff4500; border-color: #ff0000; }
+
+        /* Panel de información */
+        .location-info {
+            position: fixed;
+            top: 50%;
+            right: -400px;
+            transform: translateY(-50%);
+            width: 380px;
+            background: linear-gradient(135deg, var(--secondary-dark) 0%, var(--tertiary-dark) 100%);
+            border: 2px solid var(--accent-gold);
+            border-radius: 15px;
+            padding: 1.5rem;
+            transition: right 0.4s ease;
+            z-index: 20;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .location-info.active {
+            right: 20px;
+        }
+
+        .location-info h3 {
+            color: var(--accent-gold);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .location-info .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            background: none;
+            border: none;
+            color: var(--accent-silver);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .location-info .close-btn:hover {
+            color: var(--accent-gold);
+        }
+
+        .location-details {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .location-details strong {
+            color: var(--accent-silver);
+        }
+
+        .location-chapters {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .chapter-ref {
+            display: inline-block;
+            background: var(--accent-gold);
+            color: var(--primary-dark);
+            padding: 0.3rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            margin: 0.2rem;
+            font-weight: bold;
+        }
+
+        /* Leyenda del mapa */
+        .map-legend {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid var(--accent-silver);
+            border-radius: 8px;
+            padding: 1rem;
+            z-index: 15;
+        }
+
+        .legend-title {
+            color: var(--accent-gold);
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 0.3rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .legend-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 0.5rem;
+            border: 1px solid var(--accent-silver);
+        }
+
+        /* Elementos mágicos */
+        .magical-element {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            z-index: 8;
+            opacity: 0.7;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .magical-element.moon {
+            background: radial-gradient(circle, var(--accent-moonlight) 0%, transparent 70%);
+            border-radius: 50%;
+            top: 50px;
+            right: 100px;
+        }
+
+        .magical-element.crystal {
+            background: linear-gradient(45deg, transparent, var(--accent-silver), transparent);
+            transform: rotate(45deg);
+            top: 200px;
+            left: 300px;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .location-info {
+                width: 300px;
+            }
+            
+            .location-info.active {
+                right: 10px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .world-map-container {
+                min-height: 600px;
+                padding: 1rem;
+            }
+            
+            .location-info {
+                position: fixed;
+                top: auto;
+                bottom: -100%;
+                left: 0;
+                right: 0;
+                width: auto;
+                height: 60vh;
+                border-radius: 15px 15px 0 0;
+                transform: none;
+            }
+            
+            .location-info.active {
+                bottom: 0;
+                right: 0;
+            }
+            
+            .map-legend {
+                position: relative;
+                margin-top: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1 class="title">El Cazador de Medianoche</h1>
+            <h2 class="subtitle">Mapa del Mundo Mágico</h2>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="personajes.html" class="nav-link">Personajes</a>
+                <a href="mundo-magico.html" class="nav-link active">Mundo Mágico</a>
+                <a href="seccion-01.html" class="nav-link">Sección I</a>
+                <a href="seccion-02.html" class="nav-link">Sección II</a>
+                <a href="seccion-03.html" class="nav-link">Sección III</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="world-intro">
+            <div class="container">
+                <h2 class="section-title">El Reino de las Especies Conscientes</h2>
+                <p class="section-description">
+                    Explora el vasto mundo donde se desarrolla la épica aventura de Axel. Cada ubicación guarda secretos, 
+                    peligros y maravillas únicas. Haz clic en los puntos dorados del mapa para descubrir los detalles 
+                    de cada lugar mágico y su importancia en la historia.
+                </p>
+            </div>
+        </section>
+
+        <section class="interactive-map">
+            <div class="container">
+                <div class="world-map-container">
+                    <!-- Base topográfica del terreno -->
+                    <div class="terrain-base"></div>
+                    
+                    <!-- Cursos de agua -->
+                    <div class="water-course river-main"></div>
+                    <div class="water-course river-branch"></div>
+                    <div class="water-course river-south"></div>
+                    
+                    <!-- Picos montañosos individuales -->
+                    <div class="mountain-peak peak-north-1"></div>
+                    <div class="mountain-peak peak-north-2"></div>
+                    <div class="mountain-peak peak-north-3"></div>
+                    <div class="mountain-peak peak-east-1"></div>
+                    <div class="mountain-peak peak-east-2"></div>
+                    
+                    <!-- Áreas forestales -->
+                    <div class="forest-area forest-main"></div>
+                    <div class="forest-area forest-west"></div>
+                    
+                    <!-- Elevaciones del terreno -->
+                    <div class="elevation-high" style="top: 100px; left: 120px; width: 300px; height: 180px;"></div>
+                    <div class="elevation-high" style="top: 80px; left: 780px; width: 200px; height: 150px;"></div>
+                    <div class="elevation-medium" style="top: 320px; left: 180px; width: 250px; height: 200px;"></div>
+                    <div class="elevation-medium" style="top: 450px; left: 150px; width: 300px; height: 180px;"></div>
+
+                    <!-- Regiones del mapa con etiquetas -->
+                    <div class="region" style="top: 50px; left: 80px; width: 350px; height: 200px;">
+                        <div class="region-label">Montañas Heladas del Norte</div>
+                    </div>
+                    <div class="region" style="top: 270px; left: 150px; width: 300px; height: 150px;">
+                        <div class="region-label">Valles de los Susurradores</div>
+                    </div>
+                    <div class="region" style="top: 450px; left: 100px; width: 350px; height: 180px;">
+                        <div class="region-label">Sistema de Cuevas Cristalinas</div>
+                    </div>
+                    <div class="region" style="top: 180px; left: 480px; width: 300px; height: 220px;">
+                        <div class="region-label">Bosques Encantados</div>
+                    </div>
+                    <div class="region" style="top: 420px; left: 420px; width: 250px; height: 150px;">
+                        <div class="region-label">Claros Sagrados</div>
+                    </div>
+                    <div class="region" style="top: 70px; left: 720px; width: 220px; height: 180px;">
+                        <div class="region-label">Cordillera Oriental</div>
+                    </div>
+
+                    <!-- Elementos mágicos flotantes -->
+                    <div class="magical-element moon"></div>
+                    <div class="magical-element crystal"></div>
+
+                    <!-- Ubicaciones del mapa con posiciones geográficamente coherentes -->
+                    <!-- Refugio de Axel en las Montañas Heladas -->
+                    <div class="map-location mountain" 
+                         style="top: 140px; left: 220px;" 
+                         data-name="Refugio de Axel"
+                         data-location="refugio-axel"></div>
+
+                    <!-- Valle de los Susurradores -->
+                    <div class="map-location valley dangerous" 
+                         style="top: 340px; left: 280px;" 
+                         data-name="Valle de los Susurradores"
+                         data-location="valle-susurradores"></div>
+
+                    <!-- Cuevas Brillantes -->
+                    <div class="map-location cave" 
+                         style="top: 520px; left: 250px;" 
+                         data-name="Cuevas Brillantes"
+                         data-location="cuevas-brillantes"></div>
+
+                    <!-- Bosque de los Cuervos Espejo -->
+                    <div class="map-location forest dangerous" 
+                         style="top: 260px; left: 580px;" 
+                         data-name="Bosque de los Cuervos Espejo"
+                         data-location="bosque-cuervos"></div>
+
+                    <!-- Claro de las Luciérnagas -->
+                    <div class="map-location clearing" 
+                         style="top: 480px; left: 520px;" 
+                         data-name="Claro de las Luciérnagas"
+                         data-location="claro-luciernagas"></div>
+
+                    <!-- Laberinto de Tejones (entrada subterránea) -->
+                    <div class="map-location underground" 
+                         style="top: 400px; left: 380px;" 
+                         data-name="Entrada al Laberinto"
+                         data-location="laberinto-tejones"></div>
+
+                    <!-- Templo Celestial en la cima más alta -->
+                    <div class="map-location temple" 
+                         style="top: 130px; left: 850px;" 
+                         data-name="Templo Celestial"
+                         data-location="templo-celestial"></div>
+
+                    <!-- Colinas Occidentales -->
+                    <div class="map-location dangerous" 
+                         style="top: 340px; left: 680px;" 
+                         data-name="Colinas Occidentales"
+                         data-location="colinas-occidentales"></div>
+
+                    <!-- Desfiladero de los Vientos -->
+                    <div class="map-location dangerous" 
+                         style="top: 200px; left: 750px;" 
+                         data-name="Desfiladero de los Vientos"
+                         data-location="desfiladero-vientos"></div>
+
+                    <!-- Rutas geográficamente coherentes -->
+                    <!-- Camino principal del valle -->
+                    <div class="path road-main" style="top: 350px; left: 300px; width: 200px; transform: rotate(15deg);"></div>
+                    
+                    <!-- Ruta montañosa hacia el refugio -->
+                    <div class="path road-secondary" style="top: 200px; left: 240px; width: 120px; transform: rotate(45deg);"></div>
+                    
+                    <!-- Sendero hacia las cuevas -->
+                    <div class="path road-secondary" style="top: 420px; left: 290px; width: 180px; transform: rotate(-40deg);"></div>
+                    
+                    <!-- Camino peligroso al bosque -->
+                    <div class="path dangerous" style="top: 300px; left: 400px; width: 180px; transform: rotate(-10deg);"></div>
+                    
+                    <!-- Ruta secreta de los tejones -->
+                    <div class="path secret" style="top: 450px; left: 420px; width: 280px; transform: rotate(-20deg);"></div>
+                    
+                    <!-- Sendero hacia el templo -->
+                    <div class="path road-secondary" style="top: 180px; left: 700px; width: 150px; transform: rotate(25deg);"></div>
+                    
+                    <!-- Paso del desfiladero -->
+                    <div class="path dangerous" style="top: 220px; left: 770px; width: 100px; transform: rotate(60deg);"></div>
+                    
+                    <!-- Conexión entre bosque y claros -->
+                    <div class="path road-secondary" style="top: 380px; left: 550px; width: 80px; transform: rotate(-70deg);"></div>
+
+                    <!-- Leyenda del mapa -->
+                    <div class="map-legend">
+                        <div class="legend-title">Leyenda</div>
+                        <div class="legend-item">
+                            <div class="legend-dot mountain"></div>
+                            <span>Montañas</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-dot valley"></div>
+                            <span>Valles Místicos</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-dot cave"></div>
+                            <span>Cuevas Mágicas</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-dot forest"></div>
+                            <span>Bosques Encantados</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-dot clearing"></div>
+                            <span>Claros Sagrados</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-dot underground"></div>
+                            <span>Lugares Subterráneos</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-dot temple"></div>
+                            <span>Templos</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-dot dangerous"></div>
+                            <span>Lugares Peligrosos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="world-description">
+            <div class="container">
+                <h2 class="section-title">Geografía del Reino</h2>
+                <div class="world-info-grid">
+                    <div class="world-info-card">
+                        <h3>Clima y Estaciones</h3>
+                        <p>
+                            El reino experimenta estaciones marcadas, con inviernos duros en las montañas 
+                            y temperaturas moderadas en los valles. La magia del lugar influye en los patrones 
+                            climáticos, creando fenómenos únicos como la nieve plateada de las Montañas Heladas.
+                        </p>
+                    </div>
+                    <div class="world-info-card">
+                        <h3>Ecosistemas Mágicos</h3>
+                        <p>
+                            Cada región alberga ecosistemas únicos influenciados por la magia ancestral. 
+                            Los cristales crecen naturalmente en las cuevas, las luciérnagas gigantes 
+                            protegen claros sagrados, y los árboles del bosque de cuervos reflejan verdades ocultas.
+                        </p>
+                    </div>
+                    <div class="world-info-card">
+                        <h3>Redes de Comercio</h3>
+                        <p>
+                            Las diferentes especies mantienen rutas comerciales establecidas entre sus territorios. 
+                            Los tejones mineros proporcionan metales preciosos, mientras que las luciérnagas 
+                            ofrecen guía a través de territorios peligrosos.
+                        </p>
+                    </div>
+                    <div class="world-info-card">
+                        <h3>Magia del Lugar</h3>
+                        <p>
+                            La magia fluye a través de líneas ley que conectan los lugares más sagrados. 
+                            El Templo Celestial actúa como nexo central, canalizando la energía lunar 
+                            hacia las Lágrimas de Luna que caen cada siglo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Panel de información de ubicación -->
+    <div class="location-info" id="locationInfo">
+        <button class="close-btn" onclick="closeLocationInfo()">&times;</button>
+        <h3 id="locationTitle">Título de la Ubicación</h3>
+        <div class="location-details" id="locationDetails">
+            <p>Información detallada de la ubicación aparecerá aquí.</p>
+        </div>
+        <div class="location-chapters" id="locationChapters">
+            <!-- Capítulos relacionados aparecerán aquí -->
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="container">
+            <nav class="section-navigation">
+                <a href="personajes.html" class="nav-prev">← Análisis de Personajes</a>
+                <a href="index.html" class="nav-home">Inicio</a>
+                <a href="seccion-01.html" class="nav-next">Comenzar la Historia →</a>
+            </nav>
+            <p class="footer-text">
+                Un reino donde la magia y la realidad se entrelazan en cada sendero.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Datos de las ubicaciones
+        const locationData = {
+            'refugio-axel': {
+                title: 'Refugio de Axel en las Montañas Heladas',
+                description: `
+                    <p><strong>Ubicación:</strong> Montañas Heladas, territorio solitario</p>
+                    <p><strong>Habitantes:</strong> Axel (anteriormente también su padre)</p>
+                    <p><strong>Características:</strong> Un refugio construido en las alturas rocosas, protegido de los vientos cortantes. Lugar de soledad y contemplación donde Axel desarrolló sus habilidades de caza y tiro con arco.</p>
+                    <p><strong>Importancia:</strong> Punto de partida de la aventura. Aquí Axel encuentra a Seraphina "herida" y toma la decisión que cambiará su vida para siempre.</p>
+                    <p><strong>Ambiente:</strong> Frío, solitario, pero reconfortante. Nieve que cruje bajo las patas, vistas espectaculares y el silencio de las alturas.</p>
+                `,
+                chapters: ['Cap. 1: El Encuentro']
+            },
+            'valle-susurradores': {
+                title: 'Valle de los Susurradores',
+                description: `
+                    <p><strong>Ubicación:</strong> Valle profundo entre formaciones rocosas</p>
+                    <p><strong>Habitantes:</strong> Espíritus antiguos conocidos como Susurradores</p>
+                    <p><strong>Características:</strong> Nebla espesa permanente, formaciones rocosas como dedos retorcidos, aire que vibra con energía extraña.</p>
+                    <p><strong>Poder místico:</strong> Los Susurradores conocen todos los secretos del reino pero solo hablan en acertijos. Nunca mienten, pero sus verdades están ocultas en enigmas.</p>
+                    <p><strong>Advertencia:</strong> "El arquero busca lo que ya perdió, pero la cazadora busca lo que nunca tuvo."</p>
+                `,
+                chapters: ['Cap. 2: Valle de los Susurradores']
+            },
+            'cuevas-brillantes': {
+                title: 'Cuevas Brillantes - Santuario de los Osos de Cristal',
+                description: `
+                    <p><strong>Ubicación:</strong> Sistema de cuevas en montañas cristalinas</p>
+                    <p><strong>Habitantes:</strong> Osos de Cristal gigantes, guardianes ancestrales</p>
+                    <p><strong>Características:</strong> Cristales de todos los tamaños y colores crecen de las paredes, creando arcoíris de luz refractada.</p>
+                    <p><strong>Tesoro guardado:</strong> Lágrimas de cristal que sirven como llaves para el Templo Celestial.</p>
+                    <p><strong>Peligro:</strong> Los osos son gentiles pero ferozmente protectores. Pueden percibir la verdadera naturaleza de los visitantes.</p>
+                `,
+                chapters: ['Cap. 3: Santuario de los Osos de Cristal']
+            },
+            'bosque-cuervos': {
+                title: 'Bosque de los Cuervos Espejo',
+                description: `
+                    <p><strong>Ubicación:</strong> Bosque denso con árboles que alcanzan el cielo</p>
+                    <p><strong>Habitantes:</strong> Cientos de cuervos con ojos reflejantes como espejos</p>
+                    <p><strong>Características:</strong> Penumbra perpetua, aire que huele a hierro y plumas húmedas.</p>
+                    <p><strong>Poder revelador:</strong> Los ojos de los cuervos muestran verdades ocultas, tanto del pasado como del presente.</p>
+                    <p><strong>Momento crucial:</strong> Aquí se revela la verdadera naturaleza de Seraphina y ocurre la primera gran batalla.</p>
+                `,
+                chapters: ['Cap. 4: Bosque de los Cuervos Espejo', 'Cap. 5: Batalla en el Bosque Espejo']
+            },
+            'claro-luciernagas': {
+                title: 'Claro de las Luciérnagas Guardianas',
+                description: `
+                    <p><strong>Ubicación:</strong> Claro circular perfecto en el bosque</p>
+                    <p><strong>Habitantes:</strong> Miles de luciérnagas gigantes que danzan en patrones mágicos</p>
+                    <p><strong>Características:</strong> Hierba que crece en espiral y brilla con luz propia.</p>
+                    <p><strong>Prueba sagrada:</strong> Solo aquellos con intenciones puras pueden pasar sin ser cegados por la luz.</p>
+                    <p><strong>Encuentro clave:</strong> Aquí Axel conoce a Lumina, la luciérnaga exiliada que se convierte en aliada crucial.</p>
+                `,
+                chapters: ['Cap. 6: Claro de las Luciérnagas Guardianas']
+            },
+            'laberinto-tejones': {
+                title: 'Laberinto de los Tejones Mineros',
+                description: `
+                    <p><strong>Ubicación:</strong> Extenso sistema de túneles subterráneos</p>
+                    <p><strong>Habitantes:</strong> Clan de Tejones Mineros liderados por Groundbreaker</p>
+                    <p><strong>Características:</strong> Túneles reforzados que se extienden por kilómetros bajo las montañas.</p>
+                    <p><strong>Importancia estratégica:</strong> Conocen todos los puntos débiles del Templo Celestial.</p>
+                    <p><strong>Alianza crucial:</strong> Proporcionan la ventaja táctica necesaria para la batalla final.</p>
+                `,
+                chapters: ['Cap. 7: Laberinto de los Tejones Mineros']
+            },
+            'templo-celestial': {
+                title: 'Templo Celestial',
+                description: `
+                    <p><strong>Ubicación:</strong> Cima de la montaña más alta del reino</p>
+                    <p><strong>Características:</strong> Construcción de mármol blanco que brilla con luz propia, terrazas concéntricas.</p>
+                    <p><strong>Tesoro sagrado:</strong> Las tres Lágrimas de Luna, gemas celestiales con poder absoluto de curación.</p>
+                    <p><strong>Protección:</strong> Solo puede ser desbloqueado por alguien con intenciones puras usando las llaves de cristal.</p>
+                    <p><strong>Momento decisivo:</strong> Escenario de la confrontación final y la gran elección entre venganza y compasión.</p>
+                `,
+                chapters: ['Cap. 8-9: El Templo Celestial', 'Epílogo: Seis Meses Después']
+            },
+            'colinas-occidentales': {
+                title: 'Colinas Occidentales',
+                description: `
+                    <p><strong>Ubicación:</strong> Territorio de asentamientos de gatos monteses</p>
+                    <p><strong>Historia trágica:</strong> Lugar de la masacre perpetrada por Seraphina</p>
+                    <p><strong>Víctimas:</strong> 23 gatos monteses, familias enteras cortadas con precisión de garras de mantis</p>
+                    <p><strong>Superviviente:</strong> Una cachorra huérfana encontrada entre los escombros por Lyra</p>
+                    <p><strong>Significado:</strong> Representa las consecuencias del odio sin control y la motivación de Lyra para detener a Seraphina.</p>
+                `,
+                chapters: ['Cap. 4: Bosque de los Cuervos Espejo']
+            },
+            'desfiladero-vientos': {
+                title: 'Desfiladero de los Vientos Aullantes',
+                description: `
+                    <p><strong>Ubicación:</strong> Paso traicionero entre montañas altas</p>
+                    <p><strong>Características:</strong> Vientos extremadamente fuertes, imposible de cruzar sin equipo especial</p>
+                    <p><strong>Importancia estratégica:</strong> Bloquea el camino directo al Templo Celestial</p>
+                    <p><strong>Alternativa:</strong> Obliga a tomar rutas más largas o usar los túneles secretos de los tejones</p>
+                    <p><strong>Nota:</strong> Seraphina pudo evitarlo volando, dándole ventaja en la carrera hacia el templo.</p>
+                `,
+                chapters: ['Cap. 6: Claro de las Luciérnagas Guardianas']
+            }
+        };
+
+        // Función para mostrar información de ubicación
+        function showLocationInfo(locationKey) {
+            const info = locationData[locationKey];
+            if (!info) return;
+
+            document.getElementById('locationTitle').textContent = info.title;
+            document.getElementById('locationDetails').innerHTML = info.description;
+            
+            const chaptersContainer = document.getElementById('locationChapters');
+            chaptersContainer.innerHTML = '';
+            
+            if (info.chapters && info.chapters.length > 0) {
+                const chaptersTitle = document.createElement('strong');
+                chaptersTitle.textContent = 'Aparece en: ';
+                chaptersTitle.style.color = 'var(--accent-silver)';
+                chaptersContainer.appendChild(chaptersTitle);
+                
+                info.chapters.forEach(chapter => {
+                    const chapterSpan = document.createElement('span');
+                    chapterSpan.className = 'chapter-ref';
+                    chapterSpan.textContent = chapter;
+                    chaptersContainer.appendChild(chapterSpan);
+                });
+            }
+            
+            document.getElementById('locationInfo').classList.add('active');
+        }
+
+        // Función para cerrar información de ubicación
+        function closeLocationInfo() {
+            document.getElementById('locationInfo').classList.remove('active');
+        }
+
+        // Event listeners para las ubicaciones del mapa
+        document.addEventListener('DOMContentLoaded', function() {
+            const mapLocations = document.querySelectorAll('.map-location');
+            
+            mapLocations.forEach(location => {
+                location.addEventListener('click', function() {
+                    const locationKey = this.getAttribute('data-location');
+                    showLocationInfo(locationKey);
+                });
+            });
+
+            // Cerrar panel con ESC
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeLocationInfo();
+                }
+            });
+
+            // Cerrar panel haciendo clic fuera (solo en móvil)
+            document.addEventListener('click', function(e) {
+                const locationInfo = document.getElementById('locationInfo');
+                if (window.innerWidth <= 768 && 
+                    locationInfo.classList.contains('active') && 
+                    !locationInfo.contains(e.target) && 
+                    !e.target.classList.contains('map-location')) {
+                    closeLocationInfo();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
