@@ -1581,4 +1581,242 @@ button.nav-link:hover {
     box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
 }
 
+/* ===================== SISTEMA DE DESARROLLADOR ===================== */
+
+/* Panel de desarrollador */
+.developer-panel {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 350px;
+    background: rgba(20, 20, 40, 0.95);
+    border: 2px solid #4a90e2;
+    border-radius: 10px;
+    padding: 0;
+    z-index: 1000;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    color: #ffffff;
+    font-size: 14px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.developer-header {
+    background: linear-gradient(135deg, #4a90e2, #357abd);
+    padding: 15px;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.developer-header h3 {
+    margin: 0;
+    font-size: 16px;
+    color: white;
+}
+
+.btn-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.btn-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.developer-content {
+    padding: 20px;
+}
+
+.developer-section {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.developer-section:last-child {
+    border-bottom: none;
+}
+
+.developer-section h4 {
+    margin: 0 0 10px 0;
+    color: #4a90e2;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.toggle-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px;
+    padding: 5px 0;
+}
+
+.toggle-label input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #4a90e2;
+}
+
+.toggle-label span {
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.btn-dev {
+    background: linear-gradient(135deg, #4a90e2, #357abd);
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    transition: all 0.3s;
+}
+
+.btn-dev:hover {
+    background: linear-gradient(135deg, #357abd, #2a5d8f);
+    transform: translateY(-1px);
+}
+
+/* Botón flotante para abrir panel */
+.dev-toggle-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #4a90e2, #357abd);
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.4);
+    z-index: 999;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dev-toggle-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(74, 144, 226, 0.6);
+}
+
+/* Resaltado de contenido nuevo */
+.highlight-new-content .new-content {
+    background: linear-gradient(180deg, transparent 0%, transparent 60%, rgba(255, 255, 0, 0.3) 60%, rgba(255, 255, 0, 0.3) 100%);
+    border-bottom: 2px solid rgba(255, 255, 0, 0.6);
+    padding: 2px 4px;
+    margin: 1px 0;
+    border-radius: 3px;
+    position: relative;
+}
+
+.highlight-new-content .new-content::before {
+    content: "NUEVO";
+    position: absolute;
+    top: -8px;
+    right: 0;
+    background: #ffeb3b;
+    color: #333;
+    font-size: 9px;
+    font-weight: bold;
+    padding: 1px 4px;
+    border-radius: 2px;
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+/* Estilos específicos para diferentes elementos nuevos */
+.highlight-new-content .new-content h3,
+.highlight-new-content .new-content h4 {
+    background: linear-gradient(180deg, transparent 0%, transparent 70%, rgba(255, 215, 0, 0.4) 70%, rgba(255, 215, 0, 0.4) 100%);
+    border-bottom: 3px solid rgba(255, 215, 0, 0.8);
+}
+
+.highlight-new-content .new-content.mini-decision {
+    border: 2px dashed rgba(255, 255, 0, 0.8);
+    background: rgba(255, 255, 0, 0.1);
+}
+
+.highlight-new-content .new-content.encuentro-menor {
+    border-left: 4px solid rgba(255, 255, 0, 0.8);
+    padding-left: 10px;
+}
+
+/* Estadísticas de contenido */
+.content-stats {
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 2px 0;
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
+}
+
+.stat-item:last-child {
+    border-bottom: none;
+}
+
+/* Indicador de que el modo desarrollador está activo */
+body.dev-mode::before {
+    content: "🔧 MODO DESARROLLADOR ACTIVO";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(90deg, #ff6b6b, #ffd93d);
+    color: #333;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px;
+    z-index: 10000;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
+}
+
+/* Responsive design para el panel */
+@media (max-width: 768px) {
+    .developer-panel {
+        width: 90vw;
+        right: 5vw;
+        max-height: 70vh;
+    }
+    
+    .dev-toggle-btn {
+        bottom: 15px;
+        right: 15px;
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+}
+
 /* Fin de estilos */

@@ -5,8 +5,16 @@
 
 class DecisionSystem {
     constructor() {
-        this.decisiones = JSON.parse(localStorage.getItem('el-cazador-decisiones')) || [];
+        // Intentar recuperar de localStorage primero, luego sessionStorage como respaldo
+        this.decisiones = JSON.parse(localStorage.getItem('el-cazador-decisiones')) || 
+                         JSON.parse(sessionStorage.getItem('el-cazador-decisiones')) || [];
         this.currentChapter = parseInt(localStorage.getItem('el-cazador-chapter')) || 1;
+        
+        // Si se recuperó de sessionStorage, guardarlo en localStorage
+        if (this.decisiones.length > 0 && !localStorage.getItem('el-cazador-decisiones')) {
+            localStorage.setItem('el-cazador-decisiones', JSON.stringify(this.decisiones));
+        }
+        
         this.init();
     }
 
@@ -41,9 +49,8 @@ class DecisionSystem {
         if (siguienteDecision <= 7) {
             this.mostrarSiguienteDecision(decisiones.length);
         } else {
-            // Historia completa
+            // Historia completa - solo mostrar historia completa, no las opciones automáticamente
             this.mostrarElemento('historia-completa');
-            this.mostrarElemento('opciones-finales');
         }
     }
 
@@ -55,9 +62,15 @@ class DecisionSystem {
         
         if (numDecisiones >= 1) {
             this.mostrarElemento('desarrollo-inicial');
+            this.mostrarElemento('viaje-valle');
+            this.mostrarElemento('encuentro-mapaches');
+            this.mostrarElemento('encuentro-cabras');
+            this.mostrarElemento('encuentro-avalancha');
+            this.mostrarElemento('refugio-conejos');
         }
         
         if (numDecisiones >= 2) {
+            this.mostrarElemento('viaje-aliados');
             this.mostrarElemento('camino-cuervos');
         }
         
@@ -68,6 +81,7 @@ class DecisionSystem {
         
         if (numDecisiones >= 4) {
             this.mostrarElemento('post-revelacion');
+            this.mostrarElemento('viaje-post-revelacion');
         }
         
         if (numDecisiones >= 5) {
@@ -75,14 +89,19 @@ class DecisionSystem {
         }
         
         if (numDecisiones >= 6) {
+            this.mostrarElemento('viaje-aliados-finales');
             this.mostrarElemento('entrada-templo');
         }
         
         if (numDecisiones >= 7) {
+            this.mostrarElemento('viaje-laberinto');
             this.mostrarElemento('resolucion-final');
             setTimeout(() => {
                 this.mostrarElemento('historia-completa');
-                this.mostrarElemento('opciones-finales');
+                // Solo mostrar opciones si la historia se completó normalmente, no al recargar
+                if (this.decisiones.length === 7) {
+                    setTimeout(() => this.mostrarElemento('opciones-finales'), 2000);
+                }
             }, 1000);
         }
     }
@@ -105,14 +124,17 @@ class DecisionSystem {
                     this.mostrarElemento('decision-4');
                     break;
                 case 5:
-                    // Decidir si mostrar decisión de Ember o saltar a la siguiente
+                    // Mostrar la decisión 5 completa
+                    this.mostrarElemento('decision-5');
+                    // Decidir qué contenido específico mostrar dentro de la decisión
                     const tieneEmber = this.decisiones[2] === 'A';
                     if (tieneEmber) {
                         this.mostrarElemento('ember-presente-decision');
+                        this.ocultarElemento('ember-ausente-decision');
                     } else {
                         this.mostrarElemento('ember-ausente-decision');
+                        this.ocultarElemento('ember-presente-decision');
                     }
-                    this.mostrarElemento('decision-5');
                     break;
                 case 6:
                     this.mostrarElemento('decision-6');
@@ -145,6 +167,9 @@ class DecisionSystem {
         // Guardar progreso completo inmediatamente
         this.guardarProgreso();
         this.mostrarIndicadorAutoSave();
+        
+        // Guardar también en sessionStorage como respaldo
+        sessionStorage.setItem('el-cazador-decisiones', JSON.stringify(this.decisiones));
         
         // Log para debug
         console.log(`Decisión ${numeroDecision}: ${opcion}. Ruta actual: ${this.getRutaCompleta()}`);
@@ -182,10 +207,22 @@ class DecisionSystem {
     evaluarDecision1() {
         if (this.decisiones[0] === 'A') {
             this.mostrarElemento('encuentro-confianza');
+            this.mostrarElemento('resolucion-mapaches-confianza');
+            this.mostrarElemento('respuesta-axel-confianza');
             this.ocultarElemento('encuentro-cautela');
+            this.ocultarElemento('resolucion-mapaches-cautela');
+            this.ocultarElemento('respuesta-axel-cautela');
         } else if (this.decisiones[0] === 'B') {
             this.mostrarElemento('encuentro-cautela');
+            this.mostrarElemento('resolucion-mapaches-cautela');
+            this.mostrarElemento('respuesta-axel-cautela');
             this.ocultarElemento('encuentro-confianza');
+            this.ocultarElemento('resolucion-mapaches-confianza');
+            this.ocultarElemento('respuesta-axel-confianza');
+        }
+        // Siempre mostrar la respuesta de Seraphina
+        if (this.decisiones[0]) {
+            this.mostrarElemento('respuesta-seraphina');
         }
     }
 
@@ -196,12 +233,20 @@ class DecisionSystem {
         if (d1 && d2) {
             if (d1 === 'A' && d2 === 'A') {
                 this.mostrarElemento('zorros-confianza');
+                this.mostrarElemento('ruta-zorros');
+                this.ocultarElemento('ruta-murcielagos');
             } else if (d1 === 'A' && d2 === 'B') {
                 this.mostrarElemento('murcielagos-confianza');
+                this.mostrarElemento('ruta-murcielagos');
+                this.ocultarElemento('ruta-zorros');
             } else if (d1 === 'B' && d2 === 'A') {
                 this.mostrarElemento('zorros-cautela');
+                this.mostrarElemento('ruta-zorros');
+                this.ocultarElemento('ruta-murcielagos');
             } else if (d1 === 'B' && d2 === 'B') {
                 this.mostrarElemento('murcielagos-cautela');
+                this.mostrarElemento('ruta-murcielagos');
+                this.ocultarElemento('ruta-zorros');
             }
         }
     }
@@ -229,13 +274,28 @@ class DecisionSystem {
 
     evaluarDecision5() {
         const tieneEmber = this.decisiones[2] === 'A';
+        
         if (tieneEmber) {
+            // Con Ember presente - dilema familiar
+            this.mostrarElemento('ember-presente-decision');
+            this.ocultarElemento('ember-ausente-decision');
+            
             if (this.decisiones[4] === 'A') {
                 this.mostrarElemento('ember-se-va');
                 this.mostrarElemento('despedida-ember');
             } else if (this.decisiones[4] === 'B') {
                 this.mostrarElemento('ember-se-queda');
                 this.mostrarElemento('ember-continua');
+            }
+        } else {
+            // Sin Ember - decisión sobre aliados/templo
+            this.mostrarElemento('ember-ausente-decision');
+            this.ocultarElemento('ember-presente-decision');
+            
+            if (this.decisiones[4] === 'A') {
+                this.mostrarElemento('buscar-aliados-extra');
+            } else if (this.decisiones[4] === 'B') {
+                this.mostrarElemento('directo-al-templo');
             }
         }
     }
@@ -244,9 +304,13 @@ class DecisionSystem {
         if (this.decisiones[5] === 'A') {
             this.mostrarElemento('encuentro-arañas');
             this.mostrarElemento('mapas-detallados');
+            this.mostrarElemento('ruta-arañas');
+            this.ocultarElemento('ruta-conejos-herbolarios');
         } else if (this.decisiones[5] === 'B') {
             this.mostrarElemento('encuentro-conejos');
             this.mostrarElemento('hierbas-proteccion');
+            this.mostrarElemento('ruta-conejos-herbolarios');
+            this.ocultarElemento('ruta-arañas');
         }
     }
 
@@ -300,9 +364,15 @@ class DecisionSystem {
             switch(numeroDecision) {
                 case 1:
                     this.mostrarElemento('desarrollo-inicial');
+                    this.mostrarElemento('viaje-valle');
+                    this.mostrarElemento('encuentro-mapaches');
+                    this.mostrarElemento('encuentro-cabras');
+                    this.mostrarElemento('encuentro-avalancha');
+                    this.mostrarElemento('refugio-conejos');
                     this.revelarDecision(2);
                     break;
                 case 2:
+                    this.mostrarElemento('viaje-aliados');
                     this.mostrarElemento('camino-cuervos');
                     this.revelarDecision(3);
                     break;
@@ -313,6 +383,7 @@ class DecisionSystem {
                     break;
                 case 4:
                     this.mostrarElemento('post-revelacion');
+                    this.mostrarElemento('viaje-post-revelacion');
                     this.revelarDecision(5);
                     break;
                 case 5:
@@ -320,10 +391,12 @@ class DecisionSystem {
                     this.revelarDecision(6);
                     break;
                 case 6:
+                    this.mostrarElemento('viaje-aliados-finales');
                     this.mostrarElemento('entrada-templo');
                     this.revelarDecision(7);
                     break;
                 case 7:
+                    this.mostrarElemento('viaje-laberinto');
                     this.mostrarElemento('resolucion-final');
                     this.completarHistoria();
                     break;
@@ -359,6 +432,36 @@ class DecisionSystem {
             elemento.classList.add('hidden');
             elemento.classList.remove('reveal');
         }
+    }
+
+    ocultarTodoElContenido() {
+        // Lista de todos los elementos que pueden estar visibles
+        const elementos = [
+            'introduccion', 'desarrollo-inicial', 'camino-cuervos', 
+            'llegada-cuervos', 'revelacion-lyra', 'post-revelacion',
+            'preparacion-final', 'entrada-templo', 'resolucion-final',
+            'historia-completa', 'opciones-finales',
+            // Decisiones
+            'decision-1', 'decision-2', 'decision-3', 'decision-4',
+            'decision-5', 'decision-6', 'decision-7',
+            // Contenido condicional
+            'encuentro-confianza', 'encuentro-cautela',
+            'zorros-confianza', 'zorros-cautela',
+            'murcielagos-confianza', 'murcielagos-cautela',
+            'melodia-ember', 'encuentro-hermanos', 'dialogo-ember', 'continuar-solo',
+            'confrontacion-directa', 'estrategia-espionaje',
+            'ember-se-va', 'ember-se-queda', 'despedida-ember', 'ember-continua',
+            'encuentro-arañas', 'encuentro-conejos',
+            'mapas-detallados', 'hierbas-proteccion',
+            'final-redencion', 'final-confrontacion',
+            'epilogo-compasivo', 'epilogo-justicia',
+            'final-heroe-perfecto', 'final-con-ember',
+            'flechas-plata', 'flechas-antiengano',
+            'ember-presente-decision', 'ember-ausente-decision'
+        ];
+        
+        // Ocultar todos los elementos
+        elementos.forEach(id => this.ocultarElemento(id));
     }
 
     // ===================== INTERFAZ DE PROGRESO =====================
@@ -419,12 +522,23 @@ class DecisionSystem {
             2: { A: 'Zorros Plateros', B: 'Murciélagos Bibliotecarios' },
             3: { A: 'Buscar a Ember', B: 'Continuar Solo' },
             4: { A: 'Confrontación', B: 'Espionaje' },
-            5: { A: 'Ember Regresa', B: 'Ember Continúa' },
+            5: this.getTextoDecision5(opcion),
             6: { A: 'Arañas Tejedoras', B: 'Conejos Herbolarios' },
             7: { A: 'Redención Inmediata', B: 'Confrontación Final' }
         };
         
         return textos[numero] ? textos[numero][opcion] : opcion;
+    }
+
+    getTextoDecision5(opcion) {
+        const tieneEmber = this.decisiones[2] === 'A';
+        if (tieneEmber) {
+            // Versión con Ember: dilema familiar
+            return { A: 'Ember Regresa', B: 'Ember Continúa' }[opcion];
+        } else {
+            // Versión sin Ember: estrategia final
+            return { A: 'Buscar Aliados', B: 'Directo al Templo' }[opcion];
+        }
     }
 
     calcularProgreso() {
@@ -442,9 +556,26 @@ class DecisionSystem {
 
     reiniciarHistoria() {
         if (confirm('¿Estás seguro de que quieres comenzar una nueva historia? Se perderán todas tus decisiones actuales.')) {
+            // Limpiar localStorage
             localStorage.removeItem('el-cazador-decisiones');
             localStorage.removeItem('el-cazador-chapter');
-            location.reload();
+            localStorage.removeItem('el-cazador-progreso');
+            
+            // Reinicializar el sistema
+            this.decisiones = [];
+            this.currentChapter = 1;
+            
+            // Ocultar todo el contenido
+            this.ocultarTodoElContenido();
+            
+            // Mostrar solo la introducción y primera decisión
+            this.mostrarElemento('introduccion');
+            this.mostrarElemento('decision-1');
+            
+            // Actualizar interfaz
+            this.crearInterfazProgreso();
+            
+            console.log('Historia reiniciada - comenzando desde el principio');
         }
     }
 
@@ -479,15 +610,17 @@ class DecisionSystem {
         // Crear indicador de auto-guardado
         this.crearIndicadorAutoSave();
         
-        // Guardar progreso automáticamente cada 30 segundos
+        // Guardar progreso automáticamente cada 10 segundos
         setInterval(() => {
             this.guardarProgreso();
             this.mostrarIndicadorAutoSave();
-        }, 30000);
+        }, 10000);
 
         // Guardar progreso antes de cerrar la página
-        window.addEventListener('beforeunload', () => {
+        window.addEventListener('beforeunload', (event) => {
             this.guardarProgreso();
+            // Guardar también en sessionStorage
+            sessionStorage.setItem('el-cazador-decisiones', JSON.stringify(this.decisiones));
         });
 
         // Manejar navegación entre capítulos
@@ -562,7 +695,9 @@ function tomarDecision(numero, opcion) {
 }
 
 function reiniciarHistoria() {
-    window.decisionSystem.reiniciarHistoria();
+    if (window.decisionSystem) {
+        window.decisionSystem.reiniciarHistoria();
+    }
 }
 
 function mostrarDebug() {
