@@ -20,6 +20,21 @@
             <!-- Contenido generado dinámicamente por JavaScript -->
         </aside>
 
+        <!-- ===================== LÍNEA DE TIEMPO LATERAL ===================== -->
+        <aside id="timeline-panel" class="timeline-panel">
+            <div class="timeline-header">
+                <h3>🌙 Línea de Tiempo</h3>
+                <button id="timeline-toggle" class="timeline-toggle" onclick="toggleTimelinePanel()">📍</button>
+                <button onclick="forzarRegistroSecciones()" class="timeline-debug-btn" title="Actualizar Timeline">🔄</button>
+            </div>
+            <div class="timeline-content" id="dynamic-timeline">
+                <!-- Contenido generado dinámicamente según decisiones -->
+                <div class="timeline-placeholder">
+                    <p class="timeline-empty">🌟 La línea de tiempo se construirá conforme avances en la historia...</p>
+                </div>
+            </div>
+        </aside>
+
         <!-- ===================== PANEL DE DESARROLLADOR ===================== -->
         <div id="developer-panel" class="developer-panel hidden">
             <div class="developer-header">
@@ -56,6 +71,18 @@
         <!-- ===================== CONTENIDO PRINCIPAL ===================== -->
         <main class="historia-contenido">
             
+            <!-- ========================================================================== -->
+            <!-- SECCIÓN A: ENCUENTRO INICIAL Y PRIMERA IMPRESIÓN (Líneas ~60-400)        -->
+            <!-- ========================================================================== -->
+            
+            <!-- ##########################################################
+            #  SECCIÓN 1: EL ENCUENTRO Y PRIMERA IMPRESIÓN (Líneas 60-390)
+            #  - Encuentro inicial con Seraphina herida
+            #  - Decisión de confianza vs cautela  
+            #  - Desarrollo de la relación inicial
+            #  - Viaje hacia Valle de los Susurradores
+            ########################################################## -->
+            
             <!-- ===================== INTRODUCCIÓN ===================== -->
             <section id="introduccion">
                 <h2>El Encuentro</h2>
@@ -81,6 +108,10 @@
             </section>
 
             <!-- ===================== DECISIÓN 1: PRIMERA IMPRESIÓN ===================== -->
+            <!-- SECCIÓN: Encuentro inicial entre Axel y Seraphina herida -->
+            <!-- LÍNEAS APROXIMADAS: 83-400 -->
+            <!-- OPCIONES: A) Confianza inmediata | B) Cautela y reservas -->
+            <!-- IMPACTO: Determina nivel de apertura emocional y efectividad de manipulación -->
             <div id="decision-1" class="decision-point">
                 <h3 class="decision-title">¿Cómo responde Axel a esta criatura herida?</h3>
                 <div class="decision-buttons">
@@ -120,11 +151,11 @@
                 </p>
 
                 <p class="texto-narrativo">
-                    Seraphina notó inmediatamente la cautela en sus movimientos, la forma en que sus ojos nunca dejaron de evaluar amenazas potenciales. <em>Curioso,</em> pensó. <em>Este gato es diferente... más observador que la mayoría.</em>
+                    Seraphina notó inmediatamente la cautela en sus movimientos, la forma en que sus ojos nunca dejaron de evaluar amenazas potenciales. A pesar de su dolor, no pudo evitar sentir una mezcla de respeto y alivio por encontrar alguien tan cuidadoso en estas montañas peligrosas.
                 </p>
 
                 <p class="dialogo">
-                    "Comprendo tu precaución," dijo Seraphina con voz cuidadosamente modulada. "En estos tiempos, la confianza es un lujo peligroso. Soy Seraphina, y te agradezco tu ayuda, incluso con tus reservas justificadas."
+                    "Comprendo tu precaución," dijo Seraphina con sincera comprensión. "En estos tiempos, la confianza es un lujo peligroso. Soy Seraphina, y te agradezco tu ayuda, incluso con tus reservas justificadas."
                 </p>
 
                 <p class="texto-narrativo">
@@ -137,7 +168,7 @@
                 <h3>La Historia de Seraphina</h3>
                 
                 <p class="texto-narrativo">
-                    Mientras Axel curaba sus heridas con hierbas de su morral, Seraphina comenzó a tejer su historia. Su voz temblaba con dolor calculado, cada palabra elegida para despertar compasión.
+                    Mientras Axel curaba sus heridas con hierbas de su morral, Seraphina comenzó a contar su historia. Su voz temblaba con dolor genuino, las palabras saliendo entrecortadas por la angustia.
                 </p>
 
                 <p class="dialogo">
@@ -227,7 +258,7 @@
                 </p>
 
                 <p class="dialogo susurrada new-content">
-                    "Oiga, señor gato, esa mantis..." miró nerviosamente a Seraphina. "Hemos escuchado rumores extraños. Solo... tenga cuidado, ¿sí?"
+                    "Oiga, señor gato, esa mantis parece muy herida..." miró con preocupación a Seraphina. "Asegúrese de que descanse bien. Las heridas en montaña se infectan rápido."
                 </p>
             </section>
 
@@ -249,81 +280,88 @@
                 </p>
 
                 <p class="dialogo profesional new-content">
-                    "Trato justo. Y como bonificación: si ven un grupo de mantis preguntando por este sendero, no las vieron venir de nosotros."
+                    "Trato justo. Y como bonificación: cuídense de los lobos por la noche. Andan más hambrientos de lo normal esta temporada."
                 </p>
             </section>
 
             <!-- ===================== ENCUENTRO 2: EL PUENTE DE LAS CABRAS FILOSOFAS ===================== -->
             <section id="encuentro-cabras" class="hidden new-content">
-                <h4>El Puente de la Sabiduría</h4>
+                <h4>Barba Blanca</h4>
                 
                 <p class="texto-narrativo">
                     El sendero los llevó hasta un desfiladero profundo, cruzado únicamente por un puente colgante de cuerdas y tablones de madera. Sin embargo, el paso estaba bloqueado por una cabra montés anciana de barba blanca y ojos sabios.
                 </p>
 
-                <p class="dialogo sabia">
-                    "Soy Filosofa Barbaespuma," anunció la cabra con voz resonante. "Guardiana del Puente de las Reflexiones. Para cruzar, deben responder una pregunta que revele la verdad de sus corazones."
+                <p class="dialogo narradora">
+                    "El puente está cerrado por mantenimiento," anunció la cabra, señalando un cartel invisible con la cabeza. "Problemas con la barandilla izquierda. Muy peligroso."
+                </p>
+                
+                <p class="texto-narrativo">
+                    Se quedó un momento en silencio, masticando pensativamente.
+                </p>
+                
+                <p class="dialogo conspiradora">
+                    "Claro que... si ustedes fueran, digamos, inspectores de puentes..." Los miró de reojo. "O mejor aún, si trajeran algo para sobornos. Digo, para la... eh... fundación benéfica para cabras jubiladas."
+                </p>
+                
+                <p class="texto-narrativo">
+                    Hizo una pausa dramática.
+                </p>
+                
+                <p class="dialogo maliciosa">
+                    "También acepto chismes interesantes. Los rumores sobre el alcalde del pueblo vecino me tienen muy entretenida últimamente." Sonrió con malicia caprina. "¿Han oído algo jugoso en sus viajes?"
+                </p>
+                
+                <p class="texto-narrativo">
+                    La cabra se acercó conspiradoramente.
+                </p>
+                
+                <p class="dialogo confidencial">
+                    "Entre nosotros, este trabajo de guardián está sobrevalorado. Mucha responsabilidad, poco pasto fresco, y los beneficios de salud son terribles. Pero el sindicato de animales mágicos tiene muy buena representación legal."
                 </p>
 
                 <p class="texto-narrativo">
-                    Seraphina se tensó imperceptiblemente. Las preguntas filosóficas podían ser peligrosas para alguien con secretos.
+                    Axel intercambió una mirada con Seraphina. Esta cabra era definitivamente única.
                 </p>
 
-                <p class="dialogo">
-                    "La pregunta es esta:" continuó Filosofa, sus ojos brillando con inteligencia ancestral. "¿Cuándo es justificable causar dolor para evitar un dolor mayor? Y más importante: ¿quién tiene derecho a tomar esa decisión?"
+                <p class="dialogo reflexivo">
+                    "Bueno," dijo Axel lentamente, "hemos escuchado que hay movimientos extraños de mantis religiosas por las montañas. Formaciones militares, dicen algunos."
                 </p>
-
-                <div class="mini-decision">
-                    <p class="texto-opciones">
-                        Esta pregunta afecta directamente el tema central de la historia. La respuesta revelará aspectos del carácter que influirán en eventos posteriores.
-                    </div>
-                </div>
-            </section>
-
-            <!-- ===================== RESPUESTAS FILOSOFICAS ===================== -->
-            <section id="respuesta-axel-confianza" class="hidden contenido-condicional new-content">
-                <p class="dialogo reflexiva">
-                    "Creo," dijo Axel después de un largo momento, "que causar dolor nunca es justificable si hay alternativas. Y nadie tiene derecho a decidir por otros sin su consentimiento. La compasión siempre debe intentarse primero."
-                </p>
-
+                
                 <p class="texto-narrativo">
-                    Filosofa asintió con aprobación. "Una respuesta noble. El corazón compasivo ve primero las posibilidades de sanación."
+                    Los ojos de la cabra se iluminaron con interés genuino, y Seraphina se puso rígida.
                 </p>
 
+                <p class="dialogo entusiasmada">
+                    "¡Ohhhh, qué interesante!" La cabra prácticamente saltó de emoción. "¿Formaciones militares dices? ¿Como en filas ordenadas o más bien como... tácticas de guerrilla?"
+                </p>
+                
                 <p class="texto-narrativo">
-                    Seraphina miró a Axel con una expresión indescifrable. Sus palabras la habían tocado más profundamente de lo que esperaba.
+                    Seraphina reflexionó sobre las palabras de Axel, recordando los cambios extraños que había notado durante su viaje.
                 </p>
-            </section>
-
-            <section id="respuesta-axel-cautela" class="hidden contenido-condicional new-content">
-                <p class="dialogo medida">
-                    "A veces," respondió Axel cuidadosamente, "el dolor pequeño e inmediato puede prevenir un dolor mayor y duradero. Pero solo cuando se han agotado todas las otras opciones, y solo cuando quien decide está dispuesto a cargar las consecuencias."
+                
+                <p class="dialogo curiosa">
+                    "Porque verás, paso aquí todo el día viendo criaturas ir y venir, y definitivamente algo está cambiando en las montañas. Incluso los vientos huelen diferente." La cabra masticó pensativamente una ramita. "¿Tú qué opinas, mantis bonita? ¿Tu gente también ha notado estos cambios?"
                 </p>
-
+                
                 <p class="texto-narrativo">
-                    "Sabiduría práctica," murmuró Filosofa. "El corazón cauteloso entiende el peso de las decisiones difíciles."
+                    Seraphina asintió con preocupación genuina, recordando a su madre.
                 </p>
-
+                
+                <p class="dialogo preocupada">
+                    "Sí, mi madre siempre decía que cuando la naturaleza actúa así, es señal de que algo grande va a pasar," murmuró Seraphina con nostalgia.
+                </p>
+                
+                <p class="dialogo pícaramente">
+                    "¡Ajá! ¡Exactamente lo que pensaba!" La cabra guiñó un ojo. "Mis sospechas sobre el clima extraño estaban correctas. Muy bien, consideren el puente 'reparado mágicamente'. El sindicato estará orgulloso de mi eficiencia."
+                </p>
+                
                 <p class="texto-narrativo">
-                    Seraphina observó la respuesta de Axel con interés calculador. Esta perspectiva podría ser útil para sus propios dilemas morales.
+                    Sin más ceremonias, la cabra se apartó del camino, permitiéndoles cruzar el puente.
                 </p>
-            </section>
-
-            <section id="respuesta-seraphina" class="hidden new-content">
-                <p class="dialogo cargada">
-                    "Y tú, mantis sabia," preguntó Filosofa dirigiéndose a Seraphina, "¿qué piensas sobre la justicia y el dolor?"
-                </p>
-
-                <p class="texto-narrativo">
-                    Seraphina vaciló, sus ojos mostrando un conflicto interno profundo. Finalmente habló, su voz cargada de dolor genuino.
-                </p>
-
-                <p class="dialogo vulnerable">
-                    "Cuando... cuando te han arrebatado todo, cuando has visto morir a los inocentes... a veces sientes que el mundo solo entiende el lenguaje del dolor. Pero..." miró a Axel, "tal vez hay quienes entienden otros idiomas."
-                </p>
-
-                <p class="texto-narrativo">
-                    Filosofa estudió a Seraphina con ojos penetrantes. "El corazón herido debe elegir entre infectar al mundo con su dolor o encontrar sanación. Es la decisión más difícil de todas."
+                
+                <p class="dialogo despedida">
+                    "¡Y recuerden! Si escuchan más rumores jugosos, ya saben dónde encontrarme. ¡Los chismes no se cuentan solos!"
                 </p>
             </section>
 
@@ -335,54 +373,553 @@
                     Mientras cruzaban una zona particularmente empinada, el suelo comenzó a temblar ominosamente. Rocas pequeñas rodaron pendiente abajo, seguidas por otras más grandes.
                 </p>
 
-                <p class="dialogo alarma">
-                    "¡Avalancha!" gritó Axel, tomando la mano de Seraphina. "¡Tenemos que encontrar refugio!"
+                <!-- # La Prueba de la Avalancha - Escena Expandida -->
+
+                <p class="texto-narrativo">
+                    El primer rugido llegó como un susurro distante, apenas perceptible por encima del viento de montaña. Axel se detuvo en seco, su arco élfico comenzando a calentarse contra su espalda.
+                </p>
+
+                <p class="dialogo susurro">
+                    "¿Escuchaste eso?" murmuró, sus ojos heterocromáticos escaneando las cimas nevadas que los rodeaban.
                 </p>
 
                 <p class="texto-narrativo">
-                    Pero cuando buscaron desesperadamente un lugar seguro, aparecieron ayudantes inesperados: un grupo de conejos de montaña con pelaje blanco como la nieve, liderados por una hembra con orejas marcadas por cicatrices de batalla.
+                    Seraphina inclinó la cabeza, sus antenas temblando ligeramente.
+                </p>
+
+                <p class="dialogo preocupada">
+                    "Sí... algo no está bien. El aire se siente..."
+                </p>
+
+                <p class="texto-narrativo">
+                    Entonces llegó el segundo rugido, mucho más fuerte, acompañado del inconfundible sonido de rocas golpeando contra rocas. El suelo bajo sus pies comenzó a vibrar.
+                </p>
+
+                <p class="dialogo alarma">
+                    "¡AVALANCHA!" gritó Axel, tomando instintivamente la mano de Seraphina. "¡Tenemos que encontrar refugio, AHORA!"
+                </p>
+
+                <p class="texto-narrativo">
+                    Sus ojos dorado y plateado barrieron frenéticamente el paisaje rocoso, buscando cualquier saliente, cueva o formación que pudiera protegerlos. Pero el sendero serpenteante ofrecía pocas opciones: rocas sueltas a un lado, un precipicio al otro.
+                </p>
+
+                <p class="texto-narrativo">
+                    El rugido se intensificó. Rocas del tamaño de puños comenzaron a rebotar por la ladera, seguidas por otras más grandes. En la distancia, pudieron ver la nube de polvo y nieve aproximándose como una bestia hambrienta.
+                </p>
+
+                <p class="dialogo desesperada">
+                    "¡Allí!" señaló Seraphina hacia una formación rocosa. "¿Podríamos...?"
                 </p>
 
                 <p class="dialogo fuerte">
-                    "¡Por aquí!" gritó Saltarina Valiente, la líder. "¡Conozco una cueva!"
+                    "No es suficiente," Axel maldijo entre dientes, calculando distancias y tiempos. "Nunca llegaríamos."
+                </p>
+
+                <p class="texto-narrativo enfasis">
+                    Entonces la montaña los devoró.
                 </p>
 
                 <p class="texto-narrativo">
-                    Los conejos guiaron a Axel y Seraphina a una pequeña cueva escondida, justo antes de que la avalancha rugiera por el sendero donde habían estado momentos antes.
+                    La avalancha los golpeó como una bestia gigante de roca y hielo. Axel tuvo apenas un segundo para abrazar a Seraphina antes de que el mundo se convirtiera en un torbellino de blanco cegador y rugido ensordecedor.
                 </p>
+
+                <p class="texto-narrativo">
+                    Rocas del tamaño de su cabeza volaron a su alrededor. La nieve los envolvió como una manta sofocante. Axel sintió que sus pies perdían contacto con el suelo mientras la fuerza de la avalancha los arrastraba pendiente abajo, rodando y rebotando como muñecos de trapo.
+                </p>
+
+                <p class="dialogo grito">
+                    "¡Seraphina!" gritó, pero su voz se perdió en el rugido apocalíptico.
+                </p>
+
+                <p class="texto-narrativo">
+                    Su arco élfico se calentó dolorosamente contra su espalda mientras trataba desesperadamente de mantener a Seraphina cerca. Rocas más pequeñas los golpeaban desde todos los ángulos. El aire se volvió denso y difícil de respirar.
+                </p>
+
+                <p class="texto-narrativo">
+                    Luego, tan súbitamente como había comenzado, todo se detuvo.
+                </p>
+
+                <h5>En la Oscuridad Blanca</h5>
+
+                <p class="texto-narrativo enfasis">
+                    Silencio.
+                </p>
+
+                <p class="texto-narrativo">
+                    Un silencio pesado, amortiguado, como si el mundo hubiera sido envuelto en algodón. Axel parpadeó, pero no podía ver nada excepto blancura. Nieve compactada los rodeaba por todos lados.
+                </p>
+
+                <p class="dialogo susurro">
+                    "¿Seraphina?" su voz sonaba extraña y distante en el espacio confinado.
+                </p>
+
+                <p class="dialogo débil">
+                    "Aquí," llegó una respuesta débil desde muy cerca. "No... no puedo moverme mucho. Hay una roca contra mi espalda."
+                </p>
+
+                <p class="texto-narrativo">
+                    Axel trató de moverse y descubrió que estaban atrapados en una pequeña bolsa de aire, apenas lo suficientemente grande para que ambos respiraran. La nieve los presionaba desde arriba, los lados, creando una prisión blanca y fría.
+                </p>
+
+                <p class="dialogo preocupada">
+                    "¿Estás herida?" preguntó, tratando de mantener la calma en su voz aunque su corazón latía como un tambor de guerra.
+                </p>
+
+                <p class="dialogo valerosa">
+                    "Creo que no gravemente. ¿Y tú?"
+                </p>
+
+                <p class="texto-narrativo">
+                    Axel hizo un inventario rápido. Su hombro izquierdo dolía terriblemente, probablemente magullado por una roca. Podía sentir sangre goteando de un corte en su frente. Pero podía moverse.
+                </p>
+
+                <p class="dialogo mintiendo">
+                    "Estoy bien," mintió. "Pero necesitamos salir de aquí pronto. El aire no va a durar mucho."
+                </p>
+
+                <p class="texto-narrativo">
+                    Como para confirmar sus palabras, ya podía sentir que el aire se estaba volviendo más pesado, más difícil de respirar.
+                </p>
+
+                <h5>Los Salvadores Inesperados</h5>
+
+                <p class="texto-narrativo">
+                    Habían estado atrapados quizás diez minutos —aunque se sintieron como horas— cuando Axel escuchó algo que hizo que su corazón saltara de esperanza: rasguños y excavación desde arriba.
+                </p>
+
+                <p class="dialogo susurro">
+                    "¿Escuchas eso?" susurró a Seraphina.
+                </p>
+
+                <p class="texto-narrativo">
+                    Los sonidos se intensificaron. Rasguños rápidos, como garras trabajando frenéticamente en la nieve compactada. Y luego, imposiblemente, voces:
+                </p>
+
+                <p class="dialogo fuerte">
+                    "¡Están aquí! ¡Puedo oler sus rastros!"
+                </p>
+
+                <p class="dialogo urgente">
+                    "¡Caven más rápido! Bigote Plateado, trae las palas de hueso!"
+                </p>
+
+                <p class="dialogo esperanzada">
+                    "¿Pueden escucharnos allá abajo?"
+                </p>
+
+                <p class="dialogo grito">
+                    "¡SÍ!" gritó Axel con toda la fuerza que pudo reunir. "¡ESTAMOS AQUÍ! ¡DOS DE NOSOTROS!"
+                </p>
+
+                <p class="texto-narrativo">
+                    Un coro de voces respondió desde arriba, y los sonidos de excavación se volvieron aún más urgentes.
+                </p>
+
+                <p class="texto-narrativo">
+                    Cinco minutos después, un rayo de luz gris se filtró en su prisión de nieve. Luego más luz, y finalmente una abertura lo suficientemente grande para que una cabeza de conejo se asomara.
+                </p>
+
+                <p class="texto-narrativo">
+                    Era una hembra robusta con pelaje blanco como la nieve fresca y orejas marcadas por viejas cicatrices de batalla. Sus ojos brillaron con alivio al verlos.
+                </p>
+
+                <p class="dialogo fuerte">
+                    "¡Los tengo!" gritó hacia arriba. "¡Están conscientes! ¡Traigan las cuerdas!"
+                </p>
+
+                <p class="texto-narrativo">
+                    Se dirigió directamente a Axel y Seraphina:
+                </p>
+
+                <p class="dialogo autoridad">
+                    "Soy Saltarina Valiente, líder del clan Pelaje de Nieve. Los vimos caer con la avalancha. Vamos a sacarlos de ahí, pero necesito que cooperen conmigo, ¿de acuerdo?"
+                </p>
+
+                <p class="dialogo alivio">
+                    "Gracias," jadeó Axel, sintiendo lágrimas de alivio quemando sus ojos. "Pensé que... pensé que íbamos a morir aquí."
+                </p>
+
+                <p class="dialogo determinada">
+                    "No bajo mi vigilancia," respondió Saltarina con determinación férrea. "Mi clan no deja que los viajeros perezcan en nuestras montañas."
+                </p>
+
+                <h5>El Rescate</h5>
+
+                <p class="texto-narrativo">
+                    La operación de rescate fue un estudio en eficiencia. Los conejos habían claramente hecho esto antes. Bajaron cuerdas tejidas con pelo de conejo, sorprendentemente fuertes, y trabajaron en equipo para ampliar cuidadosamente la abertura sin causar otro colapso.
+                </p>
+
+                <p class="texto-narrativo">
+                    Un conejo anciano con pelaje grisáceo alrededor de las orejas se asomó por la abertura.
+                </p>
+
+                <p class="dialogo anciano">
+                    "Bigote Plateado," se presentó. "¿Alguno de ustedes está gravemente herido? ¿Pueden moverse por su propia cuenta?"
+                </p>
+
+                <p class="dialogo cautelosa">
+                    "Creo que sí," respondió Seraphina, probando cuidadosamente sus extremidades. "Solo magulladuras."
+                </p>
+
+                <p class="dialogo honesta">
+                    "Mi hombro está mal," admitió Axel, "pero puedo usar la cuerda."
+                </p>
+
+                <p class="dialogo experto">
+                    "Bien. La hembra primero. Ate la cuerda alrededor de su cintura, no alrededor de su pecho —necesita poder respirar mientras la subimos."
+                </p>
+
+                <p class="texto-narrativo">
+                    El proceso fue lento pero meticuloso. Seraphina subió primero, ayudada por media docena de conejos trabajando en coordinación perfecta. Luego fue el turno de Axel, quien luchó contra el dolor en su hombro mientras los conejos lo izaron cuidadosamente fuera de la trampa de nieve.
+                </p>
+
+                <p class="texto-narrativo">
+                    Cuando finalmente emergió a la superficie, jadeando en el aire fresco de la montaña, vio que habían estado enterrados bajo casi dos metros de nieve compactada y escombros.
+                </p>
+
+                <p class="dialogo experta">
+                    "Tuvieron suerte," comentó Saltarina, evaluando el sitio con ojo experto. "La mayoría de las víctimas de avalancha quedan sepultadas mucho más profundo. Y esa roca que los estaba presionando en realidad creó un espacio de supervivencia."
+                </p>
+
+                <p class="texto-narrativo">
+                    Axel miró a Seraphina, quien estaba temblando tanto por el frío como por el shock tardío. Sin pensar, se quitó su capa y la envolvió alrededor de ella.
+                </p>
+
+                <p class="dialogo agradecida">
+                    "Gracias," murmuró ella, sus ojos grandes y brillantes con lágrimas no derramadas.
+                </p>
+
+                <p class="dialogo autoridad">
+                    "Los dos necesitan calor y medicina," declaró Saltarina con autoridad. "Nuestra cueva refugio está a cinco minutos de aquí. No hay discusión —vienen con nosotros hasta que estén completamente recuperados."
+                </p>
+
             </section>
 
             <section id="refugio-conejos" class="hidden new-content">
                 <h4>En el Refugio</h4>
                 
                 <p class="texto-narrativo">
-                    Dentro de la cueva, esperando que pasara el peligro, los conejos compartieron su comida y calor. Saltarina Valiente resultó ser una veterana de muchas batallas territoriales, con historias fascinantes de supervivencia.
-                </p>
-
-                <p class="dialogo narradora">
-                    "Hemos visto muchas avalanchas," explicó Saltarina. "Pero esta... esta no fue natural. Algo la provocó. Hemos escuchado rumores de grupos grandes moviéndose por las montañas, alterando el equilibrio."
+                    La cueva era más grande de lo que parecía desde afuera, extendiéndose hacia las profundidades de la montaña. El aire era fresco pero no helado, y había indicios de uso regular: pequeñas provisiones almacenadas, un área para fogatas, incluso mantas tejidas con pelo de conejo.
                 </p>
 
                 <p class="texto-narrativo">
-                    Seraphina se puso rígida. ¿Podría referirse a su propia red de mantis?
+                    Los doce conejos se acomodaron con la práctica de aquellos acostumbrados a refugiarse juntos. Saltarina Valiente se acercó a Axel y Seraphina, que aún temblaban por la adrenalina.
+                </p>
+
+                <p class="dialogo tranquilizadora">
+                    "Están seguros ahora," dijo con autoridad tranquilizadora. "Esta cueva ha protegido a mi familia por tres generaciones. Las avalanchas pasan por encima como agua sobre una roca."
+                </p>
+
+                <p class="texto-narrativo">
+                    Como para confirmar sus palabras, el rugido continuó afuera, pero sonaba distante y no amenazante desde su refugio seguro.
+                </p>
+
+                <p class="dialogo agradecido">
+                    "Les debemos nuestras vidas," dijo Axel, inclinándose respetuosamente. "Soy Axel, y ella es Seraphina."
+                </p>
+
+                <p class="dialogo modesta">
+                    "Saltarina Valiente, líder del clan Pelaje de Nieve," respondió la coneja, sus ojos astutos evaluándolos. "Y no me deben nada. Estas montañas son traicioneras para todos nosotros."
+                </p>
+
+                <p class="texto-narrativo">
+                    Uno de los conejos más jóvenes se acercó tímidamente con una manta tejida.
+                </p>
+
+                <p class="dialogo tímida">
+                    "Para que se sequen," murmuró antes de retirarse rápidamente.
+                </p>
+
+                <p class="dialogo cariñosa">
+                    "Orejas Curiosas," explicó Saltarina con una sonrisa. "Mi hijo menor. Aún está aprendiendo a no temer a los forasteros."
+                </p>
+
+                <h5>Historias en la Penumbra</h5>
+
+                <p class="texto-narrativo">
+                    Mientras esperaban que la avalancha terminara completamente, los conejos compartieron generosamente su comida: raíces dulces, nueces almacenadas y un té herbal que calentó a Axel y Seraphina desde adentro.
+                </p>
+
+                <p class="texto-narrativo">
+                    Saltarina se sentó cerca de la pequeña fogata que habían encendido, sus cicatrices visibles a la luz parpadeante.
+                </p>
+
+                <p class="dialogo curiosa">
+                    "¿Cómo obtuviste esas marcas?" preguntó Seraphina con curiosidad genuina.
+                </p>
+
+                <p class="texto-narrativo">
+                    Los ojos de Saltarina se endurecieron ligeramente, pero no con hostilidad.
+                </p>
+
+                <p class="dialogo guerrera">
+                    "Batallas territoriales. Hace cinco años, los Halcones de Pico Plateado decidieron que nuestras madrigueras serían perfectas para sus nidos. Perdimos diecisiete miembros del clan antes de que se retiraran."
+                </p>
+
+                <p class="dialogo comprensiva">
+                    "La supervivencia en montaña nunca es fácil," asintió Axel sombríamente. "Especialmente cuando otros deciden que tu hogar les pertenece."
+                </p>
+
+                <p class="dialogo aprobadora">
+                    "Exactamente," Saltarina lo miró con aprobación. "Ustedes entienden. Muchos viajeros pasan por aquí sin considerar las luchas diarias que enfrentamos los que vivimos permanentemente en estas alturas."
+                </p>
+
+                <p class="texto-narrativo">
+                    Seraphina se inclinó hacia adelante, sus ojos brillando con interés.
+                </p>
+
+                <p class="dialogo investigativa">
+                    "¿Han notado algo... inusual recientemente? ¿Movimientos extraños, criaturas donde no deberían estar?"
+                </p>
+
+                <p class="texto-narrativo">
+                    Los conejos intercambiaron miradas. Uno de los mayores, con pelaje grisáceo alrededor de las orejas, habló:
+                </p>
+
+                <p class="dialogo señalando">
+                    "Bigote Plateado ha visto cosas," dijo Saltarina, señalándolo. "Cuéntales, abuelo."
+                </p>
+
+                <p class="texto-narrativo">
+                    El conejo anciano tosió antes de hablar:
+                </p>
+
+                <p class="dialogo anciano">
+                    "Mantis. Muchas mantis. Viajando en grupos pequeños, siempre de noche. No es natural. Las mantis son criaturas solitarias, pero estas... estas actúan como si fueran un ejército."
+                </p>
+
+                <p class="texto-narrativo">
+                    Axel sintió que su sangre se enfriaba, pero mantuvo su expresión neutral. Seraphina, por su parte, pareció genuinamente sorprendida.
+                </p>
+
+                <p class="dialogo sorprendida">
+                    "¿Mantis viajando en grupos?" preguntó. "¿Estás seguro? Eso es... muy extraño."
+                </p>
+
+                <p class="dialogo confirmando">
+                    "Muy seguro," asintió Bigote Plateado. "Y todas van en la misma dirección. Hacia las tierras bajas, donde viven los gatos monteses."
+                </p>
+
+                <h5>El Momento de la Verdad</h5>
+
+                <p class="texto-narrativo">
+                    Un silencio incómodo cayó sobre la cueva. Axel podía sentir las miradas de todos los conejos sobre él, esperando su reacción. Su mente trabajaba rápidamente: ¿era esto una coincidencia? ¿O había algo más profundo sucediendo?
+                </p>
+
+                <p class="dialogo cautelosa">
+                    "¿Cuándo comenzaste a verlas?" preguntó cuidadosamente.
+                </p>
+
+                <p class="dialogo anciano">
+                    "Hace dos semanas," respondió Bigote Plateado. "Primero fueron solo una o dos. Pero cada noche hay más. Ayer conté al menos veinte pasando por el sendero norte."
+                </p>
+
+                <p class="texto-narrativo">
+                    Seraphina había palidecido visiblemente.
                 </p>
 
                 <p class="dialogo preocupada">
-                    "¿Grupos de qué tipo?" preguntó Axel, notando la tensión de Seraphina.
+                    "Esto es... preocupante. Mi especie no se agrupa de esa manera a menos que..." se detuvo, como si hubiera dicho demasiado.
                 </p>
 
-                <p class="dialogo susurrante">
-                    "Insectos grandes. Mantis religiosas, específicamente. Viajan en formaciones militares, como si se prepararan para algo grande." Saltarina miró significativamente a Seraphina. "Espero que no sea nada malo."
+                <p class="dialogo presionando">
+                    "¿A menos que qué?" presionó Saltarina, sus instintos de supervivencia claramente activados.
+                </p>
+
+                <p class="dialogo voz_baja">
+                    "A menos que estén planeando algo grande," terminó Seraphina en voz baja. "Algo que requiere coordinación."
+                </p>
+
+                <p class="texto-narrativo">
+                    Axel estudió el rostro de Seraphina cuidadosamente. Su sorpresa parecía genuina, pero había algo más en sus ojos... ¿reconocimiento? ¿miedo? No podía estar seguro.
+                </p>
+
+                <p class="dialogo importante">
+                    "Saltarina," dijo finalmente, "necesito preguntarte algo importante. ¿Alguna de esas mantis ha tratado de comunicarse con ustedes? ¿O han mostrado alguna agresión?"
+                </p>
+
+                <p class="dialogo pensativa">
+                    "No directamente," respondió la líder de los conejos. "Pero tampoco ignoran nuestra presencia como harían normalmente las mantis solitarias. Nos... evalúan. Como si estuvieran decidiendo si somos una amenaza o no."
+                </p>
+
+                <p class="dialogo murmullo">
+                    "Eso no es comportamiento normal de mantis," murmuró Seraphina, más para sí misma que para los demás.
+                </p>
+
+                <h5>La Despedida</h5>
+
+                <p class="texto-narrativo">
+                    El rugido de la avalancha finalmente se había desvanecido, reemplazado por el silencio extraño que siempre seguía a tales eventos naturales. Saltarina se acercó a la entrada de la cueva y asomó la cabeza.
+                </p>
+
+                <p class="dialogo informando">
+                    "Es seguro salir," anunció. "Pero el sendero principal está completamente bloqueado. Tendrán que tomar la ruta larga alrededor de la Cresta del Águila."
+                </p>
+
+                <p class="texto-narrativo">
+                    Se dirigió a Axel y Seraphina con expresión seria.
+                </p>
+
+                <p class="dialogo seria">
+                    "Escuchen, no sé qué los lleva a las tierras bajas, pero sean cuidadosos. Las montañas están... agitadas. Más de lo usual. Y no solo por las avalanchas."
+                </p>
+
+                <p class="texto-narrativo">
+                    Axel se puso en pie, ajustándose el arco élfico en la espalda.
+                </p>
+
+                <p class="dialogo agradecido">
+                    "Gracias por el refugio y la advertencia. ¿Hay algo que podamos hacer por ustedes antes de partir?"
+                </p>
+
+                <p class="texto-narrativo">
+                    Saltarina consideró la pregunta por un momento.
+                </p>
+
+                <p class="dialogo petición">
+                    "Sí, hay algo. Si encuentran a otros de mi especie en su viaje, díganles que Saltarina Valiente y el clan Pelaje de Nieve están estableciendo refugios de emergencia. Las criaturas están migrando de maneras extrañas, y todos necesitamos estar preparados."
+                </p>
+
+                <p class="dialogo prometiendo">
+                    "Lo haremos," prometió Axel.
+                </p>
+
+                <p class="texto-narrativo">
+                    Seraphina se adelantó, sus movimientos gráciles incluso en el espacio limitado de la cueva.
+                </p>
+
+                <p class="dialogo seria">
+                    "Y si ven más grupos de mantis, manténganse alejados. Reporténlas a cualquier autoridad local que puedan encontrar."
+                </p>
+
+                <p class="dialogo sospecha">
+                    "¿Esperan problemas?" preguntó Saltarina, sus ojos agudos no perdiendo detalle.
+                </p>
+
+                <p class="dialogo diplomática">
+                    "Esperamos estar equivocados," respondió Axel diplomáticamente. "Pero es mejor prevenir que lamentar."
+                </p>
+
+                <p class="texto-narrativo">
+                    Uno de los conejos más jóvenes corrió hacia ellos con una pequeña bolsa de provisiones.
+                </p>
+
+                <p class="dialogo tímida">
+                    "Para el camino," dijo tímidamente.
+                </p>
+
+                <p class="dialogo cariñosa">
+                    "Orejas Curiosas insiste," sonrió Saltarina. "Y cuando mi hijo menor insiste en algo, es más fácil aceptar que discutir."
+                </p>
+
+                <h5>El Nuevo Sendero</h5>
+
+                <p class="texto-narrativo">
+                    Al salir de la cueva, Axel y Seraphina se encontraron con un paisaje dramáticamente alterado. Donde antes había habido un sendero claro, ahora se extendía un campo de rocas y nieve compactada. La avalancha había rediseñado completamente la geografía local.
+                </p>
+
+                <p class="dialogo señalando">
+                    "La Cresta del Águila," señaló Saltarina hacia un sendero serpenteante que subía por la ladera opuesta. "Es más largo, pero más seguro. Les tomará medio día extra, pero los llevará directamente al Valle de los Susurradores."
+                </p>
+
+                <p class="dialogo interesada">
+                    "¿Conoces el Valle de los Susurradores?" preguntó Seraphina con interés.
+                </p>
+
+                <p class="dialogo conocedora">
+                    "Lo conozco de nombre y reputación," asintió Saltarina. "Lugar extraño. Los espíritus allí nunca mienten, pero tampoco hablan claramente. Si van hacia allá, tienen algún propósito especial."
+                </p>
+
+                <p class="texto-narrativo">
+                    Axel y Seraphina intercambiaron miradas. No habían mencionado específicamente su destino.
+                </p>
+
+                <p class="dialogo astuta">
+                    "Los conejos de montaña somos buenos escuchando," explicó Saltarina con una sonrisa astuta. "Y ustedes dos han hablado como aquellos que buscan respuestas a preguntas muy específicas."
+                </p>
+
+                <p class="dialogo respetuosa">
+                    "Sabios además de valientes," comentó Axel con respeto genuino.
+                </p>
+
+                <p class="dialogo filosófica">
+                    "Supervivencia requiere ambas cualidades," respondió Saltarina. "Vayan con cuidado, y recuerden: si necesitan refugio de regreso, la cueva estará aquí."
+                </p>
+
+                <h5>Reflexiones en el Sendero</h5>
+
+                <p class="texto-narrativo">
+                    Mientras comenzaban su ascenso por la Cresta del Águila, Axel no pudo evitar reflexionar sobre el encuentro. Los conejos habían sido más que salvadores; habían sido informantes invaluables.
+                </p>
+
+                <p class="dialogo reflexiva">
+                    "¿Qué piensas de lo que dijo Bigote Plateado?" preguntó a Seraphina mientras navegaban por el sendero rocoso.
+                </p>
+
+                <p class="texto-narrativo">
+                    Seraphina parecía perdida en sus pensamientos.
+                </p>
+
+                <p class="dialogo perturbada">
+                    "Es... perturbador. Mi especie normalmente es solitaria por buenas razones. Cuando nos agrupamos, usualmente significa que algo ha ido terriblemente mal."
+                </p>
+
+                <p class="dialogo presionando">
+                    "¿Como qué?" presionó Axel gentilmente.
+                </p>
+
+                <p class="dialogo voz_pequeña">
+                    "Territorio perdido, familias destruidas, recursos agotados... o venganza." Su voz se había vuelto más pequeña con la última palabra.
+                </p>
+
+                <p class="texto-narrativo">
+                    Axel asintió sombríamente. Como cazador solitario, sabía que los cambios en los patrones de comportamiento animal usualmente significaban problemas para todos los habitantes de las montañas.
+                </p>
+
+                <p class="dialogo cautelosa">
+                    "Seraphina," dijo cuidadosamente, "¿hay algo más que deberías decirme? Sobre tu familia, sobre lo que realmente pasó?"
+                </p>
+
+                <p class="texto-narrativo">
+                    Ella se detuvo en el sendero, su cuerpo tenso. Por un momento, Axel pensó que finalmente obtendría respuestas completas. Pero cuando se giró hacia él, sus ojos solo mostraban el dolor familiar que había visto desde su primer encuentro.
+                </p>
+
+                <p class="dialogo preocupada">
+                    "Solo que... temo que lo que sea que le pasó a mi familia pueda estar pasándole a otras. Y si eso es cierto, entonces encontrar las Lágrimas de Luna es más urgente de lo que pensé."
+                </p>
+
+                <p class="texto-narrativo">
+                    Axel estudió su rostro, buscando signos de engaño, pero solo vio sinceridad y miedo. Fuera lo que fuera que estaba ocultando, parecía genuinamente aterrorizada por las implicaciones.
+                </p>
+
+                <p class="dialogo decidida">
+                    "Entonces será mejor que sigamos adelante," dijo finalmente. "El Valle de los Susurradores nos espera, y tal vez allí obtengamos algunas respuestas."
+                </p>
+
+                <p class="texto-narrativo">
+                    Mientras continuaron por la Cresta del Águila, el sol comenzó su descenso hacia el horizonte, pintando las montañas de dorado y púrpura. Detrás de ellos, la cueva de Saltarina Valiente desapareció entre las rocas, pero las palabras de advertencia del clan Pelaje de Nieve resonaron en sus mentes.
+                </p>
+
+                <p class="texto-narrativo enfasis">
+                    Las montañas guardaban secretos, y algunos de esos secretos estaban comenzando a moverse en la oscuridad.
                 </p>
 
                 <div class="mini-decision">
                     <p class="texto-opciones">
-                        Este momento crea tensión adicional y foreshadowing sobre la red de Seraphina, mientras que los conejos pueden convertirse en aliados o informantes valiosos dependiendo de cómo se manejen.
+                        <em>Continuará en: "El Valle de los Susurradores"</em>
                     </div>
                 </div>
             </section>
 
+            <!-- ========================================================================== -->
+            <!-- SECCIÓN B: ELECCIÓN DE ALIADOS Y VIAJE (Líneas ~390-680)                 -->
+            <!-- ========================================================================== -->
+            
             <!-- ===================== DECISIÓN 2: ALIADOS INICIALES ===================== -->
+            <!-- SECCIÓN: Elección de ruta hacia las Cuevas de los Osos de Cristal -->
+            <!-- LÍNEAS APROXIMADAS: 385-680 -->
+            <!-- OPCIONES: A) Aldea Zorros Plateros | B) Territorio Murciélagos Bibliotecarios -->
+            <!-- IMPACTO: Determina herramientas y conocimientos para desafíos posteriores -->
             <div id="decision-2" class="decision-point hidden">
                 <h3 class="decision-title">El Sendero se Divide</h3>
                 
@@ -423,7 +960,7 @@
                 </p>
 
                 <p class="texto-narrativo">
-                    Cuando Axel explicó su misión, los zorros intercambiaron miradas significativas. Un joven zorro susurró algo sobre "rumores sobre mantis peligrosas," pero Ferrum lo silenció con una mirada.
+                    Cuando Axel explicó su misión, los zorros intercambiaron miradas significativas. Un joven zorro murmuró algo sobre "viajeros extraños últimamente," pero Ferrum lo silenció con una mirada.
                 </p>
 
                 <p class="dialogo">
@@ -496,6 +1033,14 @@
                 </p>
             </section>
 
+            <!-- ##########################################################
+            #  SECCIÓN 2: ELECCIÓN DE ALIADOS Y VIAJE (Líneas 400-620)
+            #  - Decisión de ruta: Zorros Plateros vs Murciélagos
+            #  - Contenido diferenciado según elección
+            #  - Obtención de herramientas/conocimientos especializados
+            #  - Viaje hacia las Cuevas Brillantes
+            ########################################################## -->
+            
             <!-- ===================== VIAJE 2: HACIA LOS ALIADOS (ZORROS/MURCIÉLAGOS) ===================== -->
             <section id="viaje-aliados" class="hidden">
                 <h3>En Busca de Aliados</h3>
@@ -645,7 +1190,7 @@
                     </p>
                     
                     <p class="dialogo territorial">
-                        "Este territorio está bajo nuestra protección. Hemos visto movimientos extraños últimamente: mantis viajando en grupos, llevando armas. ¿Pueden explicar su presencia aquí?"
+                        "Este territorio está bajo nuestra protección. Hemos visto movimientos extraños últimamente: criaturas que normalmente son solitarias viajando en grupos. ¿Pueden explicar su presencia aquí?"
                     </p>
                     
                     <p class="texto-narrativo">
@@ -679,7 +1224,15 @@
                 </p>
             </section>
 
+            <!-- ========================================================================== -->
+            <!-- SECCIÓN C: ENCUENTRO FAMILIAR Y DINÁMICAS (Líneas ~690-850)              -->
+            <!-- ========================================================================== -->
+            
             <!-- ===================== DECISIÓN 3: EMBER ===================== -->
+            <!-- SECCIÓN: Encuentro con el hermano menor de Axel -->
+            <!-- LÍNEAS APROXIMADAS: 682-845 -->
+            <!-- OPCIONES: A) Incluir a Ember como mediador | B) Protegerlo rechazando ayuda -->
+            <!-- IMPACTO: Dinámicas familiares y apoyo emocional vs protección -->
             <div id="decision-3" class="decision-point hidden">
                 <h3 class="decision-title">La Melodía Familiar</h3>
                 
@@ -703,6 +1256,14 @@
                 </div>
             </div>
 
+            <!-- ##########################################################
+            #  SECCIÓN 3: ENCUENTRO FAMILIAR - EMBER (Líneas 700-820)
+            #  - Aparición del hermano menor de Axel
+            #  - Dinámicas familiares y trauma personal  
+            #  - Decisión de incluirlo o protegerlo
+            #  - Llegada al Bosque de los Cuervos Espejo
+            ########################################################## -->
+            
             <!-- ===================== CONTENIDO EMBER ===================== -->
             <section id="melodia-ember" class="hidden contenido-condicional">
                 <p class="texto-narrativo">
@@ -845,7 +1406,15 @@
                 </p>
             </section>
 
+            <!-- ========================================================================== -->
+            <!-- SECCIÓN D: REVELACIÓN Y ESTRATEGIA (Líneas ~860-950)                     -->
+            <!-- ========================================================================== -->
+            
             <!-- ===================== DECISIÓN 4: CONFRONTACIÓN O ESPIONAJE ===================== -->
+            <!-- SECCIÓN: Estrategia tras la revelación de Lyra sobre Seraphina -->
+            <!-- LÍNEAS APROXIMADAS: 848-948 -->
+            <!-- OPCIONES: A) Confrontar directamente | B) Espiar y seguir el juego -->
+            <!-- IMPACTO: Define completamente los capítulos 5-6 del desarrollo -->
             <div id="decision-4" class="decision-point hidden">
                 <h3 class="decision-title">La Verdad Revelada</h3>
                 
@@ -869,6 +1438,14 @@
                 </div>
             </div>
 
+            <!-- ##########################################################
+            #  SECCIÓN 4: REVELACIÓN Y ESTRATEGIA (Líneas 880-980)
+            #  - Lyra revela la verdad sobre Seraphina
+            #  - Decisión: Confrontación vs Espionaje
+            #  - Cambio radical en la dinámica del grupo
+            #  - Preparación para la fase final
+            ########################################################## -->
+            
             <!-- ===================== CONTENIDO POST-REVELACIÓN ===================== -->
             <section id="confrontacion-directa" class="hidden contenido-condicional">
                 <h3>La Confrontación</h3>
@@ -948,6 +1525,10 @@
             </section>
 
             <!-- ===================== DECISIÓN 5: DILEMA DE EMBER ===================== -->
+            <!-- SECCIÓN: Crisis familiar obliga separación de Ember -->
+            <!-- LÍNEAS APROXIMADAS: 950-1240 -->
+            <!-- OPCIONES: A) Ember se queda hasta final | B) Ember regresa a proteger familia -->
+            <!-- IMPACTO: Presencia vs ausencia en confrontación final -->
             <div id="decision-5" class="decision-point hidden">
                 <h3 class="decision-title">El Dilema Familiar</h3>
                 
@@ -990,6 +1571,14 @@
                 </div>
             </div>
 
+            <!-- ##########################################################
+            #  SECCIÓN 5: DILEMA FAMILIAR Y SEPARACIÓN (Líneas 1000-1270)
+            #  - Crisis en Valle Tranquilo (familia de Ember)
+            #  - Decisión: Ember se queda vs regresa con familia
+            #  - Búsqueda de aliados finales
+            #  - Preparación para el Templo Celestial
+            ########################################################## -->
+            
             <!-- ===================== CONTENIDO EMBER SE VA ===================== -->
             <section id="ember-se-va" class="hidden contenido-condicional">
                 <h3>La Separación de los Hermanos</h3>
@@ -1239,6 +1828,10 @@
             </section>
 
             <!-- ===================== DECISIÓN 6: ALIADOS FINALES ===================== -->
+            <!-- SECCIÓN: Preparación final antes del Templo Celestial -->
+            <!-- LÍNEAS APROXIMADAS: 1241-1350 -->
+            <!-- OPCIONES: A) Arañas Tejedoras (mapas/secretos) | B) Conejos Herbolarios (claridad mental) -->
+            <!-- IMPACTO: Preparación táctica vs preparación psicológica -->
             <div id="decision-6" class="decision-point hidden">
                 <h3 class="decision-title">La Preparación Final</h3>
                 
@@ -1323,6 +1916,14 @@
                 </p>
             </section>
 
+            <!-- ##########################################################
+            #  SECCIÓN 6: TEMPLO CELESTIAL Y RESOLUCIÓN (Líneas 1370-final)
+            #  - Llegada al Templo Celestial
+            #  - Confrontación final con Seraphina
+            #  - Decisión: Uso inmediato vs confrontación de las Lágrimas
+            #  - Múltiples finales y epílogos
+            ########################################################## -->
+            
             <!-- ===================== ENTRADA AL TEMPLO ===================== -->
             <section id="entrada-templo" class="hidden">
                 <h3>El Templo Celestial</h3>
@@ -1349,6 +1950,10 @@
             </section>
 
             <!-- ===================== DECISIÓN 7: MOMENTO FINAL ===================== -->
+            <!-- SECCIÓN: Uso de las Lágrimas de Luna en el Templo Celestial -->
+            <!-- LÍNEAS APROXIMADAS: 1351-final -->
+            <!-- OPCIONES: A) Curación inmediata | B) Confrontación primero -->
+            <!-- IMPACTO: Tipo de redención (inmediata vs gradual) y epílogo -->
             <div id="decision-7" class="decision-point hidden">
                 <h3 class="decision-title">El Momento Final</h3>
                 
@@ -1534,6 +2139,7 @@
     </div>
 
     <!-- ===================== SCRIPTS ===================== -->
+    <script src="timeline-system.js"></script>
     <script src="decision-system.js"></script>
     <script src="mark-new-content.js"></script>
     <script>
@@ -1754,6 +2360,20 @@ Para más detalles, usa "Exportar Análisis de Contenido"
             }
         }
         
+        // ===================== FUNCIONES DEBUG TIMELINE =====================
+        // Hacer funciones de debug disponibles globalmente
+        window.debugTimeline = function() {
+            mostrarTimelineDebug();
+        };
+        
+        window.forzarTimeline = function() {
+            forzarRegistroSecciones();
+        };
+        
+        window.reiniciarTimeline = function() {
+            reiniciarTimeline();
+        };
+
         // ===================== INICIALIZACIÓN =====================
         document.addEventListener('DOMContentLoaded', function() {
             setTimeout(actualizarResumenFinal, 1000);
