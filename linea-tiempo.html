@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Línea de Tiempo - El Cazador de Medianoche</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            min-height: 100vh;
+            background: #1a1a2e;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .sidebar {
+            width: 300px;
+            background: rgba(20, 20, 30, 0.95);
+            border-right: 2px solid #c9aa71;
+            padding: 20px;
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            box-shadow: 2px 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .sidebar h2 {
+            color: #c9aa71;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 2px solid #c9aa71;
+            padding-bottom: 10px;
+        }
+
+        .menu-section {
+            margin-bottom: 30px;
+        }
+
+        .menu-section h3 {
+            color: #c9aa71;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            border-left: 4px solid #c9aa71;
+            padding-left: 10px;
+        }
+
+        .menu-item {
+            display: block;
+            color: #e0e0e0;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin: 5px 0;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .menu-item:hover {
+            background: rgba(201, 170, 113, 0.2);
+            border-color: #c9aa71;
+            color: #c9aa71;
+        }
+
+        .main-content {
+            flex: 1;
+            margin-left: 300px;
+            padding: 20px;
+        }
+
+        .timeline-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, #c9aa71, #8b7355);
+            box-shadow: 0 0 10px rgba(201, 170, 113, 0.5);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 40px 0;
+            padding-left: 50px;
+        }
+
+        .timeline-content {
+            background: rgba(30, 30, 40, 0.95);
+            border: 2px solid #c9aa71;
+            border-radius: 10px;
+            padding: 20px;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            left: -12px;
+            top: 20px;
+            width: 0;
+            height: 0;
+            border: 10px solid transparent;
+            border-right-color: #c9aa71;
+        }
+
+        .timeline-marker {
+            position: absolute;
+            left: -7px;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background: #c9aa71;
+            border: 4px solid #1a1a2e;
+            border-radius: 50%;
+            box-shadow: 0 0 15px rgba(201, 170, 113, 0.8);
+            z-index: 10;
+        }
+
+        .location-name {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #c9aa71;
+            margin-bottom: 10px;
+        }
+
+        .day-info {
+            color: #a0a0b0;
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+
+        .distance-info {
+            color: #8b7355;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        .chapter-reference {
+            color: #c9aa71;
+            font-size: 0.9em;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        h1 {
+            text-align: center;
+            color: #c9aa71;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .stats-container {
+            background: rgba(30, 30, 40, 0.8);
+            border: 2px solid #c9aa71;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .stats-container h3 {
+            color: #c9aa71;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .stats-container p {
+            color: #e0e0e0;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 1024px) {
+            .sidebar {
+                width: 250px;
+            }
+            
+            .main-content {
+                margin-left: 250px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                border-right: none;
+                border-bottom: 2px solid #c9aa71;
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+
+            body {
+                flex-direction: column;
+            }
+
+            .timeline {
+                padding-left: 20px;
+            }
+
+            .timeline::before {
+                left: 10px;
+            }
+
+            .timeline-marker {
+                left: 2px;
+            }
+
+            .timeline-item {
+                padding-left: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- SIDEBAR MENÚ IZQUIERDO -->
+    <aside class="sidebar">
+        <h2>🌙 El Cazador de Medianoche</h2>
+        
+        <div class="menu-section">
+            <h3>📖 Historia Principal</h3>
+            <a href="historia-interactiva.html" class="menu-item">📚 Historia Completa</a>
+            <a href="index-nuevo.html" class="menu-item">🏠 Página Principal</a>
+            <a href="mundo-magico.html" class="menu-item">🌍 Mundo Mágico</a>
+        </div>
+
+        <div class="menu-section">
+            <h3>👥 Personajes & Mundo</h3>
+            <a href="personajes.html" class="menu-item">👤 Análisis de Personajes</a>
+            <a href="mapa-ramificaciones.html" class="menu-item">🗺️ Mapa de Decisiones</a>
+            <a href="#" class="menu-item">📍 Línea de Tiempo</a>
+        </div>
+
+        <div class="menu-section">
+            <h3>🔀 Convergencias</h3>
+            <a href="convergencia-cuervos.html" class="menu-item">🐦‍⬛ Revelación de Lyra</a>
+            <a href="convergencia-tejones.html" class="menu-item">🕳️ Laberinto de Tejones</a>
+            <a href="despedida-ember.html" class="menu-item">👋 Despedida de Ember</a>
+        </div>
+
+        <div class="menu-section">
+            <h3>⚙️ Sistema</h3>
+            <a href="#" class="menu-item" onclick="resetProgress()">🔄 Reiniciar Progreso</a>
+            <a href="#estadisticas" class="menu-item">📊 Estadísticas</a>
+        </div>
+
+        <div class="menu-section">
+            <h3>📄 Documentación</h3>
+            <a href="CLAUDE.md" class="menu-item">📋 Instrucciones</a>
+            <a href="README-sistema.md" class="menu-item">📖 Sistema</a>
+        </div>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+        <div class="timeline-container">
+            <h1>🌙 Línea de Tiempo del Viaje 🌙</h1>
+            
+            <div class="timeline">
+            <!-- DÍA 1 -->
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="location-name">🏔️ Montañas Heladas</div>
+                    <div class="day-info">Día 1 - Punto de Partida</div>
+                    <div class="distance-info">📍 Ubicación inicial</div>
+                    <div class="description">
+                        Refugio solitario de Axel. Primer encuentro con Seraphina herida. Las montañas se extienden interminables bajo un cielo plomizo.
+                    </div>
+                    <div class="chapter-reference">Capítulo 1: El Encuentro</div>
+                </div>
+            </div>
+
+            <!-- DÍA 2 -->
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="location-name">🌫️ Valle de los Susurradores</div>
+                    <div class="day-info">Día 2 - Primera Jornada</div>
+                    <div class="distance-info">📏 ~15 km desde las Montañas</div>
+                    <div class="description">
+                        Territorio de espíritus proféticos que hablan en acertijos. Los susurradores nunca mienten pero sus verdades están envueltas en misterio.
+                    </div>
+                    <div class="chapter-reference">Capítulo 2: Valle de los Susurradores</div>
+                </div>
+            </div>
+
+            <!-- DÍA 3 -->
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="location-name">🦔 Aldea de Zorros Plateros / 🦇 Territorio de Murciélagos</div>
+                    <div class="day-info">Día 3 - Búsqueda de Aliados</div>
+                    <div class="distance-info">📏 ~20 km (bifurcación desde el Valle)</div>
+                    <div class="description">
+                        <strong>Ruta A:</strong> Maestros metalúrgicos desconfiados pero justos.<br>
+                        <strong>Ruta B:</strong> Guardianes de conocimiento ancestral en cuevas-biblioteca.
+                    </div>
+                    <div class="chapter-reference">Sistema de Decisiones - Capítulo 2.5</div>
+                </div>
+            </div>
+
+            <!-- DÍA 4 -->
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="location-name">💎 Cuevas Brillantes</div>
+                    <div class="day-info">Día 4 - Prueba de los Osos</div>
+                    <div class="distance-info">📏 ~25 km desde aliados</div>
+                    <div class="description">
+                        Santuario de los Osos de Cristal, fuente de las llaves mágicas. Prueba que revela el carácter verdadero de quienes buscan las Lágrimas de Cristal.
+                    </div>
+                    <div class="chapter-reference">Capítulo 3: Santuario de los Osos de Cristal</div>
+                </div>
+            </div>
+
+            <!-- DÍA 5 -->
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="location-name">🐦‍⬛ Bosque de los Cuervos Espejo</div>
+                    <div class="day-info">Día 5 - La Gran Revelación</div>
+                    <div class="distance-info">📏 ~30 km a través de valles neblinosos</div>
+                    <div class="description">
+                        Lugar de revelación donde los cuervos muestran la verdad en sus ojos reflejantes. Lyra revela la verdadera naturaleza de Seraphina.
+                    </div>
+                    <div class="chapter-reference">Capítulo 4: Bosque de los Cuervos Espejo</div>
+                </div>
+            </div>
+
+            <!-- DÍAS 6-7 -->
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="location-name">⚔️ Campos de Batalla / 🕵️ Campamentos Espía</div>
+                    <div class="day-info">Días 6-7 - Estrategia Post-Revelación</div>
+                    <div class="distance-info">📏 ~10-40 km (dependiendo de estrategia)</div>
+                    <div class="description">
+                        <strong>Confrontación:</strong> Batalla directa en claros del bosque.<br>
+                        <strong>Espionaje:</strong> Infiltración de campamentos de mantis.
+                    </div>
+                    <div class="chapter-reference">Capítulos 5-6: Batalla/Estrategia</div>
+                </div>
+            </div>
+
+            <!-- DÍA 8 -->
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="location-name">✨ Claro de las Luciérnagas</div>
+                    <div class="day-info">Día 8 - Encuentro con Ember</div>
+                    <div class="distance-info">📏 ~18 km desde campos de batalla</div>
+                    <div class="description">
+                        Prueba de pureza de intenciones. Posible reunión con Ember, quien llega siguiendo rumores de la crisis. Lumina se une como guía.
+                    </div>
+                    <div class="chapter-reference">Claro de las Luciérnagas / Encuentro con Ember</div>
+                </div>
+            </div>
+
+            <!-- DÍA 9 -->
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="location-name">🕷️ Colonia de Arañas / 🐰 Pueblo de Conejos</div>
+                    <div class="day-info">Día 9 - Aliados Finales</div>
+                    <div class="distance-info">📏 ~22 km hacia preparación final</div>
+                    <div class="description">
+                        <strong>Arañas Tejedoras:</strong> Mapas del destino y conocimiento táctico.<br>
+                        <strong>Conejos Herbolarios:</strong> Claridad mental y resistencia psicológica.
+                    </div>
+                    <div class="chapter-reference">Sistema de Decisiones - Preparación Final</div>
+                </div>
+            </div>
+
+            <!-- DÍAS 10-11 -->
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="location-name">🕳️ Laberinto de los Tejones</div>
+                    <div class="day-info">Días 10-11 - Alianza Subterránea</div>
+                    <div class="distance-info">📏 ~35 km por túneles subterráneos</div>
+                    <div class="description">
+                        Alianza crucial con Groundbreaker y los Tejones Mineros. Navegación por túneles que llevan directamente al Templo Celestial.
+                    </div>
+                    <div class="chapter-reference">Capítulo 7: Laberinto de Tejones</div>
+                </div>
+            </div>
+
+            <!-- DÍA 12 -->
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="location-name">🏛️ Templo Celestial</div>
+                    <div class="day-info">Día 12 - Destino Final</div>
+                    <div class="distance-info">📏 ~12 km desde salida del laberinto</div>
+                    <div class="description">
+                        Santuario final que alberga las verdaderas Lágrimas de Luna. Encuentro con el espíritu del padre de Axel. Confrontación y redención definitivas.
+                    </div>
+                    <div class="chapter-reference">Capítulos 8-9: Templo Celestial + Epílogo</div>
+                </div>
+            </div>
+        </div>
+
+            <div id="estadisticas" class="stats-container">
+                <h3>📊 Estadísticas del Viaje</h3>
+                <p>
+                    <strong>Distancia Total Aproximada:</strong> ~187 km<br>
+                    <strong>Duración:</strong> 12 días<br>
+                    <strong>Ubicaciones Visitadas:</strong> 10+ lugares únicos<br>
+                    <strong>Decisiones Clave:</strong> 6 puntos de ramificación
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Efecto de aparición gradual
+        document.addEventListener('DOMContentLoaded', function() {
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            timelineItems.forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(30px)';
+                item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(item);
+            });
+        });
+
+        // Función para reiniciar progreso
+        function resetProgress() {
+            if (confirm('¿Estás seguro de que quieres reiniciar todo el progreso de decisiones?')) {
+                localStorage.clear();
+                alert('Progreso reiniciado. Puedes comenzar la historia desde el principio.');
+                window.location.href = 'historia-interactiva.html';
+            }
+        }
+
+        // Suavizar scroll para enlaces del menú
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

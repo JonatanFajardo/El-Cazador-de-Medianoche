@@ -23,6 +23,9 @@ class DecisionSystem {
         this.mostrarContenidoSegunDecisiones();
         this.crearInterfazProgreso();
         this.setupEventListeners();
+        
+        // Inicializar sistema de timeline
+        this.timelineSystem = new TimelineSystem(this);
     }
 
     // ===================== RESTAURAR ESTADO AL RECARGAR =====================
@@ -57,53 +60,62 @@ class DecisionSystem {
     mostrarSeccionesSegunProgreso() {
         const numDecisiones = this.decisiones.length;
         
-        // Siempre mostrar introducción
-        this.mostrarElemento('introduccion');
+        console.log('🔄 Restaurando estado, no registrando ubicaciones en línea de tiempo');
+        
+        // Siempre mostrar introducción (sin registrar para evitar spam en timeline)
+        this.mostrarElemento('introduccion', true);
         
         if (numDecisiones >= 1) {
-            this.mostrarElemento('desarrollo-inicial');
-            this.mostrarElemento('viaje-valle');
-            this.mostrarElemento('encuentro-mapaches');
-            this.mostrarElemento('encuentro-cabras');
-            this.mostrarElemento('encuentro-avalancha');
-            this.mostrarElemento('refugio-conejos');
+            this.mostrarElemento('desarrollo-inicial', true);
+            this.mostrarElemento('viaje-valle', true);
+            this.mostrarElemento('encuentro-mapaches', true);
+            this.mostrarElemento('encuentro-cabras', true);
+            this.mostrarElemento('encuentro-avalancha', true);
+            this.mostrarElemento('refugio-conejos', true);
         }
         
         if (numDecisiones >= 2) {
-            this.mostrarElemento('viaje-aliados');
-            this.mostrarElemento('camino-cuervos');
+            this.mostrarElemento('viaje-aliados', true);
+            this.mostrarElemento('camino-cuervos', true);
         }
         
         if (numDecisiones >= 3) {
-            this.mostrarElemento('llegada-cuervos');
-            this.mostrarElemento('revelacion-lyra');
+            this.mostrarElemento('llegada-cuervos', true);
+            this.mostrarElemento('revelacion-lyra', true);
         }
         
         if (numDecisiones >= 4) {
-            this.mostrarElemento('post-revelacion');
-            this.mostrarElemento('viaje-post-revelacion');
+            this.mostrarElemento('post-revelacion', true);
+            this.mostrarElemento('viaje-post-revelacion', true);
         }
         
         if (numDecisiones >= 5) {
-            this.mostrarElemento('preparacion-final');
+            this.mostrarElemento('preparacion-final', true);
         }
         
         if (numDecisiones >= 6) {
-            this.mostrarElemento('viaje-aliados-finales');
-            this.mostrarElemento('entrada-templo');
+            this.mostrarElemento('viaje-aliados-finales', true);
+            this.mostrarElemento('entrada-templo', true);
         }
         
         if (numDecisiones >= 7) {
-            this.mostrarElemento('viaje-laberinto');
-            this.mostrarElemento('resolucion-final');
+            this.mostrarElemento('viaje-laberinto', true);
+            this.mostrarElemento('resolucion-final', true);
             setTimeout(() => {
-                this.mostrarElemento('historia-completa');
+                this.mostrarElemento('historia-completa', true);
                 // Solo mostrar opciones si la historia se completó normalmente, no al recargar
                 if (this.decisiones.length === 7) {
-                    setTimeout(() => this.mostrarElemento('opciones-finales'), 2000);
+                    setTimeout(() => this.mostrarElemento('opciones-finales', true), 2000);
                 }
             }, 1000);
         }
+        
+        // Después de restaurar, cargar las ubicaciones guardadas para la timeline
+        setTimeout(() => {
+            if (this.timelineSystem) {
+                this.timelineSystem.cargarUbicacionesGuardadas();
+            }
+        }, 500);
     }
 
     mostrarSiguienteDecision(numDecisionesTomadas) {
@@ -206,23 +218,34 @@ class DecisionSystem {
 
     evaluarDecision1() {
         if (this.decisiones[0] === 'A') {
+            // Mostrar contenido de confianza
             this.mostrarElemento('encuentro-confianza');
-            this.mostrarElemento('resolucion-mapaches-confianza');
-            this.mostrarElemento('respuesta-axel-confianza');
             this.ocultarElemento('encuentro-cautela');
-            this.ocultarElemento('resolucion-mapaches-cautela');
-            this.ocultarElemento('respuesta-axel-cautela');
         } else if (this.decisiones[0] === 'B') {
+            // Mostrar contenido de cautela
             this.mostrarElemento('encuentro-cautela');
-            this.mostrarElemento('resolucion-mapaches-cautela');
-            this.mostrarElemento('respuesta-axel-cautela');
             this.ocultarElemento('encuentro-confianza');
-            this.ocultarElemento('resolucion-mapaches-confianza');
-            this.ocultarElemento('respuesta-axel-confianza');
         }
-        // Siempre mostrar la respuesta de Seraphina
+        
+        // Mostrar desarrollo inicial siempre después de la decisión 1
         if (this.decisiones[0]) {
-            this.mostrarElemento('respuesta-seraphina');
+            this.mostrarElemento('desarrollo-inicial');
+            this.mostrarElemento('viaje-valle');
+            this.mostrarElemento('encuentro-mapaches');
+            
+            // Mostrar la resolución correcta de mapaches según la decisión
+            if (this.decisiones[0] === 'A') {
+                this.mostrarElemento('resolucion-mapaches-confianza');
+                this.ocultarElemento('resolucion-mapaches-cautela');
+            } else {
+                this.mostrarElemento('resolucion-mapaches-cautela');
+                this.ocultarElemento('resolucion-mapaches-confianza');
+            }
+            
+            // Continuar con los encuentros menores
+            this.mostrarElemento('encuentro-cabras');
+            this.mostrarElemento('encuentro-avalancha');
+            this.mostrarElemento('refugio-conejos');
         }
     }
 
@@ -418,11 +441,22 @@ class DecisionSystem {
     }
 
     // ===================== UTILIDADES DOM =====================
-    mostrarElemento(id) {
+    mostrarElemento(id, noRegistrar = false) {
         const elemento = document.getElementById(id);
         if (elemento) {
             elemento.classList.remove('hidden');
             elemento.classList.add('reveal');
+            
+            // Debug: log que sección se está mostrando
+            console.log('📍 [DecisionSystem] Mostrando sección:', id, noRegistrar ? '(sin registrar)' : '(registrando)');
+            
+            // Registrar la sección como visitada para la línea de tiempo
+            // Solo si no estamos en modo restauración
+            if (!noRegistrar) {
+                this.registrarSeccionVisitada(id);
+            }
+        } else {
+            console.warn('⚠️ [DecisionSystem] Elemento no encontrado:', id);
         }
     }
 
@@ -437,6 +471,7 @@ class DecisionSystem {
     ocultarTodoElContenido() {
         // Lista de todos los elementos que pueden estar visibles
         const elementos = [
+            // Secciones principales
             'introduccion', 'desarrollo-inicial', 'camino-cuervos', 
             'llegada-cuervos', 'revelacion-lyra', 'post-revelacion',
             'preparacion-final', 'entrada-templo', 'resolucion-final',
@@ -444,20 +479,25 @@ class DecisionSystem {
             // Decisiones
             'decision-1', 'decision-2', 'decision-3', 'decision-4',
             'decision-5', 'decision-6', 'decision-7',
-            // Contenido condicional
+            // Contenido condicional principal
             'encuentro-confianza', 'encuentro-cautela',
             'zorros-confianza', 'zorros-cautela',
             'murcielagos-confianza', 'murcielagos-cautela',
             'melodia-ember', 'encuentro-hermanos', 'dialogo-ember', 'continuar-solo',
             'confrontacion-directa', 'estrategia-espionaje',
+            // Encuentros menores y viajes
+            'viaje-valle', 'encuentro-mapaches', 
+            'resolucion-mapaches-confianza', 'resolucion-mapaches-cautela',
+            'encuentro-cabras', 'encuentro-avalancha', 'refugio-conejos',
+            'viaje-aliados', 'viaje-post-revelacion', 'viaje-aliados-finales', 'viaje-laberinto',
+            // Secciones de Ember
             'ember-se-va', 'ember-se-queda', 'despedida-ember', 'ember-continua',
+            // Aliados finales
             'encuentro-arañas', 'encuentro-conejos',
             'mapas-detallados', 'hierbas-proteccion',
+            // Finales y epílogos
             'final-redencion', 'final-confrontacion',
-            'epilogo-compasivo', 'epilogo-justicia',
-            'final-heroe-perfecto', 'final-con-ember',
-            'flechas-plata', 'flechas-antiengano',
-            'ember-presente-decision', 'ember-ausente-decision'
+            'epilogo-compasivo', 'epilogo-justicia', 'final-heroe-perfecto'
         ];
         
         // Ocultar todos los elementos
@@ -565,12 +605,19 @@ class DecisionSystem {
             this.decisiones = [];
             this.currentChapter = 1;
             
+            // Limpiar timeline
+            if (this.timelineSystem) {
+                this.timelineSystem.limpiarTimeline();
+            }
+            
             // Ocultar todo el contenido
             this.ocultarTodoElContenido();
             
             // Mostrar solo la introducción y primera decisión
             this.mostrarElemento('introduccion');
             this.mostrarElemento('decision-1');
+            
+            // No es necesario reconstruir timeline aquí, se hace automáticamente
             
             // Actualizar interfaz
             this.crearInterfazProgreso();
@@ -604,6 +651,98 @@ class DecisionSystem {
             const elemento = document.getElementById(id);
             return elemento && !elemento.classList.contains('hidden');
         });
+    }
+
+    // ===================== TIMELINE SYSTEM INTEGRATION =====================
+
+    // Método original tomarDecision modificado para incluir timeline
+    tomarDecisionOriginal(numero, opcion) {
+        // Guardar la decisión
+        this.decisiones[numero - 1] = opcion;
+        
+        // Guardar en localStorage
+        localStorage.setItem('el-cazador-decisiones', JSON.stringify(this.decisiones));
+        
+        // Ocultar la decisión actual
+        this.ocultarElemento(`decision-${numero}`);
+        
+        // Mostrar contenido basado en la decisión
+        this.mostrarContenidoSegunDecisiones();
+        
+        // Mostrar contenido siguiente en secuencia
+        this.mostrarContenidoSiguiente(numero);
+        
+        // Actualizar interfaz de progreso
+        this.crearInterfazProgreso();
+        
+        // La línea de tiempo se actualiza automáticamente cuando se registran las secciones
+        // Comentado para evitar conflicto con el sistema progresivo
+        // setTimeout(() => {
+        //     this.updateTimelineProgress();
+        // }, 500);
+        
+        // Scroll suave al siguiente contenido
+        setTimeout(() => {
+            this.scrollToNextContent(numero);
+        }, 1000);
+    }
+    
+    mostrarContenidoSiguiente(numeroDecision) {
+        // Mostrar la siguiente decisión después de un delay
+        setTimeout(() => {
+            if (numeroDecision === 1) {
+                this.mostrarElemento('decision-2');
+            } else if (numeroDecision === 2) {
+                this.mostrarElemento('decision-3');  
+            } else if (numeroDecision === 3) {
+                this.mostrarElemento('decision-4');
+            } else if (numeroDecision === 4) {
+                this.mostrarElemento('decision-5');
+            } else if (numeroDecision === 5) {
+                this.mostrarElemento('decision-6');
+            } else if (numeroDecision === 6) {
+                this.mostrarElemento('decision-7');
+            } else if (numeroDecision === 7) {
+                this.completarHistoria();
+            }
+        }, 1500); // Delay para permitir que se muestre el contenido anterior
+    }
+    
+    // Método delegado al TimelineSystem
+    registrarSeccionVisitada(seccionId) {
+        if (this.timelineSystem) {
+            this.timelineSystem.registrarSeccionVisitada(seccionId);
+        } else {
+            console.warn('⚠️ [DecisionSystem] TimelineSystem no disponible para registrar:', seccionId);
+        }
+    }
+    
+    scrollToNextContent(numeroDecision) {
+        // Hacer scroll suave al contenido que acaba de aparecer
+        let targetElement;
+        
+        if (numeroDecision === 1) {
+            targetElement = document.getElementById('desarrollo-inicial');
+        } else if (numeroDecision === 2) {
+            targetElement = document.getElementById('decision-3');
+        } else if (numeroDecision === 3) {
+            targetElement = document.getElementById('decision-4');
+        } else if (numeroDecision === 4) {
+            targetElement = document.getElementById('decision-5');
+        } else if (numeroDecision === 5) {
+            targetElement = document.getElementById('decision-6');
+        } else if (numeroDecision === 6) {
+            targetElement = document.getElementById('decision-7');
+        } else if (numeroDecision === 7) {
+            targetElement = document.getElementById('historia-completa');
+        }
+        
+        if (targetElement) {
+            targetElement.scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'start' 
+            });
+        }
     }
 
     setupEventListeners() {
@@ -691,12 +830,26 @@ class DecisionSystem {
 
 // ===================== FUNCIONES GLOBALES =====================
 function tomarDecision(numero, opcion) {
-    window.decisionSystem.tomarDecision(numero, opcion);
+    window.decisionSystem.tomarDecisionOriginal(numero, opcion);
 }
 
 function reiniciarHistoria() {
     if (window.decisionSystem) {
         window.decisionSystem.reiniciarHistoria();
+    }
+}
+
+// ===================== FUNCIONES PARA LÍNEA DE TIEMPO =====================
+function toggleTimelinePanel() {
+    const panel = document.getElementById('timeline-panel');
+    const toggle = document.getElementById('timeline-toggle');
+    
+    if (panel.style.display === 'none') {
+        panel.style.display = 'block';
+        toggle.textContent = '📍';
+    } else {
+        panel.style.display = 'none';
+        toggle.textContent = '🕒';
     }
 }
 
