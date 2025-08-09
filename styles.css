@@ -445,49 +445,7 @@ a:hover {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-.events-timeline h3 {
-    color: #d4af37;
-    text-align: center;
-    margin-bottom: 25px;
-    font-family: 'Cinzel', serif;
-}
 
-.timeline-container {
-    position: relative;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.timeline-track {
-    position: absolute;
-    left: 20px;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: linear-gradient(to bottom, #d4af37 0%, #cd853f 100%);
-}
-
-.timeline-events {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.timeline-event {
-    position: relative;
-    padding-left: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    opacity: 0.6;
-}
-
-.timeline-event:hover {
-    transform: translateX(10px);
-}
-
-.timeline-event.active {
-    opacity: 1;
-}
 
 .event-marker {
     position: absolute;

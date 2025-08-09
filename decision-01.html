@@ -19,8 +19,29 @@
         </main>
 
         <nav class="decision-nav">
-            <a href="decision-02.html" class="btn-decision btn-a">Continuar →</a>
+            <div class="decision-buttons">
+                <button onclick="continuarConDecision('A')" class="decision-btn option-a">
+                    <strong>Asomar y ver qué está pasando</strong>
+                    <span>Guardar el arco y acercarse con confianza</span>
+                </button>
+                <button onclick="continuarConDecision('B')" class="decision-btn option-b">
+                    <strong>La verdad no quiero ver tanto</strong>
+                    <span>Mantener el arco listo mientras se acerca</span>
+                </button>
+            </div>
         </nav>
+        
+        <script>
+            function continuarConDecision(opcion) {
+                // Guardar la decisión en localStorage
+                let decisiones = JSON.parse(localStorage.getItem('el-cazador-decisiones')) || [];
+                decisiones[0] = opcion; // Primera decisión
+                localStorage.setItem('el-cazador-decisiones', JSON.stringify(decisiones));
+                
+                // Redirigir a decision-02.html
+                window.location.href = 'decision-02.html';
+            }
+        </script>
     </div>
     
     <script src="decision-system.js"></script>
