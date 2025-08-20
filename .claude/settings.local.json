@@ -12,7 +12,8 @@
       "Bash(do sed -i 's|    <script src=\"\"timeline-system.js\"\"></script>||g' \"C:\\Users\\movie\\Documents\\Libros\\El Cazador de Medianoche\\$file\")",
       "Bash(done)",
       "Bash(for file in decision-03.html decision-04.html decision-05.html decision-06.html historia-principal.html)",
-      "Bash(do sed -i \"/timeline-system.js/d\" \"$file\")"
+      "Bash(do sed -i \"/timeline-system.js/d\" \"$file\")",
+      "Bash(sed:*)"
     ],
     "deny": []
   }
