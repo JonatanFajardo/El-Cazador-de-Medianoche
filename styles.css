@@ -50,7 +50,6 @@
 }
 
 .dialogo.espectro-multiple::before {
-    content: —Espectros Vinculados";
     position: absolute;
     top: -8px;
     left: 15px;
@@ -331,6 +330,188 @@ a:hover {
     margin-top: 15px;
     padding-top: 10px;
     border-top: 1px solid #333;
+}
+
+/* Imágenes para el libro - Clase especial */
+.book-image, .img-fluid {
+    display: block;
+    max-width: 50%;
+    width: 100%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    border: 2px solid rgba(212, 175, 55, 0.3);
+}
+
+/* Responsividad mejorada para imágenes */
+@media (max-width: 1200px) {
+    .book-image {
+        max-width: 60%;
+    }
+}
+
+@media (max-width: 992px) {
+    .book-image {
+        max-width: 70%;
+    }
+}
+
+@media (max-width: 768px) {
+    .book-image {
+        max-width: 90%;
+        margin: 15px auto;
+    }
+    
+    .book-image-scroll {
+        margin: 15px 0;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .book-image {
+        max-width: 95%;
+        margin: 10px auto;
+        border-radius: 6px;
+    }
+    
+    .book-image-scroll {
+        margin: 10px 0;
+        padding: 5px;
+    }
+    
+    .image-caption {
+        font-size: 0.85em;
+        padding: 8px;
+    }
+}
+
+/* Clase img-fluid independiente para máxima compatibilidad */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.book-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.7);
+    border-color: rgba(212, 175, 55, 0.6);
+}
+
+/* ========== CONTENEDORES DE IMÁGENES PARA EL LIBRO ========== */
+
+/* Opción 1: Contenedor minimalista con fondo sutil */
+.book-image-container {
+    text-align: center;
+    margin: 25px 0;
+    padding: 12px;
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.5), rgba(42, 42, 42, 0.3));
+    border-radius: 10px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.book-image-container .image-caption {
+    font-family: 'EB Garamond', serif;
+    color: #cd853f;
+    font-style: italic;
+    font-size: 0.9em;
+    margin-top: 10px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(205, 133, 63, 0.3);
+}
+
+/* Opción 2: Marco dorado elegante con doble borde y resplandor */
+.book-image-frame {
+    text-align: center;
+    margin: 30px auto;
+    max-width: 300px;
+    padding: 20px;
+    background: #1a1a1a;
+    border: 3px solid #d4af37;
+    border-radius: 15px;
+    box-shadow: 
+        0 0 20px rgba(212, 175, 55, 0.3),
+        inset 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+/* Borde interior decorativo para el marco elegante */
+.book-image-frame::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 1px solid rgba(212, 175, 55, 0.5);
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+/* Caption formal en mayúsculas para el marco elegante */
+.book-image-frame .image-caption {
+    font-family: 'Cinzel', serif;
+    color: #d4af37;
+    font-size: 0.85em;
+    font-weight: 500;
+    margin-top: 15px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* Opción 3: Estilo pergamino místico con ornamentos */
+.book-image-scroll {
+    text-align: center;
+    margin: 25px 0;
+    padding: 25px 15px 20px;
+    background: 
+        radial-gradient(circle at top, rgba(212, 175, 55, 0.1), transparent 60%),
+        #1a1a1a;
+    border-top: 2px solid #cd853f;
+    border-bottom: 2px solid #cd853f;
+    position: relative;
+}
+
+/* Ornamentos decorativos tipo fleur-de-lis para el pergamino */
+.book-image-scroll::before,
+.book-image-scroll::after {
+    content: '⚜';
+    position: absolute;
+    top: -8px;
+    color: #d4af37;
+    font-size: 1.2em;
+    background: #1a1a1a;
+    padding: 0 8px;
+}
+
+/* Ornamento izquierdo */
+.book-image-scroll::before {
+    left: 20px;
+}
+
+/* Ornamento derecho */
+.book-image-scroll::after {
+    right: 20px;
+}
+
+/* Caption estilo pergamino con texto cursivo */
+.book-image-scroll .image-caption {
+    font-family: 'EB Garamond', serif;
+    color: #cd853f;
+    font-style: italic;
+    font-size: 0.9em;
+    margin-top: 12px;
+    position: relative;
+}
+
+/* Responsive para imágenes del libro */
+@media (max-width: 768px) {
+    .book-image-container {
+        margin: 15px 0;
+        padding: 10px;
+    }
 }
 
 /* Responsivo */
