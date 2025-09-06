@@ -1,6 +1,68 @@
 /* El Cazador de Medianoche - Styles */
 /* Based on reference project structure */
 
+/* =========================== ESTILOS ESPECTROS DUALES =========================== */
+/* Personalidad A: Brasa Estratégica */
+.espectro-brasa {
+    color: #4a9eff;
+    font-style: italic;
+    text-shadow: 0 0 8px rgba(74, 158, 255, 0.5);
+    margin-left: 20px;
+    display: block;
+}
+
+/* Personalidad B: Acero Implacable */
+.espectro-acero {
+    color: #cc0000;
+    font-weight: bold;
+    text-shadow: 0 0 8px rgba(204, 0, 0, 0.5);
+    margin-left: 20px;
+    display: block;
+}
+
+/* Conflicto entre personalidades */
+.espectro-conflicto {
+    background: linear-gradient(45deg, rgba(74, 158, 255, 0.2), rgba(204, 0, 0, 0.2));
+    border-left: 4px solid #800080;
+    padding: 10px 15px;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+/* Momento raro de unificación */
+.espectro-unificado {
+    color: #9d4edd;
+    font-weight: 500;
+    font-style: italic;
+    text-shadow: 0 0 10px rgba(157, 78, 221, 0.6);
+    margin-left: 20px;
+    display: block;
+}
+
+/* Diálogo múltiple de espectros */
+.dialogo.espectro-multiple {
+    background: rgba(35, 35, 35, 0.8);
+    border: 2px solid rgba(157, 78, 221, 0.4);
+    border-radius: 8px;
+    padding: 12px;
+    margin: 15px 0;
+    position: relative;
+}
+
+.dialogo.espectro-multiple::before {
+    content: —Espectros Vinculados";
+    position: absolute;
+    top: -8px;
+    left: 15px;
+    background: #0f0f0f;
+    color: #9d4edd;
+    font-size: 0.7em;
+    padding: 2px 8px;
+    border-radius: 4px;
+    border: 1px solid rgba(157, 78, 221, 0.4);
+}
+/* ============================================================================= */
+
 /* Importar fuentes desde Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
 
