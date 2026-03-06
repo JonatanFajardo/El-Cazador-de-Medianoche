@@ -1,4 +1,4 @@
-# Sistema de Decisiones Dinámicas - "El Cazador de Medianoche"
+# Sistema de Decisiones Dinámicas - —El Cazador de Medianoche"
 
 ## ✅ PROBLEMA RESUELTO: Guardado Persistente
 
@@ -79,12 +79,12 @@ reiniciarHistoria()
 ### **Estructura de Datos:**
 ```javascript
 localStorage: {
-  'el-cazador-decisiones': ['A', 'B', 'A', ...],  // Decisiones
+  'el-cazador-decisiones': ['A', 'B', 'A', ....],  // Decisiones
   'el-cazador-progreso': {                         // Estado completo
-    decisiones: [...],
+    decisiones: [....],
     chapter: 1,
     timestamp: 1234567890,
-    elementosVisibles: [...]
+    elementosVisibles: [....]
   }
 }
 ```
@@ -107,4 +107,4 @@ localStorage: {
 
 ---
 
-**El sistema está listo y funcional. ¡Disfruta tu aventura personalizada en "El Cazador de Medianoche"!** 🌙🏹
+**El sistema está listo y funcional. ¡Disfruta tu aventura personalizada en —El Cazador de Medianoche"!** 🌙🏹

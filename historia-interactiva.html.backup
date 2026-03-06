@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport— content="width=device-width, initial-scale=1.0">
+    <title>El Cazador de Medianoche - Historia Interactiva</title>
+    <link rel="stylesheet— href="styles.css">
+    <link rel="stylesheet— href="historia-interactiva.css">
+    <link rel="stylesheet— href="decision-styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- ===================== HEADER Y NAVEGACIÓN ===================== -->
+        <header class="main-header">
+            <h1>El Cazador de Medianoche y las Lágrimas Robadas</h1>
+            <p class="subtitle">Una Historia Interactiva</p>
+        </header>
+
+        <!-- ===================== PANEL DE PROGRESO ===================== -->
+        <aside id="progreso-decisiones" class="progreso-panel">
+            <!-- Contenido generado dinámicamente por JavaScript -->
+        </aside>
+
+        <!-- ===================== LÍNEA DE TIEMPO LATERAL ===================== -->
+        <aside id="timeline-panel" class="timeline-panel">
+            <div class="timeline-header">
+                <h3>🌙 Línea de Tiempo</h3>
+                <button id="timeline-toggle" class="timeline-toggle— onclick="toggleTimelinePanel()">📍</button>
+                <button onclick="forzarRegistroSecciones()" class="timeline-debug-btn— title="Actualizar Timeline">🔄</button>
+            </div>
+            <div class="timeline-content— id="dynamic-timeline">
+                <!-- Contenido generado dinámicamente según decisiones -->
+                <div class="timeline-placeholder">
+                    <p class="timeline-empty">🌟 La línea de tiempo se construirá conforme avances en la historia....</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ===================== PANEL DE DESARROLLADOR ===================== -->
+        <div id="developer-panel" class="developer-panel hidden">
+            <div class="developer-header">
+                <h3>🔧 Panel de Desarrollador</h3>
+                <button onclick="toggleDeveloperPanel()" class="btn-close">×</button>
+            </div>
+            <div class="developer-content">
+                <div class="developer-section">
+                    <h4>Contenido Nuevo Agregado</h4>
+                    <label class="toggle-label">
+                        <input type="checkbox— id="highlight-new-content— onchange="toggleNewContentHighlight()">
+                        <span>Resaltar contenido nuevo (subrayado amarillo)</span>
+                    </label>
+                </div>
+                <div class="developer-section">
+                    <h4>Estadísticas</h4>
+                    <div id="content-stats">
+                        <!-- Generado dinámicamente -->
+                    </div>
+                </div>
+                <div class="developer-section">
+                    <h4>Debug</h4>
+                    <button onclick="exportContentAnalysis()" class="btn-dev">Exportar Análisis de Contenido</button>
+                    <button onclick="showNewContentList()" class="btn-dev">Lista de Contenido Nuevo</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botón flotante para acceder al panel -->
+        <button id="dev-toggle-btn" class="dev-toggle-btn— onclick="toggleDeveloperPanel()— title="Panel de Desarrollador">
+            🔧
+        </button>
+
+        <!-- ===================== CONTENIDO PRINCIPAL ===================== -->
+        <main class="historia-contenido">
+            
+            
+
+            <!-- DESARROLLO -->
+
+            <!-- ##########################################################
+            #  SECCIÓN 3: ENCUENTRO FAMILIAR - EMBER (Líneas 700-820)
+            #  - Aparición del hermano menor de Axel
+            #  - Dinámicas familiares y trauma personal  
+            #  - Decisión de incluirlo o protegerlo
+            #  - Llegada al Bosque de los Cuervos Espejo
+            ########################################################## -->
+            
+            <!-- ===================== CONTENIDO EMBER ===================== -->
+            <section id="melodia-ember" class="hidden contenido-condicional">
+                <h3>La Melodía Familiar</h3>
+                
+                <p class="texto-narrativo">
+                    Era mientras descansaban junto a un arroyo cristalino, recuperándose del encuentro con los zorros o murciélagos, cuando Axel la escuchó: una melodía suave y melancólica que flotaba en el aire vespertino como un recuerdo materializado.
+                </p>
+
+                <p class="texto-narrativo">
+                    Su arco élfico disparó ocasionalmente flechas espectrales que infligían dolor pulsante - una sensación extraña que no había experimentado antes.
+                </p>
+
+                <p class="dialogo sorplanta">
+                    —Espera—  dijo Axel abruptamente, levantando una mano mientras Seraphina bebía del arroyo. Sus ojos heterocromáticos se enfocaron intensamente hacia el bosque circundante.— Conozco esa melodía. Es.... es imposible."
+                </p>
+
+                <p class="texto-narrativo">
+                    La melodía continuaba, una pieza que reconocía desde la infancia - una canción de cuna que su padre les había enseñado a ambos, pero que solo Ember había dominado por entero en la flauta élfica heredada.
+                </p>
+
+                <p class="dialogo asombro">
+                    —Es mi hermano—  susurró, casi sin poder creerlo.— ¿Pero qué está haciendo Ember tan lejos de Valle Tranquilo?"
+                </p>
+
+                <p class="texto-narrativo">
+                    Seraphina levantó la vista del agua, sus antenas moviéndose con curiosidad y algo que podría haber sido aprensión.
+                </p>
+
+                <p class="dialogo curiosa">
+                    —¿Tu hermano? ¿Aquí, en estas montañas remotas?"
+                </p>
+
+                <p class="texto-narrativo">
+                    Sin esperar respuesta, Axel siguió el sonido de la música. Siguieron el arroyo por un sendero lateral serpenteante que llevaba a través de un bosquecillo de pinos antiguos, donde la melodía se volvía más clara y más reconocible con cada paso.
+                </p>
+
+                <p class="texto-narrativo">
+                    Finalmente llegaron a un pequeño claro circular rodeado de pinos gigantes, sus troncos formando una catedral natural. En el centro, sentado en una roca lisa pulida por siglos de lluvia, con una flauta élfica de madera dorada entre sus manos delicadas, estaba Ember.
+                </p>
+
+                <p class="texto-narrativo">
+                    Estaba exactamente como Axel lo recordaba, pero había algo diferente en su postura - una tensión que no había tenido cuando eran más jóvenes, una vigilancia que hablaba de experiencias difíciles en sus viajes como mediador diplomático.
+                </p>
+
+                <p class="dialogo emocionada">
+                    —Ember—  suspiró Axel, su voz mezclando sorplanta, alivio y una docena de preguntas no formuladas.
+                </p>
+
+                <p class="texto-narrativo">
+                    Su hermano menor detuvo la melodía abruptamente, levantando la vista con ojos que brillaron de inmediato con reconocimiento y alivio profundo.
+                </p>
+            </section>
+
+            <section id="encuentro-hermanos" class="hidden contenido-condicional">
+                <h3>El Reencuentro</h3>
+                
+                <p class="texto-narrativo">
+                    Ember saltó de la roca con una gracilidad que contrastaba con la fuerza directa de Axel. Era menor por tres años, pero las diferencias iban más allá de la edad: donde Axel había construido músculo para la supervivencia solitaria, Ember había desarrollado la complexión ágil de un diplomático que debía moverse rápidamente entre territorios hostiles.
+                </p>
+
+                <p class="texto-narrativo">
+                    Su pelaje era castaño rojizo con toques dorados que capturaban la luz filtrada, y sus ojos - tan similares a los heterocromáticos de Axel pero más uniformemente cálidos - se llenaron inmediatamente de una mezcla de alivio, preocupación y algo más profundo: amor fraternal que había madurado a través de la separación.
+                </p>
+
+                <p class="dialogo emocionada">
+                    —Axel—  exhaló Ember, guardando con delicadeza su flauta élfica en una funda de cuero suave.— Gracias a todos los ancestros que finalmente te encontré. He estado siguiendo rumores sobre ti durante días, preguntando a cada consumerciante, a cada viajero que se cruzaba en mi camino."
+                </p>
+
+                <p class="texto-narrativo">
+                    Los hermanos se abrazaron - un abrazo que habló de años de separación, de preocupaciones mutuas no explantadas, y del alivio profundo de encontrarse vivos y relativamente bien.
+                </p>
+
+                <p class="dialogo confundida">
+                    —¿Ember? ¿Qué haces tan lejos de Valle Tranquilo?— preguntó Axel, separándose para estudiar el rostro de su hermano.— ¿Cómo supiste dónde encontrarme? Y más importante, ¿está bien Luna Suave? ¿Los gemelos?"
+                </p>
+
+                <p class="texto-narrativo">
+                    Una sombra de dolor cruzó brevemente los ojos de Ember antes de que la calmara con la práctica de alguien acostumbrado a controlar sus emociones en situaciones diplomáticas.
+                </p>
+
+                <p class="dialogo preocupada">
+                    —Están bien, por ahora—  respondió, pero había tensión en su voz.— Pero Axel, los consumerciantes de las rutas del sur hablan de un gato montés solitario que viaja con una mantis religiosa, buscando las legendarias Lágrimas de Luna. Y yo...."
+                </p>
+
+                <p class="texto-narrativo">
+                    Ember se detuvo, sus ojos desplazándose hacia Seraphina con una intensidad que la hizo instintivamente dar un paso atrás. Era una mirada que había aprendido a leer criaturas con intenciones ocultas, que había desarrollado sensibilidad para detectar engaños en negociaciones complejas.
+                </p>
+
+                <p class="dialogo cautelosa">
+                    —....he escuchado otras historias sobre mantis recientemente. Historias que me preocupan, hermano."
+                </p>
+
+                <p class="texto-narrativo">
+                    Seraphina se tensó imperceptiblemente, sus antenas moviéndose con una inquietud que no había mostrado ante los zorros o murciélagos. Este hermano menor tenía una presencia diferente - más observadora, más empáticamente perceptiva - que la ponía nerviosa por razones que no podía articular del todo.
+                </p>
+
+                <p class="texto-narrativo">
+                    Era como si Ember pudiera ver a través de las capas de dolor genuino hasta algo más profundo y más complejo que yacía debajo.
+                </p>
+
+                <p class="dialogo diplomática">
+                    —Ember—  dijo Axel, notando la tensión,— te presento a Seraphina. Su madre está maldecida, convertida en estatua de mármol. Las Lágrimas de Luna son su única esperanza de salvación."
+                </p>
+
+                <p class="texto-narrativo">
+                    Ember estudió a Seraphina durante un largo momento con la mirada penetrante de quien había pasado años mediando entre criaturas que rara vez decían toda la verdad. Como diplomático profesional, había desarrollado gran sensibilidad para leer emociones y detectar cuando las criaturas no decían toda la verdad.
+                </p>
+
+                <p class="dialogo cuidadosa">
+                    —Es una causa noble—  dijo finalmente, pero había un peso cuidadoso en sus palabras.— El amor filial es una de las fuerzas más poderosas en nuestro mundo. Pero hermano...."
+                </p>
+
+                <p class="texto-narrativo">
+                    Las palabras se le atoraron a Ember por un momento, su flauta élfica emitiendo una nota apenas audible de disonancia - algo que Axel recordaba solo ocurría cuando su hermano menor enfrentaba decisiones moralmente complejas. Los dedos de Ember se cerraron en puños pequeños, luego se abrieron deliberadamente, el gesto de alguien forzándose a permanecer diplomatic incluso cuando cada instinto le gritaba urgencia.
+                </p>
+
+                <p class="dialogo preocupada">
+                    —¿Has considerado por qué tantas mantis han sido reportadas viajando a través de territorio de gatos monteses recientemente? Los reportes que he escuchado durante mis misiones diplomáticas.... son perturbadores."
+                </p>
+            </section>
+
+            <section id="dialogo-ember" class="hidden contenido-condicional">
+                <h3>Conversaciones entre Hermanos</h3>
+                
+                <p class="dialogo">
+                    —Ember, te presento a Seraphina. Su madre está maldecida, convertida en estatua de mármol. Las Lágrimas de Luna pueden salvarla."
+                </p>
+
+                <p class="texto-narrativo">
+                    Ember estudió a Seraphina con la mirada penetrante de quien había dedicado su vida a leer intenciones ocultas. Como mediador diplomático, había desarrollado una sensibilidad especial para detectar engaños.
+                </p>
+
+                <p class="dialogo">
+                    —Es una causa noble—  dijo Ember cuidadosamente.— Pero hermano, ¿has considerado por qué tantas mantis han sido vistas en territorio de gatos monteses recientemente? Los reportes que he escuchado...."
+                </p>
+
+                <p class="dialogo interruption">
+                    —Mi especie está desesperada—  interrumpió Seraphina, su voz cargada de emoción calculada.— Cuando una familia sufre, a veces tomamos riesgos que normalmente no consideraríamos."
+                </p>
+
+                <p class="texto-narrativo">
+                    Axel notó la tensión sutil entre su hermano y Seraphina. Ember tenía razón en ser cauteloso —siempre había sido el más diplomático y observador de los dos— pero la desesperación de Seraphina parecía genuina.
+                </p>
+
+                <p class="dialogo">
+                    —Si vamos a hacer esto—  dijo finalmente Axel,— es mejor que vayamos juntos. Ember, ¿puedes dejar a tu familia por unos días?"
+                </p>
+
+                <p class="dialogo">
+                    —Luna Suave y los gemelos están seguros en Valle Tranquilo. Y francamente—  Ember miró directamente a Seraphina,— creo que necesitas que alguien cuide tus espaldas en esta misión."
+                </p>
+            </section>
+
+            <section id="continuar-solo" class="hidden contenido-condicional">
+                <p class="texto-narrativo">
+                    Axel miró hacia la dirección de la melodía, sintiendo un tirón en su corazón. Pero su compromiso con Seraphina era claro, y cada momento perdido podría significar la muerte de su madre.
+                </p>
+
+                <p class="dialogo">
+                    —No puedo desviarme ahora—  decidió firmemente.— Si Ember necesita ayuda, tendrá que esperar. Una vida depende de que lleguemos a tiempo."
+                </p>
+
+                <p class="texto-narrativo">
+                    Seraphina sintió una oleada de alivio. Sin las complicaciones adicionales, podría mantener el enfoque de Axel en la urgencia de salvar a su madre.
+                </p>
+
+                <p class="texto-narrativo">
+                    La melodía se desvaneció en la distancia mientras continuaron su camino hacia las Cuevas Brillantes, sin saber que Ember los siguió a distancia, preocupado por los vagos rumores inquietantes que había escuchado.
+                </p>
+            </section>
+
+            <!-- ===================== LLEGADA A LOS CUERVOS ===================== -->
+            <section id="llegada-cuervos" class="hidden">
+                <h3>El Bosque de los Cuervos Espejo</h3>
+                
+                <p class="texto-narrativo">
+                    Después de obtener las Lágrimas de Cristal de los Osos de Cristal —una prueba que había revelado más sobre el carácter de cada uno— el grupo llegó al Bosque de los Cuervos Espejo.
+                </p>
+
+                <p class="texto-narrativo">
+                    Los árboles se alzaban como columnas negras contra el cielo crepuscular, y cientos de cuervos los observaban desde las ramas con ojos que reflejaban como espejos. Se decía que estos cuervos podían mostrar verdades ocultas en sus reflejos.
+                </p>
+
+                <p class="texto-narrativo">
+                    Fue entonces cuando apareció Lyra.
+                </p>
+            </section>
+
+            <section id="revelacion-lyra" class="hidden">
+                <h3>La Verdad Revelada</h3>
+                
+                <p class="texto-narrativo">
+                    Una gata montés de pelaje negro con manchas doradas emergió de entre los árboles. Sus ojos brillaban con determinación férrea y dolor apenas contenido. En su mano portaba evidencia que cambiaría todo.
+                </p>
+
+                <p class="dialogo fuerte">
+                    —¡Axel!— gritó Lyra,— ¡Aléjate de esa mantis! ¡Es una agresia!"
+                </p>
+
+                <p class="texto-narrativo">
+                    El mundo de Axel se detuvo. Seraphina se tensó como un resorte, sus músculos preparándose para huir o luchar.
+                </p>
+
+                <p class="dialogo">
+                    —Mi nombre es Lyra Cazavientos. He estado siguiendo el rastro de esta mantis durante semanas. Ha dañado varios gatos monteses, incluyendo...—  su voz se quebró ligeramente,— a mi hermana Luna Platino."
+                </p>
+
+                <p class="texto-narrativo">
+                    Los cuervos consumenzaron a agitar sus alas, y en sus ojos reflejantes, Axel pudo ver imágenes fragmentarias: Seraphina acechando, dañando, usando siempre la misma historia de la madre maldecida.
+                </p>
+
+                <p class="dialogo defensiva">
+                    —¡Son mentiras!— exclamó Seraphina, pero su voz había perdido su tono desesperado anterior.— ¡Esta gata está celosa de nuestro vínculo!"
+                </p>
+
+                <p class="texto-narrativo">
+                    Lyra arrojó algo al suelo: una garra de mantis manchada de savia, y varios mechones de pelaje de gatos monteses diferentes.
+                </p>
+
+                <p class="dialogo">
+                    —La evidencia habla por sí misma. Y hay más: ella lidera una red de decenas de mantis organizadas en múltiples células que han declarado guerra genocida contra nuestra especie. Su plan es usar las Lágrimas de Luna no para sanar, sino para aumentar su poder y completar la masacre."
+                </p>
+
+                <p class="texto-narrativo">
+                    El aire se llenó de una tensión que parecía capaz de cortarse con cuchillo. Seraphina miraba entre Axel y Lyra, calculando sus opciones, su fachada finalmente desmoronándose.
+                </p>
+            </section>
+
+            <!-- ========================================================================== -->
+            <!-- SECCIÓN D: REVELACIÓN Y ESTRATEGIA (Líneas ~860-950)                     -->
+            <!-- ========================================================================== -->
+            
+            <!-- ===================== DECISIÓN 4: CONFRONTACIÓN O ESPIONAJE ===================== -->
+            <!-- SECCIÓN: Estrategia tras la revelación de Lyra sobre Seraphina -->
+            <!-- LÍNEAS APROXIMADAS: 848-948 -->
+            <!-- OPCIONES: A) Confrontar directamente | B) Espiar y seguir el juego -->
+            <!-- IMPACTO: Define por entero los capítulos 5-6 del desarrollo -->
+            <div id="decision-4" class="decision-point hidden">
+                <h3 class="decision-title">La Verdad Revelada</h3>
+                
+                <p class="decision-context">
+                    Las palabras de Lyra resonaban en el aire como campanas fúnebres. La evidencia era abrumadora, pero Seraphina aún no había admitido nada. Sus ojos mostraban una mezcla de pánico, ira y.... ¿arrepentimiento?
+                </p>
+
+                <p class="decision-context">
+                    Axel sentía como si el mundo se hubiera volcado. Todo en lo que había creído, toda la compasión que había sentido por esta criatura, ¿había sido mentira? Pero algo en los ojos de Seraphina le decía que la historia era más compleja.
+                </p>
+
+                <div class="decision-buttons">
+                    <button onclick="tomarDecision(4, 'A')" class="decision-btn option-a">
+                        <strong>Confrontar directamente</strong>
+                        <span>Exigir la verdad completa ahora mismo</span>
+                    </button>
+                    <button onclick="tomarDecision(4, 'B')" class="decision-btn option-b">
+                        <strong>Fingir ignorancia</strong>
+                        <span>Seguir el juego para descubrir sus verdaderos planes</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- ##########################################################
+            #  SECCIÓN 4: REVELACIÓN Y ESTRATEGIA (Líneas 880-980)
+            #  - Lyra revela la verdad sobre Seraphina
+            #  - Decisión: Confrontación vs Espionaje
+            #  - Cambio radical en la dinámica del grupo
+            #  - Preparación para la fase final
+            ########################################################## -->
+            
+            <!-- ===================== CONTENIDO POST-REVELACIÓN ===================== -->
+            <section id="confrontacion-directa" class="hidden contenido-condicional">
+                <h3>La Confrontación</h3>
+                
+                <p class="texto-narrativo">
+                    Axel se enderezó, empuñando su arco con un movimiento preciso. Sus ojos heterocromáticos brillaron con una mezcla de traición y determinación.
+                </p>
+
+                <p class="dialogo fuerte">
+                    —¿Es cierto?— Su voz atravesó el aire con la precisión de una flecha.— ¿Mataste a esos gatos monteses? ¿Tu madre realmente está maldecida, o todo ha sido una mentira?"
+                </p>
+
+                <p class="texto-narrativo">
+                    Por un momento, el rostro de Seraphina mostró una vulnerabilidad genuina. Luego, como si se quitara una máscara, su expresión se endureció en algo frío y calculador.
+                </p>
+
+                <p class="dialogo fria">
+                    —Mi madre SÍ está convertida en estatua—  articuló pausadamente.— Pero no por una maldición. Los gatos monteses la dañaron junto con el resto de mi familia hace dos años. Las Lágrimas de Luna pueden traerla de vuelta.... y darme el poder para vengar cada muerte."
+                </p>
+
+                <p class="texto-narrativo">
+                    La confesión resonó en el silencio como el eco de una piedra al caer en un pozo profundo, y provocó ondas de conmoción en el grupo.
+                </p>
+
+                <p class="dialogo">
+                    —Seis gatos monteses por veintitrés mantis—  continuó Seraphina.— ¿Te parece injusto el intercambio, Axel? Porque apenas hemos consumenzado."
+                </p>
+            </section>
+
+            <section id="estrategia-espionaje" class="hidden contenido-condicional">
+                <h3>El Doble Juego</h3>
+                
+                <p class="texto-narrativo">
+                    Axel mantuvo su expresión cuidadosamente neutral, aunque por dentro su mundo se tambaleaba. Miró brevemente a Lyra y le hizo una seña casi imperceptible: <em>sigue mi juego</em>.
+                </p>
+
+                <p class="dialogo controlada">
+                    —Lyra, debes estar confundida—  dijo Axel con voz firme.— Seraphina ha estado conmigo desde el inicio. No puede ser responsable de esos crímenes."
+                </p>
+
+                <p class="texto-narrativo">
+                    Los ojos de Seraphina mostraron sorplanta y alivio. Lyra, después de un momento de confusión, captó la estrategia.
+                </p>
+
+                <p class="dialogo reacia">
+                    —Tal vez.... tal vez me equivoqué—  balbuceó Lyra.— Pero mantendré mis ojos abiertos."
+                </p>
+
+                <p class="texto-narrativo">
+                    Esa noche, cuando Seraphina había caído en sueño profundo, Axel susurró a Lyra que lo siguiera a la orilla del campamento. El plan era simple: seguir con la charada, permitir que Seraphina los llevara hasta su red completa, y descubrir la verdadera extensión de la conspiración antes de actuar.
+                </p>
+
+                <p class="dialogo susurrada">
+                    —Es arriesgado—  confesó Lyra.— Si descubre nuestro engaño...."
+                </p>
+
+                <p class="dialogo susurrada">
+                    —Entonces descubriremos qué tan peligrosa es realmente—  declaró Axel.— Y cuántas vidas podemos salvar si jugamos bien nuestras cartas."
+                </p>
+            </section>
+
+            <!-- ===================== POST-REVELACIÓN ===================== -->
+            <section id="post-revelacion" class="hidden">
+                <h3>Consecuencias de la Verdad</h3>
+                
+                <p class="texto-narrativo">
+                    Durante los días que siguieron, cada silencio se extendía demasiado, cada conversación terminaba abruptamente. El grupo continuó hacia el Templo Celestial donde se encontraban las verdaderas Lágrimas de Luna, pero ahora cada gesto, cada mirada estaba cargada de significados ocultos.
+                </p>
+
+                <p class="texto-narrativo">
+                    Seraphina, sintiéndose parcialmente desenmascarada, dejó que su fachada se agrietara. Sus preguntas revelaban una mente aguda, pero el temblor en sus manos al mencionar a su familia delataba heridas que no habían cicatrizado. Sus momentos de vulnerabilidad genuina se alternaban con períodos de fría determinación.
+                </p>
+
+                <p class="texto-narrativo">
+                    Fue durante esta tensa travesía que llegó el mensaje urgente para Ember.
+                </p>
+            </section>
+
+            <!-- ===================== DECISIÓN 5: DILEMA DE EMBER ===================== -->
+            <!-- SECCIÓN: Crisis familiar obliga separación de Ember -->
+            <!-- LÍNEAS APROXIMADAS: 950-1240 -->
+            <!-- OPCIONES: A) Ember se queda hasta final | B) Ember regresa a proteger familia -->
+            <!-- IMPACTO: Presencia vs ausencia en confrontación final -->
+            <div id="decision-5" class="decision-point hidden">
+                <h3 class="decision-title">El Dilema Familiar</h3>
+                
+                <div id="ember-presente-decision" class="hidden contenido-condicional">
+                    <p class="decision-context">
+                        Un halcón mensajero llegó con noticias devastadoras: Valle Tranquilo, donde vivía la familia de Ember, estaba siendo atacado por una alianza de Águilas Doradas. Luna Suave y los gemelos Sol y Sombra estaban en peligro mortal.
+                    </p>
+
+                    <p class="decision-context">
+                        Ember sostuvo el mensaje con manos temblorosas. Sus principios pacifistas se enfrentaban contra su amor paternal. Podía salvar el mundo ayudando a detener a Seraphina, o podía salvar a su familia.
+                    </p>
+
+                    <div class="decision-buttons">
+                        <button onclick="tomarDecision(5, 'A')" class="decision-btn option-a">
+                            <strong>Ve a proteger a tu familia</strong>
+                            <span>Tus hijos te necesitan más que nosotros</span>
+                        </button>
+                        <button onclick="tomarDecision(5, 'B')" class="decision-btn option-b">
+                            <strong>Quédate y termina esto</strong>
+                            <span>Si Seraphina triunfa, no habrá lugar seguro para ninguna familia</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="ember-ausente-decision" class="hidden contenido-condicional">
+                    <p class="decision-context">
+                        Sin Ember presente, Axel y Lyra debían decidir su siguiente movimiento. Seraphina había revelado parcialmente sus cartas, pero su plan completo seguía siendo un misterio.
+                    </p>
+
+                    <div class="decision-buttons">
+                        <button onclick="tomarDecision(5, 'A')" class="decision-btn option-a">
+                            <strong>Buscar más aliados</strong>
+                            <span>Necesitan más ayuda antes del enfrentamiento final</span>
+                        </button>
+                        <button onclick="tomarDecision(5, 'B')" class="decision-btn option-b">
+                            <strong>Continuar directamente al templo</strong>
+                            <span>Cada momento perdido es peligroso</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ##########################################################
+            #  SECCIÓN 5: DILEMA FAMILIAR Y SEPARACIÓN (Líneas 1000-1270)
+            #  - Crisis en Valle Tranquilo (familia de Ember)
+            #  - Decisión: Ember se queda vs regresa con familia
+            #  - Búsqueda de aliados finales
+            #  - Preparación para el Templo Celestial
+            ########################################################## -->
+            
+            <!-- ===================== CONTENIDO EMBER SE VA ===================== -->
+            <section id="ember-se-va" class="hidden contenido-condicional">
+                <h3>La Separación de los Hermanos</h3>
+                
+                <p class="dialogo angustiada">
+                    —Lo siento, Axel—  articuló Ember, sus ojos llenos de lágrimas.— Son mis hijos. No puedo dejarlos morir por principios abstractos cuando puedo hacer algo concreto para salvarlos."
+                </p>
+
+                <p class="texto-narrativo">
+                    Axel abrazó a su hermano fuertemente. —Ve. Protege a tu familia. Yo terminaré esto."
+                </p>
+
+                <p class="dialogo">
+                    —Toma esto—  Ember le ofreció una flecha especial, tallada con runas de pacificación.— Si llega el momento final con Seraphina.... esta flecha no daña. Puede paralizar, dar una última oportunidad para la redención."
+                </p>
+
+                <p class="texto-narrativo">
+                    Con esas palabras, Ember partió hacia Valle Tranquilo, dejando a Axel con una nueva carga: la posibilidad de elegir misericordia incluso en el momento más oscuro.
+                </p>
+            </section>
+
+            <section id="ember-se-queda" class="hidden contenido-condicional">
+                <h3>El Sacrificio del Mediador</h3>
+                
+                <p class="texto-narrativo">
+                    Ember cerró los ojos, sus manos temblando mientras sostenia el mensaje. Cuando los abrió, había una nueva determinación en ellos.
+                </p>
+
+                <p class="dialogo resoluta">
+                    —Luna Suave es fuerte. Valle Tranquilo tiene defensas. Pero si Seraphina completa su plan genocida, no habrá valle seguro en ninguna parte para mis hijos."
+                </p>
+
+                <p class="texto-narrativo">
+                    Quemó el mensaje, las llamas reflejándose en sus ojos. —Terminaremos esto juntos, hermano. Por todos los niños que no tienen la oportunidad de defenderse."
+                </p>
+
+                <p class="texto-narrativo">
+                    Esa decisión cambiaría a Ember para siempre. El peso de elegir el mundo sobre su familia lo marcaría, pero también le daría una nueva fuerza moral que influenciaría cada decisión posterior.
+                </p>
+            </section>
+
+            <section id="despedida-ember" class="hidden contenido-condicional">
+                <p class="dialogo">
+                    —Cuida de Axel—  le solicitó Ember a Lyra antes de partir.— Y recuerda que Seraphina, por todo el daño que ha causado, también es víctima de una tragedia. No dejes que el odio te consuma como la consumió a ella."
+                </p>
+            </section>
+
+            <section id="ember-continua" class="hidden contenido-condicional">
+                <p class="texto-narrativo">
+                    La presencia continua de Ember cambió la dinámica del grupo. Su perspectiva diplomática y su doloroso sacrificio personal añadieron una dimensión de compasión incluso hacia Seraphina, que consumenzó a notar que no todos los gatos monteses eran los monstruos que ella había imaginado.
+                </p>
+            </section>
+
+            <!-- ===================== VIAJE 4: POST-REVELACIÓN ===================== -->
+            <section id="viaje-post-revelacion" class="hidden">
+                <h3>Después de la Verdad</h3>
+                
+                <p class="texto-narrativo">
+                    El viaje posterior a la revelación de Lyra estaba cargado de tensión. Cada paso era vigilado, cada conversación medida. El grupo se dirigía hacia el encuentro con los aliados finales, pero el ambiente había cambiado completamente.
+                </p>
+                
+                <!-- Encuentro: Los Lobos Observadores -->
+                <div class="encuentro-menor">
+                    <h4>Los Vigías de la Montaña</h4>
+                    
+                    <p class="texto-narrativo">
+                        Una manada de lobos grises emergió de entre los pinos, liderados por un lobo anciano con una cicatriz que cruzaba su ojo izquierdo. Alpha Cicatriz-de-Luna había estado observando al grupo desde la distancia.
+                    </p>
+                    
+                    <p class="dialogo grave">
+                        —Hemos visto pasar mantis armadas por nuestro territorio durante semanas—  rugió Alpha.— Y ahora vemos a una mantis viajando con gatos monteses. Expliquen qué está pasando, o no pasarán por aquí."
+                    </p>
+                    
+                    <div class="texto-opciones">
+                        <strong>Si siguieron la estrategia de confrontación:</strong> Axel puede revelar parcialmente la verdad sobre Seraphina<br>
+                        <strong>Si siguieron espionaje:</strong> Deben mantener la charada mientras obtienen información sobre los movimientos de mantis
+                    </div>
+                    
+                    <p class="dialogo reveladora">
+                        —Las mantis están estableciendo campamentos base en las Cuevas del Norte. Si van hacia el Templo Celestial, encontrarán resistencia organizada."
+                    </p>
+                </div>
+                
+                <!-- Encuentro: Los Espíritus del Bosque Inquieto -->
+                <div class="encuentro-menor">
+                    <h4>Las Voces del Viento</h4>
+                    
+                    <p class="texto-narrativo">
+                        En un claro neblinoso, espíritus traslúcidos de criaturas muertas consumenzaron a materializarse. Sus voces susurraban en el viento, todas dirigiéndose a Seraphina con acusaciones.
+                    </p>
+                    
+                    <p class="dialogo espectrales">
+                        —Asesina.... mentirosa.... ¿cuándo pagará por nuestras muertes?"
+                    </p>
+                    
+                    <p class="texto-narrativo">
+                        Seraphina se tambaleó, sus ojos llenándose de horror genuino al ver las caras de sus víctimas. Por primera vez, no pudo esconder completamente su culpa.
+                    </p>
+                    
+                    <div class="texto-opciones">
+                        Este encuentro sobrenatural fuerza a Seraphina a confrontar las consecuencias de sus acciones de manera visceral, añadiendo profundidad emocional a su arco de redención.
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===================== VIAJE 5: HACIA LOS ALIADOS FINALES ===================== -->
+            <section id="viaje-aliados-finales" class="hidden">
+                <h3>En Busca de la Preparación Final</h3>
+                
+                <!-- RUTA A LAS ARAÑAS TEJEDORAS -->
+                <div id="ruta-arañas" class="hidden contenido-condicional">
+                    <h4>El Descenso a los Túneles Secretos</h4>
+                    
+                    <p class="texto-narrativo">
+                        El camino hacia la Colonia de las Arañas Tejedoras del Destino llevaba a través de un sistema de cuevas subterráneas iluminadas por hongos bioluminiscentes.
+                    </p>
+                    
+                    <!-- Encuentro: Los Gusanos Luminosos Guardianes -->
+                    <div class="encuentro-menor">
+                        <p class="texto-narrativo">
+                            Miles de gusanos luminosos cubrían las paredes de la cueva, creando patrones hipnóticos de luz. Su líder, Resplandor Ancestral, bloqueó el túnel principal.
+                        </p>
+                        
+                        <p class="dialogo lumínica">
+                            —Solo quienes pueden resistir nuestros patrones de luz hipnótica pueden proceder. Las arañas no reciben a mentes débiles que pueden ser fácilmente manipuladas."
+                        </p>
+                        
+                        <p class="texto-opciones">
+                            Esta prueba evalúa la resistencia mental del grupo, particularmente importante dado que van a intercambiar secretos con las arañas. Seraphina debe demostrar que no está completamente controlada por su sed de venganza.
+                        </p>
+                    </div>
+                    
+                    <!-- Encuentro: Los Escarabajos Archivistas -->
+                    <div class="encuentro-menor">
+                        <h4>Los Bibliotecarios del Subsuelo</h4>
+                        
+                        <p class="texto-narrativo">
+                            Una colonia de escarabajos brillantes había establecido una biblioteca subterránea donde archivaban información sobre todos los viajeros que buscaban a las arañas.
+                        </p>
+                        
+                        <p class="dialogo meticulosa">
+                            —Alto, visitantes. Deben registrarse en nuestros archivos antes de proceder. Nombre, propósito, y algo de valor informativo como pago por el acceso."
+                        </p>
+                        
+                        <p class="texto-narrativo">
+                            Esta prueba menor prepara al grupo para el intercambio de secretos que vendrá, mientras proporciona información sobre otros que han buscado a las arañas recientemente.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- RUTA A LOS CONEJOS HERBOLARIOS -->
+                <div id="ruta-conejos-herbolarios" class="hidden contenido-condicional">
+                    <h4>El Sendero de las Flores Curativas</h4>
+                    
+                    <p class="texto-narrativo">
+                        El camino hacia el Pueblo de los Conejos Herbolarios serpenteaba a través de valles llenos de plantas medicinales y flores que parecían irradiar paz.
+                    </p>
+                    
+                    <!-- Encuentro: Los Ciervos Empáticos -->
+                    <div class="encuentro-menor">
+                        <p class="texto-narrativo">
+                            Una manada de ciervos blancos los interceptó en un prado lleno de flores. Su líder, Corona de Flores, podía sentir las emociones de todos los seres vivientes cercanos.
+                        </p>
+                        
+                        <p class="dialogo empática">
+                            —Siento mucho dolor en uno de ustedes—  murmuró Corona, mirando directamente a Seraphina.— El dolor que se ha convertido en rabia, la rabia que se ha convertido en odio. ¿Están seguros de que quieren llevar esa energía a los sanadores?"
+                        </p>
+                        
+                        <p class="texto-opciones">
+                            Este encuentro proporciona una evaluación emocional honesta de Seraphina y plantea la pregunta de si realmente está lista para la sanación que ofrecen los conejos.
+                        </p>
+                    </div>
+                    
+                    <!-- Encuentro: El Jardín de las Emociones Curativas -->
+                    <div class="encuentro-menor">
+                        <h4>La Prueba del Corazón Abierto</h4>
+                        
+                        <p class="texto-narrativo">
+                            Antes de llegar al pueblo, debían pasar por un jardín donde cada flor respondía a las emociones de quienes pasaban. Las flores marchitas revelaban negatividad, mientras que las flores florecientes mostraban positividad.
+                        </p>
+                        
+                        <p class="texto-narrativo">
+                            Mientras Axel caminaba, las flores se abrían en tonos dorados. Pero alrededor de Seraphina, algunas se marchitaban mientras otras consumenzaban lentamente a florecer.
+                        </p>
+                        
+                        <div class="texto-opciones">
+                            Este encuentro visual representa el estado emocional interno de cada personaje y prepara para la sanación emocional que ofrecen los conejos.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===================== VIAJE 6: HACIA EL LABERINTO DE TEJONES ===================== -->
+            <section id="viaje-laberinto" class="hidden">
+                <h3>El Descenso Final</h3>
+                
+                <p class="texto-narrativo">
+                    Con los aliados finales conseguidos, el grupo se dirigía hacia el Laberinto de los Tejones, la última parada antes del Templo Celestial. El aire se volvía más pesado con cada paso.
+                </p>
+                
+                <!-- Encuentro: Los Cuervos Mensajeros de Mal Agüero -->
+                <div class="encuentro-menor">
+                    <h4>Los Portadores de Noticias Oscuras</h4>
+                    
+                    <p class="texto-narrativo">
+                        Una bandada de cuervos negros descendió del cielo, liderados por un cuervo gigante con ojos rojos. Portaban noticias de los campamentos de mantis.
+                    </p>
+                    
+                    <p class="dialogo ominosa">
+                        —¡Caw! ¡Las mantis se reúnen! ¡Cuarenta y siete guerreras esperan en el Templo! ¡La trampa está lista! ¡Caw!"
+                    </p>
+                    
+                    <p class="texto-narrativo">
+                        Esta información fuerza al grupo a reevaluar su estrategia. ¿Sigue Seraphina con su plan original, o los eventos la han cambiado genuinamente?
+                    </p>
+                </div>
+                
+                <!-- Encuentro: Los Murciélagos de la Última Advertencia -->
+                <div class="encuentro-menor">
+                    <h4>El Consejo Nocturno</h4>
+                    
+                    <p class="texto-narrativo">
+                        Un grupo de murciélagos ancianos emergió de una cueva, enviados por Eco Pergaminada con una advertencia final.
+                    </p>
+                    
+                    <p class="dialogo urgente">
+                        —El Templo Celestial ha consumenzado a reaccionar a las intenciones malévolas cerca de él. Si alguien con corazón lleno de odio toca las Lágrimas de Luna, el templo mismo se convertirá en una trampa mortal."
+                    </p>
+                    
+                    <div class="texto-opciones">
+                        Esta advertencia añade urgencia a la necesidad de redimir genuinamente a Seraphina antes del enfrentamiento final.
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===================== PREPARACIÓN FINAL ===================== -->
+            <section id="preparacion-final" class="hidden">
+                <h3>Los Aliados Finales</h3>
+                
+                <p class="texto-narrativo">
+                    Antes de enfrentar el Laberinto de los Tejones y llegar al Templo Celestial, el grupo necesitaba preparación adicional. Dos opciones se presentaron para obtener la ayuda final que necesitarían.
+                </p>
+
+                <p class="texto-narrativo">
+                    Seraphina, ahora parcialmente desenmascarada pero aún con cartas ocultas, observaba estas decisiones con interés calculador. Cada aliado que obtuvieran cambiaría sus propias estrategias.
+                </p>
+            </section>
+
+            <!-- ===================== DECISIÓN 6: ALIADOS FINALES ===================== -->
+            <!-- SECCIÓN: Preparación final antes del Templo Celestial -->
+            <!-- LÍNEAS APROXIMADAS: 1241-1350 -->
+            <!-- OPCIONES: A) Arañas Tejedoras (mapas/secretos) | B) Conejos Herbolarios (claridad mental) -->
+            <!-- IMPACTO: Preparación táctica vs preparación psicológica -->
+            <div id="decision-6" class="decision-point hidden">
+                <h3 class="decision-title">La Preparación Final</h3>
+                
+                <p class="decision-context">
+                    Antes del enfrentamiento final en el Templo Celestial, el grupo puede buscar ayuda de dos poderosas comunidades. Cada una ofrece ventajas diferentes pero mutuamente excluyentes.
+                </p>
+
+                <p class="decision-context">
+                    Las Arañas Tejedoras del Destino pueden proporcionar mapas detallados del templo y conocimiento sobre las verdaderas capacidades de Seraphina, pero exigen secretos personales a cambio. Los Conejos Herbolarios ofrecen protección mental contra manipulación y hierbas de claridad, pero son vulnerables si Seraphina descubre su ubicación.
+                </p>
+
+                <div class="decision-buttons">
+                    <button onclick="tomarDecision(6, 'A')" class="decision-btn option-a">
+                        <strong>Buscar a las Arañas Tejedoras</strong>
+                        <span>Obtener conocimiento completo a costa de secretos personales</span>
+                    </button>
+                    <button onclick="tomarDecision(6, 'B')" class="decision-btn option-b">
+                        <strong>Ir con los Conejos Herbolarios</strong>
+                        <span>Protección mental pero riesgo de exposición</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- ===================== CONTENIDO ALIADOS FINALES ===================== -->
+            <section id="encuentro-arañas" class="hidden contenido-condicional">
+                <h3>Las Tejedoras del Destino</h3>
+                
+                <p class="texto-narrativo">
+                    La Colonia de las Arañas Tejedoras del Destino se extendía en una red de túneles subterráneos iluminados por telarañas bioluminiscentes. Destina Sedahilos, la araña ancestral, recibió al grupo con ojos que brillaban como constelaciones.
+                </p>
+
+                <p class="dialogo misteriosa">
+                    —Veo que vuestros caminos están entrelazados con los de la mantis—  murmuró Destina.— Pero el conocimiento que buscáis tiene un precio. Un secreto profundo de cada uno a cambio de la verdad completa."
+                </p>
+
+                <p class="texto-narrativo">
+                    Uno por uno, compartieron sus secretos más guardados. Axel reveló su miedo de convertirse en el recolector solitario y amargado que había sido su padre. Lyra confesó que había amado en secreto a uno de los gatos monteses que Seraphina había dañado.
+                </p>
+
+                <p class="texto-narrativo">
+                    Y Seraphina susurró en voz apenas audible: —Mi mayor miedo es que cuando termine mi venganza, descubra que no soy mejor que quienes dañaron a mi familia."
+                </p>
+
+                <p class="dialogo reveladora">
+                    —Ahora os daré lo que buscáis—  dijo Destina.— Seraphina lidera una red de cuarenta y siete mantis, pero no todas están comprometidas con el genocidio. Muchas la siguen por miedo o desesperación. Y las Lágrimas de Luna.... responden a la verdad más profunda del corazón de quien las toca."
+                </p>
+            </section>
+
+            <section id="encuentro-conejos" class="hidden contenido-condicional">
+                <h3>Los Herbolarios Empáticos</h3>
+                
+                <p class="texto-narrativo">
+                    El Pueblo de los Conejos Herbolarios era un oasis de paz en medio del caos. Trébol Raíztierna, el anciano líder con orejas adornadas de flores, recibió al grupo con una sonrisa cálida que inmediatamente calmó sus nervios tensos.
+                </p>
+
+                <p class="dialogo empática">
+                    —Siento el dolor en vuestros corazones—  murmuró Trébol, sus ojos brillando con comprensión.— Tanto el dolor de la traición como el dolor de la pérdida. Dejad que nuestras hierbas aclaren vuestras mentes para el enfrentamiento que viene."
+                </p>
+
+                <p class="texto-narrativo">
+                    Los conejos prepararon una mezcla especial de hierbas que proporcionaría inmunidad parcial contra la manipulación mental. Pero más importante, su presencia empática consumenzó a afectar incluso a Seraphina.
+                </p>
+
+                <p class="dialogo suave">
+                    —He visto mucho odio—  dijo Trébol directamente a Seraphina.— Pero también veo dolor no sanado. El odio es solo dolor que se ha vuelto hacia afuera. Las Lágrimas de Luna pueden sanar ambos, si se les permite."
+                </p>
+
+                <p class="texto-narrativo">
+                    Por primera vez en años, Seraphina sintió que alguien veía más allá de sus acciones hacia el corazón herido que las motivaba.
+                </p>
+            </section>
+
+            <section id="mapas-detallados" class="hidden contenido-condicional">
+                <p class="texto-narrativo">
+                    Las arañas proporcionaron mapas detallados del Templo Celestial, mostrando rutas secretas y ubicaciones de trampas. También revelaron que el templo mismo respondía a las intenciones de quienes entraban: se volvería un laberinto mortal para corazones llenos de odio, pero se abriría fácilmente para aquellos con intenciones puras.
+                </p>
+            </section>
+
+            <section id="hierbas-proteccion" class="hidden contenido-condicional">
+                <p class="texto-narrativo">
+                    Los conejos proporcionaron hierbas especiales que protegerían al grupo contra la Danza Hipnótica de Seraphina y otras formas de manipulación mental. Pero más importante, las hierbas les darían claridad emocional para ver más allá del ciclo de venganza hacia posibilidades de redención.
+                </p>
+            </section>
+
+            <!-- ##########################################################
+            #  SECCIÓN 6: TEMPLO CELESTIAL Y RESOLUCIÓN (Líneas 1370-final)
+            #  - Llegada al Templo Celestial
+            #  - Confrontación final con Seraphina
+            #  - Decisión: Uso inmediato vs confrontación de las Lágrimas
+            #  - Múltiples finales y epílogos
+            ########################################################## -->
+            
+            <!-- ===================== ENTRADA AL TEMPLO ===================== -->
+            <section id="entrada-templo" class="hidden">
+                <h3>El Templo Celestial</h3>
+                
+                <p class="texto-narrativo">
+                    Después de navegar el Laberinto de los Tejones con la ayuda de Groundbreaker y su gente, el grupo finalmente llegó al Templo Celestial. La estructura antigua se alzaba como una montaña tallada, con espirales que parecían alcanzar las estrellas mismas.
+                </p>
+
+                <p class="texto-narrativo">
+                    En el interior, columnas de mármol blanco sostenían un techo que mostraba las constelaciones en movimiento. Y allí, en el centro de un círculo de luz lunar perpetua, flotaban tres gemas perfectas: las Lágrimas de Luna.
+                </p>
+
+                <p class="texto-narrativo">
+                    Pero no estaban solos. El espíritu del padre de Axel se materializó, sus ojos brillando con una mezcla de orgullo y preocupación.
+                </p>
+
+                <p class="dialogo espiritual">
+                    —Hijo mío—  articuló el espíritu,— has llegado hasta aquí. Pero esta decisión final debe ser solo tuya. Las Lágrimas de Luna responderán a la verdad más profunda de tu corazón. Elige sabiamente."
+                </p>
+
+                <p class="texto-narrativo">
+                    Seraphina se adelantó, sus ojos fijos en las gemas. Por primera vez, su máscara había desaparecido por entero, mostrando toda la complejidad de su dolor, su ira y su desesperación.
+                </p>
+            </section>
+
+            <!-- ===================== DECISIÓN 7: MOMENTO FINAL ===================== -->
+            <!-- SECCIÓN: Uso de las Lágrimas de Luna en el Templo Celestial -->
+            <!-- LÍNEAS APROXIMADAS: 1351-final -->
+            <!-- OPCIONES: A) Curación inmediata | B) Confrontación primero -->
+            <!-- IMPACTO: Tipo de redención (inmediata vs gradual) y epílogo -->
+            <div id="decision-7" class="decision-point hidden">
+                <h3 class="decision-title">El Momento Final</h3>
+                
+                <p class="decision-context">
+                    Las Lágrimas de Luna flotan ante Axel, irradiando poder puro. Seraphina se encuentra a su lado, toda pretensión finalmente abandonada. Sus ojos muestran siglos de dolor, años de odio, pero también un destello de la persona que una vez fue.
+                </p>
+
+                <p class="decision-context">
+                    —Puedo tomarlas—  murmura Seraphina.— Puedo traer de vuelta a mi familia y tener el poder para que nunca más seamos víctimas. Pero tú.... tú podrías usarlas para algo diferente. Para romper este ciclo."
+                </p>
+
+                <p class="decision-context">
+                    El espíritu del padre de Axel espera. Lyra tiene una flecha lista. El momento que determinará el destino de ambas especies ha llegado.
+                </p>
+
+                <div class="decision-buttons">
+                    <button onclick="tomarDecision(7, 'A')" class="decision-btn option-a">
+                        <strong>Usar las Lágrimas para curar</strong>
+                        <span>Sanar a la madre de Seraphina y romper el ciclo de odio</span>
+                    </button>
+                    <button onclick="tomarDecision(7, 'B')" class="decision-btn option-b">
+                        <strong>Confrontar una última vez</strong>
+                        <span>Exigir que Seraphina renuncie a su venganza primero</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- ===================== FINALES ===================== -->
+            <section id="final-redencion" class="hidden contenido-condicional">
+                <h3>El Poder de la Compasión</h3>
+                
+                <p class="texto-narrativo">
+                    Sin vacilación, Axel tomó las Lágrimas de Luna. El poder fluyó a través de él como luz líquida, y supo instintivamente lo que debía hacer.
+                </p>
+
+                <p class="dialogo determinada">
+                    —Seraphina—  declaró con voz firme pero gentil,— esto no traerá de vuelta a tu familia. Pero puede darte la oportunidad de honrar su memoria de una manera que los haría orgullosos."
+                </p>
+
+                <p class="texto-narrativo">
+                    Las gemas brillaron con luz cegadora, y en ese resplandor, la estatua de mármol de la madre de Seraphina consumenzó a cambiar. No regresó a la vida —las Lágrimas no podían deshacer la muerte— pero se transformó en algo hermoso y vivo: un jardín de flores de cristal que brillarían eternamente con amor maternal.
+                </p>
+
+                <p class="texto-narrativo">
+                    Seraphina cayó de rodillas ante la transformación, lágrimas verdaderas corriendo por su rostro por primera vez en años.
+                </p>
+
+                <p class="dialogo quebrada">
+                    —Ella.... ella habría querido que fuera mejor que esto—  murmuró.— Que fuera quien ella me enseñó a ser, no lo que el odio me convirtió."
+                </p>
+
+                <p class="texto-narrativo">
+                    El poder restante de las Lágrimas fluyó hacia Seraphina, no dándole fuerza para la venganza, sino sanando las heridas más profundas de su alma. Por primera vez desde la masacre, pudo recordar a su familia con amor en lugar de solo dolor.
+                </p>
+            </section>
+
+            <section id="final-confrontacion" class="hidden contenido-condicional">
+                <h3>La Justicia Antes que la Misericordia</h3>
+                
+                <p class="texto-narrativo">
+                    Axel se interpuso entre Seraphina y las Lágrimas, su arco tensado con una flecha apuntando directamente a su corazón.
+                </p>
+
+                <p class="dialogo firme">
+                    —Antes de que toques esas gemas—  afirmó con voz que no admitía discusión,— debes renunciar a tu venganza. Debes ordenar a tu red de mantis que se detengan. Y debes responder por las seis vidas que has tomado."
+                </p>
+
+                <p class="texto-narrativo">
+                    Seraphina lo miró con ojos que mezclaban ira y sorplanta. —¿Después de todo lo que hemos pasado juntos, aún no entiendes? ¡Mi familia murió! ¡Veintitrés vidas inocentes!"
+                </p>
+
+                <p class="dialogo">
+                    —Y has tomado seis en respuesta. ¿Cuándo termina, Seraphina? ¿Después de doce? ¿Después de veintitrés? ¿Después de que todas nuestras especies se extingan mutuamente?"
+                </p>
+
+                <p class="texto-narrativo">
+                    El enfrentamiento duró horas, cada uno presentando argumentos, cada uno defendiendo su visión de justicia. Finalmente, agotada por años de odio y confrontada con la futilidad de la venganza infinita, Seraphina se desplomó.
+                </p>
+
+                <p class="dialogo resignada">
+                    —Tienes razón—  confesó.— El ciclo tiene que terminar. Pero no sé cómo ser otra cosa que no sea lo que el dolor me hizo."
+                </p>
+
+                <p class="texto-narrativo">
+                    Solo entonces Axel bajó su arco y permitió que las Lágrimas de Luna obraran su magia, sanando no solo la estatua de la madre, sino consumenzando el lento proceso de sanar el corazón de Seraphina.
+                </p>
+            </section>
+
+            <!-- ===================== EPILOGOS ===================== -->
+            <section id="epilogo-compasivo" class="hidden contenido-condicional">
+                <h3>Epílogo: Nuevos Comienzos</h3>
+                
+                <p class="texto-narrativo">
+                    Seis meses después, el Valle de la Reconciliación había crecido alrededor del jardín de cristal que una vez fue la madre de Seraphina. Gatos monteses y mantis religiosas trabajaban juntos para construir algo que ninguna de las especies había visto antes: una comunidad verdaderamente integrada.
+                </p>
+
+                <p class="texto-narrativo">
+                    Seraphina, ahora conocida como Sera la Sanadora, utilizaba sus habilidades para mediar conflictos entre especies. El proceso de sanación personal era lento y a veces doloroso, pero cada día elegía la compasión sobre la venganza.
+                </p>
+
+                <p class="texto-narrativo">
+                    Axel había encontrado su propósito no como recolector solitario, sino como protector de esta nueva comunidad. Su arco élfico ahora colgaba en paz la mayoría del tiempo, usándose más para enseñar a jóvenes de ambas especies que para combatir.
+                </p>
+
+                <div id="final-con-ember" class="hidden contenido-condicional">
+                    <p class="texto-narrativo">
+                        Ember había regresado con Luna Suave y los gemelos, que ahora jugaban libremente con larvas de mantis y cachorros de gato montés sin distinción. Su decisión de quedarse había sido vindicada: el mundo era efectivamente un lugar más seguro para sus hijos.
+                    </p>
+                </div>
+
+                <p class="texto-narrativo">
+                    El último párrafo del diario de Axel esa noche decía: —Hoy Seraphina me enseñó a una joven mantis cómo tallar. Dijo que quería crear algo hermoso en lugar de destruir algo precioso. Creo que padre estaría orgulloso de ambos."
+                </p>
+            </section>
+
+            <section id="epilogo-justicia" class="hidden contenido-condicional">
+                <h3>Epílogo: Justicia Templada con Misericordia</h3>
+                
+                <p class="texto-narrativo">
+                    El proceso de sanación fue más lento y difícil, pero quizás más sólido por ello. Seraphina había enfrentado completamente las consecuencias de sus acciones antes de recibir la oportunidad de redención.
+                </p>
+
+                <p class="texto-narrativo">
+                    Establecieron el Consejo de Especies Múltiples, donde representantes de gatos monteses, mantis religiosas y otras criaturas se reunían para resolver conflictos antes de que escalaran a violencia. Seraphina servía como mediadora, su experiencia con tanto el dolor como la venganza la convertía en una voz poderosa para la resolución pacífica.
+                </p>
+
+                <p class="texto-narrativo">
+                    El jardín de cristal de su madre se había convertido en un memorial no solo para las mantis que habían muerto, sino para todas las víctimas del ciclo de venganza, incluyendo los gatos monteses que Seraphina había dañado.
+                </p>
+
+                <p class="texto-narrativo">
+                    —La justicia sin misericordia es crueldad—  había escrito Axel en el memorial.— Pero la misericordia sin justicia es impunidad. Solo cuando abramos ambas podremos romper los ciclos que nos destruyen."
+                </p>
+            </section>
+
+            <!-- ===================== FINALES ESPECIALES ===================== -->
+            <section id="final-heroe-perfecto" class="hidden contenido-condicional">
+                <h3>El Héroe de la Compasión Total</h3>
+                
+                <p class="texto-narrativo fuente-especial">
+                    La historia de Axel se convirtió en leyenda no por su habilidad con el arco, sino por su capacidad para ver bondad incluso en los corazones más oscuros. Había confiado desde el primer momento, buscado las mejores herramientas, encontrado a su hermano, enfrentado la verdad directamente, trabajado con los aliados más sabios, y elegido la sanación por encima de todo.
+                </p>
+
+                <p class="texto-narrativo fuente-especial">
+                    Las generaciones futuras contarían la historia del Cazador de Medianoche que enseñó al mundo que la verdadera fuerza no radica en la capacidad de destruir, sino en la valentía de sanar.
+                </p>
+            </section>
+
+            <!-- ===================== HISTORIA COMPLETA ===================== -->
+            <section id="historia-completa" class="hidden">
+                <h3>Historia Completa</h3>
+                
+                <div class="historia-resumen">
+                    <p class="texto-narrativo">
+                        Has completado tu versión personal de —El Cazador de Medianoche y las Lágrimas Robadas". Tu serie única de decisiones ha creado una historia que refleja tus valores y elecciones.
+                    </p>
+                    
+                    <div id="resumen-decisiones" class="resumen-final">
+                        <!-- Contenido generado dinámicamente -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===================== OPCIONES FINALES ===================== -->
+            <section id="opciones-finales" class="hidden">
+                <div class="opciones-finales">
+                    <h3>¿Qué quieres hacer ahora?</h3>
+                    <div class="opciones-botones">
+                        <button onclick="reiniciarHistoria()" class="btn-opcion">
+                            Comenzar una Nueva Historia
+                        </button>
+                        <button onclick="window.location.href='index.html'" class="btn-opcion">
+                            Explorar el Mundo de la Historia
+                        </button>
+                        <button onclick="mostrarTodasLasRutas()" class="btn-opcion">
+                            Ver Todas las Posibles Rutas
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- ===================== SCRIPTS ===================== -->
+    <script src="timeline-system.js"></script>
+    <script src="decision-system.js"></script>
+    <script src="mark-new-content.js"></script>
+    <script>
+        // ===================== SISTEMA DE DESARROLLADOR =====================
+        class DeveloperSystem {
+            constructor() {
+                this.newContentElements = [];
+                this.isHighlighting = false;
+                this.developerMode = localStorage.getItem('developer-mode') === 'true';
+                this.init();
+            }
+
+            init() {
+                this.findNewContentElements();
+                this.createDeveloperPanel();
+                this.setupEventListeners();
+                
+                // Restaurar estado si estaba activo
+                if (this.developerMode) {
+                    this.activateDeveloperMode();
+                }
+            }
+
+            findNewContentElements() {
+                this.newContentElements = document.querySelectorAll('.new-content');
+                console.log(`Encontrados ${this.newContentElements.length} elementos de contenido nuevo`);
+            }
+
+            createDeveloperPanel() {
+                this.updateContentStats();
+            }
+
+            updateContentStats() {
+                const statsContainer = document.getElementById('content-stats');
+                if (statsContainer) {
+                    const stats = this.calculateContentStats();
+                    statsContainer.innerHTML = `
+                        <div class="stat-item">
+                            <span>Elementos nuevos:</span>
+                            <span>${stats.totalElements}</span>
+                        </div>
+                        <div class="stat-item">
+                            <span>Párrafos nuevos:</span>
+                            <span>${stats.paragraphs}</span>
+                        </div>
+                        <div class="stat-item">
+                            <span>Títulos nuevos:</span>
+                            <span>${stats.headings}</span>
+                        </div>
+                        <div class="stat-item">
+                            <span>Secciones nuevas:</span>
+                            <span>${stats.sections}</span>
+                        </div>
+                        <div class="stat-item">
+                            <span>Encuentros nuevos:</span>
+                            <span>${stats.encounters}</span>
+                        </div>
+                    `;
+                }
+            }
+
+            calculateContentStats() {
+                const paragraphs = document.querySelectorAll('.new-content p, .new-content .dialogo').length;
+                const headings = document.querySelectorAll('.new-content h3, .new-content h4').length;
+                const sections = document.querySelectorAll('section.new-content').length;
+                const encounters = document.querySelectorAll('.new-content .encuentro-menor, .new-content .mini-decision').length;
+
+                return {
+                    totalElements: this.newContentElements.length,
+                    paragraphs,
+                    headings,
+                    sections,
+                    encounters
+                };
+            }
+
+            setupEventListeners() {
+                // Ya están definidas en el HTML
+            }
+
+            toggleHighlight() {
+                this.isHighlighting = !this.isHighlighting;
+                document.body.classList.toggle('highlight-new-content', this.isHighlighting);
+                
+                // Persistir estado
+                localStorage.setItem('highlight-new-content', this.isHighlighting);
+                
+                console.log(`Resaltado de contenido nuevo: ${this.isHighlighting ? 'ACTIVADO' : 'DESACTIVADO'}`);
+            }
+
+            toggleDeveloperMode() {
+                this.developerMode = !this.developerMode;
+                localStorage.setItem('developer-mode', this.developerMode);
+                
+                if (this.developerMode) {
+                    this.activateDeveloperMode();
+                } else {
+                    this.deactivateDeveloperMode();
+                }
+            }
+
+            activateDeveloperMode() {
+                document.body.classList.add('dev-mode');
+                
+                // Restaurar estado del resaltado
+                const highlightState = localStorage.getItem('highlight-new-content') === 'true';
+                if (highlightState) {
+                    document.body.classList.add('highlight-new-content');
+                    const checkbox = document.getElementById('highlight-new-content');
+                    if (checkbox) checkbox.checked = true;
+                    this.isHighlighting = true;
+                }
+            }
+
+            deactivateDeveloperMode() {
+                document.body.classList.remove('dev-mode');
+                document.body.classList.remove('highlight-new-content');
+                this.isHighlighting = false;
+                
+                const checkbox = document.getElementById('highlight-new-content');
+                if (checkbox) checkbox.checked = false;
+            }
+
+            exportContentAnalysis() {
+                const stats = this.calculateContentStats();
+                const newContentData = {
+                    timestamp: new Date().toISOString(),
+                    stats,
+                    elements: Array.from(this.newContentElements).map(el => ({
+                        tagName: el.tagName,
+                        className: el.className,
+                        textContent: el.textContent.substring(0, 100) + '....',
+                        id: el.id || 'sin-id'
+                    }))
+                };
+
+                const blob = new Blob([JSON.stringify(newContentData, null, 2)], 
+                    { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'contenido-nuevo-analisis.json';
+                a.click();
+                URL.revokeObjectURL(url);
+
+                console.log('Análisis de contenido exportado:', newContentData);
+            }
+
+            showNewContentList() {
+                const list = Array.from(this.newContentElements).map((el, index) => {
+                    const preview = el.textContent.substring(0, 80).trim();
+                    return `${index + 1}. [${el.tagName}] ${preview}....`;
+                }).join('\n');
+
+                const content = `
+LISTA DE CONTENIDO NUEVO AGREGADO:
+Total de elementos: ${this.newContentElements.length}
+
+${list}
+
+---
+Para más detalles, usa —Exportar Análisis de Contenido"
+                `.trim();
+
+                // Crear modal o usar alert
+                if (confirm('¿Quieres ver la lista en consola también?')) {
+                    console.log(content);
+                }
+                
+                alert(content);
+            }
+        }
+
+        // ===================== FUNCIONES GLOBALES DEL DESARROLLADOR =====================
+        function toggleDeveloperPanel() {
+            const panel = document.getElementById('developer-panel');
+            panel.classList.toggle('hidden');
+            
+            if (!panel.classList.contains('hidden') && !window.developerSystem) {
+                window.developerSystem = new DeveloperSystem();
+            }
+        }
+
+        function toggleNewContentHighlight() {
+            if (window.developerSystem) {
+                window.developerSystem.toggleHighlight();
+            }
+        }
+
+        function exportContentAnalysis() {
+            if (window.developerSystem) {
+                window.developerSystem.exportContentAnalysis();
+            }
+        }
+
+        function showNewContentList() {
+            if (window.developerSystem) {
+                window.developerSystem.showNewContentList();
+            }
+        }
+
+        // ===================== FUNCIONES ADICIONALES ESPECÍFICAS DE ESTA PÁGINA =====================
+        function mostrarTodasLasRutas() {
+            alert('¡Función en desarrollo! Pronto podrás explorar todas las 128 rutas posibles.');
+        }
+        
+        function actualizarResumenFinal() {
+            const resumen = document.getElementById('resumen-decisiones');
+            if (resumen && window.decisionSystem) {
+                const decisiones = window.decisionSystem.decisiones;
+                const ruta = decisiones.join('');
+                
+                resumen.innerHTML = `
+                    <h4>Tu Ruta Única: ${ruta}</h4>
+                    <p>Has creado una de las 128 historias posibles. Cada decisión ha influenciado el desarrollo de los personajes y el final de la historia.</p>
+                    ${window.decisionSystem.generarListaDecisiones()}
+                `;
+            }
+        }
+        
+        // ===================== FUNCIONES DEBUG TIMELINE =====================
+        // Hacer funciones de debug disponibles globalmente
+        window.debugTimeline = function() {
+            mostrarTimelineDebug();
+        };
+        
+        window.forzarTimeline = function() {
+            forzarRegistroSecciones();
+        };
+        
+        window.reiniciarTimeline = function() {
+            reiniciarTimeline();
+        };
+
+        // ===================== INICIALIZACIÓN =====================
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(actualizarResumenFinal, 1000);
+            
+            // Inicializar sistema de Timeline mejorado
+            if (!window.timelineSystem && window.TimelineSystem) {
+                window.timelineSystem = new TimelineSystem(window.decisionSystem);
+                
+                // Conectar con el sistema de decisiones si existe
+                if (window.decisionSystem && window.timelineSystem.conectarConDecisionSystem) {
+                    window.timelineSystem.conectarConDecisionSystem(window.decisionSystem);
+                }
+                
+                console.log('🌙 [Init] Sistema Timeline inicializado con seguimiento automático');
+            }
+            
+            // Inicializar sistema de desarrollador si el modo está activo
+            if (localStorage.getItem('developer-mode') === 'true') {
+                window.developerSystem = new DeveloperSystem();
+            }
+            
+            // Acceso directo Ctrl+D para panel de desarrollador
+            document.addEventListener('keydown', function(e) {
+                if (e.ctrlKey && e.key === 'd') {
+                    e.preventDefault();
+                    toggleDeveloperPanel();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
