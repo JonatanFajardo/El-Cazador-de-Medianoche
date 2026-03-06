@@ -53,20 +53,21 @@ Historia de fantasía épica protagonizada por Axel, un gato montés arquero sol
 **Archivos separados para desarrollo de secciones individuales:**
 
 **🎯 SECCIONES PRINCIPALES COMPLETAS:**
-- **seccion_01.html** - Capítulo 1: El Encuentro (Día 1) - Completo con encuentro Axel-Seraphina y backstory del búho
-- **seccion_02.html** - Capítulo 2: Viaje y Aliados (Días 2-10) - Completo con encuentros de aliados
-- **seccion_03.html** - Capítulo 3: Valle de los Susurradores (Días 3-4) - Completo
-- **seccion_04.html** - Capítulo 4: Revelación y Estrategia - Desarrollo completo
-- **seccion_05.html** - Capítulo 5: Dilema Familiar y Separación - Desarrollo completo
-- **seccion_06.html** - Capítulo 6: Templo Celestial y Resolución - Desarrollo completo
+- **seccion_01.html** - Capítulo 1: El Encuentro (Día 1) - Encuentro Axel-Seraphina y backstory del búho
+- **seccion_02.html** - Capítulo 2: Viaje y Aliados (Días 2-10) - Encuentros de aliados (mapaches, Lyra, conejos)
+- **seccion_03.html** - Capítulo 3: Valle de los Susurradores (Días 3-4) - Espíritus proféticos
+- **seccion_03B.html** - Capítulo 3B: Bosque de Cuervos Espejo - Confesiones de Seraphina, primeras sospechas
+- **seccion_04.html** - Capítulo 4: Cuevas Brillantes - Rescate y revelaciones parciales
+- **seccion_05.html** - Capítulo 5: Aldea de los Zorros Plateros - Herreros y flechas de plata
+- **seccion_06.html** - Capítulo 6: Jardín de Intenciones - Plantas que revelan intenciones verdaderas
 
-**📚 SECCIONES EXPANDIDAS (Post-Revelación):**
-- **seccion_07.html** - Capítulo 7: Contenido post-revelación
-- **seccion_07A.html** - Capítulo 7A: Desarrollo post-revelación alternativo
-- **seccion_07B.html** - Capítulo 7B: Desarrollo post-revelación alternativo
+**📚 SECCIONES SECUENCIALES (Todas son parte de la narrativa lineal):**
+- **seccion_07.html** - Capítulo 7: Reencuentro Familiar en Valle Tranquilo
+- **seccion_07A.html** - Capítulo 7A: Torneo de los Mapaches Cartógrafos (secuencial, no alternativo)
+- **seccion_07B.html** - Capítulo 7B: Disputa del Mapa y Festival Inter-especies (secuencial, no alternativo)
 
-**🌟 SECCIONES DE DESARROLLO TARDÍO (Días 9-11):**
-- **seccion_08.html** - Capítulo 8: Contenido principal tardío
+**🌟 SECCIONES DE DESARROLLO TARDÍO (Días 8-11):**
+- **seccion_08.html** - Capítulo 8: Revelación completa en Bosque de Cuervos Espejo (canónica)
 - **seccion_08A.html** - Capítulo 8A: El Río de las Nutrias Velocistas (Día 9)
 - **seccion_08B.html** - Capítulo 8B: La Cueva de los Murciélagos Críticos (Día 9)
 - **seccion_08C.html** - Capítulo 8C: El Valle de las Mariposas Mensajeras (Día 9)
@@ -81,7 +82,7 @@ Historia de fantasía épica protagonizada por Axel, un gato montés arquero sol
 **📝 NOTAS IMPORTANTES:**
 - **ESTADO ACTUAL**: Historia completa desarrollada en secciones individuales (Días 1-11)
 - **EXPANSIÓN TARDÍA**: Secciones 8-10 contienen desarrollo detallado post-revelación
-- **SISTEMA DE VARIANTES**: Secciones con sufijos A/B/C ofrecen contenido alternativo o expandido
+- **SISTEMA DE VARIANTES**: Secciones con sufijos A/B/C son SECUENCIALES (no alternativas). Orden canónico: 01→02→03→03B→04→05→06→07→07A→07B→08→08A→08B→08C→09→09A→09B→10
 - **CAMBIO DE FLUJO DE TRABAJO**: Secciones individuales son ahora la fuente primaria
 - El archivo principal `historia-interactiva.html.backup` está temporalmente desactivado
 
@@ -361,16 +362,21 @@ Edit —....\seccion_XX.html—  # Trabajar exclusivamente en secciones individu
 
 - **Danza Hipnótica de Mantis**: Poder de manipulación emocional. NO es control mental total - funciona amplificando emociones existentes o creando estados de sugestión. Las criaturas con voluntad fuerte pueden resistir.
 
-#### Cronología Completa del Viaje (Según Contenido Actual)
+#### Cronología Completa del Viaje - Orden Canónico de Lectura
 - **Día 1**: Encuentro inicial con Seraphina en Montañas Heladas (seccion_01.html)
-- **Días 2-10**: Viaje extendido con múltiples encuentros de aliados:
-  - Comerciantes mapaches, Lyra cartógrafa, cabra filosófica
-  - Rescate por clan de conejos (trabajo forzado de una semana) (seccion_02.html)
-- **Días 3-4**: Valle de los Susurradores, encuentro con espíritus proféticos (seccion_03.html)
-- **Días 4-8**: Desarrollo de relaciones y revelación gradual (secciones 04-06)
-- **Día 9 (Post-revelación)**: Múltiples encuentros de sanación grupal:
+- **Días 2-4**: Viaje con múltiples encuentros de aliados: mapaches, Lyra, cabra filosófica, conejos (seccion_02.html)
+- **Días 3-4**: Valle de los Susurradores, espíritus proféticos (seccion_03.html)
+- **Día 4-5**: Bosque de Cuervos Espejo, confesiones de Seraphina, primeras sospechas (seccion_03B.html)
+- **Días 5-6**: Cuevas Brillantes, rescate y revelaciones parciales (seccion_04.html)
+- **Día 6-7**: Aldea de los Zorros Plateros, flechas de plata (seccion_05.html)
+- **Día 7**: Jardín de Intenciones, rosa de Seraphina (seccion_06.html)
+- **Día 7-8**: Reencuentro familiar en Valle Tranquilo (seccion_07.html)
+- **Día 8**: Torneo de Mapaches Cartógrafos (seccion_07A.html)
+- **Día 8**: Disputa del Mapa y Festival Inter-especies (seccion_07B.html)
+- **Día 8-9**: Revelación COMPLETA en Bosque de Cuervos Espejo (seccion_08.html)
+- **Día 9 (Post-revelación)**: Sanación grupal:
   - Río de las Nutrias Velocistas (seccion_08A.html)
-  - Cueva de los Murciélagos Críticos Gastronómicos (seccion_08B.html) 
+  - Cueva de los Murciélagos Críticos Gastronómicos (seccion_08B.html)
   - Valle de las Mariposas Mensajeras (seccion_08C.html)
 - **Días 9-10**: Crisis familiar en Valle Tranquilo, despedida de Ember (seccion_09.html)
 - **Día 10**: Laberinto de los Tejones Excavadores, preparación final (seccion_09A.html)
@@ -378,9 +384,12 @@ Edit —....\seccion_XX.html—  # Trabajar exclusivamente en secciones individu
 - **Días 10-11**: Templo Celestial, confrontación final y múltiples epílogos (seccion_10.html)
 
 #### Datos Históricos Inmutables
-- **Masacre de la Familia de Seraphina**: Ocurrió hace 2 años. Mataron a 23 mantis religiosas incluyendo madre, hermanas y pareja de Seraphina. Fue un ataque territorial, no genocidio planificado.
-- **Víctimas de Seraphina**: Exactamente 6 gatos monteses cazados previamente usando la misma táctica de —hermana maldecida". El padre de Axel fue la víctima #6.
+- **Masacre de la Familia de Seraphina**: Ocurrió hace 2 años. Mataron a 23 mantis religiosas incluyendo hermanas y pareja de Seraphina. Fue un ataque territorial, no genocidio planificado.
+- **Madre de Seraphina**: Sobrevivió al incendio pero fue maldecida (convertida lentamente en piedra). Esta es la motivación real de Seraphina para buscar las Lágrimas de Luna. La historia de la "hermana maldecida" es una versión manipulada de esta verdad.
+- **Muerte del padre de Axel**: Solo se encontró su arco, NO su cuerpo. Esto conecta con la aparición de su espíritu protegiendo el Templo Celestial.
+- **Víctimas de Seraphina**: Exactamente 6 gatos monteses cazados previamente usando la misma táctica de —hermana maldecida—. El padre de Axel fue la víctima #6.
 - **Red de Mantis**: 47 mantis religiosas involucradas en 12 células operativas (no 200+). Escala significativa pero no ejército masivo.
+- **Revelación canónica**: Escalonada. Seccion_03B planta primeras sospechas. Seccion_08 es la revelación completa forzada por los Cuervos Espejo.
 
 ### **PERSONALIDADES BASE CONSISTENTES**
 
