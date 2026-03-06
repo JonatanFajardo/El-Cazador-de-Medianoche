@@ -1,4 +1,8 @@
+<!-- REVISADO -->
+
 # El Cazador de Medianoche y las Lágrimas Robadas
+
+**INSTRUCCIÓN DE TRABAJO:** Comienza a leer después de este comentario `<!-- REVISADO -->` a menos que necesites información específica de secciones anteriores. El contenido anterior a esta marca ha sido revisado y aprobado como guía de referencia para actualizar información no revisada.
 
 ## Descripción del Proyecto
 Historia de fantasía épica protagonizada por Axel, un gato montés arquero solitario, y Seraphina, una mantis religiosa, en busca de las legendarias Lágrimas de Luna. Evoluciona de aventura hacia relato sobre venganza, traición, redención y compasión.
@@ -22,8 +26,8 @@ Historia de fantasía épica protagonizada por Axel, un gato montés arquero sol
 
 ### **Ejemplos de Implementación:**
 ```
-❌ EVITAR: "Axel estaba triste por la revelación"
-✅ PREFERIR: "Axel afiló sus flechas con más fuerza de la necesaria, el silbido del metal contra piedra llenando el aire con su frustración no expresada"
+❌ EVITAR: —Axel estaba triste por la revelación"
+✅ PREFERIR: —Axel afiló sus flechas con más fuerza de la necesaria, el silbido del metal contra piedra llenando el aire con su frustración no expresada"
 ```
 
 ## Estructura del Proyecto
@@ -47,17 +51,38 @@ Historia de fantasía épica protagonizada por Axel, un gato montés arquero sol
 
 ### **ARCHIVOS DE DESARROLLO POR SECCIONES**
 **Archivos separados para desarrollo de secciones individuales:**
-- **seccion_01.html** - Sección 1: El Encuentro y Primera Impresión (desarrollo separado)
-- **seccion_02.html** - Sección 2: Elección de Aliados y Viaje (desarrollo separado)
-- **seccion_03.html** - Sección 3: Encuentro Familiar - Ember (desarrollo separado)  
-- **seccion_04.html** - Sección 4: Revelación y Estrategia (desarrollo separado)
-- **seccion_05.html** - Sección 5: Dilema Familiar y Separación (desarrollo separado)
-- **seccion_06.html** - Sección 6: Templo Celestial y Resolución (desarrollo separado)
-- **seccion_07.html** - Sección 7: Contenido adicional o alternativo (desarrollo separado)
+
+**🎯 SECCIONES PRINCIPALES COMPLETAS:**
+- **seccion_01.html** - Capítulo 1: El Encuentro (Día 1) - Completo con encuentro Axel-Seraphina y backstory del búho
+- **seccion_02.html** - Capítulo 2: Viaje y Aliados (Días 2-10) - Completo con encuentros de aliados
+- **seccion_03.html** - Capítulo 3: Valle de los Susurradores (Días 3-4) - Completo
+- **seccion_04.html** - Capítulo 4: Revelación y Estrategia - Desarrollo completo
+- **seccion_05.html** - Capítulo 5: Dilema Familiar y Separación - Desarrollo completo
+- **seccion_06.html** - Capítulo 6: Templo Celestial y Resolución - Desarrollo completo
+
+**📚 SECCIONES EXPANDIDAS (Post-Revelación):**
+- **seccion_07.html** - Capítulo 7: Contenido post-revelación
+- **seccion_07A.html** - Capítulo 7A: Desarrollo post-revelación alternativo
+- **seccion_07B.html** - Capítulo 7B: Desarrollo post-revelación alternativo
+
+**🌟 SECCIONES DE DESARROLLO TARDÍO (Días 9-11):**
+- **seccion_08.html** - Capítulo 8: Contenido principal tardío
+- **seccion_08A.html** - Capítulo 8A: El Río de las Nutrias Velocistas (Día 9)
+- **seccion_08B.html** - Capítulo 8B: La Cueva de los Murciélagos Críticos (Día 9)
+- **seccion_08C.html** - Capítulo 8C: El Valle de las Mariposas Mensajeras (Día 9)
+- **seccion_09.html** - Capítulo 9: Crisis en Valle Tranquilo (Días 9-10)
+- **seccion_09A.html** - Capítulo 9A: El Laberinto de los Tejones Excavadores (Día 10)
+- **seccion_09B.html** - Capítulo 9B: El Último Campamento (Día 10 noche)
+- **seccion_10.html** - Capítulo 10: El Templo Celestial y Resolución Final (Días 10-11)
+
+**📋 ARCHIVOS DE RESPALDO:**
+- **seccion_07_backup.html** - Versión de respaldo de sección 7
 
 **📝 NOTAS IMPORTANTES:**
-- El archivo `seccion_09.html` aparece en git status pero no existe físicamente
-- **CAMBIO DE FLUJO DE TRABAJO**: Ahora los archivos de secciones individuales son la fuente primaria de desarrollo
+- **ESTADO ACTUAL**: Historia completa desarrollada en secciones individuales (Días 1-11)
+- **EXPANSIÓN TARDÍA**: Secciones 8-10 contienen desarrollo detallado post-revelación
+- **SISTEMA DE VARIANTES**: Secciones con sufijos A/B/C ofrecen contenido alternativo o expandido
+- **CAMBIO DE FLUJO DE TRABAJO**: Secciones individuales son ahora la fuente primaria
 - El archivo principal `historia-interactiva.html.backup` está temporalmente desactivado
 
 ### **PÁGINAS AUXILIARES**
@@ -91,29 +116,29 @@ Historia de fantasía épica protagonizada por Axel, un gato montés arquero sol
 
 **⚠️ NOTA IMPORTANTE**: El archivo `historia-interactiva.html` actualmente solo contiene las **SECCIONES 3-6**. Las secciones 1-2 podrían estar en archivos separados o ser contenido futuro.
 
-### Sección 3: "Encuentro Familiar - Ember" (Líneas ~80-347 en historia-interactiva.html)
+### Sección 3: —Encuentro Familiar - Ember— (Líneas ~80-347 en historia-interactiva.html)
 - **Contenido:** Aparición del hermano menor de Axel, dinámicas familiares, llegada al Bosque de los Cuervos Espejo  
 - **Elementos clave:** Perspectiva diplomática, tensión con Seraphina, dilema familiar
 - **Comentario en código:** Línea 80
 
-### Sección 4: "Revelación y Estrategia" (Líneas ~348-480 en historia-interactiva.html)
+### Sección 4: —Revelación y Estrategia— (Líneas ~348-480 en historia-interactiva.html)
 - **Contenido:** Lyra revela la verdad sobre Seraphina, cambio radical en la dinámica del grupo, preparación para fase final
 - **Elementos clave:** Momento de giro narrativo, fin del engaño, conflicto interno de Seraphina
 - **Comentario en código:** Línea 348
 
-### Sección 5: "Dilema Familiar y Separación" (Líneas ~481-825 en historia-interactiva.html)
+### Sección 5: —Dilema Familiar y Separación— (Líneas ~481-825 en historia-interactiva.html)
 - **Contenido:** Crisis en Valle Tranquilo, decisión de Ember, búsqueda de aliados finales, preparación para Templo Celestial
 - **Elementos clave:** Sacrificio personal, preparación táctica/emocional, transición hacia climax
 - **Comentario en código:** Línea 481
 
-### Sección 6: "Templo Celestial y Resolución" (Líneas ~826-final en historia-interactiva.html)
+### Sección 6: —Templo Celestial y Resolución— (Líneas ~826-final en historia-interactiva.html)
 - **Contenido:** Llegada al Templo Celestial, confrontación final con Seraphina, uso de las Lágrimas de Luna, epílogos múltiples
 - **Elementos clave:** Resolución del conflicto, redención de Seraphina, restauración del equilibrio
 - **Comentario en código:** Línea 826
 
 ### Secciones 1-2: Estado Desconocido
-- **Sección 1: "El Encuentro y Primera Impresión"** - No encontrada en historia-interactiva.html
-- **Sección 2: "Elección de Aliados y Viaje"** - No encontrada en historia-interactiva.html
+- **Sección 1: —El Encuentro y Primera Impresión"** - No encontrada en historia-interactiva.html
+- **Sección 2: —Elección de Aliados y Viaje"** - No encontrada en historia-interactiva.html
 - **Posible ubicación:** Archivos seccion_01.html y seccion_02.html individuales, o contenido futuro
 
 ## Personajes Principales
@@ -253,19 +278,32 @@ El archivo `historia-interactiva.html` está dividido en **4 SECCIONES PRINCIPAL
 ### **COMANDOS RÁPIDOS ACTUALIZADOS:**
 ```bash
 # 🚫 ARCHIVO PRINCIPAL DESACTIVADO (SOLO CONSULTA):
-Read "...\historia-interactiva.html.backup"  # Solo para referencia, NO editar
+Read —....\historia-interactiva.html.backup—  # Solo para referencia, NO editar
 
-# ✅ ARCHIVOS DE TRABAJO PRIMARIOS:
-Read "...\seccion_01.html"  # Sección 1: El Encuentro y Primera Impresión
-Read "...\seccion_02.html"  # Sección 2: Elección de Aliados y Viaje
-Read "...\seccion_03.html"  # Sección 3: Encuentro Familiar - Ember
-Read "...\seccion_04.html"  # Sección 4: Revelación y Estrategia
-Read "...\seccion_05.html"  # Sección 5: Dilema Familiar y Separación
-Read "...\seccion_06.html"  # Sección 6: Templo Celestial y Resolución
-Read "...\seccion_07.html"  # Sección 7: Contenido adicional
+# ✅ ARCHIVOS DE TRABAJO PRIMARIOS (Historia Completa):
+Read —....\seccion_01.html—  # Capítulo 1: El Encuentro (Día 1)
+Read —....\seccion_02.html—  # Capítulo 2: Viaje y Aliados (Días 2-10)
+Read —....\seccion_03.html—  # Capítulo 3: Valle de los Susurradores (Días 3-4)
+Read —....\seccion_04.html—  # Capítulo 4: Revelación y Estrategia
+Read —....\seccion_05.html—  # Capítulo 5: Dilema Familiar y Separación
+Read —....\seccion_06.html—  # Capítulo 6: Templo Celestial y Resolución
+
+# 📚 SECCIONES EXPANDIDAS POST-REVELACIÓN:
+Read —....\seccion_07.html—   # Capítulo 7: Principal post-revelación
+Read —....\seccion_07A.html—  # Capítulo 7A: Alternativo A
+Read —....\seccion_07B.html—  # Capítulo 7B: Alternativo B
+
+# 🌟 DESARROLLO TARDÍO DETALLADO (Días 9-11):
+Read —....\seccion_08A.html—  # Río de las Nutrias Velocistas
+Read —....\seccion_08B.html—  # Cueva de Murciélagos Críticos
+Read —....\seccion_08C.html—  # Valle de Mariposas Mensajeras
+Read —....\seccion_09.html—   # Crisis en Valle Tranquilo
+Read —....\seccion_09A.html—  # Laberinto de Tejones Excavadores
+Read —....\seccion_09B.html—  # Último Campamento
+Read —....\seccion_10.html—   # Templo Celestial y Resolución Final
 
 # COMANDOS DE EDICIÓN:
-Edit "...\seccion_XX.html"  # Trabajar exclusivamente en secciones individuales
+Edit —....\seccion_XX.html—  # Trabajar exclusivamente en secciones individuales
 ```
 
 ### **REGLAS DE TRABAJO ACTUALIZADAS:**
@@ -283,8 +321,8 @@ Edit "...\seccion_XX.html"  # Trabajar exclusivamente en secciones individuales
 
 **ANTES DE LA REVELACIÓN (Secciones 1-4):**
 - ❌ **PROHIBIDO**: Mostrar indicios de manipulación, cálculo, o engaño
-- ❌ **PROHIBIDO**: Personajes secundarios que adviertan sobre "mantis peligrosas"
-- ❌ **PROHIBIDO**: Descripciones narrativas que sugieran falsedad ("dolor calculado", "voz modulada", etc.)
+- ❌ **PROHIBIDO**: Personajes secundarios que adviertan sobre —mantis peligrosas"
+- ❌ **PROHIBIDO**: Descripciones narrativas que sugieran falsedad ("dolor calculado", —voz modulada", etc.)
 - ❌ **PROHIBIDO**: Reacciones nerviosas o evasivas ante preguntas sobre mantis
 
 **PRESENTACIÓN OBLIGATORIA PRE-REVELACIÓN:**
@@ -301,14 +339,14 @@ Edit "...\seccion_XX.html"  # Trabajar exclusivamente en secciones individuales
 
 **EJEMPLOS DE CORRECCIÓN:**
 ```
-❌ INCORRECTO: "Su voz temblaba con dolor calculado, cada palabra elegida para despertar compasión"
-✅ CORRECTO: "Su voz temblaba con dolor genuino, las palabras saliendo entrecortadas por la angustia"
+❌ INCORRECTO: —Su voz temblaba con dolor calculado, cada palabra elegida para despertar compasión"
+✅ CORRECTO: —Su voz temblaba con dolor genuino, las palabras saliendo entrecortadas por la angustia"
 
-❌ INCORRECTO: "Seraphina notó la cautela... 'Curioso, este gato es diferente, más observador'"  
-✅ CORRECTO: "Seraphina notó la cautela... sintió una mezcla de respeto y alivio por encontrar alguien cuidadoso"
+❌ INCORRECTO: —Seraphina notó la cautela.... 'Curioso, este gato es diferente, más observador'—  
+✅ CORRECTO: —Seraphina notó la cautela.... sintió una mezcla de respeto y alivio por encontrar alguien cuidadoso"
 
-❌ INCORRECTO: "Hemos escuchado rumores sobre mantis peligrosas"
-✅ CORRECTO: "Las heridas en montaña se infectan rápido, asegúrese de que descanse bien"
+❌ INCORRECTO: —Hemos escuchado rumores sobre mantis peligrosas"
+✅ CORRECTO: —Las heridas en montaña se infectan rápido, asegúrese de que descanse bien"
 ```
 
 #### Elementos Mágicos - Reglas Fijas
@@ -323,18 +361,25 @@ Edit "...\seccion_XX.html"  # Trabajar exclusivamente en secciones individuales
 
 - **Danza Hipnótica de Mantis**: Poder de manipulación emocional. NO es control mental total - funciona amplificando emociones existentes o creando estados de sugestión. Las criaturas con voluntad fuerte pueden resistir.
 
-#### Cronología Estándar del Viaje
-- **Día 1**: Encuentro inicial en las Montañas Heladas
-- **Días 2-3**: Valle de los Susurradores, parada en aliados (Zorros/Murciélagos)
-- **Día 4**: Cuevas Brillantes - Osos de Cristal
-- **Día 5**: Viaje al Bosque de los Cuervos Espejo
-- **Días 6-7**: Revelación y estrategia (Confrontación/Espionaje)
-- **Día 8**: Búsqueda de aliados finales (Arañas/Conejos)
-- **Días 9-10**: Laberinto de Tejones y llegada al Templo Celestial
+#### Cronología Completa del Viaje (Según Contenido Actual)
+- **Día 1**: Encuentro inicial con Seraphina en Montañas Heladas (seccion_01.html)
+- **Días 2-10**: Viaje extendido con múltiples encuentros de aliados:
+  - Comerciantes mapaches, Lyra cartógrafa, cabra filosófica
+  - Rescate por clan de conejos (trabajo forzado de una semana) (seccion_02.html)
+- **Días 3-4**: Valle de los Susurradores, encuentro con espíritus proféticos (seccion_03.html)
+- **Días 4-8**: Desarrollo de relaciones y revelación gradual (secciones 04-06)
+- **Día 9 (Post-revelación)**: Múltiples encuentros de sanación grupal:
+  - Río de las Nutrias Velocistas (seccion_08A.html)
+  - Cueva de los Murciélagos Críticos Gastronómicos (seccion_08B.html) 
+  - Valle de las Mariposas Mensajeras (seccion_08C.html)
+- **Días 9-10**: Crisis familiar en Valle Tranquilo, despedida de Ember (seccion_09.html)
+- **Día 10**: Laberinto de los Tejones Excavadores, preparación final (seccion_09A.html)
+- **Día 10 (noche)**: Último campamento antes del destino (seccion_09B.html)
+- **Días 10-11**: Templo Celestial, confrontación final y múltiples epílogos (seccion_10.html)
 
 #### Datos Históricos Inmutables
 - **Masacre de la Familia de Seraphina**: Ocurrió hace 2 años. Mataron a 23 mantis religiosas incluyendo madre, hermanas y pareja de Seraphina. Fue un ataque territorial, no genocidio planificado.
-- **Víctimas de Seraphina**: Exactamente 6 gatos monteses cazados previamente usando la misma táctica de "hermana maldecida". El padre de Axel fue la víctima #6.
+- **Víctimas de Seraphina**: Exactamente 6 gatos monteses cazados previamente usando la misma táctica de —hermana maldecida". El padre de Axel fue la víctima #6.
 - **Red de Mantis**: 47 mantis religiosas involucradas en 12 células operativas (no 200+). Escala significativa pero no ejército masivo.
 
 ### **PERSONALIDADES BASE CONSISTENTES**
@@ -399,6 +444,99 @@ Edit "...\seccion_XX.html"  # Trabajar exclusivamente en secciones individuales
 
 ---
 
+## **SISTEMA DE GUIONES LARGOS EN DIÁLOGOS Y NARRATIVA**
+
+### **REGLAS FUNDAMENTALES PARA GUIONES LARGOS (—)**
+
+#### **1. DIÁLOGOS HABLADOS**
+**USO ESTÁNDAR:**
+- **Apertura y cierre de diálogo:** `—Texto del diálogo—`
+- **Un guion largo al inicio, uno al final**
+- **Espacios internos:** Solo antes/después de pausas significativas
+
+**EJEMPLOS CORRECTOS:**
+```
+—Bueno, esto es nuevo— murmuró Axel
+—Mira, pequeño amigo, no sé mucho sobre reparar búhos— le dijo
+—¿En serio?— Axel miró al búho
+—Ese libro me costó tres semanas de trabajo de caza— le informó a Problemas
+—Ve, está bien— le dijo Axel con una sonrisa
+```
+
+#### **2. PENSAMIENTOS Y REFLEXIONES INTERNAS**
+**Para pensamientos directos:**
+- **Formato:** `—pensamiento interno—` en cursivas o texto narrativo
+- **Uso:** Cuando el personaje piensa algo específico
+
+**EJEMPLOS CORRECTOS:**
+```
+—hermana maldecida— como motivación aparente
+Sus ojos heterocromáticos —dorado para rastrear movimiento, plateado para ver en la oscuridad—
+el búho que había comenzado a llamar mentalmente —Problemas—
+—Diario de Observaciones de Comportamiento de Búho—
+```
+
+#### **3. APODOS, TÉRMINOS Y CONCEPTOS**
+**Para destacar términos específicos:**
+- **Apodos:** `—Problemas—` `—pequeño arquitecto—`
+- **Conceptos únicos:** `—actuación perfecta—` `—hermana maldecida—`
+- **Títulos/roles:** `—Director Ejecutivo—` `—Consejo Oficial—`
+
+**EJEMPLOS CORRECTOS:**
+```
+había comenzado a llamar mentalmente —Problemas—
+la —actuación perfecta— de Seraphina
+Auto-proclamado Director Ejecutivo de —Mapaches Cartógrafos Asociados—
+```
+
+#### **4. ÉNFASIS Y EXPRESIONES**
+**Para expresiones idiomáticas o de énfasis:**
+- **Uso:** `—expresión—` cuando necesita destacarse del texto normal
+- **No abusar:** Solo para elementos que requieren énfasis especial
+
+**EJEMPLOS:**
+```
+—reorganizadas— (con ironía)
+—encontrar— provisiones (sugiriendo actividad cuestionable)
+—Registro Oficial de Transacciones—
+```
+
+### **ERRORES COMUNES A EVITAR**
+
+
+#### **✅ CORRECTO:**
+```
+—Texto con formato apropiado— dijo el personaje
+Sus ojos —dorado para rastrear, plateado para visión nocturna—
+el concepto de —hermana maldecida— 
+—¿Preguntas con signos apropiados?— respondió
+```
+
+### **GUÍA DE IMPLEMENTACIÓN HTML**
+
+#### **Estructura HTML para Diálogos:**
+```html
+<p class="dialogo" data-badge="murmurado con preocupación">
+    —Bueno, esto es nuevo— murmuró Axel, evaluando la situación.
+</p>
+```
+
+#### **Para Texto Narrativo con Guiones Largos:**
+```html
+<p class="texto-narrativo">
+    Sus ojos heterocromáticos —dorado para rastrear movimiento, 
+    plateado para ver en la oscuridad— se abrieron con disciplina.
+</p>
+```
+
+### **CONSISTENCIA EN EL PROYECTO**
+- **MANTENER:** El mismo estilo de guiones largos en todos los archivos
+- **REVISAR:** Que cada diálogo tenga apertura y cierre apropiados
+- **VERIFICAR:** Espacios correctos antes y después de los guiones largos
+- **NO MEZCLAR:** Comillas inglesas, comillas españolas, y guiones largos
+
+---
+
 ## **SISTEMA DE BADGES DE DIÁLOGO**
 
 ### **Badge Descriptivo Único**
@@ -415,7 +553,7 @@ Sistema simplificado que usa un solo badge descriptivo por diálogo para indicar
 ### **Implementación:**
 ```html
 <p class="dialogo" data-badge="susurrado con calidez">
-    "Eres... muy bondadoso," susurró Seraphina...
+    —Eres.... muy bondadoso—  susurró Seraphina....
 </p>
 ```
 
@@ -435,9 +573,63 @@ Sistema simplificado que usa un solo badge descriptivo por diálogo para indicar
 
 ---
 
+## COMANDOS WINDOWS PARA CLAUDE CODE
+
+### **SISTEMA OPERATIVO: WINDOWS**
+Claude Code está ejecutándose en un sistema Windows. Usar comandos de Windows, NO comandos Unix/Linux.
+
+#### **COMANDOS BÁSICOS CORRECTOS:**
+```bash
+# ✅ CORRECTO - Comandos Windows
+dir "C:\ruta\carpeta"                    # Listar archivos (NO usar ls)
+dir "C:\ruta\carpeta" /s                 # Listar recursivamente
+type "C:\ruta\archivo.txt"               # Mostrar contenido (aunque Read tool es preferible)
+copy "origen.txt" "destino.txt"          # Copiar archivo
+move "origen.txt" "nueva_ruta\"          # Mover archivo
+md "nueva_carpeta"                       # Crear directorio
+rd "carpeta" /s                          # Eliminar directorio
+
+# ❌ INCORRECTO - Comandos Unix (fallarán)
+ls "C:\ruta\carpeta"                     # ❌ No existe en Windows
+cat "archivo.txt"                        # ❌ No existe en Windows  
+cp "origen" "destino"                    # ❌ No existe en Windows
+mkdir "carpeta"                          # ❌ Usar md en su lugar
+```
+
+#### **REGLAS DE PATHS EN WINDOWS:**
+- ✅ **Correcto**: `"C:\Users\movie\Documents\carpeta"`
+- ❌ **Incorrecto**: `"C:\Users\movie\Documents\carpeta\"`  (barra final causa problemas)
+- ✅ **Comillas**: Siempre usar comillas dobles para paths con espacios
+- ✅ **Separador**: Usar `\` (backslash) para separar directorios
+
+#### **HERRAMIENTAS PREFERIDAS:**
+- **Para leer archivos**: Usar `Read` tool en lugar de `type` o `cat`
+- **Para buscar**: Usar `Grep` tool en lugar de `grep` o `findstr`
+- **Para listar**: Usar `Glob` tool cuando sea posible, `dir` como alternativa
+
+---
+
 *Este documento maestro debe ser consultado antes de cualquier edición para mantener consistencia narrativa.*
 
 ---
 
 
 *Este documento maestro debe ser consultado antes de cualquier edición para mantener consistencia narrativa.*
+
+# PROJECT_PLAN Integration
+# Added by Claude Config Manager Extension
+
+When working on this project, always refer to and maintain the project plan located at `.claude/.plans/PROJECT_PLAN.md`.
+
+**Instructions for Claude Code:**
+1. **Read the project plan first** - Always check `.claude/.plans/PROJECT_PLAN.md` when starting work to understand the project context, architecture, and current priorities.
+2. **Update the project plan regularly** - When making significant changes, discoveries, or completing major features, update the relevant sections in PROJECT_PLAN.md to keep it current.
+3. **Use it for context** - Reference the project plan when making architectural decisions, understanding dependencies, or explaining code to ensure consistency with project goals.
+
+**Plan Mode Integration:**
+- **When entering plan mode**: Read the current PROJECT_PLAN.md to understand existing context and priorities
+- **During plan mode**: Build upon and refine the existing project plan structure
+- **When exiting plan mode**: ALWAYS update PROJECT_PLAN.md with your new plan details, replacing or enhancing the relevant sections (Architecture, TODO, Development Workflow, etc.)
+- **Plan persistence**: The PROJECT_PLAN.md serves as the permanent repository for all planning work - plan mode should treat it as the single source of truth
+
+This ensures better code quality and maintains project knowledge continuity across different Claude Code sessions and plan mode iterations.

@@ -135,7 +135,7 @@ class TimelineSystem {
             }
         }
         
-        // Si no se encontró ninguna sección, registrar "introduccion" por defecto
+        // Si no se encontró ninguna sección, registrar —introduccion— por defecto
         if (!this.currentSection) {
             const introduccion = document.getElementById('introduccion');
             if (introduccion && !introduccion.classList.contains('hidden')) {
@@ -176,256 +176,256 @@ class TimelineSystem {
     getMapeoSecciones() {
         return {
             'introduccion': { 
-                nombre: "🏔️ Montañas Heladas", 
-                dia: "Día 1", 
-                distancia: "📍 Inicio",
-                descripcion: "Refugio solitario de Axel, encuentro inicial con Seraphina"
+                nombre: —🏔️ Montañas Heladas", 
+                dia: —Día 1", 
+                distancia: —📍 Inicio",
+                descripcion: —Refugio solitario de Axel, encuentro inicial con Seraphina"
             },
             'encuentro-confianza': { 
-                nombre: "🤝 Primer Encuentro - Confianza", 
-                dia: "Día 1", 
-                distancia: "📏 0 km",
-                descripcion: "Axel decide confiar y ayudar inmediatamente"
+                nombre: —🤝 Primer Encuentro - Confianza", 
+                dia: —Día 1", 
+                distancia: —📏 0 km",
+                descripcion: —Axel decide confiar y ayudar inmediatamente"
             },
             'encuentro-cautela': { 
-                nombre: "🛡️ Primer Encuentro - Cautela", 
-                dia: "Día 1", 
-                distancia: "📏 0 km",
-                descripcion: "Axel ayuda pero manteniéndose alerta"
+                nombre: —🛡️ Primer Encuentro - Cautela", 
+                dia: —Día 1", 
+                distancia: —📏 0 km",
+                descripcion: —Axel ayuda pero manteniéndose alerta"
             },
             'desarrollo-inicial': { 
-                nombre: "🌫️ Valle de los Susurradores", 
-                dia: "Día 2", 
-                distancia: "📏 15 km",
-                descripcion: "Seraphina cuenta su historia sobre las Lágrimas de Luna"
+                nombre: —🌫️ Valle de los Susurradores", 
+                dia: —Día 2", 
+                distancia: —📏 15 km",
+                descripcion: —Seraphina cuenta su historia sobre las Lágrimas de Luna"
             },
             'viaje-valle': { 
-                nombre: "🥾 Descenso de Montañas", 
-                dia: "Día 2", 
-                distancia: "📏 8 km",
-                descripcion: "Sendero peligroso hacia el valle"
+                nombre: —🥾 Descenso de Montañas", 
+                dia: —Día 2", 
+                distancia: —📏 8 km",
+                descripcion: —Sendero peligroso hacia el valle"
             },
             'encuentro-mapaches': { 
-                nombre: "🦝 Paso de Piedras Resbaladizas", 
-                dia: "Día 2", 
-                distancia: "📏 2 km",
-                descripcion: "Encuentro con los Mapaches Peajeros"
+                nombre: —🦝 Paso de Piedras Resbaladizas", 
+                dia: —Día 2", 
+                distancia: —📏 2 km",
+                descripcion: —Encuentro con los Mapaches Peajeros"
             },
             'resolucion-mapaches-confianza': { 
-                nombre: "🤝 Resolución con Mapaches - Confianza", 
-                dia: "Día 2", 
-                distancia: "📏 1 km",
-                descripcion: "Axel comparte información con confianza"
+                nombre: —🤝 Resolución con Mapaches - Confianza", 
+                dia: —Día 2", 
+                distancia: —📏 1 km",
+                descripcion: —Axel comparte información con confianza"
             },
             'resolucion-mapaches-cautela': { 
-                nombre: "🛡️ Resolución con Mapaches - Cautela", 
-                dia: "Día 2", 
-                distancia: "📏 1 km",
-                descripcion: "Axel mantiene prudencia en el intercambio"
+                nombre: —🛡️ Resolución con Mapaches - Cautela", 
+                dia: —Día 2", 
+                distancia: —📏 1 km",
+                descripcion: —Axel mantiene prudencia en el intercambio"
             },
             'encuentro-cabras': { 
-                nombre: "🐐 Barba Blanca", 
-                dia: "Día 2", 
-                distancia: "📏 3 km",
-                descripcion: "Conversación con la cabra filósofa"
+                nombre: —🐐 Barba Blanca", 
+                dia: —Día 2", 
+                distancia: —📏 3 km",
+                descripcion: —Conversación con la cabra filósofa"
             },
             'encuentro-avalancha': { 
-                nombre: "⛰️ Zona de Avalanchas", 
-                dia: "Día 3", 
-                distancia: "📏 5 km",
-                descripcion: "Rescate por los Conejos Guardianes"
+                nombre: —⛰️ Zona de Avalanchas", 
+                dia: —Día 3", 
+                distancia: —📏 5 km",
+                descripcion: —Rescate por los Conejos Guardianes"
             },
             'refugio-conejos': { 
-                nombre: "🐰 Refugio de Conejos Salvavidas", 
-                dia: "Día 3", 
-                distancia: "📏 1 km",
-                descripcion: "Recuperación y descanso con los conejos rescatistas"
+                nombre: —🐰 Refugio de Conejos Salvavidas", 
+                dia: —Día 3", 
+                distancia: —📏 1 km",
+                descripcion: —Recuperación y descanso con los conejos rescatistas"
             },
             'viaje-aliados': { 
-                nombre: "🛤️ Sendero hacia los Aliados", 
-                dia: "Día 4", 
-                distancia: "📏 8 km",
-                descripcion: "Camino hacia las tribus aliadas elegidas"
+                nombre: —🛤️ Sendero hacia los Aliados", 
+                dia: —Día 4", 
+                distancia: —📏 8 km",
+                descripcion: —Camino hacia las tribus aliadas elegidas"
             },
             'ruta-zorros': { 
-                nombre: "🛤️ Ruta hacia los Zorros Plateros", 
-                dia: "Día 4", 
-                distancia: "📏 5 km",
-                descripcion: "Sendero hacia las forjas de los zorros"
+                nombre: —🛤️ Ruta hacia los Zorros Plateros", 
+                dia: —Día 4", 
+                distancia: —📏 5 km",
+                descripcion: —Sendero hacia las forjas de los zorros"
             },
             'ruta-murcielagos': { 
-                nombre: "🛤️ Ruta hacia los Murciélagos Bibliotecarios", 
-                dia: "Día 4", 
-                distancia: "📏 5 km",
-                descripcion: "Sendero hacia las cuevas biblioteca"
+                nombre: —🛤️ Ruta hacia los Murciélagos Bibliotecarios", 
+                dia: —Día 4", 
+                distancia: —📏 5 km",
+                descripcion: —Sendero hacia las cuevas biblioteca"
             },
             'zorros-confianza': { 
-                nombre: "🦊 Aldea Zorros Plateros - Confianza", 
-                dia: "Día 4", 
-                distancia: "📏 12 km",
-                descripcion: "Forjas humeantes, flechas de plata con confianza mutua"
+                nombre: —🦊 Aldea Zorros Plateros - Confianza", 
+                dia: —Día 4", 
+                distancia: —📏 12 km",
+                descripcion: —Forjas humeantes, flechas de plata con confianza mutua"
             },
             'zorros-cautela': { 
-                nombre: "🦊 Aldea Zorros Plateros - Cautela", 
-                dia: "Día 4", 
-                distancia: "📏 12 km",
-                descripcion: "Prueba de forja, desconfianza inicial superada"
+                nombre: —🦊 Aldea Zorros Plateros - Cautela", 
+                dia: —Día 4", 
+                distancia: —📏 12 km",
+                descripcion: —Prueba de forja, desconfianza inicial superada"
             },
             'murcielagos-confianza': { 
-                nombre: "🦇 Biblioteca Suspendida - Confianza", 
-                dia: "Día 4", 
-                distancia: "📏 10 km",
-                descripcion: "Cuevas de conocimiento ancestral con acceso pleno"
+                nombre: —🦇 Biblioteca Suspendida - Confianza", 
+                dia: —Día 4", 
+                distancia: —📏 10 km",
+                descripcion: —Cuevas de conocimiento ancestral con acceso pleno"
             },
             'murcielagos-cautela': { 
-                nombre: "🦇 Biblioteca Suspendida - Cautela", 
-                dia: "Día 4", 
-                distancia: "📏 10 km",
-                descripcion: "Acertijo de los sabios, conocimiento ganado con esfuerzo"
+                nombre: —🦇 Biblioteca Suspendida - Cautela", 
+                dia: —Día 4", 
+                distancia: —📏 10 km",
+                descripcion: —Acertijo de los sabios, conocimiento ganado con esfuerzo"
             },
             'flechas-plata': { 
-                nombre: "⚡ Flechas de Plata", 
-                dia: "Día 4", 
-                distancia: "📏 0 km",
-                descripcion: "Recibiendo flechas mágicas de los Zorros Plateros"
+                nombre: —⚡ Flechas de Plata", 
+                dia: —Día 4", 
+                distancia: —📏 0 km",
+                descripcion: —Recibiendo flechas mágicas de los Zorros Plateros"
             },
             'flechas-antiengano': { 
-                nombre: "🧠 Flechas Anti-Engaño", 
-                dia: "Día 4", 
-                distancia: "📏 0 km",
-                descripcion: "Recibiendo flechas de verdad de los Murciélagos"
+                nombre: —🧠 Flechas Anti-Engaño", 
+                dia: —Día 4", 
+                distancia: —📏 0 km",
+                descripcion: —Recibiendo flechas de verdad de los Murciélagos"
             },
             'camino-cuervos': { 
-                nombre: "🛣️ Camino al Bosque de Cuervos", 
-                dia: "Día 5", 
-                distancia: "📏 15 km",
-                descripcion: "Sendero hacia el territorio de los cuervos espejo"
+                nombre: —🛣️ Camino al Bosque de Cuervos", 
+                dia: —Día 5", 
+                distancia: —📏 15 km",
+                descripcion: —Sendero hacia el territorio de los cuervos espejo"
             },
             'melodia-ember': { 
-                nombre: "🎵 Eco de la Flauta", 
-                dia: "Día 5", 
-                distancia: "📏 0 km",
-                descripcion: "Melodía familiar en las montañas"
+                nombre: —🎵 Eco de la Flauta", 
+                dia: —Día 5", 
+                distancia: —📏 0 km",
+                descripcion: —Melodía familiar en las montañas"
             },
             'encuentro-hermanos': { 
-                nombre: "👥 Reencuentro Fraternal", 
-                dia: "Día 5", 
-                distancia: "📏 1 km",
-                descripcion: "Axel y Ember se reúnen después de años"
+                nombre: —👥 Reencuentro Fraternal", 
+                dia: —Día 5", 
+                distancia: —📏 1 km",
+                descripcion: —Axel y Ember se reúnen después de años"
             },
             'dialogo-ember': { 
-                nombre: "💬 Conversación Fraternal", 
-                dia: "Día 5", 
-                distancia: "📏 0 km",
-                descripcion: "Diálogos reveladores entre los hermanos"
+                nombre: —💬 Conversación Fraternal", 
+                dia: —Día 5", 
+                distancia: —📏 0 km",
+                descripcion: —Diálogos reveladores entre los hermanos"
             },
             'continuar-solo': { 
-                nombre: "🚶‍♂️ Axel Continúa Solo", 
-                dia: "Día 5", 
-                distancia: "📏 0 km",
-                descripcion: "Decidió continuar la aventura sin Ember"
+                nombre: —🚶‍♂️ Axel Continúa Solo", 
+                dia: —Día 5", 
+                distancia: —📏 0 km",
+                descripcion: —Decidió continuar la aventura sin Ember"
             },
             'llegada-cuervos': { 
-                nombre: "🐦‍⬛ Bosque de Cuervos Espejo", 
-                dia: "Día 6", 
-                distancia: "📏 18 km",
-                descripcion: "Los cuervos muestran verdades ocultas"
+                nombre: —🐦‍⬛ Bosque de Cuervos Espejo", 
+                dia: —Día 6", 
+                distancia: —📏 18 km",
+                descripcion: —Los cuervos muestran verdades ocultas"
             },
             'revelacion-lyra': { 
-                nombre: "⚡ Revelación de Lyra", 
-                dia: "Día 6", 
-                distancia: "📏 0 km",
-                descripcion: "La verdad sobre Seraphina se revela"
+                nombre: —⚡ Revelación de Lyra", 
+                dia: —Día 6", 
+                distancia: —📏 0 km",
+                descripcion: —La verdad sobre Seraphina se revela"
             },
             'confrontacion-directa': { 
-                nombre: "⚔️ Confrontación Directa", 
-                dia: "Día 6", 
-                distancia: "📏 0 km",
-                descripcion: "Enfrentamiento inmediato con Seraphina"
+                nombre: —⚔️ Confrontación Directa", 
+                dia: —Día 6", 
+                distancia: —📏 0 km",
+                descripcion: —Enfrentamiento inmediato con Seraphina"
             },
             'estrategia-espionaje': { 
-                nombre: "🕵️ Estrategia de Espionaje", 
-                dia: "Día 6", 
-                distancia: "📏 0 km",
-                descripcion: "Infiltración y observación encubierta"
+                nombre: —🕵️ Estrategia de Espionaje", 
+                dia: —Día 6", 
+                distancia: —📏 0 km",
+                descripcion: —Infiltración y observación encubierta"
             },
             'post-revelacion': { 
-                nombre: "💭 Reflexión Post-Revelación", 
-                dia: "Día 6", 
-                distancia: "📏 2 km",
-                descripcion: "Procesando la impactante verdad sobre Seraphina"
+                nombre: —💭 Reflexión Post-Revelación", 
+                dia: —Día 6", 
+                distancia: —📏 2 km",
+                descripcion: —Procesando la impactante verdad sobre Seraphina"
             },
             'ember-se-va': { 
-                nombre: "👋 Ember Regresa a Casa", 
-                dia: "Día 7", 
-                distancia: "📏 0 km",
-                descripcion: "Ember decide proteger a su familia"
+                nombre: —👋 Ember Regresa a Casa", 
+                dia: —Día 7", 
+                distancia: —📏 0 km",
+                descripcion: —Ember decide proteger a su familia"
             },
             'ember-se-queda': { 
-                nombre: "🤝 Ember Se Queda", 
-                dia: "Día 7", 
-                distancia: "📏 0 km",
-                descripcion: "Los hermanos continúan juntos la misión"
+                nombre: —🤝 Ember Se Queda", 
+                dia: —Día 7", 
+                distancia: —📏 0 km",
+                descripcion: —Los hermanos continúan juntos la misión"
             },
             'despedida-ember': { 
-                nombre: "😢 Despedida Fraternal", 
-                dia: "Día 7", 
-                distancia: "📏 0 km",
-                descripcion: "Momento emotivo de separación"
+                nombre: —😢 Despedida Fraternal", 
+                dia: —Día 7", 
+                distancia: —📏 0 km",
+                descripcion: —Momento emotivo de separación"
             },
             'ember-continua': { 
-                nombre: "➡️ Ember Continúa la Aventura", 
-                dia: "Día 7", 
-                distancia: "📏 0 km",
-                descripcion: "Los hermanos siguen unidos en la misión"
+                nombre: —➡️ Ember Continúa la Aventura", 
+                dia: —Día 7", 
+                distancia: —📏 0 km",
+                descripcion: —Los hermanos siguen unidos en la misión"
             },
             'viaje-post-revelacion': { 
-                nombre: "🚶‍♂️ Nueva Estrategia en Marcha", 
-                dia: "Día 7", 
-                distancia: "📏 10 km",
-                descripcion: "Avanzando con la nueva información adquirida"
+                nombre: —🚶‍♂️ Nueva Estrategia en Marcha", 
+                dia: —Día 7", 
+                distancia: —📏 10 km",
+                descripcion: —Avanzando con la nueva información adquirida"
             },
             'camino-cuervos': { 
-                nombre: "🛣️ Camino al Bosque de Cuervos", 
-                dia: "Día 5", 
-                distancia: "📏 15 km",
-                descripcion: "Sendero hacia el territorio de los cuervos espejo"
+                nombre: —🛣️ Camino al Bosque de Cuervos", 
+                dia: —Día 5", 
+                distancia: —📏 15 km",
+                descripcion: —Sendero hacia el territorio de los cuervos espejo"
             },
             'post-revelacion': { 
-                nombre: "💭 Reflexión Post-Revelación", 
-                dia: "Día 6", 
-                distancia: "📏 2 km",
-                descripcion: "Procesando la impactante verdad sobre Seraphina"
+                nombre: —💭 Reflexión Post-Revelación", 
+                dia: —Día 6", 
+                distancia: —📏 2 km",
+                descripcion: —Procesando la impactante verdad sobre Seraphina"
             },
             'viaje-post-revelacion': { 
-                nombre: "🚶‍♂️ Nueva Estrategia en Marcha", 
-                dia: "Día 7", 
-                distancia: "📏 10 km",
-                descripcion: "Avanzando con la nueva información adquirida"
+                nombre: —🚶‍♂️ Nueva Estrategia en Marcha", 
+                dia: —Día 7", 
+                distancia: —📏 10 km",
+                descripcion: —Avanzando con la nueva información adquirida"
             },
             'viaje-aliados-finales': { 
-                nombre: "🧭 Búsqueda de Aliados Finales", 
-                dia: "Día 8", 
-                distancia: "📏 12 km",
-                descripcion: "Último esfuerzo por reunir apoyo antes del templo"
+                nombre: —🧭 Búsqueda de Aliados Finales", 
+                dia: —Día 8", 
+                distancia: —📏 12 km",
+                descripcion: —Último esfuerzo por reunir apoyo antes del templo"
             },
             'entrada-templo': { 
-                nombre: "🏛️ Templo Celestial", 
-                dia: "Día 9", 
-                distancia: "📏 20 km",
-                descripcion: "Santuario final de las Lágrimas de Luna"
+                nombre: —🏛️ Templo Celestial", 
+                dia: —Día 9", 
+                distancia: —📏 20 km",
+                descripcion: —Santuario final de las Lágrimas de Luna"
             },
             'viaje-laberinto': { 
-                nombre: "🌀 Hacia el Laberinto Final", 
-                dia: "Día 10", 
-                distancia: "📏 8 km",
-                descripcion: "Aproximación al desafío final"
+                nombre: —🌀 Hacia el Laberinto Final", 
+                dia: —Día 10", 
+                distancia: —📏 8 km",
+                descripcion: —Aproximación al desafío final"
             },
             'resolucion-final': { 
-                nombre: "✨ Resolución en el Templo", 
-                dia: "Día 10", 
-                distancia: "📏 0 km",
-                descripcion: "El momento decisivo con las Lágrimas de Luna"
+                nombre: —✨ Resolución en el Templo", 
+                dia: —Día 10", 
+                distancia: —📏 0 km",
+                descripcion: —El momento decisivo con las Lágrimas de Luna"
             }
         };
     }
@@ -441,7 +441,7 @@ class TimelineSystem {
         
         // Solo agregar si la sección tiene mapeo y no está ya registrada
         if (mapeoSecciones[seccionId] && !this.ubicacionesVisitadas.find(u => u.seccionId === seccionId)) {
-            const ubicacion = { ...mapeoSecciones[seccionId], seccionId: seccionId };
+            const ubicacion = { ....mapeoSecciones[seccionId], seccionId: seccionId };
             this.ubicacionesVisitadas.push(ubicacion);
             
             console.log('✅ [Timeline] Ubicación agregada:', ubicacion.nombre);
@@ -452,7 +452,7 @@ class TimelineSystem {
             
             // Actualizar línea de tiempo inmediatamente
             setTimeout(() => {
-                console.log('🔄 [Timeline] Actualizando línea de tiempo...');
+                console.log('🔄 [Timeline] Actualizando línea de tiempo....');
                 this.buildDynamicTimeline();
             }, 300);
         }
@@ -470,11 +470,11 @@ class TimelineSystem {
         const locations = this.ubicacionesVisitadas.length > 0 
             ? this.ubicacionesVisitadas 
             : [{
-                name: "🏔️ Montañas Heladas",
-                day: "Día 1", 
-                distance: "📍 Inicio",
-                description: "Refugio solitario de Axel donde comienza la aventura",
-                seccionId: "introduccion"
+                name: —🏔️ Montañas Heladas",
+                day: —Día 1", 
+                distance: —📍 Inicio",
+                description: —Refugio solitario de Axel donde comienza la aventura",
+                seccionId: —introduccion"
               }];
 
         let timelineHTML = '';
@@ -498,7 +498,7 @@ class TimelineSystem {
             const descripcion = location.descripcion || location.description;
             
             timelineHTML += `
-                <div class="timeline-item ${itemClass}" data-day="${dia}" data-section="${location.seccionId}">
+                <div class="timeline-item ${itemClass}— data-day="${dia}— data-section="${location.seccionId}">
                     <div class="timeline-marker">
                         ${isCurrent ? '<span class="current-indicator">📍</span>' : ''}
                         ${isVisited ? '<span class="visited-indicator">✓</span>' : ''}
@@ -508,7 +508,7 @@ class TimelineSystem {
                         <div class="day-info">${dia}</div>
                         <div class="distance-info">${distancia}</div>
                         ${descripcion ? `<div class="location-description">${descripcion}</div>` : ''}
-                        ${isCurrent ? '<div class="reading-status">📖 Leyendo actualmente...</div>' : ''}
+                        ${isCurrent ? '<div class="reading-status">📖 Leyendo actualmente....</div>' : ''}
                     </div>
                 </div>
             `;
@@ -525,7 +525,7 @@ class TimelineSystem {
         timelineHTML += `
             <div class="timeline-stats">
                 <div class="progress-bar">
-                    <div class="progress-fill" style="width: ${progressPercentage}%"></div>
+                    <div class="progress-fill— style="width: ${progressPercentage}%"></div>
                     <span class="progress-text">Progreso: ${progressPercentage.toFixed(1)}%</span>
                 </div>
                 <p><strong>Lugares Visitados:</strong> ${locations.length}</p>
@@ -603,7 +603,7 @@ class TimelineSystem {
             return dayMatch ? parseInt(dayMatch[1]) : 1;
         });
         
-        return Math.max(...days);
+        return Math.max(....days);
     }
 
     updateTimelineProgress() {
@@ -669,7 +669,7 @@ function mostrarTimelineDebug() {
 // Función para forzar registro de todas las secciones visibles
 function forzarRegistroSecciones() {
     if (window.timelineSystem) {
-        console.log('🔧 [Timeline] Forzando registro de secciones visibles...');
+        console.log('🔧 [Timeline] Forzando registro de secciones visibles....');
         const mapeo = window.timelineSystem.getMapeoSecciones();
         let registradas = 0;
         let seccionActual = null;
@@ -717,7 +717,7 @@ function registrarSeccionActual(seccionId) {
 // Función para limpiar y reiniciar timeline
 function reiniciarTimeline() {
     if (window.timelineSystem) {
-        console.log('🧹 [Timeline] Reiniciando timeline...');
+        console.log('🧹 [Timeline] Reiniciando timeline....');
         window.timelineSystem.limpiarTimeline();
         // Esperar un poco y luego registrar secciones visibles
         setTimeout(() => {

@@ -834,7 +834,7 @@ button.nav-link:hover {
 }
 
 .highlight-new-content .new-content::before {
-    content: "NUEVO";
+    content: —NUEVO";
     position: absolute;
     top: -8px;
     right: 0;
@@ -884,7 +884,7 @@ button.nav-link:hover {
 
 /* Indicador de que el modo desarrollador está activo */
 body.dev-mode::before {
-    content: "🔧 MODO DESARROLLADOR ACTIVO";
+    content: —🔧 MODO DESARROLLADOR ACTIVO";
     position: fixed;
     top: 0;
     left: 0;
