@@ -1,15 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>El Cazador de Medianoche - Capítulo 5: Dilema Familiar y Separación</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="historia-interactiva.css">
-</head>
-<body>
-
-<!--
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="historia-interactiva.css" />
+  </head>
+  <body>
+    <!--
 ╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                            CAPÍTULO zorros                                                                    ║
 ║                                                  💎🐻 DÍA 5-6 🐻💎                                                                                                  ║
@@ -54,741 +53,390 @@
 ╚══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 -->
 
-        <!-- ##########################################################
+    <!-- ##########################################################
         #  OPCION ALIADOS Y VIAJE (Líneas 400-620)
         #  - Decisión de ruta: Zorros Plateros 
         #  - Contenido diferenciado según elección
         #  - Obtención de herramientas/conocimientos especializados
         
         ########################################################## -->
-            
-            <!-- ===================== VIAJE  (ZORROS ) ===================== -->
-        <section id="viaje-aliados" class="hidden">
-          
-                <!-- RUTA A LOS ZORROS PLATEROS -->
-                <div id="ruta-zorros" class="hidden contenido-condicional">
-                    <h4>El Sendero de Hierro</h4>
-                    
-                    <p class="texto-narrativo">
-                        El camino hacia la aldea de los Zorros Plateros atravesaba las Minas Abandonadas de Cobre Brillante. Los túneles resonaban con ecos extraños y el aire olía a metal oxidado.
-                    </p>
-                    
-                    <!-- Encuentro: Los Topos Mineros Perdidos -->
-                    <div class="encuentro-menor">
-                        <p class="texto-narrativo">
-                            Durante una tormenta, buscaron refugio en las minas viejas. Allí encontraron un grupo de topos perdidos desde hacía días. Su líder, un topo de pelaje gris, se acercó temblando de cansancio. Su pelaje estaba lleno de polvo.
-                        </p>
-                        
-                        <p class="texto-narrativo">
-                            —Las lluvias derrumbaron nuestros túneles— explicó con voz ronca. —Conocemos estas minas, pero sin nuestras rutas ya no sabemos salir.
-                        </p>
-                        
-                        <p class="dialogo">
-                            —¿Tienen comida? No hemos consumido en dos días. Los murciélagos que nos ayudaban han desaparecido.
-                        </p>
-                        
-                        <p class="texto-opciones">
-                            <strong>Si Axel mostró confianza:</strong> Comparte toda su comida y ayuda a hacer nuevos túneles<br>
-                            <strong>Si mostró cautela:</strong> Da poca comida pero les enseña a guiarse por sonidos
-                        </p>
-                        
-                        <p class="dialogo">
-                            —Gracias por su bondad. Que tengan buen viaje.
-                        </p>
-                    </div>
-                    
-                </div>
-                
-                
-                <!-- ===================== LA ALDEA DE ZORROS COMÚN - VERSIÓN REALISTA ===================== -->
-                <section id="aldea-zorros-realista">
-                    <h3>La Aldea</h3>
-                    
-                    <!-- =============== DÍA 1 TARDE - LLEGADA A LA ALDEA DE TOMÁS =============== -->
-                    
-                    <p class="texto-narrativo">
-                        Después de tres días de viaje serpenteando por senderos de montaña desde las ruinas humeantes de la biblioteca de los Murciélagos, el trio finalmente divisó las columnas de humo que se alzaban entre los picos rocosos. Eco Pergaminada volaba nerviosamente sobre sus cabezas, consultando constantemente los pergaminos salvados del desastre. El camino había sido arduo: noches frías acampando, días atravesando desfiladeros rocosos, y el peso constante de la pérdida reciente.
-                    </p>
-
-                    <p class="dialogo">
-                        —Esos patrones de erosión indican que estamos siguiendo una antigua ruta comercial—
-                    </p>
-                    
-                    <p class="texto-narrativo">
-                        murmuró Eco Pergaminada, examinando las rocas desgastadas con ojo experto.
-                    </p>
-                    
-                    <p class="dialogo">
-                        —Los líquenes de esa formación específica - <em>Stereocaulon alpinum</em> - solo crecen en altitudes donde las caravanas de sal solían hacer paradas regulares. Las esporas se adherían a los cascos y....
-                    </p>
-
-                    <p class="dialogo">
-                        —Eco Pergaminada—
-                    </p>
-                    
-                    <p class="texto-narrativo">
-                        la interrumpió Axel gentilmente
-                    </p>
-                    
-                    <p class="dialogo">
-                        —aprecio la lección de botánica aplicada, pero ¿eso significa que vamos por el camino correcto?
-                    </p>
-
-                    <p class="dialogo">
-                        —Ah.... sí. Definitivamente. Lo siento, los hábitos de archivista. Mi mentora Eco solía decir que no podía caminar tres pasos sin catalogar el ecosistema circundante.
-                    </p>
-
-                    <p class="texto-narrativo">
-                        Los Susurradores les habían dado direcciones simples: —Donde el humo sube constante, donde el metal sirve a la vida común—  Ahora, observando las modestas forjas que punteaban el valle como hogares trabajadores, Axel comprendía la diferencia entre leyenda y realidad.
-                    </p>
-
-                    <p class="texto-narrativo">
-                        La aldea se extendía modestamente entre las rocas como una comunidad práctica. Una docena de talleres humeantes, casas de piedra con tejados de paja, senderos gastados por el uso diario. El repiqueteo de martillos era constante pero no dramático, mezclándose con voces de trabajo, ladridos de cachorros, y el aroma familiar de metal caliente y carbón quemado.
-                    </p>
-
-                    <p class="texto-narrativo">
-                        —Es más pequeña de lo que esperaba— murmuró Axel, observando las estructuras prácticas que se extendían por dos niveles tallados en la ladera. —
-                    </p>
-
-                    <p class="dialogo">
-                        —Esto está mal—
-                    </p>
-                    
-                    <p class="texto-narrativo">
-                        murmuró Eco Pergaminada, deteniéndose de repente. Sus orejas de murciélago se movieron en patrones precisos, captando frecuencias que los otros no podían percibir.
-                    </p>
-                    
-                    <p class="dialogo">
-                        —Los carboneros montañeses deberían estar activos a esta hora. Los arrendajos deberían estar disputando territorio cerca de los pinos. Pero no hay.... nada.
-                    </p>
-
-                    <p class="dialogo">
-                        —¿Y eso significa?—
-                    </p>
-                    
-                    <p class="texto-narrativo">
-                        preguntó Seraphina, francamente interesada en la perspectiva científica.
-                    </p>
-
-                    <p class="dialogo">
-                        —Las aves son indicadores ambientales primarios. El silencio completo sugiere una perturbación significativa del ecosistema local. O depredadores aéreos grandes - águilas, halcones de gran envergadura - o....—
-                    </p>
-                    
-                    <p class="texto-narrativo">
-                        Sus orejas se tensaron.
-                    </p>
-                    
-                    <p class="dialogo">
-                        —Actividad humanoide violenta sostenida.
-                    </p>
-
-                    <p class="texto-narrativo">
-                        Como confirmando sus temores, el olor a humo llegó con la siguiente brisa. Pero no era humo de forja - Eco Pergaminada había memorizado los diferentes tipos de combustión durante sus años archivando tratados de metalurgia.
-                    </p>
-
-                    <p class="dialogo">
-                        —Madera verde mezclada con textiles. Combustión forzada, no controlada. Y....—
-                    </p>
-                    
-                    <p class="texto-narrativo">
-                        Olfateó más profundamente, su expresión volviéndose sombría.
-                    </p>
-                    
-                    <p class="dialogo">
-                        —Proteína quemándose. Eso nunca es buena señal en un conflicto.
-                    </p>
-
-                    <!-- Llegada y elección de herrería entre tres opciones -->
-                    <p class="texto-narrativo">
-                        Su llegada despertó curiosidad más que asombro. Los zorros trabajadores se detuvieron brevemente, con los martillos suspendidos en el aire, mientras observaban a los forasteros que descendían por el sendero principal. Sus pelajes rojizos, manchados de ceniza y sudor, brillaban mientras intercambiaban miradas prácticas - evaluando si estos viajeros traían comercio o problemas.
-                    </p>
-
-                    <p class="texto-narrativo">
-                        Había tres herrerías visibles: una grande con múltiples ayudantes, otra especializada en herramientas agrícolas, y una tercera más pequeña con humo que salía de manera constante. Axel eligió la mediana - ni demasiado elaborada ni demasiado simple.
-                    </p>
-
-                    <p class="texto-narrativo">
-                        Un zorro de mediana edad con pelaje gris en las sienes emergió de la forja, limpiándose las manos en un delantal de cuero gastado. —Bienvenidos, forasteros— dijo con la cordialidad práctica de alguien acostumbrado a consumerciar con viajeros. —Soy Tomás. ¿En qué puedo ayudarlos?
-                    </p>
-
-                    <p class="dialogo">
-                        —¿Buscan reparaciones, herramientas nuevas, o un lugar donde pasar la noche? Mi forja ofrece servicios completos para viajeros.
-                    </p>
-
-                    <p class="texto-narrativo">
-                        Eco Pergaminada se posó nerviosamente en un yunque cercano, sus ojos de murciélago moviéndose constantemente hacia las ventanas como si esperara ver algo amenazante en cualquier momento.
-                    </p>
-                    
-                    <p class="texto-narrativo">
-                        Sus ojos expertos evaluaron el arco élfico de Axel con evidente respeto, notando la calidad sin mostrar codicia. Era claro que había trabajado con equipos finos antes.
-                    </p>
-                    
-                    <p class="dialogo">
-                        —Ese arco élfico necesita mantenimiento - veo desgaste en las cuerdas de reserva. Y su carcaj podría usar refuerzos.—
-                    </p>
-                    
-                    <p class="texto-narrativo">
-                        Miró a Seraphina.
-                    </p>
-                    
-                    <p class="dialogo">
-                        —Su compañera parece necesitar descanso más que herramientas.
-                    </p>
-
-                    <!-- Negociación honesta: trabajo básico + hospedaje -->
-                    <p class="texto-narrativo">
-                        La negociación fue directa y honesta. Tomás cotizó precios razonables: refuerzos para el arco, nuevas puntas de flecha de acero, un cuchillo de respaldo para Axel, reparaciones menores a su equipo existente. Nada mágico, todo práctico.
-                    </p>
-
-                    <p class="dialogo">
-                        —Trabajo bueno pero no extraordinario—
-                    </p>
-                    
-                    <p class="texto-narrativo">
-                        admitió Tomás con una sonrisa modesta.
-                    </p>
-
-                    <p class="texto-narrativo">
-                        Axel calculó mentalmente. El precio era justo, pero después de días acampando en las montañas, la idea de una cama real resultaba tentadora.
-                    </p>
-
-                    <p class="dialogo">
-                        —¿Hay alguna posada en el pueblo? O.... ¿alquilas habitaciones?
-                    </p>
-
-                    <p class="texto-narrativo">
-                        Los ojos de Tomás se iluminaron.
-                    </p>
-
-                    <p class="dialogo">
-                        —Tenemos cuartos arriba de la forja. Mi esposa cocina bien, y las camas son limpias. Puedo incluirlo en el precio del trabajo si te interesa.
-                    </p>
-
-                    <p class="texto-narrativo">
-                        Axel intercambió una mirada con Seraphina. Una noche bajo techo después de la intemperie sonaba perfecta.
-                    </p>
-
-                    <p class="dialogo">
-                        —Trato hecho. ¿Cuándo estará listo el trabajo?
-                    </p>
-
-                    <p class="dialogo">
-                        —Esta tarde. Por la noche, cenarán con nosotros - mi esposa, Rosa, hace el mejor estofado de esta ladera.—
-                    </p>
-                    
-                    <p class="texto-narrativo">
-                        Sus ojos se movieron hacia Eco Pergaminada.
-                    </p>
-                    
-                    <p class="dialogo">
-                        —Y supongo que la pequeña archivista también necesita descanso después de.... lo que sea que hayan enfrentado.
-                    </p>
-
-                    <p class="dialogo">
-                        —Soy Eco Pergaminada—
-                    </p>
-                    
-                    <p class="texto-narrativo">
-                        se presentó la murciélago.
-                    </p>
-                    
-                    <p class="dialogo">
-                        —Y.... sí, agradeceríamos mucho la hospitalidad. Hemos tenido.... días difíciles.
-                    </p>
- 
-
-                    <!-- =============== NOCHE - LA CENA Y LAS REVELACIONES =============== -->
-
-                    <p class="texto-narrativo">
-                        Esa noche, la sala común arriba de la herrería se llenó con el aroma de estofado y el sonido de conversaciones tranquilas. Rosa, una zorra de pelaje cobrizo con ojos bondadosos, sirvió generosas porciones mientras otros huéspedes - dos comerciantes de sal y un recolector solitario - compartían la mesa larga de madera. Eco Pergaminada se había acomodado en una pequeña percha especialmente construida por Tomás, sus pergaminos organizados meticulosamente a su alcance.
-                    </p>
-
-                    <p class="texto-narrativo">
-                        Las conversaciones fluyeron naturalmente: precios del metal, condiciones de los senderos, noticias de aldeas vecinas. Eco Pergaminada contribuía ocasionalmente con datos precisos sobre rutas comerciales históricas, citando tratados que había memorizado, lo que impresionaba a los comerciantes. Pero Axel notó cómo las voces se volvían más tensas cuando ciertos temas surgían indirectamente.
-                    </p>
-
-                    <p class="dialogo" data-badge="comentado con precisión académica">
-                        —Los patrones de tráfico comercial han disminuido un 23% en esta ruta según las estadísticas de los últimos seis meses— observó Eco Pergaminada, consultando mentalmente sus registros. —Eso sugiere algún factor disruptivo sistemático, no variaciones estacionales normales.
-                    </p>
-
-                    <p class="dialogo nerviosa" data-badge="comentado con ansiedad apenas disimulada">
-                        —Los pagos mensuales siempre llegan en el momento más incómodo— murmuró uno de los comerciantes, removiendo nerviosamente su estofado. —Especialmente cuando el negocio ha estado.... irregular.
-                    </p>
-
-                    <p class="texto-narrativo">
-                        Rosa intercambió una mirada significativa con su esposo, quien asintió casi imperceptiblemente. Era el tipo de comunicación silenciosa que desarrollan las parejas después de años de enfrentar problemas juntos.
-                    </p>
-
-                    <p class="dialogo diplomática" data-badge="respondido con cuidado medido">
-                        —Mañana es día de cobro— dijo simplemente el recolector solitario, sus ojos fijos en su comida. —Siempre hay.... tensión cuando vienen.
-                    </p>
-
-                    <p class="texto-narrativo">
-                        El silencio que siguió fue incómodo. Los zorros locales continuaron consumiendo, pero sus orejas se movían nerviosas, y las conversaciones se reanudaron en tonos más bajos. Eco Pergaminada notó la tensión con sus sentidos agudizados, sus alas temblando ligeramente. Seraphina se retiró temprano, murmurando sobre cansancio, pero Axel permaneció. Eco Pergaminada se quedó también, reorganizando nerviosamente sus pergaminos como mecanismo de tranquilización.
-                    </p>
-
-                    <!-- La confesión de Tomás -->
-                    <p class="texto-narrativo">
-                        Después de que los otros huéspedes se retiraran a sus habitaciones, Tomás se acercó a la mesa de Axel con una botella medio vacía de licor de bayas fermentadas y tres vasos pequeños - había notado que Eco Pergaminada también se había quedado. Sus movimientos eran los de alguien que había tomado una decisión difícil.
-                    </p>
-
-                    <p class="dialogo" data-badge="ofrecido con gesto incluyente">
-                        —La pequeña archivista también debería escuchar esto— murmuró Tomás, llenando un vaso diminuto para Eco Pergaminada. —Si van a quedarse mañana, necesitan saber en qué se están metiendo.
-                    </p>
-
-                    <p class="dialogo vulnerable" data-badge="susurrado con peso de secreto">
-                        —¿Puedo hablarles con honestidad?— Sus ojos se movieron entre Axel y Eco Pergaminada, luego hacia las escaleras donde Seraphina había desaparecido. —Hay cosas que debo decir sobre mañana.
-                    </p>
-
-                    <p class="dialogo" data-badge="murmurado con curiosidad académica">
-                        —Los patrones de comportamiento tenso que observé durante la cena sugieren una crisis inminente—  añadió Eco Pergaminada, tomando un sorbo diminuto del licor y haciendo una mueca.— Por favor, continúe. Los datos contextúales serán útiles."
-                    </p>
-
-                    <p class="texto-narrativo">
-                        El licor era fuerte, quemaba la garganta con sabor a bayas de montaña y tiempo. Tomás bebió despacio, reuniendo coraje para palabras que claramente había estado evitando.
-                    </p>
-
-                    <p class="dialogo confesional" data-badge="admitido con vergüenza y dolor">
-                        —Los Lobos de la Garra Negra controlan esta aldea—  comenzó. Las palabras salían como piedras pesadas.— Llegaron hace ocho meses ofreciendo 'protección' a cambio de tributos mensuales. Al principio dijimos no."
-                    </p>
-
-                    <p class="texto-narrativo">
-                        Sus garras se cerraron alrededor del vaso hasta que los nudillos se pusieron blancos bajo su pelaje grisáceo.
-                    </p>
-
-                    <p class="dialogo amarga" data-badge="recordado con dolor profundo">
-                        —Quemaron la herrería de Cola Plateada. Mataron a tres zorros jóvenes que intentaron resistir. Nos hicieron entender que 'protección' no era opcional—  Su voz se quebró.— Desde entonces, pagamos cada mes. La mitad de nuestros ingresos, nuestras mejores herramientas, cualquier cosa que ellos quieran."
-                    </p>
-
-                    <p class="texto-narrativo">
-                        Axel sintió su estómago contraerse. La hospitalidad que había recibido, el precio justo por el trabajo lo pusieron pensativo.
-                    </p>
-
-                    <p class="dialogo directa" data-badge="preguntado con creciente aprensión">
-                        —¿Y mañana?"
-                    </p>
-
-                    <p class="dialogo desesperada" data-badge="confesado con terror apenas contenido">
-                        —Mañana no tenemos el pago completo—  susurró Tomás, llenando ambos vasos nuevamente con manos temblorosas.— Los últimos dos meses han sido difíciles. Los comerciantes evitan la ruta, los pedidos han disminuido. No pudimos reunir suficiente."
-                    </p>
-
-                    <p class="texto-narrativo">
-                        Se quedó en silencio por un momento, mirando el licor como si contuviera respuestas que no podía encontrar.
-                    </p>
-
-                    <p class="dialogo urgente" data-badge="implorado con desesperación creciente">
-                        —Deberían irse al amanecer, antes de que lleguen. Los lobos no distinguen entre zorros locales y forasteros cuando están.... disgustados. Y mañana estarán muy disgustados."
-                    </p>
-
-                    <!-- =============== DÍA 2 - EL DÍA DEL COBRO =============== -->
-
-                    <p class="texto-narrativo">
-                        El amanecer llegó demasiado pronto. Axel se despertó con los sonidos de preparativos nerviosos filtrándose desde abajo: objetos siendo movidos, voces susurradas, el tipo de actividad frenética que habla de miedo organizado. Desde la habitación contigua, podía escuchar a Eco Pergaminada murmurando nerviosamente mientras reorganizaba sus pergaminos por tercera vez esa mañana.
-                    </p>
-
-                    <p class="texto-narrativo">
-                        Desde la ventana de su habitación, pudo ver a los zorros escondiendo sus herramientas más valiosas, enterrándolas en lugares discretos o llevándolas a sótanos ocultos. Las madres llamaban a sus cachorros, manteniéndolos cerca de las casas. Era como observar una comunidad preparándose para un desastre natural.
-                    </p>
-
-                    <p class="dialogo" data-badge="murmurado con análisis observacional">
-                        —Patrón de comportamiento de evacuación de emergencia—  murmuró Eco Pergaminada desde la ventana contigua, con sus pergaminos presionados contra el cristal.— Conocimiento transmitido culturalmente sobre cómo sobrevivir a eventos catastróficos recurrentes. Fascinante desde una perspectiva antropológica.... aterrador desde una perspectiva personal."
-                    </p>
-
-                    <p class="texto-narrativo">
-                        Cuando bajaron a la forja, encontraron a Tomás que empacaba nerviosamente el equipo reparado de Axel en una bolsa de cuero. Eco Pergaminada revoloteaba ansiosamente cerca del techo, sus sentidos agudos captando sonidos que los otros aún no podían percibir.
-                    </p>
-
-                    <p class="dialogo" data-badge="reportado con precisión científica">
-                        —Frecuencias de vocalización canina a aproximadamente 3.2 kilómetros al noreste—  informó Eco Pergaminada desde su posición elevada.— Patrones de comunicación coordinada. Están organizando formaciones de aproximación."
-                    </p>
-
-                    <p class="dialogo urgente" data-badge="implorado con pánico apenas contenido">
-                        —Debe irse ahora—  insistió el herrero, empujando la bolsa hacia Axel.— Los lobos llegan al mediodía. No es seguro que esté aquí cuando lleguen - para ninguno de nosotros."
-                    </p>
-
-                    <p class="texto-narrativo">
-                        Seraphina bajó por las escaleras. Las voces tensas desde la forja la habían despertado. Al ver la actividad nerviosa por la ventana, la expresión preocupada de Axel, y el vuelo errático de Eco Pergaminada, sus ojos se movieron entre todos mientras procesaba rápidamente la situación.
-                    </p>
-
-                    <p class="texto-narrativo">
-                        Se acercó a la ventana y observó a los zorros que corrían. Eco Pergaminada descendió para posarse nerviosamente en su hombro.
-                    </p>
-
-                    <p class="dialogo" data-badge="sussurrado con urgencia científica">
-                        —Los patrones de movimiento sugieren una amenaza inminente de gran magnitud—  murmuró Eco Pergaminada directamente al oído de Seraphina.— Mi análisis de los registros históricos locales indica que este tipo de preparación defensiva precedió eventos violéntos documentados."
-                    </p>
-
-                    <p class="dialogo evaluadora" data-badge="observado con comprensión creciente">
-                        —¿Qué está pasando exactamente?— murmuró, sus antenas moviéndose ligeramente mientras consultaba la expresión preocupada de Eco Pergaminada.
-                    </p>
-
-                    <!-- La decisión de quedarse -->
-                    <p class="texto-narrativo">
-                        Axel miró por la ventana nuevamente. Vio a Rosa consolando a un cachorro zorro que lloraba porque no entendía por qué no podía jugar afuera. Vio a los zorros ancianos que habían trabajado sus forjas durante décadas ahora escondiendo las obras de arte que habían creado con tanto cuidado.
-                    </p>
-
-                    <p class="dialogo decidida" data-badge="declarado con firmeza tranquila">
-                        —No nos vamos—  dijo simplemente, ajustando su arco élfico en el hombro.
-                    </p>
-
-                    <p class="texto-narrativo">
-                        Tomás lo miró con manifiesto horror, sacudiendo la cabeza violentamente.
-                    </p>
-
-                    <p class="dialogo desesperada" data-badge="argumentado con pánico">
-                        —¡No entiende! Somos herreros, no guerreros. Los Lobos de la Garra Negra son docenas. Están entrenados para dañar, organizados para la violencia. ¡Nosotros forjamos metal, no luchamos batallas!"
-                    </p>
-
-                    <p class="dialogo" data-badge="añadido con precisión técnica">
-                        —Técnicamente, eso sería 'derecho de descubrimiento por excavación'—  corrigió Eco Pergaminada automáticamente, antes de ruborizarse por la interrupción inapropiada.— Disculpe, los hábitos académicos son difíciles de suprimir incluso durante.... esto."
-                    </p>
-
-                    <p class="texto-narrativo">
-                        Para sorpresa de todos, Tomás se rió - una risa genuina y estresada, pero real.
-                    </p>
-
-                    <p class="dialogo" data-badge="respondido con apreciación inesperada">
-                        —¡Una murciélago bibliotecaria! ¡Exactamente lo que necesitaba para completar mi día!— Esquivó otra lanza arrojada con práctica creciente.— ¡Supongo que podrías citarme el tratado exacto que justifica esta invasión!"
-                    </p>
-
-                    <p class="dialogo" data-badge="respondido con entusiasmo involuntario">
-                        —¡En realidad sí! El Códice de Disputas Territoriales del Consejo de Especies, sección cuarta, subsección...—  Otra explosión la hizo temblar violentamente.— Oh. Esto es considerablemente más intimidante que las disputas académicas."
-                    </p>
-
-                    <p class="texto-narrativo">
-                        Seraphina se adelantó, y por primera vez desde que Axel la conocía, vio algo en sus ojos que lo sorprendió - una rabia fría que no tenía nada que ver con su propia situación.
-                    </p>
-
-                    <p class="dialogo letal" data-badge="murmurado con intensidad peligrosa">
-                        —He visto lo que la extorsión y el abuso hacen a comunidades inocentes—  dijo, sus garras extendiéndose ligeramente.— He visto el miedo en los ojos de quienes no pueden defenderse. No voy a presenciar otro ejemplo y hacer nada."
-                    </p>
-
-                    <!-- La llegada de los lobos -->
-                    <p class="texto-narrativo">
-                        En la distancia, el sonido de aullidos comenzó a flotar entre los picos de las montañas. No era un lobo solitario - eran muchos, y venían hacia la aldea. El sonido hizo que todos los zorros en la aldea se congelaran en sus actividades. Eco Pergaminada se tensó inmediatamente en su percha, sus alas extendidas en posición de vuelo de escape.
-                    </p>
-
-                    <p class="dialogo" data-badge="analizado con precisión técnica">
-                        —Aproximadamente dieciocho a veintidós individuos caninos de gran tamaño—  murmuró Eco Pergaminada, sus sentidos auditivos calculando automáticamente.— Patrón de vocalización coordinada. Esto no es territorial - es organizacional."
-                    </p>
-
-                    <p class="dialogo terrorizada" data-badge="susurrado con horror absoluto">
-                        —Ya vienen—  murmuró Rosa desde la entrada, sus orejas moviéndose hacia los sonidos distantes.— Dios de las Forjas, llegaron temprano."
-                    </p>
-
-                    <p class="texto-narrativo">
-                        Los aullidos se volvieron más cercanos y numerosos. Desde las laderas superiores, las siluetas oscuras de los Lobos de la Garra Negra comenzaron a aparecer contra el cielo del mediodía, moviéndose con la precisión de depredadores que habían perfeccionado esta rutina durante meses.
-                    </p>
-
-                    <p class="texto-narrativo">
-                        Su líder, un lobo de gran tamaño con pelaje negro mate, se detuvo en una formación rocosa que le daba ventaja visual sobre toda la aldea. Sus ojos amarillos reflejaban la confianza de quien había terrorizado esta comunidad sin oposición real.
-                    </p>
-
-                    <p class="dialogo amenazante" data-badge="rugido con autoridad brutal">
-                        —¡Zorros herreros!— Su voz rugió entre los acantilados, haciendo eco en cada rincón de la aldea.— ¡Garra Roja viene por el tributo mensual! ¡Espero ver las pilas usuales de metal precioso esperándome!"
-                    </p>
-
-                    <p class="texto-narrativo">
-                        Los otros lobos - una manada numerosa - se posicionaron estratégicamente en múltiples niveles de la aldea. Algunos en las alturas para bloquear rutas de escape, otros flanqueando desde los lados, el resto formando un frente intimidante que avanzaba directamente hacia el centro de la aldea.
-                    </p>
-
-                    <p class="texto-narrativo">
-                        Tomás salió de su forja con pasos temblorosos pero determinados. Su pelaje grisáceo brillaba con sudor de nervios, pero su voz se mantuvo firme cuando respondió al alfa.
-                    </p>
-
-                    <p class="dialogo valiente" data-badge="gritado con determinación temblorosa">
-                        —¡No hay tributo completo hoy, Garra Roja!— Su voz se quebró ligeramente.— Los últimos dos meses han sido difíciles. Algunos comerciantes evitan la ruta, los pedidos han disminuido. Solo tenemos la mitad."
-                    </p>
-
-                    <p class="texto-narrativo">
-                        El silencio que siguió fue mortal. Luego, la risa del lobo alfa resonó entre las rocas - un sonido que no contenía humor, solo la anticipación de violencia.
-                    </p>
-
-                    <p class="dialogo siniestra" data-badge="respondido con crueldad divertida">
-                        —Solo la mitad—  repitió Garra Roja, descendiendo lentamente por el sendero.— Y supongo que esperan que acepte esa.... disculpa patética."
-                    </p>
-
-                    <p class="texto-narrativo">
-                        Sus ojos amarillos recorrieron la aldea con satisfacción cruel, anticipando la lección violenta que estaba a punto de enseñar a estos herreros desafiantes.
-                    </p>
-
-                    <!-- El avance amenazante de los lobos -->
-                    <p class="texto-narrativo">
-                        Los lobos comenzaron su descenso hacia la aldea. Se movían como recolectores experimentados: algunos por los senderos laterales, otros manteniéndose en las alturas para bloquear escapes, el grupo principal avanzando por la calle principal. Sus pasos resonaban entre las rocas con un sonido amenazante.
-                    </p>
-
-                    <p class="texto-narrativo">
-                        En la aldea, el pánico se extendió como una ola. Las madres zorro corrieron a recoger a sus cachorros, empujándolos hacia el interior de las casas. Los herreros mayores dejaron caer sus martillos con estrépito metálico, sus manos temblando mientras observaban la formación de recolección que se acercaba. Rosa apareció en la puerta de la herrería, con los ojos muy abiertos por el terror, mientras varios zorros jóvenes se agruparon nerviosamente detrás de Tomás. Eco Pergaminada revoloteaba erráticamente cerca del techo, claramente debatiendo entre su instinto de huir y su lealtad hacia sus nuevos compañeros.
-                    </p>
-
-                    <p class="texto-narrativo">
-                        El aire se llenó de susurros desesperados: —Son demasiados",— Nunca habían traído tanta fuerza", —Nos van a masacrar". Algunos zorros intentaron esconderse detrás de barriles de carbón y pilas de metal, pero la plaza abierta ofrecía pocos refugios reales.
-                    </p>
-
-                    <p class="dialogo" data-badge="murmurado con análisis táctico">
-                        —Formación de asedio clásica—  observó Eco Pergaminada desde las alturas, señalando las posiciones enemigas con movimientos nerviosos de sus alas.— Están usando la configuración de 'martillo y yunque' descrita en los Anales de Guerras Subterráneas del siglo XIV. Bloquean las salidas principales mientras aplican presión directa a las defensas centrales."
-                    </p>
-
-                    <p class="texto-narrativo">
-                        Una explosión cercana la hizo encogerse violentamente, pero su voz mantuvo el tono académico como mecanismo de defensa.
-                    </p>
-
-                    <p class="dialogo" data-badge="añadido con humor nervioso">
-                        —Claro que leer sobre tácticas de asedio en pergaminos polvorientos es considerablemente menos.... auditivamente intenso que experimentarlas en persona."
-                    </p>
-
-                    <p class="texto-narrativo">
-                        Garra Roja se detuvo a unos treinta metros de la plaza central, dejando que el silencio se extendiera. Sus lobos formaron un semicírculo amenazante, bloqueando efectivamente todas las rutas de escape. El mensaje era claro: nadie se iría hasta que él lo decidiera.
-                    </p>
-
-                    <!-- Reacción discreta de los forasteros -->
-                    <p class="texto-narrativo">
-                        En medio de este caos creciente, Axel intercambió una mirada rápida con Seraphina y Eco Pergaminada. Los tres reaccionaron por instinto, pero con discreción, moviéndose silenciosamente hacia posiciones que les permitirían actuar si la situación se tornaba violenta. El gato montés subió usando la escalera externa que llevaba al techo - desde allí podría ver toda la plaza si las cosas empeoraban. Seraphina, sin llamar la atención, se colocó cerca de la entrada principal de la forja, preparada para defender a los civiles si era necesario. Eco Pergaminada, tras un momento de duda visible, voló hacia una posición elevada en las vigas del techo - no para luchar, sino para observar y documentar desde un punto de vista estratégico.
-                    </p>
-
-                    <p class="dialogo" data-badge="murmurado con determinación académica">
-                        —Si voy a presenciar violencia organizada, al menos la documentaré apropiadamente—  murmuró Eco Pergaminada, sacando un pequeño pergamino y una pluma.— Los registros históricos exactos son importantes para estudios futuros.... si sobrevivimos para hacerlos."
-                    </p>
-
-                    ──────────────────────────────────────────────────────────────────────────────────────
-                    
-                    <p class="texto-narrativo">
-                        La batalla comenzó cuando uno de los lobos más jóvenes, impaciente por la violencia prometida, saltó prematuramente hacia uno de los zorros ancianos que temblaba cerca de su forja. Axel lo interceptó con una flecha de acero que le atravesó el hombro, enviándolo rodando entre las rocas con un aullido de dolor y sorpresa.
-                    </p>
-
-                    <p class="dialogo táctica" data-badge="aullado como orden">
-                        —¡Rodéenlos desde los flancos!— rugió Garra Roja. Los lobos restantes atacaron desde varias direcciones a la vez.
-                    </p>
-
-                    <p class="texto-narrativo">
-                        La primera fase del combate favoreció a los defensores. Axel utilizó su posición elevada en el techo de la herrería para disparar flechas con precisión letal, cada disparo calculado para máxima efectividad. Los zorros conocían íntimamente su terreno - utilizando martillos pesados como mazas, barras de hierro al rojo vivo como lanzas improvisadas, y aprovechando cada nivel y escalón para crear emboscadas efectivas.
-                    </p>
-
-                    <p class="dialogo" data-badge="reportado con precisión científica">
-                        —Cuatro lobos incapacitados, seis más con heridas significativas—  informó Eco Pergaminada desde su posición de observación, tomando notas rápidas.— La ventaja táctica inicial favorece claramente a los defensores debido al conocimiento territorial superior y la motivación defensiva."
-                    </p>
-
-                    <p class="texto-narrativo">
-                        Seraphina luchó con agilidad letal. Sus garras cortaban con precisión mientras su velocidad le permitía atacar desde posiciones inesperadas, manteniendo a distancia a varios lobos a la vez.
-                    </p>
-
-                    <p class="texto-narrativo">
-                        Tomás luchó con la determinación de alguien defendiendo su hogar. Su martillo de trabajo, empuñado con fuerza desesperada, se convirtió en su arma de defensa. Sus golpes conectaron solidamente, hiriendo a dos lobos y haciéndolos retroceder con aullidos de dolor.
-                    </p>
-
-                    <p class="dialogo valiente" data-badge="gritado con determinación">
-                        —¡Esto es por ocho meses de terror!— rugió Tomás, esquivando garras antes de conectar otro martillazo sólido.
-                    </p>
-
-                    ──────────────────────────────────────────────────────────────────────────────────────
-                    *Al principio los defensores parecen tener ventaja, pero la experiencia de los lobos comienza a mostrar sus frutos*
-                    <p class="texto-narrativo">
-                        Al principio, parecía posible una victoria defensiva. Cuatro lobos habían caído, varios más estaban heridos, y la formación atacante había sido desorganizada por la resistencia inesperadamente feroz.
-                    </p>
-
-                    <p class="texto-narrativo">
-                        Pero Garra Roja era un depredador experimentado que había sobrevivido a múltiples conflictos territoriales. Reorganizó a su manada con la eficiencia brutal de un general veterano.
-                    </p>
-
-                    <p class="dialogo" data-badge="observado con inquietud creciente">
-                        —Cambio táctico detected—  murmuró Eco Pergaminada, su pluma temblando ligeramente mientras tomaba notas.— El líder enemigo está implementando contramedidas organizadas. Esto.... esto no va a terminar bien para los defensores."
-                    </p>
-
-                    <p class="dialogo táctica" data-badge="rugido como orden">
-                        —¡Cambien de táctica!— rugió sobre el sonido del combate.— ¡Cánsenlos! ¡No ataquen de frente!"
-                    </p>
-
-                    <p class="texto-narrativo">
-                        La segunda fase reveló la experiencia superior de los atacantes. Los lobos comenzaron a utilizar tácticas coordinadas: ataques simultáneos desde múltiples direcciones, uso del terreno para crear ventajas, y lo más devastador, el cansancio gradual de sus oponentes.
-                    </p>
-
-                    <p class="texto-narrativo">
-                        Los zorros, aunque valientes, comenzaron a mostrar signos de agotamiento. Sus martillazos se volvieron menos precisos, su coordinación comenzó a fallar. Rosa recibió un corte profundo en el brazo que la forzó a retirarse. Dos zorros jóvenes cayeron cuando cinco lobos los rodearon sistemáticamente.
-                    </p>
-
-                    ──────────────────────────────────────────────────────────────────────────────────────
-                    *El cansancio y la superioridad numérica comienzan a inclinar la balanza. Los gritos de los zorros heridos rompen la resistencia de los defensores*
-                    <p class="texto-narrativo">
-                        Axel, disparando flecha tras flecha, se dio cuenta de que sus proyectiles se agotaban rápidamente. Cada disparo tenía que contar, pero incluso con flechas de acero bien forjadas, no podía cubrir todos los frentes a la vez.
-                    </p>
-
-                    <p class="texto-narrativo">
-                        Seraphina, aunque letal en combate cercano, comenzó a mostrar los límites de luchar contra múltiples oponentes coordinados. Su velocidad se mantuvo, pero la fatiga empezó a afectar la precisión de sus ataques.
-                    </p>
-
-                    <p class="texto-narrativo">
-                        El punto de quiebre llegó cuando otro zorro herrero, intentando proteger a Rosa que estaba herida, fue rodeado y derribado por cinco lobos coordinados. Sus gritos de dolor resonaron entre los acantilados, creando un momento de horror que paralizó momentáneamente a los otros defensores.
-                    </p>
-
-                    <p class="dialogo cruel" data-badge="rugido con sadismo">
-                        —¡Esto es lo que pasa cuando herreros juegan a ser guerreros!— bramó Garra Roja, mientras sus lobos comenzaron a dominar sistemáticamente cada posición.— ¡La próxima vez recordarán quién los protege realmente!"
-                    </p>
-
-                    <p class="texto-narrativo">
-                        Fue entonces cuando Eco Pergaminada tomó la decisión que cambiaría todo. Desde su posición elevada, había observado la batalla con el ojo clínico de quien había archivado cientos de tratados sobre tácticas militares. Y ahora veía lo que los otros no podían: la formación de los lobos tenía un punto débil.
-                    </p>
-
-                    <p class="dialogo" data-badge="explicado con análisis clínico de sí misma">
-                        —Interesante—  murmuró, observando cómo sus garras temblaban incontrolablemente.— Respuesta simpática del sistema nervioso. Aumento de adrenalina causando temblor muscular, dilatación pupilar, taquicardia. Los síntomas clásicos de activación de 'huida o lucha'.... excepto que mi sistema claramente votó unánimemente por 'huida'."
-                    </p>
-
-                    <p class="dialogo" data-badge="añadido con humor autodespreciativo">
-                        —Desafortunadamente, los años de evolución no prepararon a los murciélagos bibliotecarios para combate directo. Estamos especializados en ecolocalización de textos perdidos, no en esquivar armamento medieval."
-                    </p>
-
-                    <p class="texto-narrativo">
-                        Tomás, sangrando de múltiples heridas pero aún luchando con determinación desesperada, interceptó la mirada de Axel a través del caos de la batalla. En sus ojos, el gato montés vio algo que lo impactó: no arrepentimiento por haber resistido, sino gratitud por haber encontrado aliados dispuestos a luchar junto a ellos.
-                    </p>
-
-                    <p class="dialogo valiente" data-badge="gritado con desafío">
-                        —¡Nos defendemos con honor!— gritó el herrero, esquivando garras antes de conectar un golpe fuerte con su martillo.— ¡Ya no nosometeremos!"
-                    </p>
-
-                    <p class="texto-narrativo">
-                        Pero la realidad táctica era inexorable. Con la mayoría de los lobos aún en combate activo contra los defensores supervivientes, y varios zorros gravemente heridos, la ecuación de la batalla había cambiado irreversiblemente.
-                    </p>
-
-                    ──────────────────────────────────────────────────────────────────────────────────────
-                    *Axel debe enfrentar la decisión más dolorosa de su vida: continuar luchando hasta la muerte heroica, o preservar vidas para luchar otro día*
-
-                    <p class="texto-narrativo">
-                        El momento de la decisión terrible llegó cuando Axel, desde su posición elevada, pudo observar todo el campo de batalla simultáneamente. Los zorros luchaban con valentía desesperada, pero tres ya habían caído, dos más estaban gravemente heridos, y el resto mostraba signos claros de agotamiento fatal.
-                    </p>
-
-                    <p class="texto-narrativo">
-                        El momento de la decisión terrible para Eco Pergaminada llegó cuando vio a Tomás caer bajo tres lobos coordinados. La joven murciélago había estado luchando contra su propia naturaleza durante toda la batalla, pero algo se rompió en ella al ver al herrero gentil que les había dado hospitalidad siendo brutalmente atacado.
-                    </p>
-
-                    <p class="dialogo" data-badge="confesado entre lágrimas">
-                        —No puedo.... no puedo hacer esto—  sollozó Eco Pergaminada, sus pequeñas garras aferrándose al Códice.— Soy una archivista, no una guerrera. En la biblioteca, cuando los Cuervos atacaron.... me escondí. Dejé que otros murieran mientras yo me escondía entre los pergaminos."
-                    </p>
-
-                    <p class="texto-narrativo">
-                        Sus alas temblaron mientras otra explosión resonó en la distancia. El sonido del metal contra metal la hacía encogerse como si cada golpe fuera dirigido a ella.
-                    </p>
-
-                    <p class="dialogo" data-badge="decidido con dolor">
-                        —Pero el Códice.... ustedes lo necesitan para encontrar las Lágrimas. Y yo soy la única que puede leerlo completamente."
-                    </p>
-
-                    <p class="dialogo realista" data-badge="murmurado con dolor">
-                        —No podemos cambiar esto—  murmuró Axel a Seraphina, las palabras saliendo como vidrio roto.— Si continuamos, no salvaremos a los zorros. Solo añadiremos nuestros cuerpos a los suyos."
-                    </p>
-
-                    <p class="dialogo torturada" data-badge="respondido con anguish profunda">
-                        —Correcto—  admitió Seraphina, sus palabras cortadas por la respiración trabajosa del combate intenso.— Pero la lógica no hace que esto duela menos."
-                    </p>
-
-                    <p class="texto-narrativo">
-                        El plan de retirada tuvo que ser ejecutado rápidamente, antes de que los lobos cerraran todas las rutas de escape. Axel utilizó sus últimas flechas para crear una distracción, mientras Seraphina usó sus movimientos erráticos para despistar a los lobos cerca de la ruta occidental el tiempo suficiente para escapar.
-                    </p>
-
-                    <p class="texto-narrativo">
-                        La última imagen que Axel tuvo de la batalla fue Tomás, aún luchando con su martillo ensaviantado, gritando desafío contra Garra Roja incluso mientras era rodeado por los lobos restantes. No era una imagen de derrota, sino de dignidad mantenida hasta el final.
-                    </p>
-
-                    <p class="dialogo desafiante" data-badge="gritado con última resistencia">
-                        —¡No nos rendimos!— La voz de Tomás resonó entre los acantilados mientras continuaba luchando.
-                    </p>
-
-                    ──────────────────────────────────────────────────────────────────────────────────────
-                    *Mientras se alejan de la aldea, el humo que antes marcaba trabajo honesto ahora señala destrucción y saqueo. El precio del heroísmo queda grabado en sus corazones*
-
-                    <p class="texto-narrativo">
-                        Mientras corrían por senderos de montaña que los alejaban de la aldea, los sonidos de la batalla continuaron resonando detrás de ellos - pero gradualmente se transformaron desde el caos del combate activo hacia algo más organizado, más controlado. Los lobos habían conseguido su objetivo.
-                    </p>
-
-                    <p class="texto-narrativo">
-                        Cuando finalmente se detuvieron en una formación rocosa a varios kilómetros de distancia, ambos estaban físicamente exhaustos y emocionalmente devastados. Los aullidos de los lobos aún se escuchaban en la distancia - no los gritos de batalla, sino sonidos de celebración.
-                    </p>
-
-                    <p class="dialogo quebrada" data-badge="susurrado con dolor absoluto">
-                        —No pudimos salvarlos—  murmuró Axel, con las palabras saliendo como una confesión de fracaso personal.— Incluso luchando con todo lo que teníamos.... no fue suficiente."
-                    </p>
-
-                    <p class="texto-narrativo">
-                        Seraphina se sentó pesadamente contra una roca, sus garras aún extendidas pero temblando ligeramente - no de miedo, sino de una combinación de agotamiento físico y trauma emocional.
-                    </p>
-
-                    <p class="dialogo devastada" data-badge="confesado con voz rota">
-                        —He visto mucha violencia en mi vida—  murmuró, y por primera vez, Axel escuchó algo en su voz que sonaba completamente vulnerable.— Pero abandonar a aliados.... eso es un tipo diferente de dolor."
-                    </p>
-
-                    <p class="texto-narrativo">
-                        En la distancia, el humo que antes indicaba trabajo ahora señalaba destrucción.
-                    </p>
-
-                    <p class="dialogo reflexiva" data-badge="murmurado con amargura">
-                        —A veces hacer lo correcto no es suficiente—  murmuró Axel con amargura.
-                    </p>
-
-                    <p class="dialogo final" data-badge="prometido con determinación sombría">
-                        —Pero continuaremos—  murmuró Axel, levantándose lentamente y ajustando su arco élfico en el hombro.— Encontraremos las Lágrimas de Luna. Por ellos."
-                    </p>
-
-                    <p class="texto-narrativo">
-                        Durante tres horas, refugiados en una cueva mientras la batalla rugía afuera, Eco Pergaminada compartió todo lo que recordaba. Sus garras temblaron mientras traducía los pasajes más importantes del Códice.
-                    </p>
-
-                    <p class="dialogo" data-badge="recitado con precisión desesperada">
-                        —Las Lágrimas responden a la luna llena en el Claro Celestial.... pero también aparecen en luna nueva en los Montes Sombríos. Umbra el Devorador.... tenía métodos para transferir su corrupción. Si Axel está infectado...."
-                    </p>
-
-                    <p class="texto-narrativo">
-                        Le entregó dos objetos preciosos: un cristal de memoria que contenía los conocimientos más esenciales, y un pequeño mapa dibujado en piel de murciélago con rutas secretas.
-                    </p>
-
-                    <p class="dialogo" data-badge="susurrado con determinación quebrada">
-                        —Esto es lo más valioso que puedo darles. No soy valiente como ustedes, pero puedo preservar lo que queda del conocimiento para otros que sí lo son."
-                    </p>
-
-                    <p class="dialogo" data-badge="declarado con resolución temblorosa">
-                        —Voy a buscar a los supervivientes dispersos de otras bibliotecas. Alguien debe reconstruir lo que se perdió. Alguien debe recordar los nombres de quienes murieron protegiendo el conocimiento."
-                    </p>
-
-                    <p class="dialogo" data-badge="respondido con respeto profundo">
-                        —Ese es un tipo de valor que pocos tienen—  le aseguró Axel.— Preservar la memoria es tan importante como cualquier batalla."
-                    </p>
-
-                    <p class="texto-narrativo">
-                        Seraphina, sorprendentemente, se acercó a la pequeña murciélago. Por un momento, sus ojos mostraron algo parecido a la comprensión maternal.
-                    </p>
-
-                    <p class="dialogo" data-badge="dicho con ternura inesperada">
-                        —Mi madre siempre decía que los verdaderos guerreros no solo luchan. También preservan aquello por lo que vale la pena luchar."
-                    </p>
-
-                    <p class="texto-narrativo">
-                        Eco Pergaminada se alejó volando hacia el horizonte, llevando consigo los pergaminos salvados y la responsabilidad de ser la memoria viviente de una biblioteca que ya no existía. Su silueta se desvaneció entre las montañas, pero su legado permanecería con ellos.
-                    </p>
-
-                    <p class="dialogo" data-badge="gritado a la distancia">
-                        —¡Y recuerden verificar los cálculos lunares! ¡La precisión astronómica puede ser la diferencia entre salvación y catástrofe!"
-                    </p>
-
-                    <p class="texto-narrativo">
-                        Se alejaron en silencio, llevando consigo no solo la amarga lección de que no siempre es posible ganar, sino también las herramientas y conocimientos que Eco Pergaminada había sacrificado su tranquilidad para preservar. El cristal de memoria pulsaba suavemente en la mochila de Axel, un recordatorio de que algunos tipos de valor no necesitan espadas ni flechas.
-                    </p>
-
-                    <p class="texto-narrativo">
-                        Fue Seraphina quien lo vio primero: un destello verde esmeralda entre los árboles del sendero, como si la vegetación misma respirara con luz propia. El aire cambió - más denso, más dulce, cargado con el perfume de flores que no deberían existir en esta altitud.
-                    </p>
-
-                    <p class="dialogo" data-badge="murmurado con fascinación nerviosa">
-                        —Axel.... esas plantas se están moviendo. Hacia nosotros.
-                    </p>
-
-                    <p class="texto-narrativo" style="text-align: center; font-style: italic; color: #d4af37;">
-                        El Jardín de Intenciones no espera a que lo visiten. El Jardín elige a sus invitados. Y lo que crece en su interior revela aquello que el corazón preferiría mantener oculto.
-                    </p>
-
-                </section>
-
-
-
-
-
-            </section>
-
-</body>
+
+    <!-- ===================== VIAJE  (ZORROS ) ===================== -->
+    <section id="viaje-aliados" class="hidden">
+      <!-- RUTA A LOS ZORROS PLATEROS -->
+      <div id="ruta-zorros" class="hidden contenido-condicional">
+        <h4>El Sendero de Hierro</h4>
+
+        <p class="texto-narrativo"> El camino hacia la aldea de los Zorros Plateros atravesaba las Minas Abandonadas de Cobre Brillante. Los túneles resonaban con ecos extraños y el aire olía a metal oxidado. </p>
+
+        <!-- Encuentro: Los Topos Mineros Perdidos -->
+        <div class="encuentro-menor">
+          <p class="texto-narrativo"> Durante una tormenta, buscaron refugio en las minas viejas. Allí encontraron un grupo de topos perdidos desde hacía días. Su líder, un topo de pelaje gris, se acercó temblando de cansancio. Su pelaje estaba lleno de polvo. </p>
+
+          <p class="texto-narrativo"> —Las lluvias derrumbaron nuestros túneles— explicó con voz ronca. —Conocemos estas minas, pero sin nuestras rutas ya no sabemos salir. </p>
+
+          <p class="dialogo"> —¿Tienen comida? No hemos consumido en dos días. Los murciélagos que nos ayudaban han desaparecido. </p>
+
+          <p class="texto-opciones">
+            <strong>Si Axel mostró confianza:</strong> Comparte toda su comida y ayuda a hacer nuevos túneles<br />
+            <strong>Si mostró cautela:</strong> Da poca comida pero les enseña a guiarse por sonidos
+          </p>
+
+          <p class="dialogo"> —Gracias por su bondad. Que tengan buen viaje. </p>
+        </div>
+      </div>
+
+      <!-- ===================== LA ALDEA DE ZORROS COMÚN - VERSIÓN REALISTA ===================== -->
+      <section id="aldea-zorros-realista">
+        <h3>La Aldea</h3>
+
+        <!-- =============== DÍA 1 TARDE - LLEGADA A LA ALDEA DE TOMÁS =============== -->
+
+        <p class="texto-narrativo"> Después de tres días de viaje serpenteando por senderos de montaña desde las ruinas humeantes de la biblioteca de los Murciélagos, el trio finalmente divisó las columnas de humo que se alzaban entre los picos rocosos. Eco Pergaminada volaba nerviosamente sobre sus cabezas, consultando constantemente los pergaminos salvados del desastre. El camino había sido arduo: noches frías acampando, días atravesando desfiladeros rocosos, y el peso constante de la pérdida reciente. </p>
+
+        <p class="dialogo"> —Esos patrones de erosión indican que estamos siguiendo una antigua ruta comercial— </p>
+
+        <p class="texto-narrativo"> murmuró Eco Pergaminada, examinando las rocas desgastadas con ojo experto. </p>
+
+        <p class="dialogo"> —Los líquenes de esa formación específica - <em>Stereocaulon alpinum</em> - solo crecen en altitudes donde las caravanas de sal solían hacer paradas regulares. Las esporas se adherían a los cascos y.... </p>
+
+        <p class="dialogo"> —Eco Pergaminada— </p>
+
+        <p class="texto-narrativo"> la interrumpió Axel gentilmente </p>
+
+        <p class="dialogo"> —aprecio la lección de botánica aplicada, pero ¿eso significa que vamos por el camino correcto? </p>
+
+        <p class="dialogo"> —Ah.... sí. Definitivamente. Lo siento, los hábitos de archivista. Mi mentora Eco solía decir que no podía caminar tres pasos sin catalogar el ecosistema circundante. </p>
+
+        <p class="texto-narrativo"> Los Susurradores les habían dado direcciones simples: —Donde el humo sube constante, donde el metal sirve a la vida común— Ahora, observando las modestas forjas que punteaban el valle como hogares trabajadores, Axel comprendía la diferencia entre leyenda y realidad. </p>
+
+        <p class="texto-narrativo"> La aldea se extendía modestamente entre las rocas como una comunidad práctica. Una docena de talleres humeantes, casas de piedra con tejados de paja, senderos gastados por el uso diario. El repiqueteo de martillos era constante pero no dramático, mezclándose con voces de trabajo, ladridos de cachorros, y el aroma familiar de metal caliente y carbón quemado. </p>
+
+        <p class="texto-narrativo"> —Es más pequeña de lo que esperaba— murmuró Axel, observando las estructuras prácticas que se extendían por dos niveles tallados en la ladera. — </p>
+
+        <p class="dialogo"> —Esto está mal— </p>
+
+        <p class="texto-narrativo"> murmuró Eco Pergaminada, deteniéndose de repente. Sus orejas de murciélago se movieron en patrones precisos, captando frecuencias que los otros no podían percibir. </p>
+
+        <p class="dialogo"> —Los carboneros montañeses deberían estar activos a esta hora. Los arrendajos deberían estar disputando territorio cerca de los pinos. Pero no hay.... nada. </p>
+
+        <p class="dialogo"> —¿Y eso significa?— </p>
+
+        <p class="texto-narrativo"> preguntó Seraphina, francamente interesada en la perspectiva científica. </p>
+
+        <p class="dialogo"> —Las aves son indicadores ambientales primarios. El silencio completo sugiere una perturbación significativa del ecosistema local. O depredadores aéreos grandes - águilas, halcones de gran envergadura - o....— </p>
+
+        <p class="texto-narrativo"> Sus orejas se tensaron. </p>
+
+        <p class="dialogo"> —Actividad humanoide violenta sostenida. </p>
+
+        <p class="texto-narrativo"> Como confirmando sus temores, el olor a humo llegó con la siguiente brisa. Pero no era humo de forja - Eco Pergaminada había memorizado los diferentes tipos de combustión durante sus años archivando tratados de metalurgia. </p>
+
+        <p class="dialogo"> —Madera verde mezclada con textiles. Combustión forzada, no controlada. Y....— </p>
+
+        <p class="texto-narrativo"> Olfateó más profundamente, su expresión volviéndose sombría. </p>
+
+        <p class="dialogo"> —Proteína quemándose. Eso nunca es buena señal en un conflicto. </p>
+
+        <!-- Llegada y elección de herrería entre tres opciones -->
+        <p class="texto-narrativo"> Su llegada despertó curiosidad más que asombro. Los zorros trabajadores se detuvieron brevemente, con los martillos suspendidos en el aire, mientras observaban a los forasteros que descendían por el sendero principal. Sus pelajes rojizos, manchados de ceniza y sudor, brillaban mientras intercambiaban miradas prácticas - evaluando si estos viajeros traían comercio o problemas. </p>
+
+        <p class="texto-narrativo"> Había tres herrerías visibles: una grande con múltiples ayudantes, otra especializada en herramientas agrícolas, y una tercera más pequeña con humo que salía de manera constante. Axel eligió la mediana - ni demasiado elaborada ni demasiado simple. </p>
+
+        <p class="texto-narrativo"> Un zorro de mediana edad con pelaje gris en las sienes emergió de la forja, limpiándose las manos en un delantal de cuero gastado. —Bienvenidos, forasteros— dijo con la cordialidad práctica de alguien acostumbrado a consumerciar con viajeros. —Soy Tomás. ¿En qué puedo ayudarlos? </p>
+
+        <p class="dialogo"> —¿Buscan reparaciones, herramientas nuevas, o un lugar donde pasar la noche? Mi forja ofrece servicios completos para viajeros. </p>
+
+        <p class="texto-narrativo"> Eco Pergaminada se posó nerviosamente en un yunque cercano, sus ojos de murciélago moviéndose constantemente hacia las ventanas como si esperara ver algo amenazante en cualquier momento. </p>
+
+        <p class="texto-narrativo"> Sus ojos expertos evaluaron el arco élfico de Axel con evidente respeto, notando la calidad sin mostrar codicia. Era claro que había trabajado con equipos finos antes. </p>
+
+        <p class="dialogo"> —Ese arco élfico necesita mantenimiento - veo desgaste en las cuerdas de reserva. Y su carcaj podría usar refuerzos.— </p>
+
+        <p class="texto-narrativo"> Miró a Seraphina. </p>
+
+        <p class="dialogo"> —Su compañera parece necesitar descanso más que herramientas. </p>
+
+        <!-- Negociación honesta: trabajo básico + hospedaje -->
+        <p class="texto-narrativo"> La negociación fue directa y honesta. Tomás cotizó precios razonables: refuerzos para el arco, nuevas puntas de flecha de acero, un cuchillo de respaldo para Axel, reparaciones menores a su equipo existente. Nada mágico, todo práctico. </p>
+
+        <p class="dialogo"> —Trabajo bueno pero no extraordinario— </p>
+
+        <p class="texto-narrativo"> admitió Tomás con una sonrisa modesta. </p>
+
+        <p class="texto-narrativo"> Axel calculó mentalmente. El precio era justo, pero después de días acampando en las montañas, la idea de una cama real resultaba tentadora. </p>
+
+        <p class="dialogo"> —¿Hay alguna posada en el pueblo? O.... ¿alquilas habitaciones? </p>
+
+        <p class="texto-narrativo"> Los ojos de Tomás se iluminaron. </p>
+
+        <p class="dialogo"> —Tenemos cuartos arriba de la forja. Mi esposa cocina bien, y las camas son limpias. Puedo incluirlo en el precio del trabajo si te interesa. </p>
+
+        <p class="texto-narrativo"> Axel intercambió una mirada con Seraphina. Una noche bajo techo después de la intemperie sonaba perfecta. </p>
+
+        <p class="dialogo"> —Trato hecho. ¿Cuándo estará listo el trabajo? </p>
+
+        <p class="dialogo"> —Esta tarde. Por la noche, cenarán con nosotros - mi esposa, Rosa, hace el mejor estofado de esta ladera.— </p>
+
+        <p class="texto-narrativo"> Sus ojos se movieron hacia Eco Pergaminada. </p>
+
+        <p class="dialogo"> —Y supongo que la pequeña archivista también necesita descanso después de.... lo que sea que hayan enfrentado. </p>
+
+        <p class="dialogo"> —Soy Eco Pergaminada— </p>
+
+        <p class="texto-narrativo"> se presentó la murciélago. </p>
+
+        <p class="dialogo"> —Y.... sí, agradeceríamos mucho la hospitalidad. Hemos tenido.... días difíciles. </p>
+
+        <!-- =============== NOCHE - LA CENA Y LAS REVELACIONES =============== -->
+
+        <p class="texto-narrativo"> Esa noche, la sala común arriba de la herrería se llenó con el aroma de estofado y el sonido de conversaciones tranquilas. Rosa, una zorra de pelaje cobrizo con ojos bondadosos, sirvió generosas porciones mientras otros huéspedes - dos comerciantes de sal y un recolector solitario - compartían la mesa larga de madera. Eco Pergaminada se había acomodado en una pequeña percha especialmente construida por Tomás, sus pergaminos organizados meticulosamente a su alcance. </p>
+
+        <p class="texto-narrativo"> Las conversaciones fluyeron naturalmente: precios del metal, condiciones de los senderos, noticias de aldeas vecinas. Eco Pergaminada contribuía ocasionalmente con datos precisos sobre rutas comerciales históricas, citando tratados que había memorizado, lo que impresionaba a los comerciantes. Pero Axel notó cómo las voces se volvían más tensas cuando ciertos temas surgían indirectamente. </p>
+
+        <p class="dialogo" data-badge="comentado con precisión académica"> —Los patrones de tráfico comercial han disminuido un 23% en esta ruta según las estadísticas de los últimos seis meses— observó Eco Pergaminada, consultando mentalmente sus registros. —Eso sugiere algún factor disruptivo sistemático, no variaciones estacionales normales. </p>
+
+        <p class="dialogo nerviosa" data-badge="comentado con ansiedad apenas disimulada"> —Los pagos mensuales siempre llegan en el momento más incómodo— murmuró uno de los comerciantes, removiendo nerviosamente su estofado. —Especialmente cuando el negocio ha estado.... irregular. </p>
+
+        <p class="texto-narrativo"> Rosa intercambió una mirada significativa con su esposo, quien asintió casi imperceptiblemente. Era el tipo de comunicación silenciosa que desarrollan las parejas después de años de enfrentar problemas juntos. </p>
+
+        <p class="dialogo diplomática" data-badge="respondido con cuidado medido"> —Mañana es día de cobro— dijo simplemente el recolector solitario, sus ojos fijos en su comida. —Siempre hay.... tensión cuando vienen. </p>
+
+        <p class="texto-narrativo"> El silencio que siguió fue incómodo. Los zorros locales continuaron consumiendo, pero sus orejas se movían nerviosas, y las conversaciones se reanudaron en tonos más bajos. Eco Pergaminada notó la tensión con sus sentidos agudizados, sus alas temblando ligeramente. Seraphina se retiró temprano, murmurando sobre cansancio, pero Axel permaneció. Eco Pergaminada se quedó también, reorganizando nerviosamente sus pergaminos como mecanismo de tranquilización. </p>
+
+        <!-- La confesión de Tomás -->
+        <p class="texto-narrativo"> Después de que los otros huéspedes se retiraran a sus habitaciones, Tomás se acercó a la mesa de Axel con una botella medio vacía de licor de bayas fermentadas y tres vasos pequeños - había notado que Eco Pergaminada también se había quedado. Sus movimientos eran los de alguien que había tomado una decisión difícil. </p>
+
+        <p class="dialogo" data-badge="ofrecido con gesto incluyente"> —La pequeña archivista también debería escuchar esto— murmuró Tomás, llenando un vaso diminuto para Eco Pergaminada. —Si van a quedarse mañana, necesitan saber en qué se están metiendo. </p>
+
+        <p class="dialogo vulnerable" data-badge="susurrado con peso de secreto"> —¿Puedo hablarles con honestidad?— Sus ojos se movieron entre Axel y Eco Pergaminada, luego hacia las escaleras donde Seraphina había desaparecido. —Hay cosas que debo decir sobre mañana. </p>
+
+        <p class="dialogo" data-badge="murmurado con curiosidad académica"> —Los patrones de comportamiento tenso que observé durante la cena sugieren una crisis inminente— añadió Eco Pergaminada, tomando un sorbo diminuto del licor y haciendo una mueca.— Por favor, continúe. Los datos contextúales serán útiles." </p>
+
+        <p class="texto-narrativo"> El licor era fuerte, quemaba la garganta con sabor a bayas de montaña y tiempo. Tomás bebió despacio, reuniendo coraje para palabras que claramente había estado evitando. </p>
+
+        <p class="dialogo confesional" data-badge="admitido con vergüenza y dolor"> —Los Lobos de la Garra Negra controlan esta aldea— comenzó. Las palabras salían como piedras pesadas.— Llegaron hace ocho meses ofreciendo 'protección' a cambio de tributos mensuales. Al principio dijimos no." </p>
+
+        <p class="texto-narrativo"> Sus garras se cerraron alrededor del vaso hasta que los nudillos se pusieron blancos bajo su pelaje grisáceo. </p>
+
+        <p class="dialogo amarga" data-badge="recordado con dolor profundo"> —Quemaron la herrería de Cola Plateada. Mataron a tres zorros jóvenes que intentaron resistir. Nos hicieron entender que 'protección' no era opcional— Su voz se quebró.— Desde entonces, pagamos cada mes. La mitad de nuestros ingresos, nuestras mejores herramientas, cualquier cosa que ellos quieran." </p>
+
+        <p class="texto-narrativo"> Axel sintió su estómago contraerse. La hospitalidad que había recibido, el precio justo por el trabajo lo pusieron pensativo. </p>
+
+        <p class="dialogo directa" data-badge="preguntado con creciente aprensión"> —¿Y mañana?" </p>
+
+        <p class="dialogo desesperada" data-badge="confesado con terror apenas contenido"> —Mañana no tenemos el pago completo— susurró Tomás, llenando ambos vasos nuevamente con manos temblorosas.— Los últimos dos meses han sido difíciles. Los comerciantes evitan la ruta, los pedidos han disminuido. No pudimos reunir suficiente." </p>
+
+        <p class="texto-narrativo"> Se quedó en silencio por un momento, mirando el licor como si contuviera respuestas que no podía encontrar. </p>
+
+        <p class="dialogo urgente" data-badge="implorado con desesperación creciente"> —Deberían irse al amanecer, antes de que lleguen. Los lobos no distinguen entre zorros locales y forasteros cuando están.... disgustados. Y mañana estarán muy disgustados." </p>
+
+        <!-- =============== DÍA 2 - EL DÍA DEL COBRO =============== -->
+
+        <p class="texto-narrativo"> El amanecer llegó demasiado pronto. Axel se despertó con los sonidos de preparativos nerviosos filtrándose desde abajo: objetos siendo movidos, voces susurradas, el tipo de actividad frenética que habla de miedo organizado. Desde la habitación contigua, podía escuchar a Eco Pergaminada murmurando nerviosamente mientras reorganizaba sus pergaminos por tercera vez esa mañana. </p>
+
+        <p class="texto-narrativo"> Desde la ventana de su habitación, pudo ver a los zorros escondiendo sus herramientas más valiosas, enterrándolas en lugares discretos o llevándolas a sótanos ocultos. Las madres llamaban a sus cachorros, manteniéndolos cerca de las casas. Era como observar una comunidad preparándose para un desastre natural. </p>
+
+        <p class="dialogo" data-badge="murmurado con análisis observacional"> —Patrón de comportamiento de evacuación de emergencia— murmuró Eco Pergaminada desde la ventana contigua, con sus pergaminos presionados contra el cristal.— Conocimiento transmitido culturalmente sobre cómo sobrevivir a eventos catastróficos recurrentes. Fascinante desde una perspectiva antropológica.... aterrador desde una perspectiva personal." </p>
+
+        <p class="texto-narrativo"> Cuando bajaron a la forja, encontraron a Tomás que empacaba nerviosamente el equipo reparado de Axel en una bolsa de cuero. Eco Pergaminada revoloteaba ansiosamente cerca del techo, sus sentidos agudos captando sonidos que los otros aún no podían percibir. </p>
+
+        <p class="dialogo" data-badge="reportado con precisión científica"> —Frecuencias de vocalización canina a aproximadamente 3.2 kilómetros al noreste— informó Eco Pergaminada desde su posición elevada.— Patrones de comunicación coordinada. Están organizando formaciones de aproximación." </p>
+
+        <p class="dialogo urgente" data-badge="implorado con pánico apenas contenido"> —Debe irse ahora— insistió el herrero, empujando la bolsa hacia Axel.— Los lobos llegan al mediodía. No es seguro que esté aquí cuando lleguen - para ninguno de nosotros." </p>
+
+        <p class="texto-narrativo"> Seraphina bajó por las escaleras. Las voces tensas desde la forja la habían despertado. Al ver la actividad nerviosa por la ventana, la expresión preocupada de Axel, y el vuelo errático de Eco Pergaminada, sus ojos se movieron entre todos mientras procesaba rápidamente la situación. </p>
+
+        <p class="texto-narrativo"> Se acercó a la ventana y observó a los zorros que corrían. Eco Pergaminada descendió para posarse nerviosamente en su hombro. </p>
+
+        <p class="dialogo" data-badge="sussurrado con urgencia científica"> —Los patrones de movimiento sugieren una amenaza inminente de gran magnitud— murmuró Eco Pergaminada directamente al oído de Seraphina.— Mi análisis de los registros históricos locales indica que este tipo de preparación defensiva precedió eventos violéntos documentados." </p>
+
+        <p class="dialogo evaluadora" data-badge="observado con comprensión creciente"> —¿Qué está pasando exactamente?— murmuró, sus antenas moviéndose ligeramente mientras consultaba la expresión preocupada de Eco Pergaminada. </p>
+
+        <!-- La decisión de quedarse -->
+        <p class="texto-narrativo"> Axel miró por la ventana nuevamente. Vio a Rosa consolando a un cachorro zorro que lloraba porque no entendía por qué no podía jugar afuera. Vio a los zorros ancianos que habían trabajado sus forjas durante décadas ahora escondiendo las obras de arte que habían creado con tanto cuidado. </p>
+
+        <p class="dialogo decidida" data-badge="declarado con firmeza tranquila"> —No nos vamos— dijo simplemente, ajustando su arco élfico en el hombro. </p>
+
+        <p class="texto-narrativo"> Tomás lo miró con manifiesto horror, sacudiendo la cabeza violentamente. </p>
+
+        <p class="dialogo desesperada" data-badge="argumentado con pánico"> —¡No entiende! Somos herreros, no guerreros. Los Lobos de la Garra Negra son docenas. Están entrenados para dañar, organizados para la violencia. ¡Nosotros forjamos metal, no luchamos batallas!" </p>
+
+        <p class="dialogo" data-badge="añadido con precisión técnica"> —Técnicamente, eso sería 'derecho de descubrimiento por excavación'— corrigió Eco Pergaminada automáticamente, antes de ruborizarse por la interrupción inapropiada.— Disculpe, los hábitos académicos son difíciles de suprimir incluso durante.... esto." </p>
+
+        <p class="texto-narrativo"> Para sorpresa de todos, Tomás se rió - una risa genuina y estresada, pero real. </p>
+
+        <p class="dialogo" data-badge="respondido con apreciación inesperada"> —¡Una murciélago bibliotecaria! ¡Exactamente lo que necesitaba para completar mi día!— Esquivó otra lanza arrojada con práctica creciente.— ¡Supongo que podrías citarme el tratado exacto que justifica esta invasión!" </p>
+
+        <p class="dialogo" data-badge="respondido con entusiasmo involuntario"> —¡En realidad sí! El Códice de Disputas Territoriales del Consejo de Especies, sección cuarta, subsección...— Otra explosión la hizo temblar violentamente.— Oh. Esto es considerablemente más intimidante que las disputas académicas." </p>
+
+        <p class="texto-narrativo"> Seraphina se adelantó, y por primera vez desde que Axel la conocía, vio algo en sus ojos que lo sorprendió - una rabia fría que no tenía nada que ver con su propia situación. </p>
+
+        <p class="dialogo letal" data-badge="murmurado con intensidad peligrosa"> —He visto lo que la extorsión y el abuso hacen a comunidades inocentes— dijo, sus garras extendiéndose ligeramente.— He visto el miedo en los ojos de quienes no pueden defenderse. No voy a presenciar otro ejemplo y hacer nada." </p>
+
+        <!-- La llegada de los lobos -->
+        <p class="texto-narrativo"> En la distancia, el sonido de aullidos comenzó a flotar entre los picos de las montañas. No era un lobo solitario - eran muchos, y venían hacia la aldea. El sonido hizo que todos los zorros en la aldea se congelaran en sus actividades. Eco Pergaminada se tensó inmediatamente en su percha, sus alas extendidas en posición de vuelo de escape. </p>
+
+        <p class="dialogo" data-badge="analizado con precisión técnica"> —Aproximadamente dieciocho a veintidós individuos caninos de gran tamaño— murmuró Eco Pergaminada, sus sentidos auditivos calculando automáticamente.— Patrón de vocalización coordinada. Esto no es territorial - es organizacional." </p>
+
+        <p class="dialogo terrorizada" data-badge="susurrado con horror absoluto"> —Ya vienen— murmuró Rosa desde la entrada, sus orejas moviéndose hacia los sonidos distantes.— Dios de las Forjas, llegaron temprano." </p>
+
+        <p class="texto-narrativo"> Los aullidos se volvieron más cercanos y numerosos. Desde las laderas superiores, las siluetas oscuras de los Lobos de la Garra Negra comenzaron a aparecer contra el cielo del mediodía, moviéndose con la precisión de depredadores que habían perfeccionado esta rutina durante meses. </p>
+
+        <p class="texto-narrativo"> Su líder, un lobo de gran tamaño con pelaje negro mate, se detuvo en una formación rocosa que le daba ventaja visual sobre toda la aldea. Sus ojos amarillos reflejaban la confianza de quien había terrorizado esta comunidad sin oposición real. </p>
+
+        <p class="dialogo amenazante" data-badge="rugido con autoridad brutal"> —¡Zorros herreros!— Su voz rugió entre los acantilados, haciendo eco en cada rincón de la aldea.— ¡Garra Roja viene por el tributo mensual! ¡Espero ver las pilas usuales de metal precioso esperándome!" </p>
+
+        <p class="texto-narrativo"> Los otros lobos - una manada numerosa - se posicionaron estratégicamente en múltiples niveles de la aldea. Algunos en las alturas para bloquear rutas de escape, otros flanqueando desde los lados, el resto formando un frente intimidante que avanzaba directamente hacia el centro de la aldea. </p>
+
+        <p class="texto-narrativo"> Tomás salió de su forja con pasos temblorosos pero determinados. Su pelaje grisáceo brillaba con sudor de nervios, pero su voz se mantuvo firme cuando respondió al alfa. </p>
+
+        <p class="dialogo valiente" data-badge="gritado con determinación temblorosa"> —¡No hay tributo completo hoy, Garra Roja!— Su voz se quebró ligeramente.— Los últimos dos meses han sido difíciles. Algunos comerciantes evitan la ruta, los pedidos han disminuido. Solo tenemos la mitad." </p>
+
+        <p class="texto-narrativo"> El silencio que siguió fue mortal. Luego, la risa del lobo alfa resonó entre las rocas - un sonido que no contenía humor, solo la anticipación de violencia. </p>
+
+        <p class="dialogo siniestra" data-badge="respondido con crueldad divertida"> —Solo la mitad— repitió Garra Roja, descendiendo lentamente por el sendero.— Y supongo que esperan que acepte esa.... disculpa patética." </p>
+
+        <p class="texto-narrativo"> Sus ojos amarillos recorrieron la aldea con satisfacción cruel, anticipando la lección violenta que estaba a punto de enseñar a estos herreros desafiantes. </p>
+
+        <!-- El avance amenazante de los lobos -->
+        <p class="texto-narrativo"> Los lobos comenzaron su descenso hacia la aldea. Se movían como recolectores experimentados: algunos por los senderos laterales, otros manteniéndose en las alturas para bloquear escapes, el grupo principal avanzando por la calle principal. Sus pasos resonaban entre las rocas con un sonido amenazante. </p>
+
+        <p class="texto-narrativo"> En la aldea, el pánico se extendió como una ola. Las madres zorro corrieron a recoger a sus cachorros, empujándolos hacia el interior de las casas. Los herreros mayores dejaron caer sus martillos con estrépito metálico, sus manos temblando mientras observaban la formación de recolección que se acercaba. Rosa apareció en la puerta de la herrería, con los ojos muy abiertos por el terror, mientras varios zorros jóvenes se agruparon nerviosamente detrás de Tomás. Eco Pergaminada revoloteaba erráticamente cerca del techo, claramente debatiendo entre su instinto de huir y su lealtad hacia sus nuevos compañeros. </p>
+
+        <p class="texto-narrativo"> El aire se llenó de susurros desesperados: —Son demasiados",— Nunca habían traído tanta fuerza", —Nos van a masacrar". Algunos zorros intentaron esconderse detrás de barriles de carbón y pilas de metal, pero la plaza abierta ofrecía pocos refugios reales. </p>
+
+        <p class="dialogo" data-badge="murmurado con análisis táctico"> —Formación de asedio clásica— observó Eco Pergaminada desde las alturas, señalando las posiciones enemigas con movimientos nerviosos de sus alas.— Están usando la configuración de 'martillo y yunque' descrita en los Anales de Guerras Subterráneas del siglo XIV. Bloquean las salidas principales mientras aplican presión directa a las defensas centrales." </p>
+
+        <p class="texto-narrativo"> Una explosión cercana la hizo encogerse violentamente, pero su voz mantuvo el tono académico como mecanismo de defensa. </p>
+
+        <p class="dialogo" data-badge="añadido con humor nervioso"> —Claro que leer sobre tácticas de asedio en pergaminos polvorientos es considerablemente menos.... auditivamente intenso que experimentarlas en persona." </p>
+
+        <p class="texto-narrativo"> Garra Roja se detuvo a unos treinta metros de la plaza central, dejando que el silencio se extendiera. Sus lobos formaron un semicírculo amenazante, bloqueando efectivamente todas las rutas de escape. El mensaje era claro: nadie se iría hasta que él lo decidiera. </p>
+
+        <!-- Reacción discreta de los forasteros -->
+        <p class="texto-narrativo"> En medio de este caos creciente, Axel intercambió una mirada rápida con Seraphina y Eco Pergaminada. Los tres reaccionaron por instinto, pero con discreción, moviéndose silenciosamente hacia posiciones que les permitirían actuar si la situación se tornaba violenta. El gato montés subió usando la escalera externa que llevaba al techo - desde allí podría ver toda la plaza si las cosas empeoraban. Seraphina, sin llamar la atención, se colocó cerca de la entrada principal de la forja, preparada para defender a los civiles si era necesario. Eco Pergaminada, tras un momento de duda visible, voló hacia una posición elevada en las vigas del techo - no para luchar, sino para observar y documentar desde un punto de vista estratégico. </p>
+
+        <p class="dialogo" data-badge="murmurado con determinación académica"> —Si voy a presenciar violencia organizada, al menos la documentaré apropiadamente— murmuró Eco Pergaminada, sacando un pequeño pergamino y una pluma.— Los registros históricos exactos son importantes para estudios futuros.... si sobrevivimos para hacerlos." </p>
+
+        ──────────────────────────────────────────────────────────────────────────────────────
+
+        <p class="texto-narrativo"> La batalla comenzó cuando uno de los lobos más jóvenes, impaciente por la violencia prometida, saltó prematuramente hacia uno de los zorros ancianos que temblaba cerca de su forja. Axel lo interceptó con una flecha de acero que le atravesó el hombro, enviándolo rodando entre las rocas con un aullido de dolor y sorpresa. </p>
+
+        <p class="dialogo táctica" data-badge="aullado como orden"> —¡Rodéenlos desde los flancos!— rugió Garra Roja. Los lobos restantes atacaron desde varias direcciones a la vez. </p>
+
+        <p class="texto-narrativo"> La primera fase del combate favoreció a los defensores. Axel utilizó su posición elevada en el techo de la herrería para disparar flechas con precisión letal, cada disparo calculado para máxima efectividad. Los zorros conocían íntimamente su terreno - utilizando martillos pesados como mazas, barras de hierro al rojo vivo como lanzas improvisadas, y aprovechando cada nivel y escalón para crear emboscadas efectivas. </p>
+
+        <p class="dialogo" data-badge="reportado con precisión científica"> —Cuatro lobos incapacitados, seis más con heridas significativas— informó Eco Pergaminada desde su posición de observación, tomando notas rápidas.— La ventaja táctica inicial favorece claramente a los defensores debido al conocimiento territorial superior y la motivación defensiva." </p>
+
+        <p class="texto-narrativo"> Seraphina luchó con agilidad letal. Sus garras cortaban con precisión mientras su velocidad le permitía atacar desde posiciones inesperadas, manteniendo a distancia a varios lobos a la vez. </p>
+
+        <p class="texto-narrativo"> Tomás luchó con la determinación de alguien defendiendo su hogar. Su martillo de trabajo, empuñado con fuerza desesperada, se convirtió en su arma de defensa. Sus golpes conectaron solidamente, hiriendo a dos lobos y haciéndolos retroceder con aullidos de dolor. </p>
+
+        <p class="dialogo valiente" data-badge="gritado con determinación"> —¡Esto es por ocho meses de terror!— rugió Tomás, esquivando garras antes de conectar otro martillazo sólido. </p>
+
+        ────────────────────────────────────────────────────────────────────────────────────── *Al principio los defensores parecen tener ventaja, pero la experiencia de los lobos comienza a mostrar sus frutos*
+        <p class="texto-narrativo"> Al principio, parecía posible una victoria defensiva. Cuatro lobos habían caído, varios más estaban heridos, y la formación atacante había sido desorganizada por la resistencia inesperadamente feroz. </p>
+
+        <p class="texto-narrativo"> Pero Garra Roja era un depredador experimentado que había sobrevivido a múltiples conflictos territoriales. Reorganizó a su manada con la eficiencia brutal de un general veterano. </p>
+
+        <p class="dialogo" data-badge="observado con inquietud creciente"> —Cambio táctico detected— murmuró Eco Pergaminada, su pluma temblando ligeramente mientras tomaba notas.— El líder enemigo está implementando contramedidas organizadas. Esto.... esto no va a terminar bien para los defensores." </p>
+
+        <p class="dialogo táctica" data-badge="rugido como orden"> —¡Cambien de táctica!— rugió sobre el sonido del combate.— ¡Cánsenlos! ¡No ataquen de frente!" </p>
+
+        <p class="texto-narrativo"> La segunda fase reveló la experiencia superior de los atacantes. Los lobos comenzaron a utilizar tácticas coordinadas: ataques simultáneos desde múltiples direcciones, uso del terreno para crear ventajas, y lo más devastador, el cansancio gradual de sus oponentes. </p>
+
+        <p class="texto-narrativo"> Los zorros, aunque valientes, comenzaron a mostrar signos de agotamiento. Sus martillazos se volvieron menos precisos, su coordinación comenzó a fallar. Rosa recibió un corte profundo en el brazo que la forzó a retirarse. Dos zorros jóvenes cayeron cuando cinco lobos los rodearon sistemáticamente. </p>
+
+        ────────────────────────────────────────────────────────────────────────────────────── *El cansancio y la superioridad numérica comienzan a inclinar la balanza. Los gritos de los zorros heridos rompen la resistencia de los defensores*
+        <p class="texto-narrativo"> Axel, disparando flecha tras flecha, se dio cuenta de que sus proyectiles se agotaban rápidamente. Cada disparo tenía que contar, pero incluso con flechas de acero bien forjadas, no podía cubrir todos los frentes a la vez. </p>
+
+        <p class="texto-narrativo"> Seraphina, aunque letal en combate cercano, comenzó a mostrar los límites de luchar contra múltiples oponentes coordinados. Su velocidad se mantuvo, pero la fatiga empezó a afectar la precisión de sus ataques. </p>
+
+        <p class="texto-narrativo"> El punto de quiebre llegó cuando otro zorro herrero, intentando proteger a Rosa que estaba herida, fue rodeado y derribado por cinco lobos coordinados. Sus gritos de dolor resonaron entre los acantilados, creando un momento de horror que paralizó momentáneamente a los otros defensores. </p>
+
+        <p class="dialogo cruel" data-badge="rugido con sadismo"> —¡Esto es lo que pasa cuando herreros juegan a ser guerreros!— bramó Garra Roja, mientras sus lobos comenzaron a dominar sistemáticamente cada posición.— ¡La próxima vez recordarán quién los protege realmente!" </p>
+
+        <p class="texto-narrativo"> Fue entonces cuando Eco Pergaminada tomó la decisión que cambiaría todo. Desde su posición elevada, había observado la batalla con el ojo clínico de quien había archivado cientos de tratados sobre tácticas militares. Y ahora veía lo que los otros no podían: la formación de los lobos tenía un punto débil. </p>
+
+        <p class="dialogo" data-badge="explicado con análisis clínico de sí misma"> —Interesante— murmuró, observando cómo sus garras temblaban incontrolablemente.— Respuesta simpática del sistema nervioso. Aumento de adrenalina causando temblor muscular, dilatación pupilar, taquicardia. Los síntomas clásicos de activación de 'huida o lucha'.... excepto que mi sistema claramente votó unánimemente por 'huida'." </p>
+
+        <p class="dialogo" data-badge="añadido con humor autodespreciativo"> —Desafortunadamente, los años de evolución no prepararon a los murciélagos bibliotecarios para combate directo. Estamos especializados en ecolocalización de textos perdidos, no en esquivar armamento medieval." </p>
+
+        <p class="texto-narrativo"> Tomás, sangrando de múltiples heridas pero aún luchando con determinación desesperada, interceptó la mirada de Axel a través del caos de la batalla. En sus ojos, el gato montés vio algo que lo impactó: no arrepentimiento por haber resistido, sino gratitud por haber encontrado aliados dispuestos a luchar junto a ellos. </p>
+
+        <p class="dialogo valiente" data-badge="gritado con desafío"> —¡Nos defendemos con honor!— gritó el herrero, esquivando garras antes de conectar un golpe fuerte con su martillo.— ¡Ya no nosometeremos!" </p>
+
+        <p class="texto-narrativo"> Pero la realidad táctica era inexorable. Con la mayoría de los lobos aún en combate activo contra los defensores supervivientes, y varios zorros gravemente heridos, la ecuación de la batalla había cambiado irreversiblemente. </p>
+
+        ────────────────────────────────────────────────────────────────────────────────────── *Axel debe enfrentar la decisión más dolorosa de su vida: continuar luchando hasta la muerte heroica, o preservar vidas para luchar otro día*
+
+        <p class="texto-narrativo"> El momento de la decisión terrible llegó cuando Axel, desde su posición elevada, pudo observar todo el campo de batalla simultáneamente. Los zorros luchaban con valentía desesperada, pero tres ya habían caído, dos más estaban gravemente heridos, y el resto mostraba signos claros de agotamiento fatal. </p>
+
+        <p class="texto-narrativo"> El momento de la decisión terrible para Eco Pergaminada llegó cuando vio a Tomás caer bajo tres lobos coordinados. La joven murciélago había estado luchando contra su propia naturaleza durante toda la batalla, pero algo se rompió en ella al ver al herrero gentil que les había dado hospitalidad siendo brutalmente atacado. </p>
+
+        <p class="dialogo" data-badge="confesado entre lágrimas"> —No puedo.... no puedo hacer esto— sollozó Eco Pergaminada, sus pequeñas garras aferrándose al Códice.— Soy una archivista, no una guerrera. En la biblioteca, cuando los Cuervos atacaron.... me escondí. Dejé que otros murieran mientras yo me escondía entre los pergaminos." </p>
+
+        <p class="texto-narrativo"> Sus alas temblaron mientras otra explosión resonó en la distancia. El sonido del metal contra metal la hacía encogerse como si cada golpe fuera dirigido a ella. </p>
+
+        <p class="dialogo" data-badge="decidido con dolor"> —Pero el Códice.... ustedes lo necesitan para encontrar las Lágrimas. Y yo soy la única que puede leerlo completamente." </p>
+
+        <p class="dialogo realista" data-badge="murmurado con dolor"> —No podemos cambiar esto— murmuró Axel a Seraphina, las palabras saliendo como vidrio roto.— Si continuamos, no salvaremos a los zorros. Solo añadiremos nuestros cuerpos a los suyos." </p>
+
+        <p class="dialogo torturada" data-badge="respondido con anguish profunda"> —Correcto— admitió Seraphina, sus palabras cortadas por la respiración trabajosa del combate intenso.— Pero la lógica no hace que esto duela menos." </p>
+
+        <p class="texto-narrativo"> El plan de retirada tuvo que ser ejecutado rápidamente, antes de que los lobos cerraran todas las rutas de escape. Axel utilizó sus últimas flechas para crear una distracción, mientras Seraphina usó sus movimientos erráticos para despistar a los lobos cerca de la ruta occidental el tiempo suficiente para escapar. </p>
+
+        <p class="texto-narrativo"> La última imagen que Axel tuvo de la batalla fue Tomás, aún luchando con su martillo ensaviantado, gritando desafío contra Garra Roja incluso mientras era rodeado por los lobos restantes. No era una imagen de derrota, sino de dignidad mantenida hasta el final. </p>
+
+        <p class="dialogo desafiante" data-badge="gritado con última resistencia"> —¡No nos rendimos!— La voz de Tomás resonó entre los acantilados mientras continuaba luchando. </p>
+
+        ────────────────────────────────────────────────────────────────────────────────────── *Mientras se alejan de la aldea, el humo que antes marcaba trabajo honesto ahora señala destrucción y saqueo. El precio del heroísmo queda grabado en sus corazones*
+
+        <p class="texto-narrativo"> Mientras corrían por senderos de montaña que los alejaban de la aldea, los sonidos de la batalla continuaron resonando detrás de ellos - pero gradualmente se transformaron desde el caos del combate activo hacia algo más organizado, más controlado. Los lobos habían conseguido su objetivo. </p>
+
+        <p class="texto-narrativo"> Cuando finalmente se detuvieron en una formación rocosa a varios kilómetros de distancia, ambos estaban físicamente exhaustos y emocionalmente devastados. Los aullidos de los lobos aún se escuchaban en la distancia - no los gritos de batalla, sino sonidos de celebración. </p>
+
+        <p class="dialogo quebrada" data-badge="susurrado con dolor absoluto"> —No pudimos salvarlos— murmuró Axel, con las palabras saliendo como una confesión de fracaso personal.— Incluso luchando con todo lo que teníamos.... no fue suficiente." </p>
+
+        <p class="texto-narrativo"> Seraphina se sentó pesadamente contra una roca, sus garras aún extendidas pero temblando ligeramente - no de miedo, sino de una combinación de agotamiento físico y trauma emocional. </p>
+
+        <p class="dialogo devastada" data-badge="confesado con voz rota"> —He visto mucha violencia en mi vida— murmuró, y por primera vez, Axel escuchó algo en su voz que sonaba completamente vulnerable.— Pero abandonar a aliados.... eso es un tipo diferente de dolor." </p>
+
+        <p class="texto-narrativo"> En la distancia, el humo que antes indicaba trabajo ahora señalaba destrucción. </p>
+
+        <p class="dialogo reflexiva" data-badge="murmurado con amargura"> —A veces hacer lo correcto no es suficiente— murmuró Axel con amargura. </p>
+
+        <p class="dialogo final" data-badge="prometido con determinación sombría"> —Pero continuaremos— murmuró Axel, levantándose lentamente y ajustando su arco élfico en el hombro.— Encontraremos las Lágrimas de Luna. Por ellos." </p>
+
+        <p class="texto-narrativo"> Durante tres horas, refugiados en una cueva mientras la batalla rugía afuera, Eco Pergaminada compartió todo lo que recordaba. Sus garras temblaron mientras traducía los pasajes más importantes del Códice. </p>
+
+        <p class="dialogo" data-badge="recitado con precisión desesperada"> —Las Lágrimas responden a la luna llena en el Claro Celestial.... pero también aparecen en luna nueva en los Montes Sombríos. Umbra el Devorador.... tenía métodos para transferir su corrupción. Si Axel está infectado...." </p>
+
+        <p class="texto-narrativo"> Le entregó dos objetos preciosos: un cristal de memoria que contenía los conocimientos más esenciales, y un pequeño mapa dibujado en piel de murciélago con rutas secretas. </p>
+
+        <p class="dialogo" data-badge="susurrado con determinación quebrada"> —Esto es lo más valioso que puedo darles. No soy valiente como ustedes, pero puedo preservar lo que queda del conocimiento para otros que sí lo son." </p>
+
+        <p class="dialogo" data-badge="declarado con resolución temblorosa"> —Voy a buscar a los supervivientes dispersos de otras bibliotecas. Alguien debe reconstruir lo que se perdió. Alguien debe recordar los nombres de quienes murieron protegiendo el conocimiento." </p>
+
+        <p class="dialogo" data-badge="respondido con respeto profundo"> —Ese es un tipo de valor que pocos tienen— le aseguró Axel.— Preservar la memoria es tan importante como cualquier batalla." </p>
+
+        <p class="texto-narrativo"> Seraphina, sorprendentemente, se acercó a la pequeña murciélago. Por un momento, sus ojos mostraron algo parecido a la comprensión maternal. </p>
+
+        <p class="dialogo" data-badge="dicho con ternura inesperada"> —Mi madre siempre decía que los verdaderos guerreros no solo luchan. También preservan aquello por lo que vale la pena luchar." </p>
+
+        <p class="texto-narrativo"> Eco Pergaminada se alejó volando hacia el horizonte, llevando consigo los pergaminos salvados y la responsabilidad de ser la memoria viviente de una biblioteca que ya no existía. Su silueta se desvaneció entre las montañas, pero su legado permanecería con ellos. </p>
+
+        <p class="dialogo" data-badge="gritado a la distancia"> —¡Y recuerden verificar los cálculos lunares! ¡La precisión astronómica puede ser la diferencia entre salvación y catástrofe!" </p>
+
+        <p class="texto-narrativo"> Se alejaron en silencio, llevando consigo no solo la amarga lección de que no siempre es posible ganar, sino también las herramientas y conocimientos que Eco Pergaminada había sacrificado su tranquilidad para preservar. El cristal de memoria pulsaba suavemente en la mochila de Axel, un recordatorio de que algunos tipos de valor no necesitan espadas ni flechas. </p>
+
+        <p class="texto-narrativo"> Fue Seraphina quien lo vio primero: un destello verde esmeralda entre los árboles del sendero, como si la vegetación misma respirara con luz propia. El aire cambió - más denso, más dulce, cargado con el perfume de flores que no deberían existir en esta altitud. </p>
+
+        <p class="dialogo" data-badge="murmurado con fascinación nerviosa"> —Axel.... esas plantas se están moviendo. Hacia nosotros. </p>
+
+        <p class="texto-narrativo" style="text-align: center; font-style: italic; color: #d4af37"> El Jardín de Intenciones no espera a que lo visiten. El Jardín elige a sus invitados. Y lo que crece en su interior revela aquello que el corazón preferiría mantener oculto. </p>
+      </section>
+    </section>
+  </body>
 </html>
