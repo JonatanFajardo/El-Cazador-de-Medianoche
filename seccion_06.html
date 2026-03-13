@@ -3,402 +3,464 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>El Cazador de Medianoche - Capítulo 6: Templo Celestial y Resolución</title>
+    <title>Sección 6: El Jardín de Intenciones - El Cazador de Medianoche</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="historia-interactiva.css" />
+    <style>
+      .jardin-intenciones {
+        background: linear-gradient(135deg, #1a4d1a, #0d2d0d);
+        border-radius: 15px;
+        padding: 30px;
+        margin: 20px 0;
+        border: 2px solid rgba(106, 168, 79, 0.3);
+        box-shadow: 0 0 20px rgba(106, 168, 79, 0.2);
+      }
+
+      .planta-descripcion {
+        background: rgba(106, 168, 79, 0.1);
+        border-left: 4px solid #6aa84f;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 0 10px 10px 0;
+      }
+
+      .oso-dialogo {
+        background: rgba(136, 78, 160, 0.2);
+        border-radius: 20px;
+        padding: 20px;
+        margin: 15px 0;
+        border: 2px solid rgba(136, 78, 160, 0.4);
+      }
+
+      .cristal-brillante {
+        text-shadow: 0 0 5px rgba(212, 175, 55, 0.8);
+        animation: cristal-pulse 2s ease-in-out infinite alternate;
+      }
+
+      @keyframes cristal-pulse {
+        0% {
+          text-shadow: 0 0 5px rgba(212, 175, 55, 0.8);
+        }
+        100% {
+          text-shadow:
+            0 0 15px rgba(212, 175, 55, 1),
+            0 0 25px rgba(212, 175, 55, 0.5);
+        }
+      }
+
+      .umbra-susurro {
+        color: #8b0000;
+        font-style: italic;
+        background: rgba(139, 0, 0, 0.1);
+        border-left: 3px solid #8b0000;
+        padding: 10px;
+        margin: 10px 0;
+      }
+    </style>
   </head>
   <body>
     <!--
-TPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPW
-Q                      SECCIÓN 6: EL JARDÍN DE INTENCIONES                                         Q
-Q                        <:=• DÍA 6-7 =•<:                                                 Q
-`PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPc
-Q OBJETOS/HERRAMIENTAS OBTENIDAS DE CAPÍTULOS ANTERIORES:                                                       Q
-Q — Arco élfico paterno (ocasionalmente dispara flechas espectrales que infligen dolor pulsante - ahora más sensible tras eventos previos)            Q
-Q — Flechas de daño instantáneo de murciélagos (probadas en combate previo)                                             Q
-Q — Conocimiento arcano completo sobre las Lágrimas de Luna                                                      Q
-Q — Experiencia traumática de biblioteca destruida y Umbra liberado                                                  Q
-Q — Códice Lunar parcial con información sobre pruebas de los Osos                                                  Q
-Q — Eco Pergaminada Tintanegra como compañera (conoce rituales de los Osos)                                                   Q
-Q — Presencia parasitaria de Umbra en mente de Axel (creciente)                                                    Q
-Q                                                                                   Q
-Q OBJETOS/HERRAMIENTAS A OBTENER EN ESTE CAPÍTULO:                                                          Q
-Q — < OBJETIVO PRINCIPAL: Lágrimas de Cristal (llaves esenciales)                                                  Q
-Q — Comprensión profunda del verdadero carácter mediante el jardín                                                  Q
-Q — Bendición de los Osos de Cristal tras superar la prueba                                                      Q
-Q — Conocimiento sobre el Templo Celestial y sus defensas                                                       Q
-Q — Semillas del jardín que crecerán según intenciones verdaderas                                                   Q
-Q                                                                                   Q
-Q ESTADO NARRATIVO ACTUAL:                                                                      Q
-Q — Llegada a las Cuevas Brillantes después de eventos traumáticos                                                  Q
-Q — Grupo ahora incluye a Eco Pergaminada como guía especializada                                                        Q
-Q — Seraphina lleva trauma visible de presenciar destrucción de biblioteca                                              Q
-Q — Axel lucha con Umbra susurrando estrategias tácticas inquietantes                                                 Q
-Q — Mayor preparación sin embargo también mayor complejidad psicológica                                                    Q
-Q                                                                                   Q
-Q ELEMENTOS CRÍTICOS A DESARROLLAR:                                                                  Q
-Q — Prueba del Jardín de Intenciones como evaluación verdadera de carácter                                              Q
-Q — Seraphina debe pasar la prueba SIN revelar su naturaleza agresia                                                 Q
-Q — Sus plantas deben reflejar trauma auténtico, NO intenciones genocidas                                                Q
-Q — Axel debe demostrar pureza a pesar de la presencia de Umbra                                                    Q
-Q — Momento de conexión emocional auténtica antes de revelaciones futuras                                                Q
-Q                                                                                   Q
-Q PRESERVACIÓN DEL MISTERIO:                                                                     Q
-Q — Las plantas de Seraphina: rosas con espinas (trauma defensivo)                                                  Q
-Q — Interpretación de los Osos: herida profunda que genera compasión                                                 Q
-Q — Su sorpresa sincera por crear belleza será auténtica                                                       Q
-Q — Los Osos aprobarán por las razones equivocadas sin embargo correctas                                                   Q
-ZPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP]
+ELEMENTOS CRÍTICOS DE ESTE CAPÍTULO:
+— Prueba del Jardín de Intenciones como evaluación verdadera de carácter
+— Seraphina debe pasar la prueba SIN revelar su naturaleza agresiva
+— Sus plantas deben reflejar trauma auténtico, NO intenciones genocidas
+— Axel debe demostrar pureza a pesar de la presencia de Umbra
+— Momento de conexión emocional auténtica antes de revelaciones futuras
+
+OBJETOS OBTENIDOS EN ESTE CAPÍTULO:
+— Lágrimas de Cristal (llaves esenciales para el Templo Celestial)
+— Semillas del jardín que crecerán según intenciones verdaderas
+— Mapa detallado de Lyra hacia Claro Celestial
+— Bendición de los Osos de Cristal
 -->
 
-    <!doctype html>
-    <html lang="es">
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Sección 6: El Jardín de Intenciones - El Cazador de Medianoche</title>
-        <link rel="stylesheet" href="styles.css" />
-        <style>
-          .jardin-intenciones {
-            background: linear-gradient(135deg, #1a4d1a, #0d2d0d);
-            border-radius: 15px;
-            padding: 30px;
-            margin: 20px 0;
-            border: 2px solid rgba(106, 168, 79, 0.3);
-            box-shadow: 0 0 20px rgba(106, 168, 79, 0.2);
-          }
+    <div class="container">
+      <!-- =============== LLEGADA A LAS CUEVAS BRILLANTES =============== -->
+      <section id="llegada-cuevas">
+        <h1>El Cazador de Medianoche - Sección 6: El Jardín de Intenciones</h1>
 
-          .planta-descripcion {
-            background: rgba(106, 168, 79, 0.1);
-            border-left: 4px solid #6aa84f;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 0 10px 10px 0;
-          }
+        <p class="texto-narrativo"> Las plantas se inclinaron más hacia Seraphina. Mucho más.</p>
 
-          .oso-dialogo {
-            background: rgba(136, 78, 160, 0.2);
-            border-radius: 20px;
-            padding: 20px;
-            margin: 15px 0;
-            border: 2px solid rgba(136, 78, 160, 0.4);
-          }
+        <p class="texto-narrativo"> Axel extendió la mano hacia la más cercana — un helecho de hojas carnosas que no debería crecer a esta altitud. Los dedos le rozaron el borde de una hoja y sintió calor. No calor de sol. Calor de algo vivo que lo evaluaba. Retiró la mano. La hoja siguió el movimiento de sus dedos un segundo antes de soltarlo.</p>
 
-          .cristal-brillante {
-            text-shadow: 0 0 5px rgba(212, 175, 55, 0.8);
-            animation: cristal-pulse 2s ease-in-out infinite alternate;
-          }
+        <p class="texto-narrativo"> Seraphina no había tocado ninguna planta. Caminaba con los brazos pegados al cuerpo, las antenas rígidas, como si cruzara un campo de trampas en vez de un sendero de flores. Las plantas la seguían de todos modos — giraban sus tallos, estiraban raíces superficiales en su dirección, emitían ese perfume denso que le hacía arder la garganta a Axel.</p>
 
-          @keyframes cristal-pulse {
-            0% {
-              text-shadow: 0 0 5px rgba(212, 175, 55, 0.8);
-            }
-            100% {
-              text-shadow:
-                0 0 15px rgba(212, 175, 55, 1),
-                0 0 25px rgba(212, 175, 55, 0.5);
-            }
-          }
+        <p class="dialogo" data-badge="murmurado sin mirar atrás">
+          —No me gusta este lugar.
+        </p>
 
-          .umbra-susurro {
-            color: #8b0000;
-            font-style: italic;
-            background: rgba(139, 0, 0, 0.1);
-            border-left: 3px solid #8b0000;
-            padding: 10px;
-            margin: 10px 0;
-          }
-        </style>
-      </head>
-      <body>
-        <div class="container">
-          <!-- =============== LLEGADA A LAS CUEVAS BRILLANTES =============== -->
-          <section id="llegada-cuevas" class="texto-narrativo">
-            <h1>El Cazador de Medianoche - Sección 6: El Jardín de Intenciones</h1>
+        <p class="texto-narrativo"> Era la primera vez que la oía rechazar algo hermoso. Desde que la conocía, Seraphina se detenía ante las flores de montaña, acariciaba la corteza de los árboles, inclinaba las antenas hacia los aromas del bosque. Ahora caminaba como si cada pétalo fuera una acusación.</p>
 
-            <p class="texto-narrativo"> Las Cuevas Brillantes se alzaban ante ellos como catedrales de cristal natural, sin embargo el grupo que ahora se aproximaba era sumamente diferente al que había partido del Valle de los Susurradores días atrás. Las cenizas de la biblioteca destruida aún manchaban sus ropas, y el peso de los pergaminos salvados se sentía en cada paso. </p>
-
-            <p class="texto-narrativo"> Eco Pergaminada Tintanegra volaba en círculos nerviosos sobre sus cabezas, sus alas pequeñas cargando mapas y fragmentos del Códice Lunar que había memorizado antes de la destrucción. Sus conocimientos sobre los rituales de los Osos de Cristal se habían vuelto invaluables, sin embargo también cargaba el peso de ser la única superviviente que conocía los secretos antiguos. </p>
-
-            <p class="dialogo determinada" data-badge="explicado con urgencia académica"> —Los Osos no realizan la prueba inmediatamente— articuló Eco Pergaminada, consultando los pergaminos mientras volaba. —Según los textos de Eco, primero evalúan las intenciones verdaderas a través del Jardín Místico. Es.... complicado. </p>
-
-            <p class="texto-narrativo"> Axel ajustó su arco élfico, sintiendo una extraña familiaridad durante todo el ascenso hacia las cuevas. No era peligro lo que percibía - era algo más profundo, como si algo en su interior reconociera este lugar sagrado. Sin embargo, la sensación se mezclaba inquietantemente con los susurros que habían estado creciendo en intensidad desde su encuentro con el cristal agrietado. </p>
-
-            <div class="umbra-susurro">
-              <p class="dialogo espectral" data-badge="susurrado con conocimiento antiguo"> —Los Osos.... los recuerdo bien. Fueron más difíciles de manipular que otras especies. Pero su compasión puede ser.... explotada. Permíteme guiarte cuando llegue el instante. </p>
-            </div>
-
-            <p class="texto-narrativo"> Axel apretó los dientes, intentando ignorar la voz de Umbra. Había aprendido que responder solo fortalecía la presencia parasitaria, sin embargo el conocimiento táctico que susurraba era inquietantemente preciso. </p>
-
-            <p class="texto-narrativo"> Seraphina caminaba en silencio, sin embargo Axel notó que sus movimientos habían cambiado desde la biblioteca. La destrucción que habían presenciado - familias enteras de murciélagos perdidas por decisiones imposibles - había dejado marcas visibles en ella. Sus garras se cerraban ocasionalmente como si sostuviera algo invisible, y sus ojos mostraban una inquietud que antes no había visto. </p>
-
-            <p class="dialogo vulnerable" data-badge="murmurado con dolor inesperado"> —Elegimos el conocimiento sobre las vidas— declaró finalmente, sin dirigirse a nadie en particular. —Como ellos eligieron territorio sobre compasión cuando dañaron a mi familia. El ciclo nunca termina, ¿verdad?? </p>
-
-            <p class="texto-narrativo"> Era la primera vez que Axel la había oído hablar sobre su pérdida familiar con tal.... complejidad. No solo dolor, sino algo que parecía comprensión dolorosa sobre patrones más amplios. </p>
-          </section>
-          <!-- =============== EL ENCUENTRO CON LOS OSOS DE CRISTAL =============== -->
-          <section id="encuentro-osos" class="jardin-intenciones">
-            <h2>Los Guardianes Cristalizados</h2>
-
-            <p class="texto-narrativo"> La entrada a las cuevas principales estaba flanqueada por cinco figuras inmensas que al principio parecían esculturas. Los Osos de Cristal se alzaban en semi-círculo, sus formas traslúcidas capturando y refractando la luz en patrones hipnóticos. Cada uno medía al menos tres metros de altura, con extremidades poderosas congeladas en poses que sugerían tanto fuerza como sabiduría protectora. </p>
-
-            <p class="texto-narrativo"> Cuando el grupo se acercó lo suficiente, los ojos de los guardianes comenzaron a brillar con luz interior. No se movían - sus cuerpos permanecían inmóviles como el cristal que eran - sin embargo la presencia antigua y consciente era innegable. </p>
-
-            <div class="oso-dialogo">
-              <p class="dialogo ancestral cristal-brillante" data-badge="resonando desde múltiples fuentes"> —Buscadores llegan.... después de tanta destrucción.... Vemos cenizas en sus ropas y conocimiento robado del fuego. Pero también.... vemos corazones que eligieron salvar sobre huir. </p>
-            </div>
-
-            <p class="texto-narrativo"> La voz no venía de uno solo - era como si los cinco hablaran al unísono, creando armonías que resonaban en los cristales de las paredes. Eco Pergaminada se posó nerviosamente en el hombro de Axel, sus conocimientos académicos de repente sintiéndose inadecuados ante la presencia real. </p>
-
-            <div class="oso-dialogo">
-              <p class="dialogo ancestral cristal-brillante" data-badge="dirigido específicamente a Eco Pergaminada"> —Pequeña portadora de memoria.... los últimos pergaminos de Eco Pergaminada brillan en tu mente. Has llevado conocimiento a través de la pérdida. Esto es.... apreciado. </p>
-            </div>
-
-            <p class="texto-narrativo"> Eco Pergaminada tembló, sin embargo se irguió con dignidad juvenil. </p>
-
-            <p class="dialogo determinada" data-badge="declarado con respeto sin embargo firmeza"> —Honro su sabiduría, Guardianes. Estos viajeros buscan las Lágrimas de Cristal para sanar una herida profunda. He leído los textos - conozco el ritual del Jardín de Intenciones. </p>
-
-            <div class="oso-dialogo">
-              <p class="dialogo ancestral cristal-brillante" data-badge="con aprobación antigua"> —Sabiduría joven que respeta tradiciones antiguas.... Sí. El jardín revelará lo que los corazones verdaderamente cultivan. Pero primero.... deben comprender el precio del conocimiento que buscan. </p>
-            </div>
-
-            <p class="texto-narrativo"> Los ojos cristalinos se enfocaron en Axel y Seraphina con intensidad nueva. </p>
-
-            <div class="oso-dialogo">
-              <p class="dialogo ancestral cristal-brillante" data-badge="con peso profundo"> —Las Lágrimas de Luna no conceden deseos. Amplifican la verdad más profunda del corazón. Si ese corazón alberga odio.... el poder se volverá destructivo, consumiendo al usuario. Si alberga amor auténtico.... se manifestará como curación transformadora. </p>
-            </div>
-
-            <div class="umbra-susurro">
-              <p class="dialogo espectral" data-badge="susurrado con satisfacción venenosa"> —Por eso me rechazaron.... mi corazón estaba lleno de ambición de dominio. Pero el tuyo.... el tuyo está lleno de compasión. Podrías usarlas para.... fines más amplios. </p>
-            </div>
-
-            <p class="texto-narrativo"> Axel luchó por mantener compostura mientras Umbra hablaba. ¿Habían detectado los Osos la presencia parasitaria? </p>
-
-            <div class="oso-dialogo">
-              <p class="dialogo ancestral cristal-brillante" data-badge="dirigido a Axel con comprensión"> —Portador del arco ancestral.... sientes el peso de voces que no son tuyas. La herencia espiritual puede traer.... visitantes no deseados. Esto también lo evaluaremos. </p>
-            </div>
-
-            <p class="texto-narrativo"> El alivio y el terror se mezclaron en Axel. Los Osos sabían sobre Umbra, sin embargo ¿eso lo descalificaría? </p>
-
-            <div class="oso-dialogo">
-              <p class="dialogo ancestral cristal-brillante" data-badge="dirigido a Seraphina con compasión"> —Y tú, portadora de dolor profundo.... hemos visto tu especie antes. Las heridas que llevas son.... complejas. El jardín revelará si el sufrimiento se ha transformado en sabiduría.... o en algo más oscuro. </p>
-            </div>
-
-            <p class="texto-narrativo"> Seraphina se tensó casi imperceptiblemente. Axel no lo notó, sin embargo los Osos sí registraron cada micro-expresión. </p>
-          </section>
-
-          <!-- =============== EL JARDÍN DE INTENCIONES =============== -->
-          <section id="jardin-mistico" class="jardin-intenciones">
-            <h2>El Jardín de Intenciones</h2>
-
-            <p class="texto-narrativo"> Los Osos los guiaron más profundo en las cuevas, a través de túneles que brillaban con luz cristalina natural, hasta llegar a una caverna circular inmensa. En el centro se extendía lo que solo podría describirse como un jardín imposible - tierra rica y negra en pleno corazón de la montaña, iluminada por cristales que pulsaban con ritmo cardiaco. </p>
-
-            <p class="texto-narrativo"> Docenas de plantas extraordinarias crecían en parcelas perfectamente delimitadas, cada una única, cada una aparentemente imposible. Algunas brillaban con luz propia, otras cambiaban de forma pausadamente, unas pocas parecían estar hechas del mismo cristal que los guardianes. </p>
-
-            <div class="oso-dialogo">
-              <p class="dialogo ancestral cristal-brillante" data-badge="explicado con solemnidad ritual"> —Cada buscador que ha venido aquí ha dejado semillas de sus intenciones verdaderas. Este jardín cultiva la esencia de lo que verdaderamente buscan. No lo que dicen buscar.... sino lo que sus corazones más profundos desean. </p>
-            </div>
-
-            <p class="texto-narrativo"> Eco Pergaminada voló en círculos sobre el jardín, fascinada y aterrorizada. </p>
-
-            <p class="dialogo asombrada" data-badge="murmurado con admiración académica"> —Los textos mencionaban esto, sin embargo verlo.... Eco habría.... habría amado documentar cada especie. </p>
-
-            <div class="planta-descripcion">
-              <p class="texto-narrativo"> <strong>Sección de Buscadores Fallidos:</strong> En una esquina del jardín, plantas marchitas y retorcidas contaban historias de fracaso. Zarzas que se estrangulaban a sí mismas, flores que brillaban con fuego destructivo, enredaderas que habían crecido en círculos cerrados hasta asfixiarse. </p>
-            </div>
-
-            <div class="planta-descripcion">
-              <p class="texto-narrativo"> <strong>Sección de Buscadores Exitosos:</strong> En contraste, otra área mostraba plantas que irradiaban serenidad. árboles pequeños cuyos frutos brillaban con luz sanadora, flores que parecían llorar lágrimas cristalinas, hierbas que emanaban paz visible como niebla dorada. </p>
-            </div>
-
-            <div class="oso-dialogo">
-              <p class="dialogo ancestral cristal-brillante" data-badge="con instrucción ritual"> —Ahora deben plantar. Tomen estas semillas.... </p>
-            </div>
-
-            <p class="texto-narrativo"> Cristales pequeños del tamaño de nueces aparecieron flotando ante cada uno de los buscadores. No parecían semillas en absoluto, sino fragmentos de los propios Osos de Cristal. </p>
-
-            <div class="oso-dialogo">
-              <p class="dialogo ancestral cristal-brillante" data-badge="con advertencia importante"> —Estas semillas cristalizadas absorberán sus intenciones más profundas mientras las sostienen. Plántenlas donde sientan que pertenecen. Lo que crezca.... eso es lo que verdaderamente buscan. </p>
-            </div>
-
-            <p class="texto-narrativo"> Axel tomó su semilla cristalizada. Era cálida al tacto, y por un instante sintió que Umbra se retorcía incómodo en su mente. La presencia parasitaria parecía.... repelida por el cristal. </p>
-
-            <div class="umbra-susurro">
-              <p class="dialogo espectral" data-badge="susurrado con inquietud"> —Cuidado.... estos cristales pueden.... revelar más de lo que esperas. Mantún tus intenciones simples. Piensa solo en ayudar a la mantis. </p>
-            </div>
-
-            <p class="texto-narrativo"> Seraphina sostuvo su semilla con manos que temblaron ligeramente. El cristal parecía pesado en sus garras, mucho más pesado de lo que debería ser algo tan pequeño. </p>
-
-            <p class="dialogo preocupada" data-badge="murmurado con ansiedad genuina"> —¿Y si.... y si lo que crece no es lo que esperamos?" </p>
-
-            <div class="oso-dialogo">
-              <p class="dialogo ancestral cristal-brillante" data-badge="con compasión profunda"> —Entonces aprenderán algo verdadero sobre ustedes mismos. El autoconocimiento, incluso doloroso, es el primer paso hacia la sanación genuina. </p>
-            </div>
-          </section>
-
-          <!-- =============== LA PLANTACIÓN =============== -->
-          <section id="proceso-plantacion" class="jardin-intenciones">
-            <h3>Semillas de Verdad</h3>
-
-            <p class="texto-narrativo"> Axel fue el primero en acercarse a una parcela vacía. Mientras caminaba por el jardín, sintió que su semilla cristalizada se calentaba en respuesta a diferentes áreas. Cuando llegó cerca de la sección donde crecían las plantas de buscadores exitosos, la sensación se intensificó hasta convertirse casi en un canto. </p>
-
-            <p class="texto-narrativo"> Se arrodilló y excavó un pequeño hoyo en la tierra rica. Mientras colocaba la semilla, sus pensamientos se enfocaron naturalmente en Seraphina - en su dolor, en su necesidad de curación, en su historia de pérdida familiar. El deseo de ayudarla se sintió puro y simple. </p>
-
-            <p class="texto-narrativo"> Casi inmediatamente, brotes verdes emergieron de la tierra. Axel retrocedió, asombrado, mientras una planta crecía con velocidad sobrenatural ante sus ojos. </p>
-
-            <div class="planta-descripcion">
-              <p class="texto-narrativo"> <strong>La Planta de Axel:</strong> Un arbusto elegante con flores que parecían hechas de luz solar sílida. Las hojas tenían un brillo dorado suave, y de las flores goteaban ocasionalmente gotas que cristalizaban en pequeñas gemas sanadoras antes de tocar el suelo. Era hermosa, protectora, claramente benevolente. </p>
-            </div>
-
-            <div class="oso-dialogo">
-              <p class="dialogo ancestral cristal-brillante" data-badge="con aprobación cálida"> —Compasión que busca sanar sin buscar poder.... Intención pura que pone las necesidades de otros sobre las propias. Esto es.... raro en los buscadores de poder. </p>
-            </div>
-
-            <p class="texto-narrativo"> Axel se sintió aliviado, sin embargo también confundido. ¿Por qué Umbra no había afectado el resultado? Como si respondiera a su pregunta, la voz murmuró: </p>
-
-            <div class="umbra-susurro">
-              <p class="dialogo espectral" data-badge="susurrado con frustración"> —Tu intención hacia ella es genuina.... eso es lo que el cristal lee. No puede detectar.... planes más amplios que aún no has formado. </p>
-            </div>
-
-            <p class="texto-narrativo"> Ahora era el turno de Seraphina. Se acercó al jardín con pasos más lentos, claramente nerviosa. Su semilla cristalizada había comenzado a emanar un calor incómodo en sus garras. </p>
-
-            <p class="texto-narrativo"> Mientras caminaba, se sentía extrañamente atraída hacia el área entre las plantas exitosas y las fallidas - un espacio neutral que parecía esperar algo específico. </p>
-
-            <p class="texto-narrativo"> Cuando finalmente se arrodilló para plantar, sus pensamientos fueron un torbellino. Imágenes de su madre real - no la estatua de la mentira, sino memorias genuinas de calor y seguridad perdidos. El dolor del ataque que destrozó su vida. Pero también, inesperadamente, memorias recientes de Axel mostrándole bondad, de Eco Pergaminada confiando en ella para protegerla durante el combate con los cuervos. </p>
-
-            <p class="texto-narrativo"> Cuando la semilla tocó la tierra, algo extraordinario sucedió. </p>
-
-            <div class="planta-descripcion">
-              <p class="texto-narrativo"> <strong>La Planta de Seraphina:</strong> Una rosa compleja e imposible. Las raíces eran espinas negras que se hundían profundamente en la tierra, sin embargo el tallo crecía fuerte y recto. Las hojas tenían un tinte rojizo que sugería tanto savia como pasión. Las flores eran lo más extraordinario - rosas perfectas de color rojo profundo, hermosas más allá de la descripción, sin embargo cada una rodeada de un collar de espinas que brillaban con un lustre que sugería veneno. </p>
-            </div>
-
-            <p class="texto-narrativo"> Seraphina se quedó inmóvil, mirando su planta con expresión de franco shock. </p>
-
-            <p class="dialogo vulnerable" data-badge="susurrado con asombro doloroso"> —No esperaba.... no creí que quedara algo así en mí. </p>
-
-            <p class="texto-narrativo"> Las flores eran genuinamente hermosas, irradiando una fragancia que hablaba de amor profundo y anhelo de conexión. Pero las espinas venenosas hablaban de métodos desarrollados para proteger ese amor a cualquier costo. </p>
-
-            <div class="oso-dialogo">
-              <p class="dialogo ancestral cristal-brillante" data-badge="con comprensión profunda"> —Dolor que se protege con armas.... sin embargo que aún puede crear belleza. Las heridas más profundas a menudo generan las defensas más letales. Pero vemos.... vemos que la capacidad de amar persiste debajo de la protección. </p>
-            </div>
-
-            <p class="texto-narrativo"> Axel se acercó a Seraphina, tocando gentilmente una de las flores de su planta. Era suave, cálida, genuinamente hermosa. </p>
-
-            <p class="dialogo cálido" data-badge="dicho con comprensión renovada"> —Has pasado por tanto dolor.... sin embargo mira, aún crece belleza en ti. Las espinas no te hacen menos hermosa - solo más.... real. </p>
-
-            <p class="texto-narrativo"> Por un instante, Seraphina lo miró como si nunca antes hubiera escuchado palabras como esas. Su conflicto interno se intensificó - ¿cómo podía alguien como él decir eso sobre alguien como ella? </p>
-
-            <div class="oso-dialogo">
-              <p class="dialogo ancestral cristal-brillante" data-badge="con decisión ceremonial"> —El jardín ha revelado corazones que, a pesar del dolor y la complejidad, buscan conexión y sanación genuinas. Esto es.... suficiente. Las Lágrimas de Cristal pueden ser otorgadas. </p>
-            </div>
-          </section>
-
-          <!-- =============== LA OTORGACIÓN DE LAS LÁGRIMAS DE CRISTAL =============== -->
-          <section id="otorgacion-lagrimas" class="jardin-intenciones">
-            <h3>Las Llaves del Templo</h3>
-
-            <p class="texto-narrativo"> Los cinco Osos de Cristal se movieron por primera vez, sus formas traslúcidas desplazándose con gracia fluida hacia el centro del jardín. Donde antes había solo tierra vacía, ahora se elevó una pequeña plataforma de cristal puro. </p>
-
-            <p class="texto-narrativo"> Sobre la plataforma aparecieron tres objetos que brillaban con luz interior: lágrimas perfectas hechas de cristal sílido, cada una del tamaño del pulgar, cada una pulsando con ritmo cardiaco propio. </p>
-
-            <div class="oso-dialogo">
-              <p class="dialogo ancestral cristal-brillante" data-badge="con solemnidad ritual"> —Estas son las Lágrimas de Cristal - fragmentos de nuestro propio ser, otorgadas solo a aquellos que han demostrado que buscan sanar más que controlar. </p>
-            </div>
-
-            <p class="texto-narrativo"> Eco Pergaminada voló en un círculo reverente alrededor de la plataforma. </p>
-
-            <p class="dialogo asombrada" data-badge="murmurado con admiración académica"> —Los textos eran ciertos.... son hermosas más allá de las palabras. </p>
-
-            <div class="oso-dialogo">
-              <p class="dialogo ancestral cristal-brillante" data-badge="con advertencia importante"> —Pero recuerden - estas son solo las llaves. Las verdaderas Lágrimas de Luna responderán a lo que verdaderamente hay en sus corazones cuando las encuentren. Si ese corazón ha cambiado para entonces.... el resultado también cambiará. </p>
-            </div>
-
-            <p class="texto-narrativo"> Seraphina se tensó ligeramente ante esas palabras, sin embargo Axel no lo notó. Estaba demasiado enfocado en el alivio y la esperanza. </p>
-
-            <div class="oso-dialogo">
-              <p class="dialogo ancestral cristal-brillante" data-badge="dirigido específicamente a Axel"> —Portador del arco ancestral.... la presencia que llevas se debilitará cerca del Templo Celestial. Los lugares sagrados repelen a los parásitos espirituales. Usa ese tiempo sabiamente. </p>
-            </div>
-
-            <div class="umbra-susurro">
-              <p class="dialogo espectral" data-badge="susurrado con irritación creciente"> —Malditos guardianes.... siempre interfiriendo. Pero no importa. Una vez que tengas las Lágrimas verdaderas en tus manos.... </p>
-            </div>
-
-            <div class="oso-dialogo">
-              <p class="dialogo ancestral cristal-brillante" data-badge="dirigido a Seraphina"> —Y tú, portadora de rosas espinosas.... recuerda que las defensas creadas en dolor pueden transformarse en puentes hacia la curación. El jardín ha mostrado que la belleza persiste en ti. Cultúvala." </p>
-            </div>
-
-            <p class="texto-narrativo"> Cuando Axel tomó las Lágrimas de Cristal, sintieron extrañamente familiares en sus manos - como si hubieran estado esperándolo específicamente. Brillaron más intensamente al contacto, resonando con alguna frecuencia profunda que él pudo sentir hasta en sus huesos. </p>
-
-            <p class="texto-narrativo"> Seraphina observó la ceremonia con expresiones complejas cruzando su rostro. Gratitud genuina, sin embargo también algo que parecía ser conflicto interno intensificóndose. El jardín había mostrado que aún podía crear belleza - sin embargo ¿qué significaba eso para sus planes? </p>
-
-            <div class="oso-dialogo">
-              <p class="dialogo ancestral cristal-brillante" data-badge="con bendición final"> —Vayan ahora hacia el Templo Celestial. El camino se revelará bajo la próxima luna llena. Y recuerden - las verdaderas lágrimas conocen la diferencia entre sanación y venganza, entre amor y obsesión. </p>
-            </div>
-
-            <!-- =============== ENCUENTRO CON LA CARTÓGRAFA =============== -->
-            <section id="lyra-en-cuevas">
-              <h4>Mapas y Frecuencias Cristalinas</h4>
-
-              <p class="texto-narrativo"> Mientras descendían por los senderos rocosos que llevaban lejos de las Cuevas Brillantes, Axel se detuvo en seco al escuchar un sonido familiar: el tintinear distintivo de instrumental cartográfico chocando contra roca. </p>
-
-              <p class="dialogo" data-badge="murmurado con reconocimiento"> —Eso suena como.... </p>
-
-              <p class="texto-narrativo"> Al volver una curva del sendero, los encontraron: Lyra estaba sentada sobre una formación rocosa, con sus mapas desplegados y una brújula especial que había visto antes. Pero esta vez tenía algo diferente - cristales pequeños del tamaño de monedas que brillaban con luz similar a las Lágrimas de Cristal que acababan de obtener. </p>
-
-              <p class="dialogo" data-badge="exclamado con sorpresa y franco placer"> —¡El arquero nervioso!— Lyra levantó la vista con una sonrisa inmediata. —Y justo a tiempo. Estaba teniendo problemas con estas frecuencias cristalinas. </p>
-
-              <p class="texto-narrativo"> Axel sintió esa familiar aceleración del corazón al ver su sonrisa, sin embargo ahora también notó cómo la presencia de Lyra parecía.... calmar los susurros de Umbra en su mente. </p>
-
-              <p class="dialogo" data-badge="respondido con curiosidad"> —¿Qué estás haciendo aquí? Y esos cristales...." </p>
-
-              <p class="dialogo" data-badge="explicado mientras trabajaba"> —Mapeando cambios en las resonancias mágicas de la región. Algo grande está alterando las frecuencias naturales - probablemente el Templo Celestial moviéndose con los ciclos lunares.— Sus garras manipularon expertamente los cristales de calibración. —Pero estos pequeños no pueden leer las frecuencias más profundas que necesito. </p>
-
-              <p class="texto-narrativo"> Los ojos de Lyra se dirigieron hacia la pequeña bolsa donde Axel guardaba las Lágrimas de Cristal, y sus oídos se irguieron ligeramente. </p>
-
-              <p class="dialogo" data-badge="preguntado con interés"> —¿Ese es el sonido que creo que es? ¿Conseguiste acceso a los Osos de Cristal?" </p>
-
-              <p class="dialogo" data-badge="respondido con orgullo apenas contenido"> —Pasamos la prueba del Jardín de Intenciones— confirmó Axel, inconsciente de cómo su postura se enderezó al decirlo—. </p>
-
-              <p class="dialogo" data-badge="respondido con admiración genuina"> —Impresionante. Muy poca gente ha logrado eso en las últimas décadas.— Sus ojos brillaron con respeto renovado. —¿Puedo.... podrían ayudarme con las calibraciones? Las Lágrimas de Cristal auténticas podrían resolver mis problemas de frecuencia. </p>
-
-              <p class="texto-narrativo"> Seraphina observó el intercambio con interés creciente, notando cómo Lyra parecía genuinamente competente y cómo la tensión en los hombros de Axel se relajaba visiblemente en su presencia. </p>
-
-              <p class="dialogo" data-badge="ofrecido con cooperación dispuesta"> —Por supuesto. ¿Qué necesitas? </p>
-
-              <p class="texto-narrativo"> Durante los siguientes minutos, Lyra usó las Lágrimas de Cristal como puntos de referencia para calibrar su equipo cartográfico. Sus movimientos eran precisos y seguros, y Axel encontró hipnotizante la forma en que sus garras manipulaban los instrumentos delicados. </p>
-
-              <p class="dialogo" data-badge="murmurado con concentración"> —Perfecto.... esta resonancia indica que el Templo se manifestará en Claro Celestial durante la próxima luna llena. Tres días desde ahora. </p>
-
-              <p class="dialogo" data-badge="ofrecido generosamente"> —Toma esto— declaró Lyra, entregándole a Axel un mapa muy detallado. —Rutas directas al Claro Celestial. Evitarás las patrullas de Cuervos de Ónice que aún andan por la región. </p>
-
-              <p class="texto-narrativo"> Cuando sus garras se tocaron brevemente durante la transferencia del mapa, Axel sintió una chispa de.... algo. Calma, comprensión, una sensación de que ella verdaderamente lo veía sin juzgar. </p>
-
-              <p class="dialogo" data-badge="preguntado con curiosidad creciente"> —¿Seguirás mapeando estas montañas?" </p>
-
-              <p class="dialogo" data-badge="respondido con una sonrisa misteriosa"> —Por ahora. Pero algo me dice que nuestros caminos se cruzarán otra vez antes de que tu búsqueda termine.— Sus ojos se suavizaron momentáneamente. —Cuídense mucho. El Templo Celestial.... cambia a quienes lo visitan. No siempre de formas que esperan. </p>
-
-              <p class="dialogo" data-badge="comentado con diversión sutil"> —Y aquí pensaba que este era un encuentro casual— articuló Seraphina, sin embargo su comentario se perdió cuando Eco Pergaminada comenzó a hacer preguntas técnicas sobre cartografía mágica. </p>
-
-              <p class="texto-narrativo"> Mientras se despedían y continuaron senderos separados, Axel guardó meticulosamente el nuevo mapa de Lyra junto a los anteriores. Seraphina notó que parecía cuidar esos pergaminos tanto como las Lágrimas de Cristal. </p>
-            </section>
-
-            <p class="texto-narrativo"> Continuaron alejándose de las Cuevas Brillantes, cargando las llaves sagradas y bendecidos por los guardianes antiguos, sin embargo ahora también con nuevas direcciones precisas hacia su destino final. Ninguno de ellos podía predecir cómo esas palabras de advertencia de Lyra sobre el Templo resonarían cuando finalmente encontraran las verdaderas Lágrimas de Luna. </p>
-
-            <p class="texto-narrativo"> El jardín detrás de ellos continuó creciendo, las plantas de Axel irradiando luz sanadora, las de Seraphina desarrollando tanto flores más hermosas como espinas más letales, como si reflejaran un conflicto interno que se intensificaba con cada paso hacia su destino final. </p>
-          </section>
-
-          <!-- =============== NOTAS DE CONTINUIDAD =============== -->
-          <div class="nota-continuidad" style="background: rgba(66, 66, 66, 0.3); padding: 20px; margin: 30px 0; border-radius: 10px; font-style: italic; color: #ccc">
-            <h4>Notas para continuidad narrativa:</h4>
-            <p>— Las plantas del jardín prefiguran el conflicto interno final de Seraphina</p>
-            <p>— Los Osos aprueban a Seraphina por las razones correctas sin embargo incompletas</p>
-            <p>— La presencia de Umbra se debilitará cerca del Templo, dando a Axel claridad mental para la revelación</p>
-            <p>— Las Lágrimas de Cristal resonarán específicamente con el arco élfico paterno</p>
-            <p>— El jardín establece que Seraphina AÚN tiene capacidad genuina de crear belleza/amor</p>
-          </div>
+        <div class="umbra-susurro">
+          <p class="dialogo" data-badge="fragmento inconexo">
+            .... plantas que leen.... que abren lo que guardas....
+          </p>
         </div>
 
-        <script src="global-reset.js"></script>
-      </body>
-    </html> </body
-></html>
+        <p class="texto-narrativo"> Axel apretó los dientes. Desde la biblioteca de los murciélagos, Umbra había cambiado. Ya no susurraba estrategias completas — ahora soltaba fragmentos, imágenes rotas, como un cristal agrietado que refractaba la luz en direcciones impredecibles. Peor, porque no podía saber qué era cierto y qué era ruido.</p>
+
+        <p class="texto-narrativo"> El sendero se estrechó entre paredes de roca cubiertas de musgo luminiscente. Las cenizas de la biblioteca destruida aún manchaban sus ropas — nadie las había limpiado, como si hacerlo fuera admitir que todo eso había ocurrido realmente. El peso de los pergaminos salvados se sentía en cada paso. Eco Pergaminada ya no estaba para traducirlos. Eso también pesaba.</p>
+
+        <p class="texto-narrativo"> Las Cuevas Brillantes aparecieron sin aviso. Un momento caminaban entre roca y musgo; al siguiente, el sendero se abrió a una entrada que parecía tallada por algo que entendía la geometría mejor que cualquier herrero zorro. Cristales naturales del tamaño de Axel flanqueaban la boca de la cueva, y dentro, la luz no venía de ningún lugar específico — simplemente existía, como si el aire mismo recordara cómo brillar.</p>
+
+        <p class="texto-narrativo"> El arco élfico vibró. No la vibración de peligro que Axel conocía bien. Algo más grave, más profundo, como la nota baja de una flauta que resonara en los huesos. Axel puso la mano sobre la madera y la sintió caliente. Viva. Reconociendo algo.</p>
+
+        <p class="dialogo" data-badge="murmurado con la mano en el arco">
+          —Este lugar conoce el arco. O el arco conoce este lugar.
+        </p>
+
+        <p class="texto-narrativo"> Seraphina se detuvo en el umbral. Las plantas del exterior la habían seguido hasta aquí — las últimas enredaderas se extendían hacia ella como dedos verdes a lo largo de la roca. Pero no cruzaban la entrada. Algo dentro de las cuevas las detenía.</p>
+
+        <p class="texto-narrativo"> Ella respiró hondo. Cruzó.</p>
+      </section>
+
+      <!-- =============== EL ENCUENTRO CON LOS OSOS DE CRISTAL =============== -->
+      <section id="encuentro-osos" class="jardin-intenciones">
+        <h2>Los Guardianes Cristalizados</h2>
+
+        <p class="texto-narrativo"> Los confundió con esculturas durante los primeros veinte pasos. Cinco formas translúcidas de tres metros de altura flanqueaban la caverna principal, inmóviles como el cristal que las componía, atrapando la luz interior en patrones que se movían solos. Patas enormes plantadas en la roca. Hocicos alzados. Ojos cerrados.</p>
+
+        <p class="texto-narrativo"> Axel estaba estudiando las fracturas en la superficie del más cercano — parecían venas, no grietas — cuando los ojos se abrieron.</p>
+
+        <p class="texto-narrativo"> No fue un movimiento rápido. Fue como ver amanecer concentrado en dos puntos de luz violeta que lo encontraron, lo evaluaron y decidieron que podía seguir respirando. Todo en el tiempo que tardó Axel en dar un paso atrás y poner la mano en el arco por instinto.</p>
+
+        <p class="texto-narrativo"> Los otros cuatro abrieron los ojos a la vez. La caverna se llenó de una resonancia que no era sonido — era presión, como sumergirse en agua profunda. Seraphina se llevó las garras a las antenas. Axel sintió que Umbra se encogía en algún rincón de su mente, repentinamente silencioso.</p>
+
+        <div class="oso-dialogo">
+          <p class="dialogo cristal-brillante" data-badge="resonando desde múltiples fuentes">
+            —Cenizas en la ropa. Conocimiento robado del fuego. Y un arco que no hemos sentido en.... mucho tiempo.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> La voz no venía de uno solo. Era coral — cinco timbres distintos que se trenzaban como cuerdas de un instrumento. El más grave retumbaba en el suelo; el más agudo hacía tintinear los cristales de las paredes.</p>
+
+        <div class="oso-dialogo">
+          <p class="dialogo cristal-brillante" data-badge="dirigido a Axel con peso">
+            —Portador del arco ancestral. El último que lo cargó hasta aquí tenía tu misma mandíbula. Tu mismo modo de tocarlo cuando tiene miedo.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Axel retiró la mano del arco como si quemara. Su padre. Habían conocido a su padre. La información le golpeó el pecho antes de que pudiera procesarla. Quiso preguntar — cuándo, cómo, por qué nunca volvió — pero los Osos ya habían movido su atención.</p>
+
+        <div class="oso-dialogo">
+          <p class="dialogo cristal-brillante" data-badge="dirigido a Seraphina">
+            —Y tú llevas heridas que reconocemos. Hemos visto tu especie antes. Las que vinieron con dolor genuino y las que vinieron con dolor disfrazando otra cosa.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Seraphina sostuvo la mirada de los diez ojos violetas sin parpadear. Su cuerpo estaba perfectamente quieto — demasiado quieto, como la superficie de un lago justo antes de que algo emerja.</p>
+
+        <p class="dialogo" data-badge="respondido con voz pareja">
+          —Mi dolor no es un disfraz.
+        </p>
+
+        <p class="texto-narrativo"> Los Osos no respondieron a eso. No directamente. El más grande — el del timbre más grave — inclinó apenas la cabeza, y la luz de sus ojos cambió de violeta a un ámbar cálido, como si ajustara la frecuencia con la que la observaba.</p>
+
+        <div class="oso-dialogo">
+          <p class="dialogo cristal-brillante" data-badge="con decisión ceremonial">
+            —El jardín lo dirá. Las palabras mienten. Las intenciones mienten. Las semillas, no.
+          </p>
+        </div>
+
+        <div class="umbra-susurro">
+          <p class="dialogo" data-badge="fragmento distorsionado">
+            .... semillas.... la última vez que.... rechazaron.... quemó....
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Axel tragó saliva. Umbra estaba más débil aquí — los fragmentos eran menos coherentes, más distantes — pero incluso los fragmentos cargaban implicaciones que no quería examinar.</p>
+      </section>
+
+      <!-- =============== EL JARDÍN DE INTENCIONES =============== -->
+      <section id="jardin-mistico" class="jardin-intenciones">
+        <h2>El Jardín de Intenciones</h2>
+
+        <p class="texto-narrativo"> Los Osos no caminaban — se desplazaban, como si la roca bajo sus patas fuera hielo. Los guiaron a través de túneles que brillaban con luz cristalina natural, las paredes pulsando suavemente a su paso, hasta una caverna circular que le cortó la respiración a Axel.</p>
+
+        <p class="texto-narrativo"> Un jardín imposible. Tierra negra y rica en el corazón de la montaña, iluminada por cristales que latían con ritmo cardíaco. No un jardín decorativo — un jardín de verdad, con la densidad desordenada de algo que crece porque necesita crecer. Plantas que brillaban con luz propia junto a otras que absorbían la luz a su alrededor. Algunas cambiaban de forma tan lentamente que solo lo notabas si dejabas de mirar y volvías. Unas pocas parecían hechas del mismo cristal que los guardianes.</p>
+
+        <p class="texto-narrativo"> Pero lo que hizo que Axel se detuviera fue la sección del fondo.</p>
+
+        <div class="planta-descripcion">
+          <p class="texto-narrativo"> Plantas marchitas y retorcidas que contaban historias sin necesitar palabras. Zarzas que se estrangulaban a sí mismas. Flores que ardían con fuego perpetuo, consumiéndose sin consumirse. Enredaderas que habían crecido en círculos cerrados hasta asfixiarse en su propio abrazo. Cada una había sido sembrada por alguien que vino aquí buscando las Lágrimas de Cristal. Cada una había revelado algo que su dueño no quería ver.</p>
+        </div>
+
+        <p class="texto-narrativo"> En contraste, la sección opuesta irradiaba serenidad. Árboles pequeños cuyos frutos goteaban luz líquida. Flores que lloraban lágrimas cristalinas que se evaporaban antes de tocar el suelo. Hierbas que emanaban una calma visible como niebla dorada.</p>
+
+        <p class="texto-narrativo"> Seraphina miraba las plantas fracasadas. No las exitosas. Las fracasadas. Como si buscara algo familiar entre ellas.</p>
+
+        <div class="oso-dialogo">
+          <p class="dialogo cristal-brillante" data-badge="con instrucción ritual">
+            —Cada buscador deja semillas de lo que verdaderamente busca. No lo que dice buscar. Lo que su corazón más profundo cultiva en silencio.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Cristales pequeños del tamaño de nueces flotaron hasta las manos de cada uno. No parecían semillas — parecían fragmentos de los propios Osos, tibios y pulsantes.</p>
+
+        <p class="texto-narrativo"> Axel cerró los dedos alrededor del suyo. Era cálido. Y por un instante, Umbra se retorció — no habló, no susurró, simplemente se contrajo como algo que recibe luz cuando prefiere la oscuridad.</p>
+
+        <p class="texto-narrativo"> Seraphina sostuvo su semilla con las garras ligeramente temblorosas. El cristal pesaba más de lo que debería pesar algo tan pequeño. Mucho más.</p>
+
+        <p class="dialogo" data-badge="murmurado con ansiedad genuina">
+          —¿Y si lo que crece no es lo que esperamos?
+        </p>
+
+        <div class="oso-dialogo">
+          <p class="dialogo cristal-brillante" data-badge="con tono directo">
+            —Entonces aprenderán algo verdadero. El autoconocimiento duele. También es el primer paso hacia cualquier sanación que no sea mentira.
+          </p>
+        </div>
+      </section>
+
+      <!-- =============== LA PLANTACIÓN =============== -->
+      <section id="proceso-plantacion" class="jardin-intenciones">
+        <h3>Semillas de Verdad</h3>
+
+        <p class="texto-narrativo"> Axel fue primero. La semilla se calentó mientras caminaba por el jardín, respondiendo a diferentes áreas como una brújula que señalara norte. Cerca de las plantas exitosas, el calor se convirtió en vibración — casi un canto. Se arrodilló ahí.</p>
+
+        <p class="texto-narrativo"> Excavó con las manos. La tierra estaba tibia y viva bajo sus garras. Mientras colocaba la semilla, sus pensamientos se enfocaron sin esfuerzo en Seraphina: su dolor al hablar de su familia, la forma en que se encogía cuando creía que nadie la miraba, la necesidad de curarla que se había convertido en algo más parecido a una promesa que a una misión. El arco vibró suavemente en su espalda, como si aprobara.</p>
+
+        <p class="texto-narrativo"> Brotes verdes emergieron antes de que retirara las manos de la tierra.</p>
+
+        <div class="planta-descripcion">
+          <p class="texto-narrativo"> Un arbusto que crecía con urgencia serena — no explosivo, no ansioso, sino con la determinación de algo que sabe exactamente lo que quiere ser. Flores de luz solar sólida se abrieron entre hojas doradas. De los pétalos goteaban gotas que cristalizaban en gemas diminutas antes de tocar el suelo — réplicas en miniatura de las Lágrimas de Cristal.</p>
+        </div>
+
+        <div class="oso-dialogo">
+          <p class="dialogo cristal-brillante" data-badge="con aprobación medida">
+            —Compasión que busca sanar sin buscar poder. Raro en quienes cargan arcos.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Axel exhaló. No se había dado cuenta de que estaba conteniendo el aliento. Una parte de él había temido que Umbra contaminara el resultado — que la semilla produjera algo retorcido, algo que delatara la voz parasitaria en su cabeza.</p>
+
+        <div class="umbra-susurro">
+          <p class="dialogo" data-badge="fragmento apenas audible">
+            .... genuino.... eso leen.... no pueden ver lo que aún no....
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> El fragmento se disolvió. Axel no supo si sentir alivio o alarma.</p>
+
+        <p class="texto-narrativo"> Seraphina se acercó al jardín con pasos medidos, como quien camina sobre hielo fino. Su semilla emanaba un calor incómodo — Axel podía ver cómo reajustaba las garras alrededor del cristal cada pocos segundos, como si quemara y no pudiera soltarlo.</p>
+
+        <p class="texto-narrativo"> No fue hacia la sección exitosa ni hacia la fracasada. Caminó hasta un espacio entre ambas — tierra neutra, vacía, esperando. Se arrodilló despacio.</p>
+
+        <p class="texto-narrativo"> Plantó. Y cerró los ojos.</p>
+
+        <p class="texto-narrativo"> Axel la observó. Sus antenas temblaban — no con el temblor delicado de cuando detectaba peligro, sino con algo más profundo, como si algo dentro de ella estuviera siendo arrancado de raíz y replantado a la fuerza. Sus garras se hundieron en la tierra alrededor de la semilla y no se movieron.</p>
+
+        <p class="texto-narrativo"> Lo que creció fue lento. No como la planta de Axel, que había brotado con confianza. Esto emergió con cautela, como un animal saliendo de una madriguera después de una tormenta.</p>
+
+        <div class="planta-descripcion">
+          <p class="texto-narrativo"> Un rosal. Raíces negras que se hundían en la tierra con ferocidad, como si temieran ser arrancadas. El tallo creció recto y fuerte, con un tinte rojizo que sugería savia espesa. Las hojas eran oscuras, casi violetas. Y las flores — rosas de un rojo tan profundo que parecía líquido, perfectas hasta doler la vista, cada una rodeada por un collar de espinas que brillaban con un lustre que no era sólo defensa. Las espinas emanaban algo que hacía que las otras plantas cercanas se inclinaran ligeramente lejos.</p>
+        </div>
+
+        <p class="texto-narrativo"> Seraphina abrió los ojos. Miró su planta. No se movió durante un tiempo largo.</p>
+
+        <p class="dialogo" data-badge="susurrado casi para sí misma">
+          —No esperaba.... no creí que quedara algo así en mí.
+        </p>
+
+        <p class="texto-narrativo"> Las flores eran genuinamente hermosas. La fragancia que emanaban hablaba de algo que Axel no tenía palabras para nombrar — una mezcla de nostalgia y anhelo tan intensa que le apretó la garganta. Pero las espinas contaban otra historia. Un amor que se protege con veneno. Una belleza que hiere a quien se acerca demasiado.</p>
+
+        <div class="oso-dialogo">
+          <p class="dialogo cristal-brillante" data-badge="con comprensión medida">
+            —Dolor que se protege con armas. Las heridas más profundas generan las defensas más letales. Pero la capacidad de crear belleza persiste debajo.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Axel se acercó. Extendió la mano hacia una de las rosas, despacio, y tocó un pétalo. Era suave. Cálido. Genuino. Una espina le rozó el dorso de la mano y sintió un pinchazo agudo seguido de un adormecimiento que subió por la muñeca antes de disiparse.</p>
+
+        <p class="dialogo" data-badge="dicho mirando la rosa, no a ella">
+          —Mira lo que creció de ti. Las espinas no te hacen menos real. Solo más.... honesta.
+        </p>
+
+        <p class="texto-narrativo"> Seraphina lo miró. Y por un instante — un instante que duró exactamente lo que tarda un corazón en latir una vez — sus ojos perdieron toda la cautela, toda la contención, todo lo que usaba como armadura. Lo miró como si nadie le hubiera dicho algo así en años. Como si la palabra "honesta" fuera lo más peligroso que podía escuchar.</p>
+
+        <p class="texto-narrativo"> Luego parpadó. Y la armadura volvió, tan rápido que Axel no estuvo seguro de haber visto lo que creyó ver.</p>
+
+        <div class="oso-dialogo">
+          <p class="dialogo cristal-brillante" data-badge="con decisión ceremonial">
+            —El jardín ha revelado corazones que buscan conexión y sanación. A pesar del dolor. A pesar de la complejidad. Esto es suficiente. Las Lágrimas de Cristal pueden ser otorgadas.
+          </p>
+        </div>
+      </section>
+
+      <!-- =============== LA OTORGACIÓN DE LAS LÁGRIMAS DE CRISTAL =============== -->
+      <section id="otorgacion-lagrimas" class="jardin-intenciones">
+        <h3>Las Llaves del Templo</h3>
+
+        <p class="texto-narrativo"> Los cinco Osos se movieron por primera vez — un desplazamiento fluido que no producía sonido, como si la roca bajo ellos se apartara por respeto. Convergieron en el centro del jardín. Donde antes había tierra vacía, se elevó una plataforma de cristal puro, creciendo desde el suelo como una flor geométrica.</p>
+
+        <p class="texto-narrativo"> Tres objetos descansaban sobre ella. Lágrimas perfectas de cristal sólido, cada una del tamaño del pulgar de Axel, cada una pulsando con ritmo propio — tres corazones diminutos latiendo a destiempo.</p>
+
+        <div class="oso-dialogo">
+          <p class="dialogo cristal-brillante" data-badge="con solemnidad ritual">
+            —Fragmentos de nuestro propio ser. Otorgadas solo a quienes demuestran que buscan sanar más que controlar. Son las llaves del Templo Celestial. No son las Lágrimas de Luna — son lo que las abre.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> El más grande de los Osos — el de voz grave — giró sus ojos ámbar hacia Axel.</p>
+
+        <div class="oso-dialogo">
+          <p class="dialogo cristal-brillante" data-badge="dirigido a Axel">
+            —La presencia que cargas se debilitará cerca del Templo. Los lugares sagrados repelen a los parásitos espirituales. Usa ese tiempo de claridad sabiamente. No durará.
+          </p>
+        </div>
+
+        <div class="umbra-susurro">
+          <p class="dialogo" data-badge="fragmento irritado">
+            .... malditos.... siempre.... no importa, una vez que....
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> El fragmento se cortó. Los cristales de la caverna emitieron un pulso más intenso, y Umbra se replegó como algo que retrocede ante la llama.</p>
+
+        <p class="texto-narrativo"> Cuando Axel tomó las Lágrimas de Cristal, sintió algo que no esperaba: familiaridad. Como sostener la mano de alguien que conoces antes de verle la cara. Las llaves brillaron más al contacto con sus dedos y emitieron una vibración que subió por los brazos y se instaló en el pecho, exactamente donde el arco élfico resonaba cuando detectaba peligro. Excepto que esto no era peligro. Era reconocimiento.</p>
+
+        <p class="texto-narrativo"> El arco vibró en respuesta. Las Lágrimas de Cristal y la madera ancestral cantaron juntas durante tres latidos — una armonía que Axel sintió en los dientes, en los huesos, en algún lugar detrás de los ojos que no tenía nombre.</p>
+
+        <p class="dialogo" data-badge="murmurado con la voz entrecortada">
+          —¿Mi padre.... cuando estuvo aquí.... sintió esto mismo?
+        </p>
+
+        <p class="texto-narrativo"> Los Osos no respondieron. Su silencio fue más elocuente que cualquier confirmación.</p>
+
+        <p class="texto-narrativo"> Seraphina observó la ceremonia de pie, inmóvil, las garras cerradas a los costados. Axel estaba demasiado absorto en la resonancia del arco para notar la expresión que le cruzó el rostro — algo que parpadeó entre gratitud y un cálculo rápido, como quien revisa un mapa y descubre que la ruta es más corta de lo esperado.</p>
+
+        <div class="oso-dialogo">
+          <p class="dialogo cristal-brillante" data-badge="dirigido a Seraphina como despedida">
+            —Portadora de rosas espinosas. Las defensas creadas en dolor pueden transformarse en puentes. El jardín mostró que la belleza persiste en ti. Lo que hagas con eso.... ya no nos corresponde.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Seraphina inclinó la cabeza. No dijo nada. No necesitó hacerlo.</p>
+      </section>
+
+      <!-- =============== ENCUENTRO CON LA CARTÓGRAFA =============== -->
+      <section id="lyra-en-cuevas">
+        <h3>Mapas y Condiciones</h3>
+
+        <p class="texto-narrativo"> Descendían por los senderos rocosos que alejaban de las Cuevas Brillantes cuando Axel escuchó un sonido que no esperaba: el tintinear de instrumental cartográfico contra roca. Específico. Familiar. Inconfundible.</p>
+
+        <p class="texto-narrativo"> Al doblar un saliente, la encontraron. Lyra estaba sentada sobre una formación rocosa plana, con tres mapas desplegados bajo piedras, una brújula especial que Axel reconoció de su encuentro anterior, y una serie de cristales pequeños del tamaño de monedas que emitían una luz intermitente y frustrada.</p>
+
+        <p class="dialogo" data-badge="exclamado con sorpresa genuina">
+          —El arquero que no sonríe. Y justo a tiempo.
+        </p>
+
+        <p class="texto-narrativo"> Axel descubrió que sí podía sonreír. Se dio cuenta un segundo después de que ya lo estaba haciendo.</p>
+
+        <p class="dialogo" data-badge="respondido con curiosidad">
+          —¿Qué haces a las puertas de las Cuevas Brillantes?
+        </p>
+
+        <p class="dialogo" data-badge="explicado con frustración profesional">
+          —Mapeando cambios en las resonancias mágicas de la región. Algo está alterando las frecuencias naturales — probablemente el Templo Celestial moviéndose con los ciclos lunares.— Golpeó uno de los cristales pequeños con la uña. No respondió. —Pero estos calibradores no pueden leer las frecuencias más profundas. Necesito una fuente de resonancia auténtica, y las Cuevas Brillantes no dejan entrar a quien no viene a la prueba.
+        </p>
+
+        <p class="texto-narrativo"> Sus ojos — esos ojos que rastreaban todo — se movieron hacia la bolsa donde Axel guardaba las Lágrimas de Cristal. Las orejas se irguieron.</p>
+
+        <p class="dialogo" data-badge="preguntado con interés que no intentó disimular">
+          —¿Pasaste la prueba del Jardín?
+        </p>
+
+        <p class="dialogo" data-badge="confirmado con un asentimiento">
+          —La pasamos.
+        </p>
+
+        <p class="dialogo" data-badge="dicho con respeto que calculaba algo">
+          —Impresionante. Casi nadie lo logra últimamente.— Hizo una pausa. Las garras tamborilearonen la roca. —Tengo un mapa detallado de las rutas al Claro Celestial. Evita las patrullas de Cuervos de Ónice. Tres días os separan del Templo si tomáis la ruta norte.
+        </p>
+
+        <p class="texto-narrativo"> Otra pausa. Más deliberada que la primera.</p>
+
+        <p class="dialogo" data-badge="dicho con franqueza directa">
+          —A cambio necesito treinta segundos de contacto entre mis calibradores y las Lágrimas de Cristal. La resonancia auténtica me resolvería seis meses de trabajo.
+        </p>
+
+        <p class="texto-narrativo"> Axel dudó. Las Lágrimas de Cristal eran llaves sagradas — fragmentos de los propios Osos, recién entregadas. Prestarlas para calibrar equipos cartográficos se sentía como usar una reliquia familiar para calzar una mesa.</p>
+
+        <p class="dialogo" data-badge="murmurado con cautela">
+          —No sé si debería....
+        </p>
+
+        <p class="dialogo" data-badge="interrumpido con impaciencia práctica">
+          —Treinta segundos. No las toco con las manos — uso un soporte de cuarzo aislante. La resonancia cristalina no se degrada por lectura pasiva. Lo que sí se degrada es tu capacidad de encontrar el Templo sin un mapa preciso, porque los Cuervos de Ónice controlan los tres pasos principales y no les importará que lleves reliquias sagradas.
+        </p>
+
+        <p class="texto-narrativo"> Seraphina, que había observado todo el intercambio en silencio, habló por primera vez.</p>
+
+        <p class="dialogo" data-badge="dicho con tono neutro">
+          —Es un intercambio justo.
+        </p>
+
+        <p class="texto-narrativo"> Lyra giró la cabeza hacia Seraphina. La miró durante un segundo más largo de lo necesario. Algo cambió en su expresión — nada dramático, solo un ajuste mínimo en la línea de la mandíbula, como quien recalibra una evaluación.</p>
+
+        <p class="dialogo" data-badge="dirigido a Seraphina con cortesía exacta">
+          —No nos han presentado formalmente.
+        </p>
+
+        <p class="dialogo" data-badge="respondido con corrección simétrica">
+          —Seraphina. Viajo con Axel hacia el Templo.
+        </p>
+
+        <p class="dialogo" data-badge="dicho mientras volvía a sus mapas">
+          —Lyra. Cartógrafa. Me gano la vida haciendo que la gente llegue a donde necesita llegar.
+        </p>
+
+        <p class="texto-narrativo"> El intercambio fue breve y cortés. Y absolutamente cargado de algo que Axel no supo leer. Como dos personas que hablan del clima mientras evalúan las salidas de la habitación.</p>
+
+        <p class="texto-narrativo"> Procedieron. Lyra montó el soporte de cuarzo, Axel colocó las Lágrimas con cuidado, y durante treinta segundos exactos los cristales de calibración emitieron una luz estable por primera vez. Lyra trabajó con eficiencia silenciosa, marcando coordenadas en sus mapas con trazos rápidos y precisos.</p>
+
+        <p class="dialogo" data-badge="dicho retirando el soporte">
+          —Hecho. El Templo se manifestará en el Claro Celestial durante la próxima luna llena. Tres días desde hoy.
+        </p>
+
+        <p class="texto-narrativo"> Le entregó a Axel un mapa enrollado. Cuando sus garras se tocaron durante la transferencia, Axel registró su textura — garras callosas de trabajo de campo, no las garras cuidadas de alguien que trabaja en interiores. Lyra registró algo también, porque sus orejas se movieron una fracción y no apartó la mano inmediatamente.</p>
+
+        <p class="dialogo" data-badge="dicho mientras recogía su equipo">
+          —Una cosa más. El Templo Celestial cambia a quienes lo visitan. No siempre de formas que esperan. Ten cuidado con lo que asumes que sabes sobre las personas que te acompañan.
+        </p>
+
+        <p class="texto-narrativo"> No miró a Seraphina al decirlo. Pero tampoco la evitó. Simplemente dejó la frase suspendida en el aire como una flecha que aún no había decidido dónde caer.</p>
+
+        <p class="texto-narrativo"> Axel guardó el mapa junto a los anteriores. Seraphina notó que lo trataba con el mismo cuidado que las Lágrimas de Cristal — o más.</p>
+      </section>
+
+      <!-- =============== CONTINUACIÓN Y GANCHO =============== -->
+      <section id="salida-cuevas">
+        <h3>Lo Que Crece Después</h3>
+
+        <p class="texto-narrativo"> Caminaron hasta el atardecer. El sendero descendía hacia un valle verde que, según el mapa de Lyra, conectaba con la ruta norte hacia el Claro Celestial. Tres días. Tenían tres días.</p>
+
+        <p class="texto-narrativo"> Seraphina no había hablado desde el encuentro con Lyra. Axel atribuyó el silencio al cansancio — habían cruzado las Cuevas Brillantes, enfrentado a los Osos, plantado en el Jardín, todo en un solo día. Cualquiera estaría agotado.</p>
+
+        <p class="texto-narrativo"> Pero cuando montaron campamento junto a un arroyo, la vio hacer algo que no le había visto antes. Se sentó de espaldas a él, las garras hundidas en la tierra, y permaneció así durante minutos largos. Inmóvil. Las antenas planas contra la cabeza. Como si escuchara algo subterráneo.</p>
+
+        <p class="texto-narrativo"> Donde sus garras tocaban la tierra, la hierba creció más rápido. Apenas perceptible — un par de centímetros más que la hierba circundante. Las briznas se inclinaron hacia ella con la misma insistencia silenciosa que las plantas del sendero antes de las Cuevas.</p>
+
+        <p class="texto-narrativo"> Axel abrió la boca para mencionarlo. La cerró. Algo en la rigidez de su espalda le dijo que ella ya lo sabía. Y que no quería hablar de ello.</p>
+
+        <p class="texto-narrativo"> Esa noche, mientras Seraphina dormía — o fingía dormir —, Axel sacó las Lágrimas de Cristal a la luz de la luna. Las tres llaves pulsaban con ritmo sincronizado, reflejando la luz plateada en patrones que parecían casi un lenguaje. El arco élfico vibró suavemente en respuesta, como cada vez que las Lágrimas estaban cerca.</p>
+
+        <p class="texto-narrativo"> Luego sacó el mapa de Lyra y lo desplegó junto a las Lágrimas. Y se quedó helado.</p>
+
+        <p class="texto-narrativo"> La anotación marginal que Lyra había dejado en el encuentro anterior — aquellas coordenadas en su código personal, escritas sobre la ruta exacta que planeaban seguir — aparecía también en este mapa nuevo. Las mismas coordenadas. La misma caligrafía críptica. Pero esta vez había algo más: una segunda línea debajo, escrita con tinta diferente, más reciente.</p>
+
+        <p class="texto-narrativo"> No podía leerla. No era código cartográfico. Eran símbolos que reconocía vagamente de los pergaminos de los murciélagos — los que Eco Pergaminada habría podido traducir si estuviera aquí.</p>
+
+        <p class="texto-narrativo"> Y no estaba aquí.</p>
+
+        <p class="texto-narrativo"> Axel miró el mapa durante un tiempo largo. Luego miró a Seraphina dormida. Luego las Lágrimas de Cristal. Tres objetos que no debían tener nada en común pulsando bajo la misma luna.</p>
+
+        <p class="texto-narrativo"> En algún lugar del sendero detrás de ellos, dentro de las Cuevas Brillantes, el Jardín de Intenciones seguía creciendo. La planta de Axel irradiaba su luz dorada, estable y serena. El rosal de Seraphina, en la tierra entre el éxito y el fracaso, había desarrollado tres flores nuevas desde que se fueron. Más hermosas que las primeras.</p>
+
+        <p class="texto-narrativo"> Y las espinas habían duplicado su tamaño.</p>
+      </section>
+    </div>
+
+    <script src="global-reset.js"></script>
+  </body>
+</html>
