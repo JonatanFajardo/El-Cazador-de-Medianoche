@@ -1,489 +1,463 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Cazador de Medianoche - Sección 9A: El Laberinto de los Tejones Excavadores</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="historia-interactiva.css">
-    <style>
-        .laberinto-tejones {
-            background: linear-gradient(135deg, #3d2b1f, #5c3d2e, #8B4513);
-            border-radius: 15px;
-            padding: 30px;
-            margin: 20px 0;
-            border: 2px solid rgba(139, 69, 19, 0.4);
-            box-shadow: 0 0 25px rgba(139, 69, 19, 0.3), inset 0 0 40px rgba(0,0,0,0.3);
-        }
-        .groundbreaker-bloque {
-            background: rgba(92, 61, 46, 0.4);
-            border-left: 4px solid #A0522D;
-            padding: 20px;
-            margin: 15px 0;
-            border-radius: 0 15px 15px 0;
-        }
-        .camara-laberinto {
-            background: rgba(0, 0, 0, 0.25);
-            border: 1px dashed rgba(139, 69, 19, 0.6);
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 10px;
-        }
-        .info-templo-bloque {
-            background: rgba(255, 215, 0, 0.12);
-            border-top: 2px solid rgba(255, 215, 0, 0.4);
-            border-bottom: 2px solid rgba(255, 215, 0, 0.4);
-            padding: 25px;
-            margin: 25px 0;
-        }
-        .economia-tejones {
-            background: rgba(92, 61, 46, 0.2);
-            border: 1px solid rgba(139, 69, 19, 0.3);
-            padding: 20px;
-            margin: 15px 0;
-            border-radius: 10px;
-        }
-    </style>
-</head>
-<body>
-
-<!--
-╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
-║                    SECCIÓN 9A: EL LABERINTO DE LOS TEJONES EXCAVADORES                                                                                         ║
-║                                    ⛏️ DÍA 10 ⛏️                                                                                                               ║
-╠══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║ CONTEXTO NARRATIVO:                                                                                                                                             ║
-║ • PRE-TEMPLO: Última alianza antes del Templo Celestial                                                                                                         ║
-║ • Grupo cohesionado después de mariposas; Seraphina más abierta                                                                                                ║
-║ • Tejones ya saben que vienen (gancho de 08C)                                                                                                                   ║
-║ • Necesitan información técnica sobre el Templo y sus defensas                                                                                                  ║
-║                                                                                                                                                                 ║
-║ ECONOMÍA TEJONES: Prueba de cooperación — no intercambian objetos, intercambian                                                                                  ║
-║ demostración de trabajo en equipo. "Si no puedes excavar con los que tienes,                                                                                    ║
-║ no mereces lo que hay al otro lado."                                                                                                                             ║
-║                                                                                                                                                                 ║
-║ PAYOFFS UTILIZADOS EN ESTA SECCIÓN:                                                                                                                             ║
-║ • Cera impermeabilizante (08A) → protege el mapa de Lyra en túneles húmedos                                                                                    ║
-║ • Silbato de río (08A) → comunicación cuando el grupo se separa en el laberinto                                                                                 ║
-║ • Ungüento de eco-localización (08B) → Axel detecta trampas en la oscuridad                                                                                    ║
-║ • Polvo de ala de mariposa (08C) → revela trampa de contención invisible en cámara 3                                                                            ║
-║ • Pergamino de recetas con notas ocultas (08B) → instrucciones parciales del ritual                                                                             ║
-║                                                                                                                                                                 ║
-║ OBJETOS NUEVOS (con payoffs en sección 10):                                                                                                                     ║
-║ • Picos anti-magia → neutralizan defensas del Templo (sección 10)                                                                                               ║
-║ • Cristales de comunicación → coordinación en confrontación final (sección 10)                                                                                  ║
-║ • Cuerda de confianza → indicador físico de unidad grupal (sección 10)                                                                                          ║
-║                                                                                                                                                                 ║
-║ GROUNDBREAKER: Deadpan de capataz de obras. Habla del grupo como si fuera un                                                                                    ║
-║ proyecto de ingeniería con defectos estructurales. Nunca hace comentarios                                                                                        ║
-║ emocionales — solo evaluaciones técnicas. Sus cumplidos suenan a informes de daños.                                                                             ║
-╚══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>El Cazador de Medianoche - seccion_09A</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="historia-interactiva.css" />
+  </head>
+  <body>
+    <!--
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║           SECCIÓN 9A: EL LABERINTO DE LOS TEJONES EXCAVADORES               ║
+║                              DÍA 10                                         ║
+╠═══════════════════════════════════════════════════════════════════════════════╣
+║ CONTEXTO NARRATIVO:                                                         ║
+║ • Grupo llega al territorio de los Tejones después de conocer a Groundbreaker ║
+║   en la explanada (conecta con gancho de seccion_09)                        ║
+║ • Lyra ya está con el grupo (se unió en seccion_09)                         ║
+║ • Sin Eco Pergaminada (se fue en seccion_05)                                ║
+║ • Último aliado antes del Templo Celestial                                  ║
+║                                                                             ║
+║ GRUPO: Axel, Seraphina, Lyra (3 personas + erizo)                           ║
+║                                                                             ║
+║ ECONOMÍA TEJONES: Prueba de cooperación real. No intercambian objetos —     ║
+║ intercambian demostración de trabajo en equipo bajo presión.                ║
+║                                                                             ║
+║ PAYOFFS DE SECCIONES ANTERIORES USADOS AQUÍ:                                ║
+║ • Cera impermeabilizante (08A) → protege el mapa de Lyra en túneles húmedos ║
+║ • Silbato de concha (08A) → comunicación cuando el grupo se separa          ║
+║ • Ungüento eco-localización (08B) → Axel detecta trampas en oscuridad       ║
+║ • Polvo de ala de mariposa (08C) → revela trampa de contención invisible     ║
+║ • Pergamino con instrucciones (08B) → instrucciones del ritual + línea borrada║
+║                                                                             ║
+║ OBJETOS NUEVOS (payoffs en seccion_10):                                     ║
+║ • Picos anti-magia → neutralizan defensas del Templo                        ║
+║ • Cristales de comunicación → coordinación en confrontación final           ║
+║ • Cuerda de confianza → indicador físico de unidad grupal                   ║
+║                                                                             ║
+║ GROUNDBREAKER: Deadpan de capataz de obras. Habla del grupo como si fuera   ║
+║ un proyecto de ingeniería con defectos estructurales. Nunca hace            ║
+║ comentarios emocionales. Sus cumplidos suenan a informes de daños.          ║
+║                                                                             ║
+║ GANCHO HACIA SECCION_09B:                                                   ║
+║ • Sección borrada del pergamino: consecuencias del que toca las Lágrimas    ║
+║   tercero — nadie sabe quién será ese tercero ni qué implica                ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
 -->
 
-<div class="container">
-    <header>
-        <h1>Sección 9A — El Laberinto de los Tejones Excavadores</h1>
-        <p class="chapter-subtitle">Día 10 — La última alianza antes del Templo</p>
-    </header>
+    <div class="container">
+      <h1>Sección 9A — El Laberinto de los Tejones Excavadores</h1>
 
-    <div class="laberinto-tejones">
-        <section id="llegada-territorio">
+      <!-- =============== LLEGADA AL TERRITORIO =============== -->
+      <section id="llegada-territorio">
 
-            <p class="texto-narrativo"> La vibración los recibió antes que cualquier guardia. </p>
+        <p class="texto-narrativo"> La vibración los recibió antes que cualquier guardia.</p>
 
-            <p class="texto-narrativo"> El valle de las mariposas terminaba en un escarpe de roca gris donde la vegetación se volvía escasa y el suelo cambiaba de textura: de tierra blanda de pradera a algo más compacto, casi resonante, como si el terreno fuera una membrana sobre una red de cámaras vacías. Con cada paso, el suelo devolvía el sonido de sus pisadas de una forma ligeramente diferente — más hueco hacia la izquierda, más sólido hacia adelante. Las orejas de Axel lo registraban con la precisión involuntaria de un rastreador que ha aprendido a escuchar la tierra de la misma forma que escucha el viento. </p>
+        <p class="texto-narrativo"> El valle de las mariposas terminaba en un escarpe de roca gris donde la vegetación se volvía escasa y el suelo cambiaba de textura: de tierra blanda de pradera a algo más compacto, casi resonante, como si el terreno fuera una membrana sobre una red de cámaras vacías. Con cada paso, el suelo devolvía el sonido de sus pisadas de una forma ligeramente diferente — más hueco hacia la izquierda, más sólido hacia adelante. Las orejas de Axel lo registraban con la precisión involuntaria de un rastreador que ha aprendido a escuchar la tierra de la misma forma en que escucha el viento.</p>
 
-            <p class="texto-narrativo"> No había señal visible de que habitaran ahí. Ningún edificio, ningún camino marcado, ninguno de los carteles que los Zorros Plateros clavaban en cada cruce ni los formularios que las mariposas dejaban flotando en las corrientes. Solo roca, brezo bajo, y esa vibración constante que llegaba desde algún lugar sin dirección precisa — como si el suelo entero respirara. </p>
+        <p class="texto-narrativo"> No había señal visible de que habitaran ahí. Ningún edificio, ningún camino marcado. Solo roca, brezo bajo, y esa vibración constante que llegaba desde algún lugar sin dirección precisa — como si el suelo entero respirara.</p>
 
-            <p class="dialogo bajo" data-badge="murmurado sin detenerse"> —El mapa de Lyra decía que su territorio empieza exactamente donde termina el escarpe— dijo Axel, sacando el pergamino con cuidado. Los túneles del valle habían humedecido el aire, pero la cera que las nutrias le habían dado hacía tres días había sellado bien los bordes. El mapa seguía legible, las notas de Lyra perfectamente nítidas.— Pero no veo ninguna entrada— </p>
+        <p class="dialogo" data-badge="murmurado sin detenerse">
+            —El mapa decía que su territorio empieza exactamente donde termina el escarpe— dijo Axel, sacando el pergamino con cuidado. Los túneles del valle habían humedecido el aire, pero la cera que las nutrias le habían dado hacía tres días había sellado bien los bordes. El mapa seguía legible, las notas de Lyra perfectamente nítidas.
+        </p>
 
-            <p class="dialogo práctico" data-badge="añadido consultando sus datos"> —Los tejones excavan principalmente en las capas inferiores de roca caliza— dijo Eco Pergaminada, volando en círculos lentos sobre el suelo.— Las entradas suelen estar camufladas en la transición entre tipos de roca. Buscar donde el gris se vuelve más oscuro— </p>
+        <p class="texto-narrativo"> Lyra no le respondió — ya estaba agachada junto al escarpe, midiendo con la palma la inclinación de la superficie. Luego dio tres golpes suaves en la roca con los nudillos, espaciados con una precisión que Axel intuyó que era deliberada.</p>
 
-            <p class="texto-narrativo"> Fue Seraphina quien lo encontró: una sección del escarpe donde las piedras no encajaban con la naturalidad geológica de las demás. Demasiado regulares. Demasiado bien distribuidas. Sus antenas captaron una corriente de aire saliendo desde un punto invisible — el aliento de algo grande y subterráneo. </p>
+        <p class="dialogo" data-badge="dicho verificando resonancias">
+            —Roca caliza, cavidades a menos de dos metros de profundidad— Sus ojos se deslizaron por la superficie hasta un punto donde las piedras no encajaban con la naturalidad geológica de las demás. Demasiado regulares. Demasiado bien distribuidas. —Ahí—
+        </p>
 
-            <p class="dialogo señalando" data-badge="dicho sin énfasis particular"> —Ahí— indicó con una pata. </p>
+        <p class="texto-narrativo"> Sus antenas también lo habían sentido — una corriente de aire saliendo desde un punto invisible, el aliento de algo grande y subterráneo. Seraphina lo señaló con una pata en el mismo instante que Lyra hablaba.</p>
 
-            <p class="texto-narrativo"> Antes de que alguien pudiera responder, el escarpe se abrió. </p>
+        <p class="texto-narrativo"> Las dos se miraron. Una cartógrafa que llegó por resonancia. Una mantis que llegó por olfato. El mismo punto.</p>
 
-            <p class="texto-narrativo"> No hacia los lados ni hacia arriba. Hacia abajo: un bloque de roca del tamaño de una puerta pivotó sobre su eje con la precisión mecánica de algo que lleva siglos funcionando sin necesitar reparación. Desde el interior llegó un olor a tierra húmeda, mineral, y el aroma específico de roca recién tallada que es el sello olfativo de cualquier túnel que todavía está siendo excavado. </p>
+        <p class="texto-narrativo"> Antes de que nadie dijera nada, el escarpe se abrió. Un bloque de roca del tamaño de una puerta pivotó sobre su eje con la precisión mecánica de algo que lleva siglos funcionando sin necesitar reparación. Desde el interior llegó el olor a tierra húmeda, mineral, y roca recién tallada.</p>
 
-            <p class="texto-narrativo"> El tejón que ocupó el espacio abierto llegaba al pecho de Axel. Llevaba una correa de trabajo cruzada al pecho con múltiples bolsillos — la mayoría llenos de herramientas que brillaban con el uso constante — y una tablilla de roca fina colgada del cuello con inscripciones que parecían un registro en curso. Sus ojos pequeños y profundos los evaluaron con la eficiencia de alguien que ha aprendido a tomar decisiones rápidas porque la roca no espera. </p>
+        <p class="texto-narrativo"> El tejón que ocupó el espacio abierto llegaba al pecho de Axel. Llevaba una correa de trabajo cruzada al pecho con múltiples bolsillos, la mayoría llenos de herramientas que brillaban con el uso constante, y una tablilla de roca fina colgada del cuello con inscripciones en curso. Sus ojos pequeños y profundos los evaluaron con la eficiencia de alguien que ha aprendido a tomar decisiones rápidas porque la roca no espera.</p>
 
-            <div class="groundbreaker-bloque">
-                <p class="dialogo evaluando" data-badge="dicho verificando la tablilla"> —Cuatro unidades— anunció, haciendo una anotación.— Más pequeño que el grupo que esperábamos. El mapa decía cinco— </p>
-            </div>
+        <p class="dialogo" data-badge="dicho verificando la tablilla">
+            —Tres unidades— anunció, haciendo una anotación. —El mapa decía cuatro—
+        </p>
 
-            <p class="dialogo con cautela" data-badge="respondido con naturalidad"> —Somos cuatro— dijo Axel. </p>
+        <p class="dialogo" data-badge="respondido con naturalidad">
+            —Somos tres— dijo Axel.
+        </p>
 
-            <div class="groundbreaker-bloque">
-                <p class="dialogo corrigiendo" data-badge="señalando entre los árboles sin levantar la vista"> —Cuatro más uno en las sombras, treinta metros al noroeste, que lleva tres horas siguiéndoles el rastro y cree que no la detectamos. La detectamos. Tenemos sensores de vibración a veinte metros de profundidad. Todo lo que pisa el suelo aquí lo sentimos— pausa para anotar.— ¿La incluimos en el grupo o la dejamos esperando afuera? La vibración de sus pisadas sugiere paciencia, no hostilidad. Probablemente sea un aliado vuestro— </p>
-            </div>
+        <p class="dialogo" data-badge="señalando entre los árboles sin levantar la vista">
+            —Tres más uno en las sombras, treinta metros al noroeste, que lleva dos horas siguiéndoles el rastro. Los tejones tenemos sensores de vibración a veinte metros de profundidad. Todo lo que pisa el suelo aquí lo sentimos— pausa para anotar. —¿La incluimos en el grupo o la dejamos esperando afuera? Sus pisadas sugieren paciencia, no hostilidad—
+        </p>
 
-            <p class="texto-narrativo"> Axel no giró las orejas. No necesitaba hacerlo. Sabía exactamente a quién se refería el tejón — había detectado el rastro de Lyra desde antes del amanecer, cuando el viento había cambiado de dirección y le había traído el aroma de corteza de pino mezclado con algo ligeramente metálico que reconocería entre mil. Había elegido no decir nada. Ella también había elegido no acercarse. Ambos habían llegado a un acuerdo silencioso sobre la distancia correcta. </p>
+        <p class="texto-narrativo"> Lyra, que estaba parada exactamente a la derecha de Axel, levantó una mano.</p>
 
-            <p class="dialogo tranquilo" data-badge="respondido sin inflexión"> —Déjenla afuera. Sabe cuidarse sola— </p>
+        <p class="dialogo" data-badge="dicho sin énfasis">
+            —Esa soy yo—
+        </p>
 
-            <div class="groundbreaker-bloque">
-                <p class="dialogo anotando" data-badge="confirmado marcando la tablilla"> —Anotado. Cuatro unidades para la prueba— El tejón guardaespalda — porque así se identificaba la inscripción en la correa — hizo un gesto hacia el interior.— Groundbreaker los espera. Tiempo estimado de trayecto: doce minutos si no tocan las paredes marcadas con raya roja. Si tocan las paredes con raya roja, tiempo estimado de trayecto: indeterminado— </p>
-            </div>
+        <p class="texto-narrativo"> El tejón la miró. Miró su tablilla. La miró de nuevo.</p>
 
-            <p class="dialogo necesario" data-badge="preguntado con genuina curiosidad"> —¿Qué hay en las paredes con raya roja?— preguntó Ember. </p>
+        <p class="dialogo" data-badge="corregido anotando">
+            —Cuatro unidades. Había dividido el grupo por error. Incluida— La miró con lo que podría haber sido respeto o simplemente la expresión de alguien que recategoriza una variable. —La vibración de sus pisadas tiene patrón de cartógrafa. La forma en que pisas — equidistante entre puntos de referencia — es específica de quien pasa el tiempo midiendo distancias—
+        </p>
 
-            <div class="groundbreaker-bloque">
-                <p class="dialogo informativo" data-badge="respondido bajando la rampa"> —Sistemas de ventilación activos— dijo el tejón, comenzando a descender.— Pueden sobrevivir. No es cómodo. Preferimos que no lo experimenten porque ralentiza el proceso y tenemos cronograma— </p>
-            </div>
+        <p class="dialogo" data-badge="respondido con interés profesional">
+            —¿Miden pisadas?—
+        </p>
 
-        </section>
+        <p class="dialogo" data-badge="respondido bajando hacia la entrada">
+            —Medimos todo. Groundbreaker los espera. Si no tocan las paredes marcadas con raya roja, tiempo de trayecto: doce minutos—
+        </p>
 
-        <section id="descenso-tuneles">
+        <p class="dialogo" data-badge="preguntado con genuina curiosidad">
+            —¿Y si las tocamos?—
+        </p>
 
-            <p class="texto-narrativo"> Los túneles eran distintos de lo que cualquiera de ellos habría imaginado. Ninguno esperaba comodidad, pero lo que encontraron tampoco era el pasadizo bruto y oscuro que la palabra —cueva— sugería. Las paredes habían sido trabajadas con una precisión que tardaban en procesar: superficies lisas interrumpidas por franjas de diferentes materiales —cuarcita para la estructura, esquisto para el aislamiento, algo iridiscente que no identificaban y que emitía una luz fría y constante sin fuente aparente. El suelo tenía un ligero declive calculado para que el agua de filtración fluyera hacia canales laterales en lugar de acumularse. Los soportes del techo se instalaban cada metro y medio exacto. </p>
+        <p class="dialogo" data-badge="respondido sin voltear">
+            —Sistemas de ventilación activos. Pueden sobrevivir. No es cómodo. Preferimos que no lo experimenten porque ralentiza el cronograma—
+        </p>
 
-            <p class="texto-narrativo"> Era ingeniería. Ingeniería seria, pensada para siglos. </p>
+      </section>
 
-            <p class="dialogo admirado a pesar de sí mismo" data-badge="murmurado pasando bajo un soporte"> —¿Cuánto tiempo llevan construyendo esto?— preguntó Ember. </p>
+      <!-- =============== DESCENSO POR LOS TÚNELES =============== -->
+      <section id="descenso-tuneles">
 
-            <div class="groundbreaker-bloque">
-                <p class="dialogo corto" data-badge="respondido sin voltear"> —Veintidós generaciones— </p>
-            </div>
+        <p class="texto-narrativo"> Los túneles eran distintos de lo que cualquiera de ellos habría imaginado. Las paredes habían sido trabajadas con precisión: superficies lisas interrumpidas por franjas de diferentes materiales — cuarcita para la estructura, esquisto para el aislamiento, algo iridiscente que emitía una luz fría y constante sin fuente aparente. El suelo tenía un declive calculado para que el agua de filtración fluyera hacia canales laterales. Los soportes del techo se instalaban cada metro y medio exacto.</p>
 
-            <p class="dialogo procesando" data-badge="dicho en voz baja"> —¿Y cuándo piensan terminar?— </p>
+        <p class="texto-narrativo"> Era ingeniería. Ingeniería seria, pensada para siglos.</p>
 
-            <div class="groundbreaker-bloque">
-                <p class="dialogo como si la pregunta no tuviera sentido" data-badge="respondido con pausa genuina"> —¿Terminar? Los túneles no terminan. Se optimizan— </p>
-            </div>
+        <p class="dialogo" data-badge="murmurado pasando bajo un soporte">
+            —¿Cuánto tiempo llevan construyendo esto?— preguntó Axel.
+        </p>
 
-            <p class="texto-narrativo"> Pasaron junto a un grupo de tejones que trabajaban en una sección nueva — sus picos oscilando con un ritmo sincronizado que producía un sonido casi musical, un compás de golpes regulares que resonaba por el pasadizo y era respondido por el eco de picos más lejanos. No hablaban entre ellos mientras trabajaban. No hacía falta. Sus cuerpos se coordinaban con la eficiencia de un sistema que ha repetido los mismos movimientos el tiempo suficiente para que el cuerpo los sepa sin consultar al cerebro. </p>
+        <p class="dialogo" data-badge="respondido sin voltear">
+            —Veintidós generaciones—
+        </p>
 
-            <p class="texto-narrativo"> En las paredes laterales, grabadas en la roca con una letra pequeña y densa, había inscripciones que Eco Pergaminada empezó a descifrar en voz baja: registros de excavación, inventarios de herramientas, notas sobre la composición del terreno en diferentes niveles. Y entre las anotaciones técnicas, de vez en cuando, algo diferente — breve, sin comentario. Un nombre. Una fecha. —Primer día que llegamos al nivel del río subterráneo. Sonaba como música— Y después, en la siguiente línea, el registro de cuántos centímetros habían avanzado esa jornada. </p>
+        <p class="dialogo" data-badge="dicho en voz baja">
+            —¿Y cuándo piensan terminar?—
+        </p>
 
-            <p class="texto-narrativo"> Seraphina leyó una de esas inscripciones brevísimas mientras pasaban. —Encontramos un cristal que emite luz propia. El equipo lo dejó donde estaba. Algunos lugares deben quedarse como los encuentras.— Debajo, en letra diferente y tinta más nueva: —Volvemos cada año a ver si sigue ahí. Sigue ahí.— </p>
+        <p class="dialogo" data-badge="respondido como si la pregunta no tuviera sentido">
+            —¿Terminar? Los túneles no terminan. Se optimizan—
+        </p>
 
-            <p class="texto-narrativo"> No dijo nada. Pero sus antenas captaron algo en esa frase — la idea de que los tejones, con toda su obsesión por la estructura y la eficiencia, habían elegido preservar algo solo por el placer de saber que existía. Era una forma de gentileza que no habría esperado de criaturas que miden el tiempo en cronogramas. </p>
+        <p class="texto-narrativo"> Pasaron junto a un grupo de tejones que trabajaban en una sección nueva — sus picos oscilando con un ritmo sincronizado que producía un sonido casi musical. No hablaban entre ellos mientras trabajaban. Sus cuerpos se coordinaban con la eficiencia de un sistema que ha repetido los mismos movimientos el tiempo suficiente para que el cuerpo los sepa sin consultar al cerebro.</p>
 
-        </section>
+        <p class="texto-narrativo"> En las paredes laterales, grabadas en la roca con letra pequeña y densa, había inscripciones — registros de excavación, inventarios de herramientas, notas sobre la composición del terreno. Y entre las anotaciones técnicas, de vez en cuando, algo diferente. Un nombre. Una fecha. —Primer día que llegamos al nivel del río subterráneo. Sonaba como música—. Y después, en la siguiente línea, el registro de cuántos centímetros habían avanzado esa jornada.</p>
 
-        <section id="groundbreaker">
+        <p class="texto-narrativo"> Lyra sacó su cuaderno de campo y copió varias de esas inscripciones mientras caminaba, con la destreza de alguien que ha transcrito información en movimiento durante años. El guardia tejón la vio pero no dijo nada.</p>
 
-            <p class="texto-narrativo"> La cámara principal era del tamaño de un edificio de dos plantas. Columnas de roca natural reforzadas con vigas de metal sostenían un techo del que colgaban filas de esos cristales bioluminiscentes, creando una luz pareja que eliminaba las sombras sin ser agresiva. En las paredes: mapas. Docenas de mapas, dibujados sobre roca pulida, que mostraban el sistema de túneles desde arriba, desde los lados, en sección transversal. Algunos eran recientes — tinta todavía oscura, bordes nítidos. Otros eran tan antiguos que el grabado original se había desgastado y alguien los había repasado con trazo nuevo. </p>
+        <p class="texto-narrativo"> Seraphina leyó una inscripción en voz baja: —Encontramos un cristal que emite luz propia. El equipo lo dejó donde estaba. Algunos lugares deben quedarse como los encuentras—. Debajo, en letra diferente: —Volvemos cada año a ver si sigue ahí. Sigue ahí—.</p>
 
-            <p class="texto-narrativo"> En el centro de la cámara, con la espalda hacia ellos, examinando uno de los mapas con una lupa del tamaño de su pata, había un tejón que era aproximadamente el doble que el guardia. No en altura — en densidad. Era la criatura más compacta que ninguno de ellos había visto: cuello sin cuello, hombros que empezaban directamente detrás de las orejas, brazos que eran todo músculo desde el hombro hasta las garras. Sus herramientas estaban colgadas en un cinturón que era básicamente una ferretería portátil. </p>
+        <p class="texto-narrativo"> No dijo nada. Pero sus antenas captaron algo en esa frase — que los tejones, con toda su obsesión por la estructura y la eficiencia, habían elegido preservar algo solo por el placer de saber que existía.</p>
 
-            <p class="texto-narrativo"> No se giró cuando entraron. Terminó de estudiar el mapa, hizo una anotación, y luego se giró con la deliberación de alguien que no desperdicia ningún movimiento. </p>
+      </section>
 
-            <div class="groundbreaker-bloque">
-                <p class="dialogo sin preámbulo" data-badge="dicho evaluando al grupo como si fuera un plano de construcción"> —Cuatro unidades. Gato montés arquero, luciérnaga archivista, mantis, otro gato montés. Relación estructural entre unidades: dañada pero funcional. Cargas de tensión distribuidas de forma irregular. El arquero lleva el peso del grupo. El segundo gato absorbe el impacto emocional como muro de contención. La mantis es el elemento con más incertidumbre estructural — alta carga interna, distribución impredecible. La luciérnaga actúa como conector entre unidades— pausa.— Tengo preguntas. Pueden responder o no. Los resultados de la prueba me darán la misma información de todas formas— </p>
-            </div>
+      <!-- =============== GROUNDBREAKER =============== -->
+      <section id="groundbreaker">
 
-            <p class="dialogo con tacto" data-badge="preguntado por curiosidad genuina"> —¿Qué tipo de preguntas?— dijo Axel. </p>
+        <p class="texto-narrativo"> La cámara principal era del tamaño de un edificio de dos plantas. Columnas de roca natural reforzadas con vigas de metal sostenían un techo del que colgaban filas de cristales bioluminiscentes. En las paredes: mapas. Docenas de mapas grabados sobre roca pulida. Algunos con tinta todavía oscura. Otros tan antiguos que habían sido repasados sobre el desgaste original.</p>
 
-            <div class="groundbreaker-bloque">
-                <p class="dialogo técnico" data-badge="señalando a Axel primero"> —¿Cuándo fue la última vez que permitiste que alguien más tomara una decisión sin verificarla?— </p>
-            </div>
+        <p class="texto-narrativo"> En el centro de la cámara, de espaldas a ellos, examinando un mapa con una lupa del tamaño de su pata, estaba Groundbreaker. No en altura — en densidad. Era la criatura más compacta que ninguno de ellos había visto: cuello sin cuello, hombros que empezaban directamente detrás de las orejas, garras del tamaño de las herramientas en el cinturón que llevaba. Se giró con la calma de alguien que no desperdicia ningún movimiento.</p>
 
-            <p class="texto-narrativo"> Axel no respondió de inmediato. Sus orejas giraron ligeramente. </p>
+        <p class="dialogo" data-badge="dicho evaluando al grupo como si fuera un plano de construcción">
+            —Cuatro unidades. Gato montés arquero, rastreadora cartógrafa, mantis, componente esférico no verbal— pausa. —Relación estructural entre unidades: dañada pero funcional. Cargas de tensión distribuidas de forma irregular. El arquero carga el peso del grupo. La cartógrafa actúa como estructura de soporte lateral. La mantis es el elemento con más incertidumbre estructural — carga interna alta, distribución impredecible. El componente esférico continúa siendo de clasificación provisional— miró el erizo. —Aunque el rendimiento en la evaluación pre-entrada superó las expectativas—
+        </p>
 
-            <div class="groundbreaker-bloque">
-                <p class="dialogo continuando" data-badge="señalando a Ember"> —¿Cuándo fue la última vez que expresaste ira sin disculparte después?— </p>
-            </div>
+        <p class="texto-narrativo"> El erizo, que había llegado rodando antes que nadie sin que nadie lo notara hacer la transición de afuera a adentro, estaba instalado junto a la silla de trabajo de Groundbreaker con la naturalidad de un objeto decorativo que ha encontrado su contexto correcto.</p>
 
-            <div class="groundbreaker-bloque">
-                <p class="dialogo terminando" data-badge="señalando a Seraphina"> —¿Cuántas veces has dicho la verdad completa en los últimos diez días?— </p>
-            </div>
+        <p class="dialogo" data-badge="dicho con calma">
+            —¿Por qué tenemos que pasar un laberinto?— preguntó Axel.
+        </p>
 
-            <p class="texto-narrativo"> El silencio duró aproximadamente cuatro segundos. </p>
+        <p class="dialogo" data-badge="respondido como si fuera obvio">
+            —Porque no entregamos información crítica sobre el Templo Celestial a grupos que no han demostrado capacidad de cooperación funcional bajo presión. Cualquiera puede decir que trabaja bien en equipo. La oscuridad y las paredes hacen que la gente sea lo que es— dejó la tablilla. —Tengo preguntas. Pueden responder o no. Los resultados de la prueba me darán la misma información de todas formas—
+        </p>
 
-            <div class="groundbreaker-bloque">
-                <p class="dialogo satisfecho" data-badge="anotando sin esperar respuestas"> —Bien. Las respuestas no importan. Lo que importa es que cada uno de ustedes tuvo una reacción diferente, lo cual confirma que el grupo tiene suficiente diversidad estructural para superar las tres cámaras del laberinto. Empezamos en cinco minutos— </p>
-            </div>
+        <p class="dialogo" data-badge="preguntado">
+            —¿Qué tipo de preguntas?— dijo Lyra.
+        </p>
 
-            <!-- =============== SÉPTIMA APARICIÓN DEL ERIZO =============== -->
-            <p class="texto-narrativo"> Un sonido suave interrumpió la evaluación. Un sonido redondo, si eso tenía sentido. Algo rodaba por el suelo de la cámara con la inercia tranquila de un objeto que lleva rodando desde mucho antes de que alguien lo notara. </p>
+        <p class="dialogo" data-badge="señalando a Axel">
+            —¿Cuándo fue la última vez que permitiste que alguien más tomara una decisión sin verificarla?—
+        </p>
 
-            <p class="texto-narrativo"> El erizo llegó rodando hasta los pies de Groundbreaker y se detuvo. Se desenrolló. Miró al tejón. El tejón miró al erizo. </p>
+        <p class="texto-narrativo"> Axel no respondió. Sus orejas giraron ligeramente.</p>
 
-            <div class="groundbreaker-bloque">
-                <p class="dialogo técnico" data-badge="evaluando sin alterar el tono"> —Cinco unidades. No cuatro. Había contado mal— hizo una pausa de medio segundo.— Unidad adicional: esférica, no verbal, funcionalidad indeterminada. Clasificación provisional: componente pasivo— </p>
-            </div>
+        <p class="dialogo" data-badge="señalando a Lyra">
+            —¿Cuántas veces has pedido ayuda en los últimos diez días?—
+        </p>
 
-            <p class="texto-narrativo"> Groundbreaker se agachó. Examinó al erizo con la misma atención que le había dedicado al mapa. Lo hizo girar con una garra. Lo pesó en la palma. Lo colocó en el suelo y esperó una reacción. Ninguna. Lo rodó tres metros por el suelo de piedra pulida. El erizo rodó en línea perfectamente recta, rebotó suavemente contra la pared opuesta, y se quedó ahí. </p>
+        <p class="dialogo" data-badge="señalando a Seraphina">
+            —¿Cuántas veces has dicho la verdad completa en los últimos diez días?—
+        </p>
 
-            <div class="groundbreaker-bloque">
-                <p class="dialogo interesado" data-badge="anotando con renovado interés"> —Trayectoria estable. Resistencia al impacto aceptable. Herramienta orgánica de sondeo.... potencialmente funcional— </p>
-            </div>
+        <p class="texto-narrativo"> El silencio duró cuatro segundos.</p>
 
-            <p class="dialogo" data-badge="dicho con resignación">
-              —No es una herramienta— dijo Axel.— Es un erizo. Nos sigue.
-            </p>
+        <p class="dialogo" data-badge="anotando sin esperar respuestas">
+            —Bien. Las respuestas no importan. Lo que importa es que cada uno tuvo una reacción diferente, lo cual confirma diversidad estructural suficiente para superar las tres cámaras del laberinto. Empezamos en cinco minutos—
+        </p>
 
-            <div class="groundbreaker-bloque">
-                <p class="dialogo descartando la corrección" data-badge="respondido sin levantar la vista"> —Todo es una herramienta si se aplica correctamente. Procederemos con cinco unidades— </p>
-            </div>
-            <!-- =============== FIN SÉPTIMA APARICIÓN DEL ERIZO (PARTE 1) =============== -->
+        <p class="texto-narrativo"> El erizo rodó hasta los pies de Groundbreaker, se detuvo, se desenrolló, y lo miró.</p>
 
-            <p class="dialogo confundido" data-badge="alzando una pata"> —Esperan. ¿Por qué tenemos que pasar un laberinto?— preguntó Ember. </p>
+        <p class="dialogo" data-badge="mirándolo con interés técnico">
+            —El componente esférico también participa— anotó. —No hay protocolo para esto, pero tampoco hay prohibición. Procedemos—
+        </p>
 
-            <div class="groundbreaker-bloque">
-                <p class="dialogo como si fuera obvio" data-badge="sin levantar la vista del mapa que estaba plegando"> —Porque no entregamos información crítica sobre el Templo Celestial a grupos que no han demostrado capacidad de cooperación funcional bajo presión. Cualquiera puede decir que trabaja bien en equipo. Nadie miente en el laberinto. La oscuridad y las paredes hacen que la gente sea lo que es— </p>
-            </div>
+      </section>
 
-            <p class="dialogo directo" data-badge="dicho con lógica simple"> —Eso es.... razonable, en realidad— dijo Eco Pergaminada. </p>
+      <!-- =============== ECONOMÍA TEJONA =============== -->
+      <section id="economia-tejones">
 
-            <div class="groundbreaker-bloque">
-                <p class="dialogo aceptando el cumplido sin énfasis" data-badge="guardando el mapa"> —Lo sé. Llevo veintidós años refinando el sistema de evaluación. Antes usábamos cuestionarios escritos. Los resultados eran poco fiables — la gente escribe lo que quiere parecer, no lo que es. El laberinto no tiene formularios— </p>
-            </div>
+        <p class="texto-narrativo"> Mientras los llevaba hacia la entrada del laberinto, Groundbreaker explicó el sistema con el mismo tono que usaría para explicar la capacidad de carga de una viga.</p>
 
-        </section>
+        <p class="dialogo" data-badge="dicho sin pausas innecesarias">
+            —Todo lo que tenemos aquí vale algo solo si quien lo usa puede usarlo bien. Un mapa en manos de alguien que no puede cooperar con su grupo es un mapa perdido. Un pico anti-magia en manos de alguien que va a abandonar a los suyos en el primer obstáculo es una herramienta desperdiciada. Primero demuestran que funcionan. Después reciben lo que necesitan para funcionar mejor—
+        </p>
 
-        <section id="economia-tejones">
+        <p class="dialogo" data-badge="procesando mientras caminaba">
+            —No es que desconfíen de nosotros— dijo Axel despacio. —Es que no tiene sentido dar herramientas a quien no sabe usarlas—
+        </p>
 
-            <div class="economia-tejones">
-                <p class="texto-narrativo"> La economía tejona no tenía equivalente en ninguna de las aldeas que habían visitado. Los Zorros Plateros intercambiaban trabajo por trabajo. Las nutrias intercambiaban habilidades por herramientas. Los murciélagos intercambiaban conocimiento por conocimiento. Las mariposas intercambiaban verdad por objeto. Los tejones no intercambiaban nada de eso. </p>
+        <p class="dialogo" data-badge="confirmado sin voltear">
+            —Exacto. No pones los soportes antes de verificar que el suelo aguanta el peso—
+        </p>
 
-                <p class="texto-narrativo"> Lo que los tejones intercambiaban era confianza verificada. </p>
+        <p class="texto-narrativo"> Lyra anotó algo en su cuaderno de campo. Groundbreaker la observó escribir durante medio segundo.</p>
 
-                <p class="texto-narrativo"> —Todo lo que tenemos aquí — las herramientas, la información, los mapas de las rutas al Templo — vale algo solo si quien las usa puede usarlas bien— le explicó Groundbreaker mientras los llevaba hacia la entrada del laberinto, con el mismo tono que usaría para explicar la capacidad de carga de una viga.— Un mapa en manos de alguien que no puede cooperar con su grupo es un mapa perdido. Un pico anti-magia en manos de alguien que va a abandonar a los suyos en el primer obstáculo es una herramienta desperdiciada. Primero demuestran que funcionan. Después reciben lo que necesitan para funcionar mejor— </p>
+        <p class="dialogo" data-badge="dicho como observación técnica">
+            —Los cartógrafos son los únicos que documentan mientras escuchan. Los demás esperan a tener tiempo libre que no llega— No fue un cumplido. Fue una evaluación. Pero Lyra lo recibió como si fueran la misma cosa.
+        </p>
 
-                <p class="dialogo reflexivo" data-badge="procesando mientras caminaba"> —No es que desconfíen de nosotros— dijo Ember despacio.— Es que no tiene sentido dar herramientas a quien no sabe usarlas— </p>
+      </section>
 
-                <div class="groundbreaker-bloque">
-                    <p class="dialogo confirmando" data-badge="sin voltear"> —Exacto. Bienvenido a la lógica básica de ingeniería. No pones los soportes antes de verificar que el suelo aguanta el peso— </p>
-                </div>
-            </div>
+      <!-- =============== PRIMERA CÁMARA — OSCURIDAD TOTAL =============== -->
+      <section id="laberinto-camara-1">
+        <h3>Primera Cámara — Oscuridad total</h3>
 
-        </section>
+        <p class="texto-narrativo"> La puerta del laberinto era del tamaño necesario para pasar de uno en uno. Al otro lado: oscuridad completa. No la oscuridad gris de las noches nubladas, sino la oscuridad física de un espacio sin ninguna fuente de luz, tan densa que Axel la sintió como presión sobre los ojos.</p>
 
-        <section id="laberinto-camara-1">
+        <p class="texto-narrativo"> Sus garras se extendieron involuntariamente. El instinto de cazador procesó la información disponible: ninguna. Sin rastros de luz, sin referencias de distancia. Sus oídos captaron el eco de su propia respiración y lo que parecía ser una bifurcación a unos diez metros. Sus fosas nasales captaron tierra húmeda, mineral, y algo más difícil de identificar — una presencia química que su cerebro registró como artificial. Trampa. Sin origen localizable.</p>
 
-            <div class="camara-laberinto">
-                <h3>Primera Cámara — Oscuridad total</h3>
+        <p class="texto-narrativo"> Recordó el ungüento que Pluma Plateada le había dado con la condescendencia particular de quien hace un favor sin admitirlo. —Corrección a orejas inadecuadas. Para cuevas y oscuridad—. Lo aplicó en los bordes de las orejas como Pluma Plateada había indicado sin querer parecer que indicaba nada.</p>
 
-                <p class="texto-narrativo"> La puerta del laberinto era exactamente del tamaño necesario para pasar de uno en uno. Al otro lado: oscuridad completa. No la oscuridad gris de las noches nubladas, sino la oscuridad física de un espacio sin ninguna fuente de luz, tan densa que Axel la sintió como presión sobre sus ojos. La salida de Eco Pergaminada — un resplandor tenue azul-blanco de sus alas — apenas alcanzaba a iluminar un radio de medio metro a su alrededor. </p>
+        <p class="texto-narrativo"> El efecto tardó treinta segundos. Cuando llegó, fue como si alguien ajustara el volumen de todo lo que sonaba en la cámara. La bifurcación. El goteo de agua a la izquierda — roca porosa, terreno inestable. Un leve siseo hacia la derecha — el sistema de ventilación activa. Y más allá de eso, en la dirección ligeramente hacia adelante y abajo, el sonido específico de aire moviéndose a través de un espacio más grande. Una cámara. La salida.</p>
 
-                <p class="texto-narrativo"> Las garras de Axel se extendieron involuntariamente. El instinto de cazador que ha sobrevivido en montañas nevadas procesó la información disponible: ninguna. Sin rastros de luz, sin referencias de distancia, sin forma de evaluar el terreno. Sus oídos captaron el eco de su propia respiración y lo que parecía ser una bifurcación a unos diez metros. Sus fosas nasales captaron tierra húmeda, mineral, y algo más difícil de identificar — una presencia química que su cerebro registró como artificial. Trampa. Pero no pudo localizar el origen. </p>
+        <p class="dialogo" data-badge="dicho sin dudar">
+            —Centro. Hay un espacio más adelante. El suelo baja ligeramente durante los primeros metros — descenso suave, no escalón—
+        </p>
 
-                <p class="texto-narrativo"> Recordó el ungüento que Pluma Plateada le había dado con la condescendencia particular de quien hace un favor sin admitirlo. —Corrección a orejas inadecuadas—, había dicho. —Para cuevas y oscuridad—. Lo había guardado en el bolsillo interior de la bolsa de viaje con la vaga intención de usarlo si era necesario. </p>
+        <p class="texto-narrativo"> Seraphina apoyó una pata en el hombro de Lyra — no para guiarla, sino como referencia táctil en la oscuridad — y comenzó a avanzar con la seguridad de una mantis que ha cazado en la oscuridad y sabe que la oscuridad es solo ausencia de datos, no ausencia de control. Sus antenas procesaban lo que los ojos no podían dar: humedad, temperatura, el calor residual de superficies que habían absorbido el paso de otros cuerpos.</p>
 
-                <p class="texto-narrativo"> Era necesario. </p>
+        <p class="dialogo" data-badge="indicando en voz muy baja">
+            —Paso a la derecha en tres metros. Protuberancia de roca a altura de rodilla—
+        </p>
 
-                <p class="texto-narrativo"> Lo aplicó en los bordes de las orejas, como Pluma Plateada había indicado sin querer parecer que indicaba nada. El efecto no fue inmediato — tardó quizás treinta segundos — pero cuando llegó, fue como si alguien ajustara el volumen de todo lo que sonaba en la cámara. La bifurcación. El goteo de agua a la izquierda que significaba roca porosa y terreno inestable. Un leve siseo hacia la derecha que era exactamente el tipo de sistema de ventilación activa que el guardia había mencionado. Y, más allá de eso, en la dirección que no era ni izquierda ni derecha sino ligeramente hacia adelante y abajo, el sonido específico de aire moviéndose a través de un espacio más grande — una cámara. La salida. </p>
+        <p class="texto-narrativo"> Lyra lo esquivó. No preguntó cómo lo sabía. En cambio, su mano libre encontró la pared derecha del túnel y la siguió como guía — la técnica de orientación en cuevas que los cartógrafos aprenden como protocolo de seguridad y que en este momento resultó ser exactamente lo que mantenía al grupo en la dirección correcta cuando las indicaciones de Seraphina y el sonido de Axel diferían por un paso.</p>
 
-                <p class="dialogo bajo y preciso" data-badge="dicho sin dudar"> —Centro. Hay un espacio más adelante. El suelo baja ligeramente durante los primeros metros — piensen en descenso suave, no en escalón— </p>
+        <p class="texto-narrativo"> Cruzaron la primera cámara en seis minutos. Axel guiaba por sonido. Seraphina confirmaba con antenas. Lyra mantenía la orientación espacial del grupo con su mano en la pared y sus pies midiendo distancias que el resto no podía cuantificar en la oscuridad. Tres formas de percibir el mismo espacio, sin que ninguna fuera redundante.</p>
 
-                <p class="texto-narrativo"> Seraphina no dijo nada. Apoyó una pata en el hombro de Ember — un gesto que habría sido imposible dos días antes — y comenzó a avanzar con la seguridad particular de una mantis que ha cazado en la oscuridad y sabe que la oscuridad es solo ausencia de datos, no ausencia de control. Sus antenas procesaban la información que los ojos no podían dar: humedad, temperatura, la composición del aire, el calor residual de superficies que habían absorbido el paso de otros cuerpos. </p>
+        <p class="texto-narrativo"> Una luz tenue marcó la puerta de la segunda cámara. Al pasar, Axel tocó el borde de la pared y encontró una pequeña muesca — tres rayas paralelas grabadas en la roca. Una marca de paso. No supo cuántos grupos habían llegado hasta aquí. La marca no lo decía. Solo decía que alguien había llegado.</p>
 
-                <p class="dialogo muy suave" data-badge="indicando con la pata sobre el hombro de Ember"> —Paso a la derecha en tres metros. Hay una protuberancia de roca a altura de rodilla— </p>
+        <p class="texto-narrativo"> El erizo llegó rodando desde algún lugar detrás de ellos y se detuvo junto a la puerta con la puntualidad de quien lleva siguiendo la agenda sin que nadie lo invite.</p>
 
-                <p class="texto-narrativo"> Ember lo esquivó. No preguntó cómo lo sabía. </p>
+      </section>
 
-                <p class="texto-narrativo"> Cruzaron la primera cámara en seis minutos. Axel guiaba por sonido. Seraphina confirmaba con sus antenas. Eco Pergaminada registraba en voz baja los detalles del techo para asegurarse de que no hubiera filtraciones potencialmente estructurales — porque si había algo que Eco Pergaminada hacía automáticamente era documentar, incluso en la oscuridad, incluso en un laberinto de evaluación en el que la documentación era completamente irrelevante para el objetivo inmediato. Ember iba en medio, lo cual era técnicamente el lugar de más protección, y lo sabía, y ninguno tuvo que decirle que eso era lo que habían decidido hacer. </p>
+      <!-- =============== SEGUNDA CÁMARA — EL MAPA QUE NO SIRVE =============== -->
+      <section id="laberinto-camara-2">
+        <h3>Segunda Cámara — El mapa que no sirve</h3>
 
-                <p class="texto-narrativo"> Una luz tenue marcó la puerta de la segunda cámara. Al pasar, Axel tocó el borde de la pared y encontró una pequeña muesca — tres rayas paralelas grabadas en la roca, a la altura de la mano. Una marca de paso. Cuántos grupos habían llegado hasta aquí, cuántos habían pasado a la segunda. No había forma de saberlo por la marca sola. </p>
+        <p class="texto-narrativo"> La segunda cámara tenía luz — los mismos cristales bioluminiscentes que los habían acompañado en el descenso. También tenía cinco salidas idénticas, cada una con una señal grabada encima en combinaciones de los mismos tres símbolos. En el centro de la cámara, sobre una roca plana, había un mapa. Detallado, aparentemente completo, con las cinco salidas marcadas y sus destinos indicados.</p>
 
-            </div>
+        <p class="texto-narrativo"> Lyra fue la primera en llegar al mapa. No lo tocó. Lo estudió durante tres segundos con las manos atrás y los ojos entrecerrados — la postura de alguien que ha aprendido que los primeros mapas que encuentras en lugares desconocidos merecen sospecha.</p>
 
-        </section>
+        <p class="dialogo" data-badge="dicho sin tocarlo">
+            —Este mapa está mal—
+        </p>
 
-        <section id="laberinto-camara-2">
+        <p class="dialogo" data-badge="acercándose a verificar">
+            —¿Cómo lo sabes?— preguntó Axel.
+        </p>
 
-            <div class="camara-laberinto">
-                <h3>Segunda Cámara — El mapa que no sirve</h3>
+        <p class="dialogo" data-badge="señalando las escalas">
+            —Las proporciones de escala no son consistentes en ambas direcciones. Quien lo hizo usó dos referencias distintas. Los recorridos están dibujados correctos pero las distancias entre salidas son ficticias— Sus garras señalaron un punto específico del margen. —O es una trampa, o es una prueba de si confiamos en el mapa sobre lo que podemos verificar—
+        </p>
 
-                <p class="texto-narrativo"> La segunda cámara tenía luz — proveniente de los mismos cristales bioluminiscentes que los habían acompañado en el descenso. Lo que también tenía eran cinco salidas idénticas, cada una con una señal grabada encima que consistía en una combinación de los mismos tres símbolos en diferente orden. En el centro de la cámara, sobre una roca plana, había un mapa. Detallado, aparentemente completo, con las cinco salidas marcadas y sus destinos indicados. </p>
+        <p class="texto-narrativo"> Axel giró hacia las paredes. Los símbolos sobre las salidas lo detuvieron — los había visto durante el descenso, grabados en la roca junto a los registros de trabajo. No eran decorativos. Eran funcionales.</p>
 
-                <p class="texto-narrativo"> Ember fue el primero en llegar al mapa. Lo estudió durante cuatro segundos. </p>
+        <p class="dialogo" data-badge="señalando la cuarta salida">
+            —Esos símbolos aparecen en las paredes del túnel de bajada. Los de ventilación— Sus orejas giraron hacia la cuarta salida, donde un leve movimiento de aire era perceptible incluso sin el ungüento. —Este indica flujo hacia arriba. Eso significa cámara elevada. Si el objetivo es salir del laberinto, queremos subir—
+        </p>
 
-                <p class="dialogo cauteloso" data-badge="dicho sin tocarlo"> —Este mapa está mal— </p>
+        <p class="dialogo" data-badge="señalando esa salida">
+            —La cuarta— dijo Lyra, que había llegado a la misma conclusión por el olor del aire y el patrón de distribución del polvo en el suelo frente a cada salida.
+        </p>
 
-                <p class="dialogo interesado" data-badge="acercándose a verificar"> —¿Cómo lo sabes?— preguntó Axel. </p>
+        <p class="texto-narrativo"> Nadie miró el mapa de nuevo. Tenían tres maneras de leer el mismo espacio, y las tres señalaban la misma salida. Eso era suficiente.</p>
 
-                <p class="dialogo señalando el detalle" data-badge="señalando las escalas"> —Los Zorros Plateros me enseñaron a leer planos de taller cuando reparé el arco. Las proporciones de escala siempre son consistentes en ambas direcciones. En este mapa, la escala vertical y la horizontal no coinciden. Quien lo hizo usó dos referencias distintas. Los recorridos están dibujados correctos pero las distancias entre salidas son ficticias— hizo una pausa.— O es una trampa, o es una prueba de si confiamos en el mapa sobre lo que podemos verificar— </p>
+        <p class="texto-narrativo"> La cuarta salida llevaba hacia arriba.</p>
 
-                <p class="texto-narrativo"> Axel miró a Eco Pergaminada. </p>
+      </section>
 
-                <p class="dialogo verificando" data-badge="ya examinando las paredes"> —Los símbolos sobre las salidas son glifos de ventilación tejona— dijo Eco, que había ido directamente a las paredes en lugar del mapa.— Los he visto en la roca durante el descenso. Este— señaló el central-derecho — indica flujo hacia arriba. Eso significa que conecta con una cámara elevada. Si el objetivo es salir del laberinto, queremos subir, no bajar ni mantenernos al mismo nivel— </p>
+      <!-- =============== TERCERA CÁMARA — LA TRAMPA INVISIBLE =============== -->
+      <section id="laberinto-camara-3">
+        <h3>Tercera Cámara — La trampa invisible</h3>
 
-                <p class="dialogo seguro" data-badge="señalando esa salida"> —La cuarta— dijo. </p>
+        <p class="texto-narrativo"> La tercera cámara era la más grande de las tres. Columnas naturales de estalagmita y estalactita casi se tocaban en el centro, creando un corredor de acceso donde tenían que pasar de uno en uno. Al otro lado del corredor, visible con claridad, estaba la puerta de salida — de madera reforzada con metal, con el símbolo de Groundbreaker grabado en el centro.</p>
 
-                <p class="texto-narrativo"> Nadie miró el mapa de nuevo. Axel sacó el de Lyra — todavía protegido por la cera de las nutrias, todavía con la letra apretada y precisa de una rastreadora que no deja nada al azar — y lo guardó de nuevo sin consultarlo. No hacía falta. Tenían algo mejor que un mapa: tres personas que miraban el mismo problema desde ángulos diferentes y ninguna esperando que las otras dos estuvieran de acuerdo antes de decir lo que veían. </p>
+        <p class="texto-narrativo"> Entre ellos y la puerta: veinte metros de suelo liso.</p>
 
-                <p class="texto-narrativo"> La cuarta salida llevaba hacia arriba. </p>
+        <p class="texto-narrativo"> Axel colocó un pie en el primer metro de suelo liso y lo retiró. No porque hubiera sentido nada físico. El arco en su espalda había emitido un calor que no era el calor habitual de advertencia ante peligro físico — era diferente. Más específico. La madera ancestral diciéndole que había algo que no podía ver.</p>
 
-            </div>
+        <p class="texto-narrativo"> Recordó el frasco de polvo de ala de mariposa que Seraphina llevaba desde el valle. Ala de Carta lo había describido con terminología postal — —revela los mensajes camuflados— — con la misma entonación que usaría para describir el franqueo prioritario. Lo que implicaba era que cualquier cosa camuflada quedaría visible bajo ese polvo.</p>
 
-        </section>
+        <p class="dialogo" data-badge="dicho sin urgencia">
+            —Seraphina. El polvo de la mariposa—
+        </p>
 
-        <section id="laberinto-camara-3">
+        <p class="texto-narrativo"> Seraphina ya lo tenía en la mano. No porque Axel se lo hubiera dicho — lo había sacado en el momento en que él retiró el pie, porque sus antenas habían detectado la misma anomalía. El suelo frente a ella tenía una composición química diferente a los veinte centímetros anteriores. No peligrosa. Artificial.</p>
 
-            <div class="camara-laberinto">
-                <h3>Tercera Cámara — La trampa invisible</h3>
+        <p class="texto-narrativo"> Esparció el polvo.</p>
 
-                <p class="texto-narrativo"> La tercera cámara era la más grande de las tres. Columnas naturales de estalagmita y estalactita que casi se tocaban en el centro creaban un corredor de acceso en el que tenían que pasar de uno en uno. Al otro lado del corredor, visible con claridad, estaba la puerta de salida — una puerta real, de madera reforzada con metal, con el símbolo de Groundbreaker grabado en el centro. </p>
+        <p class="texto-narrativo"> El suelo reveló una cuadrícula de líneas que brillaban con un azul tenue — no uniformes, sino dispuestas en un patrón irregular que cruzaba los veinte metros en diagonal. Runas. Las mismas que el pergamino de los murciélagos describía en el margen inferior — trampas de contención. El mármol se vuelve arena movediza al segundo contacto.</p>
 
-                <p class="texto-narrativo"> Entre ellos y la puerta: veinte metros de suelo liso. </p>
+        <p class="dialogo" data-badge="observado">
+            —Trampas de contención— confirmó Axel, recordando el pergamino. —Si pisamos las líneas azules, el suelo cede. El espacio entre ellas es seguro—
+        </p>
 
-                <p class="texto-narrativo"> Axel colocó un pie en el primer metro de suelo liso y lo retiró. No porque hubiera sentido nada físico. Porque el arco en su espalda había emitido un calor que no era el calor habitual de advertencia ante peligro físico — era diferente. Más específico. Como si la madera ancestral estuviera diciéndole no que hubiera peligro, sino que había algo que no podía ver. </p>
+        <p class="texto-narrativo"> El espacio entre las líneas no era suficiente para pasar de frente. Eran huecos del tamaño de un pie, irregulares, que requerían girar el cuerpo en ángulos que cambiaban a cada paso. Posible para uno. Posible para cuatro si los cuatro se movían en coordinación sin que ninguno ocupara el espacio del siguiente antes de que el anterior lo despejara.</p>
 
-                <p class="texto-narrativo"> Recordó el frasco de polvo de ala de mariposa que Seraphina llevaba desde el valle. Ala de Carta lo había describido en términos postales — —revela los mensajes camuflados—, había dicho, con la misma entonación que usaría para describir cómo funciona el franqueo prioritario. Lo que Ala de Carta no había dicho, pero que el contexto implicaba, era que cualquier cosa camuflada — física o mágica — quedaba visible bajo ese polvo. </p>
+        <p class="dialogo" data-badge="indicando el patrón de movimiento">
+            —Lyra va primero — su paso es el más medido y tiene el mejor sentido de distancias. Seraphina guía desde aquí: con las antenas puede ver el patrón completo. Yo voy al final. Si alguien pierde el equilibrio, silbato de concha: tres pitidos cortos. Detenemos todo y evaluamos—
+        </p>
 
-                <p class="dialogo tranquilo" data-badge="dicho sin urgencia"> —Seraphina. El polvo que te dio la mariposa azul— </p>
+        <p class="texto-narrativo"> Nadie propuso un orden diferente. La lógica era evidente. Verbalizarla habría sido redundante.</p>
 
-                <p class="texto-narrativo"> Seraphina ya lo tenía en la mano. No porque Axel se lo hubiera dicho — lo había sacado en el momento en que él había retirado el pie, porque sus antenas habían detectado la misma anomalía y habían tardado exactamente los mismos dos segundos en identificar que el suelo frente a ella tenía una composición química diferente a los veinte centímetros anteriores. No peligrosa. Artificial. </p>
+        <p class="texto-narrativo"> Antes de que Lyra diera el primer paso, un sonido familiar rodó desde atrás.</p>
 
-                <p class="texto-narrativo"> Esparció el polvo. </p>
+        <p class="texto-narrativo"> El erizo pasó entre las piernas de Axel, cruzó la línea de inicio, y rodó directamente sobre el suelo trampeado. Sin pausa, sin duda, sin la menor indicación de que supiera lo que estaba haciendo. Rodó sobre la primera runa azul. La segunda. La tercera. Cada línea que tocaba brillaba brevemente y luego se apagaba — no con el estallido de arena movediza que describía el pergamino, sino con un parpadeo débil, como una trampa que no encuentra suficiente peso para activarse. El erizo pesaba menos que el umbral de activación.</p>
 
-                <p class="texto-narrativo"> El suelo reveló una cuadrícula de líneas que brillaban con un azul tenue — no uniformes, sino dispuestas en un patrón irregular que cruzaba los veinte metros en diagonal. Runas. Las mismas que el pergamino de los murciélagos describía en el margen inferior — Eco las había leído en voz baja esa tarde, frente al fuego: —trampas de contención, activan al segundo contacto, el mármol se vuelve arena movediza—. </p>
+        <p class="texto-narrativo"> Cruzó los veinte metros en línea recta, chocó contra la puerta de salida con un golpe suave, se desenrolló, y miró hacia atrás.</p>
 
-                <p class="dialogo seco" data-badge="observado sin exclamación"> —Trampas de contención— confirmó Eco Pergaminada, que también había leído esa parte.— Si pisamos las líneas azules, el suelo cede. El espacio entre ellas es seguro— </p>
+        <p class="texto-narrativo"> El silencio duró cinco segundos completos.</p>
 
-                <p class="texto-narrativo"> El espacio entre las líneas no era suficiente para pasar de frente. Eran huecos del tamaño de un pie, irregulares, que requerían girar el cuerpo en ángulos que cambiaban a cada paso. Posible para uno. Posible para cuatro si los cuatro se movían en coordinación absoluta sin que ninguno ocupara el espacio del siguiente antes de que el anterior lo despejara. </p>
+        <p class="dialogo" data-badge="dicho con la voz de quien entiende lo que acaba de pasar">
+            —Las trampas se activan al segundo contacto— dijo Axel. —Él acaba de hacer el primero en todas. Si cruzamos ahora por las mismas líneas....—
+        </p>
 
-                <p class="texto-narrativo"> Axel lo estudió durante aproximadamente ocho segundos. </p>
+        <p class="dialogo" data-badge="completando el razonamiento">
+            —Se activan— terminó Seraphina. —Pero ahora sabemos exactamente dónde están todas. Cada una brilló cuando pasó. El patrón completo es visible—
+        </p>
 
-                <p class="dialogo sin preámbulo" data-badge="indicando el patrón de movimiento"> —Eco va primero, es la más pequeña — tiene el mayor margen. Ember detrás, siguiendo sus pasos exactos. Seraphina, tú ves el patrón completo mejor que nosotros con las antenas — guías desde aquí. Yo voy al final. Si alguien pierde el equilibrio, silbato de río: tres pitidos cortos. Nos detenemos todos y evaluamos— </p>
+        <p class="texto-narrativo"> Era cierto. Lo que antes había sido una cuadrícula parcialmente revelada por el polvo de mariposa ahora era un mapa completo — cada trampa marcada con la estela residual del paso del erizo, brillando con suficiente claridad para trazar un camino seguro entre ellas.</p>
 
-                <p class="texto-narrativo"> Nadie preguntó por qué ese orden. Nadie sugirió uno diferente. Axel era el más pesado del grupo y el que pisaba con más seguridad en terreno irregular — ir al final minimizaba las vibraciones para los que cruzaban antes. Eco era la más liviana y la que nunca perdía la orientación espacial. La lógica era tan evidente que verbalizarla habría sido redundante. </p>
+        <p class="texto-narrativo"> Cruzaron en silencio casi total. Lyra movía sus patas con la concentración de alguien que convierte el movimiento en un problema cartográfico en tiempo real. Axel la seguía con una fluidez que viene de años en terreno irregular. Seraphina guiaba con instrucciones brevísimas — —izquierda, un paso—, —espera—, —ahora recto—, —inclínate— — con la economía de palabras de alguien que da coordenadas, no confort.</p>
 
-                <!-- =============== SÉPTIMA APARICIÓN DEL ERIZO (PARTE 2 - UTILIDAD ACCIDENTAL) =============== -->
-                <p class="texto-narrativo"> Antes de que nadie diera el primer paso, un sonido familiar rodó desde atrás. </p>
+        <p class="texto-narrativo"> Axel cruzó el último. Pisó firme al otro lado y no se permitió el alivio hasta que todos estuvieron junto a la puerta.</p>
 
-                <p class="texto-narrativo"> El erizo pasó entre las piernas de Axel, cruzó la línea de inicio, y rodó directamente sobre el suelo trampeado. Sin pausa, sin duda, sin la menor indicación de que supiera que estaba haciendo algo. Rodó sobre la primera runa azul. La segunda. La tercera. Cada línea que tocaba brillaba brevemente y luego se apagaba — no con el estallido de arena movediza que el pergamino describía, sino con un parpadeo débil, como una trampa que no encuentra suficiente peso para activarse. </p>
+        <p class="texto-narrativo"> La puerta se abrió sola.</p>
 
-                <p class="texto-narrativo"> El erizo cruzó los veinte metros en línea recta, chocó contra la puerta de salida con un golpe suave, se desenrolló, y miró hacia atrás. </p>
+      </section>
 
-                <p class="texto-narrativo"> El silencio duró cinco segundos completos. </p>
+      <!-- =============== INFORMACIÓN DEL TEMPLO =============== -->
+      <section id="informacion-templo">
 
-                <p class="dialogo" data-badge="susurrado con incredulidad técnica">
-                  —Las trampas se activan al segundo contacto— murmuró Eco Pergaminada.— Él acaba de hacer el primer contacto en todas. Si cruzamos ahora por las mismas líneas....
-                </p>
+        <p class="texto-narrativo"> Groundbreaker los esperaba al otro lado, sentado en lo que era evidentemente su silla de trabajo — no una silla de honor, sino el tipo de asiento que alguien construye después de pasarse veinte años sentándose en el mismo lugar. Tenía su tablilla en la mano y los miró cruzar con la misma expresión evaluativa que había tenido desde el principio.</p>
 
-                <p class="dialogo" data-badge="completando el razonamiento">
-                  —Se activan— terminó Seraphina.— Pero ahora sabemos exactamente dónde están TODAS. Cada una brilló cuando él pasó. El patrón completo es visible.
-                </p>
+        <p class="dialogo" data-badge="anotando sin preámbulo">
+            —Veintidós minutos. Mejor que la media. El récord es dieciséis — lo hizo un grupo de arañas hace cuatro años. Tienen ocho patas, ventaja estructural considerable en el laberinto. No lo tomen como crítica—
+        </p>
 
-                <p class="texto-narrativo"> Era cierto. Lo que antes había sido una cuadrícula parcialmente revelada por el polvo de mariposa ahora era un mapa completo — cada trampa marcada con la estela residual del paso del erizo, brillando con suficiente claridad para que incluso Ember pudiera ver el camino seguro entre ellas. </p>
+        <p class="dialogo" data-badge="dicho con calma ganada">
+            —La información sobre el Templo— dijo Axel. No como exigencia. Como la continuación natural de un trato.
+        </p>
 
-                <div class="groundbreaker-bloque">
-                  <p class="dialogo impresionado" data-badge="anotando con caligrafía más rápida de lo normal"> —Reclasificación inmediata. Componente pasivo ascendido a Instrumento de Exploración Nivel 3. Primer espécimen no verbal en contribuir activamente a la superación de la tercera cámara en.... — revisó sus notas — ....la historia completa del laberinto— </p>
-                </div>
+        <p class="texto-narrativo"> Groundbreaker dejó la tablilla y se puso de pie — confirmando que era la criatura más sólida que ninguno de ellos había visto — y se acercó al mapa de pared más cercano. El Templo Celestial estaba marcado con un símbolo diferente al resto: no un punto, sino un círculo con una línea que atravesaba el centro. Dividido. O unido, dependiendo de cómo se mirara.</p>
 
-                <p class="texto-narrativo"> El erizo, al otro lado, se hizo bolita junto a la puerta. No esperaba agradecimiento. No esperaba nada. Simplemente había rodado en línea recta, que era lo único que sabía hacer, y el universo se había encargado de que eso fuera exactamente lo que se necesitaba. </p>
-                <!-- =============== FIN SÉPTIMA APARICIÓN DEL ERIZO (PARTE 2) =============== -->
+        <p class="dialogo" data-badge="señalando el mapa con voz más baja">
+            —El Templo Celestial es una estructura consciente. No en el sentido de que piense — en el sentido de que responde. Sus sistemas de defensa no los activa nadie: se activan solos según la naturaleza de quienes entran. Si entran con división interna, el Templo la amplifica. Si entran con unidad, el Templo la prueba para verificar que es real—
+        </p>
 
-                <p class="texto-narrativo"> Cruzaron en silencio casi total. Eco movía sus pequeñas patas con la concentración absoluta de alguien que está convirtiendo el movimiento en un problema matemático. Ember la seguía con una fluidez que Axel no esperaba — Ember era diplomático, no cazador, pero había crecido en las mismas montañas y sabía moverse cuando necesitaba. Seraphina guiaba con instrucciones brevísimas — —izquierda, un paso—, —espera—, —ahora recto—, —inclínate— — con la misma economía de palabras que usaría para dar coordenadas, no para dar confort. </p>
+        <p class="texto-narrativo"> Groundbreaker señaló un punto específico del mapa con una garra.</p>
 
-                <p class="texto-narrativo"> Axel cruzó el último. Pisó firme al otro lado y no se permitió el alivio hasta que todos estuvieron junto a la puerta. </p>
+        <p class="dialogo" data-badge="dicho con voz más baja que antes">
+            —Lo que nadie más les habrá dicho: el guardián que encontrarán lleva aproximadamente tres años esperando. Es un espíritu — la voluntad de alguien que eligió quedarse para proteger las Lágrimas de Luna hasta que llegara la persona correcta. Los espíritus guardianes son voluntarios. El que está ahí es un cazador. Gato montés. Sus huellas están en el registro de paso del año en que el Templo selló su última entrada—
+        </p>
 
-                <p class="texto-narrativo"> La puerta se abrió sola. </p>
+        <p class="texto-narrativo"> Axel no habló.</p>
 
-            </div>
+        <p class="texto-narrativo"> No porque no tuviera nada que decir. Sino porque en el momento en que Groundbreaker dijo —gato montés— y —tres años—, el arco se calentó de una forma que no tenía precedente en todo el viaje: no el calor suave de protección, no el calor agudo de advertencia. Reconocimiento. Como cuando alguien te llama por tu nombre en un lugar donde no esperabas que nadie lo supiera.</p>
 
-        </section>
+        <p class="texto-narrativo"> Lyra, a su izquierda, no dijo nada. Pero su mano encontró el borde de la bolsa de mapas y se quedó ahí — el gesto de alguien que necesita sujetar algo mientras procesa información que no estaba en ninguno de sus modelos.</p>
 
-        <section id="informacion-templo">
+        <p class="dialogo" data-badge="continuando sin énfasis">
+            —Las Lágrimas de Luna responden a la verdad más profunda del corazón de quien las toca primero. No al corazón que uno quiere tener — al que uno tiene. Si hay odio, entregan poder de destrucción que incluye autodestrucción. Si hay amor o compasión, entregan curación. No hay punto intermedio. Las Lágrimas no conocen la ambivalencia—
+        </p>
 
-            <div class="info-templo-bloque">
+        <p class="texto-narrativo"> Esta vez sí hubo silencio. El tipo de silencio que no es ausencia de cosas que decir sino demasiadas cosas que no pueden decirse todavía.</p>
 
-                <p class="texto-narrativo"> Groundbreaker los esperaba al otro lado, sentado en lo que era evidentemente su silla de trabajo — no una silla de honor ni un trono, sino el tipo de asiento que alguien construye después de pasarse veinte años sentándose en el mismo lugar porque le resulta más eficiente que cambiarlo. Tenía su tablilla en la mano y los miró cruzar la puerta con la misma expresión evaluativa que había tenido desde el principio. </p>
+        <p class="texto-narrativo"> Seraphina tenía los ojos fijos en un punto de la pared detrás de Groundbreaker. Sus antenas no se movían. Era la inmovilidad de alguien que está haciendo algo muy difícil por dentro y necesita toda la energía disponible para no mostrarlo por fuera.</p>
 
-                <div class="groundbreaker-bloque">
-                    <p class="dialogo registrando" data-badge="anotando sin preámbulo"> —Veintidós minutos. Mejor que la media. El récord es dieciséis — lo hizo un grupo de arañas hace cuatro años. Tienen ocho patas, lo cual es una ventaja estructural considerable en el laberinto. No lo tomen como crítica— </p>
-                </div>
+        <p class="dialogo" data-badge="sacando la bolsa de herramientas con el mismo tono que usaría para pasar al siguiente punto de una reunión de obra">
+            —Las herramientas— anunció Groundbreaker. —Tres picos anti-magia: inactivan defensas mágicas pasivas. Útiles para las runas de contención del tercer nivel. No los use contra criaturas conscientes: solo funcionan contra magia sin voluntad propia. Cuatro cristales de comunicación: permiten escucharse a distancia en espacios donde el eco distorsiona el sonido, que en el Templo es prácticamente todo. Y esto—
+        </p>
 
-                <p class="dialogo directo" data-badge="dicho con calma ganada"> —La información sobre el Templo— dijo Axel. No como exigencia. Como la continuación natural de un trato. </p>
+        <p class="texto-narrativo"> Sacó una cuerda del grosor de un dedo, trenzada en tres fibras de colores diferentes — roja, dorada y oscura — que se habían entrelazado de una forma que las hacía inseparables. Tenía el aspecto de cualquier cuerda de trabajo buena. No brillaba. No emanaba calor.</p>
 
-                <div class="groundbreaker-bloque">
-                    <p class="dialogo comenzando" data-badge="dejando la tablilla"> —El Templo Celestial es una estructura consciente. No en el sentido de que piense — en el sentido de que responde. Sus sistemas de defensa no los activa nadie: se activan solos en respuesta a la naturaleza de quienes entran. Si entran con división interna, el Templo amplifícala. Si entran con unidad, el Templo la prueba para verificar que es real— </p>
-                </div>
+        <p class="dialogo" data-badge="dejándola sobre la mesa sin dramatismo">
+            —Cuerda de confianza. No es un objeto mágico. Es una cuerda normal que fabricamos con fibras de tres plantas que no crecen en el mismo suelo. Unirlas requiere trabajo. Si el grupo que la usa mantiene su unidad, la cuerda mantiene la suya — las fibras se consolidan con el tiempo. Si el grupo se fractura, las fibras comienzan a deshilacharse. No es magia. Es física de materiales aplicada al comportamiento de grupo— pausa. —La he visto romperse. Siempre pasa antes de que el grupo se dé cuenta de que estaban fracturándose. El material es más honesto que las personas—
+        </p>
 
-                <p class="texto-narrativo"> Groundbreaker se puso de pie, cosa que confirmó que era la criatura más sólida que ninguno de ellos había visto, y se acercó al mapa de pared más cercano — un mapa diferente de todos los que habían visto hasta ahora, con una escala que claramente abarcaba toda la región, incluyendo puntos que Axel reconoció del mapa de Lyra. El Templo Celestial estaba marcado en él con un símbolo diferente al resto: no un punto, sino un círculo con una línea que atravesaba el centro. Dividido. O unido, dependiendo de cómo se mirara. </p>
+        <p class="texto-narrativo"> Axel tomó la cuerda. La pasó por sus dedos — fuerte, flexible, sin ninguno de los puntos débiles que un ojo entrenado buscaba en las cuerdas del arco. La ató con un nudo simple al asa de su bolsa, donde podría verla.</p>
 
-                <div class="groundbreaker-bloque">
-                    <p class="dialogo señalando el mapa" data-badge="con voz más baja que antes"> —Lo que nadie les habrá dicho porque nadie más lo sabe fuera de los tejones: el guardián que encontrarán dentro del Templo lleva esperando aproximadamente tres años. Es un espíritu — no una criatura viva, sino la voluntad de alguien que eligió quedarse para proteger las Lágrimas de Luna hasta que llegara la persona correcta. Los espíritus guardianes son voluntarios. Nadie los obliga. Eligen— pausa.— El que está ahí es un cazador. Gato montés. Sus huellas están en el registro de paso del año en que el Templo selló su última entrada— </p>
-                </div>
+      </section>
 
-                <p class="texto-narrativo"> Axel no habló. </p>
+      <!-- =============== SALIDA Y GANCHO =============== -->
+      <section id="salida-y-gancho">
 
-                <p class="texto-narrativo"> No porque no tuviera nada que decir. Sino porque en el momento en que Groundbreaker dijo —gato montés— y —tres años—, el arco en su espalda se calentó de una forma que no tenía precedente en todo el viaje: no el calor suave de protección, no el calor agudo de advertencia. Era algo entre las dos cosas. Reconocimiento. Como cuando alguien te llama por tu nombre en un lugar donde no esperabas que nadie lo supiera. </p>
+        <p class="texto-narrativo"> La salida al exterior llegó antes de lo que esperaban. Groundbreaker los guio por un túnel de acceso rápido — diferente al laberinto de evaluación, sin trampa ni prueba, simplemente el camino más eficiente de adentro a afuera — y emergieron en la superficie en un punto diferente del que habían entrado: más cerca del escarpe, con el territorio de los tejones quedando atrás y el terreno ascendente del último tramo abriéndose frente a ellos. El sol estaba en su punto más alto. Si el mapa de Lyra era correcto, el Templo Celestial estaba a medio día de marcha.</p>
 
-                <p class="texto-narrativo"> Ember apoyó una pata en su hombro. Un peso breve, sin palabras. </p>
+        <p class="dialogo" data-badge="dicho desde el umbral del túnel antes de cerrarse">
+            —Una cosa más— dijo Groundbreaker, con el mismo tono con que añadiría una última especificación técnica al final de una reunión. —El guardián del Templo no ataca. Los guardianes nunca atacan. Solo retienen. Si el grupo que entra no es lo que afirma ser, el guardián simplemente no los deja salir hasta que sean honestos sobre eso. El problema no es entrar al Templo. El problema es entrar siendo lo que uno pretende ser en lugar de lo que uno es—
+        </p>
 
-                <div class="groundbreaker-bloque">
-                    <p class="dialogo continuando sin énfasis" data-badge="regresando al mapa"> —Las Lágrimas de Luna responden a la verdad más profunda del corazón de quien las toca primero. No al corazón que uno quiere tener — al que uno tiene. Si hay odio, entregan poder de destrucción que incluye autodestrucción. Si hay amor o compasión, entregan curación. No hay punto intermedio. Las Lágrimas no conocen la ambivalencia— </p>
-                </div>
+        <p class="texto-narrativo"> La puerta del túnel se cerró. La roca volvió a ser roca indistinguible. En diez segundos, si no sabías lo que estabas buscando, no había señal de que hubiera nada ahí.</p>
 
-                <p class="texto-narrativo"> Esta vez sí hubo silencio. El tipo de silencio que no es ausencia de cosas que decir sino demasiadas cosas que no pueden decirse todavía. </p>
+        <p class="texto-narrativo"> Caminaron en silencio durante varios minutos. El terreno ascendía con suavidad. Axel no habría podido decir con certeza, en ese momento, qué cosas eran coincidencia y qué cosas eran el mundo organizándose alrededor de algo que todavía no había sucedido pero que ya tenía el peso de lo inevitable.</p>
 
-                <p class="texto-narrativo"> Seraphina tenía los ojos fijos en un punto de la pared detrás de Groundbreaker. Sus antenas no se movían. Era la inmovilidad de alguien que está haciendo algo muy difícil por dentro y necesita toda la energía disponible para no mostrarlo por fuera. </p>
+        <p class="texto-narrativo"> Lyra caminaba consultando el mapa cada cierto tiempo, haciendo correcciones en los márgenes con una letra más pequeña que su escritura habitual — la letra de alguien que anota observaciones que no tenía previstas. Seraphina caminaba a un metro de distancia de Axel, como la noche junto a las mariposas. El frasco de veneno estaba en su bolsillo interno. El polvo de ala, casi agotado, también. Un inventario pequeño para lo que la esperaba al final del camino.</p>
 
-                <div class="groundbreaker-bloque">
-                    <p class="dialogo práctico" data-badge="sacando la bolsa de herramientas"> —Las herramientas— anunció Groundbreaker, con el mismo tono que usaría para pasar al siguiente punto de una reunión de obra.— Tres picos anti-magia: inactivan defensas mágicas pasivas. Útiles para las runas de contención del tercer nivel. No los use contra criaturas conscientes: solo funcionan contra magia sin voluntad propia. Cuatro cristales de comunicación: permiten escucharse a distancia en espacios donde el eco distorsiona el sonido, que en el Templo es prácticamente todo. Y esto— </p>
-                </div>
+        <p class="texto-narrativo"> Fue Lyra quien notó primero el detalle que ninguno había visto: el pergamino de los murciélagos, que había estado revisando desde que Axel se lo mostró, tenía algo que faltaba. Las instrucciones del ritual estaban ahí — parciales pero presentes. Las notas sobre las runas de contención estaban ahí. La descripción de las Lágrimas de Luna estaba ahí.</p>
 
-                <p class="texto-narrativo"> Sacó una cuerda del grosor de un dedo, trenzada en tres fibras de colores diferentes — roja, dorada y oscura — que se habían entrelazado de una forma que las hacía inseparables. Tenía el mismo aspecto que cualquier cuerda de trabajo buena. No brillaba. No emanaba calor. </p>
+        <p class="texto-narrativo"> Pero había una sección al final que estaba borrada. No deteriorada por el tiempo — borrada. Con un ingrediente específico que los murciélagos Bibliotecarios usaban para redactar información que no debía ser preservada en texto permanente. Y según el índice del pergamino — porque los murciélagos siempre incluían índice — la sección borrada se titulaba: —Consecuencias del uso incorrecto de las Lágrimas por parte de quien las toca tercero—.</p>
 
-                <div class="groundbreaker-bloque">
-                    <p class="dialogo explicando sin dramatismo" data-badge="dejándola sobre la mesa"> —Cuerda de confianza. No es un objeto mágico. Es una cuerda normal que los tejones fabricamos con fibras de tres plantas diferentes que no crecen en el mismo suelo. Unirlas requiere trabajo. Si el grupo que la usa mantiene su unidad, la cuerda mantiene la suya — las fibras se consolidan con el tiempo. Si el grupo se fractura, las fibras comienzan a deshilacharse. No es magia. Es física de materiales aplicada al comportamiento de grupo— pausa.— La he visto romperse. Siempre pasa antes de que el grupo se dé cuenta de que estaban fracturándose. El material es más honesto que las personas— </p>
-                </div>
+        <p class="dialogo" data-badge="dicho sujetando el pergamino">
+            —Hay una parte que alguien borró— dijo Lyra. —No sé qué decía. Pero creo que debería importarnos que alguien eligió que no supiéramos qué decía—
+        </p>
 
-                <p class="texto-narrativo"> Axel tomó la cuerda. La pasó por sus dedos — fuerte, flexible, sin ninguno de los puntos débiles que un ojo entrenado buscaba en las cuerdas del arco. La ató con un nudo simple al asa de su bolsa, donde podría verla. </p>
+        <p class="texto-narrativo"> El grupo siguió caminando. La cuerda de confianza, atada a la bolsa de Axel, siguió entera. Pero las tres fibras — roja, dorada, oscura — temblaron ligeramente con el viento, de una forma que podría haber sido el viento y podría no haberlo sido.</p>
 
-            </div>
+        <p class="texto-narrativo"> Medio día de marcha. El Templo los esperaba al final del camino, junto con un guardián que llevaba tres años esperando específicamente a uno de ellos. Y una pregunta que el pergamino de los murciélagos había elegido no responder: qué le pasaba al tercero que tocaba las Lágrimas, y quién de ellos sería ese tercero.</p>
 
-        </section>
+      </section>
 
-        <section id="salida-y-gancho">
-
-            <p class="texto-narrativo"> La salida al exterior llegó antes de lo que esperaban — los tejones tenían túneles de acceso rápido además del laberinto de evaluación, y Groundbreaker los guio por uno de esos sin comentario adicional sobre la existencia paralela de los dos sistemas. No hacía falta. La lógica era la misma que todo lo demás: el laberinto era la prueba, el túnel de salida era la herramienta. Herramientas y pruebas no son lo mismo ni deben confundirse. </p>
-
-            <p class="texto-narrativo"> Emergieron en la superficie en un punto diferente del que habían entrado — más cerca del escarpe, con el territorio de los tejones quedando atrás y el terreno ascendente del último tramo del viaje abriéndose frente a ellos. El sol estaba en su punto más alto del día. Si el mapa de Lyra era correcto, el Templo Celestial estaba a medio día de marcha. </p>
-
-            <div class="groundbreaker-bloque">
-                <p class="dialogo final" data-badge="dicho desde la entrada del túnel antes de cerrarse"> —Una cosa más— dijo Groundbreaker, desde el umbral del túnel, con el mismo tono que usaría para añadir una última especificación técnica al final de una reunión.— El guardián del Templo no ataca. Los guardianes nunca atacan. Solo retienen. Si el grupo que entra no es lo que afirma ser, el guardián simplemente no los deja salir hasta que sean honestos sobre eso. El problema no es entrar al Templo. El problema es entrar siendo lo que uno pretende ser en lugar de lo que uno es— </p>
-            </div>
-
-            <p class="texto-narrativo"> La puerta del túnel se cerró. La roca volvió a ser roca indistinguible. En diez segundos, si no sabías lo que estabas buscando, no había señal de que hubiera nada ahí. </p>
-
-            <p class="texto-narrativo"> Caminaron en silencio durante varios minutos. El terreno ascendía con suavidad, como si la tierra estuviera inclinando el suelo para que llegaran donde necesitaban llegar con el mínimo de esfuerzo posible. O quizás era solo geografía. Axel no habría podido decir con certeza, en ese momento, qué cosas eran coincidencia y qué cosas eran el mundo organizándose alrededor de algo que todavía no había sucedido pero que ya tenía el peso de lo inevitable. </p>
-
-            <p class="texto-narrativo"> Ember empezó a decir algo — Axel lo vio en el movimiento de sus labios — y luego no lo dijo. Axel agradeció eso. Algunas cosas necesitaban el tiempo que tardaban en llegar antes de ser verbalizadas. </p>
-
-            <p class="texto-narrativo"> Seraphina caminaba a un metro de distancia de Ember, como la noche anterior junto a las mariposas. El frasco de veneno estaba en su bolsillo interno. El silbato de río también. El polvo de ala de mariposa, casi agotado, también. Era un inventario pequeño para lo que la esperaba al final del camino. </p>
-
-            <p class="texto-narrativo"> Fue Eco Pergaminada quien notó primero el detalle que ninguno había visto: el pergamino de los murciélagos, que llevaba estudiando desde la cueva, tenía algo que faltaba. Las instrucciones del ritual estaban ahí — parciales pero presentes. Las notas sobre las runas de contención estaban ahí. La descripción de las Lágrimas de Luna estaba ahí. </p>
-
-            <p class="texto-narrativo"> Pero había una sección al final del pergamino que estaba borrada. No deteriorada por el tiempo — borrada. Deliberadamente. Con un ingrediente que los murciélagos Bibliotecarios usaban para redactar información que no debía ser preservada en texto permanente. Y lo que estaba borrado era exactamente una sección. La sección que, según el índice del pergamino — porque los murciélagos siempre incluían índice — se titulaba: —Consecuencias del uso incorrecto de las Lágrimas por parte de quien las toca tercero—. </p>
-
-            <p class="dialogo preocupada sin dramatismo" data-badge="dicho sujetando el pergamino"> —Hay una parte que alguien borró— dijo Eco Pergaminada.— No sé qué decía. Y no sé si importa. Pero creo que debería importarnos que alguien eligió que no supiéramos qué decía— </p>
-
-            <p class="texto-narrativo"> El grupo siguió caminando. La cuerda de confianza, atada a la bolsa de Axel, siguió entera. Pero las tres fibras que la componían — roja, dorada, oscura — temblaron ligeramente con el viento, de una forma que podría haber sido el viento y podría no haberlo sido. </p>
-
-            <p class="texto-narrativo"> Medio día de marcha. El Templo los esperaba al final del camino, junto con un guardián que llevaba tres años esperando específicamente a uno de ellos. Y una pregunta que el pergamino de los murciélagos había elegido no responder. </p>
-
-        </section>
-
+      <!-- NOTAS DE CONTINUIDAD (no visibles al lector):
+        — Grupo: Axel, Seraphina, Lyra (+ erizo). Sin Eco Pergaminada.
+        — Groundbreaker confirma guardián del Templo = espíritu del padre de Axel (gato montés, 3 años)
+        — El arco reacciona: reconocimiento, no advertencia
+        — Sistema económico tejón: cooperación verificada antes de recibir herramientas
+        — Payoffs usados: cera (mapa protegido), ungüento (detecta trampas), silbato (plan emergencia), polvo de ala (revela runas)
+        — Payoffs nuevos para seccion_10: picos anti-magia, cristales de comunicación, cuerda de confianza
+        — Gancho: sección borrada del pergamino = consecuencias del que toca las Lágrimas tercero
+        — Lyra descubre el detalle del pergamino (su rol como cartógrafa/lectora de documentos)
+        — Próximo: Sección 09B — Último campamento antes del Templo
+        — "Sin embargo" = 0
+        — Clases sucias = 0
+        — Eco Pergaminada = 0
+      -->
     </div>
-
-    <!-- =============== NOTAS DE CONTINUIDAD =============== -->
-    <div class="nota-continuidad" style="background: rgba(66, 66, 66, 0.3); padding: 20px; margin: 30px 0; border-radius: 10px; font-style: italic; color: #ccc">
-        <h4>Notas para continuidad narrativa:</h4>
-        <p>• Groundbreaker confirma al guardián del Templo = espíritu del padre de Axel</p>
-        <p>• El arco reacciona al oír la descripción: reconocimiento, no advertencia</p>
-        <p>• Sistema económico tejón: cooperación verificada, no objetos por objetos</p>
-        <p>• Payoffs utilizados: cera (mapa protegido), ungüento (detecta trampas), silbato (comunicación), polvo de ala (revela runas)</p>
-        <p>• Payoffs pendientes para sección 10: picos anti-magia, cristales comunicación, cuerda de confianza</p>
-        <p>• Gancho final: sección borrada del pergamino → consecuencias del tercero en tocar las Lágrimas</p>
-        <p>• Lyra sigue en las sombras: los tejones la detectan, Axel ya lo sabía, nadie dice nada</p>
-        <p>• La pregunta sin responder: qué sucede con quien toca las Lágrimas tercero (¿Axel? ¿Ember?)</p>
-        <p>• Próximo: Sección 09B — Último campamento antes del Templo</p>
-    </div>
-
-    <footer>
-        <p>Sección 9A — El Laberinto de los Tejones Excavadores</p>
-        <p>Próximo: Sección 9B — El Último Campamento</p>
-    </footer>
 
     <script src="global-reset.js"></script>
-</div>
-</body>
+  </body>
 </html>
