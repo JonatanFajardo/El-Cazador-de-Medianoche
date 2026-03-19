@@ -1,525 +1,526 @@
-<!DOCTYPE html> 
-<html lang="es"> 
-<head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>El Cazador de Medianoche - seccion_08</title> 
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="historia-interactiva.css"> 
-</head> 
-<body> 
- 
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sección 8: Revelación en el Bosque de Cuervos Espejo - El Cazador de Medianoche</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="historia-interactiva.css" />
+    <style>
+      .bosque-espejo {
+        background: linear-gradient(135deg, #2c1b47, #1a1a2e);
+        border-radius: 15px;
+        padding: 30px;
+        margin: 20px 0;
+        border: 2px solid rgba(139, 69, 19, 0.3);
+        box-shadow: 0 0 20px rgba(139, 69, 19, 0.2);
+      }
+
+      .cuervo-dialogo {
+        background: rgba(75, 0, 130, 0.2);
+        border-left: 4px solid #4b0082;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 0 10px 10px 0;
+        font-style: italic;
+      }
+
+      .revelacion-critica {
+        background: rgba(220, 20, 60, 0.2);
+        border-radius: 20px;
+        padding: 20px;
+        margin: 15px 0;
+        border: 2px solid rgba(220, 20, 60, 0.4);
+      }
+
+      .ember-furia {
+        background: rgba(255, 69, 0, 0.1);
+        border-left: 3px solid #ff4500;
+        padding: 10px;
+        margin: 10px 0;
+      }
+
+      .seraphina-conflicto {
+        background: rgba(128, 0, 128, 0.1);
+        border-left: 3px solid #800080;
+        padding: 10px;
+        margin: 10px 0;
+        font-style: italic;
+      }
+
+      .dialogo-ember {
+        background: rgba(255, 215, 0, 0.1);
+        border-left: 4px solid #ffd700;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 0 10px 10px 0;
+      }
+
+      .verdad-espejo {
+        text-shadow: 0 0 5px rgba(75, 0, 130, 0.8);
+        animation: espejo-pulse 3s ease-in-out infinite alternate;
+      }
+
+      @keyframes espejo-pulse {
+        0% {
+          text-shadow: 0 0 5px rgba(75, 0, 130, 0.8);
+        }
+        100% {
+          text-shadow:
+            0 0 15px rgba(75, 0, 130, 1),
+            0 0 25px rgba(75, 0, 130, 0.5);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+
 <!--
-╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
-║                                        SECCIÓN 8: REVELACIÓN EN EL BOSQUE DE CUERVOS ESPEJO                                                                        ║
-║                                                🪞 DÍA 8-9 🪞                                                                                                      ║
-╠══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║ OBJETOS/HERRAMIENTAS OBTENIDAS DE CAPÍTULOS ANTERIORES:                                                                                                             ║
-║ • Arco élfico paterno (resonando con las Lágrimas de Cristal)                                                                                                       ║
-║ • Lágrimas de Cristal - llaves para las Lágrimas de Luna                                                                                                            ║
-║ • Flechas especializadas de murciélagos y zorros                                                                                                                    ║
-║ • Mapas actualizados de Lyra hacia el Templo Celestial                                                                                                              ║
-║ • Ember como compañero diplomático                                                                                                                                  ║
-║ • Eco Pergaminada como guía arcana                                                                                                                                            ║
-║ • Presencia parasitaria de Umbra (debilitándose sin embargo aún activa)                                                                                                    ║
-║                                                                                                                                                                      ║
-║ OBJETOS/HERRAMIENTAS A OBTENER EN ESTE CAPÍTULO:                                                                                                                    ║
-║ • REVELACIÓN COMPLETA: Seraphina expuesta como agresia                                                                                                              ║
-║ • Conocimiento sobre las 6 víctimas anteriores                                                                                                                      ║
-║ • Información sobre la red de mantis vengativas                                                                                                                     ║
-║ • Decisión grupal: continuar juntos o separarse                                                                                                                     ║
-║ • Nuevo nivel de comprensión entre personajes                                                                                                                       ║
-║                                                                                                                                                                      ║
-║ ESTADO NARRATIVO ACTUAL:                                                                                                                                            ║
-║ • Camino hacia el Bosque de Cuervos Espejo                                                                                                                          ║
-║ • Los Cuervos Espejo muestran verdades ocultas en sus ojos                                                                                                          ║
-║ • Ember aún confía por entero en Seraphina                                                                                                                       ║
-║ • Momento culminante de tensión antes del clímax final                                                                                                              ║
-║ • Fin del —misterio preservado— - todo será revelado                                                                                                                ║
-║                                                                                                                                                                      ║
-║ ELEMENTOS CRÍTICOS A DESARROLLAR:                                                                                                                                   ║
-║ • Los Cuervos Espejo fuerzan la revelación (no pueden mentir en su presencia)                                                                                      ║
-║ • Seraphina expuesta: hermana murió por negligencia, ella dañó 6 gatos por venganza                                                                                ║
-║ • El padre de Axel fue la víctima #6                                                                                                                                ║
-║ • Ember furioso por la traición a su hermano                                                                                                                        ║
-║ • Axel comprende el dolor sin embargo debe elegir: venganza o compasión                                                                                                    ║
-║ • Lyra aparece brevemente, ve el drama, deja suministros discretamente                                                                                              ║
-║                                                                                                                                                                      ║
-║ REVELACIÓN ESPECÍFICA:                                                                                                                                              ║
-║ • Hermana de Seraphina murió por negligencia de otros gatos (no genocidio)                                                                                         ║
-║ • Seraphina usó la misma táctica 6 veces: —hermana maldecida— necesita curación                                                                                    ║
-║ • Red de 47 mantis organizadas en 12 células operativas                                                                                                             ║
-║ • Llegada al Templo era su plan desde el principio                                                                                                                  ║
-║ • Su conflicto interno: amor auténtico vs venganza                                                                                                                    ║
-╚══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+╔════════════════════════════════════════════════════════════════════════════════╗
+║         SECCIÓN 8: REVELACIÓN EN EL BOSQUE DE CUERVOS ESPEJO                ║
+║                          DÍA 8-9                                             ║
+╠════════════════════════════════════════════════════════════════════════════════╣
+║ GRUPO: Axel, Seraphina, Ember (3 personas. Sin Eco Pergaminada)             ║
+║ INVENTARIO: Arco élfico, Lágrimas de Cristal, flechas especiales,           ║
+║   mapas de Lyra + mapa de armadillos, flauta élfica de Ember, erizo         ║
+║ CONEXIÓN: Viene directamente de seccion_07B (Cuervos avistados en sendero)  ║
+║ GANCHO ANTERIOR: Seraphina dijo "No los miren a los ojos" con pánico       ║
+║ ELEMENTO CRÍTICO: Esta es la REVELACIÓN COMPLETA. Todo se descubre aquí.   ║
+╚════════════════════════════════════════════════════════════════════════════════╝
 -->
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sección 8: Revelación en el Bosque de Cuervos Espejo - El Cazador de Medianoche</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        .bosque-espejo {
-            background: linear-gradient(135deg, #2C1B47, #1A1A2E);
-            border-radius: 15px;
-            padding: 30px;
-            margin: 20px 0;
-            border: 2px solid rgba(139, 69, 19, 0.3);
-            box-shadow: 0 0 20px rgba(139, 69, 19, 0.2);
-        }
-        
-        .cuervo-dialogo {
-            background: rgba(75, 0, 130, 0.2);
-            border-left: 4px solid #4B0082;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 0 10px 10px 0;
-            font-style: italic;
-        }
-        
-        .revelacion-critica {
-            background: rgba(220, 20, 60, 0.2);
-            border-radius: 20px;
-            padding: 20px;
-            margin: 15px 0;
-            border: 2px solid rgba(220, 20, 60, 0.4);
-        }
-        
-        .ember-furia {
-            background: rgba(255, 69, 0, 0.1);
-            border-left: 3px solid #FF4500;
-            padding: 10px;
-            margin: 10px 0;
-        }
-        
-        .seraphina-conflicto {
-            background: rgba(128, 0, 128, 0.1);
-            border-left: 3px solid #800080;
-            padding: 10px;
-            margin: 10px 0;
-            font-style: italic;
-        }
-        
-        .verdad-espejo {
-            text-shadow: 0 0 5px rgba(75, 0, 130, 0.8);
-            animation: espejo-pulse 3s ease-in-out infinite alternate;
-        }
-        
-        @keyframes espejo-pulse {
-            0% { text-shadow: 0 0 5px rgba(75, 0, 130, 0.8); }
-            100% { text-shadow: 0 0 15px rgba(75, 0, 130, 1), 0 0 25px rgba(75, 0, 130, 0.5); }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        
-        <!-- =============== LLEGADA AL BOSQUE DE CUERVOS ESPEJO =============== -->
-        <section id="llegada-bosque" class="bosque-espejo">
-            <h1>El Cazador de Medianoche - Sección 8: Revelación en el Bosque de Cuervos Espejo</h1>
-            
-            <p class="texto-narrativo">
-                El Bosque de Cuervos Espejo se extendía ante ellos como una catedral natural de misterio y verdad. Los árboles antiguos se alzaban en formaciones perfectas, sus ramas entrelazándose para crear un dosel que filtraba la luz solar en patrones hipnóticos. Pero lo más inquietante eran los habitantes del bosque: cientos de cuervos con plumas que brillaban como espejos pulidos, reflejando no solo imágenes, sino verdades ocultas.
-            </p>
-            
-            <p class="texto-narrativo">
-                Durante los dos días de viaje desde Valle Tranquilo, Ember había demostrado ser exactamente lo que había prometido: un diplomático natural. Había mediado una disputa territorial entre dos familias de ardillas, había convencido a un grupo de mapaches bandidos de que los dejaran pasar a cambio de historias en lugar de provisiones, y había establecido una relación fácil con Eco Pergaminada basada en curiosidad mutua sobre sus respectivas culturas.
-            </p>
-            
-            <div class="dialogo-ember">
-                <p class="dialogo curioso" data-badge="preguntado con interés académico">
-                    —Eco Pergaminada, según los textos que has memorizado, ¿los Cuervos Espejo verdaderamente pueden forzar la honestidad? ¿O solo revelan lo que ya está presente?"
-                </p>
-            </div>
-            
-            <p class="dialogo académica" data-badge="respondido con conocimiento preocupante">
-                —Los textos de Eco eran sumamente específicos: los Cuervos no pueden tolerar mentiras en su presencia. No es que te fuercen a decir la verdad.... es que las mentiras se vuelven físicamente dolorosas de mantener. Como.... como una herida que se infecta."
-            </p>
-            
-            <p class="texto-narrativo">
-                Seraphina había estado inusualmente silenciosa durante estos dos días. Axel lo había atribuido al cansancio del viaje, sin embargo ahora, acercándose al bosque donde las verdades no podían ocultarse, su tensión era palpable.
-            </p>
-            
-            <div class="seraphina-conflicto">
-                <p class="texto-narrativo">
-                    Sus garras se cerraban espasmódicamente cada pocos minutos, como si luchara contra algo interno. Sus movimientos habían perdido la fluidez natural, volviéndose más rígidos, más controlados. Y sus ojos.... había algo en sus ojos que Axel no había visto antes: miedo real.
-                </p>
-            </div>
-            
-            <div class="dialogo-ember">
-                <p class="dialogo preocupado" data-badge="ofrecido con amabilidad genuina">
-                    —Seraphina, ¿estás bien? Has estado sumamente callada. Si el bosque te pone nerviosa, podríamos encontrar otra ruta...."
-                </p>
-            </div>
-            
-            <div class="seraphina-conflicto">
-                <p class="dialogo tensa" data-badge="respondido demasiado rápido">
-                    —Estoy bien. Solo.... concentrándome en lo que viene. Los Cuervos Espejo son.... intensos. Mejor prepararse mentalmente."
-                </p>
-            </div>
-            
-            <p class="texto-narrativo">
-                Cuando cruzaron el umbral real del bosque, el cambio fue inmediato. El aire se volvió más denso, cargado de una energía que parecía escudriñar sus pensamientos. Los cuervos comenzaron a reunirse en las ramas superiores, sus plumas reflejantes captando y devolviendo imágenes fragmentadas de los viajeros.
-            </p>
-        </section>
-        
-        <!-- =============== EL ENCUENTRO CON LOS CUERVOS ESPEJO =============== -->
-        <section id="encuentro-cuervos" class="bosque-espejo">
-            <h2>Espejos de Verdad</h2>
-            
-            <p class="texto-narrativo">
-                En el corazón del bosque se abría un claro circular perfecto, donde docenas de cuervos se habían posado formando un anfiteatro natural. En el centro, sobre un tocón de árbol ancestral, se alzaba el Cuervo Primario - más grande que los otros, con plumas que reflejaban no imágenes, sino memorias.
-            </p>
-            
-            <div class="cuervo-dialogo">
-                <p class="dialogo ancestral verdad-espejo" data-badge="resonando con autoridad inmutable">
-                    —Buscadores llegan.... sin embargo no todos buscan lo mismo. Vemos corazones divididos.... mentiras que se desmoronan.... verdades que exigen ser liberadas."
-                </p>
-            </div>
-            
-            <p class="texto-narrativo">
-                Los ojos del Cuervo Primario se enfocaron en cada miembro del grupo por turnos.
-            </p>
+      <!-- =============== LLEGADA AL BOSQUE DE CUERVOS ESPEJO =============== -->
+      <section id="llegada-bosque" class="bosque-espejo">
+        <h1>El Cazador de Medianoche - Sección 8: Revelación en el Bosque de Cuervos Espejo</h1>
 
-            <!-- =============== BONUS — CUERVOS ESPEJO Y EL ERIZO =============== -->
-            <p class="texto-narrativo">
-                Al pasar por Axel, las plumas del cuervo brillaron con imágenes de montañas solitarias y un arco abandonado. Al pasar por Ember, reflejaron un valle tranquilo y dos cachorros durmiendo. Al pasar por Eco Pergaminada, mostraron una biblioteca en llamas y el peso de conocimiento que nadie pidió cargar.
-            </p>
+        <p class="texto-narrativo"> No durmieron bien esa noche.</p>
 
-            <p class="texto-narrativo">
-                Cuando los ojos del Cuervo Primario llegaron al erizo — hecho bolita junto a la mochila de Ember, como siempre, como en todas partes — se detuvieron. Las plumas espejo brillaron. Temblaron. Y reflejaron exactamente lo mismo que tenían delante: una esfera de púas pardas.
-            </p>
+        <p class="texto-narrativo"> Después de avistar a los tres cuervos en el sendero, Seraphina había caminado el resto de la tarde sin hablar, las antenas aplastadas contra la cabeza como si quisiera ocupar el menor espacio posible. Cuando Ember sugirió acampar en un claro junto al río, ella eligió el punto más alejado de la fogata y se sentó de espaldas al grupo, las garras cerradas sobre las rodillas.</p>
 
-            <p class="texto-narrativo">
-                El Cuervo Primario ladeó la cabeza. Intentó de nuevo. Sus plumas volvieron a brillar. El reflejo fue idéntico. No había memorias ocultas. No había verdades enterradas. No había nada detrás de la superficie porque no había profundidad. Era la primera vez, en la memoria de todos los cuervos del claro, que un reflejo devolvía exactamente lo que recibía.
-            </p>
+        <p class="texto-narrativo"> Axel había montado guardia primera. El arco élfico estaba frío en sus manos — no la tibieza habitual, no el calor de advertencia, sino un frío mineral que nunca había sentido, como si la madera supiera lo que venía y se preparara.</p>
 
-            <div class="cuervo-dialogo">
-                <p class="dialogo ancestral" data-badge="pronunciado con algo parecido a la perplejidad">
-                    —Este.... no tiene nada. No oculta. No miente. No piensa. Simplemente.... es—
-                </p>
-            </div>
+        <p class="texto-narrativo"> Ember se acercó a mitad de la noche, la flauta élfica cruzada sobre el pecho.</p>
 
-            <p class="texto-narrativo">
-                Los cuervos del anfiteatro se miraron entre sí. Algunos graznaron nerviosamente. El Cuervo Primario sacudió las plumas como quien descarta una anomalía de su registro y volvió su atención al grupo.
-            </p>
-            <!-- =============== FIN BONUS =============== -->
-
-            <p class="texto-narrativo">
-                Cuando llegó a Seraphina, se detuvo más tiempo, su cabeza ladeándose con curiosidad cruel.
-            </p>
-
-            <div class="cuervo-dialogo">
-                <p class="dialogo ancestral verdad-espejo" data-badge="dirigido específicamente a Seraphina">
-                    —Mantis de mentiras tejidas.... hermana que nunca existió.... madre que nunca fue estatua.... seis gatos que cayeron por la misma historia falsa...."
-                </p>
-            </div>
-            
-            <p class="texto-narrativo">
-                El silencio que siguió fue como el instante antes de que el rayo golpee. Ember, Eco Pergaminada y Axel procesaron las palabras del cuervo, sin embargo sus implicaciones aún no habían penetrado por entero.
-            </p>
-            
-            <div class="dialogo-ember">
-                <p class="dialogo confundido" data-badge="preguntado con incertidumbre creciente">
-                    —¿Hermana que nunca existió? ¿De qué está hablando? Seraphina, dijiste que tu hermana...."
-                </p>
-            </div>
-            
-            <p class="texto-narrativo">
-                Seraphina se había puesto pálida, sus garras temblando visiblemente. La presencia de los cuervos hacía que mantener las mentiras fuera físicamente doloroso, como si cada palabra falsa fuera una daga clavándose en su pecho.
-            </p>
-            
-            <div class="revelacion-critica">
-                <div class="cuervo-dialogo">
-                    <p class="dialogo ancestral verdad-espejo" data-badge="revelando con precisión inexorable">
-                        —Mostramos lo que es verdad: Mantis joven perdió hermana por negligencia de otros gatos - accidente territorial, no genocidio. Dolor real se transformó en venganza calculada. Seis gatos monteses cayeron por la misma historia: 'hermana maldecida necesita curación.' Cada vez más refinada la mentira.... cada vez más perfecta la manipulación...."
-                    </p>
-                </div>
-            </div>
-            
-            <p class="texto-narrativo">
-                Axel sintió que el mundo se tambaleaba a su alrededor. Un dolor agudo lo atravesó, como si cada palabra fuera una flecha directa al corazón, mientras los fragmentos de información se reorganizaron en su mente como piezas de un rompecabezas horrible.
-            </p>
-            
-            <p class="dialogo impacto" data-badge="susurrado con horror dawning">
-                —Seis gatos.... mi padre.... hace dos años, un arquero que llevaba este mismo arco...."
-            </p>
-            
-            <div class="cuervo-dialogo">
-                <p class="dialogo ancestral verdad-espejo" data-badge="confirmando con crueldad necesaria">
-                    —El sexto fue Flecha Certera, portador del arco élfico ancestral. Cayó protegiendo lo que creía era una mantis inocente buscando curar a hermana maldecida. Sus últimas palabras: 'Que mi hijo nunca cargue este dolor.'"
-                </p>
-            </div>
-            
-            <p class="texto-narrativo">
-                El dolor que atravesó a Axel fue tan intenso que se dobló físicamente. No era solo la confirmación de que Seraphina había dañado a su padre - era la ironía cruel de que ahora él estaba haciendo exactamente lo que su padre había hecho: ayudar a la mantis que había venido a dañarlo.
-            </p>
-            
-            <div class="ember-furia">
-                <p class="dialogo furioso" data-badge="estallando con indignación protectora">
-                    —¡¿MATASTE A NUESTRO PADRE?!— La voz de Ember se quebró entre furia y dolor.— ¡Todo este tiempo, toda esta.... toda esta actuación sobre tu hermana, tu madre, tu dolor! ¡Era mentira! ¡Y nosotros.... yo.... yo te defendí!"
-                </p>
-            </div>
-            
-            <p class="texto-narrativo">
-                Seraphina no podía responder. Las lágrimas corrían por su rostro - las primeras lágrimas genuinas que había derramado desde la muerte real de su hermana dos años atrás.
-            </p>
-            
-            <div class="seraphina-conflicto">
-                <p class="dialogo quebrada" data-badge="confesado con voz rota">
-                    —Todo.... todo lo que dijeron es verdad. Mi hermana Kira murió porque tres gatos monteses no quisieron esperar dos minutos para que se moviera de su territorio de recolección. La empujaron, cayó mal, se rompió el cuello—  Sus garras se clavaron en la tierra.— Pero mi dolor era real. Mi amor por ella era real. Y después.... después el dolor se volvió odio, y el odio se volvió plan."
-                </p>
-            </div>
-        </section>
-        
-        <!-- =============== LA CONFRONTACIÓN COMPLETA =============== -->
-        <section id="confrontacion-total" class="bosque-espejo">
-            <h2>Verdades Sin Máscara</h2>
-            
-            <div class="cuervo-dialogo">
-                <p class="dialogo ancestral verdad-espejo" data-badge="continuando la revelación">
-                    —Red de cuarenta y siete mantis organizadas en doce células operativas. Plan de dos años: atraer gatos monteses compasivos usando historia de 'hermana maldecida,' guiarlos al Templo Celestial, usar las Lágrimas de Luna para amplificar poder destructivo, exterminar la especie completa."
-                </p>
-            </div>
-            
-            <p class="dialogo horror" data-badge="gritado con incredulidad">
-                —¿Exterminar....?— Eco Pergaminada se alejó volando, sus alas temblando.— ¿Toda la especie? ¿Eso.... eso es lo que planeas hacer con las Lágrimas?"
-            </p>
-            
-            <div class="seraphina-conflicto">
-                <p class="dialogo torturada" data-badge="confesado con agonía">
-                    —Era el plan. Era.... era lo que creía que quería. Venganza por Kira, venganza por cada mantis que había sufrido por culpa de otras especies. Las Lágrimas amplifican lo que hay en tu corazón más profundo, y yo.... yo pensé que mi corazón estaba lleno solo de odio."
-                </p>
-            </div>
-            
-            <p class="dialogo dolor" data-badge="preguntado con voz quebrada">
-                —¿Pensabas?— Axel luchó por mantener su voz estable.— ¿Ya no?"
-            </p>
-            
-            <div class="seraphina-conflicto">
-                <p class="dialogo vulnerable" data-badge="admitido con confusión dolorosa">
-                    —No lo sé. Estas semanas contigo.... con Ember.... viendo a tu familia, presenciando bondad que no esperaba.... El jardín de los Osos creció rosas porque aún hay amor en mí. No sabía que quedaba algo así. Y ahora...."
-                </p>
-            </div>
-            
-            <div class="ember-furia">
-                <p class="dialogo acusatorio" data-badge="gritado con dolor traicionado">
-                    —¡Ahora qué? ¿Ahora te arrepientes porque te encariñaste con tus víctimas? ¡Axel, ella dañó a nuestro padre! ¡Está planeando genocidio! ¡No podemos simplemente...."
-                </p>
-            </div>
-            
-            <p class="dialogo firme" data-badge="interrumpido con autoridad">
-                —Ember—  La voz de Axel cortó a través de la furia de su hermano.— Para."
-            </p>
-            
-            <p class="texto-narrativo">
-                Axel se volvió hacia Seraphina, sus ojos - oro y plata - reflejando una complejidad de emociones que la habrían destrozado si hubiera sido capaz de sentir más dolor del que ya experimentaba.
-            </p>
-            
-            <p class="dialogo profundo" data-badge="preguntado con calma peligrosa">
-                —Si llegamos al Templo Celestial.... si obtienes las Lágrimas de Luna.... si el poder amplifica lo que verdaderamente hay en tu corazón en este instante.... ¿qué pasaría?"
-            </p>
-            
-            <div class="seraphina-conflicto">
-                <p class="dialogo incierta" data-badge="respondido con honestidad dolorosa">
-                    —No lo sé. Por primera vez en dos años, no lo sé. Mi corazón está.... dividido. Hay odio real por lo que le pasó a Kira. Pero también hay.... hay algo más ahora. Algo que creció de pasar tiempo con ustedes."
-                </p>
-            </div>
-            
-            <div class="cuervo-dialogo">
-                <p class="dialogo ancestral verdad-espejo" data-badge="observando con interés clínico">
-                    —Corazón dividido es corazón peligroso con poder amplificado. Lágrimas de Luna responden a verdad más profunda - sin embargo ¿cuál es esa verdad cuando dos verdades luchan? Resultado impredecible.... potencialmente catastrófico para todos."
-                </p>
-            </div>
-            
-            <p class="texto-narrativo">
-                Eco Pergaminada se posó nerviosamente en una rama baja, claramente aterrorizada sin embargo aún leal.
-            </p>
-            
-            <p class="dialogo asustada" data-badge="preguntado con voz pequeña">
-                —¿Qué.... qué hacemos ahora? ¿Seguimos al Templo? ¿Nos separamos? ¿Luchamos?"
-            </p>
-            
-            <p class="texto-narrativo">
-                Ember había estado luchando visiblemente con sus emociones - furia, dolor, traición, sin embargo también algo más complejo. Finalmente habló.
-            </p>
-            
-            <div class="ember-furia">
-                <p class="dialogo conflictuado" data-badge="dicho con madurez forzada por el dolor">
-                    —Seraphina—  Su voz estaba controlada sin embargo temblaba.— Necesito una respuesta por entero honesta. Aquí, donde las mentiras duelen físicamente. ¿Alguna parte de ti quiere verdaderamente lastimarnos a nosotros? ¿A Axel específicamente?"
-                </p>
-            </div>
-            
-            <div class="seraphina-conflicto">
-                <p class="dialogo inmediata" data-badge="respondido sin pausa">
-                    —No—  La respuesta fue automática, sin vacilación.— La idea de lastimar a Axel me produce dolor físico. Tú, Eco Pergaminada.... se han vuelto.... importantes para mí. Eso no era parte del plan."
-                </p>
-            </div>
-            
-            <p class="texto-narrativo">
-                Los Cuervos Espejo murmuraron entre ellos, confirmando que las palabras de Seraphina eran verdad completa.
-            </p>
-            
-            <div class="cuervo-dialogo">
-                <p class="dialogo ancestral verdad-espejo" data-badge="confirmando con sorpresa">
-                    —Verdad sin máscara. Mantis no miente sobre sus sentimientos presentes.... sin embargo tampoco miente sobre el odio que aún lleva. Corazón verdaderamente dividido entre amor nuevo y odio viejo."
-                </p>
-            </div>
-        </section>
-        
-        <!-- =============== LYRA OBSERVA DESDE LAS SOMBRAS =============== -->
-        <section id="lyra-observa" class="bosque-espejo">
-            <h3>La Testigo Silenciosa</h3>
-            
-            <p class="texto-narrativo">
-                En el borde del claro, oculta entre las sombras de los árboles antiguos, una figura familiar había presenciado toda la confrontación. Lyra había estado siguiendo discretamente al grupo durante días, sus habilidades cartográficas permitiéndole mantenerse cerca sin ser detectada.
-            </p>
-            
-            <p class="texto-narrativo">
-                Había escuchado cada palabra de la revelación, visto la angustia de Axel, presenciado el colapso del mundo tal como él lo conocía. Sus garras se apretaron alrededor de sus mapas mientras evaluaba la situación con ojo experto.
-            </p>
-            
-            <p class="dialogo susurrado" data-badge="murmurado para sí misma">
-                —Así que por eso los mapas de actividad extraña.... cuarenta y siete mantis organizadas. Y Axel...—  Sus ojos se suavizaron con comprensión dolorosa.— Está enamorándose de la agresia de su padre."
-            </p>
-            
-            <p class="texto-narrativo">
-                Sin hacer ruido, Lyra desplegó su bolsa y extrajo suministros: vendajes, medicina de emergencia, provisiones de alta energía, y agua purificada. Los colocó meticulosamente donde el grupo los encontraría después, junto con una nota escrita en su caligrafía precisa.
-            </p>
-            
-            <div class="nota-lyra— style="background: rgba(210, 180, 140, 0.2); padding: 15px; margin: 10px 0; border-left: 3px solid #D2B48C; font-style: italic;">
-                <p>"Para cuando las verdades duelen más que las heridas físicas. Cuídense mutuamente. - L"</p>
-            </div>
-            
-            <p class="texto-narrativo">
-                Se alejó tan silenciosamente como había llegado, sin embargo no sin echar una última mirada hacia Axel. Su expresión mostraba una mezcla compleja de comprensión, preocupación, y algo que podría haber sido determinación de estar allí cuando él la necesitara.
-            </p>
-        </section>
-        
-        <!-- =============== LA DECISIÓN GRUPAL =============== -->
-        <section id="decision-grupal" class="bosque-espejo">
-            <h2>Caminos que Divergen</h2>
-            
-            <p class="texto-narrativo">
-                El grupo permaneció en silencio durante largos minutos después de que los Cuervos terminaran sus revelaciones. El peso de la verdad completa - no solo sobre Seraphina, sino sobre las implicaciones de continuar hacia el Templo - se asentó sobre ellos como una manta plomiza.
-            </p>
-            
-            <p class="dialogo reflexivo" data-badge="preguntado con cansancio profundo">
-                —¿Cuáles son nuestras opciones reales?— Axel finalmente rompió el silencio.— Podemos separarnos aquí. Ember y Eco Pergaminada regresan a casa, yo.... yo busco alguna forma de detener a las otras mantis."
-            </p>
-            
-            <div class="ember-furia">
-                <p class="dialogo determinado" data-badge="declarado con firmeza nueva">
-                    —No—  Ember se enderezó, mostrando una madurez que no había poseído esa mañana.— No voy a huir. Papá murió porque no había nadie que pudiera advertirle sobre el engaño. Tal vez nosotros podemos evitar que esto le pase a otros."
-                </p>
-            </div>
-            
-            <p class="dialogo leal" data-badge="agregado con determinación pequeña sin embargo férrea">
-                —Y yo tampoco me voy—  añadió Eco Pergaminada.— Las bibliotecas fueron destruidas por esta guerra. Si hay una forma de detenerla...."
-            </p>
-            
-            <p class="texto-narrativo">
-                Seraphina había estado sentada en silencio, sus garras trazando patrones en la tierra. Cuando habló, su voz era diferente - más cansada, sin embargo también más honesta de lo que había sido en semanas.
-            </p>
-            
-            <div class="seraphina-conflicto">
-                <p class="dialogo honesta" data-badge="ofrecido con vulnerabilidad completa">
-                    —Hay otra opción. Seguimos al Templo, sin embargo no para conseguir las Lágrimas para mí. Las conseguimos para destruirlas. Para asegurarnos de que ni yo ni ninguna de las otras mantis puedan usarlas para genocidio."
-                </p>
-            </div>
-            
-            <p class="dialogo sorprendido" data-badge="preguntado con incredulidad">
-                —¿Destruir las Lágrimas de Luna? ¿Es eso posible?"
-            </p>
-            
-            <div class="cuervo-dialogo">
-                <p class="dialogo ancestral verdad-espejo" data-badge="respondiendo con conocimiento ancestral">
-                    —Lágrimas pueden ser devueltas a la luna que las creó.... sin embargo requiere sacrificio completo de quien las toca. No solo vida - toda la esencia, todas las memorias, toda la existencia borrada como si nunca hubiera sido."
-                </p>
-            </div>
-            
-            <div class="seraphina-conflicto">
-                <p class="dialogo serena" data-badge="aceptado con paz extraña">
-                    —Entonces eso es lo que haré. Es.... es la única forma de hacer que valga la pena todo el dolor que he causado."
-                </p>
-            </div>
-            
-            <p class="dialogo protector" data-badge="objetando inmediatamente">
-                —No—  Axel se puso de pie.— No vamos a planear tu muerte. Tiene que haber otra forma."
-            </p>
-            
-            <div class="seraphina-conflicto">
-                <p class="dialogo curiosa" data-badge="preguntado con confusión genuina">
-                    —¿Por qué? Después de todo lo que te he hecho, todo lo que he mentido.... ¿por qué aún quieres salvarme?"
-                </p>
-            </div>
-            
-            <p class="texto-narrativo">
-                Axel la miró durante un largo instante. En sus ojos, ella pudo ver reflejadas todas las emociones complejas que luchaban en él: dolor por su padre, traición por las mentiras, comprensión del trauma que la había creado, y debajo de todo eso, algo que se parecía peligrosamente al amor.
-            </p>
-            
-            <p class="dialogo profundo" data-badge="respondido con honestidad completa">
-                —Porque las rosas que crecieron de tu corazón en el jardín de los Osos eran reales. Porque has llorado lágrimas genuinas por las víctimas en la biblioteca. Porque cuando Ember estaba en peligro durante el ataque de los cuervos mercenarios, tu primer instinto fue protegerlo—  Se acercó un paso.— Y porque creo que si mi padre pudiera ver quién eres ahora, no quién eras cuando lo dañaste, él también elegiría la compasión sobre la venganza."
-            </p>
-            
-            <div class="seraphina-conflicto">
-                <p class="dialogo quebrada" data-badge="susurrado con asombro doloroso">
-                    —¿Cómo puedes decir eso? ¿Cómo puedes ser tan.... tan bueno cuando yo...."
-            </p>
-            </div>
-            
-            <p class="dialogo firme" data-badge="interrumpido con convicción">
-                —Porque alguien tiene que romper el ciclo. Venganza genera venganza, odio genera odio. Pero compasión.... compasión puede generar redención."
-            </p>
-            
-            <div class="cuervo-dialogo">
-                <p class="dialogo ancestral verdad-espejo" data-badge="observando con aprobación ancestral">
-                    —Palabras de sabiduría verdadera. Los espejos muestran que este gato montés habla desde corazón sin mentira. Decisión queda en mantis: ¿elegirá camino de destrucción vengativa o camino de redención dolorosa?"
-                </p>
-            </div>
-            
-            <p class="texto-narrativo">
-                Seraphina cerró los ojos, sintiendo el peso de todo lo que había hecho, todo lo que había planeado, y todo lo que ahora podría elegir hacer diferente.
-            </p>
-            
-            <div class="seraphina-conflicto">
-                <p class="dialogo decidida" data-badge="declarado con resolución naciente">
-                    —Continuamos hacia el Templo. Juntos. Pero cuando lleguemos allí.... cuando tenga las Lágrimas en mis manos.... elegiré basándome en lo que verdaderamente hay en mi corazón en ese instante. Sin planes, sin estrategias. Solo.... lo que sea verdad."
-                </p>
-            </div>
-            
-            <p class="texto-narrativo">
-                Era una respuesta que no resolvía nada y lo resolvía todo. La tensión no desaparecería, la desconfianza tardaría en sanar, y el peligro de un corazón dividido con poder divino seguía siendo real. Pero por primera vez desde las revelaciones, había un camino adelante que no terminaba en muerte o separación.
-            </p>
-            
-            <p class="texto-narrativo">
-                Encontraron los suministros de Lyra al salir del claro, junto con su nota. Axel guardó meticulosamente el papel, y aunque no declaró nada, los demás notaron cómo sus hombros se relajaron ligeramente al leer las palabras de apoyo.
-            </p>
-            
-            <p class="texto-narrativo">
-                Continuaron hacia el Templo Celestial - cuatro figuras marcadas por la verdad, cargando esperanza frágil y el peso de destinos inciertos.
-            </p>
-        </section>
-        
-        <!-- =============== NOTAS DE CONTINUIDAD =============== -->
-        <div class="nota-continuidad" style="background: rgba(66, 66, 66, 0.3); padding: 20px; margin: 30px 0; border-radius: 10px; font-style: italic; color: #ccc;">
-            <h4>Notas para continuidad narrativa:</h4>
-            <p>• Revelación completa: Seraphina dañó al padre de Axel usando la misma táctica</p>
-            <p>• Red de 47 mantis organizadas para genocidio planificado</p>
-            <p>• Conflicto interno auténtico de Seraphina: amor nuevo vs odio viejo</p>
-            <p>• Ember maduro por trauma sin embargo aún leal a la misión</p>
-            <p>• Lyra sigue al grupo discretamente, preparándose para apoyar</p>
-            <p>• Decisión: continuar juntos hacia destino incierto</p>
-            <p>• Las Lágrimas amplificarán lo que verdaderamente esté en el corazón de Seraphina</p>
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="susurrado para no despertar a Seraphina">
+            —Axel. Los cuervos que vimos.... ¿son los mismos del mapa de Lyra?
+          </p>
         </div>
-        
+
+        <p class="dialogo" data-badge="respondido sin apartar los ojos del bosque">
+          —Cuervos Espejo. Sí.
+        </p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="preguntado tocándose el puente de la nariz">
+            —¿Y por qué Seraphina les tiene tanto miedo?
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Axel no contestó. El arco pesaba más de lo normal en su regazo, y la nota de Lyra — dos frecuencias superpuestas en el mismo cuerpo — le ardía en el bolsillo como un carbón que se negaba a enfriarse.</p>
+
+        <p class="texto-narrativo"> Al amanecer, los cuervos eran seis. Posados en una línea perfecta sobre la rama más baja del roble que dominaba el campamento. Ojos de obsidiana pulida que no reflejaban el amanecer sino algo más hondo, algo que cambiaba cada vez que Axel intentaba enfocarlo.</p>
+
+        <p class="texto-narrativo"> Seraphina los vio y se levantó de golpe. Las púas del erizo se erizaron por reflejo — dormía acurrucado junto a la mochila de Ember, como siempre — y Ember posó una mano sobre él para calmarlo.</p>
+
+        <p class="dialogo" data-badge="dicho con voz que intentaba ser firme">
+          —Podemos rodear el bosque. Hay un paso al sur que—
+        </p>
+
+        <p class="dialogo" data-badge="interrumpido con suavidad">
+          —No hay paso al sur. El mapa de los armadillos lo muestra claramente. Y el de Lyra también.
+        </p>
+
+        <p class="texto-narrativo"> Seraphina cerró la boca. Sus garras se flexionaron una vez, dos veces, y después se quedaron quietas — la quietud de quien ha calculado todas las salidas y no encuentra ninguna.</p>
+
+        <p class="texto-narrativo"> Entraron al Bosque de Cuervos Espejo con el sol todavía bajo. El cambio fue inmediato: la luz se adelgazó entre las copas hasta convertirse en filamentos de plata que iluminaban el suelo del bosque como venas. El aire se espesó con un olor a resina antigua y a algo metálico, casi eléctrico, que Axel asoció con el sabor que dejaba una tormenta en la lengua. Los cuervos se multiplicaron en silencio. Diez. Veinte. Cincuenta. Posados en cada rama disponible, sus plumas tan negras que parecían agujeros recortados en la realidad, y en cada par de ojos — espejos.</p>
+
+        <p class="texto-narrativo"> Ember caminaba pegado a Axel, la flauta en la mano como si fuera un bastón. El erizo había trepado hasta su hombro y desde ahí observaba a los cuervos con la misma expresión de siempre, que era ninguna.</p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="murmurado con esfuerzo por mantener la calma">
+            —No me gusta cómo nos miran. No nos miran a nosotros. Nos miran.... adentro.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Seraphina no dijo nada. Caminaba tres pasos detrás del grupo, las garras rígidas a los costados, cada músculo de su cuerpo tenso como una cuerda de arco a punto de soltarse.</p>
+      </section>
+
+      <!-- =============== EL ENCUENTRO CON LOS CUERVOS ESPEJO =============== -->
+      <section id="encuentro-cuervos" class="bosque-espejo">
+        <h2>Espejos de Verdad</h2>
+
+        <p class="texto-narrativo"> El claro se abrió ante ellos sin transición — un paso caminaban entre árboles y al siguiente estaban rodeados de cielo. Un anfiteatro natural de ramas formaba gradas donde cientos de cuervos se posaban en filas concéntricas, todos mirando hacia el centro. Y en el centro, sobre un tocón de roble tan viejo que los anillos de su superficie se habían convertido en espirales sin fin, estaba el Cuervo Primario.</p>
+
+        <p class="texto-narrativo"> Era más grande que los demás — del tamaño de un águila, con plumas que no reflejaban imágenes sino memorias. Axel vio pasar por esas plumas fragmentos de vidas ajenas: un zorro llorando sobre cenizas, una ardilla plantando un árbol en una tumba, una lechuza cerrando un libro por última vez. El Cuervo Primario ladeó la cabeza y esos fragmentos se disolvieron, reemplazados por los reflejos del grupo.</p>
+
+        <div class="cuervo-dialogo">
+          <p class="dialogo" data-badge="pronunciado como piedra contra piedra">
+            —Buscadores llegan. No todos buscan lo mismo. Vemos corazones divididos. Mentiras que se desmoronan. Verdades que exigen ser liberadas.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Los ojos del Cuervo Primario pasaron sobre cada uno de ellos. Axel sintió el peso de esa mirada como una mano dentro de su pecho, revolviendo.</p>
+
+        <p class="texto-narrativo"> Al posarse sobre Axel, las plumas del cuervo brillaron con imágenes de montañas solitarias, un arco colgado sobre una chimenea apagada, noches de guardia con solo el viento como compañía. La soledad de años condensada en un destello.</p>
+
+        <p class="texto-narrativo"> Al pasar a Ember, reflejaron Valle Tranquilo: Luna Suave cantando a los gemelos, Sol tirando de la cola de Sombra, la flauta sonando en el porche al atardecer. Y debajo, como una corriente subterránea, el miedo constante de que no volvería a verlos.</p>
+
+        <!-- =============== BONUS — CUERVOS ESPEJO Y EL ERIZO =============== -->
+        <p class="texto-narrativo"> Cuando los ojos del Cuervo Primario llegaron al erizo — hecho bolita junto a la mochila de Ember, como siempre, como en todas partes — se detuvieron. Las plumas espejo brillaron. Temblaron. Y reflejaron exactamente lo mismo que tenían delante: una esfera de púas pardas.</p>
+
+        <p class="texto-narrativo"> El Cuervo Primario ladeó la cabeza. Intentó de nuevo. Sus plumas volvieron a brillar. El reflejo fue idéntico. No había memorias ocultas. No había verdades enterradas. No había nada detrás de la superficie porque no había profundidad. Era la primera vez, en la memoria de todos los cuervos del claro, que un reflejo devolvía exactamente lo que recibía.</p>
+
+        <div class="cuervo-dialogo">
+          <p class="dialogo" data-badge="pronunciado con algo parecido a la perplejidad">
+            —Este.... no tiene nada. No oculta. No miente. No piensa. Simplemente.... es.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Los cuervos del anfiteatro se miraron entre sí. Algunos graznaron nerviosamente. El Cuervo Primario sacudió las plumas como quien descarta una anomalía de su registro y volvió su atención al grupo.</p>
+        <!-- =============== FIN BONUS =============== -->
+
+        <p class="texto-narrativo"> Cuando llegó a Seraphina, el Cuervo Primario se detuvo más tiempo. Mucho más tiempo. Las plumas de su pecho comenzaron a temblar con una frecuencia diferente — no el brillo suave de los reflejos anteriores, sino un pulso errático, como un corazón arrítmico intentando decidir si latir o detenerse.</p>
+
+        <p class="texto-narrativo"> Seraphina retrocedió un paso. Las garras le temblaban.</p>
+
+        <div class="cuervo-dialogo">
+          <p class="dialogo" data-badge="dirigido a Seraphina con precisión quirúrgica">
+            —Mantis de mentiras tejidas. Hermana que existió pero cuya muerte fue distinta a la historia contada. Madre que no fue convertida en estatua. Seis gatos que cayeron por la misma historia.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> El silencio que siguió fue el tipo de silencio que tiene peso. Axel lo sintió asentarse sobre sus hombros, en la base de su cráneo, en el espacio entre un latido y el siguiente.</p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="preguntado con la voz de alguien que todavía no quiere entender">
+            —¿Hermana que.... qué? Seraphina, dijiste que tu hermana....
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Seraphina no respondió. Tenía la boca abierta — no para hablar, sino como si el aire no le llegara bien. Las garras se le clavaron en los antebrazos con fuerza suficiente para dejar marcas.</p>
+
+        <div class="revelacion-critica">
+          <div class="cuervo-dialogo">
+            <p class="dialogo" data-badge="revelando con la cadencia de quien lee una sentencia">
+              —Mostramos lo que es verdad. Mantis joven perdió hermana por negligencia de gatos — accidente territorial, tres gatos que no esperaron, empujón, cuello roto. Dolor real se transformó en venganza. Seis gatos monteses cayeron por la misma historia: hermana maldecida necesita curación. Cada vez más refinada la trampa. Cada víctima más lejos del accidente original y más cerca de algo que la mantis llama justicia.
+            </p>
+          </div>
+        </div>
+
+        <p class="texto-narrativo"> El arco élfico ardió. No la tibieza de advertencia habitual — un calor seco, furioso, que le quemó la palma y le subió por el brazo hasta el codo. Axel no lo soltó. Apretó los dedos contra la madera hasta que los nudillos se le pusieron blancos.</p>
+
+        <p class="dialogo" data-badge="dicho con una voz que no reconoció como suya">
+          —Seis gatos. Mi padre. Hace dos años. Un arquero que llevaba este arco.
+        </p>
+
+        <div class="cuervo-dialogo">
+          <p class="dialogo" data-badge="confirmando sin piedad ni crueldad — solo hechos">
+            —El sexto fue Flecha Certera, portador del arco élfico ancestral. Lo guiaron con la misma historia hasta un desfiladero donde las mantis esperaban. Cayó protegiendo lo que creía era una inocente buscando curar a su familia. No encontraron su cuerpo. Solo el arco.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Axel se dobló. No fue una decisión — el cuerpo simplemente cedió, como si las rodillas hubieran dejado de tener función. Se quedó así, con una mano en el suelo y la otra aferrada al arco que quemaba, y el bosque entero se redujo a un punto brillante de dolor detrás de los ojos.</p>
+
+        <p class="texto-narrativo"> La madera del arco pulsaba contra su palma. Caliente. Furiosa. Y debajo de la furia, algo más antiguo — el eco de unas manos que habían sostenido esa misma madera antes que él, que la habían tensado con la misma confianza, que la habían soltado por última vez en un desfiladero al que nunca debió llegar.</p>
+
+        <div class="ember-furia">
+          <p class="dialogo" data-badge="gritado con la voz quebrándose a mitad de frase">
+            —¡MATASTE A NUESTRO PADRE!
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Ember estaba de pie. La flauta había caído al suelo. Tenía las manos cerradas en puños y temblaba de la cabeza a los pies — no de miedo, de algo más caliente, más viejo, algo que le deformaba la cara en una expresión que Axel nunca le había visto.</p>
+
+        <div class="ember-furia">
+          <p class="dialogo" data-badge="escupido entre dientes">
+            —Todo este tiempo. Toda esta actuación sobre tu hermana, tu madre. Y nosotros.... yo.... yo te defendí. Te di de comer. Dejé que Sol se sentara en tu regazo.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> La mención de Sol golpeó el claro como una piedra en agua quieta. Ember se llevó una mano a la boca, como si acabara de darse cuenta de lo que había permitido — su hija, sus gemelos, cerca de ella.</p>
+
+        <div class="seraphina-conflicto">
+          <p class="dialogo" data-badge="dicho con voz que apenas existía">
+            —Yo no.... él no....
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Las palabras se le desmoronaron en la garganta. En el Bosque de Cuervos Espejo, las mentiras dolían — no como metáfora, sino como un gancho detrás del esternón que tiraba cada vez que intentaba moldear las palabras en algo más suave de lo que eran. Seraphina dejó de intentarlo. Se quedó de rodillas en la tierra, temblando, las garras hundidas en el musgo.</p>
+
+        <div class="seraphina-conflicto">
+          <p class="dialogo" data-badge="arrancado como quien se arranca una astilla">
+            —Todo lo que dijeron es verdad. Mi hermana Kira murió porque tres gatos monteses no quisieron esperar dos minutos para que se moviera de su territorio de recolección. La empujaron. Cayó mal. Se rompió el cuello.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Hizo una pausa. Las garras arrancaron un puñado de musgo y lo sostuvieron sin mirarlo.</p>
+
+        <div class="seraphina-conflicto">
+          <p class="dialogo" data-badge="continuado con los ojos cerrados">
+            —Mi dolor era real. Mi amor por ella era real. Y después el dolor se volvió odio, y el odio se volvió plan. Y los planes necesitaban historias, y las historias necesitaban víctimas, y cada víctima alimentaba al odio que alimentaba al plan.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> No lloró. Las lágrimas habrían sido más fáciles de observar.</p>
+      </section>
+
+      <!-- =============== LA CONFRONTACIÓN COMPLETA =============== -->
+      <section id="confrontacion-total" class="bosque-espejo">
+        <h2>Verdades Sin Máscara</h2>
+
+        <div class="cuervo-dialogo">
+          <p class="dialogo" data-badge="continuando la revelación como quien pasa páginas">
+            —Red de cuarenta y siete mantis organizadas en doce células operativas. Plan de dos años: atraer gatos monteses compasivos usando historia de hermana maldecida, guiarlos hacia las Lágrimas de Luna, usar el poder amplificado para venganza a escala total.
+          </p>
+        </div>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="preguntado con voz que no quería la respuesta">
+            —¿Venganza a escala.... total? ¿Qué significa eso?
+          </p>
+        </div>
+
+        <div class="cuervo-dialogo">
+          <p class="dialogo" data-badge="respondido como quien constata el clima">
+            —Las Lágrimas amplifican lo que hay en el corazón del usuario. Si el corazón está lleno de odio hacia una especie entera.... el resultado es predecible.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Ember se giró hacia Seraphina. La furia seguía ahí — le enrojecía las orejas, le tensaba los tendones del cuello — pero ahora competía con algo más: el horror de entender la magnitud.</p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="preguntado como si masticara vidrio">
+            —¿Ibas a exterminarnos? ¿A todos? ¿A Sol? ¿A Sombra?
+          </p>
+        </div>
+
+        <div class="seraphina-conflicto">
+          <p class="dialogo" data-badge="respondido con la honestidad forzada del bosque">
+            —Era el plan. Era lo que creía que quería. Venganza por Kira, venganza por cada mantis que había sufrido.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> La palabra "creía" colgó en el aire como un insecto atrapado en ámbar. Ember abrió la boca para responder y no encontró sonido.</p>
+
+        <p class="texto-narrativo"> Axel seguía en el suelo. El arco había dejado de arder — ahora estaba tibio otra vez, la tibieza de piel viva, como si la furia se hubiera gastado y lo que quedara fuera algo más complicado que la furia.</p>
+
+        <p class="texto-narrativo"> Pensó en abandonarla. El pensamiento fue claro, limpio, sin culpa: dejarla aquí, en este bosque, y seguir. Tenía el mapa. Tenía las Lágrimas de Cristal. Podía llegar al Templo sin ella. La parte de él que había aprendido a sobrevivir tres años solo en las Montañas Heladas le dijo que era la opción lógica — cortar lo que estaba podrido antes de que infectara el resto.</p>
+
+        <p class="texto-narrativo"> Pero entonces el arco pulsó. Una sola vez. Tibio. Y Axel reconoció ese pulso — lo había sentido la noche que encontró a Seraphina herida en la nieve, cuando todavía no sabía quién era, cuando solo era una criatura que sangraba en su montaña. El arco no había ardido esa noche. Había pulsado, igual que ahora. Como preguntando.</p>
+
+        <p class="texto-narrativo"> Se alzó despacio. Las piernas no le respondieron bien al principio. Tuvo que apoyarse en el arco como bastón antes de poder sostenerse.</p>
+
+        <p class="dialogo" data-badge="preguntado con voz raspada">
+          —¿Creías?
+        </p>
+
+        <div class="seraphina-conflicto">
+          <p class="dialogo" data-badge="dicho mirando sus propias garras hundidas en la tierra">
+            —No lo sé. Estas semanas.... viendo a tu familia, a los gemelos, a Ember confiando en mí sin verificar siquiera que le devolviera la bolsa completa. El jardín de los Osos creció rosas de mi pecho porque aún hay algo ahí que no es odio. No sabía que quedaba algo así.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Los cuervos del anfiteatro murmuraron. No en desacuerdo — en confirmación. Las plumas de todos pulsaron al unísono, y por un instante el claro se llenó de una luz violeta que olía a tormenta vieja.</p>
+
+        <div class="cuervo-dialogo">
+          <p class="dialogo" data-badge="observando con la frialdad de un diagnóstico">
+            —Verdad sin fisuras. Mantis no miente sobre los sentimientos presentes. Tampoco miente sobre el odio que aún lleva. Corazón dividido entre amor nuevo y odio viejo. Corazón dividido es corazón peligroso cuando toca poder amplificado.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Ember recogió la flauta del suelo. La limpió con el borde de la manga. El gesto le tomó demasiado tiempo — las manos no le obedecían bien.</p>
+
+        <div class="ember-furia">
+          <p class="dialogo" data-badge="dicho con voz que temblaba pero no se quebraba">
+            —Seraphina. Aquí, donde las mentiras duelen. Necesito una respuesta. ¿Alguna parte de ti quiere lastimarnos a nosotros? ¿A Axel?
+          </p>
+        </div>
+
+        <div class="seraphina-conflicto">
+          <p class="dialogo" data-badge="respondido antes de que la pregunta terminara">
+            —No.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> La palabra salió sin demora, sin cálculo, como un reflejo muscular. Y después, más despacio:</p>
+
+        <div class="seraphina-conflicto">
+          <p class="dialogo" data-badge="añadido con esfuerzo">
+            —La idea de lastimar a Axel me produce.... algo que no tenía nombre hasta hace poco. Tú, Ember. Se han vuelto.... Eso no era parte del plan.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> No terminó la frase. No hacía falta. Los cuervos no dijeron que mintiera.</p>
+
+        <div class="cuervo-dialogo">
+          <p class="dialogo" data-badge="confirmando con algo que podría haber sido sorpresa">
+            —Verdad completa. Los sentimientos hacia estos gatos son genuinos. El odio hacia la especie también lo es. Dos verdades en el mismo cuerpo.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Dos frecuencias superpuestas. Lyra lo había escrito semanas atrás, analizando datos de su Jardín de Intenciones sin saber qué significaban. Axel pensó en esa nota y el carbón en su bolsillo pareció arder de nuevo.</p>
+      </section>
+
+      <!-- =============== LYRA OBSERVA DESDE LAS SOMBRAS =============== -->
+      <section id="lyra-observa" class="bosque-espejo">
+        <h3>La Testigo Silenciosa</h3>
+
+        <p class="texto-narrativo"> En el borde del claro, donde las sombras de los árboles eran más densas que la luz entre ellos, una figura se apoyaba contra un tronco con los brazos cruzados.</p>
+
+        <p class="texto-narrativo"> Lyra había llegado antes que ellos. Su mapa — el original, no la copia que les había dejado — tenía anotaciones en tinta roja que marcaban la posición exacta de cada cuervo centinela entre el campamento del grupo y el claro. Había escuchado cada palabra de la revelación. Visto el arco arder en la mano de Axel. Visto a Ember recoger su flauta del suelo con manos que no le funcionaban.</p>
+
+        <p class="texto-narrativo"> Sus garras se apretaron alrededor del mapa hasta arrugarlo. Lo alisó después, metódicamente, porque un mapa arrugado es un mapa inútil y Lyra no se permitía cosas inútiles.</p>
+
+        <p class="texto-narrativo"> Sin hacer ruido, extrajo de su mochila vendajes, medicina de emergencia, provisiones de alta energía y agua purificada. Los colocó donde el grupo los encontraría al salir — junto a la raíz más visible, imposible de pasar sin verlos. Junto a los suministros dejó una nota doblada en cuartos, escrita con la caligrafía precisa de alguien acostumbrada a que sus palabras sobrevivieran a la intemperie.</p>
+
+        <p class="texto-narrativo" style="background: rgba(210, 180, 140, 0.2); padding: 15px; margin: 10px 0; border-left: 3px solid #D2B48C; font-style: italic;"> "Para cuando las verdades duelen más que las heridas físicas. Cuídense mutuamente. — L"</p>
+
+        <p class="texto-narrativo"> Se alejó entre los árboles. A los tres pasos se detuvo, giró la cabeza hacia el claro donde Axel seguía de pie con el arco como bastón, y su expresión cambió durante exactamente un segundo — algo que no era profesional, que no era cartográfico, que no cabía en ningún mapa — antes de recomponerse y desaparecer entre las sombras como quien conoce cada salida de un bosque porque las ha mapeado todas.</p>
+      </section>
+
+      <!-- =============== LA DECISIÓN GRUPAL =============== -->
+      <section id="decision-grupal" class="bosque-espejo">
+        <h2>Lo Que Queda Cuando Se Rompe</h2>
+
+        <p class="texto-narrativo"> El silencio duró lo que tardó un cuervo en cruzar el claro volando de una rama a otra. Quizás un minuto. Se sintió más largo.</p>
+
+        <p class="texto-narrativo"> Axel se sentó en el suelo. No en una roca, no en un tronco caído — directamente en la tierra, con las piernas cruzadas y el arco sobre las rodillas. Ember lo miró como si no reconociera el gesto — Axel nunca se sentaba así, nunca sin un punto de apoyo, nunca sin línea de escape calculada.</p>
+
+        <p class="dialogo" data-badge="dicho con la calma de quien ha pasado más allá de la furia">
+          —¿Cuáles son las opciones reales?
+        </p>
+
+        <div class="ember-furia">
+          <p class="dialogo" data-badge="respondido con rapidez, como si lo hubiera estado pensando">
+            —La entregamos a los cuervos. Dejamos que hagan justicia. Volvemos a casa.
+          </p>
+        </div>
+
+        <div class="cuervo-dialogo">
+          <p class="dialogo" data-badge="aclarado sin que nadie preguntara">
+            —No somos jueces. Mostramos verdad. Lo que hacen con ella no es asunto nuestro.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Ember cerró los ojos. La flauta estaba en su regazo ahora, y la giraba entre los dedos — el gesto que hacía cuando procesaba algo demasiado grande para procesarlo de pie.</p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="dicho sin abrir los ojos">
+            —Papá murió porque no sabía la verdad. Nosotros la sabemos. Eso tiene que servir para algo.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Seraphina seguía de rodillas. El musgo que había arrancado se había secado entre sus garras. No alzó la vista, pero su cuerpo entero estaba orientado hacia Axel — no hacia Ember, no hacia los cuervos. Hacia el gato que sostenía el arco de su padre y que no la había atacado.</p>
+
+        <p class="dialogo" data-badge="preguntado desde el suelo, mirándola">
+          —Si llegamos al Templo Celestial. Si obtienes las Lágrimas de Luna. Si el poder amplifica lo que verdaderamente hay en tu corazón en ese instante. ¿Qué pasaría?
+        </p>
+
+        <div class="seraphina-conflicto">
+          <p class="dialogo" data-badge="respondido con la honestidad que el bosque obligaba">
+            —No lo sé. Por primera vez en dos años, no lo sé.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Las garras soltaron el musgo seco. Cayó en fragmentos sobre sus rodillas.</p>
+
+        <div class="seraphina-conflicto">
+          <p class="dialogo" data-badge="continuado mirándose las manos vacías">
+            —Mi corazón está dividido. Hay odio real por lo que le pasó a Kira. Y hay algo más ahora. Algo que creció de Sol subiéndose a mi regazo sin preguntar. De Ember partiendo su comida sin contar las porciones. De Axel afilando flechas de más porque piensa que no noto que monta guardia doble.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Los cuervos pulsaron de nuevo. Violeta. Confirmación.</p>
+
+        <div class="cuervo-dialogo">
+          <p class="dialogo" data-badge="pronunciado como advertencia final">
+            —Corazón dividido con poder divino. Resultado impredecible. Podría curar. Podría destruir. Podría hacer ambas cosas al mismo tiempo.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Ember abrió los ojos. Miró a Axel. Axel miró a Seraphina. Seraphina miraba sus propias manos vacías.</p>
+
+        <div class="ember-furia">
+          <p class="dialogo" data-badge="dicho con una madurez que no tenía ayer">
+            —No puedo perdonarte. Quiero que sepas eso. No puedo perdonarte por papá, ni por las mentiras, ni por haber dejado que mis hijos te quisieran. Pero....
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Se detuvo. La flauta dejó de girar entre sus dedos.</p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="terminado con esfuerzo visible">
+            —Pero papá no habría querido que te dejáramos sola con ese odio adentro. Papá habría querido terminar el camino.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Axel no habló enseguida. Se quedó sentado en la tierra con el arco sobre las rodillas, la madera tibia contra sus palmas, y pensó en su padre — no en cómo murió, sino en cómo vivía. En la porción más grande del plato siempre para otro. En las flechas extra afiladas al anochecer. En la forma en que miraba a las criaturas heridas del bosque, no con lástima sino con paciencia, como si supiera que el dolor era temporal y lo que importaba era lo que venía después.</p>
+
+        <p class="dialogo" data-badge="dicho sin levantarse, sin alzar la voz">
+          —Continuamos juntos.
+        </p>
+
+        <p class="texto-narrativo"> Ember asintió una vez. Seraphina no se movió.</p>
+
+        <p class="dialogo" data-badge="añadido mirándola directamente">
+          —Pero cuando lleguemos al Templo, lo que pase con las Lágrimas dependerá de lo que verdaderamente haya en tu corazón. No de tu plan. No de tu venganza. No de nuestro perdón. De tu corazón. Solo de eso.
+        </p>
+
+        <div class="seraphina-conflicto">
+          <p class="dialogo" data-badge="dicho sin levantar la vista">
+            —¿Y si lo que hay no es suficiente?
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Axel no contestó. Porque la respuesta honesta era que no sabía, y en el Bosque de Cuervos Espejo, las respuestas deshonestas costaban demasiado.</p>
+
+        <p class="texto-narrativo"> Se levantó. Le ofreció la mano. Seraphina la miró durante tres latidos — la mano del hijo de su sexta víctima, ofrecida sin condiciones, en un bosque que no permitía pretender — antes de tomarla. Su garra se cerró alrededor de sus dedos con una presión que temblaba.</p>
+
+        <p class="texto-narrativo"> Ember recogió al erizo, que se había dormido durante el drama entero, y lo metió en la mochila con una delicadeza que contradecía la furia que aún le enrojecía las orejas.</p>
+      </section>
+
+      <!-- =============== GANCHO HACIA SECCION_08A =============== -->
+      <section id="salida-bosque" class="bosque-espejo">
+        <h3>Lo Que Los Espejos No Muestran</h3>
+
+        <p class="texto-narrativo"> Encontraron los suministros de Lyra al salir del claro. Axel se arrodilló junto a ellos, leyó la nota, y se la guardó en el bolsillo — el mismo bolsillo donde llevaba la nota de las dos frecuencias. No dijo nada. Ember notó cómo sus hombros perdieron medio grado de tensión al leer, y tuvo la prudencia de no comentarlo.</p>
+
+        <p class="texto-narrativo"> Caminaron en silencio durante la primera hora fuera del bosque. El tipo de silencio que no necesita ser llenado porque está haciendo trabajo — procesando, asentando, reorganizando todo lo que creían saber sobre los últimos once días de viaje.</p>
+
+        <p class="texto-narrativo"> El sendero descendía hacia un valle donde el sonido del agua llegaba antes que la vista — agua corriendo rápido, con ritmo, no el murmullo perezoso de un arroyo sino el golpeteo insistente de un río con opiniones propias. Según el mapa de los armadillos, la marca siguiente era un símbolo que parecía una nutria haciendo una pirueta.</p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="dicho con la voz todavía ronca pero intentando">
+            —El mapa dice.... ¿Río de las Nutrias? ¿Eso es un nombre real?
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Nadie respondió. Pero los tres siguieron caminando hacia el sonido del agua, porque la alternativa era quedarse quietos con la verdad y ninguno de ellos estaba listo para eso todavía.</p>
+
+        <p class="texto-narrativo"> El arco élfico había vuelto a su tibieza normal. Pero de vez en cuando, sin patrón que Axel pudiera descifrar, la madera emitía un pulso único — no de advertencia, no de furia. Algo más parecido a un latido. Como si la madera recordara las manos que la sostuvieron antes y estuviera decidiendo, igual que todos ellos, qué hacer con ese recuerdo.</p>
+      </section>
     </div>
-    
+
+<!--
+NOTAS DE CONTINUIDAD:
+— Grupo de 3 (sin Eco Pergaminada — se fue en seccion_05)
+— Erizo preservado intacto (escena con Cuervos)
+— Apertura conecta directamente con gancho de 07B (cuervos avistados en sendero)
+— Seraphina: revelada por cuervos, no por ella misma. Confesión forzada por el bosque.
+— Padre de Axel: "lo guiaron hasta un desfiladero" — no asesinado directamente, guiado al peligro
+— Ember grita "mataste" (emoción) pero los Cuervos dicen "cayó protegiendo" (precisión)
+— Propuesta de destruir Lágrimas ELIMINADA — contradice CLAUDE.md
+— Resolución abierta: "lo que pase dependerá de tu corazón"
+— Lyra: deja suministros + nota, momento personal de un segundo, desaparece
+— Lyra NO dice "enamorándose de la asesina" — acción pura, sin declaraciones
+— Gancho: Río de las Nutrias (seccion_08A), arco con pulso ambiguo
+— "Sin embargo" = 0
+— Clases sucias = 0
+— Eco Pergaminada = 0
+-->
+
     <script src="global-reset.js"></script>
-</body>
-</html> 
-</body> 
-</html> 
+  </body>
+</html>

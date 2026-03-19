@@ -1,293 +1,232 @@
-<!DOCTYPE html> 
-<html lang="es"> 
-<head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>El Cazador de Medianoche - seccion_09B</title> 
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="historia-interactiva.css"> 
-</head> 
-<body> 
- 
-<!--
-╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
-║                    SECCIÓN 9B: EL ÚLTIMO CAMPAMENTO ANTES DEL DESTINO                                     ║
-║                        🏕️ DÍA 10 - NOCHE 🏕️                                               ║
-╠══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║ CONTEXTO NARRATIVO:                                                                         ║
-║ • PRE-TEMPLO: Última noche antes de la confrontación final                                                     ║
-║ • Información crucial obtenida de Groundbreaker                                                           ║
-║ • Grupo unido pero cada uno procesando la magnitud del momento                                                   ║
-║ • Tensión máxima: todo el viaje ha llevado a mañana                                                         ║
-║                                                                                   ║
-║ OBJETIVOS DE LA SECCIÓN:                                                                      ║
-║ • CALMA ANTES DE LA TORMENTA: Momento de reflexión profunda                                                     ║
-║ • RESOLUCIONES INTERNAS: Cada personaje enfrenta sus demonios                                                    ║
-║ • ÚLTIMAS PALABRAS: Conversaciones que podrían ser finales                                                     ║
-║ • CONEXIÓN ESPIRITUAL: Axel comunica con espíritu del padre                                                     ║
-║ • SERAPHINA: Última oportunidad de elegir entre odio y redención                                                  ║
-║                                                                                   ║
-║ ELEMENTOS ESPECÍFICOS:                                                                       ║
-║ • Campamento en colina con vista al Templo Celestial                                                        ║
-║ • Arco de Axel responde a proximidad del Templo                                                           ║
-║ • Ember escribe carta para Luna Suave por si no regresa                                                       ║
-║ • Seraphina toma decisión final sobre su propósito                                                         ║
-║ • Aparición del espíritu del padre de Axel como plantagio                                                      ║
-║ • Cuerda de confianza se fortalece durante la noche                                                         ║
-╚══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>El Cazador de Medianoche - seccion_09B</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="historia-interactiva.css" />
+  </head>
+  <body>
+    <!--
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║           SECCIÓN 9B: EL ÚLTIMO CAMPAMENTO ANTES DEL DESTINO                ║
+║                        DÍA 10 — NOCHE                                       ║
+╠═══════════════════════════════════════════════════════════════════════════════╣
+║ CONTEXTO NARRATIVO:                                                         ║
+║ • Post-Laberinto de Tejones. Medio día de marcha desde salida del territorio ║
+║ • El Templo Celestial es visible en la distancia por primera vez             ║
+║ • Última noche antes de la confrontación final                              ║
+║ • Grupo: Axel, Seraphina, Lyra (+ erizo). Ember ya se fue en seccion_09.    ║
+║                                                                             ║
+║ OBJETIVOS:                                                                  ║
+║ • Calma antes de la tormenta: cada personaje procesa la magnitud             ║
+║ • El Templo visible por primera vez — no hermoso, sino presencial            ║
+║ • Axel con el arco y el peso de lo que le dijeron los Tejones                ║
+║ • Seraphina con su miedo genuino a lo que las Lágrimas encontrarán           ║
+║ • Lyra con la pregunta del pergamino borrado                                 ║
+║ • El erizo hace su aparición más significativa: elige quedarse con Seraphina ║
+║                                                                             ║
+║ LO QUE NO PUEDE PASAR AQUÍ:                                                 ║
+║ • El padre de Axel NO aparece físicamente — eso es el Templo                ║
+║ • Ember NO está — se fue en seccion_09                                       ║
+║ • Sin Eco Pergaminada                                                        ║
+║                                                                             ║
+║ GANCHO HACIA SECCION_10:                                                    ║
+║ • El Templo se ve, pero hay algo más — signos de actividad en el perímetro  ║
+║ • La pregunta sin respuesta del pergamino borrado pesa sobre todos           ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
 -->
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sección 9B: El Último Campamento Antes del Destino - El Cazador de Medianoche</title>
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    .campamento-final {
-      background: linear-gradient(135deg, #191970, #483D8B, #6A5ACD);
-      border-radius: 15px;
-      padding: 30px;
-      margin: 20px 0;
-      border: 2px solid rgba(72, 61, 139, 0.4);
-      box-shadow: 0 0 20px rgba(106, 90, 205, 0.3);
-      color: #E6E6FA;
-    }
-    
-    .vista-templo {
-      background: rgba(255, 215, 0, 0.2);
-      border-left: 4px solid #FFD700;
-      padding: 20px;
-      margin: 15px 0;
-      border-radius: 0 15px 15px 0;
-      text-align: center;
-      font-weight: bold;
-    }
-    
-    .reflexion-personal {
-      background: rgba(70, 130, 180, 0.2);
-      border: 1px solid #4682B4;
-      padding: 20px;
-      margin: 15px 0;
-      border-radius: 10px;
-    }
-    
-    .espiritu-padre {
-      background: rgba(255, 255, 255, 0.1);
-      border: 2px solid rgba(255, 255, 255, 0.3);
-      padding: 25px;
-      margin: 20px 0;
-      border-radius: 15px;
-      text-align: center;
-      box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
-    }
-    
-    .decision-final {
-      background: rgba(220, 20, 60, 0.2);
-      border-top: 3px solid #DC143C;
-      border-bottom: 3px solid #DC143C;
-      padding: 20px;
-      margin: 20px 0;
-      text-align: center;
-      font-weight: bold;
-    }
-    
-    .estrella-sprite {
-      display: inline-block;
-      color: #FFD700;
-      font-size: 1.2em;
-      margin: 0 3px;
-      animation: twinkle 2s ease-in-out infinite alternate;
-    }
-    
-    @keyframes twinkle {
-      0% { opacity: 0.5; transform: scale(0.9); }
-      100% { opacity: 1; transform: scale(1.1); }
-    }
-    
-    .fuego-campamento {
-      display: inline-block;
-      color: #FF4500;
-      font-size: 1.3em;
-      margin: 0 5px;
-      animation: flicker 1.5s ease-in-out infinite;
-    }
-    
-    @keyframes flicker {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.7; transform: scale(1.1); }
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <header>
-      <h1>🏕️ SECCIÓN 9B: EL ÚLTIMO CAMPAMENTO ANTES DEL DESTINO ⭐</h1>
-      <p class="chapter-subtitle">DÍA 10 - NOCHE - LA ÚLTIMA VIGILIA</p>
-    </header>
+    <div class="container">
+      <h1>El Cazador de Medianoche - Sección 9B: El Último Campamento</h1>
 
-    <div class="campamento-final">
-      <h2>🌙 La Colina de la Contemplación 🌙</h2>
-      
-      <p>Encontraron el lugar perfecto para el campamento en una colina rocosa a medio día del Templo Celestial. Desde allí, podían ver su destino: una estructura que parecía hecha de luz solidificada, brillando contra el cielo nocturno como una estrella caída.</p>
-      
-      <p><span class="fuego-campamento">🔥</span> Una pequeña hoguera crepitaba entre ellos. <span class="fuego-campamento">🔥</span></p>
-      
-      <p>Desde que avistaron el Templo, Axel había sentido una conexión creciente, una sensación familiar que se intensificaba con cada paso hacia el destino.</p>
-      
-      <p class="dialogo" data-badge="susurrado con asombro">
-        —Es hermoso— murmuró Ember, con la mirada fija en el templo distante.— Casi.... casi da miedo acercarse."
-      </p>
-      
-      <p class="dialogo" data-badge="dicho con gravedad">
-        —Mañana todo habrá terminado— dijo Axel, ajustando la cuerda de confianza que seguía brillando suavemente en sus muñecas.— De una forma u otra."
-      </p>
+      <!-- =============== LA PRIMERA VEZ QUE LO VEN =============== -->
+      <section id="primera-vista">
+
+        <p class="texto-narrativo"> Fue Lyra quien lo vio primero. Llevaba la delantera porque siempre llevaba la delantera, mapa en mano, midiendo el terreno con sus patas y su sentido de las distancias, y de repente se detuvo tan abruptamente que Seraphina casi chocó con ella.</p>
+
+        <p class="texto-narrativo"> Axel llegó al borde de la colina un segundo después y entendió por qué.</p>
+
+        <p class="texto-narrativo"> El Templo Celestial no era lo que había imaginado. No en el sentido de que decepcionara — en el sentido de que no se parecía a ninguna imagen que hubiera construido durante años de escuchar la historia. No era una ruina, ni un palacio, ni una montaña con forma de edificio. Era una estructura que parecía haber sido construida por alguien que no estaba seguro de qué era la arquitectura pero sabía exactamente lo que quería que hiciera. Pilares de un material que no era exactamente mármol ni exactamente roca viva. Un techo que era también una plaza que era también una terraza que miraba hacia arriba, hacia las estrellas. Y desde su interior, con una regularidad tan constante que al principio podías confundirla con el pulso de la propia sangre, una luz dorada que pulsaba.</p>
+
+        <p class="texto-narrativo"> Axel no habló durante un buen rato.</p>
+
+        <p class="texto-narrativo"> El arco pulsó contra su espalda — no el pulso frío de advertencia, no el pulso tibio de protección. Algo más antiguo. Más específico. La madera ancestral respondiendo a una proximidad que llevaba años sin sentir. Lo mismo que una brújula al acercarse al norte: no calor, no frío. Orientación.</p>
+
+        <p class="texto-narrativo"> Lyra estaba a su izquierda, estudiando el edificio con la misma expresión que ponía cuando encontraba una discrepancia entre un mapa y el terreno real. Sus labios se movían ligeramente — calculando algo, midiendo ángulos con el ojo experto de quien ha aprendido que los edificios que no deberían estar donde están siempre tienen una razón para estar exactamente ahí.</p>
+
+        <p class="dialogo" data-badge="murmurado con precisión cartográfica">
+            —La elevación no cuadra con mi mapa. Debería ser doscientos metros más bajo según las curvas de nivel de la región— Una pausa. —O el Templo no respeta las curvas de nivel. Lo cual, dadas las circunstancias, sería lo más lógico—
+        </p>
+
+        <p class="texto-narrativo"> Seraphina no dijo nada. Estaba de pie al borde de la colina con las antenas completamente desplegadas, procesando el Templo con algo más que vista. Su cuerpo lo reconocía antes de que su mente decidiera qué hacer con esa información. Lo había estudiado durante años — planos, textos, descripciones de quienes habían llegado al perímetro y regresado. Pero nada de lo que había leído había mencionado esto: la sensación de que el edificio te miraba de vuelta.</p>
+
+      </section>
+
+      <!-- =============== EL CAMPAMENTO =============== -->
+      <section id="campamento">
+
+        <p class="texto-narrativo"> Establecieron el campamento en la colina, a una distancia que Lyra midió con sus pies y su sentido de los espacios seguros — lo suficientemente cerca para que el Templo fuera visible, lo suficientemente lejos para que sus sistemas de defensa pasiva no afectaran el sueño. El mapa de los Tejones había marcado ese radio con una línea fina y una nota al margen en la letra comprimida de Groundbreaker: —Perímetro de influencia activa. Dentro: sueño alterado. Fuera: normal. La línea no es decorativa—.</p>
+
+        <p class="texto-narrativo"> Lyra había trazado la línea de su campamento a exactamente un metro del límite. Ni dentro ni afuera. Axel no le preguntó si era intencional.</p>
+
+        <p class="texto-narrativo"> Encendieron fuego — pequeño, funcional, sin el espacio emocional que el fuego de otras noches había tenido. Esta noche el fuego era para ver, no para sentir. Las raciones eran las últimas de los suministros que Lyra había traído con sus cálculos milimétricos, y la exactitud con que habían llegado al final con exactamente lo necesario era, en su manera silenciosa, el tipo de cuidado que no necesita ser nombrado para ser reconocido.</p>
+
+        <p class="texto-narrativo"> Comieron en silencio. No el silencio tenso de los días posteriores a la revelación. El silencio de tres criaturas que han llegado al final de algo y están usando el tiempo que les queda antes de que empiece lo siguiente.</p>
+
+      </section>
+
+      <!-- =============== LAS REFLEXIONES =============== -->
+      <section id="reflexiones">
+        <h2>La Noche que Precede</h2>
+
+        <p class="texto-narrativo"> Lyra fue la primera en hablar. Tenía el pergamino de los murciélagos extendido sobre sus rodillas — lo había pedido prestado después de señalar la sección borrada — y sus ojos recorrían los márgenes con la concentración de alguien que busca algo que no sabe exactamente qué es.</p>
+
+        <p class="dialogo" data-badge="dicho sin levantar los ojos del pergamino">
+            —He estado pensando en la sección borrada desde que la encontré. Los murciélagos Bibliotecarios no borran información por descuido. Borran información que consideran peligrosa si llega a manos equivocadas— Sus garras sujetaron el borde del pergamino. —Lo que implica que alguien, en algún momento, juzgó que nosotros podríamos ser las manos equivocadas—
+        </p>
+
+        <p class="dialogo" data-badge="preguntado con calma">
+            —O que no quería que quien tocara las Lágrimas supiera de antemano las consecuencias de hacerlo de cierta manera— dijo Axel. —Que lo descubrieras con el polvo de ala... quizás no fue un accidente del destino. Quizás fue el momento correcto—
+        </p>
+
+        <p class="dialogo" data-badge="dicho con precisión incómoda">
+            —Eso no es una respuesta tranquilizadora— observó Lyra. —Es una respuesta de cartógrafa. Encontrar el mapa en el momento correcto no significa que el mapa diga cosas buenas—
+        </p>
+
+        <p class="texto-narrativo"> Seraphina escuchaba con las manos en sus rodillas. El erizo estaba a un metro de ella — el mismo metro que Ember había mantenido la noche de las mariposas — y por alguna razón que no podía articular, esa distancia se sentía diferente a las otras distancias que había guardado durante el viaje. No la distancia de quien se mantiene apartado. La distancia de quien está eligiendo acercarse, pero despacio.</p>
+
+        <p class="dialogo" data-badge="dicho con voz que no pedía consuelo">
+            —La sección borrada trata sobre el tercero que toca las Lágrimas— dijo Seraphina. —Según el pergamino, la resonancia del primero afecta al segundo. Y lo que queda, purificado o corrompido, lo recibe el tercero— Sus antenas no se movieron. —Si yo toco las Lágrimas primero y hay odio en mi corazón, ese odio contamina lo que llega al siguiente. Y al siguiente—
+        </p>
+
+        <p class="texto-narrativo"> Nadie respondió inmediatamente. El fuego crepitó con la decisión de algo que no necesita pensar.</p>
+
+        <p class="dialogo" data-badge="dicho con honestidad directa">
+            —Entonces el orden importa— dijo Lyra. —Y todavía no sabemos quién va a tocarlas ni en qué orden—
+        </p>
+
+        <p class="dialogo" data-badge="añadido en voz baja">
+            —Hay más—  dijo Seraphina. Sus garras se apretaron. —Llevo diez días en este viaje. He visto lo que hay en el corazón de cada uno de ustedes. Y sigo sin saber con certeza lo que hay en el mío— Pausa. —No lo digo como excusa. Lo digo porque es verdad, y porque mañana importa que sea verdad—
+        </p>
+
+        <p class="texto-narrativo"> Axel la miró durante un momento.</p>
+
+        <p class="dialogo" data-badge="dicho con la calma del que ha tomado una decisión">
+            —Entonces mañana descubrimos la verdad. Los dos—
+        </p>
+
+        <p class="texto-narrativo"> No —los tres—. Los dos. Axel y Seraphina. Lyra lo notó — la forma deliberada en que había elegido esas palabras — y guardó el pergamino sin comentario. Algunos planes no necesitaban ser articulados en voz alta la noche antes para ser reales.</p>
+
+      </section>
+
+      <!-- =============== AXEL Y EL ARCO =============== -->
+      <section id="axel-noche">
+
+        <p class="texto-narrativo"> Cuando Lyra se quedó dormida — con la eficiencia de alguien que ha aprendido a dormir cuando puede porque el terreno no garantiza cuándo será la próxima oportunidad — y Seraphina cerró los ojos con las antenas todavía ligeramente alerta, Axel se levantó con cuidado y se alejó del fuego unos metros.</p>
+
+        <p class="texto-narrativo"> El Templo pulsaba en la distancia. No era perceptible visualmente — era más sutil que eso, la misma sensación de antes pero más insistente ahora que el silencio de la noche le quitaba todo lo demás. El arco respondía a esa pulsación con una contra-frecuencia propia: como dos instrumentos afinados para el mismo tono que resuenan cuando uno toca al otro.</p>
+
+        <p class="texto-narrativo"> Se quitó el arco de la espalda y lo sostuvo frente a él bajo el cielo. La madera absorbía la luz de las estrellas de una forma que la roca no haría y la madera ordinaria tampoco — como si tuviera su propia forma de escuchar la luz y devolverla después, cambiada.</p>
+
+        <p class="texto-narrativo"> Recordó lo que Groundbreaker había dicho: —Gato montés. Sus huellas están en el registro de paso del año en que el Templo selló su última entrada—. Tres años. El mismo tiempo que llevaba su padre sin aparecer. No —desaparecido—. Groundbreaker había usado la palabra —esperando—.</p>
+
+        <p class="texto-narrativo"> Su padre había elegido quedarse.</p>
+
+        <p class="texto-narrativo"> No lo habían matado y abandonado. No había muerto perdido en algún camino de montaña. Había llegado al Templo Celestial y había elegido no salir. Había elegido quedarse y proteger las Lágrimas de Luna. Para Axel. Para el momento en que su hijo llegara con el corazón correcto y la razón correcta.</p>
+
+        <p class="texto-narrativo"> La madera del arco emitió un pulso largo y suave. No calor. No frío. Presencia.</p>
+
+        <p class="texto-narrativo"> Axel cerró los dedos sobre el arco con la fuerza de alguien que sostiene lo más importante que tiene. No dijo nada. No necesitaba decir nada. El arco era la conversación — la había sido durante tres años, cuando su padre eligió dejarlo en el mundo y llevarse solo su presencia al Templo.</p>
+
+        <p class="texto-narrativo"> Después de un tiempo que no midió, volvió al campamento. La cuerda de confianza, atada al asa de su bolsa, descansaba en el suelo junto a él. Las tres fibras — roja, dorada, oscura — seguían trenzadas. Íntegras.</p>
+
+      </section>
+
+      <!-- =============== EL ERIZO =============== -->
+      <section id="erizo-final">
+
+        <p class="texto-narrativo"> Axel no dormía todavía cuando vio al erizo moverse.</p>
+
+        <p class="texto-narrativo"> No era inusual que el erizo se moviera de noche — en realidad, en todas las semanas que los había acompañado, nunca había sido predecible. Aparecía. Desaparecía. Rodaba en líneas rectas hacia objetivos que nadie le había señalado. Dormía en lugares que no habían sido preparados para él.</p>
+
+        <p class="texto-narrativo"> Esta vez rodó despacio. Sin la determinación habitual, sin la inercia de alguien que va de un punto A a un punto B con propósito. Rodó con la lentitud de alguien que está decidiendo mientras se mueve.</p>
+
+        <p class="texto-narrativo"> Se detuvo junto a Seraphina.</p>
+
+        <p class="texto-narrativo"> No detrás de ella. No delante. Junto a ella — a la altura de su pata izquierda, donde el suelo era plano y el fuego llegaba con suficiente calor para que durmiendo cerca de ella fuera más cálido que en cualquier otro punto del campamento.</p>
+
+        <p class="texto-narrativo"> Seraphina tenía los ojos cerrados, pero sus antenas se inclinaron levemente hacia abajo. No con sorpresa. Con algo más parecido al reconocimiento de algo que esperaba sin saber que lo esperaba.</p>
+
+        <p class="texto-narrativo"> El erizo se acurrucó. Cerró los ojos. Durmió.</p>
+
+        <p class="texto-narrativo"> Era la primera vez en todo el viaje que el erizo elegía estar cerca de alguien. En las nutrias, había flotado solo en la balsa. En la cueva de los murciélagos, había chocado contra la pata de Pluma Plateada con la impersonalidad de un proyectil. En el laberinto, había cruzado las trampas sin mirar a nadie. Rodaba junto al grupo, no hacia él.</p>
+
+        <p class="texto-narrativo"> Esta vez eligió.</p>
+
+        <p class="texto-narrativo"> Axel lo observó desde su sitio junto al fuego. No dijo nada. No había nada que decir que no lo empeorara — las palabras correctas a veces son las que no se pronuncian, especialmente cuando lo que se está diciendo no necesita idioma para ser entendido.</p>
+
+        <p class="texto-narrativo"> El fuego crepitó. El Templo pulsaba en la distancia. La cuerda de confianza descansaba intacta junto a la bolsa de Axel. Y en algún lugar entre las tres fibras trenzadas y la respiración lenta del erizo dormido junto a Seraphina, algo que había estado a punto de romperse durante semanas encontró la forma de mantenerse.</p>
+
+      </section>
+
+      <!-- =============== GANCHO HACIA SECCION_10 =============== -->
+      <section id="amanecer">
+
+        <p class="texto-narrativo"> El amanecer llegó frío y preciso, como llegan los amaneceres en las alturas cuando el cielo no tiene nubes que lo amortigüen. Lyra estaba despierta antes que los demás — o quizás nunca había dormido del todo, porque cuando Axel abrió los ojos ya había recogido su parte del campamento y estaba en el borde de la colina con su cuaderno de campo, documentando algo.</p>
+
+        <p class="texto-narrativo"> Axel se acercó. Lyra giró el cuaderno para que pudiera ver.</p>
+
+        <p class="texto-narrativo"> Había trazado el Templo Celestial con la precisión de alguien que ha pasado la noche mirándolo — no su arquitectura, que era difícil de reproducir, sino su perímetro. Y en el perímetro, marcadas con puntos en lugares específicos, había señales que no habían estado ahí cuando llegaron.</p>
+
+        <p class="dialogo" data-badge="dicho en voz baja">
+            —Aparecieron durante la noche. Tres puntos de calor en el perímetro exterior — los detecté por el cambio en la condensación del suelo. No son del Templo— Sus ojos encontraron los de Axel. —Son pisadas. Alguien estuvo rondando el perímetro entre la medianoche y el amanecer—
+        </p>
+
+        <p class="texto-narrativo"> Axel miró el mapa. Los tres puntos formaban un triángulo irregular alrededor de la entrada norte — la que los Tejones habían marcado como la ruta transitables hacia el interior.</p>
+
+        <p class="texto-narrativo"> El arco emitió un pulso frío. No el frío de la noche. El frío específico que había aprendido a distinguir durante semanas de viaje: la advertencia.</p>
+
+        <p class="texto-narrativo"> Seraphina se acercó sin ser llamada. Sus antenas estaban desplegadas al máximo, leyendo el aire de la mañana con la concentración de alguien que ha encontrado algo que su entrenamiento reconoce antes de que su consciencia lo nombre.</p>
+
+        <p class="dialogo" data-badge="dicho con la voz baja de quien identifica algo que no quería encontrar">
+            —Conozco ese patrón de movimiento— dijo. —Tres operativas en posición de cobertura cruzada. No están explorando. Están esperando que alguien entre antes que ellas—
+        </p>
+
+        <p class="texto-narrativo"> El silencio que siguió tuvo la textura de una decisión que ya se ha tomado pero que todavía necesita ser pronunciada.</p>
+
+        <p class="dialogo" data-badge="dicho con calma">
+            —Entonces entramos primero— dijo Axel.
+        </p>
+
+        <p class="texto-narrativo"> Recogió el arco. La cuerda de confianza se acomodó contra su bolsa con el peso de algo que sabía que la jornada que empezaba era diferente a todas las anteriores. El erizo se desenrolló, miró hacia el Templo durante un momento con sus ojos de semilla de amapola, y luego empezó a rodar en esa dirección sin que nadie le dijera nada.</p>
+
+        <p class="texto-narrativo"> Era por fin el día diez. El Templo Celestial los esperaba a medio kilómetro de distancia, con su guardián, con sus Lágrimas de Luna, con la pregunta que el pergamino de los murciélagos había elegido no responder, y con tres operativas de la red de mantis en posición de cobertura alrededor de la única entrada viable.</p>
+
+        <p class="texto-narrativo"> El arco pulsó. Tibio y frío a la vez. Orientación y advertencia. Como su padre, siempre diciéndole dos cosas al mismo tiempo.</p>
+
+        <p class="texto-narrativo"> Axel lo siguió hacia adelante.</p>
+
+      </section>
+
+      <!-- NOTAS DE CONTINUIDAD (no visibles al lector):
+        — Grupo: Axel, Seraphina, Lyra (+ erizo). Ember NO está.
+        — El padre de Axel NO aparece aquí — su presencia es solo el arco
+        — El erizo elige quedarse junto a Seraphina: momento narrativo más significativo del erizo
+        — La sección borrada del pergamino: queda como pregunta abierta
+        — Gancho: tres operativas de la red de mantis en posición alrededor del Templo
+          (la red llegó antes que ellos; la misión no es solo las Lágrimas, hay una amenaza activa)
+        — Lyra detecta las pisadas: su rol como cartógrafa-rastreadora en el climax
+        — El arco: pulso tibio (padre/orientación) + pulso frío (amenaza mantis)
+        — Cuerda de confianza: intacta
+        — "Sin embargo" = 0
+        — Clases sucias = 0
+        — Eco Pergaminada = 0
+        — No hay emojis
+      -->
     </div>
 
-    <div class="vista-templo">
-      <h3>🏛️ EL TEMPLO CELESTIAL EN LA DISTANCIA ✨</h3>
-      
-      <p>La estructura antigua se alzaba contra las montañas como un faro de esperanza y terror. Pilares de mármol blanco se extendían hacia el cielo, y entre ellos, una luz dorada pulsaba con el ritmo de un corazón.</p>
-      
-      <p><span class="estrella-sprite">⭐</span> Las estrellas parecían más brillantes esta noche. <span class="estrella-sprite">⭐</span></p>
-      
-      <p class="dialogo" data-badge="dicho con determinación creciente">
-        —Las Lágrimas de Luna están ahí— dijo Seraphina, su voz apenas audible por encima del crepitar de las llamas.— Puedo.... puedo sentirlas. Como si me estuvieran llamando."
-      </p>
-      
-      <p class="dialogo" data-badge="preguntado con preocupación gentil">
-        —¿Cómo te sientes al respecto?— preguntó Ember, y la pregunta sorprendió a todos, incluyéndolo a él mismo.
-      </p>
-      
-      <p>Seraphina lo miró, y por un momento, su máscara cayó completamente.</p>
-      
-      <p class="dialogo" data-badge="susurrado con vulnerabilidad total">
-        —Aterrada. Completamente aterrada."
-      </p>
-    </div>
-
-    <div class="reflexion-personal">
-      <h3>💭 Las Reflexiones de la Última Noche</h3>
-      
-      <p><strong>EMBER - LA CARTA QUE PODRÍA NO ENVIARSE NUNCA:</strong></p>
-      <p>Ember sacó papel y pluma de su mochila, escribiendo a la luz del fuego.</p>
-      
-      <blockquote class="carta-luna">
-        <p><em>"Mi querida Luna Suave,</em></p>
-        <p><em>Si estás leyendo esto, significa que no pude regresar a casa. Quiero que sepas que cada paso de este viaje ha valido la pena, porque he aprendido lo que significa ser verdaderamente valiente.</em></p>
-        <p><em>No es la ausencia de miedo - es hacer lo correcto a pesar del miedo. Dile a Sol que papá intentó ser tan brillante como ella. Dile a Sombra que papá descubrió que las sombras no son malvadas - son los lugares donde la luz aprende a ser más fuerte.</em></p>
-        <p><em>Y dile a ambos que los amo más que a todas las estrellas del cielo.</em></p>
-        <p><em>Tu esposo que aprende,<br>Ember"</em></p>
-      </blockquote>
-      
-      <p><strong>AXEL - LA CONEXIÓN CON EL ARCO:</strong></p>
-      <p>Axel sostuvo su arco élfico, sintiendo esa conexión que se había vuelto más clara. Era como si pudiera percibir una presencia familiar.</p>
-      
-      <p class="dialogo" data-badge="susurrado con emoción contenida">
-        —Papá— murmuró,— si realmente estás allí.... si has estado esperándome todos estos años.... espero estar listo para lo que me vas a pedir que haga."
-      </p>
-      
-      <p>Sintió una calidez reconfortante recorrerlo, como un abrazo en la noche fría.</p>
-      
-      <p><strong>SERAPHINA - LA ELECCIÓN FINAL:</strong></p>
-      <p>Seraphina se alejó del fuego, mirando hacia las estrellas. Cuando regresó, había algo diferente en su postura.</p>
-
-      <!-- =============== OCTAVA APARICIÓN DEL ERIZO =============== -->
-      <p class="texto-narrativo"> Pero no regresó sola. </p>
-
-      <p class="texto-narrativo"> El erizo estaba a su lado. No detrás de ella, no delante, sino exactamente a su lado, caminando — si es que esas patas diminutas producían algo que pudiera llamarse caminar — al mismo ritmo que sus pasos. Cuando Seraphina se detuvo frente al fuego, el erizo se detuvo también. Y cuando se sentó, el erizo se acurrucó junto a su pata izquierda y cerró los ojos. </p>
-
-      <p class="texto-narrativo"> Nadie dijo nada. </p>
-
-      <p class="texto-narrativo"> Era la primera vez que el erizo hacía algo que parecía intencional. En todas las semanas que llevaba apareciendo y desapareciendo, nunca había elegido estar cerca de alguien. Nunca había caminado junto a nadie. Nunca había cerrado los ojos en presencia de otro ser vivo como si confiara en que estaría seguro. </p>
-
-      <p class="texto-narrativo"> Axel miró a Lyra. Lyra miró a Ember. Ember miró a Eco Pergaminada. Eco Pergaminada sacó un pergamino para documentarlo y luego lo guardó. Algunos momentos no necesitaban registro. </p>
-
-      <p class="texto-narrativo"> Seraphina no miró al erizo. No lo tocó. Pero sus antenas se inclinaron levemente hacia abajo, hacia donde la pequeña esfera de púas respiraba con la lentitud de algo profundamente dormido. Y algo en la rigidez de sus hombros se aflojó, como si el peso de una criatura que no pesaba nada hubiera aliviado uno mucho mayor. </p>
-      <!-- =============== FIN OCTAVA APARICIÓN DEL ERIZO =============== -->
-
-      <p class="dialogo" data-badge="dicho con resolución nueva">
-        —He tomado una decisión— anunció, su voz firme.— Mañana, cuando llegue el momento.... voy a intentar ser la persona que mamá quería que fuera. No la vengadora que el dolor me convirtió en."
-      </p>
-      
-      <p class="dialogo" data-badge="preguntado con curiosidad gentil">
-        —¿Qué cambió?— preguntó Axel.
-      </p>
-      
-      <p class="dialogo" data-badge="dicho con gratitud sincera">
-        —Ustedes. Este viaje. Me han mostrado que es posible elegir algo diferente al odio. Y quiero.... quiero intentarlo."
-      </p>
-    </div>
-
-    <div class="espiritu-padre">
-      <h3>👻 LA APARICIÓN DEL GUARDIÁN 🌟</h3>
-      
-      <p>Cuando el fuego comenzó a menguar, una brisa suave trajo consigo el aroma de flores de montaña. Axel levantó la vista y su corazón se detuvo.</p>
-      
-      <p>Una figura translúcida se materializó lentamente cerca del campamento. Un gato montés mayor, con el mismo patrón de manchas que Axel, pero con ojos que brillaban con sabiduría eterna.</p>
-      
-      <div class="speech-bubble espiritu">
-        <p><strong>Espíritu del Padre:</strong> —Mi hijo. Has crecido tanto.... y has encontrado compañeros dignos para este viaje final. <span class="estrella-sprite">✨</span>"
-      </p>
-      </div>
-      
-      <p class="dialogo" data-badge="susurrado con lágrimas">
-        —Papá.... ¿eres realmente tú?"
-      </p>
-      
-      <div class="speech-bubble espiritu">
-        <p><strong>Espíritu del Padre:</strong> —He estado esperando, protegiendo las Lágrimas de Luna hasta que llegara alguien con el corazón puro necesario para usarlas correctamente— Su mirada se posó en Seraphina.— Y creo que finalmente ha llegado ese momento."
-      </div>
-      
-      <p>Seraphina se estremeció, pero no apartó la mirada.</p>
-      
-      <div class="speech-bubble espiritu">
-        <p><strong>Espíritu del Padre:</strong> —Seraphina de las Montañas Sombrías, hija del dolor y la pérdida.... mañana tendrás la oportunidad de romper el ciclo que ha definido tu existencia. Las Lágrimas responderán a la verdad más profunda de tu corazón. Elige sabiamente."
-      </p>
-      
-      <p>El espíritu se acercó a Axel y, por un momento imposible, colocó una mano transparente en su mejilla.</p>
-      
-      <div class="speech-bubble espiritu">
-        <p><strong>Espíritu del Padre:</strong> —Estoy orgulloso de ti, mi hijo. Más orgulloso de lo que las palabras pueden explicar. Tu compasión ha logrado lo que mi fuerza no pudo. Mañana.... mañana podremos despedirnos apropiadamente."
-      </p>
-      
-      <p>Y con eso, la figura se desvaneció, dejando solo el aroma de flores de montaña y una sensación de paz profunda.</p>
-    </div>
-
-    <div class="decision-final">
-      <h3>🎯 LA RESOLUCIÓN FINAL DEL GRUPO</h3>
-      
-      <p>Los tres permanecieron sentados en silencio durante varios minutos después de la aparición. Finalmente, Axel habló.</p>
-      
-      <p class="dialogo" data-badge="dicho con liderazgo sereno">
-        —Mañana entramos al Templo juntos. Sin importar lo que pase, enfrentamos las consecuencias como un equipo."
-      </p>
-      
-      <p class="dialogo" data-badge="dicho con lealtad firme">
-        —Juntos— acordó Ember, extendiendo su pata hacia el centro del círculo.
-      </p>
-      
-      <p class="dialogo" data-badge="dicho con esperanza frágil pero real">
-        —Juntos— repitió Seraphina, colocando su mano sobre la pata de Ember.
-      </p>
-      
-      <p>Axel completó el círculo, y la cuerda de confianza en sus muñecas brilló con una luz más intensa que nunca antes.</p>
-      
-      <p>Mientras las estrellas continuaban su danza eterna sobre ellos, el trío se preparó para el sueño, sabiendo que cuando despertaran, todo habría cambiado para siempre.</p>
-      
-      <div class="campamento-final">
-        <p><strong>El amanecer traerá el destino. <span class="estrella-sprite">⭐</span> Las Lágrimas de Luna esperan. <span class="estrella-sprite">⭐</span> La verdad será revelada. <span class="estrella-sprite">⭐</span></strong></p>
-      </div>
-    </div>
-
-    <footer>
-      <p><strong>Fin de la Sección 9B</strong></p>
-      <p><em>Próximo: El Templo Celestial y el Destino Final</em></p>
-      <div class="fuego-campamento">🔥⭐🔥</div>
-    </footer>
-  </div>
-</body>
-</html> 
-</body> 
-</html> 
+    <script src="global-reset.js"></script>
+  </body>
+</html>

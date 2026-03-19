@@ -3,436 +3,370 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>El Cazador de Medianoche - seccion_07B</title>
+    <title>Sección 7B: La Gran Disputa del Mapa - El Cazador de Medianoche</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="historia-interactiva.css" />
+    <style>
+      .disputa-hermanos {
+        background: linear-gradient(135deg, #ff6347, #ffa500, #ffd700);
+        border-radius: 15px;
+        padding: 30px;
+        margin: 20px 0;
+        border: 2px solid rgba(255, 99, 71, 0.4);
+        box-shadow: 0 0 20px rgba(255, 165, 0, 0.3);
+      }
+
+      .dialogo-ember {
+        background: rgba(255, 215, 0, 0.1);
+        border-left: 4px solid #ffd700;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 0 10px 10px 0;
+      }
+
+      .aldea-armadillos {
+        background: linear-gradient(135deg, #228b22, #32cd32, #90ee90);
+        border-radius: 15px;
+        padding: 30px;
+        margin: 20px 0;
+        border: 2px solid rgba(34, 139, 34, 0.4);
+        box-shadow: 0 0 20px rgba(50, 205, 50, 0.3);
+      }
+    </style>
   </head>
   <body>
     <!--
-╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
-║                                           SECCIÓN 7B: LA GRAN DISPUTA DEL MAPA                                                                                     ║
-║                                                🗺️ DÍA 8-9 🗺️                                                                                                     ║
-╠══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║ CONTEXTO NARRATIVO:                                                                                                                                                 ║
-║ • Continuación directa de Sección 7A (post-Torneo de Mapaches)                                                                                                      ║
-║ • Grupo en buen humor después de la experiencia absurda                                                                                                             ║
-║ • Ember aún aprendiendo sobre límites de su confianza                                                                                                               ║
-║ • Seraphina experimentando momentos auténticos de alegría                                                                                                              ║
-║ • Preservación del misterio (pre-revelación)                                                                                                                        ║
-║                                                                                                                                                                      ║
-║ OBJETIVOS DE LA SECCIÓN:                                                                                                                                            ║
-║ • HUMOR FAMILIAR: Discusión épica entre hermanos sobre orientación                                                                                                  ║
-║ • SERAPHINA: Primera vez riéndose auténticamente - instante humanizador                                                                                                ║
-║ • PERDERSE: Demostrar que incluso los aventureros competentes consumeten errores                                                                                       ║
-║ • ARMADILLOS COCINEROS: Encuentro cultural divertido y acogedor                                                                                                     ║
-║ • CONTRASTE: Alegría grupal vs soledad interna de Seraphina                                                                                                         ║
-║                                                                                                                                                                      ║
-║ ELEMENTOS CÓMICOS ESPECÍFICOS:                                                                                                                                      ║
-║ • —¡El musgo crece al norte!—— ¡Eso es un mito, Ember!—                                                                                                             ║
-║ • Terminan por entero perdidos por discutir                                                                                                                      ║
-║ • Competencia de baile - Ember terrible sin embargo entusiasta                                                                                                             ║
-║ • Armadillos dan mapa real: —Por favor, úsenlo—                                                                                                                     ║
-║ • Seraphina disfruta sinceramente - instante de transformación                                                                                                       ║
-╚══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+SECCIÓN 7B: LA GRAN DISPUTA DEL MAPA — DÍA 8-9
+GRUPO: Axel, Seraphina, Ember (3 personas. Sin Eco Pergaminada)
+PRE-REVELACIÓN: Seraphina genuina
+TONO: Humor familiar → calidez → gancho oscuro hacia seccion_08
 -->
 
-    <!doctype html>
-    <html lang="es">
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Sección 7B: La Gran Disputa del Mapa - El Cazador de Medianoche</title>
-        <link rel="stylesheet" href="styles.css" />
-        <style>
-          .disputa-hermanos {
-            background: linear-gradient(135deg, #ff6347, #ffa500, #ffd700);
-            border-radius: 15px;
-            padding: 30px;
-            margin: 20px 0;
-            border: 2px solid rgba(255, 99, 71, 0.4);
-            box-shadow: 0 0 20px rgba(255, 165, 0, 0.3);
-          }
+    <div class="container">
+      <!-- =============== LA DISPUTA COMIENZA =============== -->
+      <section id="inicio-disputa" class="disputa-hermanos">
+        <h1>El Cazador de Medianoche - Sección 7B: La Gran Disputa del Mapa</h1>
 
-          .ember-terco {
-            background: rgba(255, 215, 0, 0.2);
-            border-left: 4px solid #ffd700;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 0 10px 10px 0;
-          }
+        <p class="texto-narrativo"> "Alguien más los sigue."</p>
 
-          .axel-frustrado {
-            background: rgba(70, 130, 180, 0.2);
-            border-left: 4px solid #4682b4;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 0 10px 10px 0;
-          }
+        <p class="texto-narrativo"> La nota de Lyra en el mapa no dejaba lugar a interpretación. Axel había pasado la primera hora de caminata mirando por encima del hombro cada treinta pasos, verificando sombras entre los árboles, inventariando sonidos que no encajaban. El bosque le devolvió lo de siempre: pájaros, viento, ramas secas. Nada.</p>
 
-          .perdidos-total {
-            background: linear-gradient(135deg, #8b4513, #d2691e, #f4a460);
-            border-radius: 15px;
-            padding: 25px;
-            margin: 15px 0;
-            border: 2px solid rgba(139, 69, 19, 0.4);
-            animation: perdido-spin 8s linear infinite;
-          }
+        <p class="texto-narrativo"> Ember notó la tensión.</p>
 
-          @keyframes perdido-spin {
-            0% {
-              transform: rotate(0deg);
-            }
-            25% {
-              transform: rotate(1deg);
-            }
-            50% {
-              transform: rotate(0deg);
-            }
-            75% {
-              transform: rotate(-1deg);
-            }
-            100% {
-              transform: rotate(0deg);
-            }
-          }
-
-          .aldea-armadillos {
-            background: linear-gradient(135deg, #228b22, #32cd32, #90ee90);
-            border-radius: 15px;
-            padding: 30px;
-            margin: 20px 0;
-            border: 2px solid rgba(34, 139, 34, 0.4);
-            box-shadow: 0 0 20px rgba(50, 205, 50, 0.3);
-          }
-
-          .seraphina-alegria {
-            background: rgba(199, 21, 133, 0.1);
-            border-left: 3px solid #c71585;
-            padding: 12px;
-            margin: 10px 0;
-            font-style: italic;
-            animation: joy-glow 3s ease-in-out infinite alternate;
-          }
-
-          @keyframes joy-glow {
-            0% {
-              background: rgba(199, 21, 133, 0.1);
-            }
-            100% {
-              background: rgba(199, 21, 133, 0.2);
-              box-shadow: 0 0 10px rgba(199, 21, 133, 0.3);
-            }
-          }
-
-          .competencia-baile {
-            background: linear-gradient(135deg, #ff1493, #ff69b4, #ffb6c1);
-            border-radius: 20px;
-            padding: 25px;
-            margin: 15px 0;
-            border: 2px solid rgba(255, 20, 147, 0.4);
-            animation: dance-bounce 2s ease-in-out infinite alternate;
-          }
-
-          @keyframes dance-bounce {
-            0% {
-              transform: translateY(0px) rotate(-1deg);
-            }
-            100% {
-              transform: translateY(-3px) rotate(1deg);
-            }
-          }
-        </style>
-      </head>
-      <body>
-        <div class="container">
-          <!-- =============== LA DISPUTA COMIENZA =============== -->
-          <section id="inicio-disputa" class="disputa-hermanos">
-            <h1>El Cazador de Medianoche - Sección 7B: La Gran Disputa del Mapa</h1>
-
-            <p class="texto-narrativo">
-              El buen humor del grupo después del absurdo torneo de mapaches duró exactamente tres horas y cuarenta y siete minutos. Fue entonces cuando llegaron a una bifurcación en el sendero que no aparecía en ninguno de los mapas que tenían, y los hermanos comenzaron la que posteriormente sería conocida como —La Gran Disputa del Mapa."
-              <!-- Humor: Tiempo específicamente medido hasta el siguiente conflicto -->
-            </p>
-
-            <p class="texto-narrativo"> Todo comenzó inocentemente cuando Ember se detuvo en la bifurcación y declaró con total confianza: </p>
-
-            <div class="ember-terco">
-              <p class="dialogo confiado" data-badge="declarado con certeza absoluta"> —Obviamente vamos a la izquierda. El sendero de la derecha va hacia el sur, y necesitamos ir al norte hacia las montañas. Puedo saberlo porque el musgo en estos árboles crece más espeso hacia el lado norte. </p>
-            </div>
-
-            <p class="texto-narrativo"> Axel se detuvo en seco, su arco élfico casi resbalándose de su hombro por la sorpresa. </p>
-
-            <div class="axel-frustrado">
-              <p class="dialogo incredulo" data-badge="exclamado con exasperación hermano mayor">
-                —¡Ember! ¡Eso es un mito! ¡El musgo crece hacia donde hay más humedad, no hacia el norte! ¡Y claramente este sendero de la izquierda gira hacia el oeste después de esa colina!
-                <!-- Humor: Hermano mayor corrigiendo creencia errónea con exasperación -->
-              </p>
-            </div>
-
-            <div class="ember-terco">
-              <p class="dialogo defensivo" data-badge="respondido con dignidad ofendida"> —¡No es un mito! ¡El abuelo me lo enseñó! ¡El musgo siempre crece al norte! ¡Además, tú llevas tres años viviendo como ermitaño en una cueva, así que tu sentido de dirección probablemente está oxidado! </p>
-            </div>
-
-            <div class="axel-frustrado">
-              <p class="dialogo indignado" data-badge="protestado con orgullo herido"> —¡No era una cueva, era una cabaña perfectamente respetable! ¡Y mi sentido de dirección está perfectamente bien! ¡He estado navegando estas montañas desde antes de que pudieras sostener un mapa apropiadamente! </p>
-            </div>
-
-            <p class="texto-narrativo"> Eco Pergaminada y Seraphina intercambiaron miradas divertidas mientras los hermanos continuaban escalando en intensidad. </p>
-
-            <p class="dialogo observacional" data-badge="murmurado a Seraphina"> —¿Deberíamos intervenir?— preguntó Eco Pergaminada, volando nerviosamente entre los hermanos que gesticulaban cada vez más dramáticamente. </p>
-
-            <div class="seraphina-alegria">
-              <p class="texto-narrativo"> Seraphina estaba fascinada. Nunca había presenciado una discusión familiar real - no el tipo de conflicto frío y formal que había conocido en su juventud, sino este intercambio apasionado que claramente venía del amor y la familiaridad. Era.... extrañamente entretenido. </p>
-            </div>
-
-            <p class="dialogo divertida" data-badge="respondido con diversión genuina"> —Aún no. Esto es educativo— articuló Seraphina, sentándose en una roca para observar mejor el espectáculo. </p>
-          </section>
-
-          <!-- =============== LA DISPUTA SE INTENSIFICA =============== -->
-          <section id="escalada-disputa" class="disputa-hermanos">
-            <h2>Expertos en Navegación</h2>
-
-            <div class="ember-terco">
-              <p class="dialogo argumentativo" data-badge="declarado con pasión creciente"> —¡Además del musgo, fíjate en las estrellas! ¡La Osa Mayor apunta claramente hacia el norte, y anoche estaba en esa dirección!— Ember señaló dramáticamente hacia la izquierda. </p>
-            </div>
-
-            <div class="axel-frustrado">
-              <p class="dialogo sarcástico" data-badge="respondido con sarcasmo hermano mayor"> —¡Ember! ¡Es mediodía! ¡No hay estrellas visibles! ¡Y la Osa Mayor se MUEVE durante la noche! ¡No es una brújula fija! </p>
-            </div>
-
-            <div class="ember-terco">
-              <p class="dialogo terco" data-badge="insistido con obstinación juvenil"> —¡Bueno, entonces usa tu arco élfico! ¡Se supone que tiene conexiones místicas con direcciones sagradas o algo así! </p>
-            </div>
-
-            <div class="axel-frustrado">
-              <p class="dialogo exasperado" data-badge="explicado con paciencia forzada"> —¡Se calienta ante el PELIGRO, Ember! ¡No es una brújula mágica! ¡Es un arma encantada, no un instrumento de navegación! </p>
-            </div>
-
-            <p class="texto-narrativo"> En este punto, ambos hermanos habían comenzado a caminar en círculos alrededor de la bifurcación, gesticulando salvajemente hacia diferentes puntos cardinales que cada uno insistía eran —obviamente el norte." </p>
-
-            <p class="dialogo observacional" data-badge="comentado con fascinación académica"> —Desde una perspectiva antropológica— articuló Eco Pergaminada a Seraphina— este es un ejemplo perfecto de cómo las dinámicas familiares pueden anular la lógica práctica. </p>
-
-            <div class="seraphina-alegria">
-              <p class="dialogo divertida" data-badge="respondido con humor creciente"> —Y desde una perspectiva práctica— afirmó Seraphina— estamos a punto de presenciar dos gatos monteses competentes perderse por entero porque ambos son demasiado tercos para consultar el sol. </p>
-            </div>
-
-            <p class="texto-narrativo"> Como si el universo hubiera estado esperando esa observación, ambos hermanos simultáneamente decidieron demostrar su punto caminando firmemente por sus senderos elegidos. </p>
-
-            <div class="ember-terco">
-              <p class="dialogo determinado" data-badge="declarado mientras se alejaba"> —¡Muy bien! ¡Voy por la izquierda! ¡Cuando llegue a las montañas primero, espero una disculpa completa! </p>
-            </div>
-
-            <div class="axel-frustrado">
-              <p class="dialogo igualmente-determinado" data-badge="respondido mientras tomaba la dirección opuesta"> —¡Perfecto! ¡Voy por la derecha! ¡Y cuando YO llegue primero, vas a admitir que el musgo no es una brújula! </p>
-            </div>
-
-            <p class="texto-narrativo"> Eco Pergaminada y Seraphina se quedaron paradas en la bifurcación, mirando a los hermanos alejarse en direcciones opuestas con determinación idéntica. </p>
-
-            <p class="dialogo pánico" data-badge="gritado con creciente alarma"> —¡Esperen! ¡No podemos dividirnos! ¡Hay fuerza en números! ¡Seguridad en grupos!— Eco Pergaminada voló frenéticamente entre los senderos. </p>
-
-            <div class="seraphina-alegria">
-              <p class="dialogo decisiva" data-badge="declarado con diversión resigned"> —Está bien, Eco Pergaminada. Los seguimos. Pero cuando ambos admitan que están perdidos, yo elijo la dirección. </p>
-            </div>
-          </section>
-
-          <!-- =============== COMPLETAMENTE PERDIDOS =============== -->
-          <section id="perdidos-totalmente" class="perdidos-total">
-            <h2>Navegadores Expertos</h2>
-
-            <p class="texto-narrativo"> Tres horas después, el grupo se había reunido de nuevo en lo que parecía ser exactamente el mismo lugar donde habían comenzado la discusión. Los mismos árboles, la misma bifurcación, el mismo musgo que había iniciado todo el problema. </p>
-
-            <div class="ember-terco">
-              <p class="dialogo confundido" data-badge="murmurado con confusión creciente"> —Esto.... esto parece familiar— admitió Ember, mirando alrededor con expresión perdida. —¿No habíamos visto esa roca con forma de conejo antes? </p>
-            </div>
-
-            <div class="axel-frustrado">
-              <p class="dialogo igualmente-confundido" data-badge="admitido con reluctancia"> —Y ese árbol con la marca en forma de 'X' definitivamente lo vimos al comenzar....— Axel se rascó detrás de una oreja, su arco élfico colgando con una postura que sugería derrota. </p>
-            </div>
-
-            <p class="dialogo análisis" data-badge="observado con voz pequeña"> —Según mis cálculos de tiempo y distancia— declaró Eco Pergaminada diplomáticamente— hemos caminado en un círculo perfecto durante las últimas tres horas. </p>
-
-            <div class="seraphina-alegria">
-              <p class="texto-narrativo"> Fue en ese instante que algo extraordinario pasó. Seraphina, que había estado observando silenciosamente mientras los hermanos competentes se las habían arreglado para perderse por entero debido a pura terquedad fraternal, comenzó a reírse. </p>
-            </div>
-
-            <div class="seraphina-alegria">
-              <p class="texto-narrativo"> No era la risa controlada que había usado durante semanas para mantener su fachada, ni la risa amarga que acompañaba sus momentos más oscuros. Era risa genuina, espontánea, el tipo de risa que viene de la pura absurdidad de la situación y la alegría inesperada de estar con personas que podían hacer que incluso perderse fuera entretenido. </p>
-            </div>
-
-            <p class="dialogo risa" data-badge="dicho entre risas genuinas"> —¡Ustedes dos!— logró decir entre carcajadas. —¡Dos navegadores expertos! ¡Discutiendo sobre musgos y estrellas invisibles! ¡Y terminan caminando en círculos durante tres horas! </p>
-
-            <p class="texto-narrativo"> Su risa era contagiosa. Eco Pergaminada comenzó a reír también, un sonido alegre que parecía campanillas. Luego Ember, dándose cuenta de lo absurdo de toda la situación, se unió. Finalmente, incluso Axel comenzó a reírse de sí mismo. </p>
-
-            <div class="ember-terco">
-              <p class="dialogo riendo" data-badge="admitido entre risas"> —Está bien, está bien— declaró Ember, limpiándose lágrimas de risa de los ojos. —Tal vez.... tal vez el musgo no sea una brújula confiable. </p>
-            </div>
-
-            <div class="axel-frustrado">
-              <p class="dialogo riendo" data-badge="concedido con humor"> —Y tal vez— agregó Axel— tres años de ermitaño sí afectaron ligeramente mi sentido de dirección. </p>
-            </div>
-
-            <div class="seraphina-alegria">
-              <p class="dialogo propositiva" data-badge="sugerido mientras se secaba las lágrimas"> —¿Qué tal si simplemente.... seguimos a donde nos lleve el primer sendero que veamos, y si nos perdemos más, al menos estaremos perdidos juntos? </p>
-            </div>
-
-            <p class="texto-narrativo"> Fue exactamente en ese instante de resignación alegre cuando escucharon música a la distancia. Música alegre, con tambores y algo que sonaba como una celebración en progreso. </p>
-          </section>
-
-          <!-- =============== DESCUBRIMIENTO DE LA ALDEA =============== -->
-          <section id="aldea-armadillos" class="aldea-armadillos">
-            <h2>La Aldea de los Armadillos Cocineros</h2>
-
-            <p class="texto-narrativo"> Siguiendo la música (que era la primera dirección en la que todos podían estar de acuerdo), el grupo encontró algo que definitivamente no había aparecido en ninguno de sus mapas: una aldea completa de armadillos, construida en terrazas que descendían por la ladera de una colina, con chimeneas que liberaban aromas increíblemente tentadores. </p>
-
-            <p class="texto-narrativo"> Cartelitos escritos a mano en múltiples idiomas anunciaban: —¡Festival Anual de Cocina de Fusión Inter-especies! ¡Todos los Viajeros Bienvenidos! ¡Competencia de Baile Opcional sin embargo Recomendada!" </p>
-
-            <p class="texto-narrativo"> Un armadillo muy redondo con un delantal que tenía manchas de al menos doce colores diferentes se acercó rodando (literalmente) hacia ellos. </p>
-
-            <p class="dialogo acogedor" data-badge="exclamado con hospitalidad exuberante"> —¡Visitantes! ¡Qué maravilloso!— El armadillo se enderezó, revelando que tenía al menos seis cucharones diferentes colgando de su cinturón.— Soy Chef Casco Brillante, organizador culinario supremo. ¡Llegan justo a tiempo para el festival!" </p>
-
-            <p class="dialogo hambriento" data-badge="preguntado con esperanza creciente"> —¿Festival de.... cocina?— preguntó Ember, su estómago gruñendo audiblemente.— ¿Con.... comida real? ¿No solo frutas del bosque y agua de arroyo?" </p>
-
-            <p class="dialogo orgulloso" data-badge="respondido con orgullo culinario"> —¡Comida real no le hace justicia!— Chef Casco Brillante gesticuló hacia la aldea con uno de sus cucharones.— ¡Tenemos guiso de raíces con especias del desierto, pan de nueces horneado en arcilla, sopa de verduras con hierbas de montaña, y el postre especial: pasteles de miel que han estado fermentando durante seis meses!" </p>
-
-            <div class="seraphina-alegria">
-              <p class="texto-narrativo"> La idea de una comida real después de días de provisiones de viaje hizo que incluso Seraphina sintiera una punzada de expectativa genuina. Había olvidado lo que era sentir simple alegría por la promesa de una buena comida compartida con compañeros agradables. </p>
-            </div>
-
-            <p class="dialogo cauteloso" data-badge="preguntado con cortesía práctica"> —Es sumamente generoso, sin embargo no queremos imponer. Somos cuatro viajeros sin mucho que ofrecer a cambio de hospitalidad— declaró Axel. </p>
-
-            <p class="dialogo entusiasta" data-badge="agitando cucharones con excitación"> —¡Tonterías! ¡La única moneda que aceptamos es participación alegre! ¡Y tal vez ayuda con la limpieza después, sin embargo eso es opcional!— Chef Casco Brillante comenzó a caminar hacia la aldea.— ¡Además, hace semanas que no tenemos visitantes nuevos para juzgar la competencia de baile!" </p>
-          </section>
-
-          <!-- =============== LA COMPETENCIA DE BAILE =============== -->
-          <section id="competencia-baile" class="competencia-baile">
-            <h2>Ritmos y Desastres</h2>
-
-            <p class="texto-narrativo"> Después de una comida que solo se podía describir como —transformativa— (Eco Pergaminada declaró que era la mejor comida que había probado en su vida, incluyendo todas las cenas ceremoniales de la biblioteca), los armadillos anunciaron que era tiempo para la competencia de baile anual. </p>
-
-            <p class="texto-narrativo"> El área de baile era un círculo de hierba aplanada rodeado por antorchas, con una banda de armadillos que tocaban instrumentos que ninguno de los visitantes podía identificar sin embargo que producían música irresistiblemente alegre. </p>
-
-            <p class="dialogo animador" data-badge="anunciado con una voz que llevaba sobre la música"> —¡La tradición dicta que todos los visitantes deben participar!— gritó Chef Casco Brillante.— ¡No se preocupen por la técnica! ¡Aquí valoramos el entusiasmo sobre la precisión!" </p>
-
-            <div class="ember-terco">
-              <p class="dialogo confiado" data-badge="declarado con optimismo irreprimible"> —¡Perfecto! ¡He estado practicando en los festivales del valle!— Ember se dirigió hacia el círculo de baile con pasos que ya sugerían que su confianza podría estar mal ubicada. </p>
-            </div>
-
-            <p class="texto-narrativo"> Lo que siguió fue un espectáculo que los armadillos recordarían durante generaciones. Ember bailó con franco entusiasmo y habilidad.... cuestionable. Sus pasos no coincidían con el ritmo, sus brazos se movían en direcciones que parecían desafiar la anatomía félida, y en un instante memorable, trató de hacer una pirueta que terminó con él cayendo directamente en una pila de hojas decorativas. </p>
-
-            <p class="texto-narrativo"> Pero su alegría era tan genuina, su determinación tan encantadora, que los armadillos comenzaron a aplaudir con entusiasmo creciente. </p>
-
-            <p class="dialogo animando" data-badge="gritado con apoyo hermano"> —¡Así se hace, Ember!— gritó Axel desde el borde del círculo.— ¡Definitivamente tienes.... estilo único!" </p>
-
-            <div class="seraphina-alegria">
-              <p class="texto-narrativo"> Seraphina observó la escena con algo que no había sentido en años: pura diversión sin agenda oculta. Ember se veía ridículo, sin embargo también por entero feliz. Los armadillos estaban genuinamente entretenidos. Axel se reía de su hermano sin embargo con cariño, no con crueldad. </p>
-            </div>
-
-            <div class="seraphina-alegria">
-              <p class="texto-narrativo"> Y entonces, para sorpresa de todos incluyéndose a sí misma, Seraphina se encontró levantándose y caminando hacia el círculo de baile. </p>
-            </div>
-
-            <p class="dialogo sorprendido" data-badge="exclamado con incredulidad"> —¡Seraphina!— gritó Eco Pergaminada.— ¡¿Vas a bailar?!" </p>
-
-            <div class="seraphina-alegria">
-              <p class="dialogo espontánea" data-badge="respondido con libertad nueva"> —¿Por qué no?— afirmó, y por primera vez en semanas, su sonrisa no tenía agenda oculta.— Si Ember puede sobrevivir a eso, yo puedo al menos intentarlo." </p>
-            </div>
-
-            <p class="texto-narrativo"> Los movimientos de baile de Seraphina eran diferentes a los de Ember - más controlados, más fluidos, aprovechando su naturaleza de mantis para crear algo que era casi hipnóticamente grácil. No era baile tradicional de ninguna cultura específica, sin embargo era hermoso a su manera única. </p>
-
-            <p class="texto-narrativo"> Lo más hermoso de todo, sin embargo, era su expresión. Por primera vez desde que Axel la conocía, Seraphina se veía.... libre. No calculando, no manteniendo una fachada, solo disfrutando un instante simple de alegría compartida. </p>
-
-            <div class="ember-terco">
-              <p class="dialogo admirativo" data-badge="gritado con franco respeto"> —¡Seraphina, eres increíble! ¡Enséñame esos pasos después!" </p>
-            </div>
-
-            <p class="texto-narrativo"> Cuando la música finalmente se detuvo, todos estaban sin aliento, riéndose, y por entero relajados. Los armadillos aplaudieron entusiastamente y declararon que había sido la mejor competencia de baile en años. </p>
-          </section>
-
-          <!-- =============== REGALOS DE DESPEDIDA =============== -->
-          <section id="despedida-armadillos" class="aldea-armadillos">
-            <h2>Direcciones Reales</h2>
-
-            <p class="texto-narrativo"> La mañana siguiente, después de un desayuno que involucró más tipos de pan de los que Eco Pergaminada sabía que existían, los armadillos se prepararon para despedir a sus huéspedes. </p>
-
-            <p class="dialogo generoso" data-badge="ofrecido mientras empacaba provisiones"> —No pueden irse sin provisiones apropiadas— insistió Chef Casco Brillante, llenando sus mochilas con comida que olía increíblemente bien.— Y definitivamente no pueden irse sin direcciones apropiadas." </p>
-
-            <p class="texto-narrativo"> Desplegó un mapa que era claramente de alta calidad - líneas precisas, marcas detalladas, notaciones en múltiples idiomas, y más importante, actualizado para incluir cambios recientes en el terreno. </p>
-
-            <p class="dialogo" data-badge="explicado con competencia cartográfica"> —Miren, este es el sendero que necesitan para llegar a las montañas del norte. Sí, hay una bifurcación confusa a medio día de aquí, sin embargo ESTE— señaló con precisión,— es el sendero correcto. El musgo, por cierto— miró específicamente a Ember,— crece hacia donde hay más humedad, que por aquí es hacia el este debido a los vientos del océano." </p>
-
-            <div class="ember-terco">
-              <p class="dialogo avergonzado" data-badge="admitido con humildad nueva"> —Entonces.... ¿el abuelo estaba equivocado sobre el musgo?— preguntó Ember, rascándose detrás de una oreja. </p>
-            </div>
-
-            <p class="dialogo gentil" data-badge="respondido con compasión"> —Tu abuelo probablemente creció en una región diferente— explicó Chef Casco Brillante.— Los patrones de crecimiento del musgo varían según el clima local. Su conocimiento era correcto.... para donde él vivía." </p>
-
-            <div class="axel-frustrado">
-              <p class="dialogo reconciliatorio" data-badge="ofrecido con generosidad hermano mayor"> —Y yo podría haber sido menos.... intenso sobre corregirte— admitió Axel.— Ambos estábamos operando con información incompleta." </p>
-            </div>
-
-            <p class="texto-narrativo"> Chef Casco Brillante sonrió y les entregó copias del mapa. </p>
-
-            <p class="dialogo pragmático" data-badge="insistido con preocupación paternal"> —Por favor, úsenlo— declaró con una sonrisa que sugería que había presenciado muchos grupos de viajeros perderse en debates similares.— Los senderos de montaña son demasiado peligrosos para navegarlos basándose en discusiones fraternales sobre musgos." </p>
-
-            <div class="seraphina-alegria">
-              <p class="dialogo agradecida" data-badge="dicho con sinceridad genuina"> —Gracias— declaró Seraphina, y por una vez, su gratitud no tenía agenda oculta.— Por la comida, la música, la hospitalidad.... por recordarnos que el mundo puede ser un lugar alegre." </p>
-            </div>
-
-            <p class="dialogo cálido" data-badge="respondido con sincero afecto"> —Eso es lo que hacemos los cocineros— afirmó Chef Casco Brillante.— Alimentamos cuerpos, sin embargo también espíritus. Vuelvan cuando puedan - siempre hay lugar en nuestra mesa para amigos que traen buenas historias." </p>
-          </section>
-
-          <!-- =============== REFLEXIONES DEL CAMINO =============== -->
-          <section id="reflexiones-camino" class="disputa-hermanos">
-            <h2>Lecciones Aprendidas</h2>
-
-            <p class="texto-narrativo"> Mientras se alejaban de la aldea de los armadillos, siguiendo el mapa real con direcciones precisas, el grupo caminó en un silencio contemplativo que era sumamente diferente de la tensión de días anteriores. </p>
-
-            <div class="ember-terco">
-              <p class="dialogo reflexivo" data-badge="admitido con madurez creciente"> —¿Saben qué aprendí?— declaró Ember finalmente.— A veces estar equivocado sobre los detalles pequeños no importa tanto como estar dispuesto a reírse de tus errores." </p>
-            </div>
-
-            <div class="axel-frustrado">
-              <p class="dialogo sabio" data-badge="agregado con comprensión"> —Y a veces— añadió Axel,— perderse lleva a encontrar cosas mejores de las que estabas buscando originalmente." </p>
-            </div>
-
-            <p class="dialogo académico" data-badge="observado con sabiduría joven"> —Los armadillos tenían razón sobre alimentar espíritus además de cuerpos— comentó Eco Pergaminada.— Anoche fue la primera vez desde la biblioteca que me sentí.... por entero feliz." </p>
-
-            <div class="seraphina-alegria">
-              <p class="texto-narrativo"> Seraphina caminó en silencio, sin embargo su postura era diferente - menos tensa, menos vigilante. La risa genuina de la noche anterior había sido como ejercitar un músculo que había estado atrofiado durante demasiado tiempo. Se sentía.... extraño, sin embargo bueno. </p>
-            </div>
-
-            <div class="seraphina-alegria">
-              <p class="dialogo vulnerable" data-badge="confesado con voz suave"> —Yo.... había olvidado lo que era reírse sin calcular el efecto que tendría en otros— admitió finalmente.— Había olvidado que la alegría podía ser.... simplemente alegría." </p>
-            </div>
-
-            <p class="dialogo comprensivo" data-badge="respondido con gentileza"> —Todos olvidamos cosas importantes a veces— afirmó Axel.— Lo importante es recordarlas cuando podemos." </p>
-
-            <p class="texto-narrativo"> Continuaron hacia las montañas con direcciones reales, estómagos llenos de comida excelente, y corazones un poco más ligeros. No sabían que esta sería una de las últimas veces que Seraphina se sentiría por entero relajada con el grupo antes de que las verdades complicaran todo. </p>
-
-            <p class="texto-narrativo"> Por ahora, era suficiente caminar juntos bajo el sol de la mañana, siguiendo un mapa real, con el eco de la risa genuina aún resonando en sus memorias. </p>
-
-            <p class="texto-narrativo"> Fue Axel quien notó los cuervos primero. Tres de ellos, posados en una rama muerta sobre el sendero, con plumaje tan negro que parecía absorber la luz del sol. Y en sus ojos - ojos que no eran ojos normales, sino superficies perfectamente pulidas como espejos de obsidiana - Axel vio algo que lo hizo detenerse en seco. </p>
-
-            <p class="texto-narrativo"> Su propio reflejo. Pero no como era ahora. Como sería después de saber la verdad. </p>
-
-            <p class="texto-narrativo" style="text-align: center; font-style: italic; color: #d4af37"> El Bosque de los Cuervos Espejo estaba a menos de un día de camino. Y los Cuervos Espejo no muestran lo que quieres ver. Muestran lo que necesitas saber. </p>
-          </section>
-
-          <!-- =============== NOTAS DE CONTINUIDAD =============== -->
-          <div class="nota-continuidad" style="background: rgba(66, 66, 66, 0.3); padding: 20px; margin: 30px 0; border-radius: 10px; font-style: italic; color: #ccc">
-            <h4>Notas para continuidad narrativa:</h4>
-            <p>• Primera vez que Seraphina ríe genuinamente - instante de transformación</p>
-            <p>• Disputa familiar muestra dinámicas naturales entre hermanos</p>
-            <p>• Armadillos proporcionan instante de calidez cultural y hospitalidad</p>
-            <p>• Humor y alegría fortalecen vínculos del grupo antes de revelaciones difíciles</p>
-            <p>• Seraphina experimenta alegría sin agenda - importante para su desarrollo</p>
-            <p>• Lecciones sobre cooperación vs terquedad individual</p>
-            <p>• Establece que el mundo puede ser alegre y acogedor</p>
-          </div>
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="preguntado sin dejar de caminar">
+            —¿Esperas a alguien?
+          </p>
         </div>
 
-        <script src="global-reset.js"></script>
-      </body>
-    </html>
+        <p class="dialogo" data-badge="respondido demasiado rápido">
+          —No. Solo verifico el terreno.
+        </p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="dicho con la sonrisa de quien no se la cree">
+            —Verificas el terreno mirando detrás de nosotros. Interesante técnica de navegación frontal.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Axel decidió que la paranoia podía esperar. Si alguien los seguía, no iba a descubrirlo caminando con el cuello torcido. Y tenían un problema más inmediato.</p>
+
+        <p class="texto-narrativo"> La bifurcación.</p>
+
+        <p class="texto-narrativo"> Dos senderos que se abrían como ramas de un mismo árbol, ninguno de los cuales aparecía en el mapa de Lyra ni en el mapa de los armadillos que el Chef Casco Brillante les había regalado. El mapa de Lyra mostraba un camino recto en este tramo. La realidad mostraba dos.</p>
+
+        <p class="texto-narrativo"> Ember se detuvo en la bifurcación y tocó el musgo de un tronco cercano con la familiaridad de quien cita un libro de texto.</p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="declarado con certeza absoluta">
+            —Izquierda. El musgo crece más espeso hacia el lado norte. Siempre.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Axel dejó de mirar atrás.</p>
+
+        <p class="dialogo" data-badge="exclamado con exasperación de hermano mayor">
+          —Ember. Eso es un mito. El musgo crece hacia donde hay más humedad, no hacia el norte. Y este sendero de la izquierda gira hacia el oeste después de esa colina.
+        </p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="respondido con dignidad ofendida">
+            —No es un mito. El abuelo me lo enseñó. El musgo siempre crece al norte. Además, tú llevas tres años viviendo como ermitaño en una montaña, así que tu sentido de dirección probablemente necesita calibración.
+          </p>
+        </div>
+
+        <p class="dialogo" data-badge="protestado con orgullo herido">
+          —No era ermitaño. Era una cabaña perfectamente respetable. Y he navegado estas montañas desde antes de que pudieras sostener un mapa sin ponerlo al revés.
+        </p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="disparado como reflejo">
+            —¡Eso fue UNA VEZ y tenía siete años!
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Seraphina se sentó en una roca al borde de la bifurcación. Cruzó los brazos. Las antenas oscilaban entre los dos hermanos como siguiendo un partido.</p>
+
+        <p class="dialogo" data-badge="murmurado a nadie en particular">
+          —Esto es nuevo.
+        </p>
+      </section>
+
+      <!-- =============== LA DISPUTA SE INTENSIFICA =============== -->
+      <section id="escalada-disputa" class="disputa-hermanos">
+        <h2>Expertos en Navegación</h2>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="declarado señalando al cielo">
+            —Además del musgo, fíjate en las estrellas. La Osa Mayor apuntaba claramente hacia la izquierda anoche.
+          </p>
+        </div>
+
+        <p class="dialogo" data-badge="respondido con paciencia que se agrietaba">
+          —Ember. Es mediodía. No hay estrellas. Y la Osa Mayor se mueve durante la noche. No es una brújula fija.
+        </p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="insistido con obstinación creciente">
+            —¡Entonces usa tu arco élfico! Se supone que tiene conexiones místicas con direcciones sagradas.
+          </p>
+        </div>
+
+        <p class="dialogo" data-badge="explicado apretando los dientes">
+          —Se calienta ante el peligro. No es un instrumento de navegación. Es un arma encantada.
+        </p>
+
+        <p class="texto-narrativo"> En este punto, ambos hermanos caminaban en círculos alrededor de la bifurcación, gesticulando hacia puntos cardinales que cada uno insistía eran "obviamente el norte". La flauta élfica de Ember golpeaba su cadera con cada giro. El arco de Axel resbalaba de su hombro cada tres pasos.</p>
+
+        <p class="texto-narrativo"> Seraphina los observaba desde la roca. Nunca había presenciado una discusión familiar real — no el tipo de conflicto frío y calculado que había conocido, sino este intercambio que crecía en volumen porque podía. Porque los dos sabían que al final se reirían de esto. Porque el amor era el suelo debajo de la pelea, no algo que la pelea pudiera romper.</p>
+
+        <p class="texto-narrativo"> Era extrañamente hermoso. Y le dolía de una manera que no supo nombrar.</p>
+
+        <p class="texto-narrativo"> Los dos hermanos simultáneamente decidieron demostrar su punto caminando cada uno por su sendero.</p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="declarado alejándose por la izquierda">
+            —Cuando llegue a las montañas primero, espero una disculpa completa.
+          </p>
+        </div>
+
+        <p class="dialogo" data-badge="respondido alejándose por la derecha">
+          —Cuando YO llegue primero, vas a admitir que el musgo no es una brújula.
+        </p>
+
+        <p class="texto-narrativo"> Seraphina se quedó sentada en la roca, mirando a los dos gatos monteses alejarse en direcciones opuestas con determinación idéntica. Se levantó, se sacudió la tierra, y siguió a Axel. No porque creyera que tenía razón, sino porque alguien tenía que llevar el mapa.</p>
+      </section>
+
+      <!-- =============== COMPLETAMENTE PERDIDOS =============== -->
+      <section id="perdidos-totalmente">
+        <h2>Navegadores Expertos</h2>
+
+        <p class="texto-narrativo"> Tres horas después, el grupo se reunió en lo que parecía ser exactamente el mismo lugar donde habían comenzado. Los mismos árboles. La misma bifurcación. El mismo musgo que Ember ahora evitaba mirar.</p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="murmurado mirando alrededor">
+            —Esa roca con forma de conejo.... la vi antes.
+          </p>
+        </div>
+
+        <p class="dialogo" data-badge="admitido rascándose la oreja">
+          —Y ese árbol con la marca en X. Definitivamente lo vi al comenzar.
+        </p>
+
+        <p class="texto-narrativo"> Seraphina empezó a reírse.</p>
+
+        <p class="texto-narrativo"> No fue gradual. No fue contenido. Fue una risa que le salió del centro del cuerpo como algo que había estado encerrado demasiado tiempo — espontánea, desordenada, el tipo de risa que produce la absurdidad pura de ver a dos navegadores competentes caminar en un círculo perfecto durante tres horas por pura terquedad fraternal.</p>
+
+        <p class="dialogo" data-badge="dicho entre carcajadas">
+          —¡Ustedes dos! ¡Dos expertos! ¡Musgos y estrellas invisibles! ¡Tres horas en círculos!
+        </p>
+
+        <p class="texto-narrativo"> Su risa era contagiosa. Ember intentó mantener la dignidad durante dos segundos antes de rendirse. Axel aguantó tres. La flauta de Ember tintineó contra su cadera mientras se doblaba de risa. El arco de Axel resbaló de su hombro y aterrizó en el musgo — el musgo que había causado todo — y eso los hizo reír más fuerte.</p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="admitido limpiándose los ojos">
+            —Está bien. Tal vez el musgo no sea una brújula confiable.
+          </p>
+        </div>
+
+        <p class="dialogo" data-badge="concedido entre respiraciones">
+          —Y tal vez tres años de ermitaño sí afectaron ligeramente mi orientación.
+        </p>
+
+        <p class="dialogo" data-badge="sugerido secándose las lágrimas">
+          —¿Qué tal si seguimos al primer sendero que encontremos, y si nos perdemos más, al menos estaremos perdidos juntos?
+        </p>
+
+        <p class="texto-narrativo"> Fue exactamente en ese momento de resignación alegre cuando escucharon música a la distancia. Tambores. Algo que olía a comida real. Una celebración en progreso.</p>
+      </section>
+
+      <!-- =============== LA ALDEA DE LOS ARMADILLOS =============== -->
+      <section id="aldea-armadillos" class="aldea-armadillos">
+        <h2>La Aldea de los Armadillos Cocineros</h2>
+
+        <p class="texto-narrativo"> Siguiendo la música — la primera dirección en la que los tres estuvieron de acuerdo — encontraron algo que no aparecía en ningún mapa: una aldea de armadillos construida en terrazas que descendían por la ladera de una colina, con chimeneas que liberaban aromas tan intensos que Axel dejó de pensar en senderos, bifurcaciones y perseguidores invisibles.</p>
+
+        <p class="texto-narrativo"> Carteles escritos a mano anunciaban: "¡Festival Anual de Cocina de Fusión Inter-especies! ¡Todos los Viajeros Bienvenidos! ¡Competencia de Baile Opcional Pero Recomendada!"</p>
+
+        <p class="texto-narrativo"> Un armadillo de forma redonda con un delantal manchado en al menos doce colores se acercó rodando — literalmente rodando cuesta abajo, desenrollándose en el último metro con la gracia de alguien que lo hace a diario.</p>
+
+        <p class="dialogo" data-badge="exclamado con hospitalidad que no aceptaba negativas">
+          —¡Visitantes! Soy Chef Casco Brillante, organizador culinario supremo. Llegan justo a tiempo.
+        </p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="preguntado con el estómago gruñendo audiblemente">
+            —¿Festival de cocina? ¿Con comida real? ¿No frutas del bosque y agua de arroyo?
+          </p>
+        </div>
+
+        <p class="dialogo" data-badge="respondido gesticulando con tres cucharones a la vez">
+          —Guiso de raíces con especias del desierto. Pan de nueces horneado en arcilla. Sopa de verduras con hierbas de montaña. Y el postre especial: pasteles de miel fermentados durante seis meses.
+        </p>
+
+        <p class="texto-narrativo"> La idea de comida real después de días de cecina y frutos secos hizo algo en el grupo que semanas de peligro no habían logrado: los relajó. A los tres. Al mismo tiempo.</p>
+
+        <p class="dialogo" data-badge="dicho con cortesía práctica">
+          —Es muy generoso, pero somos tres viajeros sin mucho que ofrecer a cambio.
+        </p>
+
+        <p class="dialogo" data-badge="respondido agitando cucharones con indignación">
+          —¡Tonterías! La única moneda que aceptamos es participación alegre. Y tal vez ayuda con la limpieza después, pero eso es opcional.
+        </p>
+      </section>
+
+      <!-- =============== LA CENA Y EL BAILE =============== -->
+      <section id="festival" class="aldea-armadillos">
+        <h2>Ritmos y Desastres</h2>
+
+        <p class="texto-narrativo"> La comida fue transformadora. No había otra palabra. Guiso que calentaba desde los huesos. Pan que crujía y luego se deshacía. Pasteles de miel que sabían a seis meses de paciencia concentrada. Axel comió con una hambre que no sabía que tenía. Ember comió con la alegría desvergonzada de alguien que no intenta impresionar a nadie. Seraphina comió despacio, cada bocado evaluado y aceptado, como si le sorprendiera que algo tan simple pudiera saber tan bien.</p>
+
+        <p class="texto-narrativo"> Después de la cena, los armadillos anunciaron la competencia de baile. El área era un círculo de hierba aplanada rodeado por antorchas, con una banda que tocaba instrumentos irreconocibles que producían música irresistiblemente alegre.</p>
+
+        <p class="dialogo" data-badge="anunciado con voz que llevaba sobre la música">
+          —La tradición dicta que todos los visitantes participen. No se preocupen por la técnica. Aquí valoramos el entusiasmo sobre la precisión.
+        </p>
+
+        <p class="texto-narrativo"> Ember no necesitó que lo invitaran dos veces. Se dirigió al círculo con pasos que ya prometían desastre.</p>
+
+        <p class="texto-narrativo"> Bailó con entusiasmo absoluto y habilidad nula. Sus pasos no coincidían con el ritmo. Sus brazos se movían en direcciones que desafiaban la anatomía felina. En un momento memorable, intentó una pirueta que terminó en una pila de hojas decorativas. Se levantó riendo, con hojas pegadas al pelaje, y siguió bailando.</p>
+
+        <p class="texto-narrativo"> Los armadillos aplaudieron con entusiasmo creciente. No por la técnica — por la alegría. La flauta de Ember, golpeando su cadera con cada paso fallido, producía notas aleatorias que de alguna forma complementaban la música.</p>
+
+        <p class="dialogo" data-badge="gritado desde el borde con cariño fraternal">
+          —¡Así se hace, Ember! ¡Estilo único!
+        </p>
+
+        <p class="texto-narrativo"> Seraphina observaba. No el baile — a Ember. La forma en que se veía ridículo y le daba igual. La forma en que los armadillos se reían CON él, no DE él. La forma en que Axel se reía de su hermano con un tipo específico de ternura que solo existe entre personas que no necesitan impresionarse mutuamente.</p>
+
+        <p class="texto-narrativo"> Y entonces, para sorpresa de todos — incluida ella misma — se levantó y caminó hacia el círculo.</p>
+
+        <p class="dialogo" data-badge="respondido con algo que casi era ligereza">
+          —Si Ember puede sobrevivir a eso, yo puedo intentarlo.
+        </p>
+
+        <p class="texto-narrativo"> Sus movimientos fueron diferentes. Controlados, fluidos, aprovechando su naturaleza de mantis para crear algo que rozaba la hipnosis — no la danza manipuladora que era su arma, sino algo más crudo, más honesto, como si el cuerpo recordara que podía moverse por placer antes de aprender a moverse por táctica.</p>
+
+        <p class="texto-narrativo"> Lo más notable fue su expresión. Axel la miró y no reconoció lo que vio. Las antenas relajadas. Las garras sueltas. Los ojos abiertos sin estar evaluando nada. Por primera vez desde que la conocía, Seraphina se veía como alguien que no estaba en ningún otro lugar que donde estaba.</p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="gritado con respeto franco">
+            —¡Seraphina! ¡Enséñame esos pasos después!
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Cuando la música se detuvo, los tres estaban sin aliento, cubiertos de hojas decorativas, y riéndose con el tipo de risa que no necesita razón. Los armadillos aplaudieron. Chef Casco Brillante declaró que había sido la mejor competencia en años. Nadie mencionó quién ganó porque a nadie le importó.</p>
+      </section>
+
+      <!-- =============== DESPEDIDA =============== -->
+      <section id="despedida-armadillos" class="aldea-armadillos">
+        <h2>Direcciones Reales</h2>
+
+        <p class="texto-narrativo"> La mañana siguiente, después de un desayuno que involucró más tipos de pan de los que Axel sabía que existían, Chef Casco Brillante llenó sus mochilas con provisiones que olían demasiado bien para ser comida de viaje.</p>
+
+        <p class="dialogo" data-badge="insistido mientras empacaba">
+          —No pueden irse sin direcciones apropiadas.
+        </p>
+
+        <p class="texto-narrativo"> Desplegó un mapa de alta calidad — líneas precisas, marcas detalladas, actualizado para cambios recientes en el terreno.</p>
+
+        <p class="dialogo" data-badge="explicado señalando con un cucharón">
+          —Este es el sendero correcto hacia las montañas del norte. El musgo, por cierto— miró a Ember —crece hacia donde hay más humedad, que por aquí es hacia el este debido a los vientos del océano.
+        </p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="admitido rascándose la oreja">
+            —Entonces el abuelo estaba equivocado.
+          </p>
+        </div>
+
+        <p class="dialogo" data-badge="respondido con gentileza">
+          —Probablemente creció en una región diferente. Su conocimiento era correcto para donde él vivía.
+        </p>
+
+        <p class="dialogo" data-badge="concedido mirando a Ember">
+          —Y yo podría haber sido menos intenso al corregirte.
+        </p>
+
+        <p class="texto-narrativo"> Chef Casco Brillante les entregó las copias del mapa con una sonrisa que sugería años de experiencia con viajeros perdidos por discusiones similares.</p>
+
+        <p class="dialogo" data-badge="insistido con preocupación paternal">
+          —Por favor, úsenlo. Los senderos de montaña son demasiado peligrosos para navegarlos basándose en discusiones fraternales sobre musgos.
+        </p>
+
+        <p class="dialogo" data-badge="dicho con sinceridad simple">
+          —Gracias. Por la comida. La música. Por recordarnos que el mundo puede ser un lugar alegre.
+        </p>
+
+        <p class="texto-narrativo"> Seraphina lo dijo mirando a Chef Casco Brillante, pero sus antenas apuntaban hacia Axel y Ember.</p>
+      </section>
+
+      <!-- =============== GANCHO HACIA SECCION_08 =============== -->
+      <section id="camino-cuervos">
+        <h3>Lo Que Los Espejos Saben</h3>
+
+        <p class="texto-narrativo"> Caminaron con el mapa real, estómagos llenos y algo más liviano en el pecho. El sol calentaba el sendero. Ember silbaba fragmentos de la música de los armadillos. Seraphina caminaba con un paso más suelto que de costumbre, las antenas oscilando con el ritmo de la marcha.</p>
+
+        <p class="texto-narrativo"> Axel notó que el arco élfico había dejado de vibrar. Desde las Cuevas Brillantes, la madera mantenía un zumbido constante — a veces en respuesta a las Lágrimas de Cristal, a veces a la flauta de Ember, a veces a la presencia fragmentada de Umbra. Ahora estaba quieto. Mudo. Como si prestara atención a algo que Axel no podía percibir.</p>
+
+        <p class="texto-narrativo"> Fue él quien los vio primero.</p>
+
+        <p class="texto-narrativo"> Tres cuervos posados en una rama muerta sobre el sendero. Plumaje tan negro que absorbía la luz del sol en vez de reflejarla. Y en sus ojos — ojos que no eran ojos normales, sino superficies pulidas como espejos de obsidiana — Axel vio algo que lo detuvo en seco.</p>
+
+        <p class="texto-narrativo"> Su propio reflejo. Pero no como era ahora. Más viejo. Con algo roto en la expresión que todavía no estaba roto.</p>
+
+        <p class="texto-narrativo"> Los cuervos no se movieron. No graznaron. Solo lo miraron con esos ojos que eran espejos y que no mostraban lo que querías ver sino lo que necesitabas saber.</p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="susurrado tocando la flauta por instinto">
+            —Axel.... ¿esos pájaros te están.... reflejando?
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Seraphina no miró a los cuervos. Sus antenas se aplastaron contra la cabeza. Sus garras se cerraron. Todo el paso suelto, toda la ligereza de los armadillos, se evaporó de su cuerpo en un segundo, como agua sobre hierro caliente.</p>
+
+        <p class="dialogo" data-badge="dicho con una voz que no era la de hace diez minutos">
+          —No los miren a los ojos. No los miren a los ojos.
+        </p>
+
+        <p class="texto-narrativo"> Axel se giró hacia ella. La Seraphina que vio no era la que había bailado anoche. Era alguien que reconocía exactamente dónde estaban y lo que eso significaba.</p>
+
+        <p class="texto-narrativo"> El Bosque de los Cuervos Espejo estaba a menos de un día de camino. Y los Cuervos Espejo no muestran lo que quieres ver.</p>
+
+        <p class="texto-narrativo"> Muestran lo que es.</p>
+      </section>
+    </div>
+
+    <!--
+NOTAS DE CONTINUIDAD:
+— Grupo de 3 (sin Eco Pergaminada)
+— "Alguien más los sigue" de 07A retomado en apertura
+— Risa de Seraphina: genuina, primera vez, sin declaraciones del narrador sobre "fachadas"
+— Armadillos: Chef Casco Brillante, comida, baile, mapa real
+— Gancho: Cuervos Espejo aparecen. Seraphina reacciona con pánico inmediato.
+— Reacción de Seraphina ante los cuervos lee como miedo comprensible, no como confesión de culpa
+-->
+
+    <script src="global-reset.js"></script>
   </body>
 </html>

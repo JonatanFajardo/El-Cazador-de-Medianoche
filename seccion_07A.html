@@ -3,450 +3,523 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>El Cazador de Medianoche - Capítulo 7A: Alternativo A</title>
+    <title>Sección 7A: El Torneo de los Mapaches Apostadores - El Cazador de Medianoche</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="historia-interactiva.css" />
+    <style>
+      .bosque-dados {
+        background: linear-gradient(135deg, #2f4f2f, #8fbc8f, #98fb98);
+        border-radius: 15px;
+        padding: 30px;
+        margin: 20px 0;
+        border: 2px solid rgba(143, 188, 143, 0.4);
+        box-shadow: 0 0 20px rgba(152, 251, 152, 0.3);
+      }
+
+      .mapache-trampa {
+        background: rgba(139, 69, 19, 0.2);
+        border-left: 4px solid #8b4513;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 0 10px 10px 0;
+      }
+
+      .dialogo-ember {
+        background: rgba(255, 215, 0, 0.1);
+        border-left: 4px solid #ffd700;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 0 10px 10px 0;
+      }
+
+      .competencia-ridicula {
+        background: linear-gradient(135deg, #ff6347, #ffa07a, #ffefd5);
+        border-radius: 15px;
+        padding: 20px;
+        margin: 15px 0;
+        border: 2px solid rgba(255, 99, 71, 0.4);
+      }
+
+      .referencia-lyra {
+        background: rgba(210, 105, 30, 0.1);
+        border-left: 3px solid #d2691e;
+        padding: 10px;
+        margin: 10px 0;
+        font-style: italic;
+        color: #d2691e;
+      }
+    </style>
   </head>
   <body>
     <!--
-╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
-║                                        SECCIÓN 7A: EL TORNEO DE LOS MAPACHES APOSTADORES                                                                            ║
-║                                                🎰 DÍA 8 🎰                                                                                                         ║
-╠══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║ CONTEXTO NARRATIVO:                                                                                                                                                 ║
-║ • Entre Valle Tranquilo y las montañas hacia el Templo Celestial                                                                                                    ║
-║ • Ember se ha unido oficialmente al grupo                                                                                                                           ║
-║ • Seraphina aún mantiene su misterio (pre-revelación)                                                                                                               ║
-║ • Momento de humor y alivio antes de tensiones más serias                                                                                                           ║
-║ • Establecer dinámicas del nuevo grupo de cuatro                                                                                                                    ║
-║                                                                                                                                                                      ║
-║ OBJETIVOS DE LA SECCIÓN:                                                                                                                                            ║
-║ • HUMOR: Torneo absurdo con reglas ridículas                                                                                                                        ║
-║ • EMBER: Demostrar su confianza excesiva y ingenuidad                                                                                                               ║
-║ • SERAPHINA: Ironía de ganar juegos de mentiras                                                                                                                     ║
-║ • LYRA: Referencia a que —la cartógrafa ganó en 10 minutos—                                                                                                         ║
-║ • AXEL: Habilidades de arquería bajo condiciones absurdas                                                                                                           ║
-║ • GRUPO: Trabajo en equipo divertido                                                                                                                                ║
-║                                                                                                                                                                      ║
-║ ELEMENTOS CÓMICOS ESPECÍFICOS:                                                                                                                                      ║
-║ • Mapaches hacen trampa descaradamente                                                                                                                              ║
-║ • —Ese dado tiene solo seises!—— Es un dado de la suerte—                                                                                                           ║
-║ • Axel disparando con ojos vendados mientras gira                                                                                                                   ║
-║ • Seraphina: —Tengo escalera real— (cartas de juegos diferentes)                                                                                                    ║
-║ • Ember perdiendo provisiones por exceso de confianza                                                                                                               ║
-║ • Referencias constantes a Lyra que —lo hizo mejor—                                                                                                                 ║
-╚══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+SECCIÓN 7A: EL TORNEO DE LOS MAPACHES APOSTADORES — DÍA 8
+
+GRUPO: Axel, Seraphina, Ember (3 personas. Eco Pergaminada se fue en seccion_05)
+PRE-REVELACIÓN: Seraphina genuina, sin indicios de manipulación
+TONO: Humor cómico, alivio antes de tensiones
+ERIZO: Cuarta aparición (preservar burocracia mapache)
 -->
 
-    <!doctype html>
-    <html lang="es">
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Sección 7A: El Torneo de los Mapaches Apostadores - El Cazador de Medianoche</title>
-        <link rel="stylesheet" href="styles.css" />
-        <style>
-          .bosque-dados {
-            background: linear-gradient(135deg, #2f4f2f, #8fbc8f, #98fb98);
-            border-radius: 15px;
-            padding: 30px;
-            margin: 20px 0;
-            border: 2px solid rgba(143, 188, 143, 0.4);
-            box-shadow: 0 0 20px rgba(152, 251, 152, 0.3);
-          }
+    <div class="container">
+      <!-- =============== LLEGADA AL BOSQUE DE LOS DADOS =============== -->
+      <section id="bosque-dados" class="bosque-dados">
+        <h1>El Cazador de Medianoche - Sección 7A: El Torneo de los Mapaches Apostadores</h1>
 
-          .mapache-trampa {
-            background: rgba(139, 69, 19, 0.2);
-            border-left: 4px solid #8b4513;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 0 10px 10px 0;
-          }
+        <p class="texto-narrativo"> La nota de Lyra le quemaba en la funda del arco.</p>
 
-          .ember-confiado {
-            background: rgba(255, 215, 0, 0.1);
-            border-left: 4px solid #ffd700;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 0 10px 10px 0;
-          }
+        <p class="texto-narrativo"> "Dos frecuencias superpuestas en el mismo cuerpo, como dos intenciones ocupando el mismo espacio." Axel había releído las palabras tres veces esa mañana mientras desayunaban en casa de Ember, y tres veces las había guardado sin entender más de lo que entendió la primera noche. La ciencia de frecuencias cristalinas no era lo suyo. Las flechas sí. Las flechas tenían sentido.</p>
 
-          .seraphina-ironia {
-            background: rgba(128, 0, 128, 0.1);
-            border-left: 3px solid #800080;
-            padding: 12px;
-            margin: 10px 0;
-            font-style: italic;
-          }
+        <p class="texto-narrativo"> El sendero que salía de Valle Tranquilo hacia las montañas se estrechó al entrar en lo que los lugareños llamaban el Bosque de los Dados. Los árboles crecían en formaciones extrañas — no al azar, sino siguiendo patrones geométricos que sugerían que alguien los había plantado con una obsesión específica por la simetría y la probabilidad.</p>
 
-          .competencia-ridicula {
-            background: linear-gradient(135deg, #ff6347, #ffa07a, #ffefd5);
-            border-radius: 15px;
-            padding: 20px;
-            margin: 15px 0;
-            border: 2px solid rgba(255, 99, 71, 0.4);
-            animation: ridiculo-bounce 4s ease-in-out infinite alternate;
-          }
+        <p class="texto-narrativo"> Era el primer día de viaje como grupo de tres, y las dinámicas se estaban ajustando. Ember preguntaba sobre todo lo que veía con la curiosidad de quien ha leído sobre aventuras toda su vida y por fin está dentro de una. Seraphina respondía con paciencia — más paciencia de la que Axel le había visto tener — como si la presencia del hermano menor le resultara más cómoda que incómoda. Axel intentaba mantener al grupo enfocado en avanzar.</p>
 
-          @keyframes ridiculo-bounce {
-            0% {
-              transform: translateY(0px);
-              box-shadow: 0 0 10px rgba(255, 99, 71, 0.3);
-            }
-            100% {
-              transform: translateY(-5px);
-              box-shadow: 0 5px 15px rgba(255, 99, 71, 0.5);
-            }
-          }
-
-          .referencia-lyra {
-            background: rgba(210, 105, 30, 0.1);
-            border-left: 3px solid #d2691e;
-            padding: 10px;
-            margin: 10px 0;
-            font-style: italic;
-            color: #d2691e;
-          }
-        </style>
-      </head>
-      <body>
-        <div class="container">
-          <!-- =============== LLEGADA AL BOSQUE DE LOS DADOS =============== -->
-          <section id="bosque-dados" class="bosque-dados">
-            <h1>El Cazador de Medianoche - Sección 7A: El Torneo de los Mapaches Apostadores</h1>
-
-            <p class="texto-narrativo"> El sendero que llevaba desde Valle Tranquilo hacia las montañas se estrechaba considerablemente al entrar en lo que los lugareños llamaban el Bosque de los Dados. Los árboles crecían en formaciones extrañas, como si hubieran sido plantados siguiendo algún patrón geométrico que solo tenía sentido para mentes obsesionadas con la probabilidad y el azar. </p>
-
-            <p class="texto-narrativo"> Era el segundo día de viaje con Ember oficialmente parte del grupo, y las dinámicas ya estaban estableciéndose. Ember hacía preguntas constantes sobre todo lo que veían, Eco Pergaminada respondía con conocimiento académico, Seraphina observaba silenciosamente, y Axel intentaba mantener al grupo enfocado en llegar al Templo. </p>
-
-            <div class="ember-confiado">
-              <p class="dialogo entusiasta" data-badge="comentado con optimismo irreprimible"> —¡Esto es exactamente como las historias de aventuras que solía leer!— declaró Ember, saltando sobre un tronco caído con energía juvenil. —¡Bosques misteriosos, compañeros leales, una misión noble! ¡Es perfecto! </p>
-            </div>
-
-            <p class="dialogo cansado" data-badge="murmurado con humor seco"> —Habla de nuevo después de que llevemos tres días durmiendo en el suelo y consumiendo solo frutas silvestres— afirmó Axel, sin embargo con una sonrisa afectuosa. </p>
-
-            <p class="texto-narrativo"> Fue entonces cuando vieron el puente. Se extendía sobre un barranco profundo, la única forma de cruzar sin un desvío de dos días. Pero había un problema evidente: una barricada de madera bloqueaba el acceso, decorada con carteles pintados a mano que decían cosas como 'PEAJE DIVERTIDO' y 'SOLO GANADORES PASAN.' </p>
-
-            <p class="texto-narrativo"> Detrás de la barricada, cinco mapaches con chalecos coloridos y sombreros adornados con plumas jugaban cartas en una mesa improvisada. Cuando vieron al grupo acercarse, el mapache más grande - claramente el líder - se puso de pie con una sonrisa que mostraba demasiados dientes. </p>
-
-            <div class="mapache-trampa">
-              <p class="dialogo astuto" data-badge="anunciado con fanfarria teatral"> —¡Bienvenidos, viajeros, al famoso Puente del Desafío!— El mapache líder se quitó su sombrero con un gesto exagerado. —Soy Rigoberto el Afortunado, maestro de juegos y guardián de este paso. Para cruzar, deben participar en nuestro Torneo de Habilidades Mixtas. </p>
-            </div>
-
-            <p class="dialogo directo" data-badge="preguntado con impaciencia práctica"> —¿Y si preferimos pagar un peaje normal?— preguntó Axel, ya sospechando la respuesta. </p>
-
-            <div class="mapache-trampa">
-              <p class="dialogo dramático" data-badge="respondido con horror">
-                —¡¿Peaje normal?! ¡Qué aburrido! ¡Qué falta de espíritu aventurero!— Rigoberto se llevó una garra al pecho. —No, no, no. Aquí solo aceptamos el pago más divertido: ¡competencia!
-                <!-- Humor: Reacción dramáticamente ofendida por una sugerencia práctica -->
-              </p>
-            </div>
-
-            <p class="texto-narrativo"> Los otros cuatro mapaches asintieron vigorosamente, claramente habiendo presenciado esta rutina muchas veces antes. </p>
-          </section>
-
-          <!-- =============== LAS REGLAS ABSURDAS =============== -->
-          <section id="reglas-torneo" class="competencia-ridicula">
-            <h2>Reglas del Juego</h2>
-
-            <div class="mapache-trampa">
-              <p class="dialogo explicativo" data-badge="declamado como un presentador de circo">
-                —¡El Torneo de Habilidades Mixtas consta de tres desafíos!— Rigoberto desplegó un pergamino que parecía haber sido escrito con diferentes tipos de tinta y en múltiples sesiones. —Primero: Dados de la Fortuna. Segundo: Arquería Imposible. Tercero: Cartas del Caos. ¡El equipo que gane dos de tres pasa gratis!
-                <!-- Humor: Reglas improvisadas evidenciadas por pergamino mal hecho -->
-              </p>
-            </div>
-
-            <p class="dialogo suspicaz" data-badge="preguntado con cautela creciente"> —¿Y si perdemos?— preguntó Seraphina, sus instintos detectando una trampa obvia. </p>
-
-            <div class="mapache-trampa">
-              <p class="dialogo alegre" data-badge="respondido con demasiada casualidad"> —¡Oh, solo pierden todas sus provisiones y tienen que tomar la ruta larga de dos días!— Rigoberto agitó una garra como si fuera detalle menor. —Pero no se preocupen, ¡casi nadie pierde! </p>
-            </div>
-
-            <div class="ember-confiado">
-              <p class="dialogo optimista" data-badge="declarado con confianza excesiva"> —¡Eso suena fácil! ¡Somos cuatro contra cinco, tenemos un arquero experto, una mantis ágil, un murciélago inteligente, y yo tengo mucha suerte con los juegos!— Ember se frotó las garras. —¡Aceptamos! </p>
-            </div>
-
-            <p class="dialogo advertencia" data-badge="murmurado con preocupación"> —Ember, espera....— comenzó Axel, sin embargo ya era demasiado tarde. </p>
-
-            <div class="mapache-trampa">
-              <p class="dialogo triunfante" data-badge="gritado con alegría genuina"> —¡Excelente! ¡Hace semanas que no tenemos competidores tan.... optimistas!— Los cinco mapaches intercambiaron miradas que claramente decían 'planta fácil.' </p>
-            </div>
-
-            <div class="referencia-lyra">
-              <p class="dialogo comentario" data-badge="agregado casualmente por un mapache menor"> —Aunque debo admitir— articuló uno de los mapaches más pequeños— la última competidora, esa lince cartógrafa, ganó los tres desafíos en menos de diez minutos. Fue.... inquietante. </p>
-            </div>
-
-            <p class="texto-narrativo"> Axel sintió sus oídos ponerse rígidos al escuchar la mención de Lyra, sin embargo trató de mantener una expresión neutral. </p>
-
-            <p class="dialogo" data-badge="preguntado con casualidad"> —¿Lince cartógrafa? No, no conozco a ninguna.... ¿Hace cuánto fue eso? </p>
-
-            <div class="mapache-trampa">
-              <p class="dialogo específico" data-badge="respondido mientras preparaba las mesas de juego"> —La semana pasada. Muy directa. Dijo algo sobre mapear rutas comerciales y no tener tiempo para 'tonterías de mapaches.' Ganó tan rápido que ni siquiera pudimos intentar hacer trampa apropiadamente. </p>
-            </div>
-          </section>
-
-          <!-- =============== DESAFÍO 1: DADOS DE LA FORTUNA =============== -->
-          <section id="dados-fortuna" class="competencia-ridicula">
-            <h3>Desafío 1: Dados de la Fortuna</h3>
-
-            <p class="texto-narrativo"> El primer desafío se realizaba en una mesa circular con dados de diferentes tamaños, colores, y aparentemente diferentes números de caras. Rigoberto explicó las reglas con entusiasmo sospechoso. </p>
-
-            <div class="mapache-trampa">
-              <p class="dialogo explicativo" data-badge="instruido con complejidad innecesaria"> —¡Muy simple! Cada jugador lanza cinco dados. Los números se suman, se dividen por el número de la fase lunar actual, se multiplican por los años de experiencia aventurera declarados, y se ajustan según el color de pelaje. ¡El total más alto gana! </p>
-            </div>
-
-            <p class="dialogo confundido" data-badge="preguntado con incredulidad"> —Esas no son reglas de dados normales— observó Eco Pergaminada, volando nerviosamente alrededor de la mesa. </p>
-
-            <div class="mapache-trampa">
-              <p class="dialogo defensivo" data-badge="respondido con indignación"> —¡Por supuesto que no son normales! ¡Normales son aburridas! Estas son reglas.... ¡creativas!" </p>
-            </div>
-
-            <div class="ember-confiado">
-              <p class="dialogo entusiasta" data-badge="declarado mientras se arremangaba"> —¡No hay problema! ¡Soy bueno con las matemáticas!— Ember tomó los dados con confianza.— ¡Y mi pelaje dorado debe dar bonificación, ¿verdad?" </p>
-            </div>
-
-            <p class="texto-narrativo"> Ember lanzó primero, y los dados rebotaron en la mesa de manera que parecía perfectamente natural hasta que se detuvieron mostrando números sorprendentemente bajos. </p>
-
-            <div class="ember-confiado">
-              <p class="dialogo sorprendido" data-badge="exclamado con confusión creciente"> —¡Espera, todos mis dados mostraron unos y doses! ¡¿Cuáles son las probabilidades de eso?!" </p>
-            </div>
-
-            <p class="texto-narrativo"> Rigoberto lanzó inmediatamente después, y sus dados parecían desafiar la gravedad con la forma en que rebotaron, giraron, y finalmente se asentaron mostrando números sorprendentemente altos. </p>
-
-            <div class="mapache-trampa">
-              <p class="dialogo casual" data-badge="comentado con inocencia exagerada"> —¡Ah, qué suerte! ¡Todos seises! Aunque debo mencionar que este dado especial— levantó uno que claramente tenía seis en todas las caras,— es un dado de la suerte familiar. Lo hemos usado durante generaciones." </p>
-            </div>
-
-            <p class="dialogo indignado" data-badge="protestado con justicia ofendida"> —¡Ese dado tiene solo seises!— exclamó Ember, señalando la evidencia obvia. </p>
-
-            <div class="mapache-trampa">
-              <p class="dialogo filosófico" data-badge="explicado con lógica retorcida"> —Exactamente. Es un dado de la suerte. Si tuviera otros números, no sería tan afortunado, ¿verdad? Es matemática básica, joven gato." </p>
-            </div>
-
-            <div class="seraphina-ironia">
-              <p class="texto-narrativo"> Seraphina observó el intercambio con fascinación. Aquí estaban criaturas que hacían trampa tan descaradamente que era casi artístico. En cierto sentido perverso, respetaba su dedicación a la mentira obvia. </p>
-            </div>
-
-            <p class="dialogo analítica" data-badge="preguntado con curiosidad genuina"> —¿Conocen las reglas oficiales de algún juego de dados real?— preguntó Seraphina, sus ojos brillando con interés. </p>
-
-            <div class="mapache-trampa">
-              <p class="dialogo honesto" data-badge="admitido sin vergüenza"> —¡Por supuesto que no! ¿Para qué aprender reglas reales cuando puedes inventar reglas mejores?— Rigoberto parecía genuinamente confundido por la pregunta.— Las reglas reales limitan la creatividad." </p>
-            </div>
-
-            <p class="texto-narrativo"> Al final del primer desafío, los mapaches habían —ganado— por una ventaja matemáticamente imposible, sin embargo lo habían hecho con tanto entusiasmo que era difícil estar verdaderamente enojado. </p>
-          </section>
-
-          <!-- =============== DESAFÍO 2: ARQUERÍA IMPOSIBLE =============== -->
-          <section id="arqueria-imposible" class="competencia-ridicula">
-            <h3>Desafío 2: Arquería Imposible</h3>
-
-            <p class="texto-narrativo"> Para el segundo desafío, los mapaches habían establecido un rango de tiro que desafiaba tanto la lógica como la física. El objetivo era un blanco normal, sin embargo las condiciones eran cualquier cosa menos normales. </p>
-
-            <div class="mapache-trampa">
-              <p class="dialogo instructivo" data-badge="explicado con demasiada alegría"> —¡Arquería tradicional es sumamente aburrida! ¡Arquería IMPOSIBLE es mucho más divertida!— Rigoberto señaló hacia el setup elaborado.— El arquero debe disparar mientras está vendado, girando en círculo, y tarareando una canción de cuna. ¡Tres flechas, el que más se acerque al centro gana!" </p>
-            </div>
-
-            <p class="dialogo escéptico" data-badge="preguntado con sospecha evidente"> —¿Y ustedes van a hacer lo mismo?— preguntó Axel, ya sabiendo la respuesta. </p>
-
-            <div class="mapache-trampa">
-              <p class="dialogo técnico" data-badge="explicado con jerga inventada"> —¡Oh no! Nosotros usamos el 'Método de Compensación de Ventaja por Experiencia Nativa.' Como este es nuestro territorio, nosotros disparamos normalmente para balancear su ventaja de.... eh.... no vivir aquí." </p>
-            </div>
-
-            <p class="texto-narrativo"> Axel miró a sus compañeros, quienes le devolvieron miradas que variaban entre diversión (Seraphina), indignación (Ember), y fascinación académica (Eco Pergaminada). </p>
-
-            <p class="dialogo resignado" data-badge="susurrado a su grupo"> —En este punto, es casi admirable lo creativos que son con sus trampas— articuló Axel.— Está bien, acepto el desafío." </p>
-
-            <p class="texto-narrativo"> Lo que siguió fue uno de los espectáculos más ridículos que cualquiera de ellos había presenciado. Axel, con los ojos vendados, girando como un trompo, intentando tararear una canción de cuna mientras apuntaba con su arco élfico hacia un objetivo que no podía ver. </p>
-
-            <div class="ember-confiado">
-              <p class="dialogo animando" data-badge="gritado con apoyo hermano"> —¡Un poco más a la izquierda, Axel! ¡No, tu otra izquierda! ¡No, no, espera, estás girando, así que tu izquierda ahora es....!— Se detuvo, confundido por su propia dirección. </p>
-            </div>
-
-            <p class="dialogo concentrado" data-badge="murmurado mientras se enfocaba"> —Canción de cuna.... canción de cuna...— Axel intentó recordar alguna mientras giraba.— ♪ Duérmete pequeño.... eh.... gato montés.... en el árbol alto.... algo algo rimas.... ♪" </p>
-
-            <p class="texto-narrativo"> Sorprendentemente, dos de sus tres flechas dieron en el blanco, aunque ninguna cerca del centro. Era un testimonio a su habilidad natural que hubiera logrado siquiera eso bajo condiciones tan absurdas. </p>
-
-            <p class="texto-narrativo"> El turno de Rigoberto fue considerablemente menos entretenido: apuntó calmadamente y colocó sus tres flechas en un grupo apretado cerca del centro del blanco. </p>
-
-            <div class="mapache-trampa">
-              <p class="dialogo" data-badge="comentado con humildad"> —¡Oh, qué suerte! Aunque debo mencionar que estos blancos fueron hechos por mi primo, y él siempre los hace un poco magnéticos hacia las flechas de la familia. ¡Tradición familiar!" </p>
-            </div>
-
-            <div class="referencia-lyra">
-              <p class="dialogo comentario-menor" data-badge="murmurado por un mapache pequeño"> —La cartógrafa lince no necesitó venda— comentó uno de los mapaches menores.— Dijo que la arquería con obstáculos era 'entrenamiento básico de navegación en terreno hostil.' Acertó los tres tiros al centro perfecto." </p>
-            </div>
-
-            <p class="texto-narrativo"> Axel se quitó la venda, ligeramente mareado sin embargo determinado. Estaban perdiendo 2-0, sin embargo aún quedaba un desafío. </p>
-          </section>
-
-          <!-- =============== DESAFÍO 3: CARTAS DEL CAOS =============== -->
-          <section id="cartas-caos" class="competencia-ridicula">
-            <h3>Desafío 3: Cartas del Caos</h3>
-
-            <!-- =============== CUARTA APARICIÓN DEL ERIZO =============== -->
-            <p class="texto-narrativo"> Antes de que el tercer desafío comenzara, uno de los mapaches auxiliares se acercó a Rigoberto con expresión de profunda perplejidad burocrática. Traía algo sujeto entre las patas con la delicadeza de quien transporta material no clasificado. </p>
-
-            <p class="dialogo" data-badge="reportado con preocupación administrativa">
-              —Señor, hemos encontrado esto junto a la mesa de puntuaciones. No consta en el inventario de participantes ni en el registro de objetos del torneo.
-            </p>
-
-            <p class="texto-narrativo"> Era el erizo. Hecho bolita sobre la mesa de puntuaciones como si fuera una ficha más del juego. </p>
-
-            <p class="texto-narrativo"> Rigoberto lo examinó con la seriedad de un tasador evaluando una antigüedad. Le dio la vuelta. Lo pesó en una pata. Lo colocó sobre la mesa y esperó a que hiciera algo. El erizo no hizo nada. </p>
-
-            <p class="dialogo" data-badge="dictado con autoridad clasificatoria">
-              —¡Anoten!— ordenó Rigoberto a su equipo.— Activo Esférico No Identificado. Categoría: fauna de utilidad indeterminada. Estado: funcional pero no cooperativo. Clasificación provisional: comodín de reserva.
-            </p>
-
-            <p class="texto-narrativo"> Un mapache escriba tomó nota furiosamente. Otro intentó medirlo con una regla. El erizo se desenrolló, miró la regla, y se volvió a enrollar. El escriba anotó: —Diámetro variable según disposición anímica del sujeto—. </p>
-
-            <p class="dialogo" data-badge="comentado con diversión">
-              —Nos sigue desde hace días— dijo Axel, sin molestarse en explicar más.
-            </p>
-
-            <p class="dialogo" data-badge="respondido con entusiasmo empresarial">
-              —¡Perfecto! ¡Todo activo no reclamado pasa a ser propiedad temporal del torneo! ¡Lo usaremos como bola de desempate si es necesario!
-            </p>
-
-            <p class="texto-narrativo"> Ember miró al erizo con una mezcla de compasión y curiosidad. </p>
-
-            <p class="dialogo" data-badge="susurrado a Axel">
-              —¿Debería.... rescatarlo?
-            </p>
-
-            <p class="dialogo" data-badge="respondido sin apartar la vista">
-              —Lleva semanas apareciendo solo. Creo que puede sobrevivir a un torneo de mapaches.
-            </p>
-
-            <p class="texto-narrativo"> Rigoberto colocó al erizo en una esquina de la mesa con una etiqueta que decía —RESERVA — NO TOCAR SIN FORMULARIO 7-B—. El erizo permaneció ahí, inmóvil, durante todo el desafío siguiente. Cuando la etiqueta se le cayó encima, no se movió. Cuando un mapache lo usó brevemente como pisapapeles para sujetar las reglas del juego, tampoco. </p>
-            <!-- =============== FIN CUARTA APARICIÓN DEL ERIZO =============== -->
-
-            <p class="texto-narrativo"> El tercer y último desafío se llevó a cabo en una mesa cubierta con cartas que parecían provenir de al menos cinco juegos diferentes. Había cartas numeradas, cartas con símbolos extraños, cartas con dibujos de frutas, y algunas que parecían haber sido dibujadas a mano por niños pequeños. </p>
-
-            <div class="mapache-trampa">
-              <p class="dialogo explicativo" data-badge="instruido con reglas incomprensibles"> —¡Cartas del Caos es nuestro juego favorito! Las reglas son simples: cada jugador recibe cinco cartas. El objetivo es hacer la mejor mano posible usando cualquier combinación de sistemas de cartas conocidos o inventados sobre la marcha. ¡Creatividad cuenta!" </p>
-            </div>
-
-            <p class="dialogo perdido" data-badge="preguntado con confusión total"> —¿Eso significa que podemos inventar reglas mientras jugamos?— preguntó Eco Pergaminada, volando nerviosamente sobre las cartas. </p>
-
-            <div class="mapache-trampa">
-              <p class="dialogo entusiasta" data-badge="confirmado con alegría"> —¡Exactamente! ¡Mientras puedas justificar tu mano con lógica convincente, cuenta!— Rigoberto repartió las cartas con movimientos que definitivamente involucraban dar cartas específicas a cada jugador. </p>
-            </div>
-
-            <p class="texto-narrativo"> Ember recibió sus cartas y inmediatamente frunció el ceño. </p>
-
-            <div class="ember-confiado">
-              <p class="dialogo confundido" data-badge="preguntado mientras examinaba sus cartas"> —¿Por qué tengo un dos de corazones, un rey de espadas, una carta que dice 'banana,' otra que muestra un dibujo de un pescado sonriente, y una que parece estar en blanco?" </p>
-            </div>
-
-            <div class="mapache-trampa">
-              <p class="dialogo explicativo" data-badge="respondido como si fuera obvio"> —¡Esa es una mano sumamente interesante! El pescado sonriente vale como comodín los martes, la banana cuenta como fruta real si puedes nombrar tres tipos de plátano, y la carta en blanco es.... ¡una carta de potencial infinito!" </p>
-            </div>
-
-            <p class="texto-narrativo"> Fue entonces cuando Seraphina estudió sus propias cartas y sonrió. Era una sonrisa que había perfeccionado durante años de engañar a otros - confiada, misteriosa, y por entero convincente. </p>
-
-            <div class="seraphina-ironia">
-              <p class="dialogo triunfante" data-badge="declarado con confianza absoluta"> —Tengo escalera real— anunció Seraphina, extendiendo sus cartas sobre la mesa. </p>
-            </div>
-
-            <p class="texto-narrativo"> Todos se inclinaron para mirar. Sus cartas mostraban: un tres de tréboles, una carta de —manzana roja— otra que decía— martes— un dibujo de un gato (claramente de un juego infantil), y una carta tradicional de la reina de diamantes. </p>
-
-            <div class="mapache-trampa">
-              <p class="dialogo escéptico" data-badge="preguntado con confusión"> —¿Cómo es eso escalera real?— preguntó Rigoberto, claramente no esperando ser desafiado en su propio juego de reglas inventadas. </p>
-            </div>
-
-            <div class="seraphina-ironia">
-              <p class="dialogo explicativo" data-badge="explicado con lógica irrefutable"> —Simple. El tres representa el comienzo, la manzana roja es la realeza de la naturaleza, martes es el día real de la semana para hacer negocios importantes, el gato representa nobleza félida, y la reina es literalmente realeza. Es una progresión perfecta de importancia creciente culminando en autoridad absoluta." </p>
-            </div>
-
-            <p class="texto-narrativo"> El silencio se extendió mientras todos procesaban esta explicación. Era tan absurda que era brillante, tan confiadamente presentada que era difícil argumentar contra ella. </p>
-
-            <div class="ember-confiado">
-              <p class="dialogo admirativo" data-badge="murmurado con franco respeto"> —Eso.... en realidad suena convincente— admitió Ember. </p>
-            </div>
-
-            <p class="dialogo académico" data-badge="agregado con análisis serio"> —La lógica es internamente consistente— observó Eco Pergaminada.— Absurda, sin embargo consistente." </p>
-
-            <div class="mapache-trampa">
-              <p class="dialogo derrotado" data-badge="admitido con respeto reluctante"> —No puedo.... no puedo argumentar contra eso— confesó Rigoberto, claramente impresionado a pesar de sí mismo.— Es el farol más hermoso que he visto en años." </p>
-            </div>
-
-            <div class="seraphina-ironia">
-              <p class="texto-narrativo"> Seraphina sintió una punzada de ironía amarga. Aquí estaba, siendo elogiada por su habilidad para mentir convincentemente, para crear narrativas falsas tan elegantes que otros las aceptaban como verdad. Era exactamente lo que había estado haciendo con Axel durante semanas, solo que en un contexto que parecía inofensivo y divertido. </p>
-            </div>
-
-            <p class="texto-narrativo"> Con la victoria de Seraphina en el tercer desafío, el torneo terminó 2-1 a favor de los mapaches. Técnicamente habían perdido, sin embargo todos se sentían extrañamente satisfechos con el resultado. </p>
-          </section>
-
-          <!-- =============== LA RESOLUCIÓN INESPERADA =============== -->
-          <section id="resolucion-torneo" class="bosque-dados">
-            <h2>Victoria en la Derrota</h2>
-
-            <div class="mapache-trampa">
-              <p class="dialogo sorprendido" data-badge="declarado con genuina admiración">
-                —¡Saben qué? Ese fue el torneo más divertido que hemos tenido en meses— admitió Rigoberto, quitándose su sombrero adornado.— Usualmente la gente se enoja cuando hacemos trampa. Ustedes.... ustedes entraron en el espíritu del juego."
-                <!-- Humor: Admisión casual de hacer trampa como práctica normal -->
-              </p>
-            </div>
-
-            <p class="dialogo diplomático" data-badge="ofrecido con sonrisa genuina"> —Fue.... educativo— afirmó Ember, riéndose a pesar de haber perdido sus provisiones.— Nunca había visto trampas tan creativas." </p>
-
-            <div class="mapache-trampa">
-              <p class="dialogo generoso" data-badge="ofrecido con gesto magnánimo"> —¿Saben qué? Van a necesitar esas provisiones para llegar al Templo. Consideren esto una inversión en futuras historias interesantes— Rigoberto les devolvió sus suministros.— Pero se quedan con el entretenimiento. Valió la pena." </p>
-            </div>
-
-            <div class="referencia-lyra">
-              <p class="dialogo reflexivo" data-badge="comentado mientras se preparaban para partir"> —Aunque debo preguntar— declaró uno de los mapaches más pequeños,— esa cartógrafa lince que mencionamos.... ¿verdaderamente no la conocen? Preguntó específicamente por un gato montés arquero con arco élfico." </p>
-            </div>
-
-            <p class="texto-narrativo"> Axel se sonrojó nuevamente, sin embargo esta vez no intentó negarlo por entero. </p>
-
-            <p class="dialogo admisión" data-badge="confesado con resignación"> —La.... la conozco. Se llama Lyra. Es.... sumamente competente." </p>
-
-            <div class="ember-confiado">
-              <p class="dialogo curioso" data-badge="preguntado con interés hermano menor"> —¿Es la misma cartógrafa que mencioné que había preguntado por ti en Valle Tranquilo?— Sus ojos se iluminaron con comprensión.— ¡Axel! ¡Te está siguiendo!" </p>
-            </div>
-
-            <p class="dialogo negación" data-badge="protestado débilmente"> —No me está siguiendo. Probablemente solo.... mapea esta región regularmente...." </p>
-
-            <div class="seraphina-ironia">
-              <p class="dialogo observación" data-badge="comentado con diversión sutil"> —Una cartógrafa que pregunta por ti en tu pueblo, aparece en los mismos senderos que tomas, y supera desafíos que nosotros apenas logramos completar...— Seraphina hizo una pausa significativa.— Muy.... dedicada a su cartografía." </p>
-            </div>
-
-            <p class="texto-narrativo"> Mientras se alejaban del Bosque de los Dados, con sus provisiones intactas y nuevas historias que contar, el grupo había funcionado mejor como equipo. Ember había aprendido sobre confiar demasiado, Axel había demostrado flexibilidad bajo presión absurda, Seraphina había mostrado una habilidad impresionante para pensar creativamente, y Eco Pergaminada había proporcionado análisis útiles incluso en situaciones ridículas. </p>
-
-            <p class="texto-narrativo"> Pero más importante, todos habían disfrutado genuinamente de la experiencia absurda, riéndose juntos de una manera que fortalecía su vínculo como grupo. </p>
-
-            <div class="ember-confiado">
-              <p class="dialogo reflexivo" data-badge="comentado mientras caminaban"> —¿Saben qué? Creo que aprendí algo importante hoy— declaró Ember.— A veces no se trata de ganar o perder. Se trata de cómo juegas.... incluso cuando las reglas son por entero absurdas." </p>
-            </div>
-
-            <p class="dialogo sabio" data-badge="agregado con comprensión"> —Y a veces— añadió Axel,— la mejor manera de lidiar con situaciones imposibles es entrar en el espíritu de la imposibilidad." </p>
-
-            <div class="seraphina-ironia">
-              <p class="texto-narrativo"> Seraphina caminó en silencio, reflexionando sobre la ironía de ser elogiada por su habilidad para crear narrativas convincentes. Era una habilidad que había perfeccionado por razones sumamente diferentes, sin embargo aquí, en este contexto inofensivo, había traído alegría en lugar de dolor. </p>
-            </div>
-
-            <p class="texto-narrativo"> Continuaron hacia las montañas, con risas aún resonando en sus conversaciones y una nueva apreciación por la creatividad de las criaturas que habitaban estos bosques extraños. </p>
-
-            <p class="texto-narrativo"> Sin embargo, cuando Seraphina miró hacia atrás por última vez, vio algo que los demás no notaron: entre los árboles, al borde del claro del torneo, una figura felina con pelaje manchado de tinta los observaba en silencio. Sus ojos dorados se encontraron con los de Seraphina por un instante - y en ellos había algo que la mantis reconoció inmediatamente. </p>
-
-            <p class="texto-narrativo" style="text-align: center; font-style: italic; color: #d4af37"> Sospecha. </p>
-          </section>
-
-          <!-- =============== NOTAS DE CONTINUIDAD =============== -->
-          <div class="nota-continuidad" style="background: rgba(66, 66, 66, 0.3); padding: 20px; margin: 30px 0; border-radius: 10px; font-style: italic; color: #ccc">
-            <h4>Notas para continuidad narrativa:</h4>
-            <p>• Ember demuestra confianza excesiva sin embargo capacidad de aprender</p>
-            <p>• Seraphina muestra habilidades de manipulación de forma —inocente— e irónica</p>
-            <p>• Referencias a Lyra establecen que está siguiendo activamente a Axel</p>
-            <p>• Humor y trabajo en equipo fortalecen vínculos del grupo</p>
-            <p>• Todos aprenden sobre flexibilidad y creatividad bajo presión</p>
-            <p>• Preserva misterio de Seraphina - sus habilidades parecen naturales, no siniestras</p>
-          </div>
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="comentado mientras saltaba un tronco">
+            —Esto es exactamente como las historias de aventuras que leía de niño. Bosques misteriosos, compañeros de viaje, una misión noble.— Aterrizó con gracia desigual. —Solo falta el dragón.
+          </p>
         </div>
 
-        <script src="global-reset.js"></script>
-      </body>
-    </html> </body
-></html>
+        <p class="dialogo" data-badge="murmurado con humor seco">
+          —Dale tiempo.
+        </p>
+
+        <p class="texto-narrativo"> Fue entonces cuando vieron el puente. Se extendía sobre un barranco profundo — la única forma de cruzar sin un desvío de dos días. Una barricada de madera bloqueaba el acceso, decorada con carteles pintados a mano: "PEAJE DIVERTIDO", "SOLO GANADORES PASAN", y uno que decía "DESCUENTO DEL 100% PARA QUIENES PIERDAN CON ESTILO".</p>
+
+        <p class="texto-narrativo"> Detrás de la barricada, cinco mapaches con chalecos coloridos y sombreros de plumas jugaban cartas en una mesa improvisada. Cuando vieron al grupo, el más grande — el líder, evidentemente — se puso de pie con una sonrisa que mostraba demasiados dientes para ser tranquilizadora.</p>
+
+        <div class="mapache-trampa">
+          <p class="dialogo" data-badge="anunciado con fanfarria teatral">
+            —¡Bienvenidos, viajeros, al famoso Puente del Desafío!— Se quitó el sombrero con un gesto que había ensayado muchas veces. —Soy Rigoberto el Afortunado, maestro de juegos y guardián de este paso. Para cruzar, deben participar en nuestro Torneo de Habilidades Mixtas.
+          </p>
+        </div>
+
+        <p class="dialogo" data-badge="preguntado con impaciencia práctica">
+          —¿Y si preferimos pagar un peaje normal?
+        </p>
+
+        <div class="mapache-trampa">
+          <p class="dialogo" data-badge="respondido con horror genuino">
+            —¿Peaje normal? ¿NORMAL? ¡Qué falta de espíritu aventurero!— Rigoberto se llevó una garra al pecho como si le hubieran disparado. —No, no, no. Aquí solo aceptamos el pago más noble: ¡competencia!
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Los otros cuatro mapaches asintieron vigorosamente. Uno tenía un cartel preparado que decía "¡COMPETENCIA!" con purpurina.</p>
+      </section>
+
+      <!-- =============== LAS REGLAS ABSURDAS =============== -->
+      <section id="reglas-torneo" class="competencia-ridicula">
+        <h2>Reglas del Juego</h2>
+
+        <div class="mapache-trampa">
+          <p class="dialogo" data-badge="declamado como presentador de circo">
+            —¡El Torneo de Habilidades Mixtas consta de tres desafíos!— Rigoberto desplegó un pergamino que había sido escrito con al menos cinco tipos de tinta diferentes y enmendado tantas veces que las correcciones tenían correcciones. —Primero: Dados de la Fortuna. Segundo: Arquería Imposible. Tercero: Cartas del Caos. ¡El equipo que gane dos de tres pasa gratis!
+          </p>
+        </div>
+
+        <p class="dialogo" data-badge="preguntado con los ojos entrecerrados">
+          —¿Y si perdemos?
+        </p>
+
+        <div class="mapache-trampa">
+          <p class="dialogo" data-badge="respondido con demasiada casualidad">
+            —Oh, solo pierden todas sus provisiones y toman la ruta larga de dos días.— Rigoberto agitó una garra como si mencionara el clima. —Pero no se preocupen. Casi nadie pierde.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> "Casi nadie pierde" significaba, claramente, que todos perdían.</p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="declarado con confianza que no debería tener">
+            —Suena fácil. Somos tres contra cinco, tenemos un arquero experto, una mantis con reflejos sobrehumanos, y yo tengo suerte natural con los juegos. ¡Aceptamos!
+          </p>
+        </div>
+
+        <p class="dialogo" data-badge="murmurado un segundo demasiado tarde">
+          —Ember, espera....
+        </p>
+
+        <div class="mapache-trampa">
+          <p class="dialogo" data-badge="gritado con alegría demasiado intensa">
+            —¡Excelente! Hace semanas que no tenemos competidores tan.... optimistas.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Los cinco mapaches intercambiaron miradas que no intentaron disimular.</p>
+
+        <div class="referencia-lyra">
+          <p class="dialogo" data-badge="agregado casualmente por un mapache menor">
+            —Aunque debo admitir, la última competidora, esa lince cartógrafa, ganó los tres desafíos en menos de diez minutos. Fue.... inquietante.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Axel sintió las orejas ponérsele rígidas. Mantuvo la expresión neutral con esfuerzo visible.</p>
+
+        <p class="dialogo" data-badge="preguntado con casualidad que no engañaba a nadie">
+          —¿Lince cartógrafa? ¿Hace cuánto?
+        </p>
+
+        <div class="mapache-trampa">
+          <p class="dialogo" data-badge="respondido mientras barajaba cartas">
+            —La semana pasada. Muy directa. Dijo algo sobre no tener tiempo para —tonterías de mapaches—. Ganó tan rápido que ni siquiera pudimos hacer trampa apropiadamente.
+          </p>
+        </div>
+      </section>
+
+      <!-- =============== DESAFÍO 1: DADOS DE LA FORTUNA =============== -->
+      <section id="dados-fortuna" class="competencia-ridicula">
+        <h3>Desafío 1: Dados de la Fortuna</h3>
+
+        <p class="texto-narrativo"> La mesa circular tenía dados de diferentes tamaños, colores y aparentemente diferentes números de caras. Rigoberto explicó las reglas con un entusiasmo que era inversamente proporcional a su claridad.</p>
+
+        <div class="mapache-trampa">
+          <p class="dialogo" data-badge="instruido con complejidad innecesaria">
+            —Muy simple. Cada jugador lanza cinco dados. Los números se suman, se dividen por la fase lunar actual, se multiplican por los años de experiencia aventurera declarados, y se ajustan según el color de pelaje. El total más alto gana.
+          </p>
+        </div>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="preguntado levantando un dedo">
+            —¿El color de pelaje afecta las matemáticas?
+          </p>
+        </div>
+
+        <div class="mapache-trampa">
+          <p class="dialogo" data-badge="respondido como si fuera obvio">
+            —Por supuesto. El pelaje oscuro tiene un multiplicador de 0.7 por absorción lumínica. El claro, 1.3. Los mapaches tenemos el multiplicador perfecto: 1.5, por distribución equilibrada de pigmentos.
+          </p>
+        </div>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="declarado mientras se arremangaba">
+            —No hay problema. Soy bueno con las matemáticas. Y mi pelaje dorado debería dar bonificación, ¿no?
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Ember lanzó primero. Los dados rebotaron de manera que parecía perfectamente natural hasta que se detuvieron mostrando unos y doses. Todos.</p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="exclamado mirando los dados">
+            —¡Todos unos y doses! ¿Cuáles son las probabilidades de eso?
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Rigoberto lanzó inmediatamente después. Sus dados rebotaron, giraron y se asentaron mostrando seises. Todos.</p>
+
+        <div class="mapache-trampa">
+          <p class="dialogo" data-badge="comentado con inocencia insultante">
+            —Qué suerte. Aunque debo mencionar que este dado especial— levantó uno que tenía seis en todas las caras —es un dado de la suerte familiar. Generaciones de fortuna acumulada.
+          </p>
+        </div>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="protestado señalando la evidencia">
+            —¡Ese dado tiene solo seises!
+          </p>
+        </div>
+
+        <div class="mapache-trampa">
+          <p class="dialogo" data-badge="explicado con lógica irrefutable">
+            —Exactamente. Si tuviera otros números, no sería tan afortunado, ¿verdad? Es matemática básica, joven gato.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Seraphina observaba el intercambio con las antenas ladeadas. Había algo en su expresión — no diversión exactamente, sino una apreciación técnica, como un artesano evaluando el trabajo de otro.</p>
+
+        <p class="dialogo" data-badge="preguntado con curiosidad genuina">
+          —¿Conocen las reglas oficiales de algún juego de dados real?
+        </p>
+
+        <div class="mapache-trampa">
+          <p class="dialogo" data-badge="respondido con confusión genuina">
+            —¿Para qué aprender reglas reales cuando puedes inventar mejores? Las reglas reales limitan la creatividad.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Al final del primer desafío, los mapaches habían "ganado" por una ventaja matemáticamente imposible. Lo habían hecho con tanto entusiasmo que Ember estaba riendo a pesar de haber perdido.</p>
+      </section>
+
+      <!-- =============== DESAFÍO 2: ARQUERÍA IMPOSIBLE =============== -->
+      <section id="arqueria-imposible" class="competencia-ridicula">
+        <h3>Desafío 2: Arquería Imposible</h3>
+
+        <p class="texto-narrativo"> Los mapaches habían montado un rango de tiro que desafiaba la lógica y la física en proporciones iguales. El blanco era normal. Las condiciones, no.</p>
+
+        <div class="mapache-trampa">
+          <p class="dialogo" data-badge="explicado con demasiada alegría">
+            —Arquería tradicional es aburrida. Arquería IMPOSIBLE es arte. El arquero dispara vendado, girando en círculo, y tarareando una canción de cuna. Tres flechas. El más cercano al centro gana.
+          </p>
+        </div>
+
+        <p class="dialogo" data-badge="preguntado ya sabiendo la respuesta">
+          —¿Y ustedes van a hacer lo mismo?
+        </p>
+
+        <div class="mapache-trampa">
+          <p class="dialogo" data-badge="explicado con jerga inventada">
+            —Nosotros usamos el Método de Compensación de Ventaja por Experiencia Nativa. Como este es nuestro territorio, disparamos normalmente para balancear su ventaja de.... no vivir aquí.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Axel miró a sus compañeros. Ember tenía la mandíbula desencajada de indignación. Seraphina tenía la cabeza ligeramente ladeada, como si evaluara las posibilidades.</p>
+
+        <p class="dialogo" data-badge="susurrado al grupo">
+          —En este punto, es casi admirable lo creativos que son con sus trampas.— Se quitó el arco del hombro. —Acepto.
+        </p>
+
+        <p class="texto-narrativo"> Lo que siguió fue uno de los espectáculos más ridículos que cualquiera de los presentes había presenciado. Axel, con los ojos vendados con un pañuelo que olía a queso de mapache, girando como un trompo descompuesto, intentando tararear algo reconocible mientras apuntaba hacia un objetivo que no podía ver.</p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="gritado con apoyo fraternal">
+            —¡Un poco más a la izquierda! ¡No, tu otra izquierda! ¡No, espera, estás girando, tu izquierda ahora es....!— Se detuvo, confundido por su propia lógica.
+          </p>
+        </div>
+
+        <p class="dialogo" data-badge="murmurado girando">
+          —♪ Duérmete pequeño.... gato montés.... en el árbol alto.... algo algo.... ♪
+        </p>
+
+        <p class="texto-narrativo"> Dos de sus tres flechas dieron en el blanco. Ninguna cerca del centro, pero dieron en el blanco. Vendado, girando, y tarareando. El arco élfico vibró con algo que podría haber sido vergüenza paterna.</p>
+
+        <p class="texto-narrativo"> Rigoberto apuntó calmadamente y colocó tres flechas en grupo apretado cerca del centro.</p>
+
+        <div class="mapache-trampa">
+          <p class="dialogo" data-badge="comentado con falsa modestia">
+            —Debo mencionar que estos blancos los hizo mi primo. Siempre los hace un poco magnéticos hacia las flechas de la familia. Tradición.
+          </p>
+        </div>
+
+        <div class="referencia-lyra">
+          <p class="dialogo" data-badge="murmurado por un mapache menor">
+            —La cartógrafa lince no necesitó venda. Dijo que la arquería con obstáculos era —entrenamiento básico de navegación en terreno hostil—. Acertó los tres al centro.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Axel se quitó la venda, ligeramente mareado. Perdían 2-0. Quedaba un desafío.</p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="susurrado a Axel con tono de reproche fraternal">
+            —Tu cartógrafa —que no conoces— parece bastante impresionante.
+          </p>
+        </div>
+
+        <p class="dialogo" data-badge="respondido sin mirar a Ember">
+          —No es mi cartógrafa.
+        </p>
+      </section>
+
+      <!-- =============== DESAFÍO 3: CARTAS DEL CAOS =============== -->
+      <section id="cartas-caos" class="competencia-ridicula">
+        <h3>Desafío 3: Cartas del Caos</h3>
+
+        <!-- =============== CUARTA APARICIÓN DEL ERIZO =============== -->
+        <p class="texto-narrativo"> Antes de que el tercer desafío comenzara, uno de los mapaches auxiliares se acercó a Rigoberto con expresión de profunda perplejidad burocrática. Traía algo sujeto entre las patas con la delicadeza de quien transporta material no clasificado.</p>
+
+        <p class="dialogo" data-badge="reportado con preocupación administrativa">
+          —Señor, hemos encontrado esto junto a la mesa de puntuaciones. No consta en el inventario de participantes ni en el registro de objetos del torneo.
+        </p>
+
+        <p class="texto-narrativo"> Era el erizo. Hecho bolita sobre la mesa de puntuaciones como si fuera una ficha más del juego.</p>
+
+        <p class="texto-narrativo"> Rigoberto lo examinó con la seriedad de un tasador evaluando una antigüedad. Le dio la vuelta. Lo pesó en una pata. Lo colocó sobre la mesa y esperó a que hiciera algo. El erizo no hizo nada.</p>
+
+        <p class="dialogo" data-badge="dictado con autoridad clasificatoria">
+          —¡Anoten!— ordenó Rigoberto a su equipo. —Activo Esférico No Identificado. Categoría: fauna de utilidad indeterminada. Estado: funcional pero no cooperativo. Clasificación provisional: comodín de reserva.
+        </p>
+
+        <p class="texto-narrativo"> Un mapache escriba tomó nota furiosamente. Otro intentó medirlo con una regla. El erizo se desenrolló, miró la regla, y se volvió a enrollar. El escriba anotó: "Diámetro variable según disposición anímica del sujeto".</p>
+
+        <p class="dialogo" data-badge="comentado sin sorpresa">
+          —Nos sigue desde hace días— dijo Axel, sin molestarse en explicar más.
+        </p>
+
+        <div class="mapache-trampa">
+          <p class="dialogo" data-badge="respondido con entusiasmo empresarial">
+            —¡Perfecto! Todo activo no reclamado pasa a ser propiedad temporal del torneo. Lo usaremos como bola de desempate si es necesario.
+          </p>
+        </div>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="susurrado a Axel">
+            —¿Debería.... rescatarlo?
+          </p>
+        </div>
+
+        <p class="dialogo" data-badge="respondido sin apartar la vista">
+          —Lleva semanas apareciendo solo. Creo que puede sobrevivir a un torneo de mapaches.
+        </p>
+
+        <p class="texto-narrativo"> Rigoberto colocó al erizo en una esquina de la mesa con una etiqueta que decía "RESERVA — NO TOCAR SIN FORMULARIO 7-B". El erizo permaneció ahí durante todo el desafío siguiente. Cuando la etiqueta se le cayó encima, no se movió. Cuando un mapache lo usó brevemente como pisapapeles para sujetar las reglas del juego, tampoco.</p>
+        <!-- =============== FIN CUARTA APARICIÓN DEL ERIZO =============== -->
+
+        <p class="texto-narrativo"> La mesa del tercer desafío estaba cubierta con cartas que provenían de al menos cinco juegos diferentes. Numeradas, con símbolos, con frutas, y algunas claramente dibujadas a mano por cachorros de mapache con más entusiasmo que talento.</p>
+
+        <div class="mapache-trampa">
+          <p class="dialogo" data-badge="instruido con reglas incomprensibles">
+            —Cartas del Caos. Nuestro juego favorito. Cada jugador recibe cinco cartas. El objetivo: la mejor mano posible usando cualquier combinación de sistemas de cartas conocidos o inventados sobre la marcha. La creatividad cuenta.
+          </p>
+        </div>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="preguntado con la cabeza ladeada">
+            —¿Podemos inventar reglas mientras jugamos?
+          </p>
+        </div>
+
+        <div class="mapache-trampa">
+          <p class="dialogo" data-badge="confirmado con alegría">
+            —¡Mientras puedas justificar tu mano con lógica convincente, cuenta!
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Rigoberto repartió con movimientos que claramente incluían dar cartas específicas a cada jugador. Ember recibió las suyas y frunció el ceño.</p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="preguntado examinando sus cartas">
+            —¿Por qué tengo un dos de corazones, un rey de espadas, una carta que dice "banana", otra con un dibujo de un pescado sonriente, y una en blanco?
+          </p>
+        </div>
+
+        <div class="mapache-trampa">
+          <p class="dialogo" data-badge="respondido como si explicara a un niño">
+            —Mano interesantísima. El pescado sonriente vale como comodín los martes. La banana cuenta como fruta real si nombras tres tipos de plátano. Y la carta en blanco es una carta de potencial infinito.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Seraphina estudió sus cartas. Las ordenó con las garras — despacio, metódica, como alguien que ha jugado juegos donde la presentación importa tanto como la sustancia. Luego sonrió.</p>
+
+        <p class="dialogo" data-badge="declarado con confianza serena">
+          —Tengo escalera real.
+        </p>
+
+        <p class="texto-narrativo"> Extendió las cartas sobre la mesa: un tres de tréboles, una carta de "manzana roja", otra que decía "martes", un dibujo de un gato de juego infantil, y la reina de diamantes. Todos se inclinaron para mirar.</p>
+
+        <div class="mapache-trampa">
+          <p class="dialogo" data-badge="preguntado sin entender cómo le habían dado la vuelta">
+            —¿Cómo es eso escalera real?
+          </p>
+        </div>
+
+        <p class="dialogo" data-badge="explicado señalando cada carta">
+          —El tres representa el comienzo. La manzana roja es la realeza de la naturaleza. Martes es el día real de la semana para hacer negocios importantes. El gato representa nobleza felina. Y la reina es literalmente realeza. Es una progresión de importancia creciente culminando en autoridad absoluta.
+        </p>
+
+        <p class="texto-narrativo"> El silencio se extendió. Rigoberto abrió la boca. La cerró. La volvió a abrir. Un mapache auxiliar consultó el reglamento — que no contenía nada útil porque las reglas no existían.</p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="murmurado con respeto franco">
+            —Eso.... en realidad suena convincente.
+          </p>
+        </div>
+
+        <div class="mapache-trampa">
+          <p class="dialogo" data-badge="admitido con respeto reluctante">
+            —No puedo argumentar contra eso.— Rigoberto se quitó el sombrero y lo puso sobre el pecho. —Es el farol más hermoso que he visto en años.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Seraphina recogió las cartas con la misma precisión con que las había colocado. Axel la miró — algo en la facilidad con que había construido esa narrativa le recordó... no supo qué. Un eco de algo. La sensación se disolvió antes de que pudiera darle forma.</p>
+      </section>
+
+      <!-- =============== LA RESOLUCIÓN =============== -->
+      <section id="resolucion-torneo" class="bosque-dados">
+        <h2>Victoria en la Derrota</h2>
+
+        <p class="texto-narrativo"> El torneo terminó 2-1 a favor de los mapaches. Técnicamente habían perdido. Pero Rigoberto se quitó el sombrero adornado y lo sostuvo contra el pecho con una solemnidad que no había mostrado en todo el torneo.</p>
+
+        <div class="mapache-trampa">
+          <p class="dialogo" data-badge="declarado con admiración genuina">
+            —Ese fue el torneo más divertido que hemos tenido en meses. Usualmente la gente se enoja cuando hacemos trampa. Ustedes entraron en el espíritu del juego.
+          </p>
+        </div>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="dicho con la risa de quien ha perdido y no le importa">
+            —Fue educativo. Nunca había visto trampas tan creativas.
+          </p>
+        </div>
+
+        <div class="mapache-trampa">
+          <p class="dialogo" data-badge="ofrecido con gesto magnánimo">
+            —Van a necesitar esas provisiones para llegar al Templo. Considérenlo una inversión en futuras historias interesantes.— Les devolvió los suministros. —Pero se quedan con el entretenimiento. Eso valió la pena.
+          </p>
+        </div>
+
+        <div class="referencia-lyra">
+          <p class="dialogo" data-badge="agregado por el mapache menor, mirando a Axel">
+            —Aunque debo preguntar.... esa cartógrafa lince que mencionamos. ¿De verdad no la conocen? Preguntó específicamente por un gato montés arquero con arco élfico.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Axel no se sonrojó esta vez. Se quedó quieto un segundo de más — como si el nombre de Lyra le recordara la nota en la funda del arco, las frecuencias duales, las coordenadas en su código personal.</p>
+
+        <p class="dialogo" data-badge="admitido con tono resignado">
+          —La conozco. Se llama Lyra. Es.... buena en lo que hace.
+        </p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="dicho con inocencia que no era del todo inocente">
+            —Preguntó por ti en Valle Tranquilo. Te dejó un mensaje sellado. Ganó un torneo en diez minutos preguntando por ti. Y tú dices que es —buena en lo que hace—.— Hizo una pausa. —Axel, ¿a cuántas personas más les ha contado sobre su cartógrafa que no conoce?
+          </p>
+        </div>
+
+        <p class="dialogo" data-badge="respondido caminando más rápido">
+          —Vámonos.
+        </p>
+      </section>
+
+      <!-- =============== SALIDA Y GANCHO =============== -->
+      <section id="salida-bosque">
+        <h3>Lo Que Queda del Juego</h3>
+
+        <p class="texto-narrativo"> Cruzaron el puente con provisiones intactas y el erizo, que en algún momento entre la resolución y la despedida había desaparecido de la mesa de Rigoberto. La etiqueta de "RESERVA — NO TOCAR SIN FORMULARIO 7-B" apareció pegada al fondo de la mochila de Axel esa noche. Nadie supo cómo.</p>
+
+        <p class="texto-narrativo"> Caminaron en silencio durante un rato. Un silencio diferente al de antes — más liviano, con las esquinas suavizadas. Ember silbaba una melodía que se parecía a la canción de cuna que Axel había destrozado durante el desafío de arquería. Seraphina caminaba con un paso que Axel no le había visto antes — más suelto, las antenas oscilando con el ritmo de la marcha en vez de estar rígidas.</p>
+
+        <p class="texto-narrativo"> Fue Seraphina quien rompió el silencio.</p>
+
+        <p class="dialogo" data-badge="dicho mirando al frente">
+          —Ember.
+        </p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="respondido girándose">
+            —¿Sí?
+          </p>
+        </div>
+
+        <p class="dialogo" data-badge="dicho con algo que casi era calidez">
+          —Cuando Rigoberto te devolvió las provisiones, no revisaste la bolsa. Confiaste en que estaba todo.
+        </p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="respondido con naturalidad">
+            —¿Por qué no confiaría? Fue honesto al final.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Seraphina no respondió. Caminó un poco más rápido. Las antenas dejaron de oscilar.</p>
+
+        <p class="texto-narrativo"> Axel notó el cambio pero no supo qué lo causó. Algo en la conversación había tocado un nervio — pero no un nervio de incomodidad. Más bien el tipo de dolor que produce ver algo que reconoces y sabes que no puedes tener.</p>
+
+        <p class="texto-narrativo"> Esa noche acamparon donde el Bosque de los Dados se encontraba con las primeras estribaciones de las montañas. Axel sacó el mapa de Lyra para verificar la ruta del día siguiente. Las coordenadas en código personal de Lyra seguían ahí — y ahora, bajo la luz de la fogata, notó algo que no había visto antes. Los símbolos de la segunda línea — los que parecían de los murciélagos — no estaban escritos encima de la ruta al Templo.</p>
+
+        <p class="texto-narrativo"> Estaban escritos encima de la zona que acababan de cruzar. El Bosque de los Dados. Y junto a ellos, en la letra apretada de Lyra, tres palabras que no necesitaban traducción:</p>
+
+        <p class="texto-narrativo" style="font-style: italic; padding-left: 30px;"> "Alguien más los sigue."</p>
+      </section>
+    </div>
+
+    <!--
+NOTAS DE CONTINUIDAD:
+— Grupo de 3 (sin Eco Pergaminada)
+— Erizo: cuarta aparición preservada con burocracia mapache
+— Seraphina gana cartas con ingenio (lee como habilidad natural, no como pista de manipulación)
+— Ember demuestra confianza excesiva + capacidad de reír ante la derrota
+— Lyra referenciada 3 veces por mapaches + conexión con nota de seccion_07
+— Gancho: "Alguien más los sigue" — abre misterio para seccion_07B
+— Momento clave: Seraphina nota que Ember confía sin verificar. Le duele reconocerlo.
+-->
+
+    <script src="global-reset.js"></script>
+  </body>
+</html>

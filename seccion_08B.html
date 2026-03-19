@@ -3,522 +3,626 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>El Cazador de Medianoche - seccion_08B</title>
+    <title>Sección 8B: La Cueva de los Murciélagos Críticos Gastronómicos - El Cazador de Medianoche</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="historia-interactiva.css" />
+    <style>
+      .cueva-gastronomica {
+        background: linear-gradient(135deg, #2f2f2f, #696969, #a9a9a9);
+        border-radius: 15px;
+        padding: 30px;
+        margin: 20px 0;
+        border: 2px solid rgba(105, 105, 105, 0.4);
+        box-shadow: 0 0 20px rgba(169, 169, 169, 0.3);
+      }
+
+      .murcielago-snob {
+        background: rgba(128, 0, 128, 0.2);
+        border-left: 4px solid #800080;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 0 10px 10px 0;
+        font-style: italic;
+      }
+
+      .ember-cocinando {
+        background: rgba(255, 165, 0, 0.2);
+        border-left: 4px solid #ffa500;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 0 10px 10px 0;
+      }
+
+      .solidaridad-grupal {
+        background: linear-gradient(135deg, #228b22, #32cd32, #90ee90);
+        border-radius: 15px;
+        padding: 20px;
+        margin: 15px 0;
+        border: 2px solid rgba(34, 139, 34, 0.4);
+      }
+
+      .comida-horrible {
+        background: linear-gradient(135deg, #8b4513, #a0522d, #d2691e);
+        border-radius: 20px;
+        padding: 25px;
+        margin: 15px 0;
+        border: 2px solid rgba(139, 69, 19, 0.4);
+      }
+
+      .seraphina-culpa {
+        background: rgba(75, 0, 130, 0.1);
+        border-left: 3px solid #4b0082;
+        padding: 12px;
+        margin: 10px 0;
+        font-style: italic;
+      }
+
+      .victoria-expulsion {
+        background: linear-gradient(135deg, #ffd700, #ffa500, #ff8c00);
+        border-radius: 15px;
+        padding: 20px;
+        margin: 15px 0;
+        border: 2px solid rgba(255, 215, 0, 0.4);
+      }
+
+      .dialogo-ember {
+        background: rgba(255, 215, 0, 0.1);
+        border-left: 4px solid #ffd700;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 0 10px 10px 0;
+      }
+    </style>
   </head>
   <body>
-    <!--
-╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
-║                                      SECCIÓN 8B: LA CUEVA DE LOS MURCIÉLAGOS CRÍTICOS GASTRONÓMICOS                                                              ║
-║                                                🍽️ DÍA 9 🍽️                                                                                                       ║
-╠══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║ CONTEXTO NARRATIVO:                                                                                                                                                 ║
-║ • POST-REVELACIÓN: Tensión aliviada pero no resuelta después de nutrias                                                                                            ║
-║ • Grupo funcionando como equipo pero con undercurrents de dolor                                                                                                     ║
-║ • Ember más dispuesto a cooperar pero aún procesando traición                                                                                                       ║
-║ • Necesitan refugio nocturno - encuentran cueva habitada                                                                                                            ║
-║                                                                                                                                                                      ║
-║ OBJETIVOS DE LA SECCIÓN:                                                                                                                                            ║
-║ • HUMOR: Murciélagos primos snobs de Eco Pergaminada que critican TODO                                                                                                        ║
-║ • EMBER: Intenta cocinar para impresionar, resultado horrible                                                                                                        ║
-║ • UNIÓN GRUPAL: Todos defienden comida horrible por solidaridad                                                                                                     ║
-║ • MURCIÉLAGOS OFENDIDOS: Los echan por —bárbaros con paladares de piedra—                                                                                           ║
-║ • VICTORIA: Ser echados se siente como triunfo grupal                                                                                                               ║
-║                                                                                                                                                                      ║
-║ ELEMENTOS ESPECÍFICOS:                                                                                                                                              ║
-║ • —¿Raciones de viaje? ¿Sin especias del Bosque Oriental?—                                                                                                          ║
-║ • Ember cocina sopa irreconocible con mejores intenciones                                                                                                           ║
-║ • Axel: —Está.... interesante— (tragando con dificultad)                                                                                                             ║
-║ • Seraphina: —He consumido venenos peores— (pausa)— Es broma—                                                                                                          ║
-║ • Murciélagos: —¡Bárbaros! ¡Paladares de piedra!—                                                                                                                   ║
-╚══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+    <div class="container">
+
+<!--
+╔════════════════════════════════════════════════════════════════════════════════╗
+║    SECCIÓN 8B: LA CUEVA DE LOS MURCIÉLAGOS CRÍTICOS GASTRONÓMICOS           ║
+║                          DÍA 9 (noche)                                       ║
+╠════════════════════════════════════════════════════════════════════════════════╣
+║ GRUPO: Axel, Seraphina, Ember (3 personas. Sin Eco Pergaminada)             ║
+║ INVENTARIO: Todo lo anterior + cera impermeabilizante, red de pesca,        ║
+║   silbato de río, Certificado de Supervivencia Acuática                     ║
+║ CONEXIÓN: Viene de seccion_08A (voces múltiples en la cueva)                ║
+║ OBJETIVO: Humor + solidaridad grupal + pergamino con info del Templo        ║
+╚════════════════════════════════════════════════════════════════════════════════╝
 -->
 
-    <!doctype html>
-    <html lang="es">
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Sección 8B: La Cueva de los Murciélagos Críticos Gastronómicos - El Cazador de Medianoche</title>
-        <link rel="stylesheet" href="styles.css" />
-        <style>
-          .cueva-gastronomica {
-            background: linear-gradient(135deg, #2f2f2f, #696969, #a9a9a9);
-            border-radius: 15px;
-            padding: 30px;
-            margin: 20px 0;
-            border: 2px solid rgba(105, 105, 105, 0.4);
-            box-shadow: 0 0 20px rgba(169, 169, 169, 0.3);
-          }
+      <!-- =============== BÚSQUEDA DE REFUGIO =============== -->
+      <section id="busqueda-refugio" class="cueva-gastronomica">
+        <h1>El Cazador de Medianoche - Sección 8B: La Cueva de los Murciélagos Críticos Gastronómicos</h1>
 
-          .murcielago-snob {
-            background: rgba(128, 0, 128, 0.2);
-            border-left: 4px solid #800080;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 0 10px 10px 0;
-            font-style: italic;
-          }
+        <p class="texto-narrativo"> El pelaje de Axel todavía no se había secado del todo cuando el sol comenzó a esconderse detrás de las montañas. Las últimas horas desde el río habían transcurrido en un silencio diferente al de la mañana — menos afilado, más parecido al silencio de animales que caminan juntos porque han decidido hacerlo.</p>
 
-          .ember-cocinando {
-            background: rgba(255, 165, 0, 0.2);
-            border-left: 4px solid #ffa500;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 0 10px 10px 0;
-          }
+        <p class="texto-narrativo"> La temperatura bajó con la rapidez que solo ocurre en las montañas, y Axel sintió el frío metérsele en el pelaje mojado como dientes diminutos. Las orejas le giraron buscando refugio — el sonido del viento contra roca cambia cuando hay una cueva cerca, se vuelve más hueco, más resonante, como el interior de una caracola.</p>
 
-          .solidaridad-grupal {
-            background: linear-gradient(135deg, #228b22, #32cd32, #90ee90);
-            border-radius: 15px;
-            padding: 20px;
-            margin: 15px 0;
-            border: 2px solid rgba(34, 139, 34, 0.4);
-            animation: solidarity-glow 3s ease-in-out infinite alternate;
-          }
+        <p class="texto-narrativo"> Encontraron la formación rocosa justo cuando las primeras estrellas asomaban. Tres cuevas en la ladera, como bocas abiertas en la piedra. Axel olió cada una desde la distancia: la primera a humedad y desuso, la segunda a algo animal reciente, y la tercera a especias, a humo controlado, y a algo que su estómago identificó inmediatamente como comida de verdad.</p>
 
-          @keyframes solidarity-glow {
-            0% {
-              box-shadow: 0 0 10px rgba(34, 139, 34, 0.3);
-            }
-            100% {
-              box-shadow:
-                0 0 20px rgba(50, 205, 50, 0.5),
-                0 0 30px rgba(34, 139, 34, 0.2);
-            }
-          }
+        <p class="texto-narrativo"> Cuando se acercaron, se hizo evidente que ya estaba ocupada. Sonidos de conversación sofisticada emanaban de su interior — el tipo de conversación donde cada palabra parece elegida para demostrar que quien la dice es más inteligente que quien la escucha. Un cartel pequeño pero elegante cerca de la entrada, grabado en madera pulida con letras doradas, decía: —Sociedad Gastronómica de Murciélagos de Ala Fina - Solo Miembros e Invitados Distinguidos—. Debajo, en letra más pequeña: —No se aceptan quejas sobre porciones. El arte no se mide en volumen—.</p>
 
-          .comida-horrible {
-            background: linear-gradient(135deg, #8b4513, #a0522d, #d2691e);
-            border-radius: 20px;
-            padding: 25px;
-            margin: 15px 0;
-            border: 2px solid rgba(139, 69, 19, 0.4);
-            animation: horrible-smell 4s ease-in-out infinite alternate;
-          }
-
-          @keyframes horrible-smell {
-            0% {
-              transform: translateY(0px);
-              opacity: 0.9;
-            }
-            100% {
-              transform: translateY(-2px);
-              opacity: 1;
-            }
-          }
-
-          .avergonzada {
-            background: rgba(255, 20, 147, 0.1);
-            border-left: 3px solid #ff1493;
-            padding: 12px;
-            margin: 10px 0;
-            font-style: italic;
-          }
-
-          .victoria-expulsion {
-            background: linear-gradient(135deg, #ffd700, #ffa500, #ff8c00);
-            border-radius: 15px;
-            padding: 20px;
-            margin: 15px 0;
-            border: 2px solid rgba(255, 215, 0, 0.4);
-          }
-        </style>
-      </head>
-      <body>
-        <div class="container">
-          <!-- =============== BÚSQUEDA DE REFUGIO =============== -->
-          <section id="busqueda-refugio" class="cueva-gastronomica">
-            <h1>El Cazador de Medianoche - Sección 8B: La Cueva de los Murciélagos Críticos Gastronómicos</h1>
-
-            <p class="texto-narrativo"> El pelaje de Axel todavía no se había secado del todo cuando el sol comenzó a esconderse detrás de las montañas. Las últimas horas desde el río de las nutrias habían transcurrido en un silencio diferente al de la mañana — menos afilado, más parecido al silencio de animales que caminan juntos porque han decidido hacerlo y no porque no tengan otra opción. El Certificado de Supervivencia Acuática que Capitán Remolino les había dado asomaba del bolsillo de Ember, arrugado y todavía húmedo. </p>
-
-            <p class="texto-narrativo"> La temperatura bajó con la rapidez que solo ocurre en las montañas, y Axel sintió cómo el frío se le metía en el pelaje mojado como dientes diminutos. Las orejas le giraron automáticamente buscando refugio — el sonido del viento contra roca cambia cuando hay una cueva cerca, se vuelve más hueco, más resonante, como el interior de una caracola gigante. </p>
-
-            <p class="texto-narrativo"> Encontraron la formación rocosa justo cuando las primeras estrellas empezaban a asomar. Tres cuevas en la ladera, como bocas abiertas en la piedra. Axel olió cada una desde la distancia: la primera a humedad y desuso, la segunda a algo animal que había pasado recientemente, y la tercera.... la tercera olía a especias, a humo controlado, y a algo que su estómago identificó inmediatamente como comida de verdad. </p>
-
-            <p class="texto-narrativo"> Sin embargo, cuando se acercaron a la entrada más grande, se hizo evidente que ya estaba ocupada. Sonidos de conversación sofisticada emanaban de su interior — el tipo de conversación donde cada palabra parece elegida para demostrar que quien la dice es más inteligente que quien la escucha. Junto con las voces llegaban aromas complejos que hicieron que el estómago de Ember gruñera con fuerza suficiente para que todos lo escucharan. </p>
-
-            <p class="texto-narrativo"> Un cartel pequeño pero elegante cerca de la entrada, grabado en madera pulida con letras doradas, decía: —Sociedad Gastronómica de Murciélagos de Ala Fina - Solo Miembros e Invitados Distinguidos—. Debajo, en letra más pequeña: —No se aceptan quejas sobre porciones. El arte no se mide en volumen—. </p>
-
-            <p class="dialogo reconocimiento" data-badge="murmurado con creciente horror"> —Oh no— susurró Eco Pergaminada, y todo su pequeño cuerpo se tensó como si acabara de detectar un depredador. Sus alas se plegaron contra el cuerpo en la postura universal de los murciélagos que quieren hacerse invisibles.— Esos son.... esos son mis primos. Los primos refinados— </p>
-
-            <p class="dialogo curioso" data-badge="preguntado con interés"> —¿Primos refinados?— preguntó Ember, cuyas orejas se habían inclinado hacia la cueva con el interés de alguien que todavía no sabe que debería estar huyendo. </p>
-
-            <div class="avergonzada">
-              <p class="dialogo explicativa" data-badge="explicado con vergüenza familiar"> —Murciélagos que se consideran.... superiores culturalmente. Especializados en gastronomía de alta cocina, crítica culinaria, y el arte milenario de hacer que todos los demás se sientan inadecuados— Eco Pergaminada suspiró con el peso de años de reuniones familiares.— La última vez que los visité, criticaron la forma en que masticaba. No lo que comía. La forma en que lo masticaba. Dijeron que mis movimientos mandibulares carecían de ritmo y estructura— </p>
-            </div>
-
-            <div class="seraphina-culpa">
-              <p class="dialogo incrédula" data-badge="preguntado con las antenas alzadas"> —¿Criticaron cómo masticabas?— Seraphina la miró con una expresión que, por primera vez en horas, no era de culpa sino de genuina incredulidad. </p>
-            </div>
-
-            <p class="dialogo confirmando" data-badge="respondido con resignación"> —Tenían un formulario— dijo Eco Pergaminada.— Con puntuación— </p>
-
-            <p class="texto-narrativo"> Axel intercambió una mirada con Ember. La primera mirada cómplice que compartían desde la revelación — breve, casi accidental, pero real. Ambos habían crecido con una tía abuela que criticaba la forma en que se sentaban a la mesa, así que entendían el concepto a un nivel visceral. </p>
-
-            <p class="texto-narrativo"> Antes de que pudieran debatir buscar refugio en otra parte — y el pelaje mojado de Axel votaba fuertemente a favor de cualquier cueva con techo —, una voz nasal y pretenciosa se elevó desde el interior: </p>
-
-            <div class="murcielago-snob">
-              <p class="dialogo pretencioso" data-badge="declarado con esnobismo evidente"> —¡Ah! ¡Visitantes! ¡Qué.... encantador!— un murciélago con lo que parecía ser una pequeña corbata tejida con hilos de telaraña plateada apareció en la entrada. Era más grande que Eco Pergaminada, con el pelaje meticulosamente peinado hacia atrás y un monóculo diminuto que no parecía cumplir ninguna función óptica real.— Soy Pluma Plateada, presidente vitalicio de nuestra Sociedad Gastronómica, curador del Archivo de Sabores Perdidos, y juez certificado en veintitrés categorías culinarias— hizo una reverencia tan elaborada que casi se cae.— ¿Buscan refugio para la noche?— </p>
-            </div>
-
-            <p class="texto-narrativo"> Pluma Plateada los observó entrar uno por uno, y su nariz se arrugó con la misma concentración que usaría para evaluar un caldo sospechoso. Se envolvió en sus alas — la postura que adoptaba para emitir juicios importantes — y su monóculo captó la luz de los cristales. </p>
-
-            <div class="murcielago-snob">
-              <p class="dialogo evaluando" data-badge="murmurado con entonación de sommelier"> —Hmm. Noto base amarga con capas de resentimiento no resuelto. Un toque ácido de culpa genuina que no ha tenido tiempo de madurar. Y.... ¿es eso arrepentimiento? Interesante. Un poco verde todavía, pero con potencial si se deja reposar— señaló a Ember con la punta de un ala.— Ese de ahí tiene demasiada pimienta. El arquero es pan sin sal: correcto pero sin sorpresas. Y la mantis....— hizo una pausa más larga, inclinando la cabeza.— La mantis es un plato que ha sido recalentado demasiadas veces. Todavía tiene sabor, pero ya no sabe a lo que era originalmente— </p>
-            </div>
-
-            <p class="texto-narrativo"> Nadie supo qué responder a eso. Seraphina parpadeó dos veces. Axel abrió la boca y la cerró. Ember miró a su hermano buscando confirmación de que un murciélago acababa de comparar su furia con un exceso de pimienta. </p>
-
-            <p class="texto-narrativo"> Eco Pergaminada se escondió detrás de la oreja de Axel con un movimiento tan rápido que él apenas la sintió aterrizar. </p>
-
-            <p class="dialogo diplomático" data-badge="respondido con cortesía"> —Si no es inconveniente, sí. Somos viajeros y agradeceremos cualquier hospitalidad— respondió Axel con la misma cortesía que usaba para negociar con criaturas cuya naturaleza aún no comprendía. Una lección que su padre le había enseñado: siempre ser educado hasta saber exactamente con qué tipo de animal estás tratando. </p>
-
-            <div class="murcielago-snob">
-              <p class="dialogo condescendiente" data-badge="ofrecido con magnanimidad"> —¡Por supuesto! ¡Siempre tenemos espacio para.... aventureros!— la pausa antes de —aventureros— duró exactamente lo suficiente para que todos entendieran que la palabra real que quería usar era otra menos generosa.— Aunque debo advertir que estamos en medio de nuestra Cena de Degustación Semanal de Alta Gastronomía. Les pedimos que mantengan sus.... actividades alimenticias.... en un área designada para no contaminar la experiencia sensorial de nuestros miembros— </p>
-            </div>
-
-            <p class="dialogo murmurada" data-badge="susurrado desde detrás de la oreja de Axel"> —Eso significa que van a criticar absolutamente todo lo que comamos, digamos, olamos, o hagamos durante las próximas seis horas— murmuró Eco Pergaminada.— Y lo van a documentar. Tienen formularios para todo. La última vez que vine me dieron una evaluación de tres páginas sobre mi forma de respirar cerca de la comida— </p>
-
-            <p class="texto-narrativo"> Seraphina estudió a Pluma Plateada con la atención de alguien que reconoce la manipulación social cuando la ve — aunque viniera envuelta en corbata de telaraña en lugar de mentiras sobre hermanas maldecidas. Algo en la presunción del murciélago la irritaba de una forma que resultaba casi reconfortante: era la primera emoción que sentía en horas que no era culpa. </p>
-          </section>
-
-          <!-- =============== LA CRÍTICA GASTRONÓMICA COMIENZA =============== -->
-          <section id="critica-comienza" class="cueva-gastronomica">
-            <h2>Paladares Superiores</h2>
-
-            <p class="texto-narrativo"> El interior de la cueva había sido transformado en algo que Axel no esperaba encontrar en medio de las montañas: un restaurante. Las paredes de roca estaban cubiertas con lo que parecían ser reseñas culinarias enmarcadas — todas escritas por los propios murciélagos sobre su propia comida, todas otorgándose puntuaciones perfectas. Mesas bajas hechas de roca pulida ocupaban el centro, iluminadas por cristales bioluminiscentes que alguien había dispuesto con la precisión de un artista obsesivo. Y por todas partes, murciélagos — al menos una docena — con accesorios que gritaban refinamiento cultural: monóculos diminutos, corbatas de telaraña, gorros de chef del tamaño de una bellota, y uno que llevaba lo que parecía ser una bufanda hecha de pétalos de flor prensados. </p>
-
-            <p class="texto-narrativo"> El olor era lo que más golpeó a Axel. Sus fosas nasales procesaron capas de aromas tan complejos que su cerebro de cazador no sabía cómo clasificarlos — especias que no reconocía, algo dulce y quemado simultáneamente, hierbas que olían a lluvia de primavera. Y debajo de todo eso, el aroma inconfundible de superioridad moral, que no tiene olor real pero que él podía detectar igual que detectaba una trampa oculta en la maleza. </p>
-
-            <p class="texto-narrativo"> Eco Pergaminada se escondía detrás de la oreja de Axel como un soldado detrás de una trinchera, pero uno de los murciélagos la detectó con la precisión de un pariente que huele vergüenza familiar a distancia. </p>
-
-            <div class="murcielago-snob">
-              <p class="dialogo condescendiente" data-badge="exclamado con falsa alegría"> —¡¿Prima Pergaminada?! ¡Qué sorpresa tan.... inesperada!— un murciélago con gorro de chef se acercó volando con la gracia que solo los que practican vuelo ornamental pueden lograr.— ¿Sigues con esa fascinación tuya por.... las criaturas terrestres? Mamá pregunta por ti cada solsticio. Dice que le preocupa que pases demasiado tiempo con animales de tierra y pierdas tu.... refinamiento aéreo— </p>
-            </div>
-
-            <p class="dialogo defensiva" data-badge="respondido desde detrás de la oreja de Axel"> —Mi nombre es Eco. Solo Eco— dijo con una firmeza que sorprendió a todos excepto a Axel, que podía sentir el temblor de sus pequeñas garras contra su pelaje.— Y estos animales de tierra son mis amigos— </p>
-
-            <div class="murcielago-snob">
-              <p class="dialogo compasivo-falso" data-badge="dicho con piedad teatral"> —Oh querida. Amigos. Qué.... encantador— el murciélago intercambió una mirada con Pluma Plateada que contenía suficiente juicio para llenar una biblioteca.— Supongo que cada quien encuentra compañía a su nivel— </p>
-            </div>
-
-            <p class="texto-narrativo"> Axel sintió cómo Eco Pergaminada se tensaba contra su oreja — un temblor diminuto que reconoció como la misma reacción que tenían los animales pequeños cuando un depredador los hacía sentir insignificantes. Algo caliente se le subió al pecho, un instinto protector que no era muy diferente al que sentía por Ember. Sin pensarlo, movió la cabeza ligeramente para que Eco quedara más protegida y miró al murciélago con la expresión tranquila y medida que usaba antes de disparar una flecha. </p>
-
-            <p class="dialogo sereno" data-badge="dicho con calma que advertía"> —Eco Pergaminada es la persona más valiente que conozco de su tamaño. Ha viajado con nosotros a través de territorios que harían que sus formularios de evaluación se derritieran. Así que quizás evalúen un poco menos y respeten un poco más— </p>
-
-            <p class="texto-narrativo"> El silencio que siguió fue breve pero denso. Eco Pergaminada soltó la oreja de Axel y voló hasta posarse en su hombro, irguiéndose todo lo que su pequeño cuerpo le permitía. Nadie la había defendido así delante de su familia. Nunca. </p>
-
-            <p class="texto-narrativo"> En las mesas había platos con porciones artísticamente pequeñas de comida que se veía increíblemente elaborada pero también.... insuficiente. El estómago de Ember gruñó por segunda vez, y esta vez varios murciélagos giraron la cabeza con expresiones que sugerían que los ruidos digestivos eran una ofensa punible. </p>
-
-            <div class="murcielago-snob">
-              <p class="dialogo crítico" data-badge="observado con horror"> —Oh queridos— dijo otro murciélago que llevaba un monóculo y sostenía una pluma de ave como si fuera un cetro,— espero que no hayan traído.... ¿raciones de viaje?— la forma en que pronunció —raciones de viaje— sugería que era comparable a traer una enfermedad contagiosa. Inmediatamente sacó una pequeña tarjeta de evaluación colgada de su ala con un hilo dorado.— Formulario de Evaluación Culinaria Preliminar, Sección A: Calidad de ingredientes traídos por visitantes. Escala de 1 a 10, donde 1 es insulto gastronómico y 10 es digno de consideración— </p>
-            </div>
-
-            <p class="dialogo inocente" data-badge="respondido sin saber el peligro"> —Bueno, sí, tenemos algo de pan seco, frutas preservadas, y....— comenzó Ember con la inocencia de alguien que no sabe que está a punto de cometer un crimen. </p>
-
-            <div class="murcielago-snob">
-              <p class="dialogo horrorizado" data-badge="exclamado con trauma culinario"> —¡¿Sin especias del Bosque Oriental?! ¡¿Sin infusiones de hierbas de la Montaña Sagrada?! ¡¿Sin al menos un toque de sal marina del Acantilado Susurrante?!— </p>
-            </div>
-
-            <p class="texto-narrativo"> Los otros murciélagos gastronómicos reaccionaron como si alguien acabara de arrastrar garras por una pizarra. Un coro de jadeos indignados llenó la cueva. Varios sacaron pequeños pergaminos y comenzaron a escribir notas con la velocidad y furia de cronistas presenciando una atrocidad histórica. Axel alcanzó a leer algunos fragmentos por encima del hombro del más cercano: —Evaluación de Presentación: 0.5/10—, —Consideración de Terroir: N/A (inaplicable)—, —Análisis de Maridaje con Ambiente Cavernoso: Completamente inadecuado—, —Respeto por Tradiciones Culinarias Milenarias: Ausente por completo—, y su favorito personal: —Nota adicional: el gato grande gruñe del estómago con total falta de decoro—. </p>
-
-            <p class="texto-narrativo"> Ember miró las notas, miró los platos minúsculos en las mesas, y Axel reconoció la chispa en sus ojos — la misma que tenía de cachorro cuando alguien le decía que no podía hacer algo. Era la expresión que precedía a las peores ideas y las mejores anécdotas familiares. </p>
-
-            <div class="ember-cocinando">
-              <p class="texto-narrativo"> Ember se levantó con un movimiento tan decidido que sus garras chirriaron contra la roca del suelo. Axel conocía ese movimiento — era el mismo con el que su hermano se lanzaba a hacer cosas impulsivas cuando necesitaba demostrar que era más que el hermano pequeño, más que el diplomático, más que el que siempre se quedaba atrás. </p>
-
-              <p class="dialogo entusiasta" data-badge="ofrecido con optimismo peligroso"> —¡Saben qué! Puedo cocinar— anunció, con la confianza de alguien que confunde entusiasmo con habilidad.— Luna Suave me enseñó a hacer sopa con lo que hubiera disponible. ¡Déjenme preparar algo especial para todos! Tengo hierbas que recogí en el camino, las especias que nos dieron los mapaches, y vi unos hongos cerca de la entrada que se veían perfectamente comestibles— </p>
-            </div>
-
-            <p class="dialogo alarmada" data-badge="murmurado con horror creciente"> —Ember, no.... ellos no van a....— Eco Pergaminada voló en un círculo nervioso.— Estos murciélagos una vez hicieron llorar a un chef profesional de castores porque su presentación de salmón carecía de lo que llamaron narrativa culinaria. Esto no va a terminar bien— </p>
-
-            <p class="dialogo seco" data-badge="comentado desde una esquina"> —Los hongos cerca de la entrada eran morados— observó Axel.— Los hongos morados generalmente no son una buena señal— </p>
-
-            <p class="dialogo descartando" data-badge="respondido con gesto de la pata"> —Los hongos morados de montaña son perfectamente seguros. Creo. Luna Suave usaba unos parecidos. O quizás eran los azules. De cualquier forma, confíen en mí— </p>
-
-            <p class="texto-narrativo"> Axel y Seraphina intercambiaron una mirada — la primera mirada que compartían desde la revelación que no estaba cargada de dolor o acusación. Esta estaba cargada de la certeza universal de que lo que estaba a punto de pasar sería un desastre, y de la decisión mutua y silenciosa de dejarlo ocurrir porque Ember necesitaba esto. Necesitaba hacer algo con las manos que no fuera apretar los puños. </p>
-
-            <p class="texto-narrativo"> Ember ya estaba en movimiento, reuniendo ingredientes con el entusiasmo desmedido de quien ha canalizado toda la furia y confusión de las últimas horas en una sola misión: cocinar una sopa que demostrara que era capaz de crear algo en lugar de destruirlo. Los murciélagos gastronómicos lo observaban con la fascinación horrorizada de quien ve un accidente ocurriendo en cámara lenta y no puede apartar la mirada. </p>
-
-            <p class="texto-narrativo"> Seraphina observó a Ember cocinar desde la distancia, y algo en la forma en que cortaba las hierbas — con garras torpes pero llenas de intención — le apretó algo dentro del pecho. Ella conocía esa necesidad. La necesidad de hacer algo con las manos cuando la cabeza es un lugar inhabitable. Durante meses después de la masacre de su familia, había construido trampas. No para usar — solo para construir y desarmar, construir y desarmar, hasta que el movimiento repetitivo ahogaba los gritos que llevaba por dentro. Ember estaba haciendo lo mismo, solo que con hongos morados y especias de mapache en lugar de cuerdas y mecanismos. </p>
-
-            <p class="dialogo ofreciendo" data-badge="dicho acercándose con cautela"> —¿Necesitas.... ayuda?— preguntó, y la palabra se sintió extraña en su boca — una criatura que había pasado años tomando en lugar de ofreciendo. </p>
-
-            <div class="ember-cocinando">
-              <p class="texto-narrativo"> Ember la miró. Sus orejas se movieron — un micro-gesto que en los gatos significa —estoy evaluando si confío en ti—, el mismo que Axel hacía pero menos sutil, más transparente. Luego señaló las hierbas. </p>
-
-              <p class="dialogo aceptando" data-badge="respondido con cautela que cedía"> —Puedes cortar esas en trozos pequeños. Pero pequeños de verdad, no del tamaño que una mantis considere pequeño— </p>
-            </div>
-
-            <p class="texto-narrativo"> Seraphina se sentó junto a él y comenzó a cortar hierbas con la precisión milimétrica que solo sus patas delanteras podían lograr. Los cortes eran perfectos — cada trozo idéntico al anterior, cada movimiento controlado al milímetro. Ember la observó un momento, y algo parecido a admiración renuente le cruzó el rostro antes de poder detenerla. </p>
-
-            <p class="dialogo comentando" data-badge="admitido a regañadientes"> —Okay, eso es.... impresionantemente preciso— </p>
-
-            <p class="dialogo simple" data-badge="respondido sin levantar la mirada"> —Mis patas fueron diseñadas para cosas más peligrosas que cocinar. Es agradable usarlas para algo que no destruye— </p>
-
-            <p class="texto-narrativo"> No dijeron nada más. No necesitaban hacerlo. Cortaron hierbas juntos durante varios minutos, y el silencio entre ellos fue diferente al silencio del camino — menos tenso, más parecido al silencio de dos personas que están decidiendo, con cada segundo que pasa, si pueden compartir espacio sin que les duela demasiado. </p>
-          </section>
-
-          <!-- =============== EL DESASTRE CULINARIO =============== -->
-          <section id="desastre-culinario" class="comida-horrible">
-            <h3>Intenciones Versus Resultados</h3>
-
-            <p class="texto-narrativo"> Lo que siguió fue una demostración de cómo las mejores intenciones pueden producir los peores resultados culinarios conocidos por criatura viviente. Ember cocinó con pasión genuina, usando un cuenco de piedra que los murciélagos le prestaron con la misma reluctancia con que prestarían una reliquia sagrada a un bárbaro. Experimentó con combinaciones de hierbas que había recogido durante el camino — sin verificar cuáles eran comestibles y cuáles eran decorativas —, agregó las especias de los mapaches con la generosidad de quien cree que más es siempre mejor, y aplicó técnicas que estaba bastante seguro de haber visto hacer a Luna Suave, aunque en retrospectiva quizás había confundido el orden de los pasos. </p>
-
-            <p class="texto-narrativo"> Axel observó el proceso desde su rincón, lamiendo las últimas secciones de pelaje mojado, y cada nueva adición al cuenco le provocaba una reacción involuntaria — las orejas hacia atrás cuando los hongos morados entraron al caldo, los bigotes temblando cuando una nube de especias de mapache convirtió el aire en algo casi sólido, y un parpadeo largo y doloroso cuando Ember decidió que lo que la sopa realmente necesitaba era —más de todo—. </p>
-
-            <p class="texto-narrativo"> El resultado fue una sopa que desafiaba tanto las leyes culinarias como las de la física. Tenía un color que oscilaba entre el morado furioso y el verde resignado, dependiendo del ángulo desde el que la miraras. Su textura sugería que había cobrado voluntad propia y estaba considerando escapar del cuenco. Y el aroma — el aroma llegó como una bofetada cariñosa pero innegable, tan intenso que las antenas de Seraphina se curvaron involuntariamente hacia atrás y dos de los murciélagos más cercanos se cayeron de sus perchas. </p>
-
-            <div class="ember-cocinando">
-              <p class="dialogo orgulloso" data-badge="presentado con confianza mal ubicada"> —¡Ta-da! Sopa de Viajero Especial de Ember— anunció, señalando su creación con una pata extendida y una sonrisa que era genuinamente la más feliz que había tenido en todo el día.— Con hierbas del camino, especias de mapache, hongos de montaña, y.... eh.... un toque de creatividad personal— </p>
-            </div>
-
-            <p class="texto-narrativo"> Los murciélagos gastronómicos se acercaron con la cautela de quien se aproxima a un artefacto potencialmente explosivo. Pluma Plateada se inclinó sobre el cuenco, inhaló una vez, y su monóculo se empañó. </p>
-
-            <div class="murcielago-snob">
-              <p class="dialogo horrorizado" data-badge="susurrado con hondo trauma"> —Es.... es....— Pluma Plateada buscó palabras con la desesperación de un poeta confrontando algo que su vocabulario no fue diseñado para describir.— ¿Qué son esos.... trozos flotantes que se mueven solos?— </p>
-            </div>
-
-            <div class="ember-cocinando">
-              <p class="dialogo defensivo" data-badge="explicado con orgullo persistente"> —¡Esos son los hongos especiales que encontré! Están un poco más masticables de lo que esperaba, pero agregan textura— miró su creación con orgullo.— El movimiento probablemente es por las burbujas del caldo. O por las especias de mapache. Los mapaches dijeron que eran especias especiales— </p>
-            </div>
-
-            <p class="dialogo murmurando" data-badge="comentado para sí mismo"> —Los mapaches también dijeron que su mapa era preciso— murmuró Axel, recordando el caótico torneo cartográfico que había sido todo menos preciso. </p>
-
-            <p class="texto-narrativo"> El momento de verdad llegó cuando Ember sirvió porciones para todos — en los cuencos finos de los murciélagos, que miraron cómo su vajilla artesanal era profanada con la expresión de padres viendo a sus hijos ser adoptados por bárbaros. Uno de los murciélagos se desmayó y tuvo que ser abanicado por dos colegas con sus propias alas. Otro comenzó a escribir lo que parecía ser un testamento culinario. Un tercero olió su porción, retrocedió como si lo hubieran golpeado, y susurró —este es el fin de una era— con la gravedad de un profeta anunciando el apocalipsis. </p>
-
-            <p class="texto-narrativo"> Pluma Plateada, con la determinación de un líder que no abandona a su tripulación, tomó una cucharada microscópica. La llevó a su boca. Masticó. Su expresión pasó por lo que Axel solo podía describir como las cinco etapas del duelo culinario — negación, furia, negociación con sus papilas gustativas, depresión profunda, y finalmente una aceptación horrorizada de que acababa de consumir algo que nunca podría ser des-probado. Escupió discretamente en su servilleta de seda, que inmediatamente cambió de color. </p>
-
-            <div class="murcielago-snob">
-              <p class="dialogo devastado" data-badge="pronunciado con voz de funeral"> —Esto.... esto no es comida— dijo Pluma Plateada con la voz de alguien que ha mirado directamente al abismo y el abismo le ha devuelto la mirada con sabor a hongos morados.— Esto es un evento. Un evento traumático. Mis papilas gustativas van a necesitar terapia— </p>
-            </div>
-          </section>
-
-          <!-- =============== LA SOLIDARIDAD GRUPAL =============== -->
-          <section id="solidaridad-defensiva" class="solidaridad-grupal">
-            <h3>Lealtad Culinaria</h3>
-
-            <p class="texto-narrativo"> Fue entonces cuando algo hermoso ocurrió, aunque empezó con una mueca. </p>
-
-            <p class="texto-narrativo"> Axel fue el primero en probar la sopa. Levantó el cuenco con la misma cautela con que se acercaría a una trampa desconocida, llevó la cuchara a sus labios, y.... su expresión facial pasó por un recorrido que incluía sorpresa, horror, confusión, un breve instante de lo que podría haber sido terror existencial, y finalmente una determinación férrea de no escupir delante de su hermano. Tragó. Sus ojos se llenaron de lágrimas que él insistiría después que eran por las especias de mapache. </p>
-
-            <p class="dialogo diplomático" data-badge="dicho con dificultad heroica"> —Está.... interesante— logró decir, con la voz ligeramente estrangulada pero sonriendo genuinamente a su hermano. El arco en su espalda pulsó suavemente, como si su padre también estuviera conteniendo una carcajada desde donde fuera que estuviera.— Definitivamente único. No he probado nada ni remotamente similar en mi vida. Y eso es.... un hecho— </p>
-
-            <p class="texto-narrativo"> Ember lo miró buscando la mentira, como hacía desde cachorro cuando no estaba seguro de si Axel lo protegía de la verdad o le decía lo que quería escuchar. Pero lo que encontró fue algo más complejo: su hermano mayor haciendo un esfuerzo visible, genuino y ligeramente doloroso por apoyarlo. Y viniendo de Axel — que nunca había sido bueno mintiendo —, ese esfuerzo valía más que cualquier cumplido perfecto. </p>
-
-            <div class="seraphina-culpa">
-              <p class="texto-narrativo"> Seraphina observó el intercambio desde su lugar. La forma en que Axel protegía a Ember — no con mentiras elaboradas sino con verdades incompletas dichas con amor — le recordó algo que había intentado olvidar: las mantis de su colonia hacían lo mismo. Su madre solía decirle que las bayas amargas eran —bayas de valentía— para que se las comiera sin quejarse. La memoria la golpeó en un lugar blando, y antes de que pudiera detenerse, tomó una cucharada de la sopa de Ember. </p>
-            </div>
-
-            <div class="seraphina-culpa">
-              <p class="dialogo solidaria" data-badge="añadido con humor seco"> —He consumido venenos peores— declaró, y el silencio que siguió fue tan denso que podría haberse cortado con una garra. Luego parpadeó.— Es broma— una pausa que duró exactamente lo suficiente para que todos se preguntaran si realmente lo era.— Pero sí tiene.... carácter. Mucho carácter. Posiblemente demasiado carácter. Pero carácter— </p>
-            </div>
-
-            <p class="texto-narrativo"> Un murciélago dejó caer su pluma de tomar notas. Otro abrió la boca tan ampliamente que se le cayó el monóculo. Nadie en la cueva podía creer que alguien hubiera hecho una broma sobre veneno con la naturalidad de quien comenta el clima — excepto los tres que viajaban con ella, que reconocieron en ese humor seco algo que no habían visto antes: a Seraphina bajando la guardia lo suficiente como para intentar ser graciosa. </p>
-
-            <p class="dialogo leal" data-badge="agregado con determinación"> —¡Y está hecha con ingredientes naturales del camino!— Eco Pergaminada tomó un sorbo pequeño, y sus ojos se abrieron tanto que por un momento pareció tener cuatro en lugar de dos. Pero continuó valientemente, tragando con un movimiento que involucró todo su pequeño cuerpo.— ¡Es.... muy.... auténtica! ¡Tiene terroir! ¡Terroir de montaña! ¡Eso es más de lo que puedo decir de sus porciones microscópicas que ni siquiera llenan una de mis alas!— </p>
-
-            <p class="texto-narrativo"> La mención de —terroir— — una palabra que Eco Pergaminada claramente había aprendido de sus primos y estaba usando como arma por primera vez — provocó un jadeo colectivo entre los murciélagos gastronómicos. Era como si una oveja hubiera citado a Shakespeare: técnicamente correcto, pero profundamente perturbador. </p>
-
-            <p class="texto-narrativo"> Los murciélagos gastronómicos observaron este despliegue de solidaridad con creciente horror e indignación. Varios tomaban notas tan furiosamente que sus plumas echaban chispas contra los pergaminos. Uno estaba dibujando un diagrama de lo que parecía ser el —ciclo de degradación culinaria— con flechas apuntando a cada miembro del grupo. </p>
-
-            <div class="murcielago-snob">
-              <p class="dialogo indignado" data-badge="declarado con horror culinario"> —¡¿Están.... están DEFENDIENDO esa abominación?!— Pluma Plateada señaló hacia la sopa con una ala temblorosa, como un juez señalando al acusado.— ¡¿Llaman a eso auténtico?! ¡Es una ofensa a cada sentido que la naturaleza nos dio! ¡Incluido algunos que todavía no han sido descubiertos!— </p>
-            </div>
-
-            <div class="murcielago-snob">
-              <p class="dialogo crítico" data-badge="añadido con desdén aristocrático"> —¡No tienen paladares! ¡Son bárbaros culinarios! ¡Paladares de piedra!— exclamó otro murciélago, agitando su corbata de telaraña con tanta furia que se le desató. Un tercero ya había llenado un formulario completo: —Evaluación Final de Huéspedes: Conocimiento Gastronómico: 0/10. Respeto por Arte Culinario: Negativo 3/10. Probabilidad de Recomendación a Otros Establecimientos: Prohibido permanentemente. Nota personal: si regresan, sellar la cueva—. </p>
-            </div>
-
-            <div class="ember-cocinando">
-              <p class="texto-narrativo"> Ember miró entre sus compañeros — su hermano con los ojos llorosos por las especias pero sonriendo, Seraphina haciendo bromas sobre veneno como si fuera una persona normal, Eco Pergaminada usando vocabulario gastronómico como arma contra sus propios parientes — y sintió algo que no había sentido desde que los cuervos habían despedazado el mundo tal como lo conocía: gratitud. No gratitud abstracta, sino la versión caliente y peluda que te llena el pecho y te hace parpadear más de lo necesario. Estas personas — estas personas complicadas, heridas, y actualmente envenenándose voluntariamente por él — se preocupaban lo suficiente como para tragar su desastre culinario con una sonrisa. </p>
-            </div>
-
-            <div class="ember-cocinando">
-              <p class="dialogo agradecido" data-badge="dicho con emoción genuina"> —Saben qué— dijo Ember, tomando otra cucharada de su propia creación. Esta vez no intentó disimular la mueca — la dejó pasar completa, honesta, y luego sonrió a pesar de ella.— Tal vez no sea perfecta. Probablemente no sea buena. Posiblemente sea peligrosa. Pero fue hecha con cariño. Y está siendo compartida con personas que se preocupan lo suficiente como para no herir mis sentimientos— miró a Seraphina, y por un momento su expresión no fue la de alguien que intenta decidir si odiar o perdonar, sino simplemente la de alguien que reconoce un gesto genuino.— Todas ellas— </p>
-            </div>
-
-            <p class="texto-narrativo"> Las dos palabras — —todas ellas— — aterrizaron en el silencio de la cueva con el peso de algo que no era perdón pero que se le parecía en los bordes. Seraphina bajó la mirada hacia su cuenco, y sus patas delanteras temblaron levemente. No confiaba en su voz para responder, así que tomó otra cucharada de la sopa. Esta vez no hizo ningún comentario. Solo la tragó, y algo en la quietud de ese gesto dijo más que cualquier palabra. </p>
-
-            <p class="texto-narrativo"> Esa declaración fue aparentemente la gota que desbordó el vaso para los murciélagos gastronómicos. </p>
-          </section>
-
-          <!-- =============== LA EXPULSIÓN TRIUNFAL =============== -->
-          <section id="expulsion-triunfal" class="victoria-expulsion">
-            <h3>Bárbaros Victoriosos</h3>
-
-            <div class="murcielago-snob">
-              <p class="dialogo dramático" data-badge="declarado con indignación final"> —¡Eso es suficiente!— Pluma Plateada se alzó a su altura completa, que no era particularmente impresionante pero que compensó con una indignación que llenó toda la cueva.— ¡No podemos permitir que esta.... esta barbarie culinaria continúe en nuestro santuario gastronómico! ¡Deben irse! ¡Inmediatamente! ¡Antes de que su falta de paladar sea contagiosa!— </p>
-            </div>
-
-            <div class="murcielago-snob">
-              <p class="dialogo coro" data-badge="coreado por el grupo"> —¡Bárbaros! ¡Paladares de piedra! ¡Incivilizados culinarios! ¡Terroristas del sabor!— gritaron los otros murciélagos al unísono, algunos agitando sus formularios como banderas de guerra, otros cubriéndose las narices con expresiones de víctimas de un ataque biológico. </p>
-            </div>
-
-            <!-- =============== SEXTA APARICIÓN DEL ERIZO =============== -->
-            <p class="texto-narrativo"> Pluma Plateada abrió las alas para un último discurso de indignación gastronómica, pero antes de que la primera sílaba saliera de su boca, algo rodó por el suelo de la cueva con la velocidad exacta de una bola de púas en pendiente suave. </p>
-
-            <p class="texto-narrativo"> El erizo — que nadie recordaba haber visto entrar — cruzó la cueva en línea recta, chocó contra la pata de Pluma Plateada con un sonido sordo, se detuvo, y se desenrolló. Miró al murciélago desde abajo con sus ojos de semilla de amapola. Pluma Plateada miró al erizo desde arriba con la expresión de alguien cuyo vocabulario acaba de abandonarlo por segunda vez en una noche. </p>
-
-            <p class="texto-narrativo"> La cueva entera se quedó en silencio. </p>
-
-            <p class="texto-narrativo"> El erizo parpadeó. O tal vez no — era genuinamente imposible saber si esos ojos tenían párpados. Luego, con la deliberación de un reloj de arena, se hizo bolita otra vez. A los pies del murciélago más indignado de la montaña. </p>
-
-            <p class="texto-narrativo"> Pluma Plateada abrió la boca. La cerró. La abrió de nuevo. Miró al erizo. Miró a Axel. Miró al erizo otra vez. </p>
-
-            <div class="murcielago-snob">
-              <p class="dialogo perdido" data-badge="balbuceado con confusión total"> —¿Qué.... qué es.... por qué.... esto no consta en ningún protocolo de evaluación gastronómica— </p>
-            </div>
-
-            <p class="texto-narrativo"> Axel no sabía si había sido él quien lanzó al erizo o si el erizo había rodado solo. Honestamente, a estas alturas, las dos opciones eran igual de probables. Lo que sí sabía era que Pluma Plateada había olvidado completamente qué estaba criticando. El murciélago miraba al erizo con el desconcierto profundo de un académico confrontando un fenómeno que no aparece en ningún texto. </p>
-
-            <p class="dialogo" data-badge="murmurado a Ember">
-              —Vámonos antes de que se recupere— susurró Axel.
-            </p>
-            <!-- =============== FIN SEXTA APARICIÓN DEL ERIZO =============== -->
-
-            <p class="texto-narrativo"> En lugar de sentirse ofendidos por la expulsión, algo extraño pasó — algo que ninguno de ellos esperaba y que ninguno habría podido forzar. Los cuatro se miraron. Axel con algas todavía en el pelaje del río, Ember con restos de su sopa en los bigotes, Seraphina con las antenas curvadas del aroma residual, Eco Pergaminada temblando de risa contenida. Y comenzaron a reírse. </p>
-
-            <p class="texto-narrativo"> No la risa educada que se usa para llenar silencios incómodos. La risa real — la que empieza en el estómago, sube por el pecho, y sale sin permiso. La risa de personas que han tenido un día terrible, que están rotas en lugares que no saben cómo reparar, y que acaban de ser expulsadas de una cueva por murciélagos con corbata por el crimen de comer sopa mala con cariño. Axel se rió hasta que le dolieron las costillas. Ember se rió hasta que le salieron lágrimas. Y Seraphina — Seraphina se rió con un sonido que ninguno de ellos le había escuchado antes: abierto, desprotegido, sin calcular el efecto que tendría en su audiencia. </p>
-
-            <p class="dialogo riendo" data-badge="dicho entre carcajadas"> —¿Sabes qué?— dijo Axel, limpiándose los ojos con el dorso de la pata.— Creo que ser llamado bárbaro culinario por rechazar su esnobismo podría ser el mejor cumplido que he recibido este mes— </p>
-
-            <div class="seraphina-culpa">
-              <p class="dialogo divertida" data-badge="agregado con franco humor"> —Especialmente considerando que la barbarie involucró defendernos unos a otros— añadió Seraphina, y la sonrisa en su rostro era tan real que cambió la forma de sus facciones por completo — como si su cara hubiera recordado una configuración antigua que había olvidado. </p>
-            </div>
-
-            <div class="avergonzada">
-              <p class="dialogo liberada" data-badge="declarado con alivio"> —¡Honestamente, ser echada de una cena familiar pretenciosa se siente como una victoria!— Eco Pergaminada voló en tres círculos de celebración, batiendo las alas con tanta energía que apagó dos de los cristales bioluminiscentes de los murciélagos, lo cual provocó un nuevo coro de indignación desde la cueva.— ¡Por primera vez en mi vida no tengo que fingir que disfruto su compañía! ¡Años de sonreír mientras criticaban mi forma de volar han terminado!— </p>
-            </div>
-
-            <div class="ember-cocinando">
-              <p class="dialogo feliz" data-badge="admitido con alegría nueva"> —Y aunque mi sopa era objetivamente terrible— dijo Ember, vaciando el resto del cuenco en los arbustos con un gesto ceremonial. La vegetación donde cayó la sopa se marchitó visiblemente, lo cual provocó otra ronda de risas.— Verlos defender mi desastre culinario fue.... fue realmente bonito— </p>
-            </div>
-
-            <p class="texto-narrativo"> Se alejaron de la cueva con los gritos indignados de los murciélagos gastronómicos persiguiéndolos como un coro de ópera ofendida — —¡Estándares culinarios!— —¡Respeto por las tradiciones!— —¡Les enviaremos la factura por el trauma emocional!—. El grupo caminó cuesta arriba, todavía riéndose, y por primera vez desde que los cuervos espejo habían revelado la verdad, la distancia entre ellos se sentía como elección y no como abismo. </p>
-
-            <p class="texto-narrativo"> No habían dado veinte pasos cuando un aleteo rápido los alcanzó. Eco Pergaminada se giró con las alas tensas — reconocía ese patrón de vuelo. </p>
-
-            <p class="texto-narrativo"> Su primo — el del gorro de chef — aterrizó en una roca delante de ellos con la elegancia de alguien que practica descensos ornamentales. Pero su expresión no era la de antes. La superioridad teatral había cedido a algo más práctico, más furtivo. Miró hacia atrás para asegurarse de que Pluma Plateada no lo seguía. </p>
-
-            <p class="dialogo susurrando" data-badge="dicho mirando sobre su hombro"> —Prima. Espera— el murciélago se quitó el gorro de chef y lo retorció entre las garras, un gesto nervioso que Eco reconoció de las reuniones familiares cuando alguien quería pedir un favor sin que el resto de la familia se enterara.— Necesito.... información. Sobre las rutas del norte. Los manuscritos que tenías en la biblioteca, antes de que.... bueno, antes de lo que pasó con la biblioteca— </p>
-
-            <p class="dialogo cautelosa" data-badge="respondido con los ojos entrecerrados"> —¿Qué tipo de información?— Eco Pergaminada voló hasta quedar a la altura de sus ojos. Su luz cambió a verde — curiosidad, no confianza. </p>
-
-            <p class="dialogo negociando" data-badge="explicado en voz baja"> —Rutas de migración de insectos nocturnos. Las que solo los bibliotecarios cartografiaban. Las necesito para expandir nuestra carta de ingredientes exóticos y.... bueno, para demostrar que puedo innovar sin depender de Pluma Plateada para todo— pausa.— A cambio, tengo algo que te interesará. Un pergamino antiguo que llegó con un comerciante de murciélagos del oeste hace tres lunas. Lo catalogamos como recetario, pero.... no es solo recetas— </p>
-
-            <p class="texto-narrativo"> Eco Pergaminada ladeó la cabeza. Su luz cambió de verde a un amarillo pálido — la transición entre curiosidad e interés intenso que ella no podía controlar y que odiaba porque delataba exactamente lo que sentía. </p>
-
-            <p class="dialogo interesada" data-badge="preguntado controlando la voz"> —¿Qué más hay?— </p>
-
-            <p class="dialogo revelando" data-badge="susurrado acercándose"> —Entre las recetas de sopa de raíz y estofado de liquen hay anotaciones en escritura antigua. Yo no pude descifrarlas — no tengo tu tinta de memoria ni tu cristal de interpretación. Pero reconocí algunos glifos. Son los mismos que aparecen en los grabados del Templo Celestial que tu madre me enseñó cuando éramos crías— </p>
-
-            <p class="texto-narrativo"> Eco Pergaminada se quedó tan quieta que su luz se apagó por un instante — algo que solo le pasaba cuando su cerebro procesaba información a una velocidad que dejaba sin energía al resto de su cuerpo. Luego su luz volvió, más brillante que antes, y se giró hacia Axel. </p>
-
-            <p class="dialogo urgente" data-badge="dicho con la velocidad de quien conecta piezas"> —Axel. Si lo que dice es cierto, ese pergamino podría tener instrucciones parciales sobre el ritual de las Lágrimas. Los murciélagos del oeste comercian con criaturas que viven cerca del Templo. No sería la primera vez que conocimiento sagrado termina camuflado entre recetas de cocina para protegerlo de ojos equivocados— </p>
-
-            <p class="dialogo decidido" data-badge="respondido asintiendo"> —Haz el intercambio— dijo Axel. </p>
-
-            <p class="texto-narrativo"> Eco Pergaminada dictó las rutas de migración de memoria — cada coordenada, cada patrón estacional, cada corriente de aire que había catalogado durante años de trabajo bibliotecario — mientras su primo anotaba frenéticamente en un pedazo de corteza. A cambio, el murciélago le entregó un pergamino enrollado que olía a especias y a tinta vieja. Eco lo abrió con cuidado, y sus ojos se movieron sobre la superficie con la velocidad de una lectora que ha pasado más tiempo con documentos que con seres vivos. </p>
-
-            <p class="dialogo confirmando" data-badge="murmurado con emoción contenida"> —Dato interesante— dijo, y su voz tembló de una forma que hizo que Axel supiera que lo que había encontrado no era para nada un simple dato.— Las anotaciones entre la receta de sopa de raíces y la de estofado de liquen son instrucciones de orientación para las cámaras interiores del Templo. Parciales, pero.... parciales es infinitamente más que lo que teníamos— </p>
-
-            <p class="texto-narrativo"> El primo de Eco se puso el gorro de chef de nuevo, recuperando su postura de superioridad cultural como quien se pone una armadura. </p>
-
-            <p class="dialogo despidiéndose" data-badge="dicho retomando su tono pretencioso"> —Bueno. Ha sido una transacción.... aceptable— miró a Eco un momento más largo de lo necesario, y algo en su expresión se suavizó brevemente.— Prima. Ten cuidado con esos terrestres tuyos. Son.... curiosos— </p>
-
-            <p class="dialogo respondiendo" data-badge="dicho con una sonrisa que él no vio"> —Lo son— dijo Eco Pergaminada mientras su primo se alejaba volando.— Lo son— </p>
-
-            <p class="texto-narrativo"> No fue el único intercambio de esa noche. Antes de que el grupo se alejara completamente, Pluma Plateada apareció en la entrada de la cueva principal con una expresión que intentaba ser digna pero que no podía disimular del todo la culpa de un anfitrión que sabe que ha sido descortés con viajeros en necesidad. Llevaba dos objetos. </p>
-
-            <p class="texto-narrativo"> El primero era un frasco pequeño de vidrio oscuro, sellado con cera púrpura, que contenía una sustancia espesa y nacarada. La etiqueta, escrita con caligrafía excesiva, decía —Ungüento Auditivo de Eco-Localización, Preparación Artesanal. Aplicar en la base de las orejas. Amplifica percepción sonora durante 4 horas. No usar cerca de cascadas (experiencia traumática documentada en Archivo de Incidentes, Vol. 3)—. </p>
-
-            <div class="murcielago-snob">
-              <p class="dialogo altivo" data-badge="ofrecido con dignidad herida"> —Esto no es una disculpa— aclaró Pluma Plateada, entregándole el frasco a Axel sin mirarlo directamente.— Los murciélagos no se disculpan. Simplemente.... corregimos desequilibrios. Tu grupo viaja hacia territorio con cuevas y oscuridad. Tus orejas de gato son aceptables, pero con esto serán.... menos inadecuadas— </p>
-            </div>
-
-            <p class="texto-narrativo"> Axel tomó el frasco. Olía a mineral, a algo ligeramente dulce, y debajo de todo eso al mismo tipo de preparación cuidadosa que olía en las medicinas que su padre hacía con hierbas de montaña. Era un regalo disfrazado de corrección, de la misma forma que la hospitalidad de Pluma Plateada era generosidad disfrazada de condescendencia. </p>
-
-            <p class="texto-narrativo"> El segundo objeto fue para Ember. Pluma Plateada lo sostuvo entre dos garras con la misma delicadeza con que se sostiene una reliquia y la misma expresión con que se entrega una intervención médica: un frasco de especias fermentadas de cueva, del tamaño de un pulgar, con un color ambarino que brillaba bajo la luz de las estrellas. </p>
-
-            <div class="murcielago-snob">
-              <p class="dialogo instructivo" data-badge="dicho con urgencia gastronómica"> —Y esto es una corrección urgente a tu paladar— se lo entregó a Ember con la seriedad de un médico prescribiendo medicación.— Especias fermentadas de cueva. Tres lunas de proceso. Úsalas con moderación — una pizca por olla, no más — y tu próxima.... creación.... podría ascender de insulto gastronómico a mera decepción. Lo cual, viniendo de donde empezaste, sería un logro considerable— </p>
-            </div>
-
-            <p class="texto-narrativo"> Ember tomó el frasco. Lo olió. Sus orejas se irguieron — el aroma era complejo, profundo, nada parecido a las especias de mapache que había usado. Era el tipo de ingrediente que Luna Suave habría apreciado, el tipo de regalo que un chef arrogante da cuando no puede admitir que se preocupa pero tampoco puede permitir que alguien siga cocinando tan mal. </p>
-
-            <p class="dialogo agradecido" data-badge="respondido con media sonrisa"> —Gracias, Pluma Plateada— dijo, y la sinceridad en su voz hizo que el murciélago retrocediera un paso, como si la gratitud genuina fuera un ingrediente con el que no sabía qué hacer. </p>
-
-            <div class="murcielago-snob">
-              <p class="dialogo retirándose" data-badge="respondido girando con brusquedad"> —No me des las gracias. Me ofende que tu sopa exista. Esto es un acto de servicio público— y desapareció en la cueva antes de que alguien pudiera ver que sus orejas estaban ligeramente rosadas. </p>
-            </div>
-
-            <p class="texto-narrativo"> Encontraron refugio en una cueva más pequeña pero completamente desocupada — sin decoración, sin cristales bioluminiscentes, sin formularios de evaluación. Solo roca seca, el cielo estrellado visible desde la entrada, y espacio suficiente para que cuatro viajeros y un murciélago libre se acomodaran sin tocarse pero sin alejarse. Eco Pergaminada ya estaba estudiando el pergamino con su luz a toda intensidad, murmurando —dato interesante— cada pocos segundos con una emoción que no podía contener. </p>
-
-            <p class="texto-narrativo"> Axel encendió un fuego pequeño con la eficiencia de alguien que lo ha hecho mil veces solo. El calor le secó por fin el pelaje, y el arco en su espalda emanó su calor suave y constante — el calor familiar que siempre asociaba con protección, con hogar, con su padre preparando la cena en las Montañas Heladas. </p>
-
-            <p class="texto-narrativo"> Compartieron las raciones de viaje — pan seco, frutas preservadas, lo que quedaba de las provisiones que Lyra había dejado junto al Bosque de Cuervos Espejo. Comida simple. Sin especias del Bosque Oriental, sin infusiones de la Montaña Sagrada, sin narrativa culinaria. Solo pan partido por manos que habían elegido seguir juntas. </p>
-
-            <div class="ember-cocinando">
-              <p class="dialogo reflexivo" data-badge="observado mientras comían"> —¿Saben qué aprendí?— dijo Ember, masticando pan seco que sabía infinitamente mejor que su sopa experimental.— A veces la comida no se trata de impresionar a otros. Se trata de compartir lo que tienes con personas que importan. Luna Suave siempre lo dice: la mejor comida es la que se come en compañía que te hace sentir seguro— hizo una pausa, y algo en su expresión se suavizó.— Incluso si esa compañía es.... complicada— </p>
-            </div>
-
-            <p class="dialogo acordado" data-badge="confirmado con sabiduría simple"> —Y a veces— agregó Axel, mirando las estrellas desde la entrada de la cueva,— ser rechazado por las razones correctas se siente mejor que ser aceptado por las razones equivocadas— </p>
-
-            <div class="seraphina-culpa">
-              <p class="texto-narrativo"> Las palabras de Axel cayeron en un lugar que Seraphina no esperaba. Ser rechazado por las razones correctas. Ella había sido aceptada por todas las razones equivocadas durante semanas — aceptada como víctima, como aliada, como amiga — y cada aceptación había sido construida sobre mentiras. Pero esta noche, en esta cueva simple, con pan seco y el recuerdo de una sopa desastrosa, estaba siendo incluida no porque creyeran que era alguien que no era, sino a pesar de saber exactamente quién era. Y esa inclusión — cautelosa, herida, incompleta — pesaba más que todas las bienvenidas falsas que había construido. </p>
-
-              <p class="dialogo vulnerable" data-badge="añadido con voz suave"> —Gracias— dijo simplemente.— Por defender la sopa horrible. Por defender.... por seguir actuando como un grupo incluso cuando....— no terminó. No necesitaba hacerlo. </p>
-            </div>
-
-            <div class="ember-cocinando">
-              <p class="dialogo gentil" data-badge="interrumpido con comprensión"> —Incluso cuando las cosas son complicadas— completó Ember. Su voz no tenía la dureza de la mañana. No era perdón — sus garras todavía marcaban la roca cuando se ponía tenso, y había momentos en que miraba a Seraphina y algo oscuro le cruzaba los ojos. Pero era algo que se parecía al reconocimiento de que la complejidad no es lo mismo que la maldad.— Eso es lo que hacen las personas que se preocupan unas por otras— </p>
-            </div>
-
-            <p class="texto-narrativo"> Eco Pergaminada se acomodó entre Axel y Ember, plegando las alas con un suspiro satisfecho. Era la primera noche desde la revelación que nadie montaba guardia contra nadie, que las orejas de los hermanos no giraban cada vez que Seraphina se movía, que la tensión no era un animal vivo respirando entre ellos. Seguía ahí — agazapada, no muerta — pero por esta noche había cedido su lugar a algo más cálido. </p>
-
-            <p class="texto-narrativo"> Seraphina se quedó despierta más que los demás, sentada cerca del fuego con las patas delanteras abrazando sus rodillas. Miraba a los hermanos dormir — Ember acurrucado contra Axel como hacía cuando era cachorro, un hábito que aparentemente ni la edad ni la furia podían eliminar del todo — y sintió algo que dolía de una forma diferente a la culpa. Dolía como un hambre. Como el reconocimiento de algo que quieres y sabes que quizás nunca merecerás tener: pertenecer. </p>
-
-            <p class="texto-narrativo"> Axel no dormía todavía. Acostado de lado, con Ember acurrucado contra su espalda y el calor del fuego en la cara, miraba las brasas con los ojos entrecerrados — la posición que adoptaba cuando pensaba en cosas demasiado grandes para pensar con los ojos completamente abiertos. </p>
-
-            <p class="texto-narrativo"> Las palabras de los Susurradores volvieron a él con la claridad particular que tienen los recuerdos que se niegan a ser archivados: —el jardín con espinas alimenta pero no sin precio—. No lo había entendido entonces. Ahora, mirando a Seraphina sentada junto al fuego con las patas abrazando sus rodillas, empezaba a ver la forma del acertijo. Ella era el jardín. Las rosas que habían crecido de su corazón en la prueba de los Osos de Cristal eran reales — genuinas, honestas, tan verdaderas como cualquier cosa que él hubiera visto. Pero las espinas también lo eran. Y alimentarse de lo bueno significaba aceptar que las espinas existían y que podían cortar. </p>
-
-            <p class="texto-narrativo"> Tocó el arco que descansaba a su lado. La madera estaba tibia, constante — no caliente con advertencia ni fría con ausencia. Solo tibia. Como si su padre le dijera —estoy aquí, pero esta decisión es tuya—. </p>
-
-            <p class="texto-narrativo"> Los Susurradores también habían dicho otra cosa que no había querido examinar hasta ahora: —la flecha que no disparas es la que define al arquero—. ¿Significaba perdonar? ¿Significaba soltar? ¿O significaba simplemente elegir no destruir cuando tienes todo el derecho y toda la capacidad de hacerlo? </p>
-
-            <p class="texto-narrativo"> No tenía respuesta. Quizás la respuesta estaba en el Templo Celestial, junto con las Lágrimas de Luna y la verdad de lo que Seraphina elegiría cuando tuviera poder divino entre las manos. O quizás la respuesta estaba más cerca — en una cueva donde cuatro viajeros y un murciélago libre habían elegido compartir pan seco después de ser expulsados por comer sopa mala con lealtad. </p>
-
-            <p class="texto-narrativo"> Cerró los ojos. Afuera, la noche olía a pino y a roca fría. En algún lugar entre los árboles, tan lejos que solo oídos de gato montés habrían podido detectarlo, una silueta oscura se movió entre las sombras — Lyra, verificando que su campamento estuviera seguro antes de continuar su propia vigilia silenciosa. El viento cambió de dirección, y por un instante el aroma de corteza de pino y cuero de viaje llegó hasta la entrada de la cueva. Axel, con los ojos cerrados, movió una oreja en esa dirección y algo en su expresión se relajó — la misma reacción inconsciente que tenía cada vez que detectaba su presencia. </p>
-
-            <p class="texto-narrativo"> Seraphina lo vio relajarse y se preguntó qué habría olido que pudiera producir esa paz. Luego miró las brasas y dejó que la pregunta se la llevara el humo. Algunas respuestas podían esperar. </p>
-
-            <p class="texto-narrativo"> Mañana seguirían caminando. Mañana las preguntas sin respuesta volverían con el sol. Mañana el Templo Celestial estaría un día más cerca, y con él la decisión que definiría todo — no solo para Seraphina, sino para cada nombre que ella cargaba como garras clavadas en el pecho. Seis nombres. Un padre entre ellos. Un arco que recordaba. </p>
-
-            <p class="texto-narrativo"> Pero esta noche — esta noche de sopa terrible, murciélagos indignados, y pan seco compartido entre personas rotas que todavía estaban aprendiendo que roto no significa irreparable — era suficiente. </p>
-
-            <p class="texto-narrativo"> Lo último que Axel vio antes de cerrar los ojos fue el pergamino que Eco Pergaminada guardaba contra su pecho mientras dormía. En el borde inferior, visible apenas bajo la luz moribunda del fuego, había una línea que Eco no había leído en voz alta. Sus dedos la habían cubierto cuando tradujo el resto, un gesto tan pequeño que podría haber sido accidental. No lo era. Axel lo sabía. Los murciélagos no cometían accidentes con los textos. </p>
-
-            <p class="texto-narrativo"> Se dijo que lo preguntaría mañana. Pero la pregunta no lo dejó dormir del todo — se quedó en el umbral de la conciencia, insistente como el calor del arco contra su costado, como el nombre de su padre dicho en voz baja en una cueva oscura. </p>
-          </section>
-
-          <!-- =============== NOTAS DE CONTINUIDAD =============== -->
-          <div class="nota-continuidad" style="background: rgba(66, 66, 66, 0.3); padding: 20px; margin: 30px 0; border-radius: 10px; font-style: italic; color: #ccc">
-            <h4>Notas para continuidad narrativa:</h4>
-            <p>• Solidaridad grupal emerge defendiendo el desastre culinario de Ember</p>
-            <p>• Todos eligen lealtad grupal sobre aprobación de extraños snobs</p>
-            <p>• Ser expulsados se convierte en experiencia de unión positiva</p>
-            <p>• Ember agradecido por apoyo grupal - paso hacia reconciliación</p>
-            <p>• Humor construye puentes emocionales sin resolver problemas fundamentales</p>
-            <p>• Establecer que el grupo funciona como unidad protectora</p>
-          </div>
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="murmurado leyendo el cartel">
+            —Sociedad Gastronómica.... ¿de murciélagos?
+          </p>
         </div>
 
-        <script src="global-reset.js"></script>
-      </body>
-    </html>
+        <p class="dialogo" data-badge="respondido oliendo el aire de la cueva">
+          —Lo que sea que estén cocinando ahí dentro huele mejor que cualquier cosa que hayamos comido en once días.
+        </p>
+
+        <p class="texto-narrativo"> Antes de que pudieran debatir buscar refugio en otra parte — y el pelaje mojado de Axel votaba fuertemente a favor de cualquier cueva con techo — una voz nasal y pretenciosa se elevó desde el interior:</p>
+
+        <div class="murcielago-snob">
+          <p class="dialogo" data-badge="declarado con esnobismo evidente">
+            —¡Ah! ¡Visitantes! ¡Qué.... encantador!
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Un murciélago con lo que parecía ser una corbata tejida con hilos de telaraña plateada apareció en la entrada. Más grande que cualquier murciélago que hubieran visto, con el pelaje meticulosamente peinado hacia atrás y un monóculo diminuto que no parecía cumplir ninguna función óptica real.</p>
+
+        <div class="murcielago-snob">
+          <p class="dialogo" data-badge="presentándose con reverencia elaborada">
+            —Soy Pluma Plateada, presidente vitalicio de nuestra Sociedad Gastronómica, curador del Archivo de Sabores Perdidos, y juez certificado en veintitrés categorías culinarias. ¿Buscan refugio para la noche?
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Pluma Plateada los observó entrar uno por uno, la nariz arrugándose con la concentración que usaría para evaluar un caldo sospechoso. Se envolvió en sus alas — la postura para emitir juicios importantes — y el monóculo captó la luz de los cristales bioluminiscentes que iluminaban la cueva.</p>
+
+        <div class="murcielago-snob">
+          <p class="dialogo" data-badge="murmurado con entonación de sommelier">
+            —Hmm. Noto base amarga con capas de resentimiento no resuelto. Un toque ácido de culpa genuina que no ha tenido tiempo de madurar. Y.... ¿es eso arrepentimiento? Interesante. Un poco verde todavía, pero con potencial si se deja reposar. Ese de ahí tiene demasiada pimienta. El arquero es pan sin sal: correcto pero sin sorpresas. Y la mantis.... la mantis es un plato que ha sido recalentado demasiadas veces. Todavía tiene sabor, pero ya no sabe a lo que era originalmente.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Nadie supo qué responder a eso. Seraphina parpadeó dos veces. Axel abrió la boca y la cerró. Ember miró a su hermano buscando confirmación de que un murciélago acababa de comparar su furia con un exceso de pimienta.</p>
+
+        <p class="dialogo" data-badge="respondido con cortesía cautelosa">
+          —Si no es inconveniente, sí. Somos viajeros y agradeceremos cualquier hospitalidad.
+        </p>
+
+        <div class="murcielago-snob">
+          <p class="dialogo" data-badge="ofrecido con magnanimidad que no alcanzaba a disimular">
+            —¡Por supuesto! ¡Siempre tenemos espacio para.... aventureros! Aunque debo advertir que estamos en medio de nuestra Cena de Degustación Semanal de Alta Gastronomía. Les pedimos que mantengan sus.... actividades alimenticias.... en un área designada para no contaminar la experiencia sensorial de nuestros miembros.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> La pausa antes de —aventureros— duró exactamente lo suficiente para que todos entendieran que la palabra real que quería usar era otra menos generosa.</p>
+
+        <p class="texto-narrativo"> Seraphina estudió a Pluma Plateada con la atención de alguien que reconoce la manipulación social cuando la ve — aunque viniera envuelta en corbata de telaraña en lugar de historias sobre hermanas maldecidas. Algo en la presunción del murciélago la irritaba de una forma que resultaba casi reconfortante: era la primera emoción que sentía en horas que no era culpa.</p>
+      </section>
+
+      <!-- =============== LA CRÍTICA GASTRONÓMICA COMIENZA =============== -->
+      <section id="critica-comienza" class="cueva-gastronomica">
+        <h2>Paladares Superiores</h2>
+
+        <p class="texto-narrativo"> El interior de la cueva había sido transformado en algo que Axel no esperaba encontrar en medio de las montañas: un restaurante. Las paredes de roca estaban cubiertas con reseñas culinarias enmarcadas — todas escritas por los propios murciélagos sobre su propia comida, todas otorgándose puntuaciones perfectas. Mesas bajas de roca pulida ocupaban el centro, iluminadas por cristales bioluminiscentes dispuestos con la precisión de un artista obsesivo. Y por todas partes, murciélagos — al menos una docena — con accesorios que gritaban refinamiento cultural: monóculos diminutos, corbatas de telaraña, gorros de chef del tamaño de una bellota, y uno que llevaba una bufanda hecha de pétalos de flor prensados.</p>
+
+        <p class="texto-narrativo"> El olor fue lo que más golpeó a Axel. Capas de aromas tan complejos que su cerebro de cazador no sabía cómo clasificarlos — especias que no reconocía, algo dulce y quemado simultáneamente, hierbas que olían a lluvia de primavera. Y debajo de todo, el aroma inconfundible de superioridad moral, que no tiene olor real pero que él podía detectar igual que detectaba una trampa oculta en la maleza.</p>
+
+        <p class="texto-narrativo"> En las mesas había platos con porciones artísticamente pequeñas de comida que se veía increíblemente elaborada pero también insuficiente. El estómago de Ember gruñó por segunda vez, y varios murciélagos giraron la cabeza con expresiones que sugerían que los ruidos digestivos eran una ofensa punible.</p>
+
+        <div class="murcielago-snob">
+          <p class="dialogo" data-badge="observado con horror culinario">
+            —Oh queridos. Espero que no hayan traído.... ¿raciones de viaje?
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> La forma en que pronunció —raciones de viaje— sugería que era comparable a traer una enfermedad contagiosa. Sacó inmediatamente una tarjeta de evaluación colgada de su ala con un hilo dorado: —Formulario de Evaluación Culinaria Preliminar, Sección A: Calidad de ingredientes traídos por visitantes. Escala de 1 a 10, donde 1 es insulto gastronómico y 10 es digno de consideración—.</p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="respondido sin saber el peligro">
+            —Bueno, sí, tenemos algo de pan seco, frutas preservadas, y....
+          </p>
+        </div>
+
+        <div class="murcielago-snob">
+          <p class="dialogo" data-badge="exclamado con trauma culinario">
+            —¡¿Sin especias del Bosque Oriental?! ¡¿Sin infusiones de hierbas de la Montaña Sagrada?! ¡¿Sin al menos un toque de sal marina del Acantilado Susurrante?!
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Los murciélagos reaccionaron como si alguien acabara de arrastrar garras por una pizarra. Un coro de jadeos indignados llenó la cueva. Varios sacaron pergaminos y comenzaron a escribir notas con la velocidad y furia de cronistas presenciando una atrocidad histórica. Axel alcanzó a leer fragmentos: —Evaluación de Presentación: 0.5/10—, —Respeto por Tradiciones Culinarias Milenarias: Ausente por completo—, y su favorito: —Nota adicional: el gato grande gruñe del estómago con total falta de decoro—.</p>
+
+        <p class="texto-narrativo"> Ember miró las notas, miró los platos minúsculos en las mesas, y Axel reconoció la chispa en sus ojos — la misma que tenía de cachorro cuando alguien le decía que no podía hacer algo.</p>
+
+        <div class="ember-cocinando">
+          <p class="dialogo" data-badge="ofrecido con optimismo peligroso">
+            —¡Saben qué! Puedo cocinar. Luna Suave me enseñó a hacer sopa con lo que hubiera disponible. Tengo hierbas del camino, las especias de los mapaches, y vi unos hongos cerca de la entrada que se veían perfectamente comestibles.
+          </p>
+        </div>
+
+        <p class="dialogo" data-badge="observado desde una esquina">
+          —Los hongos cerca de la entrada eran morados. Los hongos morados generalmente no son una buena señal.
+        </p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="respondido con gesto de la pata">
+            —Los hongos morados de montaña son perfectamente seguros. Creo. Luna Suave usaba unos parecidos. O quizás eran los azules.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Axel y Seraphina intercambiaron una mirada — la primera que compartían desde la revelación que no estaba cargada de dolor o acusación. Esta estaba cargada de la certeza universal de que lo que estaba a punto de pasar sería un desastre, y de la decisión mutua de dejarlo ocurrir porque Ember necesitaba esto. Necesitaba hacer algo con las manos que no fuera apretar los puños.</p>
+
+        <div class="seraphina-culpa">
+          <p class="texto-narrativo"> Seraphina observó a Ember reunir ingredientes, y algo en la forma en que cortaba las hierbas — con garras torpes pero llenas de intención — le apretó algo dentro del pecho. Ella conocía esa necesidad. La necesidad de hacer algo con las manos cuando la cabeza es un lugar inhabitable. Durante meses después de la muerte de Kira, había construido trampas. No para usar — solo para construir y desarmar, construir y desarmar, hasta que el movimiento repetitivo ahogaba los gritos que llevaba por dentro.</p>
+        </div>
+
+        <div class="seraphina-culpa">
+          <p class="dialogo" data-badge="dicho acercándose con cautela">
+            —¿Necesitas.... ayuda?
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> La palabra se sintió extraña en su boca — una criatura que había pasado años tomando en lugar de ofreciendo.</p>
+
+        <div class="ember-cocinando">
+          <p class="texto-narrativo"> Ember la miró. Sus orejas se movieron — un micro-gesto que en los gatos significa —estoy evaluando si confío en ti—. Luego señaló las hierbas.</p>
+
+          <p class="dialogo" data-badge="respondido con cautela que cedía">
+            —Puedes cortar esas en trozos pequeños. Pero pequeños de verdad, no del tamaño que una mantis considere pequeño.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Seraphina se sentó junto a él y comenzó a cortar hierbas con la precisión milimétrica que solo sus patas delanteras podían lograr. Los cortes eran perfectos — cada trozo idéntico, cada movimiento controlado al milímetro.</p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="admitido a regañadientes">
+            —Okay, eso es.... impresionantemente preciso.
+          </p>
+        </div>
+
+        <p class="dialogo" data-badge="respondido sin levantar la mirada">
+          —Mis patas fueron diseñadas para cosas más peligrosas que cocinar. Es agradable usarlas para algo que no destruye.
+        </p>
+
+        <p class="texto-narrativo"> No dijeron nada más. Cortaron hierbas juntos durante varios minutos, y el silencio entre ellos fue diferente — menos tenso, más parecido al silencio de dos personas que están decidiendo, con cada segundo que pasa, si pueden compartir espacio sin que les duela demasiado.</p>
+      </section>
+
+      <!-- =============== EL DESASTRE CULINARIO =============== -->
+      <section id="desastre-culinario" class="comida-horrible">
+        <h3>Intenciones Versus Resultados</h3>
+
+        <p class="texto-narrativo"> Lo que siguió fue una demostración de cómo las mejores intenciones pueden producir los peores resultados culinarios conocidos por criatura viviente. Ember cocinó con pasión genuina, experimentó con combinaciones de hierbas sin verificar cuáles eran comestibles y cuáles decorativas, agregó las especias de mapache con la generosidad de quien cree que más es siempre mejor, y aplicó técnicas que estaba bastante seguro de haber visto hacer a Luna Suave, aunque en retrospectiva quizás había confundido el orden de los pasos.</p>
+
+        <p class="texto-narrativo"> El resultado fue una sopa que desafiaba tanto las leyes culinarias como las de la física. Tenía un color que oscilaba entre el morado furioso y el verde resignado, dependiendo del ángulo. Su textura sugería que había cobrado voluntad propia y estaba considerando escapar del cuenco. Y el aroma llegó como una bofetada cariñosa pero innegable — tan intenso que las antenas de Seraphina se curvaron hacia atrás y dos de los murciélagos más cercanos se cayeron de sus perchas.</p>
+
+        <div class="ember-cocinando">
+          <p class="dialogo" data-badge="presentado con confianza mal ubicada">
+            —¡Ta-da! Sopa de Viajero Especial de Ember. Con hierbas del camino, especias de mapache, hongos de montaña, y.... eh.... un toque de creatividad personal.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Era la sonrisa más genuinamente feliz que había tenido en todo el día.</p>
+
+        <p class="texto-narrativo"> Los murciélagos se acercaron con la cautela de quien se aproxima a un artefacto explosivo. Pluma Plateada se inclinó sobre el cuenco, inhaló una vez, y su monóculo se empañó.</p>
+
+        <div class="murcielago-snob">
+          <p class="dialogo" data-badge="susurrado con hondo trauma">
+            —Es.... es.... ¿Qué son esos trozos flotantes que se mueven solos?
+          </p>
+        </div>
+
+        <div class="ember-cocinando">
+          <p class="dialogo" data-badge="explicado con orgullo persistente">
+            —¡Esos son los hongos especiales! Están un poco más masticables de lo que esperaba, pero agregan textura. El movimiento probablemente es por las burbujas. O por las especias de mapache. Los mapaches dijeron que eran especiales.
+          </p>
+        </div>
+
+        <p class="dialogo" data-badge="murmurado para sí mismo">
+          —Los mapaches también dijeron que su mapa era preciso.
+        </p>
+
+        <p class="texto-narrativo"> El momento de verdad llegó cuando Ember sirvió porciones en los cuencos finos de los murciélagos. Uno se desmayó y tuvo que ser abanicado por dos colegas. Otro comenzó a escribir lo que parecía ser un testamento culinario. Un tercero olió su porción, retrocedió como si lo hubieran golpeado, y susurró —este es el fin de una era— con la gravedad de un profeta anunciando el apocalipsis.</p>
+
+        <p class="texto-narrativo"> Pluma Plateada, con la determinación de un líder que no abandona a su tripulación, tomó una cucharada microscópica. Masticó. Su expresión pasó por las cinco etapas del duelo culinario — negación, furia, negociación con sus papilas gustativas, depresión profunda, y una aceptación horrorizada de que acababa de consumir algo que nunca podría ser des-probado.</p>
+
+        <div class="murcielago-snob">
+          <p class="dialogo" data-badge="pronunciado con voz de funeral">
+            —Esto no es comida. Esto es un evento. Un evento traumático. Mis papilas gustativas van a necesitar terapia.
+          </p>
+        </div>
+      </section>
+
+      <!-- =============== LA SOLIDARIDAD GRUPAL =============== -->
+      <section id="solidaridad-defensiva" class="solidaridad-grupal">
+        <h3>Lealtad Culinaria</h3>
+
+        <p class="texto-narrativo"> Axel fue el primero en probar la sopa. Levantó el cuenco con la misma cautela con que se acercaría a una trampa desconocida, llevó la cuchara a sus labios, y su expresión facial pasó por un recorrido que incluía sorpresa, horror, confusión, un breve instante de terror existencial, y finalmente una determinación férrea de no escupir delante de su hermano. Tragó. Los ojos se le llenaron de lágrimas que después insistiría que eran por las especias.</p>
+
+        <p class="dialogo" data-badge="dicho con dificultad heroica">
+          —Está.... interesante. Definitivamente único. No he probado nada ni remotamente similar en mi vida. Y eso es.... un hecho.
+        </p>
+
+        <p class="texto-narrativo"> El arco en su espalda pulsó suavemente, como si su padre también estuviera conteniendo una carcajada desde donde fuera que estuviera.</p>
+
+        <p class="texto-narrativo"> Ember lo miró buscando la mentira, como hacía desde cachorro cuando no estaba seguro de si Axel lo protegía de la verdad. Pero lo que encontró fue algo más complejo: su hermano mayor haciendo un esfuerzo visible, genuino y ligeramente doloroso por apoyarlo. Y viniendo de Axel — que nunca había sido bueno mintiendo — ese esfuerzo valía más que cualquier cumplido perfecto.</p>
+
+        <div class="seraphina-culpa">
+          <p class="texto-narrativo"> Seraphina observó el intercambio. La forma en que Axel protegía a Ember — no con mentiras elaboradas sino con verdades incompletas dichas con amor — le recordó algo que había intentado olvidar: las mantis de su colonia hacían lo mismo. Su madre solía decirle que las bayas amargas eran —bayas de valentía— para que se las comiera sin quejarse. La memoria la golpeó en un lugar blando, y antes de poder detenerse, tomó una cucharada.</p>
+        </div>
+
+        <div class="seraphina-culpa">
+          <p class="dialogo" data-badge="declarado con humor seco">
+            —He consumido venenos peores.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> El silencio que siguió fue tan denso que podría haberse cortado con una garra. Seraphina parpadeó.</p>
+
+        <p class="dialogo" data-badge="añadido después de una pausa calibrada">
+          —Es broma. Pero sí tiene.... carácter. Mucho carácter. Posiblemente demasiado carácter.
+        </p>
+
+        <p class="texto-narrativo"> Un murciélago dejó caer su pluma de tomar notas. Nadie en la cueva podía creer que alguien hubiera hecho una broma sobre veneno con la naturalidad de quien comenta el clima — excepto los dos que viajaban con ella, que reconocieron en ese humor seco algo que no habían visto antes: a Seraphina bajando la guardia lo suficiente como para intentar ser graciosa.</p>
+
+        <p class="texto-narrativo"> Fue Seraphina quien remató. Se giró hacia los murciélagos con las antenas erguidas — la misma postura que usaba para evaluar amenazas, solo que esta vez apuntaba hacia la indignación culinaria.</p>
+
+        <div class="seraphina-culpa">
+          <p class="dialogo" data-badge="dicho con una autoridad que nadie le había escuchado usar a favor de otros">
+            —Y está hecha con ingredientes naturales del camino. Tiene terroir. Terroir de montaña. Eso es más de lo que puedo decir de sus porciones microscópicas que ni siquiera llenarían una de mis patas.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> La palabra —terroir— — pronunciada por una mantis que claramente la había escuchado por primera vez hacía diez minutos y la estaba usando como arma — provocó un jadeo colectivo entre los murciélagos. Era como si una oveja hubiera citado a Shakespeare: técnicamente correcto, pero profundamente perturbador.</p>
+
+        <p class="texto-narrativo"> Ember la miró. No con la furia de la mañana, no con el dolor de las horas junto al río. La miró como se mira a alguien que acaba de hacer algo inesperado y bueno — la sorpresa de descubrir que la persona que dañó a tu padre también es capaz de defender la sopa terrible de tu hermano delante de murciélagos con monóculo.</p>
+
+        <div class="murcielago-snob">
+          <p class="dialogo" data-badge="declarado con horror culinario">
+            —¡¿Están DEFENDIENDO esa abominación?! ¡Es una ofensa a cada sentido que la naturaleza nos dio! ¡Incluido algunos que todavía no han sido descubiertos!
+          </p>
+        </div>
+
+        <div class="murcielago-snob">
+          <p class="dialogo" data-badge="añadido con desdén aristocrático">
+            —¡No tienen paladares! ¡Son bárbaros culinarios! ¡Paladares de piedra!
+          </p>
+        </div>
+
+        <div class="ember-cocinando">
+          <p class="texto-narrativo"> Ember miró entre sus compañeros — su hermano con los ojos llorosos por las especias pero sonriendo, Seraphina usando vocabulario gastronómico como arma — y sintió algo que no había sentido desde que los cuervos habían despedazado el mundo: gratitud. No gratitud abstracta, sino la versión caliente y peluda que te llena el pecho y te hace parpadear más de lo necesario. Estas personas — estas personas complicadas, heridas, y actualmente envenenándose voluntariamente por él — se preocupaban lo suficiente como para tragar su desastre culinario con una sonrisa.</p>
+        </div>
+
+        <div class="ember-cocinando">
+          <p class="dialogo" data-badge="dicho tomando otra cucharada de su propia creación">
+            —Tal vez no sea perfecta. Probablemente no sea buena. Posiblemente sea peligrosa. Pero fue hecha con cariño. Y está siendo compartida con personas que se preocupan lo suficiente como para no herir mis sentimientos.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Miró a Seraphina. No la mirada de alguien que intenta decidir si odiar o perdonar, sino la de alguien que reconoce un gesto genuino.</p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="añadido con algo que no era perdón pero se le parecía en los bordes">
+            —Todas ellas.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Las dos palabras aterrizaron en el silencio de la cueva con peso. Seraphina bajó la mirada hacia su cuenco, las patas delanteras temblando levemente. No confiaba en su voz para responder, así que tomó otra cucharada. Solo la tragó, y algo en la quietud de ese gesto dijo más que cualquier palabra.</p>
+      </section>
+
+      <!-- =============== LA EXPULSIÓN TRIUNFAL =============== -->
+      <section id="expulsion-triunfal" class="victoria-expulsion">
+        <h3>Bárbaros Victoriosos</h3>
+
+        <div class="murcielago-snob">
+          <p class="dialogo" data-badge="declarado con indignación final">
+            —¡Eso es suficiente! ¡No podemos permitir que esta barbarie culinaria continúe en nuestro santuario gastronómico! ¡Deben irse! ¡Inmediatamente! ¡Antes de que su falta de paladar sea contagiosa!
+          </p>
+        </div>
+
+        <div class="murcielago-snob">
+          <p class="dialogo" data-badge="coreado por el grupo">
+            —¡Bárbaros! ¡Paladares de piedra! ¡Incivilizados culinarios! ¡Terroristas del sabor!
+          </p>
+        </div>
+
+        <!-- =============== APARICIÓN DEL ERIZO =============== -->
+        <p class="texto-narrativo"> Pluma Plateada abrió las alas para un último discurso de indignación, pero antes de que la primera sílaba saliera de su boca, algo rodó por el suelo de la cueva con la velocidad exacta de una bola de púas en pendiente suave.</p>
+
+        <p class="texto-narrativo"> El erizo — que nadie recordaba haber visto entrar — cruzó la cueva en línea recta, chocó contra la pata de Pluma Plateada con un sonido sordo, se detuvo, y se desenrolló. Miró al murciélago desde abajo con sus ojos de semilla de amapola. Pluma Plateada miró al erizo desde arriba con la expresión de alguien cuyo vocabulario acaba de abandonarlo.</p>
+
+        <p class="texto-narrativo"> La cueva entera se quedó en silencio.</p>
+
+        <p class="texto-narrativo"> El erizo parpadeó. O tal vez no — era genuinamente imposible saber si esos ojos tenían párpados. Luego, con la lentitud de un reloj de arena, se hizo bolita otra vez. A los pies del murciélago más indignado de la montaña.</p>
+
+        <p class="texto-narrativo"> Pluma Plateada abrió la boca. La cerró. La abrió de nuevo. Miró al erizo. Miró a Axel. Miró al erizo otra vez.</p>
+
+        <div class="murcielago-snob">
+          <p class="dialogo" data-badge="balbuceado con confusión total">
+            —¿Qué.... qué es.... por qué.... esto no consta en ningún protocolo de evaluación gastronómica.
+          </p>
+        </div>
+
+        <p class="dialogo" data-badge="susurrado a Ember">
+          —Vámonos antes de que se recupere.
+        </p>
+        <!-- =============== FIN APARICIÓN DEL ERIZO =============== -->
+
+        <p class="texto-narrativo"> En lugar de sentirse ofendidos por la expulsión, algo extraño pasó. Los tres se miraron. Axel con algas todavía en el pelaje, Ember con restos de sopa en los bigotes, Seraphina con las antenas curvadas del aroma residual. Y comenzaron a reírse.</p>
+
+        <p class="texto-narrativo"> No la risa educada que llena silencios incómodos. La risa real — la que empieza en el estómago, sube por el pecho, y sale sin permiso. La risa de personas que han tenido un día terrible, que están rotas en lugares que no saben cómo reparar, y que acaban de ser expulsadas de una cueva por murciélagos con corbata por el crimen de comer sopa mala con cariño. Axel se rió hasta que le dolieron las costillas. Ember se rió hasta que le salieron lágrimas. Y Seraphina se rió con un sonido que ninguno de ellos le había escuchado antes: abierto, desprotegido, sin calcular el efecto que tendría en su audiencia.</p>
+
+        <p class="dialogo" data-badge="dicho limpiándose los ojos">
+          —¿Saben qué? Creo que ser llamado bárbaro culinario podría ser el mejor cumplido que he recibido este mes.
+        </p>
+
+        <div class="seraphina-culpa">
+          <p class="dialogo" data-badge="agregado con franco humor">
+            —Especialmente considerando que la barbarie involucró defendernos unos a otros.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> La sonrisa en su rostro cambió la forma de sus facciones — como si su cara hubiera recordado una configuración antigua que había olvidado.</p>
+
+        <div class="ember-cocinando">
+          <p class="dialogo" data-badge="admitido vaciando el cuenco en los arbustos">
+            —Y aunque mi sopa era objetivamente terrible.... verlos defender mi desastre culinario fue realmente bonito.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> La vegetación donde cayó la sopa se marchitó visiblemente, lo cual provocó otra ronda de risas.</p>
+      </section>
+
+      <!-- =============== EL INTERCAMBIO FURTIVO =============== -->
+      <section id="intercambio-pergamino" class="cueva-gastronomica">
+        <h3>Lo Que Los Snobs Esconden</h3>
+
+        <p class="texto-narrativo"> No habían dado veinte pasos cuando un aleteo rápido los alcanzó.</p>
+
+        <p class="texto-narrativo"> Un murciélago más joven — el del gorro de chef — aterrizó en una roca delante de ellos. Pero su expresión no era la de antes. La superioridad teatral había cedido a algo más práctico, más furtivo. Miró hacia atrás para asegurarse de que Pluma Plateada no lo seguía.</p>
+
+        <div class="murcielago-snob">
+          <p class="dialogo" data-badge="dicho mirando sobre su hombro">
+            —Esperen. Necesito.... información. Sobre las rutas del norte. Los manuscritos que los bibliotecarios cartografiaban antes de que las bibliotecas.... bueno. Ustedes viajan hacia el Templo, ¿correcto? Los cristales de sus mochilas delatan la dirección.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Axel posó una mano en el arco por instinto.</p>
+
+        <p class="dialogo" data-badge="respondido con los ojos entrecerrados">
+          —¿Qué tipo de información buscas?
+        </p>
+
+        <div class="murcielago-snob">
+          <p class="dialogo" data-badge="explicado en voz baja">
+            —Rutas de migración de insectos nocturnos. Las que solo los bibliotecarios murciélagos cartografiaban. Las necesito para expandir nuestra carta de ingredientes exóticos y demostrar que puedo innovar sin depender de Pluma Plateada para todo. A cambio, tengo algo que les interesará. Un pergamino antiguo que llegó con un comerciante del oeste hace tres lunas. Lo catalogamos como recetario, pero.... no es solo recetas.
+          </p>
+        </div>
+
+        <p class="dialogo" data-badge="preguntado con voz controlada">
+          —¿Qué más hay?
+        </p>
+
+        <div class="murcielago-snob">
+          <p class="dialogo" data-badge="susurrado acercándose">
+            —Entre las recetas de sopa de raíz y estofado de liquen hay anotaciones en escritura antigua. Yo no pude descifrarlas — no tengo las herramientas. Pero reconocí algunos glifos. Son los mismos que aparecen en los grabados del Templo Celestial.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Axel miró a Ember. Ember miró a Axel. La misma comunicación silenciosa de hermanos que han cazado juntos — un parpadeo que significa —esto podría ser real—, una inclinación de oreja que responde —o podría ser una trampa—.</p>
+
+        <p class="dialogo" data-badge="respondido asintiendo">
+          —Haz el intercambio. ¿Qué necesitas exactamente?
+        </p>
+
+        <p class="texto-narrativo"> El murciélago pidió detalles de las rutas que los mapaches cartógrafos les habían mostrado — coordenadas, patrones estacionales, corrientes de aire. Ember los dictó de memoria con la precisión de un diplomático acostumbrado a retener información en reuniones. A cambio, el murciélago les entregó un pergamino enrollado que olía a especias y a tinta vieja.</p>
+
+        <p class="texto-narrativo"> Axel lo desenrolló con cuidado. Sus ojos recorrieron la superficie — no podía leer la escritura antigua, pero reconoció los glifos que se repetían al margen. Los mismos símbolos que había visto tallados en las Lágrimas de Cristal. Los mismos que brillaban en la madera de su arco cuando las Lágrimas estaban cerca.</p>
+
+        <p class="dialogo" data-badge="murmurado pasando los dedos sobre los glifos">
+          —Las anotaciones entre la receta de sopa de raíces y la de estofado de liquen.... son instrucciones de orientación. Para las cámaras interiores del Templo. Parciales, pero parciales es infinitamente más que lo que teníamos.
+        </p>
+
+        <p class="texto-narrativo"> Guardó el pergamino en la bolsa, junto a la cera impermeabilizante de las nutrias. La ironía de que instrucciones sagradas llegaran camufladas entre recetas de cocina no se le escapó — conocimiento protegido de ojos equivocados mediante el disfraz más mundano posible.</p>
+
+        <p class="texto-narrativo"> El murciélago se puso el gorro de chef de nuevo, recuperando su postura de superioridad como quien se pone una armadura.</p>
+
+        <div class="murcielago-snob">
+          <p class="dialogo" data-badge="dicho retomando su tono pretencioso">
+            —Ha sido una transacción.... aceptable. Tengan cuidado con esos hongos morados. No son venenosos, pero.... producen sueños muy elaborados. Muy elaborados.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Desapareció antes de que alguien pudiera preguntar qué significaba —muy elaborados— dicho dos veces.</p>
+      </section>
+
+      <!-- =============== LOS REGALOS DE PLUMA PLATEADA =============== -->
+      <section id="regalos-pluma" class="cueva-gastronomica">
+        <h3>Lo Que No Es Una Disculpa</h3>
+
+        <p class="texto-narrativo"> No fue el único intercambio de esa noche. Pluma Plateada apareció en la entrada de la cueva principal con una expresión que intentaba ser digna pero que no podía disimular la culpa de un anfitrión que sabe que ha sido descortés con viajeros en necesidad. Llevaba dos objetos.</p>
+
+        <p class="texto-narrativo"> El primero era un frasco de vidrio oscuro sellado con cera púrpura, que contenía una sustancia espesa y nacarada. La etiqueta decía —Ungüento Auditivo de Eco-Localización, Preparación Artesanal. Aplicar en la base de las orejas. Amplifica percepción sonora durante 4 horas. No usar cerca de cascadas (experiencia traumática documentada en Archivo de Incidentes, Vol. 3)—.</p>
+
+        <div class="murcielago-snob">
+          <p class="dialogo" data-badge="ofrecido con dignidad herida">
+            —Esto no es una disculpa. Los murciélagos no se disculpan. Simplemente corregimos desequilibrios. Tu grupo viaja hacia territorio con cuevas y oscuridad. Tus orejas de gato son aceptables, pero con esto serán.... menos inadecuadas.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Axel tomó el frasco. Olía a mineral, a algo ligeramente dulce, y debajo de todo al mismo tipo de preparación cuidadosa que olía en las medicinas que su padre hacía con hierbas de montaña. Un regalo disfrazado de corrección, de la misma forma que la hospitalidad de Pluma Plateada era generosidad disfrazada de condescendencia.</p>
+
+        <p class="texto-narrativo"> El segundo fue para Ember. Pluma Plateada lo sostuvo entre dos garras con la delicadeza de una reliquia: un frasco de especias fermentadas de cueva, del tamaño de un pulgar, con un color ambarino que brillaba bajo las estrellas.</p>
+
+        <div class="murcielago-snob">
+          <p class="dialogo" data-badge="dicho con urgencia gastronómica">
+            —Y esto es una corrección urgente a tu paladar. Especias fermentadas de cueva. Tres lunas de proceso. Úsalas con moderación — una pizca por olla, no más — y tu próxima creación podría ascender de insulto gastronómico a mera decepción. Lo cual, viniendo de donde empezaste, sería un logro considerable.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Ember lo olió. Sus orejas se irguieron — el aroma era complejo, profundo, nada parecido a las especias de mapache. El tipo de ingrediente que Luna Suave habría apreciado.</p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="respondido con media sonrisa">
+            —Gracias, Pluma Plateada.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> La sinceridad en su voz hizo que el murciélago retrocediera un paso, como si la gratitud genuina fuera un ingrediente con el que no sabía qué hacer.</p>
+
+        <div class="murcielago-snob">
+          <p class="dialogo" data-badge="respondido girando con brusquedad">
+            —No me des las gracias. Me ofende que tu sopa exista. Esto es un acto de servicio público.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Desapareció en la cueva antes de que alguien pudiera ver que sus orejas estaban ligeramente rosadas.</p>
+      </section>
+
+      <!-- =============== NOCHE EN LA CUEVA =============== -->
+      <section id="noche-cueva" class="cueva-gastronomica">
+        <h3>Pan Seco y Estrellas</h3>
+
+        <p class="texto-narrativo"> Encontraron refugio en una cueva más pequeña pero desocupada — sin decoración, sin cristales bioluminiscentes, sin formularios de evaluación. Solo roca seca, el cielo estrellado desde la entrada, y espacio suficiente para que tres viajeros se acomodaran sin tocarse pero sin alejarse.</p>
+
+        <p class="texto-narrativo"> Axel encendió un fuego pequeño con la eficiencia de quien lo ha hecho mil veces solo. El calor le secó por fin el pelaje, y el arco emanó su calor suave y constante — el calor que siempre asociaba con protección, con hogar, con su padre preparando la cena en las Montañas Heladas.</p>
+
+        <p class="texto-narrativo"> Compartieron las raciones — pan seco, frutas preservadas, lo que quedaba de las provisiones que Lyra había dejado junto al Bosque de Cuervos Espejo. Comida simple. Sin especias del Bosque Oriental, sin narrativa culinaria. Solo pan partido por manos que habían elegido seguir juntas.</p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="dicho masticando pan que sabía mejor que su sopa">
+            —¿Saben qué aprendí? A veces la comida no se trata de impresionar a otros. Se trata de compartir lo que tienes con personas que importan. Luna Suave siempre lo dice: la mejor comida es la que se come en compañía que te hace sentir seguro. Incluso si esa compañía es.... complicada.
+          </p>
+        </div>
+
+        <p class="dialogo" data-badge="respondido mirando las estrellas desde la entrada">
+          —Y a veces ser rechazado por las razones correctas se siente mejor que ser aceptado por las razones equivocadas.
+        </p>
+
+        <div class="seraphina-culpa">
+          <p class="texto-narrativo"> Las palabras cayeron en un lugar que Seraphina no esperaba. Ser rechazado por las razones correctas. Ella había sido aceptada por todas las razones equivocadas durante semanas — aceptada como víctima, como aliada, como amiga — y cada aceptación construida sobre mentiras. Pero esta noche, con pan seco y el recuerdo de una sopa desastrosa, estaba siendo incluida no porque creyeran que era alguien que no era, sino a pesar de saber exactamente quién era. Y esa inclusión — cautelosa, herida, incompleta — pesaba más que todas las bienvenidas falsas que había construido.</p>
+        </div>
+
+        <div class="seraphina-culpa">
+          <p class="dialogo" data-badge="dicho con voz suave">
+            —Gracias. Por defender la sopa horrible. Por seguir actuando como un grupo incluso cuando....
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> No terminó. No necesitaba hacerlo.</p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="completado sin dureza">
+            —Incluso cuando las cosas son complicadas. Eso es lo que hacen las personas que se preocupan unas por otras.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> No era perdón. Sus garras todavía marcaban la roca cuando se ponía tenso, y había momentos en que miraba a Seraphina y algo oscuro le cruzaba los ojos. Pero era el reconocimiento de que la complejidad no es lo mismo que la maldad.</p>
+
+        <p class="texto-narrativo"> Era la primera noche desde la revelación que nadie montaba guardia contra nadie, que las orejas de los hermanos no giraban cada vez que Seraphina se movía. La tensión seguía ahí — agazapada, no muerta — pero por esta noche había cedido su lugar a algo más cálido.</p>
+
+        <p class="texto-narrativo"> Seraphina se quedó despierta más que los demás. Miraba a los hermanos dormir — Ember acurrucado contra Axel como hacía cuando era cachorro, un hábito que ni la edad ni la furia podían eliminar — y sintió algo que dolía de una forma diferente a la culpa. Dolía como un hambre. Como el reconocimiento de algo que quieres y sabes que quizás nunca merecerás tener: pertenecer.</p>
+
+        <p class="texto-narrativo"> Axel no dormía todavía. Acostado de lado, con Ember contra su espalda y el calor del fuego en la cara, miraba las brasas con los ojos entrecerrados.</p>
+
+        <p class="texto-narrativo"> Las palabras de los Susurradores volvieron con la claridad de los recuerdos que se niegan a ser archivados: —el jardín con espinas alimenta pero no sin precio—. No lo había entendido entonces. Ahora, mirando a Seraphina junto al fuego con las patas abrazando sus rodillas, empezaba a ver la forma del acertijo. Ella era el jardín. Las rosas que habían crecido de su corazón eran reales. Pero las espinas también. Y alimentarse de lo bueno significaba aceptar que las espinas existían y que podían cortar.</p>
+
+        <p class="texto-narrativo"> Tocó el arco. La madera tibia, constante — como si su padre le dijera —estoy aquí, pero esta decisión es tuya—.</p>
+
+        <p class="texto-narrativo"> Los Susurradores también habían dicho: —la flecha que no disparas es la que define al arquero—. ¿Significaba perdonar? ¿Significaba soltar? ¿O significaba simplemente elegir no destruir cuando tienes todo el derecho y toda la capacidad de hacerlo?</p>
+
+        <p class="texto-narrativo"> Afuera, la noche olía a pino y a roca fría. En algún lugar entre los árboles, tan lejos que solo oídos de gato montés habrían podido detectarlo, una silueta oscura se movió — Lyra, verificando que el campamento estuviera seguro antes de continuar su vigilia silenciosa. El viento cambió de dirección, y por un instante el aroma de corteza de pino y cuero de viaje llegó hasta la entrada de la cueva. Axel, con los ojos cerrados, movió una oreja en esa dirección y algo en su expresión se relajó.</p>
+
+        <p class="texto-narrativo"> Seraphina lo vio relajarse y se preguntó qué habría olido que pudiera producir esa paz. Luego miró las brasas y dejó que la pregunta se la llevara el humo.</p>
+      </section>
+
+      <!-- =============== GANCHO HACIA SECCION_08C =============== -->
+      <section id="gancho-mariposas" class="cueva-gastronomica">
+        <h3>Lo Que No Se Leyó en Voz Alta</h3>
+
+        <p class="texto-narrativo"> Lo último que Axel vio antes de cerrar los ojos fue el pergamino que había guardado junto a su bolsa. En la luz moribunda del fuego, los glifos del margen pulsaban con un brillo tenue que podía ser reflejo de las brasas o podía ser otra cosa. En el borde inferior había una línea más oscura que el resto — tinta diferente, mano diferente, escrita después de todo lo demás. Los glifos eran los mismos del Templo, pero la estructura era distinta. No instrucciones de orientación. Una advertencia.</p>
+
+        <p class="texto-narrativo"> Axel no podía leerla. Pero el arco sí reaccionó: un pulso único, frío, como un escalofrío recorriendo la madera. La misma reacción que tenía ante peligro — solo que esta vez el peligro no estaba en el bosque ni en el camino. Estaba en el papel.</p>
+
+        <p class="texto-narrativo"> Se dijo que buscaría a alguien que pudiera traducirla. Pero la pregunta no lo dejó dormir del todo — se quedó en el umbral de la conciencia, insistente como el calor del arco contra su costado, como el nombre de su padre dicho en voz baja por alguien que no merecía pronunciarlo y que aún así lo llevaba clavado en el pecho.</p>
+
+        <p class="texto-narrativo"> Mañana seguirían caminando. Mañana las preguntas volverían con el sol. Mañana el Templo Celestial estaría un día más cerca, y con él la decisión que definiría todo.</p>
+
+        <p class="texto-narrativo"> Pero esta noche — esta noche de sopa terrible, murciélagos indignados, y pan seco compartido entre personas rotas que todavía estaban aprendiendo que roto no significa irreparable — era suficiente.</p>
+      </section>
+    </div>
+
+<!--
+NOTAS DE CONTINUIDAD:
+— Grupo de 3 (sin Eco Pergaminada — se fue en seccion_05)
+— Apertura conecta con 08A (voces múltiples en la cueva = murciélagos)
+— Erizo preservado (rueda contra Pluma Plateada)
+— Eco Pergaminada eliminada: su rol de "prima" eliminado. Murciélagos son locales sin conexión familiar
+— "Terroir" ahora lo dice SERAPHINA — su primera defensa verbal del grupo, más significativa
+— Pergamino: intercambiado por Ember (dicta rutas de mapaches de memoria). Axel reconoce glifos = Lágrimas de Cristal
+— Advertencia oculta en el pergamino: línea en tinta diferente que el arco detecta como peligro
+— Regalos de Pluma Plateada: ungüento auditivo (Axel) + especias fermentadas (Ember)
+— Foreshadowing: profecía Susurradores ("jardín con espinas", "flecha que no disparas")
+— Lyra: presencia olfativa nocturna, Axel reacciona inconscientemente
+— Seraphina: primera broma ("venenos peores"), primera defensa del grupo, primera noche sin guardia
+— Gancho: advertencia no leída en el pergamino + arco que reacciona con frío
+— "Sin embargo" = 0
+— Clases sucias = 0
+— Eco Pergaminada = 0
+-->
+
+    <script src="global-reset.js"></script>
   </body>
 </html>

@@ -3,593 +3,758 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>El Cazador de Medianoche - seccion_08A</title>
+    <title>Sección 8A: El Río de las Nutrias Velocistas - El Cazador de Medianoche</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="historia-interactiva.css" />
+    <style>
+      .rio-nutrias {
+        background: linear-gradient(135deg, #4682b4, #87ceeb, #b0e0e6);
+        border-radius: 15px;
+        padding: 30px;
+        margin: 20px 0;
+        border: 2px solid rgba(70, 130, 180, 0.4);
+        box-shadow: 0 0 20px rgba(135, 206, 235, 0.3);
+      }
+
+      .tension-post-revelacion {
+        background: rgba(139, 0, 0, 0.1);
+        border-left: 4px solid #8b0000;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 0 10px 10px 0;
+      }
+
+      .ember-furia-contenida {
+        background: rgba(255, 69, 0, 0.2);
+        border-left: 4px solid #ff4500;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 0 10px 10px 0;
+      }
+
+      .seraphina-culpa {
+        background: rgba(75, 0, 130, 0.1);
+        border-left: 3px solid #4b0082;
+        padding: 12px;
+        margin: 10px 0;
+        font-style: italic;
+      }
+
+      .caos-acuatico {
+        background: linear-gradient(135deg, #20b2aa, #48d1cc, #afeeee);
+        border-radius: 20px;
+        padding: 25px;
+        margin: 15px 0;
+        border: 2px solid rgba(32, 178, 170, 0.4);
+        animation: water-chaos 3s ease-in-out infinite alternate;
+      }
+
+      @keyframes water-chaos {
+        0% {
+          transform: translateX(-2px) rotate(-0.5deg);
+          box-shadow: 0 0 15px rgba(32, 178, 170, 0.3);
+        }
+        50% {
+          transform: translateX(1px) rotate(0.3deg);
+          box-shadow: 0 0 20px rgba(72, 209, 204, 0.4);
+        }
+        100% {
+          transform: translateX(-1px) rotate(-0.2deg);
+          box-shadow: 0 0 18px rgba(175, 238, 238, 0.5);
+        }
+      }
+
+      .nutria-sarcastica {
+        background: rgba(0, 100, 0, 0.1);
+        border-left: 3px solid #006400;
+        padding: 10px;
+        margin: 10px 0;
+        font-style: italic;
+        color: #006400;
+      }
+
+      .reset-emocional {
+        background: linear-gradient(135deg, #ffe4b5, #f0e68c, #fffacd);
+        border-radius: 15px;
+        padding: 20px;
+        margin: 15px 0;
+        border: 2px solid rgba(240, 230, 140, 0.4);
+      }
+
+      .dialogo-ember {
+        background: rgba(255, 215, 0, 0.1);
+        border-left: 4px solid #ffd700;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 0 10px 10px 0;
+      }
+    </style>
   </head>
   <body>
-    <!--
-╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
-║                                        SECCIÓN 8A: EL RÍO DE LAS NUTRIAS VELOCISTAS                                                                                ║
-║                                                🏊 DÍA 9 🏊                                                                                                         ║
-╠══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-║ CONTEXTO NARRATIVO:                                                                                                                                                 ║
-║ • POST-REVELACIÓN: Verdad sobre Seraphina ya expuesta                                                                                                               ║
-║ • Tensión grupal palpable después de los Cuervos Espejo                                                                                                             ║
-║ • Ember furioso pero aún viajando con el grupo                                                                                                                      ║
-║ • Axel procesando que Seraphina dañó a su padre                                                                                                                     ║
-║ • Necesitan momento de —reset emocional— antes de continuar                                                                                                         ║
-║                                                                                                                                                                      ║
-║ OBJETIVOS DE LA SECCIÓN:                                                                                                                                            ║
-║ • ALIVIO DE TENSIÓN: Distracción necesaria del drama emocional                                                                                                      ║
-║ • RESET GRUPAL: Actividad que los force a cooperar                                                                                                                  ║
-║ • SERAPHINA: Mostrar lado competitivo surge a pesar de culpa                                                                                                        ║
-║ • EMBER: Canalizando furia en actividad física                                                                                                                      ║
-║ • HUMOR FÍSICO: Caos acuático, todos terminando empapados                                                                                                           ║
-║                                                                                                                                                                      ║
-║ ELEMENTOS ESPECÍFICOS:                                                                                                                                              ║
-║ • Nutrias ofrecen distracción: carrera de balsas                                                                                                                    ║
-║ • Parejas forzadas: Axel/Ember vs Seraphina/nutria                                                                                                                  ║
-║ • Caos acuático, balsas chocando, remando en círculos                                                                                                               ║
-║ • Todos terminan en el agua, riéndose a pesar de todo                                                                                                               ║
-║ • Nutrias hacen comentarios sarcásticos                                                                                                                             ║
-║ • Momento de alivio temporal antes de continuar viaje tenso                                                                                                         ║
-╚══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+    <div class="container">
+
+<!--
+╔════════════════════════════════════════════════════════════════════════════════╗
+║         SECCIÓN 8A: EL RÍO DE LAS NUTRIAS VELOCISTAS                       ║
+║                          DÍA 9                                               ║
+╠════════════════════════════════════════════════════════════════════════════════╣
+║ GRUPO: Axel, Seraphina, Ember (3 personas. Sin Eco Pergaminada)             ║
+║ INVENTARIO: Arco élfico, Lágrimas de Cristal, flechas especiales,           ║
+║   mapas, flauta élfica de Ember, erizo, notas de Lyra                       ║
+║ CONEXIÓN: Viene de seccion_08 (revelación completa, grupo fracturado)       ║
+║ GANCHO ANTERIOR: Río de las Nutrias marcado en mapa de armadillos           ║
+║ OBJETIVO: Reset emocional mediante actividad física compartida              ║
+╚════════════════════════════════════════════════════════════════════════════════╝
 -->
 
-    <!doctype html>
-    <html lang="es">
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Sección 8A: El Río de las Nutrias Velocistas - El Cazador de Medianoche</title>
-        <link rel="stylesheet" href="styles.css" />
-        <style>
-          .rio-nutrias {
-            background: linear-gradient(135deg, #4682b4, #87ceeb, #b0e0e6);
-            border-radius: 15px;
-            padding: 30px;
-            margin: 20px 0;
-            border: 2px solid rgba(70, 130, 180, 0.4);
-            box-shadow: 0 0 20px rgba(135, 206, 235, 0.3);
-          }
+      <!-- =============== LA TENSIÓN PALPABLE =============== -->
+      <section id="tension-grupal" class="tension-post-revelacion">
+        <h1>El Cazador de Medianoche - Sección 8A: El Río de las Nutrias Velocistas</h1>
 
-          .tension-post-revelacion {
-            background: rgba(139, 0, 0, 0.1);
-            border-left: 4px solid #8b0000;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 0 10px 10px 0;
-          }
+        <p class="texto-narrativo"> El silencio que habían arrastrado desde el Bosque de Cuervos Espejo no era el silencio cómodo de las noches junto al fuego. Era un silencio con garras — el tipo que se clava entre las costillas y hace que cada respiración cueste un poco más de lo necesario.</p>
 
-          .ember-furia-contenida {
-            background: rgba(255, 69, 0, 0.2);
-            border-left: 4px solid #ff4500;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 0 10px 10px 0;
-          }
+        <p class="texto-narrativo"> Axel lo sentía como una presión constante en la nuca, justo donde el pelaje se erizaba cada vez que Seraphina se movía a su izquierda. Su cuerpo no había olvidado cómo caminar junto a ella, pero ahora cada paso compartido venía acompañado de un instinto nuevo — el mismo que le advertía cuando un depredador caminaba demasiado cerca. El arco en su espalda no se había calentado desde que salieron del bosque. Esa ausencia de advertencia lo confundía más que cualquier alarma.</p>
 
-          .seraphina-culpa {
-            background: rgba(75, 0, 130, 0.1);
-            border-left: 3px solid #4b0082;
-            padding: 12px;
-            margin: 10px 0;
-            font-style: italic;
-          }
+        <p class="texto-narrativo"> Ember caminaba deliberadamente separado de Seraphina, con el pelaje de los hombros erizado y las orejas giradas hacia atrás. Axel alternaba entre mirar a Seraphina y estudiar el sendero con la intensidad de quien busca huellas que no existen.</p>
 
-          .caos-acuatico {
-            background: linear-gradient(135deg, #20b2aa, #48d1cc, #afeeee);
-            border-radius: 20px;
-            padding: 25px;
-            margin: 15px 0;
-            border: 2px solid rgba(32, 178, 170, 0.4);
-            animation: water-chaos 3s ease-in-out infinite alternate;
-          }
+        <div class="ember-furia-contenida">
+          <p class="texto-narrativo"> Las garras de Ember se extendían y retraían rítmicamente mientras caminaba, marcando el suelo con líneas finas que ningún rastreador podría interpretar como otra cosa que furia pura. Pero había algo más debajo — un dolor sordo que le recordaba a cuando era cachorro y descubría que el mundo no funcionaba como le habían prometido. Parte de él quería dar media vuelta y correr hasta Valle Tranquilo, hasta Luna Suave y los gemelos, hasta un lugar donde las personas que amaba no resultaban ser lo opuesto a lo que aparentaban.</p>
 
-          @keyframes water-chaos {
-            0% {
-              transform: translateX(-2px) rotate(-0.5deg);
-              box-shadow: 0 0 15px rgba(32, 178, 170, 0.3);
-            }
-            50% {
-              transform: translateX(1px) rotate(0.3deg);
-              box-shadow: 0 0 20px rgba(72, 209, 204, 0.4);
-            }
-            100% {
-              transform: translateX(-1px) rotate(-0.2deg);
-              box-shadow: 0 0 18px rgba(175, 238, 238, 0.5);
-            }
-          }
-
-          .nutria-sarcastica {
-            background: rgba(0, 100, 0, 0.1);
-            border-left: 3px solid #006400;
-            padding: 10px;
-            margin: 10px 0;
-            font-style: italic;
-            color: #006400;
-          }
-
-          .reset-emocional {
-            background: linear-gradient(135deg, #ffe4b5, #f0e68c, #fffacd);
-            border-radius: 15px;
-            padding: 20px;
-            margin: 15px 0;
-            border: 2px solid rgba(240, 230, 140, 0.4);
-          }
-        </style>
-      </head>
-      <body>
-        <div class="container">
-          <!-- =============== LA TENSIÓN PALPABLE =============== -->
-          <section id="tension-grupal" class="tension-post-revelacion">
-            <h1>El Cazador de Medianoche - Sección 8A: El Río de las Nutrias Velocistas</h1>
-
-            <p class="texto-narrativo"> El silencio que había caído sobre el grupo después de salir del Bosque de Cuervos Espejo no era el silencio cómodo de las noches junto al fuego, ni el silencio respetuoso del Valle de los Susurradores. Era un silencio con garras — el tipo que se clava entre las costillas y hace que cada respiración cueste un poco más de lo necesario. </p>
-
-            <p class="texto-narrativo"> Axel lo sentía como una presión constante en la nuca, justo donde el pelaje se erizaba cada vez que Seraphina se movía a su izquierda. Su cuerpo no había olvidado cómo caminar junto a ella, pero ahora cada paso compartido venía acompañado de un instinto nuevo — el mismo que le advertía cuando un depredador caminaba demasiado cerca. El arco en su espalda no se había calentado desde que salieron del bosque, y esa ausencia de advertencia lo confundía más que cualquier alarma. </p>
-
-            <p class="texto-narrativo"> Llevaban medio día caminando desde la revelación, y las dinámicas habían cambiado fundamentalmente. Ember caminaba deliberadamente separado de Seraphina, con el pelaje de los hombros erizado y las orejas giradas hacia atrás — la postura de un gato que espera un ataque desde cualquier dirección. Axel alternaba entre mirar a Seraphina con expresiones que cambiaban demasiado rápido para nombrarlas, y estudiar el sendero con la intensidad de quien busca huellas que no existen. Eco Pergaminada volaba nerviosamente entre todos, sus alas membranosas produciendo un zumbido ansioso que se aceleraba cada vez que alguien abría la boca sin llegar a hablar. </p>
-
-            <div class="ember-furia-contenida">
-              <p class="texto-narrativo"> Ember había estado luchando con emociones contradictorias durante horas. Sus garras se extendían y retraían rítmicamente mientras caminaba, marcando el suelo con líneas finas que ningún rastreador podría interpretar como otra cosa que furia pura. Pero había algo más debajo de esa furia — un dolor sordo que le recordaba a cuando era cachorro y descubría que el mundo no funcionaba como le habían prometido. Parte de él quería gritar hasta quedarse sin voz. Parte quería dar media vuelta y correr hasta Valle Tranquilo, hasta Luna Suave y los gemelos, hasta un lugar donde las personas que amaba no resultaban ser lo opuesto a lo que aparentaban. Y parte — una parte que lo hacía apretar la mandíbula con fuerza suficiente para que le dolieran los dientes — aún se preocupaba por Seraphina. Esa parte era la que lo mantenía poniendo una pata delante de otra en lugar de desaparecer entre los árboles. </p>
-
-              <p class="texto-narrativo"> Recordaba con claridad enfermante cómo había defendido a Seraphina frente a Lyra. Cómo había dicho —ella no es lo que piensas— con toda la convicción de alguien que cree conocer a otro. Las palabras le ardían en la garganta como espinas tragadas. </p>
-            </div>
-
-            <div class="seraphina-culpa">
-              <p class="texto-narrativo"> Seraphina caminaba con las patas delanteras pegadas al cuerpo, ocupando el menor espacio posible — el instinto ancestral de una criatura que sabe que ha perdido el derecho a moverse con libertad entre los suyos. Cada paso parecía requerir esfuerzo consciente, no por fatiga física sino por el peso de sentir cómo el pelaje de Ember se erizaba cada vez que ella se acercaba demasiado, cómo las orejas de Axel giraban hacia ella con una atención que ya no era curiosa sino vigilante. </p>
-
-              <p class="texto-narrativo"> La ironía era que nunca se había sentido más genuinamente ella misma que ahora, sin mentiras que mantener, sin la tensión constante de recordar qué versión de sí misma había presentado a cada uno. Pero esa libertad venía con un precio: las miradas que antes la incluían ahora la estudiaban. Y la soledad de ser verdaderamente vista resultaba más devastadora que la soledad de estar escondida. </p>
-            </div>
-
-            <p class="dialogo tentativo" data-badge="preguntado con voz pequeña"> —¿Deberíamos.... deberíamos hablar sobre lo que pasó?— preguntó Eco Pergaminada finalmente, incapaz de soportar más la tensión. Su voz sonó demasiado alta en el silencio, como una piedra cayendo en agua quieta. </p>
-
-            <div class="ember-furia-contenida">
-              <p class="dialogo cortante" data-badge="respondido con dureza contenida"> —¿Hablar sobre qué parte?— la voz de Ember salió más afilada de lo que pretendía, y sus orejas se aplanaron al escucharse.— ¿Sobre las mentiras? ¿Sobre lo que le hizo a nuestro padre? ¿O sobre cómo yo la defendí mientras ella probablemente calculaba su siguiente movimiento?— </p>
-            </div>
-
-            <div class="seraphina-culpa">
-              <p class="dialogo quebrada" data-badge="murmurado con hondo dolor"> —Nunca calculé nada contigo, Ember— su voz se quebró en la última sílaba.— Tus sentimientos.... tu amabilidad.... eso era real para mí también— </p>
-            </div>
-
-            <div class="ember-furia-contenida">
-              <p class="dialogo amargo" data-badge="respondido con sarcasmo herido"> —Oh, qué reconfortante— Ember mostró los colmillos sin darse cuenta, un gesto que no le había salido desde que era adolescente.— La que dañó a mi padre tiene sentimientos— </p>
-            </div>
-
-            <p class="texto-narrativo"> Las palabras cayeron como piedras calientes. Axel cerró los ojos un instante — las imágenes del Bosque de Cuervos Espejo seguían demasiado frescas, los espejos mostrando verdades que habría preferido no ver. El arco en su espalda pesaba más de lo habitual, como si la madera ancestral también estuviera procesando lo que habían descubierto sobre su anterior portador. </p>
-
-            <p class="dialogo medido" data-badge="dicho con calma forzada"> —Ember— dijo Axel, y su hermano se giró con las pupilas dilatadas.— No aquí. No caminando. Si vamos a tener esta conversación, la tendremos sentados, mirándola a los ojos, y cuando estemos listos— </p>
-
-            <p class="texto-narrativo"> Ember abrió la boca para protestar, pero algo en la expresión de su hermano lo detuvo. No era la calma que aparentaba — Ember podía oler la tensión en Axel igual que olía la lluvia antes de que cayera. Era algo más profundo: la misma determinación silenciosa que su padre tenía cuando decidía que era momento de actuar con la cabeza y no con las garras. </p>
-
-            <p class="texto-narrativo"> Fue en ese momento de tensión suspendida cuando escucharon los sonidos de chapoteo alegre y voces que gritaban instrucciones contradictorias a la distancia. Las orejas de los tres gatos giraron simultáneamente hacia el río — un instinto compartido que, por un segundo brevísimo, los hizo parecer una familia otra vez. </p>
-          </section>
-
-          <!-- =============== ENCUENTRO CON LAS NUTRIAS =============== -->
-          <section id="encuentro-nutrias" class="rio-nutrias">
-            <h2>Distracción Acuática</h2>
-
-            <p class="texto-narrativo"> El sendero los llevó a las orillas de un río ancho y de corriente moderada, y el cambio fue tan abrupto que las orejas de Axel giraron hacia adelante antes que sus ojos registraran la escena. El aire olía diferente aquí — a musgo mojado, a corteza fresca, a algo vivo y ruidoso que contrastaba con el silencio denso que habían estado arrastrando. Docenas de nutrias navegaban el río en balsas construidas con troncos y cuerdas, gritando instrucciones que se contradecían entre sí, chocando con la regularidad de quien ha convertido el desastre en arte, y claramente divirtiéndose con una intensidad que resultaba casi ofensiva para un grupo en plena crisis emocional. </p>
-
-            <p class="texto-narrativo"> Ember se detuvo al borde del agua, y por primera vez en medio día sus orejas se irguieron hacia algo que no fuera una amenaza. El sonido de las risas y los chapoteos era tan completamente ajeno a lo que sentía por dentro que su cerebro tardó un momento en procesarlo — como si alguien hubiera abierto una ventana en medio de un incendio. </p>
-
-            <p class="texto-narrativo"> En la orilla, una nutria muy grande con una gorra de capitán hecha de hojas de nenúfar trenzadas estaba dirigiendo lo que parecía ser una competencia, usando una concha marina como megáfono improvisado. Tenía el pelaje del pecho cubierto de insignias que parecían hechas con escamas de pescado y semillas, cada una representando un —título— diferente que probablemente se había otorgado a sí misma. </p>
-
-            <p class="dialogo animado" data-badge="gritado con entusiasmo náutico"> —¡Equipo Piedra Lisa, su balsa está girando en círculos otra vez! ¡Equipo Rama Fuerte, excelente trabajo sincronizando los remos! ¡Equipo Cola Espesa.... bueno, al menos no se han volcado todavía, lo cual es una mejora respecto a los últimos cuatro intentos!— </p>
-
-            <p class="texto-narrativo"> Cuando la nutria capitán notó a los viajeros acercándose, nadó rápidamente hasta la orilla con un movimiento tan fluido que apenas dejó ondas. Se sacudió con la eficiencia de alguien que ha perfeccionado el arte de secarse en tres movimientos exactos, y consultó una tabla impermeable colgada de su cuello. </p>
-
-            <p class="texto-narrativo"> Axel notó que la tabla estaba cubierta de anotaciones en letra diminuta, con secciones codificadas por color y lo que parecían ser diagramas de flujo para diferentes tipos de visitantes. La sección que la nutria estaba consultando se titulaba —Protocolo Oficial de Recepción de Visitantes—, y los pasos eran visibles incluso desde donde él estaba: —Paso 1: Saludar con entusiasmo. Paso 2: Presentarse con rango completo. Paso 3: Ofrecer servicios terapéuticos acuáticos. Paso 4: Evaluar nivel de tensión grupal (Escala de 1 a Necesitan ser empapados inmediatamente)—. La escala continuaba más abajo en letra más pequeña: —Nivel 1: Desacuerdo sobre dirección de remo. Nivel 3: Resentimiento familiar no resuelto. Nivel 5: Traición descubierta durante viaje épico. Nivel 7: Igual que 5 pero el traidor sigue en el grupo—. Debajo, alguien había añadido a mano con tinta diferente: —Nivel 8: Igual que 7 pero con mantis. Usar balsa reforzada—. La nutria los estudió, miró su tabla, los estudió de nuevo, y marcó algo en la sección más alta de la escala. </p>
-
-            <p class="dialogo acogedor" data-badge="saludado con hospitalidad acuática"> —¡Visitantes! ¡Qué perfecta sincronización!— se presentó con una pequeña reverencia que salpicó agua en las patas delanteras de Axel, quien retrocedió por instinto.— Soy Capitán Remolino, Comandante Supremo de Actividades Acuáticas Recreativas, Especialista Certificado en Terapia de Equipo Mojada, y organizador oficial de las Regatas Semanales de Construcción de Carácter— enumeró cada título levantando un dedo diferente de sus patas palmeadas.— ¿Buscan cruzar el río?— </p>
-
-            <p class="dialogo afirmativo" data-badge="respondido con cansancio"> —Sí, necesitamos llegar al otro lado— confirmó Axel. La simplicidad del problema — cruzar agua, llegar a tierra — resultaba casi reconfortante después de horas intentando navegar algo mucho más profundo e imposible de cruzar a nado. </p>
-
-            <div class="nutria-sarcastica">
-              <p class="texto-narrativo"> Capitán Remolino ladeó la cabeza, estudiando al grupo con la misma atención que una madre nutria evalúa a sus crías después de una tormenta. Sus ojos pequeños y brillantes se movieron de Ember — pelaje erizado, garras marcando el barro — a Seraphina — ocupando el menor espacio posible, como intentando desaparecer de pie — a Axel — mandíbula tensa, orejas en constante rotación. </p>
-
-              <p class="dialogo observacional" data-badge="comentado con perspicacia acuática"> —Hmm— la nutria consultó su tabla de nuevo y tachó algo con decisión.— Parecen un grupo que necesita mucho más que transporte. Parecen un grupo que necesita.... terapia de equipo acuática— </p>
-            </div>
-
-            <p class="dialogo confundido" data-badge="preguntado con perplejidad"> —¿Terapia de equipo.... acuática?— repitió Eco Pergaminada, aterrizando en una roca cercana con las alas plegadas. </p>
-
-            <p class="dialogo explicativo" data-badge="instruido con filosofía náutica"> —¡Por supuesto!— Capitán Remolino se golpeó el pecho con orgullo.— El agua no miente, no juzga, y no guarda rencores. Pero sí requiere que trabajen juntos o todos se empapan por igual— señaló hacia las balsas donde una tripulación acababa de volcarse entre carcajadas.— Participen en la regata. Garantizo que o salen como un equipo más fuerte o al menos muy mojados y distraídos de sus problemas terrestres— </p>
-
-            <p class="texto-narrativo"> Axel iba a rechazar la oferta — no estaban para juegos, no con el peso de lo que habían descubierto apenas horas atrás — pero entonces notó algo. Ember estaba mirando las balsas. No con interés exactamente, sino con esa expresión hambrienta que tienen los que llevan demasiado tiempo conteniendo algo físico y necesitan desesperadamente mover el cuerpo para no explotar por dentro. Conocía esa expresión. La había visto en el espejo cada vez que volvía de cazar durante días enteros después de la desaparición de su padre. </p>
-
-            <p class="dialogo resignado" data-badge="aceptado con suspiro"> —¿Cómo funciona?— preguntó, y notó cómo las orejas de Ember giraron hacia él con sorpresa. </p>
-          </section>
-
-          <!-- =============== LA REGATA FORZADA =============== -->
-          <section id="regata-caos" class="caos-acuatico">
-            <h3>Parejas Imposibles</h3>
-
-            <p class="texto-narrativo"> Capitán Remolino organizó las parejas antes de que nadie tuviera tiempo de formular una objeción completa, con la eficiencia de alguien que ha convertido la terapia forzada mediante actividades acuáticas en una ciencia exacta. Dos nutrias jóvenes aparecieron arrastrando balsas hacia la orilla con una velocidad que sugería práctica considerable en la captura de participantes reacios. </p>
-
-            <p class="dialogo organizativo" data-badge="asignado con autoridad náutica"> —¡Perfecto! Hermanos gatos en la balsa azul — nada une como remar mal juntos— señaló la balsa más pequeña, que se balanceaba de forma poco tranquilizadora.— Mantis con mi asistente Burbuja Rápida en la balsa verde, y pequeña voladora será nuestra juez oficial desde el aire— consultó otra tabla colgante, esta vez una con diagramas que parecían haber sido revisados y ampliados docenas de veces.— Según el Reglamento Oficial de Asignación de Parejas, Sección 7.3-B, equipos con tensión familiar moderada a severa requieren navegación conjunta para realineación de prioridades mediante caos acuático controlado— </p>
-
-            <p class="texto-narrativo"> Axel miró la balsa azul con la misma desconfianza instintiva que sentía al acercarse a agua profunda — algo que ningún gato montés, por valiente que fuera, superaba del todo. El olor a madera mojada y cuerdas tensas le llenó las fosas nasales mientras subía, y sus garras se extendieron automáticamente buscando agarre en los troncos resbaladizos. </p>
-
-            <div class="ember-furia-contenida">
-              <p class="dialogo protestando" data-badge="objetado con resistencia"> —Espera, no estoy seguro de que sea buena idea que Axel y yo....— Ember miró hacia su hermano, y algo en su expresión se pareció demasiado al cachorro que solía esconderse detrás de Axel durante las tormentas. </p>
-            </div>
-
-            <p class="dialogo firme" data-badge="interrumpido con determinación práctica"> —Ember— dijo Axel desde la balsa, extendiendo una pata hacia él.— Podemos estar enojados después. Ahora mismo, necesitamos cruzar este río— </p>
-
-            <p class="texto-narrativo"> Ember miró la pata extendida. Era un gesto simple, y sin embargo cargaba el peso de años — de todas las veces que Axel le había tendido la mano para sacarlo de un arroyo, para ayudarlo a subir un árbol, para levantarlo después de una caída. La furia seguía ahí, intacta y caliente bajo su pelaje, pero sus patas se movieron antes de que su orgullo pudiera detenerlas. Subió a la balsa, y el movimiento hizo que ambos se tambalearan y se agarraran el uno del otro por instinto. </p>
-
-            <p class="dialogo entre-dientes" data-badge="murmurado con dignidad ofendida"> —Esto no significa nada— gruñó Ember, soltando el brazo de su hermano como si quemara. </p>
-
-            <p class="dialogo seco" data-badge="respondido con media sonrisa"> —Por supuesto que no— respondió Axel, y por un segundo fugaz, el fantasma de su humor habitual asomó entre el dolor. </p>
-
-            <p class="texto-narrativo"> En la balsa verde, Seraphina se encontró emparejada con Burbuja Rápida, una nutria joven cuyo pelaje estaba perpetuamente erizado de entusiasmo y que parecía tener opiniones muy específicas sobre técnica de remo — opiniones que expresaba con la confianza de alguien convencida de que el universo se equivocaba y ella tenía razón. </p>
-
-            <p class="dialogo instructivo" data-badge="explicado con entusiasmo técnico"> —¡Okay, Señora Mantis! La clave está en la sincronización. Cuando yo digo rema, remas. Cuando yo digo para, paras. Cuando yo digo gira, giras hacia donde señalo, no hacia donde crees que deberías girar. ¿Fácil, verdad?— </p>
-
-            <div class="seraphina-culpa">
-              <p class="texto-narrativo"> Seraphina sostuvo el remo con sus patas delanteras, y algo en el peso de la madera le recordó una sensación lejana — las tardes construyendo refugios con sus hermanas, antes de que el fuego lo cambiara todo. Sacudió la cabeza, alejando el recuerdo. </p>
-
-              <p class="dialogo sorprendida" data-badge="respondido con curiosidad genuina"> —¿No tienes miedo de mí?— preguntó, genuinamente confundida.— Los cuervos revelaron que soy.... que he hecho....— </p>
-            </div>
-
-            <div class="nutria-sarcastica">
-              <p class="texto-narrativo"> Burbuja Rápida la miró como quien evalúa si una corriente va a complicar la navegación. </p>
-
-              <p class="dialogo directo" data-badge="preguntado con pragmatismo absoluto"> —¿Sabes remar?— </p>
-            </div>
-
-            <div class="seraphina-culpa">
-              <p class="dialogo confundida" data-badge="respondido descolocada"> —¿Qué? No, pero eso no es— </p>
-            </div>
-
-            <div class="nutria-sarcastica">
-              <p class="dialogo filosófico" data-badge="respondido con sabiduría acuática"> —Entonces tu mayor pecado ahora mismo es la incompetencia náutica— Burbuja Rápida le ajustó el ángulo del remo sin pedir permiso.— Escucha: cada nutria en este río ha hecho cosas de las que no está orgullosa. Mi primo mordió a un castor por una discusión sobre represas. Mi tía robó pescado del almacén comunitario durante tres inviernos. Pero ahora mismo, necesito que remes en línea recta. Podemos lidiar con tu bagaje emocional después de que ganemos esta carrera— sacó una pequeña tarjeta laminada de entre las cuerdas de la balsa.— Según el Manual de Respuestas Estándar para Crisis Existenciales Durante Actividades Acuáticas, página 23: Primero navegación, después contemplación. El agua no espera por tu auto-descubrimiento— </p>
-            </div>
-
-            <p class="texto-narrativo"> A pesar de todo, algo en las comisuras de la boca de Seraphina se movió. No era una sonrisa — aún no se sentía capaz de sonreír — pero era lo más cerca que había estado de una en horas. La nutria la trataba como a cualquier otro compañero de balsa incompetente, y esa normalidad dolía y sanaba al mismo tiempo. </p>
-
-            <p class="texto-narrativo"> Lo que siguió fue un espectáculo de caos acuático que habría sido divertido si no hubiera sido tan absolutamente desastroso. </p>
-          </section>
-
-          <!-- =============== EL CAOS ACUÁTICO =============== -->
-          <section id="desastre-balsas" class="caos-acuatico">
-            <h3>Navegación Catastrófica</h3>
-
-            <p class="texto-narrativo"> La regata comenzó con el sonido grave de la concha marina de Capitán Remolino, y el instinto de Axel fue exactamente el equivocado: clavar las garras en la madera, agazaparse, y buscar tierra firme. Todo lo contrario a lo que un navegante debería hacer. </p>
-
-            <div class="ember-furia-contenida">
-              <p class="dialogo confundido" data-badge="gritado con coordinación inexistente"> —¡A la izquierda, Axel! ¡Tu otra izquierda! ¡No, espera, esa es MI izquierda, que sería tu derecha!— </p>
-            </div>
-
-            <p class="dialogo exasperado" data-badge="respondido mientras remaba frenéticamente"> —¡Ember! ¡Solo señala hacia dónde quieres que reme en lugar de dar instrucciones como si fuéramos un mapa!— </p>
-
-            <p class="dialogo indignado" data-badge="gritado con frustración fraternal"> —¡Yo SÍ estoy señalando! ¡Pero tú sigues mirando hacia atrás!— </p>
-
-            <p class="dialogo defensivo" data-badge="respondido con los dientes apretados"> —¡Porque cada vez que remas la balsa gira y tengo que ver por dónde vamos!— </p>
-
-            <p class="texto-narrativo"> Su balsa comenzó a girar en círculos cada vez más amplios, cada hermano remando con la fuerza y determinación que solo los gatos monteses pueden aplicar a una actividad que los aterroriza instintivamente. El agua les salpicaba el pelaje con cada remada descoordinada, y Axel sintió que cada fibra de su cuerpo le gritaba que abandonara esa balsa y nadara hasta la orilla — pero Ember estaba aquí, remando junto a él por primera vez desde la revelación, y eso valía más que pelaje seco. </p>
-
-            <p class="texto-narrativo"> Fue entonces cuando algo inesperado ocurrió. Un remolino suave atrapó la proa de la balsa, y ambos hermanos tuvieron que inclinarse hacia el mismo lado para compensar. El movimiento fue simultáneo, instintivo — el tipo de coordinación que solo viene de haber crecido juntos, de años de cazar en pareja, de conocer el cuerpo del otro tan bien como el propio. </p>
-
-            <p class="dialogo sorprendido" data-badge="dicho con descubrimiento"> —Rema cuando yo remo— dijo Axel, y esta vez no fue una instrucción sino un reconocimiento de algo que ya estaba pasando. </p>
-
-            <p class="texto-narrativo"> Por tres remadas perfectas, los hermanos navegaron en sincronía. Luego Ember recordó que estaba furioso, se desconcentró, y metió el remo en un ángulo que envió un chorro de agua directamente a la cara de Axel. </p>
-
-            <p class="dialogo escupiendo" data-badge="dicho escupiendo agua de río"> —¡Eso fue a propósito!— </p>
-
-            <p class="dialogo casi-sonriendo" data-badge="respondido con inocencia poco convincente"> —Fue un accidente— dijo Ember, y ambos supieron que no lo fue. </p>
-
-            <p class="texto-narrativo"> En la balsa verde, Seraphina y Burbuja Rápida tenían sus propios desafíos. </p>
-
-            <div class="nutria-sarcastica">
-              <p class="dialogo crítico" data-badge="instruido con creciente desesperación"> —¡No, no, no! ¡Cuando dije rema fuerte no quise decir destruye el río con fuerza de mantis! ¡Estamos creando un tsunami miniatura!— </p>
-            </div>
-
-            <div class="seraphina-culpa">
-              <p class="dialogo defensiva" data-badge="explicado mientras remaba demasiado fuerte"> —¡Estoy acostumbrada a movimientos precisos y letales! ¡No tengo un ajuste suave para actividades recreativas!— </p>
-            </div>
-
-            <p class="texto-narrativo"> Efectivamente, Seraphina estaba remando con tal intensidad que estaban moviéndose increíblemente rápido.... pero también de lado, creando un patrón de navegación que parecía más una danza de guerra que una carrera de balsas. Las otras nutrias se apartaban de su camino con expresiones que mezclaban terror y admiración profesional. </p>
-
-            <div class="nutria-sarcastica">
-              <p class="dialogo desesperado" data-badge="suplicado con alarma creciente"> —¡Señora Mantis, respeto su entusiasmo, pero si rema más fuerte vamos a terminar en otro río!— </p>
-            </div>
-
-            <p class="texto-narrativo"> Seraphina intentó ajustar la fuerza, pero sus patas delanteras no conocían el término medio — estaban diseñadas para atrapar presas con velocidad letal, no para la delicadeza de remar una balsa recreativa. El remo cortó el agua como una cuchilla y la balsa viró bruscamente, directamente hacia el camino de Axel y Ember. </p>
-
-            <p class="dialogo desde-aire" data-badge="gritado con creciente alarma"> —¡Están en curso de colisión!— gritó Eco Pergaminada desde arriba, aleteando en círculos frenéticos.— ¡Van a chocar en tres.... dos....!— </p>
-
-            <p class="dialogo al-unísono" data-badge="gritado simultáneamente"> —¡GIRA!— gritaron Axel y Ember al mismo tiempo, y por un instante actuaron como un solo ser — ambos remando hacia la derecha con toda su fuerza. La balsa azul esquivó la colisión por centímetros.... y fue directamente hacia una roca. </p>
-
-            <p class="texto-narrativo"> La colisión envió a los hermanos volando en direcciones opuestas. Axel entró al agua con la gracia de un saco de piedras, y el frío del río le golpeó el pelaje como mil agujas diminutas. Emergió jadeando, las orejas pegadas al cráneo, y lo primero que vio fue a Ember — igualmente empapado, igualmente indignado, con una ramita del tamaño de su cola enganchada en una oreja. </p>
-
-            <p class="texto-narrativo"> La balsa verde, sin obstáculo que esquivar, continuó su trayectoria caótica hasta que Burbuja Rápida se lanzó al agua voluntariamente, y Seraphina — sin contrapeso — fue catapultada hacia adelante con un grito que no fue exactamente de terror sino más bien de confusión intensa ante la física de las balsas. Aterrizó en el agua a pocos metros de los hermanos, creando una ola que los empapó de nuevo. </p>
-
-            <p class="texto-narrativo"> Las nutrias que observaban desde otras balsas estallaron en aplausos y silbidos, como si acabaran de presenciar el mejor espectáculo de la temporada. Varias tomaban notas. Una dibujaba un diagrama de la colisión con expresión concentrada. </p>
-
-            <!-- =============== QUINTA APARICIÓN DEL ERIZO =============== -->
-            <p class="texto-narrativo"> Fue Ember quien lo vio primero: algo pequeño y redondo flotando río abajo con la serenidad de un objeto que no tiene la menor intención de hundirse. </p>
-
-            <p class="dialogo" data-badge="dicho señalando el agua con incredulidad">
-              —¿Eso es....?
-            </p>
-
-            <p class="texto-narrativo"> El erizo flotaba boca arriba. O boca abajo. Era difícil saberlo porque estaba enrollado, y una esfera de púas tiene la misma cara en todas las direcciones. La corriente lo llevaba con la misma gracia con la que llevaba las ramas y las hojas, excepto que las ramas y las hojas no tenían ojos diminutos que miraban al cielo con absoluta indiferencia existencial. </p>
-
-            <p class="dialogo" data-badge="exclamado con entusiasmo profesional">
-              —¡Oh! ¡Un objeto flotante no identificado!— Capitán Remolino nadó hacia el erizo con interés genuino.— ¡Excelente hidrodinámica! ¡Resistencia al hundimiento superior! ¡Este espécimen tiene potencial recreativo!
-            </p>
-
-            <p class="texto-narrativo"> Antes de que Axel pudiera intervenir, tres nutrias ya lo estaban usando como pelota. Se lo pasaban de una a otra con golpes de cola precisos, y el erizo giraba en el agua sin desenrollarse, sin protestar, sin dar señal alguna de que estuviera vivo excepto por el hecho técnico de que flotaba. </p>
-
-            <p class="dialogo" data-badge="comentado desde la orilla, escurriendo agua">
-              —¿Deberíamos.... hacer algo?— preguntó Ember, observando al erizo rebotar entre nutrias como una pelota de ping-pong peluda.
-            </p>
-
-            <p class="texto-narrativo"> Axel se sacudió el agua del pelaje. </p>
-
-            <p class="dialogo" data-badge="respondido con la resignación de quien ya ha intentado todo">
-              —Lo he pisado, lo he sacado de una mochila, y lo he encontrado en una forja cerrada. Se las arregla solo.
-            </p>
-
-            <p class="texto-narrativo"> Las nutrias jugaron con el erizo durante otros diez minutos antes de que Burbuja Rápida lo rescatara, lo depositara en la orilla junto al grupo, y lo catalogara como —mejor juguete acuático de la temporada, ocho de diez, pierde puntos por falta de entusiasmo—. El erizo se desenrolló, se sacudió una cantidad imposible de agua para su tamaño, y se quedó inmóvil junto a la mochila de Ember como si ese hubiera sido su destino desde el principio. </p>
-            <!-- =============== FIN QUINTA APARICIÓN DEL ERIZO =============== -->
-
-            <div class="nutria-sarcastica">
-              <p class="dialogo satisfecho" data-badge="comentado mientras flotaba cómodamente"> —¡Magnífico! ¡Absolutamente magnífico!— Capitán Remolino apareció flotando boca arriba con expresión de profunda satisfacción profesional.— ¡Ningún grupo tenso sobrevive a su primera regata sin terminar empapado e igualmente miserable!— consultó su tabla, que de alguna manera permanecía perfectamente seca.— Protocolo de Emergencia Acuática ejecutado con éxito. Paso 1: Confirmar que están mojados. Paso 2: Verificar que están en el agua. Paso 3: Evaluar si desean seguir mojados. Paso 4: Dirigirlos hacia la orilla mediante técnicas de natación o flotación según preferencia personal— </p>
-            </div>
-          </section>
-
-          <!-- =============== EL MOMENTO DE RESET =============== -->
-          <section id="reset-emocional" class="reset-emocional">
-            <h3>Empapados e Iguales</h3>
-
-            <p class="texto-narrativo"> Se las arreglaron para llegar a la orilla opuesta principalmente a través de nadar — o en el caso de Axel y Ember, de lo que las nutrias describieron diplomáticamente como —estilo de natación terrestre agresivo—. Algo había cambiado en el agua sin que ninguno pudiera señalar el momento exacto. Es difícil mantener la furia intacta cuando estás completamente empapado, tienes algas pegadas al pelaje, y acabas de ver a tu hermano intentar remar con una rama porque perdió su remo en la colisión. </p>
-
-            <p class="texto-narrativo"> El pelaje de Axel goteaba formando charcos a sus pies, y el arco en su espalda — que milagrosamente había sobrevivido al baño — emanaba un calor suave contra su columna. No era el calor de advertencia que sentía ante el peligro. Era algo más gentil, como si la madera ancestral aprobara lo que acababa de pasar. Axel no sabía si su padre había disfrutado alguna vez de algo tan ridículo como una carrera de balsas, pero quiso creer que sí. </p>
-
-            <div class="ember-furia-contenida">
-              <p class="dialogo riendo-reluctante" data-badge="admitido entre respiraciones entrecortadas"> —Okay— dijo Ember, escurriendo agua de su cola con movimientos vigorosos que salpicaban a todos los que estaban cerca.— Eso fue.... completamente desastroso— </p>
-            </div>
-
-            <p class="dialogo riendo" data-badge="acordado mientras se sacudía"> —Oficialmente el peor trabajo de navegación que he hecho en mi vida— admitió Axel, sacudiéndose con esa violencia particular de los gatos mojados que envía gotas en un radio de tres metros.— Y eso incluye la vez que intenté cruzar el arroyo detrás de nuestra casa y terminé colgando de una rama durante seis horas hasta que papá me encontró— </p>
-
-            <p class="texto-narrativo"> La mención de su padre cayó entre ellos como una piedra en agua quieta. Axel se tensó, consciente de lo que había dicho. Ember lo miró. Pero el momento no se rompió — no del todo. El recuerdo dolía, pero por primera vez desde las revelaciones, el dolor vino mezclado con algo cálido: la imagen de su padre riéndose mientras lo bajaba de la rama, diciendo —para ser un cazador de montaña, le tienes un respeto impresionante al agua—. </p>
-
-            <div class="seraphina-culpa">
-              <p class="texto-narrativo"> Seraphina se había quedado sentada en la orilla, algo apartada, mirándose las patas mojadas. El agua del río le resbalaba por las antenas y caía en gotas regulares que marcaban un ritmo lento en la arena. Por primera vez desde que los cuervos habían despedazado cada mentira que la mantenía en pie, no se sentía como la que había dañado al padre de esos dos hermanos que ahora se escurrían agua mutuamente sin darse cuenta. Solo se sentía como alguien que era terrible navegando balsas y que se había empapado junto con todos los demás. Y esa igualdad — estar igualmente mojada, igualmente torpe, igualmente ridícula — era lo más parecido a pertenecer que había sentido desde hacía años. </p>
-            </div>
-
-            <div class="seraphina-culpa">
-              <p class="dialogo vulnerable" data-badge="ofrecido con voz pequeña"> —Lo siento por crear un tsunami miniatura— murmuró, y le sorprendió descubrir que estaba hablando de las balsas y no de todo lo demás.— No estoy.... no estoy acostumbrada a actividades que requieren contención— </p>
-            </div>
-
-            <div class="nutria-sarcastica">
-              <p class="dialogo observacional" data-badge="comentado con perspicacia"> —Interesante— observó Burbuja Rápida, flotando boca arriba cerca de la orilla con la serenidad de alguien que jamás ha tenido que preocuparse por estar mojada.— Cuando estaban gritándose sobre direcciones y técnicas de remo, sonaban exactamente como hermanos. Cuando la balsa verde venía directo hacia ustedes, remaron juntos sin pensarlo. Y cuando cayeron al agua— hizo una pausa para efecto dramático,— lo primero que hicieron los dos fue buscar al otro con la mirada— </p>
-            </div>
-
-            <p class="texto-narrativo"> Axel y Ember se miraron. Era cierto. Lo habían hecho sin pensarlo — el mismo instinto que les hacía verificar la posición del otro durante una cacería, el mismo reflejo que llevaban practicando desde cachorros. Ember apartó la mirada primero, pero algo en la línea de sus hombros se había suavizado, como un arco que relaja la tensión de la cuerda. </p>
-
-            <p class="texto-narrativo"> Capitán Remolino nadó hasta ellos con una expresión de satisfacción profesional tan intensa que parecía a punto de otorgarse otra insignia. </p>
-
-            <p class="dialogo sabio" data-badge="explicado con filosofía náutica"> —¿Ven? El agua no miente. Cuando están en el río, las únicas cosas que importan son: ¿están trabajando juntos? ¿Se mantienen a flote? ¿Cuidan que nadie se ahogue?— se sacudió, salpicando a todos de nuevo con entusiasmo innecesario.— Todo lo demás es drama terrestre— </p>
-
-            <p class="texto-narrativo"> Las palabras aterrizaron en un lugar inesperado. Axel pensó en el Jardín de Intenciones — en las rosas que habían crecido del corazón de Seraphina, genuinas a pesar de todo. En cómo ella había protegido a Ember cuando los cuervos mercenarios atacaron. Esas cosas habían sido reales. El agua no mentía, y aparentemente tampoco las acciones hechas por instinto cuando no hay tiempo para calcular. </p>
-
-            <p class="dialogo reflexivo" data-badge="preguntado con curiosidad genuina"> —¿Es por eso que organizas estas regatas?— preguntó Eco Pergaminada, que había aterrizado en una rama sobre el agua para mantenerse estratégicamente seca durante todo el espectáculo. </p>
-
-            <p class="dialogo sabio" data-badge="confirmado con experiencia"> —Grupos tensos vienen aquí todo el tiempo— Capitán Remolino se acomodó en una roca con la postura de quien está a punto de compartir verdades ganadas con años de observación.— Aventureros que han peleado, familias que han discutido, socios de negocios que no se aguantan. Tuve una vez a un grupo de cinco zorros que no se hablaban desde hacía tres temporadas— </p>
-
-            <p class="dialogo curioso" data-badge="preguntado con interés"> —¿Y funcionó?— preguntó Ember, a pesar de sí mismo. </p>
-
-            <p class="dialogo nostálgico" data-badge="respondido con sonrisa amplia"> —Volcaron cuatro balsas, perdieron seis remos, y uno terminó colgando de una rama sobre el río gritando que prefería ahogarse antes que pedir ayuda. Pidió ayuda tres minutos después— Capitán Remolino se rascó detrás de la oreja.— Quince minutos en el agua, y recuerdan que sus problemas no son tan importantes como mantenerse a flote juntos. No porque los problemas desaparezcan, sino porque el agua les recuerda qué es verdaderamente urgente y qué puede esperar— </p>
-
-            <div class="ember-furia-contenida">
-              <p class="texto-narrativo"> Ember miró a Seraphina. Realmente la miró, quizás por primera vez desde que los cuervos habían desnudado su verdad. La vio mojada, con las antenas caídas, las patas delanteras abrazándose a sí misma como hacen las criaturas que saben que no tienen derecho a pedir calor a nadie. Y debajo de la furia — que seguía ahí, intacta, no pensaba dejarla ir tan fácilmente — encontró algo que lo perturbaba más que el odio: reconocimiento. Conocía esa postura. Era la misma que había visto en refugiados llegando a Valle Tranquilo después de perder todo. Era la postura de alguien que sabe que su próximo movimiento podría ser el último que le permitan hacer entre otros. </p>
-
-              <p class="texto-narrativo"> Pensó en Luna Suave. En cómo ella le diría que la compasión no significa perdón, que entender no significa aceptar. Pensó en Sol y Sombra, sus cachorros de dos años, y en el mundo que quería construir para ellos — uno donde los ciclos de venganza se rompieran antes de llegar a la siguiente generación. </p>
-            </div>
-
-            <div class="ember-furia-contenida">
-              <p class="dialogo conciliatorio" data-badge="ofrecido con reluctancia"> —No significa que esté listo para.... para hablar sobre todo— dijo finalmente, y su voz había perdido el filo con el que había cortado durante horas.— Pero supongo que podemos.... podemos seguir viajando juntos. Por ahora— </p>
-            </div>
-
-            <div class="seraphina-culpa">
-              <p class="dialogo agradecida" data-badge="respondido con franco alivio"> —Gracias, Ember. No esperaba.... no merezco....— </p>
-            </div>
-
-            <div class="ember-furia-contenida">
-              <p class="dialogo firme" data-badge="interrumpido con claridad"> —No— la detuvo, no con crueldad sino con una honestidad que dolía más.— No me des las gracias. Y no me digas que no mereces algo, porque eso me obliga a decidir si estoy de acuerdo o no, y todavía no estoy listo para esa respuesta— respiró hondo, el agua del río goteándole del mentón.— Hazlo porque aparentemente somos un equipo terrible de navegación y necesitamos practicar trabajar juntos antes de llegar a desafíos más grandes— </p>
-            </div>
-
-            <p class="texto-narrativo"> No era perdón. Ember fue claro en eso con cada línea de su cuerpo: las orejas medio giradas, la cola baja, las garras que se extendían y retraían como un corazón que late entre la furia y algo que todavía no tenía nombre. Pero era algo. Era la decisión consciente de seguir caminando junto a alguien que te ha herido, no porque lo merezca, sino porque el camino adelante requiere más patas de las que tienes. </p>
-
-            <p class="texto-narrativo"> Axel observó el intercambio en silencio, y algo en su pecho se aflojó — una presión que llevaba horas sin notar porque se había acostumbrado a ella como se acostumbra uno al peso del arco en la espalda. Su hermano pequeño — el cachorro que lloraba con las tormentas, el que siempre elegía hablar antes que pelear — acababa de hacer algo que a él le había costado horas de revelaciones y espejos que mostraban verdades imposibles: mirar a Seraphina y elegir seguir adelante. </p>
-
-          </section>
-
-          <!-- =============== SECÁNDOSE JUNTO AL RÍO =============== -->
-          <section id="secandose" class="reset-emocional">
-            <h3>Las Preguntas que Quedan</h3>
-
-            <p class="texto-narrativo"> Capitán Remolino les indicó un tramo de orilla donde el sol daba directo y las piedras se habían calentado durante el día. Las nutrias lo llamaban —la secadora—, y a juzgar por las marcas de garras en las rocas, no eran los primeros viajeros empapados que terminaban ahí. </p>
-
-            <p class="texto-narrativo"> Se distribuyeron por las piedras sin discutir la configuración — Axel y Ember en una roca grande, Seraphina a varios metros de distancia en una más pequeña, Eco Pergaminada en la más alta disponible. Era la geometría natural del grupo ahora: juntos pero con espacio, como animales que comparten un claro de sol sin confundir cercanía con confianza. </p>
-
-            <p class="texto-narrativo"> Axel se lamía el pelaje del antebrazo con movimientos metódicos, un gesto tan básico y animal que lo anclaba al presente mejor que cualquier pensamiento. A su lado, Ember hacía lo mismo con su cola, deshaciendo nudos de agua y algas con la concentración de quien necesita mantener las patas ocupadas para no enloquecer. </p>
-
-            <p class="texto-narrativo"> El silencio aquí era diferente al que habían arrastrado durante la mañana. Más poroso. Con espacio para respirar. </p>
-
-            <div class="ember-furia-contenida">
-              <p class="dialogo cauteloso" data-badge="preguntado sin mirar a su hermano"> —¿Tú lo sabías?— dijo Ember de repente, sin levantar la vista de su cola.— Antes de los cuervos. ¿Tenías alguna sospecha?— </p>
-            </div>
-
-            <p class="texto-narrativo"> Axel dejó de lamerse. La pregunta le cayó como agua fría en pelaje ya mojado — innecesaria y helada al mismo tiempo. Pensó en las noches junto al fuego con Seraphina, en las conversaciones sobre su madre, en la historia de la hermana maldecida que ahora sabía era una versión retorcida de la verdad. Pensó en el Valle de los Susurradores, en los acertijos que no había entendido: —lo que parece herida a veces es el cuchillo—. En cómo el Jardín de Intenciones le había mostrado rosas genuinas creciendo del corazón de Seraphina. </p>
-
-            <p class="dialogo honesto" data-badge="respondido con dificultad"> —No— admitió.— O quizás.... quizás había señales que no quise ver. Los Susurradores me advirtieron, a su manera. Y Lyra.... Lyra lo supo desde el principio— la nota de Lyra seguía en su bolsillo, arrugada pero legible.— Pero elegí confiar en lo que veía de ella. En lo que sentía que era verdad— </p>
-
-            <div class="ember-furia-contenida">
-              <p class="dialogo amargo" data-badge="dicho con dolor contenido"> —Y lo que sentías que era verdad resultó ser una mentira— </p>
-            </div>
-
-            <p class="dialogo corrigiéndolo" data-badge="respondido con firmeza suave"> —No— Axel miró a su hermano.— Las mentiras eran las palabras. Pero sus acciones.... Ember, ella te protegió durante el ataque de los cuervos mercenarios. Nadie la obligó a hacerlo. Y las rosas del Jardín de Intenciones no pueden falsificarse, crecen de lo que realmente hay adentro— </p>
-
-            <p class="texto-narrativo"> Ember no respondió inmediatamente. Sus garras marcaron la piedra caliente con un chirrido que le puso los nervios de punta a todos, y luego se quedó muy quieto, como hacen los gatos cuando están procesando algo demasiado grande para el cuerpo que lo contiene. </p>
-
-            <div class="ember-furia-contenida">
-              <p class="dialogo quebrado" data-badge="susurrado mirando el río"> —Papá.... ¿crees que papá la habría perdonado?— </p>
-            </div>
-
-            <p class="texto-narrativo"> La pregunta golpeó a Axel en el centro del pecho, exactamente donde el arco descansaba contra su columna. La madera pulsó con un calor suave, como una mano familiar apretándole el hombro. Cerró los ojos y vio a su padre — no la versión heroica de los recuerdos, sino la real: el gato que recogía insectos de la casa con una hoja en lugar de matarlos, que cocinaba sopa extra por si algún viajero pasaba, que nunca cazó más de lo necesario para alimentarlos. </p>
-
-            <p class="dialogo con-peso" data-badge="respondido con honestidad dolorosa"> —Creo que papá habría dicho que perdonar no es olvidar. Y que entender el dolor de alguien no significa aceptar lo que hizo con ese dolor— se tocó el arco.— Pero también creo que habría querido conocer la versión completa antes de decidir— </p>
-
-            <div class="seraphina-culpa">
-              <p class="texto-narrativo"> Desde su roca, Seraphina había escuchado cada palabra. No pretendió no hacerlo — ya no tenía derecho a fingir nada. Las lágrimas le bajaron sin permiso, silenciosas, mezclándose con el agua del río que aún le goteaba de las antenas. Quiso decir algo. Quiso decirles que su padre no había sufrido, pero sería mentira. Quiso decirles que lo sentía, pero la palabra se sentía tan pequeña comparada con el daño que ya no servía como moneda. Así que se quedó quieta y los dejó hablar sobre el gato al que ella había dañado, y cada palabra fue como una garra de fuego entre las costillas — merecida, y por eso mismo insoportable. </p>
-            </div>
-
-            <p class="texto-narrativo"> Eco Pergaminada descendió de su roca alta y se posó entre los hermanos, plegando las alas con cuidado. No dijo nada. Solo se quedó ahí, pequeña y presente, como un punto de calma entre dos tormentas que estaban aprendiendo a ser lluvia. </p>
-
-            <p class="texto-narrativo"> Fue Seraphina quien rompió el silencio, y lo hizo con algo que nadie esperaba. </p>
-
-            <div class="seraphina-culpa">
-              <p class="dialogo medida" data-badge="dicho mirando al río"> —Se llamaba Ámbar— dijo, y las tres cabezas giraron hacia ella.— Su padre. La sexta víctima en mis registros. Pero las nutrias Susurradoras del valle donde crecí lo llamaban —el gato que hablaba con los árboles—, porque pasaba más tiempo escuchando el bosque que cazando en él— </p>
-            </div>
-
-            <p class="texto-narrativo"> El nombre golpeó a Axel como una flecha en el costado. Ámbar. Nunca había escuchado a Seraphina usar su nombre. En los registros de los cuervos había sido —víctima número seis—, un dato en una lista de horrores. Pero ahora tenía un nombre en la boca de quien lo había dañado, y ese nombre era el correcto, y Axel no sabía si eso lo hacía mejor o peor. </p>
-
-            <p class="texto-narrativo"> Ember se había quedado completamente inmóvil, el pelaje erizado pero no de furia esta vez — de algo más crudo, más expuesto. Como un cachorro que escucha un sonido que no sabe clasificar como peligro o como algo nuevo. </p>
-
-            <div class="seraphina-culpa">
-              <p class="dialogo continuando" data-badge="dicho con voz que temblaba"> —No les digo esto para que me perdonen. No me lo merezco y no lo espero— tragó.— Pero necesitan saber que no era un número para mí. No después. En el momento.... en el momento yo estaba tan llena de odio que cualquier gato montés era el enemigo. Pero después, cuando el veneno ya había actuado y vi lo que quedaba.... supe su nombre. Investigué quién era. Y cada nombre que aprendí se convirtió en una garra clavada aquí dentro— se tocó el pecho con la punta de una pata delantera —que no he podido sacar desde entonces— </p>
-            </div>
-
-            <p class="texto-narrativo"> Nadie habló. El río seguía fluyendo, las nutrias seguían gritando instrucciones imposibles en la distancia, y el sol seguía calentando las piedras como si el mundo no acabara de recibir una verdad que cambiaba la forma de todo. </p>
-
-            <p class="dialogo cuidadoso" data-badge="preguntado con voz ronca"> —¿Los seis nombres?— preguntó Axel, y su propia voz le sonó lejana, como si viniera de otro cuerpo. </p>
-
-            <div class="seraphina-culpa">
-              <p class="dialogo afirmando" data-badge="respondido cerrando los ojos"> —Cada uno. Sombra Roja, Viento Gris, Lluvia Nocturna, Ceniza Brillante, Musgo Profundo, y Ámbar— los nombres salieron como cuentas de un collar que llevaba años sosteniendo en la boca sin poder soltarlas.— Los llevo conmigo. Siempre— </p>
-            </div>
-
-            <p class="texto-narrativo"> Axel sintió el arco calentarse suavemente contra su espalda — no con advertencia sino con algo que se parecía a reconocimiento. Como si la madera ancestral, conectada de algún modo con el espíritu de su padre, hubiera escuchado su nombre pronunciado con el peso que merecía. Cerró los ojos y dejó que el calor le recorriera la columna. No era perdón. No era paz. Pero era algo que no tenía antes: la certeza de que Seraphina cargaba con los muertos igual que él, solo que desde el otro lado de la herida. </p>
-          </section>
-
-          <!-- =============== TRUEQUE EN LA ORILLA =============== -->
-          <section id="trueque-nutrias" class="rio-nutrias">
-            <h3>Economía de Río</h3>
-
-            <p class="texto-narrativo"> Capitán Remolino se acercó mientras se secaban, arrastrando consigo un saco de arpillera mojada que olía a cera y a pescado en partes iguales. Consultó una tabla nueva — esta más pequeña, con el encabezado —Protocolo de Intercambio Comercial con Visitantes Terrestres, Edición Revisada— — y señaló una sección que decía —Paso 1: Evaluar necesidades del cliente. Paso 2: Evaluar qué puede ofrecer el cliente. Paso 3: Negociar hasta que ambas partes crean que han ganado. Paso 4: Verificar que el cliente no se ha ahogado durante la negociación—. </p>
-
-            <p class="dialogo profesional" data-badge="dicho con tono de negocios acuáticos"> —Antes de que se vayan— Capitán Remolino abrió el saco y sacó varios frascos sellados con tapones de corcho y cuerda encerada.— Ustedes van al interior. Territorio húmedo, cuevas, puede que ríos subterráneos. He visto suficientes viajeros volver con los mapas destruidos y las cuerdas de arco podridas por la humedad como para saber lo que necesitan. La pregunta es: ¿qué tienen para intercambiar?— </p>
-
-            <p class="texto-narrativo"> Axel miró los frascos. Uno contenía una sustancia amarillenta y espesa que olía a resina de pino mezclada con grasa de pescado. La etiqueta, escrita con letra diminuta en corteza aplastada, decía —Cera Impermeabilizante de Nutria, Grado Profesional. No ingerir. No aplicar en pelaje (experiencia personal)—. </p>
-
-            <p class="dialogo interesado" data-badge="preguntado evaluando la cera"> —¿Qué hace exactamente?— preguntó Axel, destapando el frasco. El olor era intenso — no desagradable, pero sí el tipo de aroma que se queda en las garras durante días. </p>
-
-            <p class="dialogo experto" data-badge="explicado con orgullo artesanal"> —Sella cualquier superficie porosa contra el agua— Capitán Remolino tomó un pedazo de corteza, le aplicó una capa fina con la pata, y la hundió en el río. La sacó completamente seca.— Cuerdas de arco, pergaminos, cuero, lo que sea. Dura tres días. Cuatro si no llueve. Dos si llueve mucho. Exactamente uno y medio si llueve mucho y hace viento, según la Tabla de Rendimiento Climatológico que mi bisabuela compiló durante cuarenta años de observación empírica— </p>
-
-            <p class="texto-narrativo"> Axel pensó en las cuerdas de repuesto del arco, en el mapa de piel de murciélago que Eco Pergaminada cargaba con el cuidado de quien transporta una reliquia. Si iban a atravesar territorio húmedo, la cera podía ser la diferencia entre llegar al Templo con información legible o con pulpa mojada. </p>
-
-            <p class="dialogo negociando" data-badge="dicho sacando su piedra de afilar"> —No llevo monedas suficientes para esto. ¿Aceptas servicios?— sacó la piedra de afilar que llevaba en la bolsa de viaje, la misma que usaba para mantener las puntas de sus flechas. Era una piedra de grano fino, desgastada por años de uso hasta adoptar la curva exacta de su pulgar. </p>
-
-            <p class="texto-narrativo"> Los ojos de Capitán Remolino se iluminaron con un brillo que Axel reconoció: el de alguien que ha necesitado algo durante mucho tiempo y no sabía cómo pedirlo. </p>
-
-            <p class="dialogo entusiasmado" data-badge="respondido con interés inmediato"> —¿Sabes afilar cuchillos de escama?— señaló hacia un rincón de la orilla donde había una docena de cuchillos de obsidiana apilados, todos con el filo tan redondeado que servirían mejor como cucharas.— Nuestras garras son excelentes para excavar y nadar, pero para el trabajo fino de afilado son.... subóptimas. Llevamos tres semanas cortando pescado con lo que básicamente son piedras redondeadas con pretensiones— </p>
-
-            <p class="texto-narrativo"> Axel se sentó junto a los cuchillos y los examinó uno por uno, girándolos entre las garras con la familiaridad de alguien que ha pasado más noches afilando herramientas que durmiendo. La piedra encontró el ángulo correcto en el primer cuchillo, y el sonido que produjo — un silbido limpio de metal encontrando su forma — hizo que tres nutrias que nadaban cerca se detuvieran a mirar. </p>
-
-            <p class="texto-narrativo"> Trabajó en silencio durante veinte minutos. Para cuando terminó el séptimo cuchillo, había una audiencia de once nutrias observando con la boca abierta, como si nunca hubieran visto a alguien realizar una tarea manual con competencia. Capitán Remolino tomaba notas en su tabla. Una nutria joven intentó imitar la técnica con una concha y una roca, produciendo un ruido que hizo que Eco Pergaminada se tapara los oídos con las alas. </p>
-
-            <p class="dialogo satisfecho" data-badge="dicho examinando el filo con admiración"> —Excelente. Absolutamente excelente— Capitán Remolino pasó una pata por el filo restaurado y retiró el dedo inmediatamente.— Según el Protocolo Comercial, un servicio de afilado de esta calidad equivale a.... — consultó la tabla, pasando páginas con rapidez — ....dos frascos de cera impermeabilizante, un rollo de cuerda encerada, y acceso vitalicio al Programa de Descuentos para Viajeros Frecuentes— le extendió una tarjeta laminada que decía —MIEMBRO PLATINO— con una nutria dibujada a mano.— La tarjeta no tiene valor real en ningún otro lugar, pero queda bien en la bolsa de viaje— </p>
-
-            <p class="texto-narrativo"> Mientras Axel completaba el intercambio, Ember se había acercado a la orilla donde varias nutrias preparaban pescado para la cena. Había sacado el cuchillo de campamento y una raíz seca de su bolsa, y estaba pelándola con movimientos metódicos que Axel reconoció: las patas de su hermano necesitaban hacer algo o se volverían locas. </p>
-
-            <p class="dialogo ofreciendo" data-badge="dicho sin levantar la vista de la raíz"> —Puedo cocinar algo para ustedes— dijo Ember a las nutrias cercanas.— A cambio de.... no sé, lo que sea que tengan que valga para viajeros— </p>
-
-            <p class="texto-narrativo"> Las nutrias intercambiaron miradas. Burbuja Rápida, que flotaba boca arriba con la misma serenidad con que otros se sientan en sillas, ladeó la cabeza. </p>
-
-            <p class="dialogo evaluando" data-badge="preguntado con pragmatismo absoluto"> —¿Qué nivel de cocina? Porque tenemos estándares— sacó una tarjeta laminada del interior de su pelaje — aparentemente todos los objetos en este río estaban laminados — y leyó en voz alta:— Según la Escala Gastronómica Oficial de las Nutrias Velocistas, Nivel 1 es —comestible sin consecuencias—, Nivel 3 es —agradable con reservas—, y Nivel 5 es —recomendaría a familiares que me agradan—. ¿En qué nivel estás?— </p>
-
-            <p class="dialogo honesto" data-badge="respondido con dignidad cuestionable"> —Probablemente un dos— admitió Ember. </p>
-
-            <p class="dialogo evaluando" data-badge="respondido asintiendo"> —Apreciamos la honestidad— dijo Burbuja Rápida.— Muy pocos viajeros se evalúan por debajo de tres. El último que dijo cinco nos dio intoxicación a siete de los nuestros. Cocina. Si sobrevivimos, negociamos— </p>
-
-            <p class="texto-narrativo"> Lo que Ember preparó no fue exactamente bueno. Las nutrias lo comieron con expresiones que oscilaban entre la educación y el arrepentimiento, masticando con una lentitud que sugería que cada bocado requería una decisión consciente de continuar. Pero lo comieron. Y cuando Ember añadió las últimas especias de mapache que le quedaban — una pizca que olía a canela mezclada con algo que no quería identificar — una nutria mayor parpadeó dos veces y dijo —no es lo peor que he probado este mes—, que en el sistema de evaluación de las nutrias era prácticamente un elogio. </p>
-
-            <p class="dialogo ofreciendo" data-badge="dicho sacando algo del saco"> —Nivel dos confirmado— anunció Burbuja Rápida, anotando algo en una tabla que parecía ser un registro de todos los cocineros que habían pasado por el río.— Por un Nivel 2 con honestidad, te ofrezco esto— sacó una red compacta, del tamaño de una bolsa pequeña cuando estaba plegada, tejida con fibras de río que brillaban ligeramente al sol.— Red de pesca de corriente. Funciona en ríos, arroyos, y charcos profundos. No funciona en sopa, aunque alguien lo intentó una vez y los resultados fueron clasificados— </p>
-
-            <p class="texto-narrativo"> Ember tomó la red. Era ligera y sorprendentemente fuerte — el tipo de herramienta que alguien que alimenta a un grupo necesita pero que nunca sabe que necesita hasta que la tiene. La guardó en la bolsa con el mismo cuidado con que guardaba las cartas para Luna Suave. </p>
-
-            <p class="texto-narrativo"> Fue Burbuja Rápida quien se acercó a Seraphina al final, con la informalidad de quien no distingue entre una asesina reformándose y cualquier otra compañera de balsa incompetente. Llevaba una concha marina tallada en espiral, del tamaño de un pulgar, con un agujero en la punta. </p>
-
-            <p class="dialogo entregando" data-badge="dicho con seriedad total"> —Para ti— le extendió la concha.— Silbato de río. Lo ganaste— </p>
-
-            <p class="dialogo confundida" data-badge="preguntado mirando la concha"> —¿Lo gané?— Seraphina tomó el objeto con sus patas delanteras, girándolo con la delicadeza que usaba para todo lo que no entendía.— ¿Cómo?— </p>
-
-            <p class="dialogo informativa" data-badge="explicado consultando sus notas"> —Remada Más Destructiva de la Temporada— Burbuja Rápida sacó otra tabla — esta con una lista de récords que se remontaba varias generaciones — y señaló una línea vacía en la parte superior.— Superaste a un oso que pasó por aquí en primavera. Él desplazó 40 litros de agua por remada. Tú desplazaste lo que estimo en 60, más la balsa de los hermanos por impacto lateral. Es un récord. Los récords se premian— </p>
-
-            <p class="texto-narrativo"> Seraphina miró el silbato. Era un objeto pequeño y absurdo — un premio por destruir una actividad recreativa — pero pesaba más en su pata de lo que debería. Nadie le había dado un premio por nada en años. Los premios son para las personas que pertenecen a lugares, que participan en cosas, que forman parte de comunidades. No para las que las destruyen. </p>
-
-            <p class="dialogo suave" data-badge="susurrado tocando el silbato"> —Gracias— dijo, y la palabra salió sin cálculo ni medición, simple como una piedra cayendo al agua. </p>
-
-            <p class="dialogo práctica" data-badge="añadido señalando el agujero"> —También sirve para comunicarse a distancia. El sonido viaja 200 metros en terreno abierto, 150 en cueva, y exactamente 47 en agua, según las pruebas que hice el verano pasado cuando no tenía nada mejor que hacer. Si se separan, sopla tres veces. Las nutrias de la zona lo reconocerán, y cualquiera que conozca la frecuencia sabrá que alguien pide ayuda— pausa.— O que alguien está destruyendo otra balsa. Pero el contexto generalmente aclara— </p>
-
-            <p class="texto-narrativo"> Seraphina guardó el silbato en el pliegue interior de su pata delantera, donde las mantis guardan las cosas que quieren proteger. Junto al frasco de veneno que llevaba desde antes de que el viaje cambiara todo. Los dos objetos descansaron uno junto al otro — lo que había sido y lo que estaba empezando a ser — y Seraphina decidió no pensar demasiado en lo que eso significaba. </p>
-
-            <p class="texto-narrativo"> Mientras se alejaban de las nutrias — después de prometer volver para lecciones apropiadas de navegación y de que Capitán Remolino les entregara un —Certificado de Supervivencia Acuática Básica— que había laminado en tiempo récord —, el grupo caminó con la tensión aliviada lo suficiente como para respirar sin que doliera. No resueltos. No curados. Pero recordando que podían funcionar como equipo incluso cuando había dolor entre ellos, del mismo modo que se puede caminar con una espina en la almohadilla si el destino es lo suficientemente importante. Axel llevaba dos frascos de cera impermeabilizante en la bolsa, Ember una red de pesca que no sabía usar todavía, y Seraphina un silbato de concha junto a un frasco de veneno — un inventario que decía más sobre cada uno de ellos de lo que cualquier conversación podría. </p>
-
-            <p class="texto-narrativo"> Axel dejó que los demás se adelantaran unos pasos. Necesitaba un momento — solo uno — sin orejas girándose hacia él esperando que dijera algo sabio o reconfortante. Sacó la nota de Lyra del bolsillo. El agua del río la había humedecido, difuminando algunas palabras, pero las que importaban seguían legibles: —Estoy cerca. No estás solo en esto—. </p>
-
-            <p class="texto-narrativo"> Olió el papel. Debajo de la humedad del río, debajo de la tinta, estaba el aroma de Lyra — un rastro que reconocería entre mil, mezcla de corteza de pino, cuero de viaje, y algo ligeramente metálico que era solo suyo. Su cuerpo reaccionó antes que su mente: el pelaje de la nuca se le relajó, las orejas dejaron de rotar, y por un instante brevísimo se sintió como si alguien le hubiera quitado peso de los hombros. </p>
-
-            <p class="texto-narrativo"> Lyra estaba siguiéndolos. Cuidándolos desde las sombras, como hacen los rastreadores — como haría una gata montés que ha elegido proteger a alguien sin pedirle permiso. Guardó la nota de nuevo, presionándola contra su pecho antes de devolverla al bolsillo. </p>
-
-            <p class="dialogo casi-inaudible" data-badge="susurrado para sí mismo"> —Gracias— murmuró, y el viento se llevó la palabra en una dirección que quiso creer era la correcta. </p>
-
-            <p class="texto-narrativo"> El sol comenzaba a bajar, tiñendo el camino de un naranja profundo que le recordó a Axel las tardes en las Montañas Heladas — la hora en que su padre volvía de cazar y la casa olía a sopa y a madera quemada. Solo que ahora no caminaba solo. Ahora había tres figuras delante de él, cada una cargando su propio peso, y una cuarta en algún lugar entre los árboles que él no podía ver pero sabía que estaba ahí. </p>
-
-            <p class="texto-narrativo"> Olió el aire con fuerza, las fosas nasales expandiéndose para captar todo lo que el viento traía. Tierra húmeda, musgo, el metal frío de roca expuesta.... y algo más: el aroma terroso e inconfundible de una cueva cercana. Más adelante, sobre un risco, le pareció ver el movimiento de algo pequeño y oscuro que desaparecía entre las sombras — demasiado rápido para ser un pájaro, demasiado erático para ser una hoja. Las orejas le giraron hacia ese punto con la precisión de un cazador que nunca deja de rastrear, pero no encontró nada. Solo el viento, y un eco lejano que podría haber sido un murciélago. O varios. </p>
-
-            <p class="dialogo casual" data-badge="comentado señalando adelante"> —Hay una cueva más arriba— dijo Axel, alcanzando al grupo.— Huele a roca seca y algo orgánico. Podríamos parar ahí antes de que oscurezca— </p>
-
-            <p class="dialogo suspicaz" data-badge="respondido con cansancio"> —¿Algo orgánico?— preguntó Ember.— Eso puede significar muchas cosas, la mayoría desagradables— </p>
-
-            <p class="dialogo pragmático" data-badge="dicho encogiéndose de hombros"> —También significa que alguien ya la ha habitado, lo que significa que es segura para dormir— respondió Axel, y se adelantó por el sendero con las orejas alerta, el pelaje todavía húmedo brillando bajo la luz del atardecer. </p>
-
-            <p class="texto-narrativo"> Ninguno sabía todavía qué tipo de habitantes encontrarían en esa cueva, ni que la noche que les esperaba involucraría la peor sopa jamás cocinada y la crítica gastronómica más devastadora que cualquiera de ellos hubiera presenciado. Pero caminaban juntos, y por ahora, eso era suficiente. </p>
-
-            <div class="nutria-sarcastica">
-              <p class="dialogo despedida" data-badge="gritado mientras se alejaban"> —¡Recuerden!— gritó Capitán Remolino desde el río, su voz rebotando en las rocas como las ondas que dejaban sus patas en el agua.— ¡En el agua, todos son iguales! ¡En tierra firme.... bueno, ahí es donde los problemas reales empiezan! ¡Pero al menos ahora saben que pueden flotar juntos!— </p>
-            </div>
-
-            <p class="texto-narrativo"> Eco Pergaminada voló hasta posarse en el hombro de Axel — algo que no había hecho desde antes de la revelación, como si la pequeña criatura necesitara recordarse que el contacto físico con este grupo aún era seguro. Axel no dijo nada, pero inclinó ligeramente la cabeza hacia ella. Era suficiente. </p>
-
-            <p class="texto-narrativo"> El sendero subía ahora, alejándose del río, y con cada paso el sonido del agua se hacía más lejano — como un recuerdo que todavía está fresco pero que ya empieza a tomar la forma difusa de las cosas que importaron más de lo que parecían en el momento. Llevaban consigo el Certificado de Supervivencia Acuática, pelaje que tardaría horas en secarse, y algo más difícil de nombrar: la evidencia de que, incluso rotos, seguían eligiendo caminar en la misma dirección. </p>
-
-            <p class="texto-narrativo"> Fue entonces cuando Axel lo oyó: un sonido que venía de la cueva que había señalado antes, distinto del eco al que lo había atribuido. No era viento. No era el crujido de roca asentándose. Era voz — decenas de voces, superpuestas, con un ritmo sincopado que oscilaba entre el murmullo y algo que casi podría llamarse canto. La cueva entera vibraba con ello. Las orejas de Axel giraron hacia ese punto con la precisión automática de un cazador que ha sobrevivido gracias a exactamente ese instinto. </p>
-
-            <p class="dialogo bajando la voz" data-badge="susurrado sin detenerse"> —Algo ahí adentro habla— murmuró.— Muchos algo— </p>
-
-            <p class="texto-narrativo"> Nadie respondió. Pero los cuatro aceleraron el paso sin que nadie dijera que lo estaban haciendo. </p>
-          </section>
-
-          <!-- =============== NOTAS DE CONTINUIDAD =============== -->
-          <div class="nota-continuidad" style="background: rgba(66, 66, 66, 0.3); padding: 20px; margin: 30px 0; border-radius: 10px; font-style: italic; color: #ccc">
-            <h4>Notas para continuidad narrativa:</h4>
-            <p>• Momento de reset emocional necesario después de revelación traumática</p>
-            <p>• Ember aún furioso pero dispuesto a continuar viaje por objetivo común</p>
-            <p>• Seraphina experimentando normalidad temporal - solo una compañera terrible de balsa</p>
-            <p>• Actividad física/caótica alivia tensión sin resolver problemas fundamentales</p>
-            <p>• Grupo recuerda que pueden cooperar incluso con dolor entre ellos</p>
-            <p>• Preparación emocional para continuar hacia desafíos más grandes</p>
-          </div>
+          <p class="texto-narrativo"> Recordaba con claridad enfermante cómo había defendido a Seraphina frente a Lyra. Cómo había dicho —ella no es lo que piensas— con toda la convicción de alguien que cree conocer a otro. Las palabras le ardían en la garganta como espinas tragadas.</p>
         </div>
 
-        <script src="global-reset.js"></script>
-      </body>
-    </html>
+        <div class="seraphina-culpa">
+          <p class="texto-narrativo"> Seraphina caminaba con las patas delanteras pegadas al cuerpo, ocupando el menor espacio posible — el instinto ancestral de una criatura que sabe que ha perdido el derecho a moverse con libertad entre los suyos. Cada paso parecía requerir esfuerzo consciente, no por fatiga física sino por el peso de sentir cómo el pelaje de Ember se erizaba cada vez que ella se acercaba demasiado, cómo las orejas de Axel giraban hacia ella con una atención que ya no era curiosa sino vigilante.</p>
+        </div>
+
+        <div class="ember-furia-contenida">
+          <p class="dialogo" data-badge="escupido con dureza que no pretendía">
+            —¿Hablar sobre qué parte? ¿Sobre las mentiras? ¿Sobre lo que le hizo a nuestro padre? ¿O sobre cómo yo la defendí mientras ella....
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Se detuvo a mitad de frase. Sus orejas se aplanaron al escucharse — la frase estaba a punto de salir envenenada y lo supo antes de terminarla.</p>
+
+        <div class="seraphina-culpa">
+          <p class="dialogo" data-badge="murmurado con voz que apenas existía">
+            —Nunca calculé nada contigo, Ember. Tus sentimientos.... tu amabilidad.... eso era real para mí también.
+          </p>
+        </div>
+
+        <div class="ember-furia-contenida">
+          <p class="dialogo" data-badge="respondido mostrando los colmillos sin darse cuenta">
+            —Oh, qué reconfortante. La que guió a mi padre a un desfiladero tiene sentimientos.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Las palabras cayeron como piedras calientes. Axel cerró los ojos un instante. El arco en su espalda pesaba más de lo habitual, como si la madera ancestral también estuviera procesando lo que habían descubierto sobre su anterior portador.</p>
+
+        <p class="dialogo" data-badge="dicho con calma que costaba más de lo que aparentaba">
+          —Ember. No aquí. No caminando. Si vamos a tener esta conversación, la tendremos sentados, mirándola a los ojos, y cuando estemos listos.
+        </p>
+
+        <p class="texto-narrativo"> Ember abrió la boca para protestar, pero algo en la expresión de su hermano lo detuvo. No era la calma que aparentaba — Ember podía oler la tensión en Axel igual que olía la lluvia antes de que cayera. Era algo más profundo: la misma determinación silenciosa que su padre tenía cuando decidía que era momento de actuar con la cabeza y no con las garras.</p>
+
+        <p class="texto-narrativo"> Fue en ese momento de tensión suspendida cuando escucharon los sonidos de chapoteo alegre y voces gritando instrucciones contradictorias a la distancia. Las orejas de los tres giraron simultáneamente hacia el río — un instinto compartido que, por un segundo brevísimo, los hizo parecer una familia otra vez.</p>
+      </section>
+
+      <!-- =============== ENCUENTRO CON LAS NUTRIAS =============== -->
+      <section id="encuentro-nutrias" class="rio-nutrias">
+        <h2>Distracción Acuática</h2>
+
+        <p class="texto-narrativo"> El sendero los llevó a las orillas de un río ancho y de corriente moderada. El aire olía diferente aquí — a musgo mojado, a corteza fresca, a algo vivo y ruidoso que contrastaba con el silencio denso que habían estado arrastrando. Docenas de nutrias navegaban el río en balsas de troncos y cuerdas, gritando instrucciones que se contradecían entre sí, chocando con la regularidad de quien ha convertido el desastre en arte, y divirtiéndose con una intensidad que resultaba casi ofensiva para un grupo en plena crisis.</p>
+
+        <p class="texto-narrativo"> Ember se detuvo al borde del agua. Por primera vez en horas sus orejas se irguieron hacia algo que no fuera una amenaza — como si alguien hubiera abierto una ventana en medio de un incendio.</p>
+
+        <p class="texto-narrativo"> En la orilla, una nutria muy grande con una gorra de capitán hecha de hojas de nenúfar trenzadas dirigía lo que parecía ser una competencia, usando una concha marina como megáfono improvisado. Tenía el pelaje del pecho cubierto de insignias hechas con escamas de pescado y semillas, cada una representando un título que probablemente se había otorgado a sí misma.</p>
+
+        <p class="dialogo" data-badge="gritado con entusiasmo náutico">
+          —¡Equipo Piedra Lisa, su balsa está girando en círculos otra vez! ¡Equipo Rama Fuerte, excelente trabajo sincronizando los remos! ¡Equipo Cola Espesa.... bueno, al menos no se han volcado todavía, lo cual es una mejora respecto a los últimos cuatro intentos!
+        </p>
+
+        <p class="texto-narrativo"> La nutria capitán los vio y nadó hasta la orilla con un movimiento tan fluido que apenas dejó ondas. Se sacudió en tres movimientos exactos y consultó una tabla impermeable colgada de su cuello.</p>
+
+        <p class="texto-narrativo"> La tabla estaba cubierta de anotaciones en letra diminuta, con secciones codificadas por color y diagramas de flujo para diferentes tipos de visitantes. La sección que consultaba se titulaba —Protocolo Oficial de Recepción de Visitantes—: —Paso 1: Saludar con entusiasmo. Paso 2: Presentarse con rango completo. Paso 3: Ofrecer servicios terapéuticos acuáticos. Paso 4: Evaluar nivel de tensión grupal (Escala de 1 a Necesitan ser empapados inmediatamente)—. La escala continuaba más abajo: —Nivel 1: Desacuerdo sobre dirección de remo. Nivel 3: Resentimiento familiar no resuelto. Nivel 5: Traición descubierta durante viaje épico. Nivel 7: Igual que 5 pero el traidor sigue en el grupo—. Debajo, alguien había añadido a mano con tinta diferente: —Nivel 8: Igual que 7 pero con mantis. Usar balsa reforzada—. La nutria los estudió, miró su tabla, los estudió de nuevo, y marcó algo en la sección más alta de la escala.</p>
+
+        <div class="nutria-sarcastica">
+          <p class="dialogo" data-badge="saludado con hospitalidad acuática">
+            —¡Visitantes! ¡Qué perfecta sincronización! Soy Capitán Remolino, Comandante Supremo de Actividades Acuáticas Recreativas, Especialista Certificado en Terapia de Equipo Mojada, y organizador oficial de las Regatas Semanales de Construcción de Carácter. ¿Buscan cruzar el río?
+          </p>
+        </div>
+
+        <p class="dialogo" data-badge="respondido con cansancio">
+          —Sí. Necesitamos llegar al otro lado.
+        </p>
+
+        <div class="nutria-sarcastica">
+          <p class="texto-narrativo"> Capitán Remolino ladeó la cabeza, estudiando al grupo con la misma atención que una madre nutria evalúa a sus crías después de una tormenta. Sus ojos se movieron de Ember — pelaje erizado, garras marcando el barro — a Seraphina — ocupando el menor espacio posible — a Axel — mandíbula tensa, orejas en constante rotación.</p>
+
+          <p class="dialogo" data-badge="comentado consultando la tabla de nuevo">
+            —Hmm. Parecen un grupo que necesita mucho más que transporte. Parecen un grupo que necesita.... terapia de equipo acuática.
+          </p>
+        </div>
+
+        <p class="dialogo" data-badge="dicho golpeándose el pecho con orgullo">
+          —¡Por supuesto! El agua no miente, no juzga, y no guarda rencores. Pero sí requiere que trabajen juntos o todos se empapan por igual. Participen en la regata. Garantizo que o salen como un equipo más fuerte o al menos muy mojados y distraídos de sus problemas terrestres.
+        </p>
+
+        <p class="texto-narrativo"> Axel iba a rechazar la oferta — no estaban para juegos — pero entonces notó algo. Ember estaba mirando las balsas. No con interés exactamente, sino con esa expresión hambrienta que tienen los que llevan demasiado tiempo conteniendo algo físico y necesitan desesperadamente mover el cuerpo para no explotar por dentro. Conocía esa expresión. La había visto en el espejo cada vez que volvía de cazar durante días enteros después de la desaparición de su padre.</p>
+
+        <p class="dialogo" data-badge="aceptado con suspiro">
+          —¿Cómo funciona?
+        </p>
+
+        <p class="texto-narrativo"> Las orejas de Ember giraron hacia él con sorpresa.</p>
+      </section>
+
+      <!-- =============== LA REGATA FORZADA =============== -->
+      <section id="regata-caos" class="caos-acuatico">
+        <h3>Parejas Imposibles</h3>
+
+        <p class="texto-narrativo"> Capitán Remolino organizó las parejas antes de que nadie formulara una objeción completa, con la eficiencia de alguien que ha convertido la terapia forzada en ciencia exacta.</p>
+
+        <p class="dialogo" data-badge="asignado con autoridad náutica">
+          —¡Perfecto! Hermanos gatos en la balsa azul — nada une como remar mal juntos. Mantis con mi asistente Burbuja Rápida en la balsa verde. Según el Reglamento Oficial de Asignación de Parejas, Sección 7.3-B, equipos con tensión familiar moderada a severa requieren navegación conjunta para realineación de prioridades mediante caos acuático controlado.
+        </p>
+
+        <p class="texto-narrativo"> Axel miró la balsa azul con la misma desconfianza instintiva que sentía al acercarse a agua profunda — algo que ningún gato montés, por valiente que fuera, superaba del todo. El olor a madera mojada y cuerdas tensas le llenó las fosas nasales mientras subía, y sus garras se extendieron buscando agarre en los troncos resbaladizos.</p>
+
+        <div class="ember-furia-contenida">
+          <p class="dialogo" data-badge="objetado mirando la balsa">
+            —Espera, no estoy seguro de que sea buena idea que Axel y yo....
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Algo en su expresión se pareció demasiado al cachorro que solía esconderse detrás de Axel durante las tormentas.</p>
+
+        <p class="dialogo" data-badge="dicho extendiendo una pata desde la balsa">
+          —Ember. Podemos estar enojados después. Ahora mismo, necesitamos cruzar este río.
+        </p>
+
+        <p class="texto-narrativo"> Ember miró la pata extendida. Un gesto simple cargado con el peso de años — de todas las veces que Axel le había tendido la mano para sacarlo de un arroyo, para ayudarlo a subir un árbol, para levantarlo después de una caída. La furia seguía ahí, intacta y caliente bajo su pelaje, pero sus patas se movieron antes de que su orgullo pudiera detenerlas. Subió a la balsa. El movimiento hizo que ambos se tambalearan y se agarraran el uno del otro por instinto.</p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="gruñido soltando el brazo de su hermano">
+            —Esto no significa nada.
+          </p>
+        </div>
+
+        <p class="dialogo" data-badge="respondido con media sonrisa">
+          —Por supuesto que no.
+        </p>
+
+        <p class="texto-narrativo"> En la balsa verde, Seraphina se encontró emparejada con Burbuja Rápida, una nutria joven cuyo pelaje estaba perpetuamente erizado de entusiasmo y que tenía opiniones muy específicas sobre técnica de remo.</p>
+
+        <div class="nutria-sarcastica">
+          <p class="dialogo" data-badge="explicado con entusiasmo técnico">
+            —¡Okay, Señora Mantis! La clave está en la sincronización. Cuando yo digo rema, remas. Cuando yo digo para, paras. Cuando yo digo gira, giras hacia donde señalo, no hacia donde crees que deberías girar. ¿Fácil, verdad?
+          </p>
+        </div>
+
+        <div class="seraphina-culpa">
+          <p class="texto-narrativo"> Seraphina sostuvo el remo con sus patas delanteras, y algo en el peso de la madera le recordó una sensación lejana — las tardes construyendo refugios con sus hermanas, antes de que el fuego lo cambiara todo.</p>
+
+          <p class="dialogo" data-badge="preguntado genuinamente confundida">
+            —¿No tienes miedo de mí? Los cuervos revelaron que soy.... que he hecho....
+          </p>
+        </div>
+
+        <div class="nutria-sarcastica">
+          <p class="dialogo" data-badge="preguntado con pragmatismo absoluto">
+            —¿Sabes remar?
+          </p>
+        </div>
+
+        <div class="seraphina-culpa">
+          <p class="dialogo" data-badge="respondido descolocada">
+            —¿Qué? No, pero eso no es—
+          </p>
+        </div>
+
+        <div class="nutria-sarcastica">
+          <p class="dialogo" data-badge="respondido ajustándole el ángulo del remo">
+            —Entonces tu mayor pecado ahora mismo es la incompetencia náutica. Escucha: cada nutria en este río ha hecho cosas de las que no está orgullosa. Mi primo mordió a un castor por una discusión sobre represas. Mi tía robó pescado del almacén comunitario durante tres inviernos. Pero ahora mismo, necesito que remes en línea recta. Podemos lidiar con tu bagaje emocional después de que ganemos esta carrera. Según el Manual de Respuestas Estándar para Crisis Existenciales Durante Actividades Acuáticas, página 23: Primero navegación, después contemplación. El agua no espera por tu auto-descubrimiento.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Algo en las comisuras de la boca de Seraphina se movió. No era una sonrisa — aún no se sentía capaz de sonreír — pero era lo más cerca que había estado de una en horas. La nutria la trataba como a cualquier otro compañero de balsa incompetente, y esa normalidad dolía y sanaba al mismo tiempo.</p>
+      </section>
+
+      <!-- =============== EL CAOS ACUÁTICO =============== -->
+      <section id="desastre-balsas" class="caos-acuatico">
+        <h3>Navegación Catastrófica</h3>
+
+        <p class="texto-narrativo"> La regata comenzó con el sonido grave de la concha marina, y el instinto de Axel fue exactamente el equivocado: clavar las garras en la madera, agazaparse, y buscar tierra firme.</p>
+
+        <div class="ember-furia-contenida">
+          <p class="dialogo" data-badge="gritado con coordinación inexistente">
+            —¡A la izquierda, Axel! ¡Tu otra izquierda! ¡No, espera, esa es MI izquierda, que sería tu derecha!
+          </p>
+        </div>
+
+        <p class="dialogo" data-badge="respondido remando frenéticamente">
+          —¡Ember! ¡Solo señala hacia dónde quieres que reme en lugar de dar instrucciones como si fuéramos un mapa!
+        </p>
+
+        <p class="dialogo" data-badge="gritado con frustración fraternal">
+          —¡Yo SÍ estoy señalando! ¡Pero tú sigues mirando hacia atrás!
+        </p>
+
+        <p class="dialogo" data-badge="respondido con los dientes apretados">
+          —¡Porque cada vez que remas la balsa gira y tengo que ver por dónde vamos!
+        </p>
+
+        <p class="texto-narrativo"> La balsa comenzó a girar en círculos cada vez más amplios, cada hermano remando con la fuerza y determinación que solo los gatos monteses pueden aplicar a una actividad que los aterroriza instintivamente. El agua les salpicaba el pelaje con cada remada descoordinada, y Axel sintió que cada fibra de su cuerpo le gritaba que abandonara esa balsa y nadara hasta la orilla — pero Ember estaba aquí, remando junto a él por primera vez desde la revelación, y eso valía más que pelaje seco.</p>
+
+        <p class="texto-narrativo"> Fue entonces cuando algo inesperado ocurrió. Un remolino suave atrapó la proa, y ambos hermanos tuvieron que inclinarse hacia el mismo lado para compensar. El movimiento fue simultáneo, instintivo — el tipo de coordinación que solo viene de haber crecido juntos, de años de cazar en pareja, de conocer el cuerpo del otro tan bien como el propio.</p>
+
+        <p class="dialogo" data-badge="dicho con descubrimiento">
+          —Rema cuando yo remo.
+        </p>
+
+        <p class="texto-narrativo"> No fue una instrucción. Fue un reconocimiento de algo que ya estaba pasando.</p>
+
+        <p class="texto-narrativo"> Por tres remadas perfectas, los hermanos navegaron en sincronía. Luego Ember recordó que estaba furioso, se desconcentró, y metió el remo en un ángulo que envió un chorro de agua directamente a la cara de Axel.</p>
+
+        <p class="dialogo" data-badge="dicho escupiendo agua de río">
+          —¡Eso fue a propósito!
+        </p>
+
+        <p class="dialogo" data-badge="respondido con inocencia poco convincente">
+          —Fue un accidente.
+        </p>
+
+        <p class="texto-narrativo"> Ambos supieron que no lo fue.</p>
+
+        <p class="texto-narrativo"> En la balsa verde, Seraphina y Burbuja Rápida tenían sus propios desafíos.</p>
+
+        <div class="nutria-sarcastica">
+          <p class="dialogo" data-badge="instruido con creciente desesperación">
+            —¡No, no, no! ¡Cuando dije rema fuerte no quise decir destruye el río con fuerza de mantis! ¡Estamos creando un tsunami miniatura!
+          </p>
+        </div>
+
+        <div class="seraphina-culpa">
+          <p class="dialogo" data-badge="explicado remando demasiado fuerte">
+            —¡Estoy acostumbrada a movimientos precisos y letales! ¡No tengo un ajuste suave para actividades recreativas!
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Seraphina estaba remando con tal intensidad que se movían increíblemente rápido — pero también de lado, creando un patrón de navegación que parecía más una danza de guerra que una carrera de balsas.</p>
+
+        <div class="nutria-sarcastica">
+          <p class="dialogo" data-badge="suplicado con alarma creciente">
+            —¡Señora Mantis, respeto su entusiasmo, pero si rema más fuerte vamos a terminar en otro río!
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Seraphina intentó ajustar la fuerza, pero sus patas delanteras no conocían el término medio — estaban diseñadas para atrapar presas con velocidad letal, no para la delicadeza de remar una balsa recreativa. El remo cortó el agua como una cuchilla y la balsa viró directamente hacia Axel y Ember.</p>
+
+        <p class="dialogo" data-badge="gritado simultáneamente">
+          —¡GIRA!
+        </p>
+
+        <p class="texto-narrativo"> Axel y Ember remaron hacia la derecha al mismo tiempo — un solo ser, un instinto de años de caza compartida — y la balsa azul esquivó la colisión por centímetros. Y fue directamente hacia una roca.</p>
+
+        <p class="texto-narrativo"> La colisión envió a los hermanos volando en direcciones opuestas. Axel entró al agua con la gracia de un saco de piedras, y el frío del río le golpeó el pelaje como mil agujas diminutas. Emergió jadeando, las orejas pegadas al cráneo, y lo primero que vio fue a Ember — igualmente empapado, igualmente indignado, con una ramita del tamaño de su cola enganchada en una oreja.</p>
+
+        <p class="texto-narrativo"> La balsa verde, sin obstáculo que esquivar, continuó su trayectoria caótica hasta que Burbuja Rápida se lanzó al agua voluntariamente, y Seraphina — sin contrapeso — fue catapultada hacia adelante con un grito que no fue exactamente de terror sino de confusión intensa ante la física de las balsas. Aterrizó en el agua a pocos metros de los hermanos, creando una ola que los empapó de nuevo.</p>
+
+        <p class="texto-narrativo"> Las nutrias observadoras estallaron en aplausos y silbidos, como si acabaran de presenciar el mejor espectáculo de la temporada. Varias tomaban notas. Una dibujaba un diagrama de la colisión.</p>
+
+        <!-- =============== APARICIÓN DEL ERIZO =============== -->
+        <p class="texto-narrativo"> Fue Ember quien lo vio primero: algo pequeño y redondo flotando río abajo con la serenidad de un objeto que no tiene la menor intención de hundirse.</p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="dicho señalando el agua con incredulidad">
+            —¿Eso es....?
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> El erizo flotaba boca arriba. O boca abajo. Era difícil saberlo porque estaba enrollado, y una esfera de púas tiene la misma cara en todas las direcciones. La corriente lo llevaba con la misma gracia con la que llevaba las ramas y las hojas, excepto que las ramas y las hojas no tenían ojos diminutos que miraban al cielo con absoluta indiferencia existencial.</p>
+
+        <div class="nutria-sarcastica">
+          <p class="dialogo" data-badge="exclamado con entusiasmo profesional">
+            —¡Oh! ¡Un objeto flotante no identificado! ¡Excelente hidrodinámica! ¡Resistencia al hundimiento superior! ¡Este espécimen tiene potencial recreativo!
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Antes de que Axel pudiera intervenir, tres nutrias ya lo estaban usando como pelota. Se lo pasaban de una a otra con golpes de cola precisos, y el erizo giraba en el agua sin desenrollarse, sin protestar, sin dar señal alguna de que estuviera vivo excepto por el hecho técnico de que flotaba.</p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="comentado desde la orilla, escurriendo agua">
+            —¿Deberíamos.... hacer algo?
+          </p>
+        </div>
+
+        <p class="dialogo" data-badge="respondido con la resignación de quien ya ha intentado todo">
+          —Lo he pisado, lo he sacado de una mochila, y lo he encontrado en una forja cerrada. Se las arregla solo.
+        </p>
+
+        <p class="texto-narrativo"> Las nutrias jugaron con el erizo durante otros diez minutos antes de que Burbuja Rápida lo rescatara, lo depositara en la orilla junto al grupo, y lo catalogara como —mejor juguete acuático de la temporada, ocho de diez, pierde puntos por falta de entusiasmo—. El erizo se desenrolló, se sacudió una cantidad imposible de agua para su tamaño, y se quedó inmóvil junto a la mochila de Ember como si ese hubiera sido su destino desde el principio.</p>
+        <!-- =============== FIN APARICIÓN DEL ERIZO =============== -->
+
+        <div class="nutria-sarcastica">
+          <p class="dialogo" data-badge="comentado flotando boca arriba con satisfacción profesional">
+            —¡Magnífico! ¡Absolutamente magnífico! ¡Ningún grupo tenso sobrevive a su primera regata sin terminar empapado e igualmente miserable! Protocolo de Emergencia Acuática ejecutado con éxito. Paso 1: Confirmar que están mojados. Paso 2: Verificar que están en el agua. Paso 3: Evaluar si desean seguir mojados. Paso 4: Dirigirlos hacia la orilla mediante técnicas de natación o flotación según preferencia personal.
+          </p>
+        </div>
+      </section>
+
+      <!-- =============== EL MOMENTO DE RESET =============== -->
+      <section id="reset-emocional" class="reset-emocional">
+        <h3>Empapados e Iguales</h3>
+
+        <p class="texto-narrativo"> Llegaron a la orilla opuesta nadando — o en el caso de los hermanos, de lo que las nutrias describieron diplomáticamente como —estilo de natación terrestre agresivo—. Algo había cambiado en el agua sin que ninguno pudiera señalar el momento exacto. Es difícil mantener la furia intacta cuando estás completamente empapado, tienes algas pegadas al pelaje, y acabas de ver a tu hermano intentar remar con una rama porque perdió su remo en la colisión.</p>
+
+        <p class="texto-narrativo"> El arco en la espalda de Axel — que milagrosamente había sobrevivido al baño — emanaba un calor suave contra su columna. No era el calor de advertencia. Era algo más gentil, como si la madera ancestral aprobara lo que acababa de pasar.</p>
+
+        <div class="ember-furia-contenida">
+          <p class="dialogo" data-badge="admitido escurriendo agua de su cola">
+            —Okay. Eso fue.... completamente desastroso.
+          </p>
+        </div>
+
+        <p class="dialogo" data-badge="acordado sacudiéndose con violencia felina">
+          —Oficialmente el peor trabajo de navegación que he hecho en mi vida. Y eso incluye la vez que intenté cruzar el arroyo detrás de nuestra casa y terminé colgando de una rama durante seis horas hasta que papá me encontró.
+        </p>
+
+        <p class="texto-narrativo"> La mención de su padre cayó entre ellos como una piedra en agua quieta. Axel se tensó. Ember lo miró. Pero el momento no se rompió — no del todo. El recuerdo dolía, pero por primera vez desde las revelaciones, el dolor vino mezclado con algo cálido: la imagen de su padre riéndose mientras lo bajaba de la rama, diciendo —para ser un cazador de montaña, le tienes un respeto impresionante al agua—.</p>
+
+        <div class="seraphina-culpa">
+          <p class="texto-narrativo"> Seraphina se había quedado sentada en la orilla, algo apartada, mirándose las patas mojadas. El agua del río le resbalaba por las antenas y caía en gotas regulares que marcaban un ritmo lento en la arena. Solo se sentía como alguien que era terrible navegando balsas y que se había empapado junto con todos los demás. Y esa igualdad — estar igualmente mojada, igualmente torpe, igualmente ridícula — era lo más parecido a pertenecer que había sentido desde hacía años.</p>
+        </div>
+
+        <div class="seraphina-culpa">
+          <p class="dialogo" data-badge="ofrecido con voz pequeña">
+            —Lo siento por crear un tsunami miniatura. No estoy.... no estoy acostumbrada a actividades que requieren contención.
+          </p>
+        </div>
+
+        <div class="nutria-sarcastica">
+          <p class="dialogo" data-badge="comentado flotando boca arriba">
+            —Interesante. Cuando estaban gritándose sobre direcciones, sonaban exactamente como hermanos. Cuando la balsa verde venía directo hacia ustedes, remaron juntos sin pensarlo. Y cuando cayeron al agua.... lo primero que hicieron los dos fue buscar al otro con la mirada.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Axel y Ember se miraron. Era cierto. Lo habían hecho sin pensarlo — el mismo instinto que les hacía verificar la posición del otro durante una cacería. Ember apartó la mirada primero, pero algo en la línea de sus hombros se había suavizado, como un arco que relaja la tensión de la cuerda.</p>
+
+        <p class="dialogo" data-badge="explicado con filosofía náutica">
+          —¿Ven? El agua no miente. Cuando están en el río, las únicas cosas que importan son: ¿están trabajando juntos? ¿Se mantienen a flote? ¿Cuidan que nadie se ahogue? Todo lo demás es drama terrestre.
+        </p>
+
+        <p class="texto-narrativo"> Las palabras aterrizaron en un lugar inesperado. Axel pensó en el Jardín de Intenciones — en las rosas que habían crecido del corazón de Seraphina. En cómo ella había cubierto a Ember con su cuerpo cuando la balsa se volcó, un gesto que nadie le pidió y que no le daba ninguna ventaja. Las acciones hechas por instinto cuando no hay tiempo para calcular.</p>
+
+        <p class="dialogo" data-badge="preguntado a pesar de sí mismo">
+          —¿Y funcionó? ¿Con los zorros?
+        </p>
+
+        <p class="texto-narrativo"> Capitán Remolino se rascó detrás de la oreja.</p>
+
+        <p class="dialogo" data-badge="respondido con sonrisa amplia">
+          —Volcaron cuatro balsas, perdieron seis remos, y uno terminó colgando de una rama sobre el río gritando que prefería ahogarse antes que pedir ayuda. Pidió ayuda tres minutos después. Quince minutos en el agua, y recuerdan que sus problemas no son tan importantes como mantenerse a flote juntos. No porque los problemas desaparezcan, sino porque el agua les recuerda qué es verdaderamente urgente y qué puede esperar.
+        </p>
+
+        <div class="ember-furia-contenida">
+          <p class="texto-narrativo"> Ember miró a Seraphina. Realmente la miró, quizás por primera vez desde que los cuervos habían desnudado su verdad. La vio mojada, con las antenas caídas, las patas delanteras abrazándose a sí misma como hacen las criaturas que saben que no tienen derecho a pedir calor a nadie. Y debajo de la furia — que seguía ahí, intacta, no pensaba dejarla ir tan fácilmente — encontró algo que lo perturbaba más que el odio: reconocimiento. Conocía esa postura. La misma que había visto en refugiados llegando a Valle Tranquilo después de perder todo.</p>
+
+          <p class="texto-narrativo"> Pensó en Luna Suave. En cómo ella le diría que la compasión no significa perdón, que entender no significa aceptar. Pensó en Sol y Sombra, y en el mundo que quería construir para ellos — uno donde los ciclos de venganza se rompieran antes de llegar a la siguiente generación.</p>
+        </div>
+
+        <div class="ember-furia-contenida">
+          <p class="dialogo" data-badge="ofrecido con reluctancia">
+            —No significa que esté listo para.... para hablar sobre todo. Pero supongo que podemos seguir viajando juntos. Por ahora.
+          </p>
+        </div>
+
+        <div class="seraphina-culpa">
+          <p class="dialogo" data-badge="respondido con alivio que no pudo esconder">
+            —Gracias, Ember. No esperaba.... no merezco....
+          </p>
+        </div>
+
+        <div class="ember-furia-contenida">
+          <p class="dialogo" data-badge="interrumpido con claridad">
+            —No. No me des las gracias. Y no me digas que no mereces algo, porque eso me obliga a decidir si estoy de acuerdo o no, y todavía no estoy listo para esa respuesta. Hazlo porque aparentemente somos un equipo terrible de navegación y necesitamos practicar trabajar juntos antes de llegar a desafíos más grandes.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> No era perdón. Ember fue claro en eso con cada línea de su cuerpo: las orejas medio giradas, la cola baja, las garras que se extendían y retraían como un corazón que late entre la furia y algo que todavía no tenía nombre. Pero era la decisión consciente de seguir caminando junto a alguien que te ha herido, no porque lo merezca, sino porque el camino adelante requiere más patas de las que tienes.</p>
+      </section>
+
+      <!-- =============== SECÁNDOSE JUNTO AL RÍO =============== -->
+      <section id="secandose" class="reset-emocional">
+        <h3>Las Preguntas que Quedan</h3>
+
+        <p class="texto-narrativo"> Capitán Remolino les indicó un tramo de orilla donde el sol daba directo y las piedras se habían calentado durante el día. Las nutrias lo llamaban —la secadora—, y a juzgar por las marcas de garras en las rocas, no eran los primeros viajeros empapados que terminaban ahí.</p>
+
+        <p class="texto-narrativo"> Se distribuyeron por las piedras sin discutir la configuración — Axel y Ember en una roca grande, Seraphina a varios metros de distancia en una más pequeña. Juntos pero con espacio, como animales que comparten un claro de sol sin confundir cercanía con confianza.</p>
+
+        <p class="texto-narrativo"> Axel se lamía el pelaje del antebrazo con movimientos metódicos, un gesto tan básico y animal que lo anclaba al presente mejor que cualquier pensamiento. Ember hacía lo mismo con su cola, deshaciendo nudos de agua y algas con la concentración de quien necesita mantener las patas ocupadas.</p>
+
+        <p class="texto-narrativo"> El silencio aquí era diferente al que habían arrastrado durante la mañana. Más poroso. Con espacio para respirar.</p>
+
+        <div class="ember-furia-contenida">
+          <p class="dialogo" data-badge="preguntado sin levantar la vista de su cola">
+            —¿Tú lo sabías? Antes de los cuervos. ¿Tenías alguna sospecha?
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Axel dejó de lamerse. La pregunta le cayó como agua fría en pelaje ya mojado. Pensó en las noches junto al fuego con Seraphina, en la historia de la hermana maldecida. En el Valle de los Susurradores, en los acertijos que no había entendido: —lo que parece herida a veces es el cuchillo—. En cómo el Jardín de Intenciones le había mostrado rosas genuinas creciendo de su corazón.</p>
+
+        <p class="dialogo" data-badge="respondido con dificultad">
+          —No. O quizás.... quizás había señales que no quise ver. Los Susurradores me advirtieron, a su manera. Y Lyra.... Lyra lo supo desde el principio. Pero elegí confiar en lo que veía de ella. En lo que sentía que era verdad.
+        </p>
+
+        <div class="ember-furia-contenida">
+          <p class="dialogo" data-badge="dicho con dolor contenido">
+            —Y lo que sentías que era verdad resultó ser una mentira.
+          </p>
+        </div>
+
+        <p class="dialogo" data-badge="respondido mirando a su hermano">
+          —No. Las mentiras eran las palabras. Pero sus acciones.... Ember, ella te cubrió con su cuerpo cuando la balsa se volcó. Hace veinte minutos. Nadie se lo pidió. Y las rosas del Jardín de Intenciones no pueden falsificarse — crecen de lo que realmente hay adentro.
+        </p>
+
+        <p class="texto-narrativo"> Ember no respondió inmediatamente. Sus garras marcaron la piedra caliente con un chirrido que le puso los nervios de punta a todos, y luego se quedó muy quieto.</p>
+
+        <div class="ember-furia-contenida">
+          <p class="dialogo" data-badge="susurrado mirando el río">
+            —Papá.... ¿crees que papá la habría perdonado?
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> La pregunta golpeó a Axel en el centro del pecho, exactamente donde el arco descansaba contra su columna. La madera pulsó con un calor suave, como una mano familiar apretándole el hombro. Cerró los ojos y vio a su padre — no la versión heroica de los recuerdos, sino la real: el gato que recogía insectos de la casa con una hoja en lugar de matarlos, que cocinaba sopa extra por si algún viajero pasaba, que nunca cazó más de lo necesario.</p>
+
+        <p class="dialogo" data-badge="respondido tocándose el arco">
+          —Creo que papá habría dicho que perdonar no es olvidar. Y que entender el dolor de alguien no significa aceptar lo que hizo con ese dolor. Pero también creo que habría querido conocer la versión completa antes de decidir.
+        </p>
+
+        <div class="seraphina-culpa">
+          <p class="texto-narrativo"> Desde su roca, Seraphina había escuchado cada palabra. No pretendió no hacerlo — ya no tenía derecho a fingir nada. Las lágrimas le bajaron sin permiso, silenciosas, mezclándose con el agua del río que aún le goteaba de las antenas. Quiso decir algo. Quiso decirles que su padre no había sufrido, pero sería mentira. Quiso decirles que lo sentía, pero la palabra se sentía tan pequeña comparada con el daño que ya no servía como moneda. Así que se quedó quieta y los dejó hablar sobre el gato al que ella había guiado a su muerte, y cada palabra fue como una garra de fuego entre las costillas — merecida, y por eso mismo insoportable.</p>
+        </div>
+
+        <p class="texto-narrativo"> Fue Seraphina quien rompió el silencio, y lo hizo con algo que nadie esperaba.</p>
+
+        <div class="seraphina-culpa">
+          <p class="dialogo" data-badge="dicho mirando al río">
+            —Se llamaba Ámbar. Su padre. La sexta víctima en mis registros. Pero las nutrias del valle donde crecí lo llamaban —el gato que hablaba con los árboles—, porque pasaba más tiempo escuchando el bosque que cazando en él.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> El nombre golpeó a Axel como una flecha en el costado. Ámbar. Nunca había escuchado a Seraphina usar su nombre. En los registros de los cuervos había sido —víctima número seis—, un dato en una lista de horrores. Pero ahora tenía un nombre en la boca de quien lo había guiado a su muerte, y ese nombre era el correcto.</p>
+
+        <p class="texto-narrativo"> Ember se había quedado completamente inmóvil. El pelaje erizado pero no de furia esta vez — de algo más crudo, más expuesto.</p>
+
+        <div class="seraphina-culpa">
+          <p class="dialogo" data-badge="dicho con voz que temblaba">
+            —No les digo esto para que me perdonen. Pero necesitan saber que no era un número para mí. No después. En el momento yo estaba tan llena de odio que cualquier gato montés era el enemigo. Pero después, cuando vi lo que quedaba.... supe su nombre. Investigué quién era. Y cada nombre que aprendí se convirtió en una garra clavada aquí dentro— se tocó el pecho —que no he podido sacar desde entonces.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Nadie habló. El río seguía fluyendo, las nutrias seguían gritando instrucciones imposibles en la distancia, y el sol seguía calentando las piedras como si el mundo no acabara de recibir una verdad que cambiaba la forma de todo.</p>
+
+        <p class="dialogo" data-badge="preguntado con voz ronca">
+          —¿Los seis nombres?
+        </p>
+
+        <div class="seraphina-culpa">
+          <p class="dialogo" data-badge="respondido cerrando los ojos">
+            —Cada uno. Sombra Roja, Viento Gris, Lluvia Nocturna, Ceniza Brillante, Musgo Profundo, y Ámbar.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Los nombres salieron como cuentas de un collar que llevaba años sosteniendo en la boca sin poder soltarlas.</p>
+
+        <p class="texto-narrativo"> Axel sintió el arco calentarse suavemente contra su espalda — no con advertencia sino con algo que se parecía a reconocimiento. Como si la madera ancestral, conectada con el espíritu de su padre, hubiera escuchado su nombre pronunciado con el peso que merecía. Cerró los ojos y dejó que el calor le recorriera la columna. No era perdón. No era paz. Pero era la certeza de que Seraphina cargaba con los muertos igual que él, solo que desde el otro lado de la herida.</p>
+      </section>
+
+      <!-- =============== TRUEQUE EN LA ORILLA =============== -->
+      <section id="trueque-nutrias" class="rio-nutrias">
+        <h3>Economía de Río</h3>
+
+        <p class="texto-narrativo"> Capitán Remolino se acercó arrastrando un saco de arpillera mojada que olía a cera y a pescado en partes iguales. Consultó una tabla nueva — —Protocolo de Intercambio Comercial con Visitantes Terrestres, Edición Revisada— — cuyo Paso 4 era —Verificar que el cliente no se ha ahogado durante la negociación—.</p>
+
+        <p class="dialogo" data-badge="dicho con tono de negocios acuáticos">
+          —Antes de que se vayan. Ustedes van al interior. Territorio húmedo, cuevas, puede que ríos subterráneos. He visto suficientes viajeros volver con los mapas destruidos y las cuerdas de arco podridas por la humedad. ¿Qué tienen para intercambiar?
+        </p>
+
+        <p class="texto-narrativo"> Axel examinó los frascos. Uno contenía una sustancia amarillenta y espesa que olía a resina de pino mezclada con grasa de pescado. La etiqueta decía —Cera Impermeabilizante de Nutria, Grado Profesional. No ingerir. No aplicar en pelaje (experiencia personal)—.</p>
+
+        <p class="dialogo" data-badge="preguntado evaluando la cera">
+          —¿Qué hace exactamente?
+        </p>
+
+        <p class="dialogo" data-badge="explicado con orgullo artesanal">
+          —Sella cualquier superficie porosa contra el agua. Cuerdas de arco, pergaminos, cuero, lo que sea. Dura tres días. Cuatro si no llueve. Dos si llueve mucho. Exactamente uno y medio si llueve mucho y hace viento, según la Tabla de Rendimiento Climatológico que mi bisabuela compiló durante cuarenta años de observación empírica.
+        </p>
+
+        <p class="texto-narrativo"> Axel pensó en las cuerdas de repuesto del arco, en los mapas que cargaban. Si iban a atravesar territorio húmedo, la cera podía ser la diferencia entre llegar al Templo con información legible o con pulpa mojada.</p>
+
+        <p class="dialogo" data-badge="dicho sacando su piedra de afilar">
+          —No llevo monedas suficientes. ¿Aceptas servicios?
+        </p>
+
+        <p class="texto-narrativo"> Sacó la piedra de afilar que usaba para las puntas de sus flechas. Grano fino, desgastada por años de uso hasta adoptar la curva exacta de su pulgar.</p>
+
+        <div class="nutria-sarcastica">
+          <p class="dialogo" data-badge="respondido con interés inmediato">
+            —¿Sabes afilar cuchillos de escama? Nuestras garras son excelentes para excavar y nadar, pero para el trabajo fino de afilado son.... subóptimas. Llevamos tres semanas cortando pescado con lo que básicamente son piedras redondeadas con pretensiones.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Axel se sentó junto a los cuchillos y los examinó uno por uno con la familiaridad de alguien que ha pasado más noches afilando herramientas que durmiendo. La piedra encontró el ángulo correcto en el primer cuchillo, y el sonido — un silbido limpio de metal encontrando su forma — hizo que tres nutrias se detuvieran a mirar.</p>
+
+        <p class="texto-narrativo"> Trabajó en silencio durante veinte minutos. Para cuando terminó el séptimo cuchillo, había una audiencia de once nutrias observando con la boca abierta. Capitán Remolino tomaba notas en su tabla. Una nutria joven intentó imitar la técnica con una concha y una roca, produciendo un ruido que hizo que todos se taparan los oídos.</p>
+
+        <div class="nutria-sarcastica">
+          <p class="dialogo" data-badge="dicho examinando el filo con admiración">
+            —Excelente. Según el Protocolo Comercial, un servicio de afilado de esta calidad equivale a dos frascos de cera impermeabilizante, un rollo de cuerda encerada, y acceso vitalicio al Programa de Descuentos para Viajeros Frecuentes.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Le extendió una tarjeta laminada que decía —MIEMBRO PLATINO— con una nutria dibujada a mano. —La tarjeta no tiene valor real en ningún otro lugar, pero queda bien en la bolsa de viaje—.</p>
+
+        <p class="texto-narrativo"> Mientras Axel completaba el intercambio, Ember se había acercado a la orilla donde varias nutrias preparaban pescado. Había sacado el cuchillo de campamento y una raíz seca de su bolsa, pelándola con movimientos metódicos — las patas de su hermano necesitaban hacer algo o se volverían locas.</p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="dicho sin levantar la vista de la raíz">
+            —Puedo cocinar algo para ustedes. A cambio de.... lo que sea que tengan que valga para viajeros.
+          </p>
+        </div>
+
+        <div class="nutria-sarcastica">
+          <p class="dialogo" data-badge="preguntado sacando una tarjeta laminada">
+            —¿Qué nivel de cocina? Porque tenemos estándares. Según la Escala Gastronómica Oficial de las Nutrias Velocistas, Nivel 1 es —comestible sin consecuencias—, Nivel 3 es —agradable con reservas—, y Nivel 5 es —recomendaría a familiares que me agradan—. ¿En qué nivel estás?
+          </p>
+        </div>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="respondido con dignidad cuestionable">
+            —Probablemente un dos.
+          </p>
+        </div>
+
+        <div class="nutria-sarcastica">
+          <p class="dialogo" data-badge="respondido asintiendo">
+            —Apreciamos la honestidad. Muy pocos viajeros se evalúan por debajo de tres. El último que dijo cinco nos dio intoxicación a siete de los nuestros. Cocina. Si sobrevivimos, negociamos.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Lo que Ember preparó no fue exactamente bueno. Las nutrias lo comieron con expresiones que oscilaban entre la educación y el arrepentimiento, masticando con una lentitud que sugería que cada bocado requería una decisión consciente de continuar. Pero lo comieron. Y cuando añadió las últimas especias de mapache — una pizca que olía a canela mezclada con algo que no quería identificar — una nutria mayor parpadeó dos veces y dijo —no es lo peor que he probado este mes—, que en el sistema de evaluación de las nutrias era prácticamente un elogio.</p>
+
+        <div class="nutria-sarcastica">
+          <p class="dialogo" data-badge="dicho sacando una red compacta">
+            —Nivel dos confirmado. Por un Nivel 2 con honestidad, te ofrezco esto. Red de pesca de corriente. Funciona en ríos, arroyos, y charcos profundos. No funciona en sopa, aunque alguien lo intentó una vez y los resultados fueron clasificados.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Ember tomó la red. Ligera y sorprendentemente fuerte — el tipo de herramienta que alguien que alimenta a un grupo necesita pero que nunca sabe que necesita hasta que la tiene. La guardó con el mismo cuidado con que guardaba las cartas para Luna Suave.</p>
+
+        <p class="texto-narrativo"> Fue Burbuja Rápida quien se acercó a Seraphina al final, con la informalidad de quien no distingue entre una asesina reformándose y cualquier otra compañera de balsa incompetente. Llevaba una concha marina tallada en espiral, del tamaño de un pulgar, con un agujero en la punta.</p>
+
+        <p class="dialogo" data-badge="dicho con seriedad total">
+          —Para ti. Silbato de río. Lo ganaste.
+        </p>
+
+        <p class="dialogo" data-badge="preguntado mirando la concha">
+          —¿Lo gané? ¿Cómo?
+        </p>
+
+        <div class="nutria-sarcastica">
+          <p class="dialogo" data-badge="explicado consultando sus notas">
+            —Remada Más Destructiva de la Temporada. Superaste a un oso que pasó por aquí en primavera. Él desplazó 40 litros de agua por remada. Tú desplazaste lo que estimo en 60, más la balsa de los hermanos por impacto lateral. Es un récord. Los récords se premian.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Seraphina miró el silbato. Un objeto pequeño y absurdo — un premio por destruir una actividad recreativa — pero pesaba más en su pata de lo que debería. Nadie le había dado un premio por nada en años. Los premios son para las personas que pertenecen a lugares, que participan en cosas, que forman parte de comunidades. No para las que las destruyen.</p>
+
+        <p class="dialogo" data-badge="susurrado tocando el silbato">
+          —Gracias.
+        </p>
+
+        <p class="texto-narrativo"> La palabra salió sin cálculo ni medición, simple como una piedra cayendo al agua.</p>
+
+        <div class="nutria-sarcastica">
+          <p class="dialogo" data-badge="añadido señalando el agujero">
+            —También sirve para comunicarse a distancia. El sonido viaja 200 metros en terreno abierto, 150 en cueva, y exactamente 47 en agua. Si se separan, sopla tres veces. Las nutrias de la zona lo reconocerán, y cualquiera que conozca la frecuencia sabrá que alguien pide ayuda. O que alguien está destruyendo otra balsa. Pero el contexto generalmente aclara.
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Seraphina guardó el silbato en el pliegue interior de su pata delantera, donde las mantis guardan las cosas que quieren proteger. Junto al frasco de veneno que llevaba desde antes de que el viaje cambiara todo. Los dos objetos descansaron uno junto al otro — lo que había sido y lo que estaba empezando a ser — y decidió no pensar demasiado en lo que eso significaba.</p>
+      </section>
+
+      <!-- =============== GANCHO HACIA SECCION_08B =============== -->
+      <section id="gancho-cueva" class="tension-post-revelacion">
+        <h3>Lo Que Suena en la Cueva</h3>
+
+        <p class="texto-narrativo"> Se alejaron de las nutrias después de prometer volver para lecciones de navegación y de que Capitán Remolino les entregara un —Certificado de Supervivencia Acuática Básica— laminado en tiempo récord. La tensión aliviada lo suficiente como para respirar sin que doliera. No resueltos. No curados. Pero recordando que podían funcionar como equipo incluso con dolor entre ellos, del mismo modo que se puede caminar con una espina en la almohadilla si el destino es lo suficientemente importante.</p>
+
+        <p class="texto-narrativo"> Axel llevaba dos frascos de cera impermeabilizante en la bolsa, Ember una red de pesca que no sabía usar todavía, y Seraphina un silbato de concha junto a un frasco de veneno — un inventario que decía más sobre cada uno de ellos de lo que cualquier conversación podría.</p>
+
+        <div class="nutria-sarcastica">
+          <p class="dialogo" data-badge="gritado mientras se alejaban">
+            —¡Recuerden! ¡En el agua, todos son iguales! ¡En tierra firme.... bueno, ahí es donde los problemas reales empiezan! ¡Pero al menos ahora saben que pueden flotar juntos!
+          </p>
+        </div>
+
+        <p class="texto-narrativo"> Axel dejó que los demás se adelantaran unos pasos. Necesitaba un momento — solo uno — sin orejas girándose hacia él esperando que dijera algo sabio. Sacó la nota de Lyra del bolsillo. El agua del río la había humedecido, difuminando algunas palabras, pero las que importaban seguían legibles: —Estoy cerca. No estás solo en esto—.</p>
+
+        <p class="texto-narrativo"> Olió el papel. Debajo de la humedad del río, debajo de la tinta, estaba el aroma de Lyra — un rastro que reconocería entre mil, mezcla de corteza de pino, cuero de viaje, y algo ligeramente metálico que era solo suyo. El pelaje de la nuca se le relajó, las orejas dejaron de rotar, y por un instante se sintió como si alguien le hubiera quitado peso de los hombros.</p>
+
+        <p class="texto-narrativo"> Guardó la nota presionándola contra su pecho antes de devolverla al bolsillo.</p>
+
+        <p class="dialogo" data-badge="susurrado para sí mismo">
+          —Gracias.
+        </p>
+
+        <p class="texto-narrativo"> El sol bajaba, tiñendo el camino de un naranja profundo que le recordó a las tardes en las Montañas Heladas — la hora en que su padre volvía de cazar y la casa olía a sopa y a madera quemada. Solo que ahora no caminaba solo. Ahora había dos figuras delante de él, cada una cargando su propio peso, y una tercera en algún lugar entre los árboles que no podía ver pero sabía que estaba ahí.</p>
+
+        <p class="texto-narrativo"> Olió el aire. Tierra húmeda, musgo, el metal frío de roca expuesta — y algo más: el aroma terroso e inconfundible de una cueva cercana. Sobre un risco le pareció ver el movimiento de algo pequeño y oscuro que desaparecía entre las sombras — demasiado rápido para ser un pájaro, demasiado errático para ser una hoja. Las orejas le giraron hacia ese punto con la precisión de un cazador, pero no encontró nada. Solo el viento, y un eco lejano que podría haber sido un murciélago. O varios.</p>
+
+        <p class="dialogo" data-badge="comentado señalando adelante">
+          —Hay una cueva más arriba. Huele a roca seca y algo orgánico. Podríamos parar ahí antes de que oscurezca.
+        </p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-badge="respondido con cansancio">
+            —¿Algo orgánico? Eso puede significar muchas cosas, la mayoría desagradables.
+          </p>
+        </div>
+
+        <p class="dialogo" data-badge="dicho encogiéndose de hombros">
+          —También significa que alguien ya la ha habitado, lo que significa que es segura para dormir.
+        </p>
+
+        <p class="texto-narrativo"> Nadie sabía todavía qué tipo de habitantes encontrarían en esa cueva, ni que la noche que les esperaba involucraría la peor sopa jamás cocinada y la crítica gastronómica más devastadora que cualquiera de ellos hubiera presenciado.</p>
+
+        <p class="texto-narrativo"> Fue entonces cuando Axel lo oyó: un sonido que venía de la cueva, distinto del eco al que lo había atribuido. No era viento. No era el crujido de roca asentándose. Era voz — decenas de voces, superpuestas, con un ritmo sincopado que oscilaba entre el murmullo y algo que casi podría llamarse canto. La cueva entera vibraba con ello.</p>
+
+        <p class="dialogo" data-badge="susurrado sin detenerse">
+          —Algo ahí adentro habla. Muchos algo.
+        </p>
+
+        <p class="texto-narrativo"> Nadie respondió. Pero los tres aceleraron el paso sin que nadie dijera que lo estaban haciendo.</p>
+      </section>
+    </div>
+
+<!--
+NOTAS DE CONTINUIDAD:
+— Grupo de 3 (sin Eco Pergaminada — se fue en seccion_05)
+— Apertura conecta con seccion_08 (silencio post-revelación, camino al río)
+— Erizo preservado (escena acuática con nutrias)
+— "Cuervos mercenarios" eliminado — Seraphina cubre a Ember en la balsa (acción presente)
+— Padre = Ámbar, "el gato que hablaba con los árboles"
+— Seraphina recuerda los 6 nombres: Sombra Roja, Viento Gris, Lluvia Nocturna, Ceniza Brillante, Musgo Profundo, Ámbar
+— Trueque: Axel → cera impermeabilizante + tarjeta platino; Ember → red de pesca; Seraphina → silbato de río
+— Silbato junto a frasco de veneno (lo que fue / lo que será)
+— Lyra: nota húmeda, aroma reconocido, "Estoy cerca"
+— Gancho: cueva con voces múltiples → seccion_08B (Murciélagos Críticos)
+— "Sin embargo" = 0
+— Clases sucias = 0
+— Eco Pergaminada = 0
+-->
+
+    <script src="global-reset.js"></script>
   </body>
 </html>
