@@ -1,0 +1,251 @@
+{
+  "nodos": [
+    {
+      "id": "Axel",
+      "menciones": 684
+    },
+    {
+      "id": "Ember",
+      "menciones": 189
+    },
+    {
+      "id": "Luna Suave",
+      "menciones": 39
+    },
+    {
+      "id": "Eco Pergaminada",
+      "menciones": 33
+    },
+    {
+      "id": "Seraphina",
+      "menciones": 32
+    },
+    {
+      "id": "Lágrimas",
+      "menciones": 28
+    },
+    {
+      "id": "Groundbreaker",
+      "menciones": 26
+    },
+    {
+      "id": "Había",
+      "menciones": 22
+    },
+    {
+      "id": "Mantis",
+      "menciones": 20
+    },
+    {
+      "id": "Sol",
+      "menciones": 19
+    }
+  ],
+  "enlaces": [
+    {
+      "fuente": "Axel",
+      "destino": "Había",
+      "peso": 26
+    },
+    {
+      "fuente": "Axel",
+      "destino": "Ember",
+      "peso": 24
+    },
+    {
+      "fuente": "Axel",
+      "destino": "Seraphina",
+      "peso": 22
+    },
+    {
+      "fuente": "Axel",
+      "destino": "Mantis",
+      "peso": 20
+    },
+    {
+      "fuente": "Axel",
+      "destino": "Lágrimas",
+      "peso": 20
+    },
+    {
+      "fuente": "Axel",
+      "destino": "Eco Pergaminada",
+      "peso": 6
+    },
+    {
+      "fuente": "Axel",
+      "destino": "Luna Suave",
+      "peso": 14
+    },
+    {
+      "fuente": "Axel",
+      "destino": "Sol",
+      "peso": 10
+    },
+    {
+      "fuente": "Axel",
+      "destino": "Groundbreaker",
+      "peso": 10
+    },
+    {
+      "fuente": "Ember",
+      "destino": "Había",
+      "peso": 18
+    },
+    {
+      "fuente": "Ember",
+      "destino": "Seraphina",
+      "peso": 16
+    },
+    {
+      "fuente": "Ember",
+      "destino": "Luna Suave",
+      "peso": 14
+    },
+    {
+      "fuente": "Ember",
+      "destino": "Sol",
+      "peso": 10
+    },
+    {
+      "fuente": "Ember",
+      "destino": "Lágrimas",
+      "peso": 14
+    },
+    {
+      "fuente": "Ember",
+      "destino": "Mantis",
+      "peso": 12
+    },
+    {
+      "fuente": "Ember",
+      "destino": "Groundbreaker",
+      "peso": 8
+    },
+    {
+      "fuente": "Luna Suave",
+      "destino": "Sol",
+      "peso": 10
+    },
+    {
+      "fuente": "Luna Suave",
+      "destino": "Lágrimas",
+      "peso": 12
+    },
+    {
+      "fuente": "Luna Suave",
+      "destino": "Seraphina",
+      "peso": 10
+    },
+    {
+      "fuente": "Luna Suave",
+      "destino": "Había",
+      "peso": 10
+    },
+    {
+      "fuente": "Luna Suave",
+      "destino": "Mantis",
+      "peso": 8
+    },
+    {
+      "fuente": "Luna Suave",
+      "destino": "Groundbreaker",
+      "peso": 6
+    },
+    {
+      "fuente": "Eco Pergaminada",
+      "destino": "Había",
+      "peso": 2
+    },
+    {
+      "fuente": "Eco Pergaminada",
+      "destino": "Mantis",
+      "peso": 2
+    },
+    {
+      "fuente": "Eco Pergaminada",
+      "destino": "Lágrimas",
+      "peso": 4
+    },
+    {
+      "fuente": "Eco Pergaminada",
+      "destino": "Seraphina",
+      "peso": 2
+    },
+    {
+      "fuente": "Seraphina",
+      "destino": "Había",
+      "peso": 14
+    },
+    {
+      "fuente": "Seraphina",
+      "destino": "Mantis",
+      "peso": 12
+    },
+    {
+      "fuente": "Seraphina",
+      "destino": "Sol",
+      "peso": 6
+    },
+    {
+      "fuente": "Seraphina",
+      "destino": "Lágrimas",
+      "peso": 10
+    },
+    {
+      "fuente": "Seraphina",
+      "destino": "Groundbreaker",
+      "peso": 6
+    },
+    {
+      "fuente": "Lágrimas",
+      "destino": "Había",
+      "peso": 14
+    },
+    {
+      "fuente": "Lágrimas",
+      "destino": "Mantis",
+      "peso": 12
+    },
+    {
+      "fuente": "Lágrimas",
+      "destino": "Sol",
+      "peso": 10
+    },
+    {
+      "fuente": "Lágrimas",
+      "destino": "Groundbreaker",
+      "peso": 10
+    },
+    {
+      "fuente": "Groundbreaker",
+      "destino": "Había",
+      "peso": 10
+    },
+    {
+      "fuente": "Groundbreaker",
+      "destino": "Sol",
+      "peso": 6
+    },
+    {
+      "fuente": "Groundbreaker",
+      "destino": "Mantis",
+      "peso": 8
+    },
+    {
+      "fuente": "Había",
+      "destino": "Mantis",
+      "peso": 18
+    },
+    {
+      "fuente": "Había",
+      "destino": "Sol",
+      "peso": 8
+    },
+    {
+      "fuente": "Mantis",
+      "destino": "Sol",
+      "peso": 6
+    }
+  ]
+}
