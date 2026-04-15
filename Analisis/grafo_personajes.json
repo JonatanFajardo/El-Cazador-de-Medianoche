@@ -2,51 +2,66 @@
   "nodos": [
     {
       "id": "Axel",
-      "menciones": 684
-    },
-    {
-      "id": "Ember",
-      "menciones": 189
-    },
-    {
-      "id": "Luna Suave",
-      "menciones": 39
-    },
-    {
-      "id": "Eco Pergaminada",
-      "menciones": 33
+      "menciones": 740
     },
     {
       "id": "Seraphina",
-      "menciones": 32
+      "menciones": 478
     },
     {
-      "id": "Lágrimas",
-      "menciones": 28
+      "id": "Ember",
+      "menciones": 206
     },
     {
-      "id": "Groundbreaker",
-      "menciones": 26
-    },
-    {
-      "id": "Había",
-      "menciones": 22
-    },
-    {
-      "id": "Mantis",
-      "menciones": 20
+      "id": "El Erizo",
+      "menciones": 59
     },
     {
       "id": "Sol",
-      "menciones": 19
+      "menciones": 54
+    },
+    {
+      "id": "Luna Suave",
+      "menciones": 41
+    },
+    {
+      "id": "Templo Celestial",
+      "menciones": 37
+    },
+    {
+      "id": "Susurradores",
+      "menciones": 36
+    },
+    {
+      "id": "Eco Pergaminada",
+      "menciones": 35
+    },
+    {
+      "id": "Sombra",
+      "menciones": 32
+    },
+    {
+      "id": "Groundbreaker",
+      "menciones": 30
+    },
+    {
+      "id": "Cuevas Brillantes",
+      "menciones": 26
+    },
+    {
+      "id": "Lágrimas De Luna",
+      "menciones": 25
+    },
+    {
+      "id": "Problemas",
+      "menciones": 24
+    },
+    {
+      "id": "Pelaje Gris",
+      "menciones": 24
     }
   ],
   "enlaces": [
-    {
-      "fuente": "Axel",
-      "destino": "Había",
-      "peso": 26
-    },
     {
       "fuente": "Axel",
       "destino": "Ember",
@@ -59,13 +74,13 @@
     },
     {
       "fuente": "Axel",
-      "destino": "Mantis",
-      "peso": 20
+      "destino": "Pelaje Gris",
+      "peso": 2
     },
     {
       "fuente": "Axel",
-      "destino": "Lágrimas",
-      "peso": 20
+      "destino": "Problemas",
+      "peso": 2
     },
     {
       "fuente": "Axel",
@@ -88,14 +103,39 @@
       "peso": 10
     },
     {
-      "fuente": "Ember",
-      "destino": "Había",
-      "peso": 18
+      "fuente": "Seraphina",
+      "destino": "Pelaje Gris",
+      "peso": 2
     },
     {
-      "fuente": "Ember",
-      "destino": "Seraphina",
+      "fuente": "Seraphina",
+      "destino": "Problemas",
+      "peso": 2
+    },
+    {
+      "fuente": "Seraphina",
+      "destino": "Ember",
       "peso": 16
+    },
+    {
+      "fuente": "Seraphina",
+      "destino": "Eco Pergaminada",
+      "peso": 2
+    },
+    {
+      "fuente": "Seraphina",
+      "destino": "Luna Suave",
+      "peso": 10
+    },
+    {
+      "fuente": "Seraphina",
+      "destino": "Sol",
+      "peso": 6
+    },
+    {
+      "fuente": "Seraphina",
+      "destino": "Groundbreaker",
+      "peso": 6
     },
     {
       "fuente": "Ember",
@@ -109,43 +149,18 @@
     },
     {
       "fuente": "Ember",
-      "destino": "Lágrimas",
-      "peso": 14
-    },
-    {
-      "fuente": "Ember",
-      "destino": "Mantis",
-      "peso": 12
-    },
-    {
-      "fuente": "Ember",
       "destino": "Groundbreaker",
       "peso": 8
     },
     {
-      "fuente": "Luna Suave",
-      "destino": "Sol",
+      "fuente": "Sol",
+      "destino": "Luna Suave",
       "peso": 10
     },
     {
-      "fuente": "Luna Suave",
-      "destino": "Lágrimas",
-      "peso": 12
-    },
-    {
-      "fuente": "Luna Suave",
-      "destino": "Seraphina",
-      "peso": 10
-    },
-    {
-      "fuente": "Luna Suave",
-      "destino": "Había",
-      "peso": 10
-    },
-    {
-      "fuente": "Luna Suave",
-      "destino": "Mantis",
-      "peso": 8
+      "fuente": "Sol",
+      "destino": "Groundbreaker",
+      "peso": 6
     },
     {
       "fuente": "Luna Suave",
@@ -153,99 +168,9 @@
       "peso": 6
     },
     {
-      "fuente": "Eco Pergaminada",
-      "destino": "Había",
+      "fuente": "Problemas",
+      "destino": "Pelaje Gris",
       "peso": 2
-    },
-    {
-      "fuente": "Eco Pergaminada",
-      "destino": "Mantis",
-      "peso": 2
-    },
-    {
-      "fuente": "Eco Pergaminada",
-      "destino": "Lágrimas",
-      "peso": 4
-    },
-    {
-      "fuente": "Eco Pergaminada",
-      "destino": "Seraphina",
-      "peso": 2
-    },
-    {
-      "fuente": "Seraphina",
-      "destino": "Había",
-      "peso": 14
-    },
-    {
-      "fuente": "Seraphina",
-      "destino": "Mantis",
-      "peso": 12
-    },
-    {
-      "fuente": "Seraphina",
-      "destino": "Sol",
-      "peso": 6
-    },
-    {
-      "fuente": "Seraphina",
-      "destino": "Lágrimas",
-      "peso": 10
-    },
-    {
-      "fuente": "Seraphina",
-      "destino": "Groundbreaker",
-      "peso": 6
-    },
-    {
-      "fuente": "Lágrimas",
-      "destino": "Había",
-      "peso": 14
-    },
-    {
-      "fuente": "Lágrimas",
-      "destino": "Mantis",
-      "peso": 12
-    },
-    {
-      "fuente": "Lágrimas",
-      "destino": "Sol",
-      "peso": 10
-    },
-    {
-      "fuente": "Lágrimas",
-      "destino": "Groundbreaker",
-      "peso": 10
-    },
-    {
-      "fuente": "Groundbreaker",
-      "destino": "Había",
-      "peso": 10
-    },
-    {
-      "fuente": "Groundbreaker",
-      "destino": "Sol",
-      "peso": 6
-    },
-    {
-      "fuente": "Groundbreaker",
-      "destino": "Mantis",
-      "peso": 8
-    },
-    {
-      "fuente": "Había",
-      "destino": "Mantis",
-      "peso": 18
-    },
-    {
-      "fuente": "Había",
-      "destino": "Sol",
-      "peso": 8
-    },
-    {
-      "fuente": "Mantis",
-      "destino": "Sol",
-      "peso": 6
     }
   ]
 }
