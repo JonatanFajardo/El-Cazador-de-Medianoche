@@ -46,8 +46,9 @@
 - **Residencia:** Valle Tranquilo (aldea neutral de familias mixtas)
 - **Conocimiento preocupante:** Reportes diplomáticos sobre mantis en territorio de gatos monteses
 
-### LYRA CAZAVIENTOS - Gata Montés Rastreadora 🟢
-- **Descripción:** Pelaje negro con manchas doradas, ojos brillantes con determinación férrea y dolor contenido
+### LYRA CAZAVIENTOS - Rastreadora 🟢
+- **⚠️ INCONSISTENCIA DE DESCRIPCIÓN:** seccion_02 la describe como "lince de pelaje rojizo con manchas blancas"; el documento de referencia dice "gata montés de pelaje negro con manchas doradas". Pendiente de resolución.
+- **Descripción (según documento de referencia):** Pelaje negro con manchas doradas, ojos brillantes con determinación férrea y dolor contenido
 - **Profesión:** Rastreadora experimentada y especializada
 - **Motivación personal:** Su hermana Luna Platino fue asesinada por Seraphina
 - **Conocimiento clave:** Identidad real de Seraphina desde el primer encuentro
@@ -77,6 +78,26 @@
 
 ---
 
+## 🦉 PERSONAJES DE TRASFONDO CERCANO
+
+### PROBLEMAS - Búho Nival 🟢
+- **Especie:** Búho nival joven
+- **Descripción:** Búho nival con ala izquierda rota cuando Axel lo encontró; pelaje blanco
+- **Historia:** Curado por Axel durante 13 días, tres semanas antes del inicio de la historia
+- **Personalidad:** Silencioso pero con agencia propia; reorganizó meticulosamente la cabaña de Axel mientras fingía causar caos
+- **Función narrativa:** Flashback que establece el patrón compasivo de Axel; eco temático del encuentro con Seraphina
+- **Estado actual:** Liberado; voló al recuperarse completamente
+- **Apodo dado por Axel:** "Problemas" (irónicamente)
+
+### PIEDRA VIEJA - Tejón Comerciante 🟢
+- **Especie:** Tejón
+- **Descripción:** Comerciante anciano de paso en el puesto comercial de montaña
+- **Rol:** Personaje de una aparición; advierte a Axel sobre criaturas solitarias viajando en grupos
+- **Cita relevante:** "Los tiempos están cambiando. Las criaturas que viajan solas normalmente viajan en grupo. Eso nunca es buena señal."
+- **Función narrativa:** Foreshadowing del encuentro con Seraphina; establece que el mundo exterior está cambiando
+
+---
+
 ## 👻 PERSONAJES ESPIRITUALES Y MÍSTICOS
 
 ### ESPÍRITU DEL PADRE DE AXEL 🟢
@@ -99,37 +120,93 @@
 
 ---
 
-## 🤝 ALIADOS OPCIONALES (Por Decisiones)
+## 🦔 COMPAÑERO SILENCIOSO
 
-### ZORROS PLATEROS 🟢 (Decisión 2A)
+### EL ERIZO (Sin nombre oficial) 🟢
+- **Especie:** Erizo
+- **Descripción:** Bola de púas pardas de tamaño modesto; expresión perpetuamente neutra
+- **Primera aparición:** Seccion_05 — aparece sin explicación dentro de una bolsa de equipo en la forja de Tomás
+- **Personalidad:** Inexpresivo, impredecible, presente en todos los momentos clave sin participar activamente en ninguno
+- **Comportamiento característico:** Se instala en lugares que nadie le asignó; duerme durante crisis; aparece y desaparece sin aviso; el único ser al que los Cuervos Espejo reflejaron exactamente como era
+- **Momento de desarrollo:** En seccion_09B elige acercarse a Seraphina de forma gradual — único personaje que no le guarda rencor
+- **Función narrativa:** Testigo silencioso; contraste cómico con drama grupal; indicador emocional indirecto
+
+---
+
+## 🤝 ALIADOS DE LA NARRATIVA PRINCIPAL
+
+### TOMÁS - Zorro Herrero 🟢
+- **Especie:** Zorro
+- **Profesión:** Herrero, dueño de la forja principal en la Aldea de los Zorros Plateros
+- **Personalidad:** Discreto, leal a su comunidad, toma decisiones difíciles; acoge a los viajeros antes de revelar la situación con los Lobos
+- **Función clave:** Informa al grupo sobre los Lobos de la Garra Negra; sirve de puente entre el grupo y la comunidad zorro
+- **Estado al final de seccion_05:** La aldea es liberada del extorsión lobuna
+
+### ZORROS PLATEROS 🟢
+- **Especie:** Zorros artesanos
+- **Aldea:** Aldea de los Zorros Plateros
 - **Especialidad:** Artesanos metalúrgicos especializados
 - **Contribución:** Flechas de plata que atraviesan defensas mágicas
 - **Efectividad:** Contra ilusiones y barreras mágicas
 - **Herramientas adicionales:** Equipos físicos para combate directo
-- **Ventaja:** Preparación táctica superior para enfrentamientos
+- **Sección:** Aldea de los Zorros Plateros (seccion_05)
 
-### MURCIÉLAGOS BIBLIOTECARIOS 🟢 (Decisión 2B)
-- **Especialidad:** Conocimiento y bibliotecas subterráneas
-- **Contribución:** Flechas anti-engaño que revelan verdades ocultas
-- **Efectividad:** Neutralizan manipulaciones mentales
-- **Conocimiento:** Información sobre técnicas de manipulación
-- **Ventaja:** Preparación intelectual contra engaños
+### MAPACHES CARTÓGRAFOS ASOCIADOS 🟢
+Banda de tres mapaches mercantes que bloquean pasos cobrando peajes informales.
 
-### ARAÑAS TEJEDORAS DEL DESTINO 🟢 (Decisión 5A)
-- **Especialidad:** Mapas secretos y conocimiento prohibido
-- **Contribución:** Mapas detallados del Templo Celestial
-- **Costo:** Exigen secretos personales valiosos a cambio
-- **Conocimiento:** Verdaderas capacidades y limitaciones de Seraphina
-- **Ventaja:** Preparación máxima pero vulnerabilidad emocional
+#### RIGOBERTO RINCONADA (también "Rigoberto el Afortunado")
+- **Rol:** Auto-proclamado Director Ejecutivo de Mapaches Cartógrafos Asociados
+- **Personalidad:** Inflado de orgullo cómico, registro contable caótico, convicción absoluta en la legitimidad de sus negocios
+- **Apariciones:** seccion_02 (cobrador del paso), seccion_07A (Torneo de Habilidades Mixtas del puente)
+- **Contribución real:** Mapa útil del valle; información sobre el Templo que solo aparece a quienes no lo buscan
 
-### CONEJOS HERBOLARIOS 🟢 (Decisión 5B)
+#### RUPERTO
+- **Rol:** Miembro de la banda; encargado de leer testimoniales falsos de clientes
+- **Personalidad:** Entusiasta, sin capacidad de detectar lo sarcástico en los testimonios que recita
+
+#### REINALDO
+- **Rol:** Miembro de la banda; apoyo visual y asintidor oficial
+- **Personalidad:** Sigue a Rigoberto con convicción plena
+
+### CONEJOS HERBOLARIOS 🟢
 - **Líder:** Trébol Raíztierna (anciano con orejas adornadas de flores)
 - **Especialidad:** Hierbas medicinales y protección mental
 - **Contribución:** Inmunidad parcial contra Danza Hipnótica
-- **Beneficio adicional:** Claridad emocional para ver más allá de venganza
 - **Ubicación:** Pueblo de los Conejos Herbolarios (oasis de paz)
-- **Vulnerabilidad:** Si Seraphina descubre su ubicación están en peligro
-- **Ventaja:** Menor preparación táctica pero mayor claridad moral
+
+---
+
+### NUTRIAS VELOCISTAS 🟢
+Comunidad acuática en el Río de las Nutrias Velocistas (seccion_08A). Practican regatas terapéuticas y cobran el cruce con participación obligatoria.
+
+#### CAPITÁN REMOLINO
+- **Rol:** Comandante Suprema de Actividades Acuáticas Recreativas y organizadora de regatas
+- **Descripción:** Nutria grande con gorra de hojas de nenúfar trenzadas; pecho cubierto de insignias de escamas y semillas; tabla de protocolos colgada al cuello con escala de tensión grupal (1 a "Necesitan ser empapados inmediatamente")
+- **Personalidad:** Burocrática acuática; evalúa el estado emocional del grupo como si fuera una variable de regata
+- **Contribución al grupo:** Silbato de concha, red de pesca compacta, cera impermeabilizante, Certificado de Supervivencia Acuática
+
+#### BURBUJA RÁPIDA
+- **Rol:** Asistente del Capitán Remolino, compañera de balsa de Seraphina
+- **Descripción:** Nutria joven con pelaje perpetuamente erizado de entusiasmo
+- **Función narrativa:** Primera criatura que trata a Seraphina exactamente igual que a cualquier otra compañera de balsa incompetente — sin saber quién es ni juzgarla
+
+### SOCIEDAD GASTRONÓMICA DE MURCIÉLAGOS DE ALA FINA 🟢
+Club de degustación culinaria que habita una cueva (seccion_08B). Aceptan huéspedes con condescendencia sofisticada.
+
+#### PLUMA PLATEADA
+- **Rol:** Presidente vitalicio de la Sociedad Gastronómica, curador del Archivo de Sabores Perdidos
+- **Descripción:** Murciélago grande con pelaje peinado hacia atrás, corbata de hilos de telaraña plateada, monóculo decorativo
+- **Personalidad:** Esnob gastronómico; evalúa el estado emocional de los visitantes como si fuera un perfil de sabor ("el arquero es pan sin sal; la mantis es un plato recalentado demasiadas veces")
+- **Contribución al grupo:** Pergamino con información del Templo Celestial (línea borrada), ungüento auditivo de ecolocalización, especias fermentadas de cueva
+
+### MARIPOSAS MENSAJERAS 🟢
+Servicio postal del Valle de las Mariposas Mensajeras (seccion_08C). Navegan por olor; intervienen entregas cuando algo altera el aroma del aire.
+
+#### ALA DE CARTA
+- **Descripción:** Mariposa grande con alas color amanecer, patrones que cambian según la luz
+- **Rol:** Guardiana del servicio de mensajería del valle
+- **Personalidad:** Formalidad burocrática de cartero; trata quejas gastronómicas y mensajes de esposas ausentes con exactamente el mismo peso protocolar
+- **Función narrativa:** Entrega el mensaje de Luna Suave a Ember y un mensaje del espíritu del padre de Axel; permite a Seraphina verbalizar por primera vez sus sentimientos genuinos
 
 ---
 
@@ -162,18 +239,50 @@
 - **Motivación:** Ayudar a los héroes como forma de redención
 - **Función:** Guía hacia ubicaciones importantes
 
-### GROUNDBREAKER - Líder de Tejones Mineros 🟢
-- **Especie:** Tejón líder experimentado
+### GROUNDBREAKER - Líder de Tejones Excavadores 🟢
+- **Especie:** Tejón, construcción compacta y densa (llega al pecho de Axel)
 - **Rol:** Aliado estratégico crucial para la fase final
-- **Ubicación:** Laberinto de los Tejones Mineros
-- **Especialidad:** Conocimiento de túneles y rutas subterráneas
+- **Ubicación:** Laberinto de los Tejones Excavadores (seccion_09A)
+- **Especialidad:** Ingeniería de túneles; evalúa personas como proyectos con defectos estructurales
+- **Personalidad deadpan:** Habla del grupo en términos de ingeniería; nunca hace comentarios emocionales; sus cumplidos suenan a informes de daños ("rendimiento superior a la media")
+- **Economía tejona:** No intercambian objetos — exigen demostración de cooperación real bajo presión (laberinto)
+- **Contribución al grupo:** Picos anti-magia, cristales de comunicación, cuerda de confianza
 - **Función:** Último aliado antes del Templo Celestial
+
+### BARBA BLANCA - Cabra Montés Anciana 🟢
+- **Especie:** Cabra montés
+- **Descripción:** Anciana con barba blanca, ojos que han visto demasiado para tomarse nada en serio
+- **Ubicación:** Guarda el puente colgante sobre el desfiladero (seccion_02)
+- **Personalidad:** Finge cobrar peaje por "mantenimiento" del puente; bajo la máscara teatral, conoce su montaña con profundidad genuina
+- **Cita que rompe el personaje:** Tres frases sin ironía sobre el peligro real de la ladera norte; la única vez que no actúa
+
+### ECO PERGAMINADA - Murciélago Archivista 🟢
+- **Especie:** Murciélago
+- **Descripción:** Pelaje negro iridiscente; la archivista más joven de la colonia de las Cuevas Brillantes
+- **Historia:** Sobreviviente del ataque de los Cuervos mercenarios en la biblioteca; perdió a su mentora Tinta Ancestral
+- **Personalidad:** Académica bajo presión; prioriza el conocimiento con un instinto que a veces choca con la supervivencia
+- **Rol en el viaje:** Acompaña al grupo desde seccion_04 hasta seccion_05; luego se separa
+- **Contribución:** Traducción de textos antiguos; información del Códice Lunar
+
+### TINTA ANCESTRAL - Matriarca de las Cuevas Brillantes 🟢
+- **Especie:** Murciélago anciana
+- **Estado:** Muerta (seccion_04)
+- **Función:** Guardiana del Códice Lunar; siglos de conocimiento sobre las Lágrimas de Luna
+- **Muerte:** Sacrificó su cuerpo protegiendo el Códice del ataque; transfirió sus conocimientos a Axel mediante un cristal (ya agrietado), sin saber que el cristal también contenía la esencia de Umbra
+- **Legado involuntario:** Su acto de salvación transmitió tanto el conocimiento como la corrupción de Umbra a Axel
+
+### UMBRA EL DEVORADOR - Presencia Parasitaria 🟢
+- **Naturaleza:** Uno de los tres buscadores históricos de las Lágrimas de Luna; su esencia corrompida quedó sellada en un cristal agrietado
+- **Historia canónica:** Intentó esclavizar especies con el poder de las Lágrimas; su esencia fue sellada hace tres siglos
+- **Estado actual:** Vive como voz parásita en la mente de Axel desde seccion_04; habla en fragmentos e impulsos, no oraciones completas
+- **Comportamiento:** Se debilita cerca de lugares sagrados; se contrae ante la compasión genuina de Axel; se retorció cuando Axel eligió compartir la semilla en el Jardín
+- **Función narrativa:** Fuente de corrupción potencial; prueba del carácter de Axel; se debilitará en el Templo Celestial (payoff en seccion_10)
 
 ---
 
-## 🟡 CLAN PELAJE DE NIEVE (Solo en capítulos experimentales)
+## 🟢 CLAN PELAJE DE NIEVE (seccion_02 — parte de la narrativa principal)
 
-### SALTARINA VALIENTE 🟡
+### SALTARINA VALIENTE 🟢
 - **Rol:** Líder del clan Pelaje de Nieve
 - **Descripción:** Coneja robusta con pelaje blanco como nieve fresca, orejas marcadas por cicatrices de conflictos territoriales
 - **Personalidad:** Extremadamente paranoica y desconfiada, pero justa en sus tratos
@@ -181,33 +290,49 @@
 - **Actitud hacia forasteros:** Hipervigilante, interpreta todo evento inesperado como conspiración
 - **Ubicación:** Cuevas refugio en territorio montañoso
 
-### BIGOTE PLATEADO 🟡
+### BIGOTE PLATEADO 🟢
 - **Rol:** Miembro prominente del clan, especialista en primeros auxilios
 - **Función:** Evaluación médica y preparación de provisiones
 - **Personalidad:** Nervioso pero competente, especialista en recursos
 - **Responsabilidad:** Supervisión de Seraphina en almacenes subterráneos
 - **Contribución final:** Preparación de provisiones para la partida
 
-### OREJAS LARGAS 🟡
+### OREJAS LARGAS 🟢
 - **Rol:** Guardián y recolector especializado
 - **Función:** Supervisor directo de Axel durante trabajos de protección
 - **Personalidad:** Riguroso, paranóico, inflexible con protocolos
 - **Habilidades:** Conocimiento territorial, detección de amenazas
 - **Evento clave:** Lesión de tobillo rescatada por Axel que cambia dinámicas
 
-### PELAJE GRIS 🟡
+### PELAJE GRIS 🟢
 - **Rol:** Compañero de Orejas Largas en supervisión
 - **Personalidad:** Menos experimentado, se abruma fácilmente bajo presión
 - **Función:** Apoyo en recolección y vigilancia de Axel
 - **Conflicto:** Dividido entre protocolos y situaciones de supervivencia
 - **Desarrollo:** Aprende a confiar en Axel tras rescate de Orejas Largas
 
-### SALTO RÁPIDO 🟡
+### SALTO RÁPIDO 🟢
 - **Rol:** Supervisor de Seraphina en almacenes
 - **Personalidad:** Extremadamente nervioso, hipersensible a patrones sospechosos
 - **Función:** Vigilancia constante de actividades de Seraphina
 - **Especialidad:** Detección de comportamientos —no aleatorios"
 - **Tensión:** Malinterpreta competencia como sospecha
+
+---
+
+## ⚔️ ANTAGONISTAS SECUNDARIOS
+
+### LOBOS DE LA GARRA NEGRA 🟢
+- **Especie:** Lobos
+- **Rol:** Banda extorsionadora que controlaba la Aldea de los Zorros Plateros (seccion_05)
+- **Método:** Llegaron ofreciendo "protección"; cobraban tributos mensuales bajo amenaza
+- **Estado final:** Expulsados por Axel y Seraphina
+
+### CUERVOS MERCENARIOS (sin nombre grupal) 🟢
+- **Especie:** Cuervos de ónix / mercenarios
+- **Rol:** Atacaron y destruyeron la biblioteca de las Cuevas Brillantes (seccion_04)
+- **Empleador:** Desconocido (Tinta Ancestral dijo que "alguien pagó mucho por esto")
+- **Consecuencia:** Muerte de Tinta Ancestral, destrucción del conocimiento milenario, transmisión de Umbra a Axel
 
 ---
 
@@ -373,4 +498,15 @@
 
 ---
 
-*Este documento completo sirve como referencia exhaustiva para todos los personajes, diferenciando claramente entre contenido canónico (🟢) y experimental (🟡) para mantener consistencia narrativa.*
+---
+
+## ⚠️ INCONSISTENCIAS PENDIENTES DE RESOLUCIÓN
+
+### Descripción de Lyra
+- **seccion_02.html:** "lince de pelaje rojizo con manchas blancas"
+- **Historia-interactiva.html (referencia):** "gata montés de pelaje negro con manchas doradas"
+- **Pendiente:** Decidir cuál es la descripción canónica y corregir el archivo que está mal
+
+---
+
+*Este documento sirve como referencia exhaustiva para todos los personajes. 🟢 = canónico presente en las secciones principales. 🟡 = reservado para posibles inconsistencias detectadas.*
