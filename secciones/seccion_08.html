@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sección 8: Revelación en el Bosque de Cuervos Espejo - El Cazador de Medianoche</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="historia-interactiva.css" />
+    <style>
+      .bosque-espejo {
+        background: linear-gradient(135deg, #2c1b47, #1a1a2e);
+        border-radius: 15px;
+        padding: 30px;
+        margin: 20px 0;
+        border: 2px solid rgba(139, 69, 19, 0.3);
+        box-shadow: 0 0 20px rgba(139, 69, 19, 0.2);
+      }
+
+      .cuervo-dialogo {
+        background: rgba(75, 0, 130, 0.2);
+        border-left: 4px solid #4b0082;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 0 10px 10px 0;
+        font-style: italic;
+      }
+
+      .revelacion-critica {
+        background: rgba(220, 20, 60, 0.2);
+        border-radius: 20px;
+        padding: 20px;
+        margin: 15px 0;
+        border: 2px solid rgba(220, 20, 60, 0.4);
+      }
+
+      .ember-furia {
+        background: rgba(255, 69, 0, 0.1);
+        border-left: 3px solid #ff4500;
+        padding: 10px;
+        margin: 10px 0;
+      }
+
+      .seraphina-conflicto {
+        background: rgba(128, 0, 128, 0.1);
+        border-left: 3px solid #800080;
+        padding: 10px;
+        margin: 10px 0;
+        font-style: italic;
+      }
+
+      .dialogo-ember {
+        background: rgba(255, 215, 0, 0.1);
+        border-left: 4px solid #ffd700;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 0 10px 10px 0;
+      }
+
+      .verdad-espejo {
+        text-shadow: 0 0 5px rgba(75, 0, 130, 0.8);
+        animation: espejo-pulse 3s ease-in-out infinite alternate;
+      }
+
+      @keyframes espejo-pulse {
+        0% {
+          text-shadow: 0 0 5px rgba(75, 0, 130, 0.8);
+        }
+        100% {
+          text-shadow:
+            0 0 15px rgba(75, 0, 130, 1),
+            0 0 25px rgba(75, 0, 130, 0.5);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+
+<!--
+╔════════════════════════════════════════════════════════════════════════════════╗
+║         SECCIÓN 8: REVELACIÓN EN EL BOSQUE DE CUERVOS ESPEJO                ║
+║                          DÍA 8-9                                             ║
+╠════════════════════════════════════════════════════════════════════════════════╣
+║ GRUPO: Axel, Seraphina, Ember (3 personas. Sin Eco Pergaminada)             ║
+║ INVENTARIO: Arco élfico, Lágrimas de Cristal, flechas especiales,           ║
+║   mapas de Lyra + mapa de armadillos, flauta élfica de Ember, erizo         ║
+║ CONEXIÓN: Viene directamente de seccion_07B (Cuervos avistados en sendero)  ║
+║ GANCHO ANTERIOR: Seraphina dijo "No los miren a los ojos" con pánico       ║
+║ ELEMENTO CRÍTICO: Esta es la REVELACIÓN COMPLETA. Todo se descubre aquí.   ║
+╚════════════════════════════════════════════════════════════════════════════════╝
+-->
+
+      <!-- =============== LLEGADA AL BOSQUE DE CUERVOS ESPEJO =============== -->
+      <section id="llegada-bosque" class="bosque-espejo">
+        <h1>El Cazador de Medianoche - Sección 8: Revelación en el Bosque de Cuervos Espejo</h1>
+
+        <p class="texto-narrativo" data-focus="grupo" data-type="transicion" data-emotion="tristeza" data-intensity="2" data-tension="2" data-plot="setup" data-location="bosque-cuervos-espejo" data-day="8" data-scene="01"> No durmieron bien esa noche.</p>
+
+        <p class="texto-narrativo" data-focus="seraphina,axel,ember" data-type="descripcion" data-emotion="desconfianza" data-intensity="3" data-tension="4" data-plot="setup" data-location="campamento" data-day="7" data-scene="01"> Después de avistar a los tres cuervos en el sendero, Seraphina había caminado el resto de la tarde sin hablar, las antenas aplastadas contra la cabeza como si quisiera ocupar el menor espacio posible. Cuando Ember sugirió acampar en un claro junto al río, ella eligió el punto más alejado de la fogata y se sentó de espaldas al grupo, las garras cerradas sobre las rodillas.</p>
+
+        <p class="texto-narrativo" data-focus="axel" data-type="descripcion" data-emotion="desconfianza" data-intensity="3" data-tension="4" data-plot="foreshadowing" data-location="campamento" data-day="8" data-scene="01"> Axel había montado guardia primera. El arco élfico estaba frío en sus manos — no la tibieza habitual, no el calor de advertencia, sino un frío mineral que nunca había sentido, como si la madera supiera lo que venía y se preparara.</p>
+
+        <p class="texto-narrativo" data-focus="ember" data-type="accion" data-emotion="desconfianza" data-intensity="2" data-tension="3" data-plot="desarrollo" data-location="campamento" data-day="8" data-scene="01"> Ember se acercó a mitad de la noche, la flauta élfica cruzada sobre el pecho.</p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-speaker="ember" data-to="axel" data-focus="ember" data-type="dialogo" data-emotion="desconfianza" data-intensity="2" data-tension="3" data-plot="desarrollo" data-location="campamento" data-day="8" data-scene="01" data-relationship="axel-ember" data-rel-direction="positiva" data-badge="susurrado para no despertar a Seraphina">
+            —Axel. Los cuervos que vimos.... ¿son los mismos del mapa de Lyra?
+          </p>
+        </div>
+
+        <p class="dialogo" data-speaker="axel" data-to="ember" data-focus="axel" data-type="dialogo" data-emotion="desconfianza" data-intensity="3" data-tension="4" data-plot="foreshadowing" data-location="campamento" data-day="8" data-scene="01" data-relationship="axel-ember" data-rel-direction="positiva" data-badge="respondido sin apartar los ojos del bosque">
+          —Cuervos Espejo. Sí.
+        </p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-speaker="ember" data-to="axel" data-focus="ember" data-type="dialogo" data-emotion="desconfianza" data-intensity="3" data-tension="3" data-plot="desarrollo" data-location="campamento" data-day="8" data-scene="01" data-relationship="axel-ember" data-rel-direction="positiva" data-badge="preguntado tocándose el puente de la nariz">
+            —¿Y por qué Seraphina les tiene tanto miedo?
+          </p>
+        </div>
+
+        <p class="texto-narrativo" data-focus="axel" data-type="accion" data-emotion="desconfianza" data-intensity="4" data-tension="5" data-plot="foreshadowing" data-location="campamento" data-day="8" data-scene="01"> Axel no contestó. El arco pesaba más de lo normal en su regazo, y la nota de Lyra — dos frecuencias superpuestas en el mismo cuerpo — le ardía en el bolsillo como un carbón que se negaba a enfriarse.</p>
+
+        <p class="texto-narrativo" data-focus="grupo" data-type="transicion" data-emotion="miedo" data-intensity="4" data-tension="5" data-plot="setup" data-location="bosque-cuervos-espejo" data-day="8" data-scene="01"> Al amanecer, los cuervos eran seis. Posados en una línea perfecta sobre la rama más baja del roble que dominaba el campamento. Ojos de obsidiana pulida que no reflejaban el amanecer sino algo más hondo, algo que cambiaba cada vez que Axel intentaba enfocarlo.</p>
+
+        <p class="texto-narrativo" data-focus="seraphina,erizo" data-type="accion" data-emotion="miedo" data-intensity="5" data-tension="5" data-plot="desarrollo" data-location="campamento" data-day="8" data-scene="01"> Seraphina los vio y se levantó de golpe. Las púas del erizo se erizaron por reflejo — dormía acurrucado junto a la mochila de Ember, como siempre — y Ember posó una mano sobre él para calmarlo.</p>
+
+        <p class="dialogo" data-speaker="seraphina" data-to="grupo" data-focus="seraphina" data-type="dialogo" data-emotion="miedo" data-intensity="5" data-tension="5" data-plot="desarrollo" data-location="campamento" data-day="8" data-scene="01" data-relationship="axel-seraphina" data-rel-direction="tensa" data-secret="true" data-badge="dicho con voz que intentaba ser firme">
+          —Podemos rodear el bosque. Hay un paso al sur que—
+        </p>
+
+        <p class="dialogo" data-speaker="axel" data-to="seraphina" data-focus="axel" data-type="dialogo" data-emotion="desconfianza" data-intensity="3" data-tension="4" data-plot="desarrollo" data-location="campamento" data-day="8" data-scene="01" data-relationship="axel-seraphina" data-rel-direction="tensa" data-badge="interrumpido con suavidad">
+          —No hay paso al sur. El mapa de los armadillos lo muestra claramente. Y el de Lyra también.
+        </p>
+
+        <p class="texto-narrativo" data-focus="seraphina" data-type="accion" data-emotion="miedo" data-intensity="5" data-tension="5" data-plot="desarrollo" data-location="campamento" data-day="8" data-scene="01"> Seraphina cerró la boca. Sus garras se flexionaron una vez, dos veces, y después se quedaron quietas — la quietud de quien ha calculado todas las salidas y no encuentra ninguna.</p>
+
+        <p class="texto-narrativo" data-focus="grupo" data-type="accion" data-emotion="miedo" data-intensity="4" data-tension="5" data-plot="desarrollo" data-location="bosque-cuervos-espejo" data-day="8" data-scene="01"> Entraron al Bosque de Cuervos Espejo con el sol todavía bajo. El cambio fue inmediato: la luz se adelgazó entre las copas hasta convertirse en filamentos de plata que iluminaban el suelo del bosque como venas. El aire se espesó con un olor a resina antigua y a algo metálico, casi eléctrico, que Axel asoció con el sabor que dejaba una tormenta en la lengua. Los cuervos se multiplicaron en silencio. Diez. Veinte. Cincuenta. Posados en cada rama disponible, sus plumas tan negras que parecían agujeros recortados en la realidad, y en cada par de ojos — espejos.</p>
+
+        <p class="texto-narrativo" data-focus="ember" data-type="descripcion" data-emotion="miedo" data-intensity="3" data-tension="4" data-plot="desarrollo" data-location="bosque-cuervos-espejo" data-day="8" data-scene="01"> Ember caminaba pegado a Axel, la flauta en la mano como si fuera un bastón. El erizo había trepado hasta su hombro y desde ahí observaba a los cuervos con la misma expresión de siempre, que era ninguna.</p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-speaker="ember" data-to="axel" data-focus="ember" data-type="dialogo" data-emotion="miedo" data-intensity="4" data-tension="5" data-plot="foreshadowing" data-location="bosque-cuervos-espejo" data-day="8" data-scene="01" data-relationship="axel-ember" data-rel-direction="positiva" data-badge="murmurado con esfuerzo por mantener la calma">
+            —No me gusta cómo nos miran. No nos miran a nosotros. Nos miran.... adentro.
+          </p>
+        </div>
+
+        <p class="texto-narrativo" data-focus="seraphina" data-type="descripcion" data-emotion="miedo" data-intensity="5" data-tension="5" data-plot="desarrollo" data-location="bosque-cuervos-espejo" data-day="8" data-scene="01"> Seraphina no dijo nada. Caminaba tres pasos detrás del grupo, las garras rígidas a los costados, cada músculo de su cuerpo tenso como una cuerda de arco a punto de soltarse.</p>
+      </section>
+
+      <!-- =============== EL ENCUENTRO CON LOS CUERVOS ESPEJO =============== -->
+      <section id="encuentro-cuervos" class="bosque-espejo">
+        <h2>Espejos de Verdad</h2>
+
+        <p class="texto-narrativo" data-focus="grupo" data-type="descripcion" data-emotion="asombro" data-intensity="4" data-tension="5" data-plot="climax" data-location="bosque-cuervos-espejo" data-day="8" data-scene="02"> El claro se abrió ante ellos sin transición — un paso caminaban entre árboles y al siguiente estaban rodeados de cielo. Un anfiteatro natural de ramas formaba gradas donde cientos de cuervos se posaban en filas concéntricas, todos mirando hacia el centro. Y en el centro, sobre un tocón de roble tan viejo que los anillos de su superficie se habían convertido en espirales sin fin, estaba el Cuervo Primario.</p>
+
+        <p class="texto-narrativo" data-focus="axel" data-type="descripcion" data-emotion="asombro" data-intensity="5" data-tension="5" data-plot="climax" data-location="bosque-cuervos-espejo" data-day="8" data-scene="02"> Era más grande que los demás — del tamaño de un águila, con plumas que no reflejaban imágenes sino memorias. Axel vio pasar por esas plumas fragmentos de vidas ajenas: un zorro llorando sobre cenizas, una ardilla plantando un árbol en una tumba, una lechuza cerrando un libro por última vez. El Cuervo Primario ladeó la cabeza y esos fragmentos se disolvieron, reemplazados por los reflejos del grupo.</p>
+
+        <div class="cuervo-dialogo">
+          <p class="dialogo" data-speaker="cuervo-primario" data-to="grupo" data-focus="cuervo-primario" data-type="dialogo" data-emotion="neutral" data-intensity="3" data-tension="5" data-plot="revelacion" data-location="bosque-cuervos-espejo" data-day="8" data-scene="02" data-badge="pronunciado como piedra contra piedra">
+            —Buscadores llegan. No todos buscan lo mismo. Vemos corazones divididos. Mentiras que se desmoronan. Verdades que exigen ser liberadas.
+          </p>
+        </div>
+
+        <p class="texto-narrativo" data-focus="grupo" data-type="descripcion" data-emotion="miedo" data-intensity="4" data-tension="5" data-plot="climax" data-location="bosque-cuervos-espejo" data-day="8" data-scene="02"> Los ojos del Cuervo Primario pasaron sobre cada uno de ellos. Axel sintió el peso de esa mirada como una mano dentro de su pecho, revolviendo.</p>
+
+        <p class="texto-narrativo" data-focus="axel" data-type="introspection" data-emotion="nostalgia" data-intensity="3" data-tension="4" data-plot="revelacion" data-location="bosque-cuervos-espejo" data-day="8" data-scene="02"> Al posarse sobre Axel, las plumas del cuervo brillaron con imágenes de montañas solitarias, un arco colgado sobre una chimenea apagada, noches de guardia con solo el viento como compañía. La soledad de años condensada en un destello.</p>
+
+        <p class="texto-narrativo" data-focus="ember" data-type="introspection" data-emotion="nostalgia" data-intensity="4" data-tension="4" data-plot="revelacion" data-location="bosque-cuervos-espejo" data-day="8" data-scene="02"> Al pasar a Ember, reflejaron Valle Tranquilo: Luna Suave cantando a los gemelos, Sol tirando de la cola de Sombra, la flauta sonando en el porche al atardecer. Y debajo, como una corriente subterránea, el miedo constante de que no volvería a verlos.</p>
+
+        <!-- =============== BONUS — CUERVOS ESPEJO Y EL ERIZO =============== -->
+        <p class="texto-narrativo" data-focus="erizo" data-type="descripcion" data-emotion="asombro" data-intensity="4" data-tension="4" data-plot="payoff" data-location="bosque-cuervos-espejo" data-day="8" data-scene="02"> Cuando los ojos del Cuervo Primario llegaron al erizo — hecho bolita junto a la mochila de Ember, como siempre, como en todas partes — se detuvieron. Las plumas espejo brillaron. Temblaron. Y reflejaron exactamente lo mismo que tenían delante: una esfera de púas pardas.</p>
+
+        <p class="texto-narrativo" data-focus="cuervo-primario" data-type="introspection" data-emotion="asombro" data-intensity="3" data-tension="3" data-plot="payoff" data-location="bosque-cuervos-espejo" data-day="8" data-scene="02"> El Cuervo Primario ladeó la cabeza. Intentó de nuevo. Sus plumas volvieron a brillar. El reflejo fue idéntico. No había memorias ocultas. No había verdades enterradas. No había nada detrás de la superficie porque no había profundidad. Era la primera vez, en la memoria de todos los cuervos del claro, que un reflejo devolvía exactamente lo que recibía.</p>
+
+        <div class="cuervo-dialogo">
+          <p class="dialogo" data-speaker="cuervo-primario" data-to="grupo" data-focus="cuervo-primario" data-type="dialogo" data-emotion="asombro" data-intensity="3" data-tension="3" data-plot="payoff" data-location="bosque-cuervos-espejo" data-day="8" data-scene="02" data-badge="pronunciado con algo parecido a la perplejidad">
+            —Este.... no tiene nada. No oculta. No miente. No piensa. Simplemente.... es.
+          </p>
+        </div>
+
+        <p class="texto-narrativo" data-focus="grupo" data-type="accion" data-emotion="asombro" data-intensity="2" data-tension="2" data-plot="payoff" data-location="bosque-cuervos-espejo" data-day="8" data-scene="02"> Los cuervos del anfiteatro se miraron entre sí. Algunos graznaron nerviosamente. El Cuervo Primario sacudió las plumas como quien descarta una anomalía de su registro y volvió su atención al grupo.</p>
+        <!-- =============== FIN BONUS =============== -->
+
+        <p class="texto-narrativo" data-focus="seraphina" data-type="introspection" data-emotion="miedo" data-intensity="5" data-tension="5" data-plot="climax" data-location="bosque-cuervos-espejo" data-day="8" data-scene="02"> Cuando llegó a Seraphina, el Cuervo Primario se detuvo más tiempo. Mucho más tiempo. Las plumas de su pecho comenzaron a temblar con una frecuencia diferente — no el brillo suave de los reflejos anteriores, sino un pulso errático, como un corazón arrítmico intentando decidir si latir o detenerse.</p>
+
+        <p class="texto-narrativo" data-focus="seraphina" data-type="accion" data-emotion="miedo" data-intensity="5" data-tension="5" data-plot="climax" data-location="bosque-cuervos-espejo" data-day="8" data-scene="02"> Seraphina retrocedió un paso. Las garras le temblaban.</p>
+
+        <div class="cuervo-dialogo">
+          <p class="dialogo" data-speaker="cuervo-primario" data-to="seraphina" data-focus="cuervo-primario" data-type="dialogo" data-emotion="neutral" data-intensity="5" data-tension="5" data-plot="revelacion" data-location="bosque-cuervos-espejo" data-day="8" data-scene="02" data-secret="true" data-reveals="Verdadera historia de la hermana de Seraphina y las víctimas" data-badge="dirigido a Seraphina con precisión quirúrgica">
+            —Mantis de mentiras tejidas. Hermana que existió pero cuya muerte fue distinta a la historia contada. Madre que no fue convertida en estatua. Seis gatos que cayeron por la misma historia.
+          </p>
+        </div>
+
+        <p class="texto-narrativo" data-focus="grupo" data-type="accion" data-emotion="asombro" data-intensity="5" data-tension="5" data-plot="climax" data-location="bosque-cuervos-espejo" data-day="8" data-scene="02"> El silencio que siguió fue el tipo de silencio que tiene peso. Axel lo sintió asentarse sobre sus hombros, en la base de su cráneo, en el espacio entre un latido y el siguiente.</p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-speaker="ember" data-to="seraphina" data-focus="ember" data-type="dialogo" data-emotion="asombro" data-intensity="4" data-tension="5" data-plot="revelacion" data-location="bosque-cuervos-espejo" data-day="8" data-scene="02" data-relationship="ember-seraphina" data-rel-direction="tensa" data-badge="preguntado con la voz de alguien que todavía no quiere entender">
+            —¿Hermana que.... qué? Seraphina, dijiste que tu hermana....
+          </p>
+        </div>
+
+        <p class="texto-narrativo" data-focus="seraphina" data-type="accion" data-emotion="miedo" data-intensity="5" data-tension="5" data-plot="climax" data-location="bosque-cuervos-espejo" data-day="8" data-scene="02"> Seraphina no respondió. Tenía la boca abierta — no para hablar, sino como si el aire no le llegara bien. Las garras se le clavaron en los antebrazos con fuerza suficiente para dejar marcas.</p>
+
+        <div class="revelacion-critica">
+          <div class="cuervo-dialogo">
+            <p class="dialogo" data-speaker="cuervo-primario" data-to="grupo" data-focus="cuervo-primario" data-type="dialogo" data-emotion="neutral" data-intensity="5" data-tension="5" data-plot="revelacion" data-location="bosque-cuervos-espejo" data-day="8" data-scene="02" data-secret="true" data-reveals="Detalles completos de venganza y plan genocida de Seraphina" data-badge="revelando con la cadencia de quien lee una sentencia">
+              —Mostramos lo que es verdad. Mantis joven perdió hermana por negligencia de gatos — accidente territorial, tres gatos que no esperaron, empujón, cuello roto. Dolor real se transformó en venganza. Seis gatos monteses cayeron por la misma historia: hermana maldecida necesita curación. Cada vez más refinada la trampa. Cada víctima más lejos del accidente original y más cerca de algo que la mantis llama justicia.
+            </p>
+          </div>
+        </div>
+
+        <p class="texto-narrativo" data-focus="axel" data-type="accion" data-emotion="ira" data-intensity="5" data-tension="5" data-plot="climax" data-location="bosque-cuervos-espejo" data-day="8" data-scene="02"> El arco élfico ardió. No la tibieza de advertencia habitual — un calor seco, furioso, que le quemó la palma y le subió por el brazo hasta el codo. Axel no lo soltó. Apretó los dedos contra la madera hasta que los nudillos se le pusieron blancos.</p>
+
+        <p class="dialogo" data-speaker="axel" data-to="grupo" data-focus="axel" data-type="dialogo" data-emotion="ira" data-intensity="5" data-tension="5" data-plot="revelacion" data-location="bosque-cuervos-espejo" data-day="8" data-scene="02" data-reveals="Identidad del padre de Axel como víctima #6" data-badge="dicho con una voz que no reconoció como suya">
+          —Seis gatos. Mi padre. Hace dos años. Un arquero que llevaba este arco.
+        </p>
+
+        <div class="cuervo-dialogo">
+          <p class="dialogo" data-speaker="cuervo-primario" data-to="axel" data-focus="cuervo-primario" data-type="dialogo" data-emotion="neutral" data-intensity="5" data-tension="5" data-plot="payoff" data-location="bosque-cuervos-espejo" data-day="8" data-scene="02" data-secret="true" data-reveals="Circunstancias de la muerte del padre de Axel" data-badge="confirmando sin piedad ni crueldad — solo hechos">
+            —El sexto fue Flecha Certera, portador del arco élfico ancestral. Lo guiaron con la misma historia hasta un desfiladero donde las mantis esperaban. Cayó protegiendo lo que creía era una inocente buscando curar a su familia. No encontraron su cuerpo. Solo el arco.
+          </p>
+        </div>
+
+        <p class="texto-narrativo" data-focus="axel" data-type="accion" data-emotion="ira,dolor" data-intensity="5" data-tension="5" data-plot="climax" data-location="bosque-cuervos-espejo" data-day="8" data-scene="02"> Axel se dobló. No fue una decisión — el cuerpo simplemente cedió, como si las rodillas hubieran dejado de tener función. Se quedó así, con una mano en el suelo y la otra aferrada al arco que quemaba, y el bosque entero se redujo a un punto brillante de dolor detrás de los ojos.</p>
+
+        <p class="texto-narrativo" data-focus="axel" data-type="introspection" data-emotion="dolor,ira" data-intensity="5" data-tension="5" data-plot="climax" data-location="bosque-cuervos-espejo" data-day="8" data-scene="02"> La madera del arco pulsaba contra su palma. Caliente. Furiosa. Y debajo de la furia, algo más antiguo — el eco de unas manos que habían sostenido esa misma madera antes que él, que la habían tensado con la misma confianza, que la habían soltado por última vez en un desfiladero al que nunca debió llegar.</p>
+
+        <div class="ember-furia">
+          <p class="dialogo" data-speaker="ember" data-to="seraphina" data-focus="ember" data-type="dialogo" data-emotion="ira" data-intensity="5" data-tension="5" data-plot="climax" data-location="bosque-cuervos-espejo" data-day="8" data-scene="02" data-relationship="ember-seraphina" data-rel-direction="negativa" data-badge="gritado con la voz quebrándose a mitad de frase">
+            —¡MATASTE A NUESTRO PADRE!
+          </p>
+        </div>
+
+        <p class="texto-narrativo" data-focus="ember" data-type="accion" data-emotion="ira" data-intensity="5" data-tension="5" data-plot="climax" data-location="bosque-cuervos-espejo" data-day="8" data-scene="02"> Ember estaba de pie. La flauta había caído al suelo. Tenía las manos cerradas en puños y temblaba de la cabeza a los pies — no de miedo, de algo más caliente, más viejo, algo que le deformaba la cara en una expresión que Axel nunca le había visto.</p>
+
+        <div class="ember-furia">
+          <p class="dialogo" data-speaker="ember" data-to="seraphina" data-focus="ember" data-type="dialogo" data-emotion="ira,culpa" data-intensity="5" data-tension="5" data-plot="climax" data-location="bosque-cuervos-espejo" data-day="8" data-scene="02" data-relationship="ember-seraphina" data-rel-direction="negativa" data-badge="escupido entre dientes">
+            —Todo este tiempo. Toda esta actuación sobre tu hermana, tu madre. Y nosotros.... yo.... yo te defendí. Te di de comer. Dejé que Sol se sentara en tu regazo.
+          </p>
+        </div>
+
+        <p class="texto-narrativo" data-focus="ember" data-type="introspection" data-emotion="ira,culpa" data-intensity="5" data-tension="5" data-plot="climax" data-location="bosque-cuervos-espejo" data-day="8" data-scene="02"> La mención de Sol golpeó el claro como una piedra en agua quieta. Ember se llevó una mano a la boca, como si acabara de darse cuenta de lo que había permitido — su hija, sus gemelos, cerca de ella.</p>
+
+        <div class="seraphina-conflicto">
+          <p class="dialogo" data-speaker="seraphina" data-to="grupo" data-focus="seraphina" data-type="dialogo" data-emotion="miedo,culpa" data-intensity="4" data-tension="5" data-plot="climax" data-location="bosque-cuervos-espejo" data-day="8" data-scene="02" data-relationship="axel-seraphina" data-rel-direction="tensa" data-secret="true" data-badge="dicho con voz que apenas existía">
+            —Yo no.... él no....
+          </p>
+        </div>
+
+        <p class="texto-narrativo" data-focus="seraphina" data-type="introspection" data-emotion="culpa" data-intensity="4" data-tension="5" data-plot="climax" data-location="bosque-cuervos-espejo" data-day="8" data-scene="02"> Las palabras se le desmoronaron en la garganta. En el Bosque de Cuervos Espejo, las mentiras dolían — no como metáfora, sino como un gancho detrás del esternón que tiraba cada vez que intentaba moldear las palabras en algo más suave de lo que eran. Seraphina dejó de intentarlo. Se quedó de rodillas en la tierra, temblando, las garras hundidas en el musgo.</p>
+
+        <div class="seraphina-conflicto">
+          <p class="dialogo" data-speaker="seraphina" data-to="grupo" data-focus="seraphina" data-type="dialogo" data-emotion="culpa" data-intensity="5" data-tension="5" data-plot="climax" data-location="bosque-cuervos-espejo" data-day="8" data-scene="02" data-secret="true" data-reveals="Confesión de verdadera muerte de la hermana de Seraphina" data-badge="arrancado como quien se arranca una astilla">
+            —Todo lo que dijeron es verdad. Mi hermana Kira murió porque tres gatos monteses no quisieron esperar dos minutos para que se moviera de su territorio de recolección. La empujaron. Cayó mal. Se rompió el cuello.
+          </p>
+        </div>
+
+        <p class="texto-narrativo" data-focus="seraphina" data-type="accion" data-emotion="culpa" data-intensity="4" data-tension="4" data-plot="climax" data-location="bosque-cuervos-espejo" data-day="8" data-scene="02"> Hizo una pausa. Las garras arrancaron un puñado de musgo y lo sostuvieron sin mirarlo.</p>
+
+        <div class="seraphina-conflicto">
+          <p class="dialogo" data-speaker="seraphina" data-to="grupo" data-focus="seraphina" data-type="introspection" data-emotion="culpa" data-intensity="5" data-tension="4" data-plot="climax" data-location="bosque-cuervos-espejo" data-day="8" data-scene="02" data-secret="true" data-reveals="Transformación del dolor en odio y plan de venganza" data-badge="continuado con los ojos cerrados">
+            —Mi dolor era real. Mi amor por ella era real. Y después el dolor se volvió odio, y el odio se volvió plan. Y los planes necesitaban historias, y las historias necesitaban víctimas, y cada víctima alimentaba al odio que alimentaba al plan.
+          </p>
+        </div>
+
+        <p class="texto-narrativo" data-focus="seraphina" data-type="descripcion" data-emotion="culpa" data-intensity="4" data-tension="4" data-plot="climax" data-location="bosque-cuervos-espejo" data-day="8" data-scene="02"> No lloró. Las lágrimas habrían sido más fáciles de observar.</p>
+      </section>
+
+      <!-- =============== LA CONFRONTACIÓN COMPLETA =============== -->
+      <section id="confrontacion-total" class="bosque-espejo">
+        <h2>Verdades Sin Máscara</h2>
+
+        <div class="cuervo-dialogo">
+          <p class="dialogo" data-speaker="cuervo-primario" data-to="grupo" data-focus="cuervo-primario" data-type="dialogo" data-emotion="neutral" data-intensity="4" data-tension="5" data-plot="revelacion" data-location="bosque-cuervos-espejo" data-day="8" data-scene="03" data-secret="true" data-reveals="Detalles de la red de 47 mantis y plan a escala genocida" data-badge="continuando la revelación como quien pasa páginas">
+            —Red de cuarenta y siete mantis organizadas en doce células operativas. Plan de dos años: atraer gatos monteses compasivos usando historia de hermana maldecida, guiarlos hacia las Lágrimas de Luna, usar el poder amplificado para venganza a escala total.
+          </p>
+        </div>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-speaker="ember" data-to="cuervo-primario" data-focus="ember" data-type="dialogo" data-emotion="asombro,horror" data-intensity="5" data-tension="5" data-plot="revelacion" data-location="bosque-cuervos-espejo" data-day="8" data-scene="03" data-relationship="ember-seraphina" data-rel-direction="negativa" data-badge="preguntado con voz que no quería la respuesta">
+            —¿Venganza a escala.... total? ¿Qué significa eso?
+          </p>
+        </div>
+
+        <div class="cuervo-dialogo">
+          <p class="dialogo" data-speaker="cuervo-primario" data-to="ember" data-focus="cuervo-primario" data-type="dialogo" data-emotion="neutral" data-intensity="5" data-tension="5" data-plot="revelacion" data-location="bosque-cuervos-espejo" data-day="8" data-scene="03" data-secret="true" data-reveals="Consecuencias del uso de Lágrimas de Luna con odio genocida" data-badge="respondido como quien constata el clima">
+            —Las Lágrimas amplifican lo que hay en el corazón del usuario. Si el corazón está lleno de odio hacia una especie entera.... el resultado es predecible.
+          </p>
+        </div>
+
+        <p class="texto-narrativo" data-focus="ember" data-type="accion" data-emotion="ira,horror" data-intensity="5" data-tension="5" data-plot="climax" data-location="bosque-cuervos-espejo" data-day="8" data-scene="03"> Ember se giró hacia Seraphina. La furia seguía ahí — le enrojecía las orejas, le tensaba los tendones del cuello — pero ahora competía con algo más: el horror de entender la magnitud.</p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-speaker="ember" data-to="seraphina" data-focus="ember" data-type="dialogo" data-emotion="ira,horror" data-intensity="5" data-tension="5" data-plot="climax" data-location="bosque-cuervos-espejo" data-day="8" data-scene="03" data-relationship="ember-seraphina" data-rel-direction="negativa" data-badge="preguntado como si masticara vidrio">
+            —¿Ibas a exterminarnos? ¿A todos? ¿A Sol? ¿A Sombra?
+          </p>
+        </div>
+
+        <div class="seraphina-conflicto">
+          <p class="dialogo" data-speaker="seraphina" data-to="ember" data-focus="seraphina" data-type="dialogo" data-emotion="culpa" data-intensity="5" data-tension="5" data-plot="climax" data-location="bosque-cuervos-espejo" data-day="8" data-scene="03" data-secret="true" data-reveals="Confirmación del plan genocida original de Seraphina" data-badge="respondido con la honestidad forzada del bosque">
+            —Era el plan. Era lo que creía que quería. Venganza por Kira, venganza por cada mantis que había sufrido.
+          </p>
+        </div>
+
+        <p class="texto-narrativo" data-focus="ember" data-type="introspection" data-emotion="shock" data-intensity="5" data-tension="5" data-plot="climax" data-location="bosque-cuervos-espejo" data-day="8" data-scene="03"> La palabra "creía" colgó en el aire como un insecto atrapado en ámbar. Ember abrió la boca para responder y no encontró sonido.</p>
+
+        <p class="texto-narrativo" data-focus="axel" data-type="introspection" data-emotion="ira,determinacion" data-intensity="5" data-tension="5" data-plot="climax" data-location="bosque-cuervos-espejo" data-day="8" data-scene="03"> Axel seguía en el suelo. El arco había dejado de arder — ahora estaba tibio otra vez, la tibieza de piel viva, como si la furia se hubiera gastado y lo que quedara fuera algo más complicado que la furia.</p>
+
+        <p class="texto-narrativo" data-focus="axel" data-type="introspection" data-emotion="ira,ternura" data-intensity="4" data-tension="5" data-plot="climax" data-location="bosque-cuervos-espejo" data-day="8" data-scene="03"> Pensó en abandonarla. El pensamiento fue claro, limpio, sin culpa: dejarla aquí, en este bosque, y seguir. Tenía el mapa. Tenía las Lágrimas de Cristal. Podía llegar al Templo sin ella. La parte de él que había aprendido a sobrevivir tres años solo en las Montañas Heladas le dijo que era la opción lógica — cortar lo que estaba podrido antes de que infectara el resto.</p>
+
+        <p class="texto-narrativo" data-focus="axel" data-type="introspection" data-emotion="ternura,esperanza" data-intensity="4" data-tension="4" data-plot="climax" data-location="bosque-cuervos-espejo" data-day="8" data-scene="03"> Pero entonces el arco pulsó. Una sola vez. Tibio. Y Axel reconoció ese pulso — lo había sentido la noche que encontró a Seraphina herida en la nieve, cuando todavía no sabía quién era, cuando solo era una criatura que sangraba en su montaña. El arco no había ardido esa noche. Había pulsado, igual que ahora. Como preguntando.</p>
+
+        <p class="texto-narrativo" data-focus="axel" data-type="accion" data-emotion="determinacion" data-intensity="4" data-tension="4" data-plot="resolucion" data-location="bosque-cuervos-espejo" data-day="8" data-scene="03"> Se alzó despacio. Las piernas no le respondieron bien al principio. Tuvo que apoyarse en el arco como bastón antes de poder sostenerse.</p>
+
+        <p class="dialogo" data-speaker="axel" data-to="seraphina" data-focus="axel" data-type="dialogo" data-emotion="determinacion" data-intensity="3" data-tension="4" data-plot="climax" data-location="bosque-cuervos-espejo" data-day="8" data-scene="03" data-relationship="axel-seraphina" data-rel-direction="tensa" data-badge="preguntado con voz raspada">
+          —¿Creías?
+        </p>
+
+        <div class="seraphina-conflicto">
+          <p class="dialogo" data-speaker="seraphina" data-to="axel" data-focus="seraphina" data-type="dialogo" data-emotion="culpa,ternura" data-intensity="4" data-tension="4" data-plot="climax" data-location="bosque-cuervos-espejo" data-day="8" data-scene="03" data-relationship="axel-seraphina" data-rel-direction="tensa" data-secret="true" data-reveals="Genuino conflicto emocional de Seraphina y cambio de corazón" data-badge="dicho mirando sus propias garras hundidas en la tierra">
+            —No lo sé. Estas semanas.... viendo a tu familia, a los gemelos, a Ember confiando en mí sin verificar siquiera que le devolviera la bolsa completa. El jardín de los Osos creció rosas de mi pecho porque aún hay algo ahí que no es odio. No sabía que quedaba algo así.
+          </p>
+        </div>
+
+        <p class="texto-narrativo" data-focus="grupo" data-type="accion" data-emotion="neutral" data-intensity="3" data-tension="3" data-plot="payoff" data-location="bosque-cuervos-espejo" data-day="8" data-scene="03"> Los cuervos del anfiteatro murmuraron. No en desacuerdo — en confirmación. Las plumas de todos pulsaron al unísono, y por un instante el claro se llenó de una luz violeta que olía a tormenta vieja.</p>
+
+        <div class="cuervo-dialogo">
+          <p class="dialogo" data-speaker="cuervo-primario" data-to="grupo" data-focus="cuervo-primario" data-type="dialogo" data-emotion="neutral" data-intensity="4" data-tension="4" data-plot="payoff" data-location="bosque-cuervos-espejo" data-day="8" data-scene="03" data-badge="observando con la frialdad de un diagnóstico">
+            —Verdad sin fisuras. Mantis no miente sobre los sentimientos presentes. Tampoco miente sobre el odio que aún lleva. Corazón dividido entre amor nuevo y odio viejo. Corazón dividido es corazón peligroso cuando toca poder amplificado.
+          </p>
+        </div>
+
+        <p class="texto-narrativo" data-focus="ember" data-type="accion" data-emotion="ira,indecision" data-intensity="3" data-tension="4" data-plot="resolucion" data-location="bosque-cuervos-espejo" data-day="8" data-scene="03"> Ember recogió la flauta del suelo. La limpió con el borde de la manga. El gesto le tomó demasiado tiempo — las manos no le obedecían bien.</p>
+
+        <div class="ember-furia">
+          <p class="dialogo" data-speaker="ember" data-to="seraphina" data-focus="ember" data-type="dialogo" data-emotion="ira,determinacion" data-intensity="4" data-tension="4" data-plot="climax" data-location="bosque-cuervos-espejo" data-day="8" data-scene="03" data-relationship="ember-seraphina" data-rel-direction="tensa" data-badge="dicho con voz que temblaba pero no se quebraba">
+            —Seraphina. Aquí, donde las mentiras duelen. Necesito una respuesta. ¿Alguna parte de ti quiere lastimarnos a nosotros? ¿A Axel?
+          </p>
+        </div>
+
+        <div class="seraphina-conflicto">
+          <p class="dialogo" data-speaker="seraphina" data-to="ember" data-focus="seraphina" data-type="dialogo" data-emotion="ternura" data-intensity="4" data-tension="3" data-plot="resolucion" data-location="bosque-cuervos-espejo" data-day="8" data-scene="03" data-relationship="ember-seraphina" data-rel-direction="positiva" data-secret="true" data-badge="respondido antes de que la pregunta terminara">
+            —No.
+          </p>
+        </div>
+
+        <p class="texto-narrativo" data-focus="seraphina" data-type="introspection" data-emotion="ternura" data-intensity="3" data-tension="2" data-plot="resolucion" data-location="bosque-cuervos-espejo" data-day="8" data-scene="03"> La palabra salió sin demora, sin cálculo, como un reflejo muscular. Y después, más despacio:</p>
+
+        <div class="seraphina-conflicto">
+          <p class="dialogo" data-speaker="seraphina" data-to="ember,axel" data-focus="seraphina" data-type="dialogo" data-emotion="ternura,asombro" data-intensity="4" data-tension="2" data-plot="resolucion" data-location="bosque-cuervos-espejo" data-day="8" data-scene="03" data-relationship="axel-seraphina" data-rel-direction="positiva" data-badge="añadido con esfuerzo">
+            —La idea de lastimar a Axel me produce.... algo que no tenía nombre hasta hace poco. Tú, Ember. Se han vuelto.... Eso no era parte del plan.
+          </p>
+        </div>
+
+        <p class="texto-narrativo" data-focus="seraphina" data-type="accion" data-emotion="ternura" data-intensity="2" data-tension="2" data-plot="resolucion" data-location="bosque-cuervos-espejo" data-day="8" data-scene="03"> No terminó la frase. No hacía falta. Los cuervos no dijeron que mintiera.</p>
+
+        <div class="cuervo-dialogo">
+          <p class="dialogo" data-speaker="cuervo-primario" data-to="grupo" data-focus="cuervo-primario" data-type="dialogo" data-emotion="neutral" data-intensity="3" data-tension="3" data-plot="payoff" data-location="bosque-cuervos-espejo" data-day="8" data-scene="03" data-badge="confirmando con algo que podría haber sido sorpresa">
+            —Verdad completa. Los sentimientos hacia estos gatos son genuinos. El odio hacia la especie también lo es. Dos verdades en el mismo cuerpo.
+          </p>
+        </div>
+
+        <p class="texto-narrativo" data-focus="axel" data-type="introspection" data-emotion="desconfianza,asombro" data-intensity="4" data-tension="4" data-plot="payoff" data-location="bosque-cuervos-espejo" data-day="8" data-scene="03"> Dos frecuencias superpuestas. Lyra lo había escrito semanas atrás, analizando datos de su Jardín de Intenciones sin saber qué significaban. Axel pensó en esa nota y el carbón en su bolsillo pareció arder de nuevo.</p>
+      </section>
+
+      <!-- =============== LYRA OBSERVA DESDE LAS SOMBRAS =============== -->
+      <section id="lyra-observa" class="bosque-espejo">
+        <h3>La Testiga Silenciosa</h3>
+
+        <p class="texto-narrativo" data-focus="lyra" data-type="descripcion" data-emotion="determinacion" data-intensity="4" data-tension="5" data-plot="foreshadowing" data-location="bosque-cuervos-espejo" data-day="8" data-scene="04"> En el borde del claro, donde las sombras de los árboles eran más densas que la luz entre ellos, una figura se apoyaba contra un tronco con los brazos cruzados.</p>
+
+        <p class="texto-narrativo" data-focus="lyra" data-type="accion" data-emotion="determinacion" data-intensity="3" data-tension="4" data-plot="setup" data-location="bosque-cuervos-espejo" data-day="8" data-scene="04"> Lyra había llegado antes que ellos. Su mapa — el original, no la copia que les había dejado — tenía anotaciones en tinta roja que marcaban la posición exacta de cada cuervo centinela entre el campamento del grupo y el claro. Había escuchado cada palabra de la revelación. Visto el arco arder en la mano de Axel. Visto a Ember recoger su flauta del suelo con manos que no le funcionaban.</p>
+
+        <p class="texto-narrativo" data-focus="lyra" data-type="accion" data-emotion="desconfianza,ternura" data-intensity="3" data-tension="3" data-plot="desarrollo" data-location="bosque-cuervos-espejo" data-day="8" data-scene="04"> Sus garras se apretaron alrededor del mapa hasta arrugarlo. Lo alisó después, metódicamente, porque un mapa arrugado es un mapa inútil y Lyra no se permitía cosas inútiles.</p>
+
+        <p class="texto-narrativo" data-focus="lyra" data-type="accion" data-emotion="ternura" data-intensity="3" data-tension="2" data-plot="desarrollo" data-location="bosque-cuervos-espejo" data-day="8" data-scene="04"> Sin hacer ruido, extrajo de su mochila vendajes, medicina de emergencia, provisiones de alta energía y agua purificada. Los colocó donde el grupo los encontraría al salir — junto a la raíz más visible, imposible de pasar sin verlos. Junto a los suministros dejó una nota doblada en cuartos, escrita con la caligrafía precisa de alguien acostumbrada a que sus palabras sobrevivieran a la intemperie.</p>
+
+        <p class="texto-narrativo" style="background: rgba(210, 180, 140, 0.2); padding: 15px; margin: 10px 0; border-left: 3px solid #D2B48C; font-style: italic;" data-focus="lyra" data-type="dialogo" data-emotion="ternura" data-intensity="2" data-tension="1" data-plot="desarrollo" data-location="bosque-cuervos-espejo" data-day="8" data-scene="04"> "Para cuando las verdades duelen más que las heridas físicas. Cuídense mutuamente. — L"</p>
+
+        <p class="texto-narrativo" data-focus="lyra" data-type="accion" data-emotion="determinacion,ternura" data-intensity="3" data-tension="3" data-plot="gancho" data-location="bosque-cuervos-espejo" data-day="8" data-scene="04"> Se alejó entre los árboles. A los tres pasos se detuvo, giró la cabeza hacia el claro donde Axel seguía de pie con el arco como bastón, y su expresión cambió durante exactamente un segundo — algo que no era profesional, que no era cartográfico, que no cabía en ningún mapa — antes de recomponerse y desaparecer entre las sombras como quien conoce cada salida de un bosque porque las ha mapeado todas.</p>
+      </section>
+
+      <!-- =============== LA DECISIÓN GRUPAL =============== -->
+      <section id="decision-grupal" class="bosque-espejo">
+        <h2>Lo Que Queda Cuando Se Rompe</h2>
+
+        <p class="texto-narrativo" data-focus="grupo" data-type="transicion" data-emotion="neutral" data-intensity="2" data-tension="3" data-plot="resolucion" data-location="bosque-cuervos-espejo" data-day="8" data-scene="05"> El silencio duró lo que tardó un cuervo en cruzar el claro volando de una rama a otra. Quizás un minuto. Se sintió más largo.</p>
+
+        <p class="texto-narrativo" data-focus="axel" data-type="accion" data-emotion="determinacion" data-intensity="3" data-tension="3" data-plot="resolucion" data-location="bosque-cuervos-espejo" data-day="8" data-scene="05"> Axel se sentó en el suelo. No en una roca, no en un tronco caído — directamente en la tierra, con las piernas cruzadas y el arco sobre las rodillas. Ember lo miró como si no reconociera el gesto — Axel nunca se sentaba así, nunca sin un punto de apoyo, nunca sin línea de escape calculada.</p>
+
+        <p class="dialogo" data-speaker="axel" data-to="grupo" data-focus="axel" data-type="dialogo" data-emotion="determinacion" data-intensity="3" data-tension="3" data-plot="resolucion" data-location="bosque-cuervos-espejo" data-day="8" data-scene="05" data-badge="dicho con la calma de quien ha pasado más allá de la furia">
+          —¿Cuáles son las opciones reales?
+        </p>
+
+        <div class="ember-furia">
+          <p class="dialogo" data-speaker="ember" data-to="axel" data-focus="ember" data-type="dialogo" data-emotion="ira" data-intensity="4" data-tension="4" data-plot="desarrollo" data-location="bosque-cuervos-espejo" data-day="8" data-scene="05" data-relationship="axel-ember" data-rel-direction="positiva" data-badge="respondido con rapidez, como si lo hubiera estado pensando">
+            —La entregamos a los cuervos. Dejamos que hagan justicia. Volvemos a casa.
+          </p>
+        </div>
+
+        <div class="cuervo-dialogo">
+          <p class="dialogo" data-speaker="cuervo-primario" data-to="grupo" data-focus="cuervo-primario" data-type="dialogo" data-emotion="neutral" data-intensity="2" data-tension="2" data-plot="desarrollo" data-location="bosque-cuervos-espejo" data-day="8" data-scene="05" data-badge="aclarado sin que nadie preguntara">
+            —No somos jueces. Mostramos verdad. Lo que hacen con ella no es asunto nuestro.
+          </p>
+        </div>
+
+        <p class="texto-narrativo" data-focus="ember" data-type="accion" data-emotion="ira,indecision" data-intensity="3" data-tension="3" data-plot="desarrollo" data-location="bosque-cuervos-espejo" data-day="8" data-scene="05"> Ember cerró los ojos. La flauta estaba en su regazo ahora, y la giraba entre los dedos — el gesto que hacía cuando procesaba algo demasiado grande para procesarlo de pie.</p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-speaker="ember" data-to="axel,grupo" data-focus="ember" data-type="dialogo" data-emotion="tristeza,determinacion" data-intensity="4" data-tension="4" data-plot="resolucion" data-location="bosque-cuervos-espejo" data-day="8" data-scene="05" data-relationship="axel-ember" data-rel-direction="positiva" data-badge="dicho sin abrir los ojos">
+            —Papá murió porque no sabía la verdad. Nosotros la sabemos. Eso tiene que servir para algo.
+          </p>
+        </div>
+
+        <p class="texto-narrativo" data-focus="seraphina" data-type="accion" data-emotion="culpa,esperanza" data-intensity="4" data-tension="4" data-plot="climax" data-location="bosque-cuervos-espejo" data-day="8" data-scene="05"> Seraphina seguía de rodillas. El musgo que había arrancado se había secado entre sus garras. No alzó la vista, pero su cuerpo entero estaba orientado hacia Axel — no hacia Ember, no hacia los cuervos. Hacia el gato que sostenía el arco de su padre y que no la había atacado.</p>
+
+        <p class="dialogo" data-speaker="axel" data-to="seraphina" data-focus="axel" data-type="dialogo" data-emotion="determinacion" data-intensity="4" data-tension="4" data-plot="climax" data-location="bosque-cuervos-espejo" data-day="8" data-scene="05" data-relationship="axel-seraphina" data-rel-direction="tensa" data-badge="preguntado desde el suelo, mirándola">
+          —Si llegamos al Templo Celestial. Si obtienes las Lágrimas de Luna. Si el poder amplifica lo que verdaderamente hay en tu corazón en ese instante. ¿Qué pasaría?
+        </p>
+
+        <div class="seraphina-conflicto">
+          <p class="dialogo" data-speaker="seraphina" data-to="axel" data-focus="seraphina" data-type="dialogo" data-emotion="miedo,incertidumbre" data-intensity="4" data-tension="4" data-plot="climax" data-location="bosque-cuervos-espejo" data-day="8" data-scene="05" data-relationship="axel-seraphina" data-rel-direction="tensa" data-secret="true" data-badge="respondido con la honestidad que el bosque obligaba">
+            —No lo sé. Por primera vez en dos años, no lo sé.
+          </p>
+        </div>
+
+        <p class="texto-narrativo" data-focus="seraphina" data-type="accion" data-emotion="culpa,ternura" data-intensity="4" data-tension="3" data-plot="climax" data-location="bosque-cuervos-espejo" data-day="8" data-scene="05"> Las garras soltaron el musgo seco. Cayó en fragmentos sobre sus rodillas.</p>
+
+        <div class="seraphina-conflicto">
+          <p class="dialogo" data-speaker="seraphina" data-to="axel,ember" data-focus="seraphina" data-type="introspection" data-emotion="culpa,ternura" data-intensity="5" data-tension="3" data-plot="climax" data-location="bosque-cuervos-espejo" data-day="8" data-scene="05" data-secret="true" data-reveals="Cambio genuino de corazón de Seraphina durante el viaje" data-badge="continuado mirándose las manos vacías">
+            —Mi corazón está dividido. Hay odio real por lo que le pasó a Kira. Y hay algo más ahora. Algo que creció de Sol subiéndose a mi regazo sin preguntar. De Ember partiendo su comida sin contar las porciones. De Axel afilando flechas de más porque piensa que no noto que monta guardia doble.
+          </p>
+        </div>
+
+        <p class="texto-narrativo" data-focus="grupo" data-type="accion" data-emotion="esperanza" data-intensity="3" data-tension="2" data-plot="payoff" data-location="bosque-cuervos-espejo" data-day="8" data-scene="05"> Los cuervos pulsaron de nuevo. Violeta. Confirmación.</p>
+
+        <div class="cuervo-dialogo">
+          <p class="dialogo" data-speaker="cuervo-primario" data-to="seraphina" data-focus="cuervo-primario" data-type="dialogo" data-emotion="neutral" data-intensity="4" data-tension="5" data-plot="foreshadowing" data-location="bosque-cuervos-espejo" data-day="8" data-scene="05" data-badge="pronunciado como advertencia final">
+            —Corazón dividido con poder divino. Resultado impredecible. Podría curar. Podría destruir. Podría hacer ambas cosas al mismo tiempo.
+          </p>
+        </div>
+
+        <p class="texto-narrativo" data-focus="grupo" data-type="accion" data-emotion="determinacion" data-intensity="3" data-tension="4" data-plot="resolucion" data-location="bosque-cuervos-espejo" data-day="8" data-scene="05"> Ember abrió los ojos. Miró a Axel. Axel miró a Seraphina. Seraphina miraba sus propias manos vacías.</p>
+
+        <div class="ember-furia">
+          <p class="dialogo" data-speaker="ember" data-to="seraphina" data-focus="ember" data-type="dialogo" data-emotion="ira,ternura" data-intensity="4" data-tension="4" data-plot="resolucion" data-location="bosque-cuervos-espejo" data-day="8" data-scene="05" data-relationship="ember-seraphina" data-rel-direction="tensa" data-badge="dicho con una madurez que no tenía ayer">
+            —No puedo perdonarte. Quiero que sepas eso. No puedo perdonarte por papá, ni por las mentiras, ni por haber dejado que mis hijos te quisieran. Pero....
+          </p>
+        </div>
+
+        <p class="texto-narrativo" data-focus="ember" data-type="accion" data-emotion="ira,ternura" data-intensity="3" data-tension="3" data-plot="resolucion" data-location="bosque-cuervos-espejo" data-day="8" data-scene="05"> Se detuvo. La flauta dejó de girar entre sus dedos.</p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-speaker="ember" data-to="seraphina" data-focus="ember" data-type="dialogo" data-emotion="ternura" data-intensity="3" data-tension="2" data-plot="resolucion" data-location="bosque-cuervos-espejo" data-day="8" data-scene="05" data-relationship="ember-seraphina" data-rel-direction="positiva" data-badge="terminado con esfuerzo visible">
+            —Pero papá no habría querido que te dejáramos sola con ese odio adentro. Papá habría querido terminar el camino.
+          </p>
+        </div>
+
+        <p class="texto-narrativo" data-focus="axel" data-type="introspection" data-emotion="nostalgia,ternura" data-intensity="4" data-tension="3" data-plot="payoff" data-location="bosque-cuervos-espejo" data-day="8" data-scene="05"> Axel no habló enseguida. Se quedó sentado en la tierra con el arco sobre las rodillas, la madera tibia contra sus palmas, y pensó en su padre — no en cómo murió, sino en cómo vivía. En la porción más grande del plato siempre para otro. En las flechas extra afiladas al anochecer. En la forma en que miraba a las criaturas heridas del bosque, no con lástima sino con paciencia, como si supiera que el dolor era temporal y lo que importaba era lo que venía después.</p>
+
+        <p class="dialogo" data-speaker="axel" data-to="grupo" data-focus="axel" data-type="dialogo" data-emotion="determinacion" data-intensity="3" data-tension="2" data-plot="resolucion" data-location="bosque-cuervos-espejo" data-day="8" data-scene="05" data-relationship="axel-seraphina" data-rel-direction="positiva" data-badge="dicho sin levantarse, sin alzar la voz">
+          —Continuamos juntos.
+        </p>
+
+        <p class="texto-narrativo" data-focus="ember" data-type="accion" data-emotion="determinacion" data-intensity="2" data-tension="2" data-plot="resolucion" data-location="bosque-cuervos-espejo" data-day="8" data-scene="05"> Ember asintió una vez. Seraphina no se movió.</p>
+
+        <p class="dialogo" data-speaker="axel" data-to="seraphina" data-focus="axel" data-type="dialogo" data-emotion="determinacion" data-intensity="4" data-tension="4" data-plot="resolucion" data-location="bosque-cuervos-espejo" data-day="8" data-scene="05" data-relationship="axel-seraphina" data-rel-direction="positiva" data-badge="añadido mirándola directamente">
+          —Pero cuando lleguemos al Templo, lo que pase con las Lágrimas dependerá de lo que verdaderamente haya en tu corazón. No de tu plan. No de tu venganza. No de nuestro perdón. De tu corazón. Solo de eso.
+        </p>
+
+        <div class="seraphina-conflicto">
+          <p class="dialogo" data-speaker="seraphina" data-to="axel" data-focus="seraphina" data-type="dialogo" data-emotion="miedo,esperanza" data-intensity="4" data-tension="4" data-plot="gancho" data-location="bosque-cuervos-espejo" data-day="8" data-scene="05" data-relationship="axel-seraphina" data-rel-direction="tensa" data-badge="dicho sin levantar la vista">
+            —¿Y si lo que hay no es suficiente?
+          </p>
+        </div>
+
+        <p class="texto-narrativo" data-focus="axel" data-type="introspection" data-emotion="determinacion" data-intensity="3" data-tension="4" data-plot="gancho" data-location="bosque-cuervos-espejo" data-day="8" data-scene="05"> Axel no contestó. Porque la respuesta honesta era que no sabía, y en el Bosque de Cuervos Espejo, las respuestas deshonestas costaban demasiado.</p>
+
+        <p class="texto-narrativo" data-focus="axel" data-type="accion" data-emotion="ternura" data-intensity="3" data-tension="3" data-plot="resolucion" data-location="bosque-cuervos-espejo" data-day="8" data-scene="05"> Se levantó. Le ofreció la mano. Seraphina la miró durante tres latidos — la mano del hijo de su sexta víctima, ofrecida sin condiciones, en un bosque que no permitía pretender — antes de tomarla. Su garra se cerró alrededor de sus dedos con una presión que temblaba.</p>
+
+        <p class="texto-narrativo" data-focus="ember" data-type="accion" data-emotion="determinacion" data-intensity="2" data-tension="2" data-plot="resolucion" data-location="bosque-cuervos-espejo" data-day="8" data-scene="05"> Ember recogió al erizo, que se había dormido durante el drama entero, y lo metió en la mochila con una delicadeza que contradecía la furia que aún le enrojecía las orejas.</p>
+      </section>
+
+      <!-- =============== GANCHO HACIA SECCION_08A =============== -->
+      <section id="salida-bosque" class="bosque-espejo">
+        <h3>Lo Que Los Espejos No Muestran</h3>
+
+        <p class="texto-narrativo" data-focus="axel,lyra" data-type="accion" data-emotion="alivio" data-intensity="2" data-tension="2" data-plot="payoff" data-location="bosque-cuervos-espejo" data-day="8" data-scene="06"> Encontraron los suministros de Lyra al salir del claro. Axel se arrodilló junto a ellos, leyó la nota, y se la guardó en el bolsillo — el mismo bolsillo donde llevaba la nota de las dos frecuencias. No dijo nada. Ember notó cómo sus hombros perdieron medio grado de tensión al leer, y tuvo la prudencia de no comentarlo.</p>
+
+        <p class="texto-narrativo" data-focus="grupo" data-type="transicion" data-emotion="neutral" data-intensity="2" data-tension="2" data-plot="resolucion" data-location="camino" data-day="8" data-scene="06"> Caminaron en silencio durante la primera hora fuera del bosque. El tipo de silencio que no necesita ser llenado porque está haciendo trabajo — procesando, asentando, reorganizando todo lo que creían saber sobre los últimos once días de viaje.</p>
+
+        <p class="texto-narrativo" data-focus="grupo" data-type="descripcion" data-emotion="esperanza" data-intensity="2" data-tension="2" data-plot="transicion" data-location="rio-nutrias" data-day="8" data-scene="06"> El sendero descendía hacia un valle donde el sonido del agua llegaba antes que la vista — agua corriendo rápido, con ritmo, no el murmullo perezoso de un arroyo sino el golpeteo insistente de un río con opiniones propias. Según el mapa de los armadillos, la marca siguiente era un símbolo que parecía una nutria haciendo una pirueta.</p>
+
+        <div class="dialogo-ember">
+          <p class="dialogo" data-speaker="ember" data-to="grupo" data-focus="ember" data-type="dialogo" data-emotion="humor" data-intensity="1" data-tension="1" data-plot="transicion" data-location="rio-nutrias" data-day="8" data-scene="06" data-relationship="axel-ember" data-rel-direction="positiva" data-badge="dicho con la voz todavía ronca pero intentando">
+            —El mapa dice.... ¿Río de las Nutrias? ¿Eso es un nombre real?
+          </p>
+        </div>
+
+        <p class="texto-narrativo" data-focus="grupo" data-type="accion" data-emotion="esperanza" data-intensity="2" data-tension="2" data-plot="gancho" data-location="rio-nutrias" data-day="8" data-scene="06"> Nadie respondió. Pero los tres siguieron caminando hacia el sonido del agua, porque la alternativa era quedarse quietos con la verdad y ninguno de ellos estaba listo para eso todavía.</p>
+
+        <p class="texto-narrativo" data-focus="axel" data-type="introspection" data-emotion="determinacion,esperanza" data-intensity="3" data-tension="2" data-plot="gancho" data-location="rio-nutrias" data-day="8" data-scene="06"> El arco élfico había vuelto a su tibieza normal. Pero de vez en cuando, sin patrón que Axel pudiera descifrar, la madera emitía un pulso único — no de advertencia, no de furia. Algo más parecido a un latido. Como si la madera recordara las manos que la sostuvieron antes y estuviera decidiendo, igual que todos ellos, qué hacer con ese recuerdo.</p>
+      </section>
+    </div>
+
+<!--
+NOTAS DE CONTINUIDAD:
+— Grupo de 3 (sin Eco Pergaminada — se fue en seccion_05)
+— Erizo preservado intacto (escena con Cuervos)
+— Apertura conecta directamente con gancho de 07B (cuervos avistados en sendero)
+— Seraphina: revelada por cuervos, no por ella misma. Confesión forzada por el bosque.
+— Padre de Axel: "lo guiaron hasta un desfiladero" — no asesinado directamente, guiado al peligro
+— Ember grita "mataste" (emoción) pero los Cuervos dicen "cayó protegiendo" (precisión)
+— Propuesta de destruir Lágrimas ELIMINADA — contradice CLAUDE.md
+— Resolución abierta: "lo que pase dependerá de tu corazón"
+— Lyra: deja suministros + nota, momento personal de un segundo, desaparece
+— Lyra NO dice "enamorándose de la asesina" — acción pura, sin declaraciones
+— Gancho: Río de las Nutrias (seccion_08A), arco con pulso ambiguo
+— "Sin embargo" = 0
+— Clases sucias = 0
+— Eco Pergaminada = 0
+-->
+
+    <script src="global-reset.js"></script>
+  </body>
+</html>
