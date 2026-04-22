@@ -1,0 +1,1969 @@
+{
+  "global": {
+    "data-speaker": [
+      "ala-de-carta",
+      "axel",
+      "barba-blanca",
+      "bigote-plateado",
+      "burbuja-rapida",
+      "capitan-remolino",
+      "chef-casco-brillante",
+      "comerciante-1",
+      "cuervo-primario",
+      "eco-pergaminada",
+      "ember",
+      "garra-roja",
+      "groundbreaker",
+      "lider-cuervos",
+      "luna-suave",
+      "lyra",
+      "madre-axel",
+      "mapache-menor",
+      "mariposa-azul",
+      "mariposa-transparente",
+      "murcielago-joven",
+      "murcielago-superviviente",
+      "murcieleago-joven",
+      "murcieleago-snob2",
+      "murcieleagos",
+      "orejas-largas",
+      "osos-cristal",
+      "padre-axel",
+      "pelaje-gris",
+      "piedra-vieja",
+      "pluma-plateada",
+      "recolector",
+      "rigoberto",
+      "rosa",
+      "ruperto",
+      "saltarina-valiente",
+      "salto-rapido",
+      "seraphina",
+      "sol",
+      "sombra",
+      "susurradores",
+      "tinta-ancestral",
+      "tomas",
+      "topo-lider",
+      "umbra",
+      "vex-sangrante"
+    ],
+    "data-to": [
+      "ala-de-carta",
+      "ala-plateada",
+      "ambiente",
+      "axel",
+      "barba-blanca",
+      "bigote-plateado",
+      "burbuja-rapida",
+      "capitan-remolino",
+      "chef-casco-brillante",
+      "comerciantes",
+      "cuervo-primario",
+      "defensores",
+      "eco-pergaminada",
+      "ember",
+      "erizo",
+      "garra-roja",
+      "groundbreaker",
+      "grupo",
+      "kira",
+      "lobos",
+      "luna-suave",
+      "lyra",
+      "madre-axel",
+      "mapache-menor",
+      "mariposa-azul",
+      "mariposa-transparente",
+      "murcieleago-joven",
+      "murcieleagos",
+      "nadie",
+      "orejas-largas",
+      "osos-cristal",
+      "padre-axel",
+      "pelaje-gris",
+      "pluma-plateada",
+      "rigoberto",
+      "ruperto",
+      "saltarina-valiente",
+      "salto-rapido",
+      "seraphina",
+      "si-mismo",
+      "sol",
+      "sombra",
+      "susurradores",
+      "tomas",
+      "topo-lider",
+      "vex-sangrante",
+      "zorros"
+    ],
+    "data-focus": [
+      "ala-de-carta",
+      "ambiente",
+      "arco",
+      "axel",
+      "barba-blanca",
+      "bigote-plateado",
+      "burbuja-rapida",
+      "capitan-remolino",
+      "chef-casco-brillante",
+      "comerciante-1",
+      "cuervo-primario",
+      "defensores",
+      "eco-pergaminada",
+      "ember",
+      "erizo",
+      "garra-roja",
+      "groundbreaker",
+      "grupo",
+      "lobos",
+      "luna-suave",
+      "lyra",
+      "madre-axel",
+      "mariposa-transparente",
+      "murcieleago-joven",
+      "murcieleago-snob2",
+      "murcieleagos",
+      "orejas-largas",
+      "osos-cristal",
+      "padre-axel",
+      "pelaje-gris",
+      "piedra-vieja",
+      "plantas",
+      "pluma-plateada",
+      "problemas",
+      "recolector",
+      "rigoberto",
+      "rosa",
+      "ruperto",
+      "saltarina-valiente",
+      "salto-rapido",
+      "seraphina",
+      "sol",
+      "sombra",
+      "susurradores",
+      "tinta-ancestral",
+      "tomas",
+      "topo-lider",
+      "umbra",
+      "vex-sangrante",
+      "zorros"
+    ],
+    "data-type": [
+      "accion",
+      "desarrollo",
+      "descripcio",
+      "descripcion",
+      "dialogo",
+      "flashback",
+      "introspeccion",
+      "introspección",
+      "introspection",
+      "profecia",
+      "resolucion",
+      "revelacion",
+      "setup",
+      "transicion"
+    ],
+    "data-emotion": [
+      "agotamiento",
+      "alegria",
+      "alivio",
+      "ansiedad",
+      "asombro",
+      "compasion",
+      "culpa",
+      "curiosidad",
+      "desconfianza",
+      "desesperanza",
+      "determinacion",
+      "dolor",
+      "esperanza",
+      "falsa-paz",
+      "hambre",
+      "horror",
+      "humor",
+      "incertidumbre",
+      "indecision",
+      "ira",
+      "miedo",
+      "nerviosismo",
+      "neutral",
+      "nostalgia",
+      "perplejidad",
+      "preocupacion",
+      "prisa",
+      "resignacion",
+      "shock",
+      "tension",
+      "ternura",
+      "tristeza"
+    ],
+    "data-plot": [
+      "climax",
+      "desarrollo",
+      "foreshadowing",
+      "gancho",
+      "humor",
+      "payoff",
+      "resolucion",
+      "revelacion",
+      "setup",
+      "transicion"
+    ],
+    "data-location": [
+      "aldea-zorros-plateros",
+      "bosque-cuervos-espejo",
+      "cabana-axel",
+      "camino",
+      "campamento",
+      "cielo",
+      "cueva-murcielagos",
+      "cueva-refugio",
+      "cuevas-brillantes",
+      "cuevas-minas-abandonadas",
+      "jardin-intenciones",
+      "laberinto-tejones",
+      "montanas-heladas",
+      "otro",
+      "puesto-comercial",
+      "rio-nutrias",
+      "templo-celestial",
+      "valle-mariposas",
+      "valle-susurradores",
+      "valle-tranquilo"
+    ],
+    "data-day": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "data-scene": [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08",
+      "09",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16"
+    ],
+    "data-relationship": [
+      "axel-ember",
+      "axel-groundbreaker",
+      "axel-luna-suave",
+      "axel-lyra",
+      "axel-madre-axel",
+      "axel-padre-axel",
+      "axel-piedra-vieja",
+      "axel-rigoberto",
+      "axel-seraphina",
+      "burbuja-rapida-seraphina",
+      "ember-luna-suave",
+      "ember-seraphina",
+      "erizo-seraphina",
+      "groundbreaker-lyra",
+      "luna-suave-seraphina",
+      "lyra-seraphina",
+      "seraphina-sol",
+      "seraphina-vex",
+      "seraphina-vex-sangrante",
+      "sol-sombra"
+    ],
+    "data-rel-direction": [
+      "negativa",
+      "neutral",
+      "positiva",
+      "tensa"
+    ]
+  },
+  "por_seccion": {
+    "seccion_01.html": {
+      "data-speaker": [
+        "axel",
+        "piedra-vieja",
+        "seraphina"
+      ],
+      "data-to": [
+        "axel",
+        "seraphina"
+      ],
+      "data-focus": [
+        "ambiente",
+        "axel",
+        "piedra-vieja",
+        "seraphina"
+      ],
+      "data-type": [
+        "accion",
+        "descripcion",
+        "dialogo",
+        "flashback",
+        "introspeccion"
+      ],
+      "data-emotion": [
+        "alegria",
+        "asombro",
+        "desconfianza",
+        "determinacion",
+        "esperanza",
+        "miedo",
+        "neutral",
+        "nostalgia",
+        "ternura",
+        "tristeza"
+      ],
+      "data-plot": [
+        "climax",
+        "desarrollo",
+        "foreshadowing",
+        "gancho",
+        "resolucion",
+        "revelacion",
+        "setup"
+      ],
+      "data-location": [
+        "cabana-axel",
+        "camino",
+        "cueva-refugio",
+        "montanas-heladas",
+        "puesto-comercial"
+      ],
+      "data-day": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "data-scene": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10",
+        "11"
+      ],
+      "data-relationship": [
+        "axel-piedra-vieja",
+        "axel-seraphina"
+      ],
+      "data-rel-direction": [
+        "neutral",
+        "positiva",
+        "tensa"
+      ],
+      "_stats": {
+        "total_parrafos": 161,
+        "anotados": 161,
+        "pendientes": 0
+      }
+    },
+    "seccion_02.html": {
+      "data-speaker": [
+        "axel",
+        "barba-blanca",
+        "bigote-plateado",
+        "lyra",
+        "orejas-largas",
+        "pelaje-gris",
+        "rigoberto",
+        "ruperto",
+        "saltarina-valiente",
+        "salto-rapido",
+        "seraphina"
+      ],
+      "data-to": [
+        "axel",
+        "barba-blanca",
+        "bigote-plateado",
+        "grupo",
+        "lyra",
+        "nadie",
+        "orejas-largas",
+        "pelaje-gris",
+        "rigoberto",
+        "ruperto",
+        "saltarina-valiente",
+        "salto-rapido",
+        "seraphina",
+        "si-mismo"
+      ],
+      "data-focus": [
+        "ambiente",
+        "axel",
+        "barba-blanca",
+        "bigote-plateado",
+        "grupo",
+        "lyra",
+        "orejas-largas",
+        "pelaje-gris",
+        "problemas",
+        "rigoberto",
+        "ruperto",
+        "saltarina-valiente",
+        "salto-rapido",
+        "seraphina"
+      ],
+      "data-type": [
+        "accion",
+        "descripcion",
+        "dialogo",
+        "flashback",
+        "introspeccion",
+        "setup",
+        "transicion"
+      ],
+      "data-emotion": [
+        "alegria",
+        "asombro",
+        "culpa",
+        "curiosidad",
+        "desconfianza",
+        "determinacion",
+        "esperanza",
+        "humor",
+        "ira",
+        "miedo",
+        "neutral",
+        "nostalgia",
+        "ternura",
+        "tristeza"
+      ],
+      "data-plot": [
+        "climax",
+        "desarrollo",
+        "foreshadowing",
+        "gancho",
+        "humor",
+        "payoff",
+        "resolucion",
+        "revelacion",
+        "setup",
+        "transicion"
+      ],
+      "data-location": [
+        "cabana-axel",
+        "camino",
+        "campamento",
+        "cueva-refugio",
+        "montanas-heladas",
+        "valle-susurradores"
+      ],
+      "data-day": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "data-scene": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16"
+      ],
+      "data-relationship": [
+        "axel-seraphina"
+      ],
+      "data-rel-direction": [
+        "neutral",
+        "positiva",
+        "tensa"
+      ],
+      "_stats": {
+        "total_parrafos": 332,
+        "anotados": 332,
+        "pendientes": 0
+      }
+    },
+    "seccion_03.html": {
+      "data-speaker": [
+        "axel",
+        "padre-axel",
+        "seraphina",
+        "susurradores"
+      ],
+      "data-to": [
+        "axel",
+        "seraphina",
+        "si-mismo",
+        "susurradores"
+      ],
+      "data-focus": [
+        "ambiente",
+        "axel",
+        "ember",
+        "padre-axel",
+        "seraphina",
+        "susurradores"
+      ],
+      "data-type": [
+        "accion",
+        "descripcion",
+        "dialogo",
+        "introspeccion",
+        "profecia",
+        "transicion"
+      ],
+      "data-emotion": [
+        "alegria",
+        "asombro",
+        "desconfianza",
+        "determinacion",
+        "esperanza",
+        "humor",
+        "ira",
+        "miedo",
+        "neutral",
+        "nostalgia",
+        "ternura",
+        "tristeza"
+      ],
+      "data-plot": [
+        "climax",
+        "desarrollo",
+        "foreshadowing",
+        "gancho",
+        "resolucion",
+        "revelacion",
+        "setup"
+      ],
+      "data-location": [
+        "camino",
+        "valle-susurradores"
+      ],
+      "data-day": [
+        "3",
+        "4"
+      ],
+      "data-scene": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06"
+      ],
+      "data-relationship": [
+        "axel-ember",
+        "axel-seraphina"
+      ],
+      "data-rel-direction": [
+        "neutral",
+        "positiva",
+        "tensa"
+      ],
+      "_stats": {
+        "total_parrafos": 132,
+        "anotados": 132,
+        "pendientes": 0
+      }
+    },
+    "seccion_03B.html": {
+      "_stats": {
+        "total_parrafos": 388,
+        "anotados": 0,
+        "pendientes": 388
+      }
+    },
+    "seccion_04.html": {
+      "data-speaker": [
+        "axel",
+        "eco-pergaminada",
+        "lider-cuervos",
+        "lyra",
+        "murcielago-joven",
+        "murcielago-superviviente",
+        "seraphina",
+        "tinta-ancestral"
+      ],
+      "data-to": [
+        "ala-plateada",
+        "axel",
+        "eco-pergaminada",
+        "grupo",
+        "lyra",
+        "nadie",
+        "seraphina"
+      ],
+      "data-focus": [
+        "ambiente",
+        "axel",
+        "eco-pergaminada",
+        "lyra",
+        "seraphina",
+        "tinta-ancestral"
+      ],
+      "data-type": [
+        "accion",
+        "descripcion",
+        "dialogo",
+        "introspeccion",
+        "transicion"
+      ],
+      "data-emotion": [
+        "alegria",
+        "asombro",
+        "culpa",
+        "desconfianza",
+        "determinacion",
+        "esperanza",
+        "humor",
+        "ira",
+        "miedo",
+        "neutral",
+        "nostalgia",
+        "ternura",
+        "tristeza"
+      ],
+      "data-plot": [
+        "climax",
+        "desarrollo",
+        "foreshadowing",
+        "gancho",
+        "resolucion",
+        "revelacion",
+        "setup",
+        "transicion"
+      ],
+      "data-location": [
+        "camino",
+        "campamento",
+        "cueva-murcielagos"
+      ],
+      "data-day": [
+        "6",
+        "7"
+      ],
+      "data-scene": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08"
+      ],
+      "data-relationship": [
+        "axel-lyra",
+        "axel-seraphina"
+      ],
+      "data-rel-direction": [
+        "neutral",
+        "positiva",
+        "tensa"
+      ],
+      "_stats": {
+        "total_parrafos": 132,
+        "anotados": 132,
+        "pendientes": 0
+      }
+    },
+    "seccion_05.html": {
+      "data-speaker": [
+        "axel",
+        "comerciante-1",
+        "eco-pergaminada",
+        "garra-roja",
+        "recolector",
+        "rosa",
+        "seraphina",
+        "tomas",
+        "topo-lider"
+      ],
+      "data-to": [
+        "ambiente",
+        "axel",
+        "comerciantes",
+        "defensores",
+        "eco-pergaminada",
+        "garra-roja",
+        "grupo",
+        "lobos",
+        "seraphina",
+        "si-mismo",
+        "tomas",
+        "topo-lider",
+        "zorros"
+      ],
+      "data-focus": [
+        "ambiente",
+        "axel",
+        "comerciante-1",
+        "defensores",
+        "eco-pergaminada",
+        "erizo",
+        "garra-roja",
+        "grupo",
+        "lobos",
+        "plantas",
+        "recolector",
+        "rosa",
+        "seraphina",
+        "tomas",
+        "topo-lider",
+        "zorros"
+      ],
+      "data-type": [
+        "accion",
+        "desarrollo",
+        "descripcion",
+        "dialogo",
+        "introspeccion",
+        "introspección"
+      ],
+      "data-emotion": [
+        "agotamiento",
+        "ansiedad",
+        "asombro",
+        "compasion",
+        "culpa",
+        "desconfianza",
+        "desesperanza",
+        "determinacion",
+        "esperanza",
+        "falsa-paz",
+        "ira",
+        "miedo",
+        "nerviosismo",
+        "neutral",
+        "nostalgia",
+        "perplejidad",
+        "preocupacion",
+        "prisa",
+        "resignacion",
+        "ternura",
+        "tristeza"
+      ],
+      "data-plot": [
+        "climax",
+        "desarrollo",
+        "foreshadowing",
+        "gancho",
+        "payoff",
+        "resolucion",
+        "revelacion",
+        "setup",
+        "transicion"
+      ],
+      "data-location": [
+        "aldea-zorros-plateros",
+        "camino",
+        "cielo",
+        "cuevas-minas-abandonadas"
+      ],
+      "data-day": [
+        "3",
+        "4"
+      ],
+      "data-scene": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07"
+      ],
+      "_stats": {
+        "total_parrafos": 121,
+        "anotados": 121,
+        "pendientes": 0
+      }
+    },
+    "seccion_06.html": {
+      "data-speaker": [
+        "axel",
+        "lyra",
+        "osos-cristal",
+        "seraphina",
+        "umbra"
+      ],
+      "data-to": [
+        "axel",
+        "lyra",
+        "osos-cristal",
+        "seraphina",
+        "si-mismo"
+      ],
+      "data-focus": [
+        "ambiente",
+        "axel",
+        "lyra",
+        "osos-cristal",
+        "padre-axel",
+        "seraphina"
+      ],
+      "data-type": [
+        "accion",
+        "descripcion",
+        "dialogo",
+        "introspeccion",
+        "transicion"
+      ],
+      "data-emotion": [
+        "alegria",
+        "asombro",
+        "desconfianza",
+        "determinacion",
+        "esperanza",
+        "ira",
+        "miedo",
+        "neutral",
+        "nostalgia",
+        "ternura",
+        "tristeza"
+      ],
+      "data-plot": [
+        "climax",
+        "desarrollo",
+        "foreshadowing",
+        "gancho",
+        "payoff",
+        "resolucion",
+        "revelacion",
+        "setup",
+        "transicion"
+      ],
+      "data-location": [
+        "camino",
+        "campamento",
+        "cuevas-brillantes",
+        "jardin-intenciones"
+      ],
+      "data-day": [
+        "6"
+      ],
+      "data-scene": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07"
+      ],
+      "data-relationship": [
+        "axel-lyra",
+        "axel-seraphina",
+        "lyra-seraphina"
+      ],
+      "data-rel-direction": [
+        "neutral",
+        "positiva",
+        "tensa"
+      ],
+      "_stats": {
+        "total_parrafos": 118,
+        "anotados": 118,
+        "pendientes": 0
+      }
+    },
+    "seccion_07.html": {
+      "data-speaker": [
+        "axel",
+        "ember",
+        "luna-suave",
+        "madre-axel",
+        "seraphina",
+        "umbra"
+      ],
+      "data-to": [
+        "axel",
+        "ember",
+        "luna-suave",
+        "madre-axel",
+        "nadie",
+        "seraphina",
+        "si-mismo",
+        "sol",
+        "sombra"
+      ],
+      "data-focus": [
+        "ambiente",
+        "axel",
+        "ember",
+        "luna-suave",
+        "lyra",
+        "madre-axel",
+        "padre-axel",
+        "seraphina",
+        "sol",
+        "sombra",
+        "umbra"
+      ],
+      "data-type": [
+        "accion",
+        "descripcion",
+        "dialogo",
+        "introspeccion",
+        "transicion"
+      ],
+      "data-emotion": [
+        "alegria",
+        "asombro",
+        "culpa",
+        "desconfianza",
+        "determinacion",
+        "humor",
+        "miedo",
+        "neutral",
+        "nostalgia",
+        "ternura",
+        "tristeza"
+      ],
+      "data-plot": [
+        "climax",
+        "desarrollo",
+        "foreshadowing",
+        "gancho",
+        "payoff",
+        "resolucion",
+        "revelacion",
+        "setup",
+        "transicion"
+      ],
+      "data-location": [
+        "camino",
+        "jardin-intenciones",
+        "valle-tranquilo"
+      ],
+      "data-day": [
+        "7",
+        "8"
+      ],
+      "data-scene": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06"
+      ],
+      "data-relationship": [
+        "axel-ember",
+        "axel-luna-suave",
+        "axel-madre-axel",
+        "axel-seraphina",
+        "ember-seraphina",
+        "luna-suave-seraphina",
+        "seraphina-sol"
+      ],
+      "data-rel-direction": [
+        "neutral",
+        "positiva",
+        "tensa"
+      ],
+      "_stats": {
+        "total_parrafos": 120,
+        "anotados": 120,
+        "pendientes": 0
+      }
+    },
+    "seccion_07A.html": {
+      "data-speaker": [
+        "axel",
+        "ember",
+        "mapache-menor",
+        "rigoberto",
+        "seraphina"
+      ],
+      "data-to": [
+        "axel",
+        "ember",
+        "grupo",
+        "mapache-menor",
+        "rigoberto",
+        "seraphina",
+        "si-mismo"
+      ],
+      "data-focus": [
+        "ambiente",
+        "axel",
+        "ember",
+        "erizo",
+        "lyra",
+        "rigoberto",
+        "seraphina"
+      ],
+      "data-type": [
+        "accion",
+        "descripcion",
+        "dialogo",
+        "introspeccion",
+        "resolucion",
+        "revelacion"
+      ],
+      "data-emotion": [
+        "alegria",
+        "asombro",
+        "desconfianza",
+        "determinacion",
+        "humor",
+        "ira",
+        "miedo",
+        "neutral",
+        "nostalgia",
+        "ternura",
+        "tristeza"
+      ],
+      "data-plot": [
+        "climax",
+        "desarrollo",
+        "foreshadowing",
+        "gancho",
+        "payoff",
+        "resolucion",
+        "revelacion",
+        "setup"
+      ],
+      "data-location": [
+        "camino",
+        "campamento"
+      ],
+      "data-day": [
+        "8"
+      ],
+      "data-scene": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07"
+      ],
+      "data-relationship": [
+        "axel-ember",
+        "axel-lyra",
+        "axel-rigoberto",
+        "axel-seraphina",
+        "ember-seraphina"
+      ],
+      "data-rel-direction": [
+        "positiva",
+        "tensa"
+      ],
+      "_stats": {
+        "total_parrafos": 103,
+        "anotados": 103,
+        "pendientes": 0
+      }
+    },
+    "seccion_07B.html": {
+      "data-speaker": [
+        "axel",
+        "chef-casco-brillante",
+        "ember",
+        "seraphina"
+      ],
+      "data-to": [
+        "axel",
+        "chef-casco-brillante",
+        "ember",
+        "grupo",
+        "nadie",
+        "seraphina"
+      ],
+      "data-focus": [
+        "ambiente",
+        "axel",
+        "chef-casco-brillante",
+        "ember",
+        "grupo",
+        "lyra",
+        "seraphina"
+      ],
+      "data-type": [
+        "accion",
+        "descripcion",
+        "dialogo",
+        "introspeccion",
+        "transicion"
+      ],
+      "data-emotion": [
+        "alegria",
+        "asombro",
+        "desconfianza",
+        "determinacion",
+        "esperanza",
+        "humor",
+        "ira",
+        "miedo",
+        "neutral",
+        "ternura",
+        "tristeza"
+      ],
+      "data-plot": [
+        "climax",
+        "desarrollo",
+        "foreshadowing",
+        "gancho",
+        "payoff",
+        "resolucion",
+        "revelacion",
+        "setup"
+      ],
+      "data-location": [
+        "bosque-cuervos-espejo",
+        "camino",
+        "otro"
+      ],
+      "data-day": [
+        "8",
+        "9"
+      ],
+      "data-scene": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08"
+      ],
+      "data-relationship": [
+        "axel-ember",
+        "axel-seraphina",
+        "ember-seraphina"
+      ],
+      "data-rel-direction": [
+        "neutral",
+        "positiva",
+        "tensa"
+      ],
+      "_stats": {
+        "total_parrafos": 86,
+        "anotados": 86,
+        "pendientes": 0
+      }
+    },
+    "seccion_08.html": {
+      "data-speaker": [
+        "axel",
+        "cuervo-primario",
+        "ember",
+        "seraphina"
+      ],
+      "data-to": [
+        "axel",
+        "cuervo-primario",
+        "ember",
+        "grupo",
+        "seraphina"
+      ],
+      "data-focus": [
+        "axel",
+        "cuervo-primario",
+        "ember",
+        "erizo",
+        "grupo",
+        "lyra",
+        "seraphina"
+      ],
+      "data-type": [
+        "accion",
+        "descripcion",
+        "dialogo",
+        "introspection",
+        "transicion"
+      ],
+      "data-emotion": [
+        "alivio",
+        "asombro",
+        "culpa",
+        "desconfianza",
+        "determinacion",
+        "dolor",
+        "esperanza",
+        "horror",
+        "humor",
+        "incertidumbre",
+        "indecision",
+        "ira",
+        "miedo",
+        "neutral",
+        "nostalgia",
+        "shock",
+        "ternura",
+        "tristeza"
+      ],
+      "data-plot": [
+        "climax",
+        "desarrollo",
+        "foreshadowing",
+        "gancho",
+        "payoff",
+        "resolucion",
+        "revelacion",
+        "setup",
+        "transicion"
+      ],
+      "data-location": [
+        "bosque-cuervos-espejo",
+        "camino",
+        "campamento",
+        "rio-nutrias"
+      ],
+      "data-day": [
+        "7",
+        "8"
+      ],
+      "data-scene": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06"
+      ],
+      "data-relationship": [
+        "axel-ember",
+        "axel-seraphina",
+        "ember-seraphina"
+      ],
+      "data-rel-direction": [
+        "negativa",
+        "positiva",
+        "tensa"
+      ],
+      "_stats": {
+        "total_parrafos": 110,
+        "anotados": 110,
+        "pendientes": 0
+      }
+    },
+    "seccion_08A.html": {
+      "data-speaker": [
+        "axel",
+        "burbuja-rapida",
+        "capitan-remolino",
+        "ember",
+        "seraphina"
+      ],
+      "data-to": [
+        "axel",
+        "burbuja-rapida",
+        "capitan-remolino",
+        "ember",
+        "grupo",
+        "seraphina",
+        "si-mismo"
+      ],
+      "data-focus": [
+        "ambiente",
+        "axel",
+        "burbuja-rapida",
+        "capitan-remolino",
+        "ember",
+        "erizo",
+        "lyra",
+        "padre-axel",
+        "seraphina"
+      ],
+      "data-type": [
+        "accion",
+        "descripcion",
+        "dialogo",
+        "flashback",
+        "introspeccion",
+        "transicion"
+      ],
+      "data-emotion": [
+        "alegria",
+        "asombro",
+        "culpa",
+        "desconfianza",
+        "determinacion",
+        "esperanza",
+        "humor",
+        "ira",
+        "miedo",
+        "neutral",
+        "nostalgia",
+        "ternura",
+        "tristeza"
+      ],
+      "data-plot": [
+        "climax",
+        "desarrollo",
+        "foreshadowing",
+        "gancho",
+        "payoff",
+        "resolucion",
+        "revelacion",
+        "setup",
+        "transicion"
+      ],
+      "data-location": [
+        "camino",
+        "rio-nutrias"
+      ],
+      "data-day": [
+        "9"
+      ],
+      "data-scene": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08"
+      ],
+      "data-relationship": [
+        "axel-ember",
+        "axel-lyra",
+        "axel-seraphina",
+        "burbuja-rapida-seraphina",
+        "ember-seraphina"
+      ],
+      "data-rel-direction": [
+        "negativa",
+        "neutral",
+        "positiva",
+        "tensa"
+      ],
+      "_stats": {
+        "total_parrafos": 167,
+        "anotados": 167,
+        "pendientes": 0
+      }
+    },
+    "seccion_08B.html": {
+      "data-speaker": [
+        "axel",
+        "ember",
+        "murcieleago-joven",
+        "murcieleago-snob2",
+        "murcieleagos",
+        "pluma-plateada",
+        "seraphina"
+      ],
+      "data-to": [
+        "axel",
+        "ember",
+        "grupo",
+        "murcieleago-joven",
+        "murcieleagos",
+        "pluma-plateada",
+        "seraphina",
+        "si-mismo"
+      ],
+      "data-focus": [
+        "ambiente",
+        "arco",
+        "axel",
+        "ember",
+        "erizo",
+        "grupo",
+        "murcieleago-joven",
+        "murcieleago-snob2",
+        "murcieleagos",
+        "pluma-plateada",
+        "seraphina"
+      ],
+      "data-type": [
+        "accion",
+        "descripcio",
+        "descripcion",
+        "dialogo",
+        "introspeccion",
+        "transicion"
+      ],
+      "data-emotion": [
+        "alegria",
+        "asombro",
+        "culpa",
+        "desconfianza",
+        "determinacion",
+        "esperanza",
+        "hambre",
+        "horror",
+        "humor",
+        "ira",
+        "miedo",
+        "neutral",
+        "preocupacion",
+        "ternura"
+      ],
+      "data-plot": [
+        "climax",
+        "desarrollo",
+        "foreshadowing",
+        "gancho",
+        "resolucion",
+        "revelacion",
+        "setup"
+      ],
+      "data-location": [
+        "montanas-heladas"
+      ],
+      "data-day": [
+        "9"
+      ],
+      "data-scene": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08"
+      ],
+      "data-relationship": [
+        "axel-ember",
+        "axel-seraphina",
+        "ember-seraphina"
+      ],
+      "data-rel-direction": [
+        "neutral",
+        "positiva",
+        "tensa"
+      ],
+      "_stats": {
+        "total_parrafos": 138,
+        "anotados": 138,
+        "pendientes": 0
+      }
+    },
+    "seccion_08C.html": {
+      "data-speaker": [
+        "ala-de-carta",
+        "axel",
+        "ember",
+        "mariposa-azul",
+        "mariposa-transparente",
+        "seraphina"
+      ],
+      "data-to": [
+        "ala-de-carta",
+        "axel",
+        "ember",
+        "grupo",
+        "mariposa-azul",
+        "mariposa-transparente",
+        "nadie",
+        "seraphina",
+        "si-mismo"
+      ],
+      "data-focus": [
+        "ala-de-carta",
+        "ambiente",
+        "axel",
+        "ember",
+        "erizo",
+        "luna-suave",
+        "lyra",
+        "mariposa-transparente",
+        "padre-axel",
+        "seraphina",
+        "sol",
+        "sombra"
+      ],
+      "data-type": [
+        "accion",
+        "descripcion",
+        "dialogo",
+        "flashback",
+        "introspeccion",
+        "profecia",
+        "transicion"
+      ],
+      "data-emotion": [
+        "asombro",
+        "culpa",
+        "desconfianza",
+        "determinacion",
+        "esperanza",
+        "humor",
+        "miedo",
+        "neutral",
+        "nostalgia",
+        "ternura",
+        "tristeza"
+      ],
+      "data-plot": [
+        "climax",
+        "desarrollo",
+        "foreshadowing",
+        "gancho",
+        "payoff",
+        "resolucion",
+        "revelacion",
+        "setup"
+      ],
+      "data-location": [
+        "valle-mariposas"
+      ],
+      "data-day": [
+        "9"
+      ],
+      "data-scene": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10"
+      ],
+      "data-relationship": [
+        "axel-ember",
+        "axel-lyra",
+        "axel-seraphina",
+        "ember-luna-suave",
+        "ember-seraphina"
+      ],
+      "data-rel-direction": [
+        "positiva",
+        "tensa"
+      ],
+      "_stats": {
+        "total_parrafos": 115,
+        "anotados": 115,
+        "pendientes": 0
+      }
+    },
+    "seccion_09.html": {
+      "data-speaker": [
+        "axel",
+        "ember",
+        "groundbreaker",
+        "lyra",
+        "seraphina"
+      ],
+      "data-to": [
+        "axel",
+        "ember",
+        "groundbreaker",
+        "grupo",
+        "lyra",
+        "seraphina"
+      ],
+      "data-focus": [
+        "ambiente",
+        "axel",
+        "ember",
+        "erizo",
+        "groundbreaker",
+        "lyra",
+        "seraphina"
+      ],
+      "data-type": [
+        "accion",
+        "descripcion",
+        "dialogo",
+        "introspeccion"
+      ],
+      "data-emotion": [
+        "alegria",
+        "asombro",
+        "culpa",
+        "desconfianza",
+        "determinacion",
+        "esperanza",
+        "humor",
+        "miedo",
+        "neutral",
+        "ternura",
+        "tristeza"
+      ],
+      "data-plot": [
+        "climax",
+        "desarrollo",
+        "foreshadowing",
+        "gancho",
+        "resolucion",
+        "revelacion",
+        "setup",
+        "transicion"
+      ],
+      "data-location": [
+        "camino",
+        "laberinto-tejones"
+      ],
+      "data-day": [
+        "9"
+      ],
+      "data-scene": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06"
+      ],
+      "data-relationship": [
+        "axel-ember",
+        "axel-lyra",
+        "ember-seraphina",
+        "groundbreaker-lyra",
+        "lyra-seraphina"
+      ],
+      "data-rel-direction": [
+        "neutral",
+        "positiva",
+        "tensa"
+      ],
+      "_stats": {
+        "total_parrafos": 105,
+        "anotados": 105,
+        "pendientes": 0
+      }
+    },
+    "seccion_09A.html": {
+      "data-speaker": [
+        "axel",
+        "groundbreaker",
+        "lyra",
+        "seraphina"
+      ],
+      "data-to": [
+        "axel",
+        "erizo",
+        "groundbreaker",
+        "grupo",
+        "lyra",
+        "seraphina"
+      ],
+      "data-focus": [
+        "ambiente",
+        "axel",
+        "erizo",
+        "groundbreaker",
+        "lyra",
+        "padre-axel",
+        "seraphina"
+      ],
+      "data-type": [
+        "accion",
+        "descripcion",
+        "dialogo",
+        "introspeccion",
+        "transicion"
+      ],
+      "data-emotion": [
+        "alegria",
+        "asombro",
+        "culpa",
+        "desconfianza",
+        "determinacion",
+        "esperanza",
+        "humor",
+        "miedo",
+        "neutral",
+        "nostalgia"
+      ],
+      "data-plot": [
+        "climax",
+        "desarrollo",
+        "foreshadowing",
+        "gancho",
+        "payoff",
+        "resolucion",
+        "revelacion",
+        "setup"
+      ],
+      "data-location": [
+        "camino",
+        "laberinto-tejones"
+      ],
+      "data-day": [
+        "10"
+      ],
+      "data-scene": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09"
+      ],
+      "data-relationship": [
+        "axel-groundbreaker",
+        "axel-seraphina",
+        "lyra-seraphina"
+      ],
+      "data-rel-direction": [
+        "neutral",
+        "positiva",
+        "tensa"
+      ],
+      "_stats": {
+        "total_parrafos": 123,
+        "anotados": 123,
+        "pendientes": 0
+      }
+    },
+    "seccion_09B.html": {
+      "data-speaker": [
+        "axel",
+        "lyra",
+        "seraphina"
+      ],
+      "data-to": [
+        "axel",
+        "grupo",
+        "lyra",
+        "seraphina"
+      ],
+      "data-focus": [
+        "ambiente",
+        "axel",
+        "erizo",
+        "lyra",
+        "seraphina"
+      ],
+      "data-type": [
+        "accion",
+        "descripcion",
+        "dialogo",
+        "flashback",
+        "introspeccion",
+        "transicion"
+      ],
+      "data-emotion": [
+        "asombro",
+        "culpa",
+        "desconfianza",
+        "determinacion",
+        "esperanza",
+        "humor",
+        "miedo",
+        "neutral",
+        "ternura",
+        "tristeza"
+      ],
+      "data-plot": [
+        "climax",
+        "desarrollo",
+        "foreshadowing",
+        "gancho",
+        "payoff",
+        "resolucion",
+        "revelacion",
+        "setup",
+        "transicion"
+      ],
+      "data-location": [
+        "camino",
+        "campamento"
+      ],
+      "data-day": [
+        "10"
+      ],
+      "data-scene": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06"
+      ],
+      "data-relationship": [
+        "axel-lyra",
+        "axel-padre-axel",
+        "axel-seraphina",
+        "erizo-seraphina"
+      ],
+      "data-rel-direction": [
+        "neutral",
+        "positiva",
+        "tensa"
+      ],
+      "_stats": {
+        "total_parrafos": 58,
+        "anotados": 58,
+        "pendientes": 0
+      }
+    },
+    "seccion_10.html": {
+      "data-speaker": [
+        "axel",
+        "ember",
+        "lyra",
+        "padre-axel",
+        "seraphina",
+        "sol",
+        "sombra",
+        "vex-sangrante"
+      ],
+      "data-to": [
+        "axel",
+        "ember",
+        "grupo",
+        "kira",
+        "lyra",
+        "padre-axel",
+        "seraphina",
+        "si-mismo",
+        "sol",
+        "vex-sangrante"
+      ],
+      "data-focus": [
+        "ambiente",
+        "axel",
+        "ember",
+        "erizo",
+        "luna-suave",
+        "lyra",
+        "padre-axel",
+        "seraphina",
+        "sol",
+        "sombra",
+        "vex-sangrante"
+      ],
+      "data-type": [
+        "accion",
+        "descripcion",
+        "dialogo",
+        "flashback",
+        "introspeccion",
+        "transicion"
+      ],
+      "data-emotion": [
+        "alegria",
+        "asombro",
+        "culpa",
+        "desconfianza",
+        "determinacion",
+        "esperanza",
+        "humor",
+        "ira",
+        "miedo",
+        "neutral",
+        "nostalgia",
+        "tension",
+        "ternura",
+        "tristeza"
+      ],
+      "data-plot": [
+        "climax",
+        "desarrollo",
+        "foreshadowing",
+        "gancho",
+        "payoff",
+        "resolucion",
+        "revelacion",
+        "setup"
+      ],
+      "data-location": [
+        "camino",
+        "montanas-heladas",
+        "otro",
+        "templo-celestial",
+        "valle-tranquilo"
+      ],
+      "data-day": [
+        "10",
+        "11"
+      ],
+      "data-scene": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09"
+      ],
+      "data-relationship": [
+        "axel-ember",
+        "axel-lyra",
+        "axel-padre-axel",
+        "axel-seraphina",
+        "ember-luna-suave",
+        "lyra-seraphina",
+        "seraphina-vex",
+        "seraphina-vex-sangrante",
+        "sol-sombra"
+      ],
+      "data-rel-direction": [
+        "negativa",
+        "neutral",
+        "positiva",
+        "tensa"
+      ],
+      "_stats": {
+        "total_parrafos": 220,
+        "anotados": 220,
+        "pendientes": 0
+      }
+    }
+  },
+  "_meta": {
+    "total_secciones": 18,
+    "secciones": [
+      "seccion_01.html",
+      "seccion_02.html",
+      "seccion_03.html",
+      "seccion_03B.html",
+      "seccion_04.html",
+      "seccion_05.html",
+      "seccion_06.html",
+      "seccion_07.html",
+      "seccion_07A.html",
+      "seccion_07B.html",
+      "seccion_08.html",
+      "seccion_08A.html",
+      "seccion_08B.html",
+      "seccion_08C.html",
+      "seccion_09.html",
+      "seccion_09A.html",
+      "seccion_09B.html",
+      "seccion_10.html"
+    ]
+  }
+}

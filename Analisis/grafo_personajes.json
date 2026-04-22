@@ -89,13 +89,13 @@
     },
     {
       "fuente": "Axel",
-      "destino": "Luna Suave",
-      "peso": 14
+      "destino": "Sol",
+      "peso": 10
     },
     {
       "fuente": "Axel",
-      "destino": "Sol",
-      "peso": 10
+      "destino": "Luna Suave",
+      "peso": 14
     },
     {
       "fuente": "Axel",
@@ -124,13 +124,13 @@
     },
     {
       "fuente": "Seraphina",
-      "destino": "Luna Suave",
-      "peso": 10
+      "destino": "Sol",
+      "peso": 6
     },
     {
       "fuente": "Seraphina",
-      "destino": "Sol",
-      "peso": 6
+      "destino": "Luna Suave",
+      "peso": 10
     },
     {
       "fuente": "Seraphina",
@@ -139,13 +139,13 @@
     },
     {
       "fuente": "Ember",
-      "destino": "Luna Suave",
-      "peso": 14
+      "destino": "Sol",
+      "peso": 10
     },
     {
       "fuente": "Ember",
-      "destino": "Sol",
-      "peso": 10
+      "destino": "Luna Suave",
+      "peso": 14
     },
     {
       "fuente": "Ember",
