@@ -47,8 +47,9 @@
 - **Conocimiento preocupante:** Reportes diplomáticos sobre mantis en territorio de gatos monteses
 
 ### LYRA CAZAVIENTOS - Rastreadora 🟢
-- **⚠️ INCONSISTENCIA DE DESCRIPCIÓN:** seccion_02 la describe como "lince de pelaje rojizo con manchas blancas"; el documento de referencia dice "gata montés de pelaje negro con manchas doradas". Pendiente de resolución.
-- **Descripción (según documento de referencia):** Pelaje negro con manchas doradas, ojos brillantes con determinación férrea y dolor contenido
+- **Especie:** Lince
+- **Descripción canónica:** Pelaje rojizo con manchas blancas, penachos característicos en las orejas, ojos brillantes con determinación férrea y dolor contenido
+- **Justificación de la elección:** Contraste visual con Axel (gato montés gris/plateado); el lince es rastreador natural por anatomía (penachos = audición direccional); silueta distintiva en escena coral
 - **Profesión:** Rastreadora experimentada y especializada
 - **Motivación personal:** Su hermana Luna Platino fue asesinada por Seraphina
 - **Conocimiento clave:** Identidad real de Seraphina desde el primer encuentro
@@ -500,12 +501,12 @@ Servicio postal del Valle de las Mariposas Mensajeras (seccion_08C). Navegan por
 
 ---
 
-## ⚠️ INCONSISTENCIAS PENDIENTES DE RESOLUCIÓN
+## ✅ INCONSISTENCIAS RESUELTAS
 
-### Descripción de Lyra
-- **seccion_02.html:** "lince de pelaje rojizo con manchas blancas"
-- **Historia-interactiva.html (referencia):** "gata montés de pelaje negro con manchas doradas"
-- **Pendiente:** Decidir cuál es la descripción canónica y corregir el archivo que está mal
+### Descripción de Lyra (resuelta)
+- **Decisión canónica:** Lince de pelaje rojizo con manchas blancas (versión de seccion_02)
+- **Razones:** contraste visual con Axel; anatomía de lince (penachos) refuerza su rol de rastreadora; silueta distintiva en escena coral
+- **Archivo a corregir si aparece la otra versión:** historia-interactiva.html (referencia obsoleta)
 
 ---
 

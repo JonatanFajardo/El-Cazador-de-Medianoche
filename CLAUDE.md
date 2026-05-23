@@ -1,5 +1,52 @@
 <!-- REVISADO -->
 
+---
+## REGLA NUMERO 1 — OBLIGATORIA — LEER ANTES DE CUALQUIER EDICION
+
+**NUNCA editar archivos HTML de secciones directamente.**
+**NUNCA usar Read/Grep/Edit sobre seccion_XX.html para modificar narrativa.**
+
+El flujo de edicion es SIEMPRE este, sin excepciones:
+
+1. `query_index.py` — localizar parrafos por data-id, texto, personaje, etc.
+2. `filter.py --minimal` — extraer solo los parrafos necesarios a story_temp.html
+3. Editar `story_temp.html` con los cambios narrativos
+4. `patch.py` — aplicar los cambios de vuelta al HTML original
+
+**Por que:** Editar directamente consume hasta 10x mas tokens (leer archivos de 9000+ palabras completos), rompe el sistema de data-id, y es propenso a errores. El flujo de scripts extrae solo lo necesario.
+
+**Si el usuario pide una edicion narrativa y no has corrido filter.py primero — DETENTE y usa el flujo correcto.**
+
+---
+
+## PALETA TONAL DE REFERENCIA (LEER ANTES DE PROPONER PROSA)
+
+El usuario tiene una sensibilidad tonal definida por estas peliculas-ancla. Toda decision narrativa debe consultarse contra esta paleta:
+
+### Pilares cinematograficos
+- **Ivandoe (HBO / Cartoon Network)** — deadpan absurdista, brevedad punzante, oscuridad bajo la superficie naive, sidekick cinico que contrasta con protagonista idealista
+- **Open Season (Sony 2006)** — animales corales con personalidades distintivas, ritmo brioso, comedia fisica que no sabotea momentos emocionales, mundo animal autoorganizado
+- **Hoppers (Pixar 2025)** — comunicacion entre mundos/especies, puentes entre realidades
+- **Intercambiados (Netflix)** — leccion negativa: el pez villano fallo porque NO plantaron pistas suficientes. Los reveals requieren breadcrumbs visibles aunque sutiles
+
+### Reglas tonales derivadas
+1. **Cada criatura debe tener voz distintiva** — nunca dialogos genericos intercambiables. Cada personaje habla con su deformacion profesional/personalidad (ej: Groundbreaker habla en terminos de ingenieria, Capitan Remolino en terminos de regata, Pluma Plateada como critico gastronomico)
+2. **Comedia y drama coexisten en la misma escena** — no alternancia forzada por capitulos. Una pelea brutal puede cerrar con un beat deadpan; un momento intimo puede tener un detalle absurdo
+3. **Foreshadowing organico (breadcrumbs)** — pistas con doble lectura: plausibles en primera pasada, devastadoras en relectura. Nunca letreros explicitos
+4. **NO "literario triste" sin contrapeso** — el duelo, soledad o melancolia siempre con un detalle vital que recuerde que la historia sigue avanzando
+5. **Brio sobre lentitud literaria** — la audiencia adulta del usuario quiere densidad emocional, no paginas contemplativas. Open Season > literatura rusa
+6. **Madurez sin sensibleria** — adultos heridos hablan MENOS, no en oraciones balanceadas. Cortar declaraciones de sentimientos explicitos
+
+### Energias por personaje
+- **Axel**: humor seco interno, declaraciones cortas, accion antes que palabras
+- **Seraphina (pre-revelacion)**: dolor genuino + deadpan ocasional ("las ramas son particularmente violentas") como unica grieta sutil hacia su verdadero ser
+- **Personajes secundarios**: cada uno con una OBSESION o deformacion profesional que define su voz (ver inventario-maestro.md)
+
+### Lectura minima recomendable: 17+ años
+Si el capitulo cae a registro YA, sensiblero o "Disney moralizante" → revisar contra esta paleta y corregir.
+
+---
+
 # El Cazador de Medianoche y las Lágrimas Robadas
 
 **INSTRUCCIÓN DE TRABAJO:** Comienza a leer después de este comentario `<!-- REVISADO -->` a menos que necesites información específica de secciones anteriores. El contenido anterior a esta marca ha sido revisado y aprobado como guía de referencia para actualizar información no revisada.

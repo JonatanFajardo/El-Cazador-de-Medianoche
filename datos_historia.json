@@ -1,0 +1,2042 @@
+{
+  "generado": "2026-04-20T11:58:40.927259",
+  "resumen": {
+    "total_secciones": 18,
+    "total_palabras": 84081,
+    "secciones_anotadas": 12,
+    "pct_anotado": 66.7
+  },
+  "labels": [
+    "Cap.1",
+    "Cap.2",
+    "Cap.3",
+    "Cap.3B",
+    "Cap.4",
+    "Cap.5",
+    "Cap.6",
+    "Cap.7",
+    "Cap.7A",
+    "Cap.7B",
+    "Cap.8",
+    "Cap.8A",
+    "Cap.8B",
+    "Cap.8C",
+    "Cap.9",
+    "Cap.9A",
+    "Cap.9B",
+    "Cap.10"
+  ],
+  "secciones": [
+    {
+      "id": "seccion_01",
+      "nombre": "Cap.1",
+      "dia": 1,
+      "rttr": 24.629,
+      "ratio_tell": 0.358,
+      "sentimiento": -0.213,
+      "volatilidad": 0.374,
+      "palabras": 3222,
+      "lectura": "14m",
+      "oraciones": 260,
+      "longitud_media": 12.4,
+      "densidad_dialogo": 3.91,
+      "anotado": true,
+      "cobertura_pct": 100.0,
+      "total_parrafos": 161,
+      "por_tipo": {
+        "descripcion": 25,
+        "accion": 17,
+        "introspeccion": 24,
+        "flashback": 1,
+        "dialogo": 94
+      },
+      "por_emocion": {
+        "desconfianza": 31,
+        "nostalgia": 13,
+        "neutral": 8,
+        "tristeza": 31,
+        "determinacion": 22,
+        "asombro": 5,
+        "miedo": 8,
+        "ternura": 29,
+        "esperanza": 13,
+        "alegria": 1
+      },
+      "por_plot": {
+        "gancho": 5,
+        "setup": 17,
+        "foreshadowing": 16,
+        "desarrollo": 102,
+        "revelacion": 9,
+        "climax": 7,
+        "resolucion": 5
+      },
+      "tension_media": 2.5,
+      "intensidad_media": 2.83,
+      "dialogos_por_speaker": {
+        "piedra-vieja": 1,
+        "seraphina": 35,
+        "axel": 23
+      },
+      "narracion_por_focus": {
+        "axel": 97,
+        "piedra-vieja": 3,
+        "seraphina": 89
+      },
+      "num_escenas": 11,
+      "palabras_por_location": {
+        "montanas-heladas": 1143,
+        "cabana-axel": 1505,
+        "puesto-comercial": 61,
+        "cueva-refugio": 269,
+        "camino": 151
+      },
+      "relaciones": {
+        "axel-piedra-vieja": {
+          "neutral": 1
+        },
+        "axel-seraphina": {
+          "neutral": 13,
+          "positiva": 54,
+          "tensa": 14
+        }
+      },
+      "secretos_activos": 4,
+      "revelaciones": [
+        "primera aparición de Seraphina, herida gravemente",
+        "la madre de Seraphina está muriendo",
+        "la madre está siendo convertida en piedra por una maldición",
+        "el padre de Axel desapareció, lleva tres años solo",
+        "Seraphina vino a las montañas con un propósito específico, no fue un accidente",
+        "Seraphina busca las Lágrimas de Luna",
+        "las Lágrimas de Luna son reales y son la única esperanza para la madre; oculta su verdadero objetivo genocida",
+        "la ruta incluye el Valle de los Susurradores y las Cuevas Brillantes con los Osos de Cristal",
+        "existen rumores de un Templo Celestial al este, fuera de los mapas comunes"
+      ]
+    },
+    {
+      "id": "seccion_02",
+      "nombre": "Cap.2",
+      "dia": 2,
+      "rttr": 33.094,
+      "ratio_tell": 0.406,
+      "sentimiento": 0.09,
+      "volatilidad": 0.348,
+      "palabras": 8488,
+      "lectura": "38m",
+      "oraciones": 839,
+      "longitud_media": 10.2,
+      "densidad_dialogo": 3.85,
+      "anotado": true,
+      "cobertura_pct": 100.0,
+      "total_parrafos": 332,
+      "por_tipo": {
+        "setup": 1,
+        "descripcion": 28,
+        "dialogo": 147,
+        "accion": 114,
+        "introspeccion": 25,
+        "transicion": 2,
+        "flashback": 15
+      },
+      "por_emocion": {
+        "neutral": 29,
+        "humor": 63,
+        "desconfianza": 42,
+        "determinacion": 23,
+        "alegria": 24,
+        "miedo": 52,
+        "asombro": 21,
+        "nostalgia": 4,
+        "curiosidad": 2,
+        "ternura": 19,
+        "tristeza": 27,
+        "esperanza": 19,
+        "ira": 3,
+        "culpa": 4
+      },
+      "por_plot": {
+        "setup": 64,
+        "desarrollo": 95,
+        "resolucion": 66,
+        "foreshadowing": 9,
+        "gancho": 13,
+        "revelacion": 23,
+        "transicion": 3,
+        "payoff": 17,
+        "climax": 41,
+        "humor": 1
+      },
+      "tension_media": 2.19,
+      "intensidad_media": 2.55,
+      "dialogos_por_speaker": {
+        "rigoberto": 10,
+        "ruperto": 1,
+        "seraphina": 25,
+        "axel": 48,
+        "lyra": 12,
+        "barba-blanca": 5,
+        "saltarina-valiente": 25,
+        "bigote-plateado": 6,
+        "orejas-largas": 8,
+        "salto-rapido": 3,
+        "pelaje-gris": 3
+      },
+      "narracion_por_focus": {
+        "axel": 174,
+        "seraphina": 83,
+        "rigoberto": 16,
+        "ruperto": 2,
+        "problemas": 21,
+        "lyra": 18,
+        "barba-blanca": 10,
+        "saltarina-valiente": 52,
+        "bigote-plateado": 11,
+        "orejas-largas": 25,
+        "pelaje-gris": 18,
+        "salto-rapido": 7,
+        "grupo": 3
+      },
+      "num_escenas": 16,
+      "palabras_por_location": {
+        "camino": 2772,
+        "campamento": 601,
+        "cabana-axel": 604,
+        "montanas-heladas": 1183,
+        "cueva-refugio": 3032,
+        "valle-susurradores": 144
+      },
+      "relaciones": {
+        "axel-seraphina": {
+          "neutral": 12,
+          "tensa": 4,
+          "positiva": 51
+        }
+      },
+      "secretos_activos": 2,
+      "revelaciones": [
+        "El Templo solo se revela a quienes no lo buscan; los que van directo nunca llegan",
+        "Los mapaches podrían haber vendido rutas falsas para proteger la real",
+        "El búho no destruía la cabaña sino que la reorganizaba con un sistema eficiente",
+        "La ladera norte lleva semanas soltando piedras inusuales; riesgo de avalancha",
+        "Los conejos no están rescatando a Axel y Seraphina, sino conteniéndolos",
+        "La paranoia del clan les impide recolectar suficiente comida para el invierno",
+        "Orejas Largas tiene una cicatriz de garra grande en la oreja izquierda; marca de trauma previo",
+        "Parte de las provisiones tiene contaminación por hongo de nieve, letal para los conejos",
+        "La madre de Seraphina era herbolaria",
+        "Exploradores fingieron hospitalidad para mapear los túneles y luego atacaron con 40 guerreros; murieron 20 conejos incluyendo la madre de Saltarina",
+        "La paranoia del clan Pelaje de Nieve no es irracional sino la respuesta racional a una masacre previa",
+        "El padre de Axel desapareció hace tres años y solo quedó el arco élfico",
+        "Orejas Largas perdió a su hermana cuando un lince atacó la madriguera vieja",
+        "Los Susurradores ven lo que uno esconde y no son amables con los secretos",
+        "Una lince llamada Lyra pasó por el territorio de los conejos el mes pasado",
+        "Lyra había pasado antes por el territorio de los conejos, lo que sugiere que conoce el camino al Valle de los Susurradores",
+        "Los susurros del Valle parecen pronunciar el nombre del padre de Axel"
+      ]
+    },
+    {
+      "id": "seccion_03",
+      "nombre": "Cap.3",
+      "dia": 3,
+      "rttr": 22.87,
+      "ratio_tell": 0.435,
+      "sentimiento": -0.287,
+      "volatilidad": 0.349,
+      "palabras": 3758,
+      "lectura": "17m",
+      "oraciones": 278,
+      "longitud_media": 13.5,
+      "densidad_dialogo": 3.3,
+      "anotado": true,
+      "cobertura_pct": 100.0,
+      "total_parrafos": 132,
+      "por_tipo": {
+        "transicion": 2,
+        "accion": 42,
+        "descripcion": 14,
+        "dialogo": 57,
+        "introspeccion": 13,
+        "profecia": 4
+      },
+      "por_emocion": {
+        "neutral": 9,
+        "asombro": 28,
+        "desconfianza": 24,
+        "miedo": 18,
+        "humor": 3,
+        "ternura": 10,
+        "tristeza": 14,
+        "determinacion": 14,
+        "esperanza": 3,
+        "ira": 4,
+        "nostalgia": 2,
+        "alegria": 3
+      },
+      "por_plot": {
+        "setup": 18,
+        "desarrollo": 68,
+        "foreshadowing": 15,
+        "gancho": 6,
+        "revelacion": 11,
+        "climax": 4,
+        "resolucion": 10
+      },
+      "tension_media": 2.86,
+      "intensidad_media": 2.79,
+      "dialogos_por_speaker": {
+        "axel": 18,
+        "seraphina": 18,
+        "padre-axel": 1,
+        "susurradores": 10
+      },
+      "narracion_por_focus": {
+        "axel": 76,
+        "seraphina": 60,
+        "padre-axel": 3,
+        "susurradores": 12,
+        "ember": 3
+      },
+      "num_escenas": 6,
+      "palabras_por_location": {
+        "camino": 130,
+        "valle-susurradores": 3580
+      },
+      "relaciones": {
+        "axel-seraphina": {
+          "tensa": 8,
+          "neutral": 19,
+          "positiva": 24
+        },
+        "axel-ember": {
+          "tensa": 2
+        }
+      },
+      "secretos_activos": 10,
+      "revelaciones": [
+        "Axel teme que confiar en Seraphina sea un error — pensamiento que ha guardado durante dos años",
+        "El valle devuelve los pensamientos más oscuros de Axel como ecos audibles",
+        "Seraphina reconoce el fenómeno como los Ecos Perdidos",
+        "Los Ecos Perdidos repiten los miedos más profundos de los viajeros — palabras nunca pronunciadas",
+        "Seraphina siente que ya no es quien era antes — teme que su madre no la reconocería por lo que se ha convertido",
+        "Seraphina fue atraída hacia el abismo por el eco de su madre muerta — la pérdida la controla físicamente",
+        "El espíritu del padre de Axel habla a través del arco — le anticipa que encontrará la verdad que el padre dejó guardada",
+        "Axel reconoce la voz sin poder identificarla — su cuerpo sabe algo que su mente todavía no ha encontrado",
+        "El arco élfico pulsa como respuesta a la voz del padre",
+        "Los Susurradores son cinco figuras etéreas en formación circular cuyas voces llegan antes que las palabras",
+        "Los Susurradores llaman a Seraphina 'la que oculta lágrimas de cristal' — saben que esconde algo",
+        "Se necesitan tres llaves de cristal de las cuevas donde la luz se vuelve sólida para acceder a las Lágrimas de Luna",
+        "Los Susurradores advierten que alguien del grupo no busca curación — referencia velada a la agenda oculta de Seraphina",
+        "Profecía: Axel y Ember se reunirán donde el río divide las piedras — lo que uno llama cobardía el otro llamará amor",
+        "Los Susurradores conocen el conflicto con Ember sin que Axel lo haya mencionado — la herida de los hermanos es la más profunda de Axel",
+        "Profecía sobre Seraphina: no distinguirá entre sanar y cortar hasta que la luna le muestre su propia sombra — alusión a su doble naturaleza",
+        "Profecía sobre Axel: no disparar salvará más vidas — el arco paterno no es un arma sino una pregunta sin resolver",
+        "Las Cuevas Brillantes — osos que brillan como estrellas y lágrimas de la montaña convertidas en gemas",
+        "Las Cuevas Brillantes son el siguiente destino — allí encontrarán las llaves de cristal",
+        "Las Lágrimas de Luna juzgan la verdad del corazón — si el corazón miente, condenan; si es puro, redimen. Amenaza implícita para Seraphina",
+        "Axel revela que tiene un hermano llamado Ember, tres años menor, con quien lleva mucho tiempo sin verse",
+        "El conflicto central entre Axel y Ember: lo que uno llama determinación el otro llama obsesión; lo que uno llama rendirse el otro llama seguir adelante",
+        "Seraphina implica que nadie la ha detenido en su camino de venganza — y que parte de ella desearía que alguien lo hiciera",
+        "Seraphina anticipa el momento en que Axel tendrá la oportunidad de dispararle y elegirá no hacerlo — sabe que ese instante existe y los cambiará",
+        "Seraphina teme dar respuestas honestas — porque revelarían su verdadera motivación de venganza ante los Osos de Cristal",
+        "El arco late tibia bajo el tacto de Axel — el padre aún respira en él según los espíritus",
+        "Axel tiene certeza de que verá a Ember pronto — esa certeza le genera rabia, no miedo ni tristeza"
+      ]
+    },
+    {
+      "id": "seccion_03B",
+      "nombre": "Cap.3B",
+      "dia": 4,
+      "rttr": 32.537,
+      "ratio_tell": 0.402,
+      "sentimiento": 0.056,
+      "volatilidad": 0.213,
+      "palabras": 11061,
+      "lectura": "50m",
+      "oraciones": 1056,
+      "longitud_media": 10.6,
+      "densidad_dialogo": 4.85,
+      "anotado": false,
+      "cobertura_pct": 0.0,
+      "total_parrafos": 388,
+      "por_tipo": {},
+      "por_emocion": {},
+      "por_plot": {},
+      "tension_media": null,
+      "intensidad_media": null,
+      "dialogos_por_speaker": {},
+      "narracion_por_focus": {},
+      "num_escenas": 0,
+      "palabras_por_location": {},
+      "relaciones": {},
+      "secretos_activos": 0,
+      "revelaciones": []
+    },
+    {
+      "id": "seccion_04",
+      "nombre": "Cap.4",
+      "dia": 5,
+      "rttr": 23.993,
+      "ratio_tell": 0.313,
+      "sentimiento": -0.333,
+      "volatilidad": 0.317,
+      "palabras": 3313,
+      "lectura": "15m",
+      "oraciones": 329,
+      "longitud_media": 10.1,
+      "densidad_dialogo": 3.35,
+      "anotado": true,
+      "cobertura_pct": 100.0,
+      "total_parrafos": 132,
+      "por_tipo": {
+        "descripcion": 32,
+        "introspeccion": 17,
+        "dialogo": 54,
+        "accion": 28,
+        "transicion": 1
+      },
+      "por_emocion": {
+        "desconfianza": 19,
+        "neutral": 7,
+        "miedo": 21,
+        "tristeza": 36,
+        "determinacion": 21,
+        "asombro": 2,
+        "alegria": 1,
+        "ternura": 3,
+        "humor": 6,
+        "esperanza": 2,
+        "nostalgia": 1,
+        "culpa": 8,
+        "ira": 5
+      },
+      "por_plot": {
+        "setup": 20,
+        "desarrollo": 61,
+        "gancho": 3,
+        "foreshadowing": 13,
+        "climax": 15,
+        "revelacion": 6,
+        "resolucion": 13,
+        "transicion": 1
+      },
+      "tension_media": 3.86,
+      "intensidad_media": 3.11,
+      "dialogos_por_speaker": {
+        "seraphina": 8,
+        "murcielago-joven": 1,
+        "axel": 11,
+        "lyra": 16,
+        "eco-pergaminada": 9,
+        "tinta-ancestral": 5,
+        "lider-cuervos": 2,
+        "murcielago-superviviente": 1
+      },
+      "narracion_por_focus": {
+        "axel": 39,
+        "seraphina": 28,
+        "lyra": 32,
+        "eco-pergaminada": 23,
+        "tinta-ancestral": 12
+      },
+      "num_escenas": 8,
+      "palabras_por_location": {
+        "camino": 618,
+        "cueva-murcielagos": 2457,
+        "campamento": 98
+      },
+      "relaciones": {
+        "axel-seraphina": {
+          "neutral": 4,
+          "tensa": 2,
+          "positiva": 2
+        },
+        "axel-lyra": {
+          "positiva": 10,
+          "neutral": 2,
+          "tensa": 2
+        }
+      },
+      "secretos_activos": 5,
+      "revelaciones": [
+        "la esencia de Umbra el Devorador está sellada en el cristal agrietado",
+        "la presencia de Umbra entra en la mente de Axel a través del cristal roto",
+        "Tinta Ancestral sabía del riesgo pero no tuvo tiempo de advertir",
+        "Seraphina traza un paralelo entre la elección actual y la tragedia de su familia",
+        "los Cuervos de Ónice pertenecen a la Orden de la Luna Menguante",
+        "la presencia de Umbra guió el disparo de Axel hacia un ángulo imposible",
+        "la Orden de la Luna Menguante ya conoce la identidad de Seraphina",
+        "el mapa de Lyra contiene coordenadas codificadas sobre la ruta exacta del grupo"
+      ]
+    },
+    {
+      "id": "seccion_05",
+      "nombre": "Cap.5",
+      "dia": 6,
+      "rttr": 25.942,
+      "ratio_tell": 0.392,
+      "sentimiento": -0.271,
+      "volatilidad": 0.478,
+      "palabras": 3370,
+      "lectura": "15m",
+      "oraciones": 311,
+      "longitud_media": 10.9,
+      "densidad_dialogo": 3.5,
+      "anotado": true,
+      "cobertura_pct": 100.0,
+      "total_parrafos": 121,
+      "por_tipo": {
+        "descripcion": 25,
+        "introspección": 5,
+        "desarrollo": 1,
+        "accion": 32,
+        "dialogo": 57,
+        "introspeccion": 1
+      },
+      "por_emocion": {
+        "desconfianza": 13,
+        "compasion": 3,
+        "miedo": 29,
+        "asombro": 5,
+        "determinacion": 15,
+        "neutral": 9,
+        "preocupacion": 1,
+        "prisa": 1,
+        "nerviosismo": 1,
+        "falsa-paz": 2,
+        "ansiedad": 1,
+        "culpa": 7,
+        "tristeza": 4,
+        "desesperanza": 1,
+        "perplejidad": 4,
+        "resignacion": 2,
+        "ira": 18,
+        "esperanza": 1,
+        "agotamiento": 1,
+        "ternura": 2,
+        "nostalgia": 1
+      },
+      "por_plot": {
+        "setup": 25,
+        "desarrollo": 11,
+        "foreshadowing": 11,
+        "revelacion": 13,
+        "gancho": 15,
+        "climax": 35,
+        "resolucion": 9,
+        "payoff": 1,
+        "transicion": 1
+      },
+      "tension_media": 3.66,
+      "intensidad_media": 3.31,
+      "dialogos_por_speaker": {
+        "topo-lider": 3,
+        "axel": 6,
+        "eco-pergaminada": 8,
+        "tomas": 17,
+        "comerciante-1": 1,
+        "recolector": 1,
+        "seraphina": 6,
+        "rosa": 1,
+        "garra-roja": 5
+      },
+      "narracion_por_focus": {
+        "axel": 32,
+        "seraphina": 24,
+        "topo-lider": 4,
+        "eco-pergaminada": 19,
+        "tomas": 35,
+        "ambiente": 5,
+        "rosa": 4,
+        "comerciante-1": 1,
+        "recolector": 1,
+        "erizo": 2,
+        "grupo": 1,
+        "garra-roja": 10,
+        "lobos": 8,
+        "zorros": 4,
+        "defensores": 2,
+        "plantas": 2
+      },
+      "num_escenas": 7,
+      "palabras_por_location": {
+        "aldea-zorros-plateros": 2653,
+        "camino": 444,
+        "cuevas-minas-abandonadas": 217,
+        "cielo": 43
+      },
+      "relaciones": {},
+      "secretos_activos": 0,
+      "revelaciones": []
+    },
+    {
+      "id": "seccion_06",
+      "nombre": "Cap.6",
+      "dia": 7,
+      "rttr": 23.378,
+      "ratio_tell": 0.463,
+      "sentimiento": -0.028,
+      "volatilidad": 0.502,
+      "palabras": 3679,
+      "lectura": "16m",
+      "oraciones": 357,
+      "longitud_media": 10.3,
+      "densidad_dialogo": 2.56,
+      "anotado": true,
+      "cobertura_pct": 100.0,
+      "total_parrafos": 118,
+      "por_tipo": {
+        "descripcion": 32,
+        "accion": 31,
+        "dialogo": 38,
+        "introspeccion": 15,
+        "transicion": 2
+      },
+      "por_emocion": {
+        "asombro": 29,
+        "desconfianza": 23,
+        "miedo": 12,
+        "tristeza": 10,
+        "determinacion": 14,
+        "neutral": 12,
+        "esperanza": 4,
+        "ternura": 5,
+        "alegria": 6,
+        "ira": 1,
+        "nostalgia": 2
+      },
+      "por_plot": {
+        "foreshadowing": 28,
+        "setup": 20,
+        "desarrollo": 41,
+        "transicion": 4,
+        "revelacion": 8,
+        "payoff": 7,
+        "gancho": 6,
+        "resolucion": 3,
+        "climax": 1
+      },
+      "tension_media": 2.69,
+      "intensidad_media": 3.05,
+      "dialogos_por_speaker": {
+        "seraphina": 6,
+        "umbra": 4,
+        "axel": 6,
+        "osos-cristal": 12,
+        "lyra": 10
+      },
+      "narracion_por_focus": {
+        "seraphina": 48,
+        "ambiente": 2,
+        "axel": 51,
+        "osos-cristal": 18,
+        "padre-axel": 2,
+        "lyra": 19
+      },
+      "num_escenas": 7,
+      "palabras_por_location": {
+        "camino": 1051,
+        "cuevas-brillantes": 666,
+        "jardin-intenciones": 1606,
+        "campamento": 313
+      },
+      "relaciones": {
+        "axel-seraphina": {
+          "tensa": 2,
+          "neutral": 1,
+          "positiva": 5
+        },
+        "axel-lyra": {
+          "positiva": 3,
+          "neutral": 1,
+          "tensa": 2
+        },
+        "lyra-seraphina": {
+          "tensa": 5
+        }
+      },
+      "secretos_activos": 20,
+      "revelaciones": [
+        "Los osos reconocen el arco élfico del padre de Axel",
+        "El padre de Axel visitó las Cuevas Brillantes y cargó el mismo arco",
+        "Las verdaderas intenciones de Axel hacia Seraphina son compasión genuina, casi una promesa",
+        "La planta confirma que las intenciones de Axel son sanación genuina sin búsqueda de poder",
+        "La planta de Seraphina revela amor genuino y defensas letales coexistiendo: ni fracasada ni exitosa",
+        "Seraphina admite en voz alta que aún conserva capacidad de sentir amor o conexión genuina",
+        "Seraphina baja la guardia por un instante completo ante las palabras de Axel",
+        "Las Lágrimas de Cristal son fragmentos del ser de los propios Osos, no simples objetos mágicos",
+        "Los Osos conocen la presencia de Umbra en Axel y advierten que se debilitará cerca del Templo",
+        "El silencio de los Osos confirma implícitamente que el padre de Axel vivió esta misma experiencia",
+        "Seraphina recalibra su plan al ver a Axel obtener las llaves del Templo",
+        "Seraphina tiene una conexión inexplicada con las plantas: la hierba crece donde la toca",
+        "El mapa de Lyra contiene coordenadas repetidas del encuentro anterior y una segunda línea en escritura desconocida"
+      ]
+    },
+    {
+      "id": "seccion_07",
+      "nombre": "Cap.7",
+      "dia": 7,
+      "rttr": 23.364,
+      "ratio_tell": 0.394,
+      "sentimiento": -0.087,
+      "volatilidad": 0.358,
+      "palabras": 3570,
+      "lectura": "16m",
+      "oraciones": 353,
+      "longitud_media": 10.1,
+      "densidad_dialogo": 3.64,
+      "anotado": true,
+      "cobertura_pct": 100.0,
+      "total_parrafos": 120,
+      "por_tipo": {
+        "accion": 32,
+        "descripcion": 22,
+        "dialogo": 56,
+        "introspeccion": 9,
+        "transicion": 1
+      },
+      "por_emocion": {
+        "nostalgia": 6,
+        "asombro": 13,
+        "desconfianza": 13,
+        "neutral": 14,
+        "culpa": 1,
+        "alegria": 15,
+        "humor": 14,
+        "tristeza": 16,
+        "determinacion": 12,
+        "miedo": 3,
+        "ternura": 13
+      },
+      "por_plot": {
+        "setup": 13,
+        "foreshadowing": 8,
+        "desarrollo": 72,
+        "transicion": 1,
+        "payoff": 1,
+        "revelacion": 8,
+        "resolucion": 8,
+        "climax": 5,
+        "gancho": 4
+      },
+      "tension_media": 2.75,
+      "intensidad_media": 3.17,
+      "dialogos_por_speaker": {
+        "umbra": 1,
+        "axel": 20,
+        "seraphina": 7,
+        "ember": 20,
+        "luna-suave": 3,
+        "madre-axel": 5
+      },
+      "narracion_por_focus": {
+        "axel": 53,
+        "umbra": 1,
+        "seraphina": 34,
+        "ember": 37,
+        "lyra": 4,
+        "luna-suave": 9,
+        "sol": 7,
+        "sombra": 3,
+        "madre-axel": 11,
+        "padre-axel": 5
+      },
+      "num_escenas": 6,
+      "palabras_por_location": {
+        "camino": 182,
+        "valle-tranquilo": 3280,
+        "jardin-intenciones": 68
+      },
+      "relaciones": {
+        "axel-seraphina": {
+          "tensa": 3,
+          "positiva": 3
+        },
+        "axel-ember": {
+          "positiva": 19,
+          "tensa": 10
+        },
+        "ember-seraphina": {
+          "positiva": 5,
+          "neutral": 3
+        },
+        "axel-luna-suave": {
+          "positiva": 1
+        },
+        "luna-suave-seraphina": {
+          "positiva": 2
+        },
+        "axel-madre-axel": {
+          "positiva": 3,
+          "tensa": 4
+        },
+        "seraphina-sol": {
+          "positiva": 3
+        }
+      },
+      "secretos_activos": 12,
+      "revelaciones": [
+        "Lyra visitó Valle Tranquilo antes que Axel y dejó un tubo sellado para él",
+        "El padre de Axel buscó el Templo Celestial antes de morir",
+        "El padre de Axel no volvió del Templo; solo encontraron el arco que Axel carga ahora",
+        "Ember y Luna Suave habían acordado este plan antes de la llegada de Axel, desde que Lyra pasó por Valle Tranquilo",
+        "Las Lágrimas de Cristal y la flauta de Ember resuenan juntas por primera vez",
+        "Los tres objetos (Lágrimas de Cristal, arco y flauta) resuenan juntos por primera vez como herencia paterna unificada",
+        "El tubo de Lyra contiene un mapa de frecuencias cristalinas del Jardín de Intenciones, no un mapa geográfico",
+        "Lyra detectó dos frecuencias distintas en Seraphina desde el Jardín de Intenciones, sugiriendo dos intenciones superpuestas en el mismo cuerpo",
+        "Las raíces de Seraphina en el Jardín de Intenciones rodean las de Axel, en una ambigüedad irresuelta entre protección y estrangulamiento"
+      ]
+    },
+    {
+      "id": "seccion_07A",
+      "nombre": "Cap.7A",
+      "dia": 8,
+      "rttr": 23.614,
+      "ratio_tell": 0.403,
+      "sentimiento": 0.114,
+      "volatilidad": 0.426,
+      "palabras": 2531,
+      "lectura": "11m",
+      "oraciones": 285,
+      "longitud_media": 8.9,
+      "densidad_dialogo": 5.53,
+      "anotado": true,
+      "cobertura_pct": 100.0,
+      "total_parrafos": 103,
+      "por_tipo": {
+        "introspeccion": 6,
+        "descripcion": 12,
+        "dialogo": 61,
+        "accion": 22,
+        "resolucion": 1,
+        "revelacion": 1
+      },
+      "por_emocion": {
+        "nostalgia": 3,
+        "desconfianza": 10,
+        "neutral": 10,
+        "alegria": 7,
+        "humor": 45,
+        "asombro": 16,
+        "ira": 2,
+        "determinacion": 5,
+        "ternura": 2,
+        "tristeza": 1,
+        "miedo": 2
+      },
+      "por_plot": {
+        "setup": 14,
+        "desarrollo": 60,
+        "foreshadowing": 7,
+        "revelacion": 3,
+        "climax": 6,
+        "resolucion": 8,
+        "payoff": 2,
+        "gancho": 3
+      },
+      "tension_media": 1.99,
+      "intensidad_media": 2.23,
+      "dialogos_por_speaker": {
+        "ember": 16,
+        "axel": 13,
+        "rigoberto": 23,
+        "mapache-menor": 4,
+        "seraphina": 5
+      },
+      "narracion_por_focus": {
+        "axel": 25,
+        "seraphina": 15,
+        "ember": 17,
+        "rigoberto": 30,
+        "lyra": 7,
+        "erizo": 10
+      },
+      "num_escenas": 7,
+      "palabras_por_location": {
+        "camino": 2364,
+        "campamento": 114
+      },
+      "relaciones": {
+        "axel-ember": {
+          "positiva": 9,
+          "tensa": 3
+        },
+        "axel-rigoberto": {
+          "tensa": 4
+        },
+        "axel-lyra": {
+          "positiva": 5
+        },
+        "axel-seraphina": {
+          "positiva": 4
+        },
+        "ember-seraphina": {
+          "positiva": 4,
+          "tensa": 1
+        }
+      },
+      "secretos_activos": 14,
+      "revelaciones": [
+        "contenido de la nota de lyra sobre frecuencias duales en un mismo cuerpo",
+        "lyra pasó por aquí la semana pasada y ganó el torneo en menos de diez minutos",
+        "lyra estuvo aquí la semana pasada, mencionó no tener tiempo para tonterías de mapaches y ganó sin darles oportunidad de hacer trampa",
+        "lyra preguntó específicamente por un gato montés arquero con arco élfico",
+        "axel admite conocer a lyra y nombrarla por primera vez en voz alta",
+        "los símbolos del mapa de lyra están escritos sobre el bosque de los dados que acaban de cruzar",
+        "lyra sabía que alguien seguiría al grupo por el bosque de los dados",
+        "lyra dejó una advertencia en el mapa: alguien más sigue al grupo"
+      ]
+    },
+    {
+      "id": "seccion_07B",
+      "nombre": "Cap.7B",
+      "dia": 8,
+      "rttr": 20.223,
+      "ratio_tell": 0.517,
+      "sentimiento": 0.108,
+      "volatilidad": 0.419,
+      "palabras": 2133,
+      "lectura": "9m",
+      "oraciones": 215,
+      "longitud_media": 9.9,
+      "densidad_dialogo": 2.95,
+      "anotado": true,
+      "cobertura_pct": 100.0,
+      "total_parrafos": 86,
+      "por_tipo": {
+        "descripcion": 21,
+        "accion": 17,
+        "dialogo": 39,
+        "introspeccion": 6,
+        "transicion": 3
+      },
+      "por_emocion": {
+        "desconfianza": 8,
+        "neutral": 5,
+        "humor": 9,
+        "determinacion": 6,
+        "ira": 9,
+        "ternura": 12,
+        "tristeza": 1,
+        "alegria": 21,
+        "esperanza": 4,
+        "asombro": 3,
+        "miedo": 8
+      },
+      "por_plot": {
+        "setup": 8,
+        "desarrollo": 51,
+        "climax": 1,
+        "resolucion": 11,
+        "payoff": 2,
+        "gancho": 8,
+        "revelacion": 3,
+        "foreshadowing": 2
+      },
+      "tension_media": 1.93,
+      "intensidad_media": 3.09,
+      "dialogos_por_speaker": {
+        "ember": 14,
+        "axel": 12,
+        "seraphina": 5,
+        "chef-casco-brillante": 8
+      },
+      "narracion_por_focus": {
+        "lyra": 1,
+        "axel": 21,
+        "ember": 21,
+        "seraphina": 18,
+        "grupo": 8,
+        "chef-casco-brillante": 12,
+        "ambiente": 1
+      },
+      "num_escenas": 8,
+      "palabras_por_location": {
+        "camino": 956,
+        "otro": 918,
+        "bosque-cuervos-espejo": 214
+      },
+      "relaciones": {
+        "axel-ember": {
+          "neutral": 2,
+          "positiva": 10,
+          "tensa": 15
+        },
+        "axel-seraphina": {
+          "positiva": 6,
+          "tensa": 2
+        },
+        "ember-seraphina": {
+          "positiva": 1
+        }
+      },
+      "secretos_activos": 8,
+      "revelaciones": [
+        "Lyra dejó una nota advirtiendo que alguien más los sigue",
+        "Los mapas no coinciden con la realidad: hay dos senderos donde debería haber uno",
+        "Primera risa genuina y desbordada de Seraphina en toda la historia",
+        "Existe una aldea de armadillos que no aparece en ningún mapa",
+        "Axel ve a Seraphina completamente presente y relajada por primera vez: antenas sueltas, garras abiertas, sin evaluar nada",
+        "Las antenas de Seraphina apuntan a Axel y Ember mientras agradece al Chef, revelando que su gratitud real es hacia ellos",
+        "Los cuervos muestran a Axel su propio reflejo envejecido con algo roto en la expresión",
+        "Seraphina reconoce inmediatamente los cuervos y reacciona con pánico físico total, sugiriendo conocimiento o experiencia previa con ellos"
+      ]
+    },
+    {
+      "id": "seccion_08",
+      "nombre": "Cap.8",
+      "dia": 8,
+      "rttr": 22.096,
+      "ratio_tell": 0.458,
+      "sentimiento": -0.332,
+      "volatilidad": 0.448,
+      "palabras": 3531,
+      "lectura": "16m",
+      "oraciones": 341,
+      "longitud_media": 10.4,
+      "densidad_dialogo": 2.63,
+      "anotado": true,
+      "cobertura_pct": 100.0,
+      "total_parrafos": 110,
+      "por_tipo": {
+        "transicion": 4,
+        "descripcion": 11,
+        "accion": 34,
+        "dialogo": 43,
+        "introspection": 18
+      },
+      "por_emocion": {
+        "tristeza": 1,
+        "desconfianza": 8,
+        "miedo": 12,
+        "asombro": 8,
+        "neutral": 13,
+        "nostalgia": 2,
+        "ira": 5,
+        "ira,dolor": 1,
+        "dolor,ira": 1,
+        "ira,culpa": 2,
+        "miedo,culpa": 1,
+        "culpa": 6,
+        "asombro,horror": 1,
+        "ira,horror": 2,
+        "shock": 1,
+        "ira,determinacion": 2,
+        "ira,ternura": 3,
+        "ternura,esperanza": 1,
+        "determinacion": 13,
+        "culpa,ternura": 3,
+        "ira,indecision": 2,
+        "ternura": 7,
+        "ternura,asombro": 1,
+        "desconfianza,asombro": 1,
+        "desconfianza,ternura": 1,
+        "determinacion,ternura": 1,
+        "tristeza,determinacion": 1,
+        "culpa,esperanza": 1,
+        "miedo,incertidumbre": 1,
+        "esperanza": 3,
+        "nostalgia,ternura": 1,
+        "miedo,esperanza": 1,
+        "alivio": 1,
+        "humor": 1,
+        "determinacion,esperanza": 1
+      },
+      "por_plot": {
+        "setup": 4,
+        "foreshadowing": 6,
+        "desarrollo": 16,
+        "climax": 35,
+        "revelacion": 10,
+        "payoff": 12,
+        "resolucion": 20,
+        "gancho": 5,
+        "transicion": 2
+      },
+      "tension_media": 3.85,
+      "intensidad_media": 3.72,
+      "dialogos_por_speaker": {
+        "ember": 14,
+        "axel": 8,
+        "seraphina": 11,
+        "cuervo-primario": 11
+      },
+      "narracion_por_focus": {
+        "grupo": 14,
+        "seraphina": 25,
+        "axel": 27,
+        "ember": 27,
+        "erizo": 2,
+        "cuervo-primario": 12,
+        "lyra": 7
+      },
+      "num_escenas": 6,
+      "palabras_por_location": {
+        "bosque-cuervos-espejo": 2999,
+        "campamento": 282,
+        "camino": 39,
+        "rio-nutrias": 162
+      },
+      "relaciones": {
+        "axel-ember": {
+          "positiva": 7
+        },
+        "axel-seraphina": {
+          "tensa": 8,
+          "positiva": 3
+        },
+        "ember-seraphina": {
+          "tensa": 3,
+          "negativa": 4,
+          "positiva": 2
+        }
+      },
+      "secretos_activos": 14,
+      "revelaciones": [
+        "Verdadera historia de la hermana de Seraphina y las víctimas",
+        "Detalles completos de venganza y plan genocida de Seraphina",
+        "Identidad del padre de Axel como víctima #6",
+        "Circunstancias de la muerte del padre de Axel",
+        "Confesión de verdadera muerte de la hermana de Seraphina",
+        "Transformación del dolor en odio y plan de venganza",
+        "Detalles de la red de 47 mantis y plan a escala genocida",
+        "Consecuencias del uso de Lágrimas de Luna con odio genocida",
+        "Confirmación del plan genocida original de Seraphina",
+        "Genuino conflicto emocional de Seraphina y cambio de corazón",
+        "Cambio genuino de corazón de Seraphina durante el viaje"
+      ]
+    },
+    {
+      "id": "seccion_08A",
+      "nombre": "Cap.8A",
+      "dia": 9,
+      "rttr": 29.031,
+      "ratio_tell": 0.405,
+      "sentimiento": -0.072,
+      "volatilidad": 0.506,
+      "palabras": 6436,
+      "lectura": "29m",
+      "oraciones": 498,
+      "longitud_media": 12.9,
+      "densidad_dialogo": 3.05,
+      "anotado": false,
+      "cobertura_pct": 0.0,
+      "total_parrafos": 168,
+      "por_tipo": {},
+      "por_emocion": {},
+      "por_plot": {},
+      "tension_media": null,
+      "intensidad_media": null,
+      "dialogos_por_speaker": {},
+      "narracion_por_focus": {},
+      "num_escenas": 0,
+      "palabras_por_location": {},
+      "relaciones": {},
+      "secretos_activos": 0,
+      "revelaciones": []
+    },
+    {
+      "id": "seccion_08B",
+      "nombre": "Cap.8B",
+      "dia": 9,
+      "rttr": 27.283,
+      "ratio_tell": 0.423,
+      "sentimiento": 0.01,
+      "volatilidad": 0.532,
+      "palabras": 5140,
+      "lectura": "23m",
+      "oraciones": 412,
+      "longitud_media": 12.5,
+      "densidad_dialogo": 3.11,
+      "anotado": true,
+      "cobertura_pct": 100.0,
+      "total_parrafos": 138,
+      "por_tipo": {
+        "descripcion": 18,
+        "accion": 39,
+        "dialogo": 54,
+        "transicion": 2,
+        "introspeccion": 24,
+        "descripcio": 1
+      },
+      "por_emocion": {
+        "neutral": 26,
+        "desconfianza": 8,
+        "asombro": 15,
+        "esperanza": 13,
+        "humor": 16,
+        "determinacion": 11,
+        "ira": 10,
+        "hambre": 1,
+        "preocupacion": 1,
+        "culpa": 8,
+        "alegria": 8,
+        "horror": 3,
+        "ternura": 16,
+        "culpa,esperanza": 1,
+        "miedo": 1
+      },
+      "por_plot": {
+        "setup": 13,
+        "desarrollo": 72,
+        "climax": 5,
+        "resolucion": 30,
+        "gancho": 7,
+        "revelacion": 4,
+        "foreshadowing": 7
+      },
+      "tension_media": 1.75,
+      "intensidad_media": 2.33,
+      "dialogos_por_speaker": {
+        "ember": 15,
+        "axel": 12,
+        "pluma-plateada": 14,
+        "seraphina": 7,
+        "murcieleago-snob2": 1,
+        "murcieleagos": 1,
+        "murcieleago-joven": 4
+      },
+      "narracion_por_focus": {
+        "axel": 51,
+        "ember": 44,
+        "pluma-plateada": 28,
+        "seraphina": 34,
+        "murcieleagos": 6,
+        "grupo": 2,
+        "murcieleago-snob2": 1,
+        "erizo": 4,
+        "murcieleago-joven": 9,
+        "arco": 1
+      },
+      "num_escenas": 8,
+      "palabras_por_location": {
+        "montanas-heladas": 5089
+      },
+      "relaciones": {
+        "axel-seraphina": {
+          "neutral": 1
+        },
+        "ember-seraphina": {
+          "tensa": 4,
+          "positiva": 2
+        },
+        "axel-ember": {
+          "positiva": 1
+        },
+        "axel-ember,ember-seraphina": {
+          "positiva": 3
+        },
+        "axel-seraphina,ember-seraphina": {
+          "positiva": 2
+        }
+      },
+      "secretos_activos": 0,
+      "revelaciones": []
+    },
+    {
+      "id": "seccion_08C",
+      "nombre": "Cap.8C",
+      "dia": 9,
+      "rttr": 24.524,
+      "ratio_tell": 0.38,
+      "sentimiento": -0.023,
+      "volatilidad": 0.43,
+      "palabras": 5133,
+      "lectura": "23m",
+      "oraciones": 380,
+      "longitud_media": 13.5,
+      "densidad_dialogo": 4.38,
+      "anotado": true,
+      "cobertura_pct": 100.0,
+      "total_parrafos": 115,
+      "por_tipo": {
+        "transicion": 7,
+        "descripcion": 16,
+        "dialogo": 41,
+        "introspeccion": 16,
+        "accion": 33,
+        "profecia": 1,
+        "flashback": 1
+      },
+      "por_emocion": {
+        "asombro": 21,
+        "ternura": 22,
+        "humor": 8,
+        "neutral": 12,
+        "esperanza": 9,
+        "tristeza": 9,
+        "determinacion": 8,
+        "culpa": 6,
+        "miedo": 9,
+        "desconfianza": 5,
+        "nostalgia": 6
+      },
+      "por_plot": {
+        "setup": 25,
+        "desarrollo": 34,
+        "resolucion": 23,
+        "gancho": 4,
+        "foreshadowing": 9,
+        "climax": 10,
+        "revelacion": 6,
+        "payoff": 4
+      },
+      "tension_media": 1.94,
+      "intensidad_media": 2.9,
+      "dialogos_por_speaker": {
+        "axel": 7,
+        "ember": 11,
+        "ala-de-carta": 10,
+        "mariposa-azul": 1,
+        "seraphina": 11,
+        "mariposa-transparente": 2
+      },
+      "narracion_por_focus": {
+        "axel": 41,
+        "ambiente": 2,
+        "ember": 41,
+        "seraphina": 42,
+        "erizo": 6,
+        "ala-de-carta": 14,
+        "luna-suave": 5,
+        "sol": 2,
+        "sombra": 3,
+        "padre-axel": 10,
+        "mariposa-transparente": 1,
+        "lyra": 7
+      },
+      "num_escenas": 10,
+      "palabras_por_location": {
+        "valle-mariposas": 4974
+      },
+      "relaciones": {
+        "ember-seraphina": {
+          "tensa": 11,
+          "positiva": 6
+        },
+        "ember-luna-suave": {
+          "positiva": 5
+        },
+        "axel-ember": {
+          "positiva": 3
+        },
+        "axel-seraphina": {
+          "tensa": 2,
+          "positiva": 3
+        },
+        "axel-lyra": {
+          "positiva": 3
+        }
+      },
+      "secretos_activos": 0,
+      "revelaciones": [
+        "El arco de Axel tiene conexión con un espíritu o fantasma",
+        "Las Lágrimas de Luna amplifican el corazón; el Templo despierta; el guardián espera",
+        "El guardián del Templo podría ser el espíritu del padre de Axel",
+        "Las Lágrimas responden a la verdad más profunda del corazón, no al deseo consciente",
+        "Seraphina admite que construyó una identidad basada únicamente en la venganza, olvidando quién era antes",
+        "Polvo de ala: revela trampas invisibles, mecanismos ocultos y runas camufladas; se produce una sola vez por mariposa",
+        "Seraphina nombra a sus hermanas en voz alta: Ala Verde, Danza Quieta y Rocío",
+        "Los Tejones Excavadores ya saben que el grupo viene"
+      ]
+    },
+    {
+      "id": "seccion_09",
+      "nombre": "Cap.9",
+      "dia": 9,
+      "rttr": 22.596,
+      "ratio_tell": 0.328,
+      "sentimiento": 0.089,
+      "volatilidad": 0.227,
+      "palabras": 3454,
+      "lectura": "15m",
+      "oraciones": 242,
+      "longitud_media": 14.3,
+      "densidad_dialogo": 5.85,
+      "anotado": false,
+      "cobertura_pct": 0.0,
+      "total_parrafos": 105,
+      "por_tipo": {},
+      "por_emocion": {},
+      "por_plot": {},
+      "tension_media": null,
+      "intensidad_media": null,
+      "dialogos_por_speaker": {},
+      "narracion_por_focus": {},
+      "num_escenas": 0,
+      "palabras_por_location": {},
+      "relaciones": {},
+      "secretos_activos": 0,
+      "revelaciones": []
+    },
+    {
+      "id": "seccion_09A",
+      "nombre": "Cap.9A",
+      "dia": 10,
+      "rttr": 24.764,
+      "ratio_tell": 0.406,
+      "sentimiento": -0.083,
+      "volatilidad": 0.373,
+      "palabras": 4685,
+      "lectura": "21m",
+      "oraciones": 358,
+      "longitud_media": 13.1,
+      "densidad_dialogo": 4.65,
+      "anotado": false,
+      "cobertura_pct": 0.0,
+      "total_parrafos": 123,
+      "por_tipo": {},
+      "por_emocion": {},
+      "por_plot": {},
+      "tension_media": null,
+      "intensidad_media": null,
+      "dialogos_por_speaker": {},
+      "narracion_por_focus": {},
+      "num_escenas": 0,
+      "palabras_por_location": {},
+      "relaciones": {},
+      "secretos_activos": 0,
+      "revelaciones": []
+    },
+    {
+      "id": "seccion_09B",
+      "nombre": "Cap.9B",
+      "dia": 10,
+      "rttr": 18.153,
+      "ratio_tell": 0.524,
+      "sentimiento": 0.098,
+      "volatilidad": 0.287,
+      "palabras": 2297,
+      "lectura": "10m",
+      "oraciones": 170,
+      "longitud_media": 13.5,
+      "densidad_dialogo": 3.48,
+      "anotado": false,
+      "cobertura_pct": 0.0,
+      "total_parrafos": 58,
+      "por_tipo": {},
+      "por_emocion": {},
+      "por_plot": {},
+      "tension_media": null,
+      "intensidad_media": null,
+      "dialogos_por_speaker": {},
+      "narracion_por_focus": {},
+      "num_escenas": 0,
+      "palabras_por_location": {},
+      "relaciones": {},
+      "secretos_activos": 0,
+      "revelaciones": []
+    },
+    {
+      "id": "seccion_10",
+      "nombre": "Cap.10",
+      "dia": 11,
+      "rttr": 27.21,
+      "ratio_tell": 0.4,
+      "sentimiento": -0.311,
+      "volatilidad": 0.334,
+      "palabras": 8280,
+      "lectura": "37m",
+      "oraciones": 631,
+      "longitud_media": 13.1,
+      "densidad_dialogo": 2.14,
+      "anotado": false,
+      "cobertura_pct": 0.0,
+      "total_parrafos": 220,
+      "por_tipo": {},
+      "por_emocion": {},
+      "por_plot": {},
+      "tension_media": null,
+      "intensidad_media": null,
+      "dialogos_por_speaker": {},
+      "narracion_por_focus": {},
+      "num_escenas": 0,
+      "palabras_por_location": {},
+      "relaciones": {},
+      "secretos_activos": 0,
+      "revelaciones": []
+    }
+  ],
+  "presencia_personajes": {
+    "Axel": [
+      36,
+      115,
+      46,
+      119,
+      30,
+      29,
+      44,
+      38,
+      16,
+      18,
+      30,
+      36,
+      28,
+      32,
+      27,
+      30,
+      18,
+      48
+    ],
+    "Seraphina": [
+      20,
+      52,
+      28,
+      93,
+      18,
+      14,
+      23,
+      27,
+      8,
+      12,
+      18,
+      26,
+      21,
+      24,
+      21,
+      13,
+      11,
+      49
+    ],
+    "Ember": [
+      3,
+      0,
+      3,
+      0,
+      0,
+      0,
+      0,
+      30,
+      9,
+      18,
+      23,
+      37,
+      22,
+      29,
+      19,
+      0,
+      1,
+      12
+    ],
+    "El Erizo": [
+      0,
+      7,
+      0,
+      2,
+      0,
+      2,
+      0,
+      0,
+      5,
+      0,
+      1,
+      4,
+      2,
+      8,
+      6,
+      6,
+      5,
+      11
+    ],
+    "Sol": [
+      1,
+      0,
+      2,
+      3,
+      0,
+      0,
+      1,
+      11,
+      0,
+      2,
+      6,
+      5,
+      2,
+      10,
+      5,
+      1,
+      0,
+      5
+    ],
+    "Luna Suave": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      17,
+      0,
+      0,
+      1,
+      3,
+      5,
+      7,
+      5,
+      0,
+      0,
+      3
+    ],
+    "Templo Celestial": [
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      3,
+      4,
+      0,
+      0,
+      1,
+      0,
+      2,
+      4,
+      5,
+      4,
+      4,
+      8
+    ],
+    "Susurradores": [
+      2,
+      6,
+      8,
+      10,
+      3,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      2,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "Eco Pergaminada": [
+      0,
+      0,
+      0,
+      0,
+      14,
+      19,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "Sombra": [
+      1,
+      1,
+      3,
+      3,
+      0,
+      0,
+      0,
+      6,
+      0,
+      0,
+      2,
+      2,
+      0,
+      8,
+      3,
+      0,
+      0,
+      3
+    ],
+    "Groundbreaker": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      8,
+      15,
+      3,
+      3
+    ],
+    "Cuevas Brillantes": [
+      1,
+      0,
+      5,
+      10,
+      1,
+      0,
+      6,
+      2,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "Lágrimas De Luna": [
+      2,
+      1,
+      1,
+      3,
+      1,
+      0,
+      1,
+      2,
+      0,
+      0,
+      2,
+      0,
+      0,
+      2,
+      2,
+      3,
+      2,
+      3
+    ],
+    "Problemas": [
+      1,
+      13,
+      1,
+      0,
+      1,
+      2,
+      0,
+      2,
+      0,
+      0,
+      0,
+      4,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "Pelaje Gris": [
+      0,
+      20,
+      0,
+      0,
+      0,
+      2,
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "grafo_personajes": {
+    "nodos": [
+      {
+        "id": "Axel",
+        "menciones": 740,
+        "color": "#e8c870"
+      },
+      {
+        "id": "Seraphina",
+        "menciones": 478,
+        "color": "#7bb87b"
+      },
+      {
+        "id": "Ember",
+        "menciones": 206,
+        "color": "#7098c8"
+      },
+      {
+        "id": "El Erizo",
+        "menciones": 59,
+        "color": "#b07850"
+      },
+      {
+        "id": "Sol",
+        "menciones": 54,
+        "color": "#e8a030"
+      },
+      {
+        "id": "Luna Suave",
+        "menciones": 41,
+        "color": "#a0b8d8"
+      },
+      {
+        "id": "Templo Celestial",
+        "menciones": 37,
+        "color": "#c8a060"
+      },
+      {
+        "id": "Susurradores",
+        "menciones": 36,
+        "color": "#7bc8c8"
+      },
+      {
+        "id": "Eco Pergaminada",
+        "menciones": 35,
+        "color": "#c090c0"
+      },
+      {
+        "id": "Sombra",
+        "menciones": 32,
+        "color": "#505878"
+      },
+      {
+        "id": "Groundbreaker",
+        "menciones": 30,
+        "color": "#907060"
+      },
+      {
+        "id": "Cuevas Brillantes",
+        "menciones": 26,
+        "color": "#90c870"
+      },
+      {
+        "id": "Lágrimas De Luna",
+        "menciones": 25,
+        "color": "#8b949e"
+      },
+      {
+        "id": "Problemas",
+        "menciones": 24,
+        "color": "#a0a0a0"
+      },
+      {
+        "id": "Pelaje Gris",
+        "menciones": 24,
+        "color": "#909090"
+      }
+    ],
+    "enlaces": [
+      {
+        "fuente": "Axel",
+        "destino": "Ember",
+        "peso": 24
+      },
+      {
+        "fuente": "Axel",
+        "destino": "Seraphina",
+        "peso": 22
+      },
+      {
+        "fuente": "Axel",
+        "destino": "Pelaje Gris",
+        "peso": 2
+      },
+      {
+        "fuente": "Axel",
+        "destino": "Problemas",
+        "peso": 2
+      },
+      {
+        "fuente": "Axel",
+        "destino": "Eco Pergaminada",
+        "peso": 6
+      },
+      {
+        "fuente": "Axel",
+        "destino": "Sol",
+        "peso": 10
+      },
+      {
+        "fuente": "Axel",
+        "destino": "Luna Suave",
+        "peso": 14
+      },
+      {
+        "fuente": "Axel",
+        "destino": "Groundbreaker",
+        "peso": 10
+      },
+      {
+        "fuente": "Seraphina",
+        "destino": "Pelaje Gris",
+        "peso": 2
+      },
+      {
+        "fuente": "Seraphina",
+        "destino": "Problemas",
+        "peso": 2
+      },
+      {
+        "fuente": "Seraphina",
+        "destino": "Ember",
+        "peso": 16
+      },
+      {
+        "fuente": "Seraphina",
+        "destino": "Eco Pergaminada",
+        "peso": 2
+      },
+      {
+        "fuente": "Seraphina",
+        "destino": "Sol",
+        "peso": 6
+      },
+      {
+        "fuente": "Seraphina",
+        "destino": "Luna Suave",
+        "peso": 10
+      },
+      {
+        "fuente": "Seraphina",
+        "destino": "Groundbreaker",
+        "peso": 6
+      },
+      {
+        "fuente": "Ember",
+        "destino": "Sol",
+        "peso": 10
+      },
+      {
+        "fuente": "Ember",
+        "destino": "Luna Suave",
+        "peso": 14
+      },
+      {
+        "fuente": "Ember",
+        "destino": "Groundbreaker",
+        "peso": 8
+      },
+      {
+        "fuente": "Sol",
+        "destino": "Luna Suave",
+        "peso": 10
+      },
+      {
+        "fuente": "Sol",
+        "destino": "Groundbreaker",
+        "peso": 6
+      },
+      {
+        "fuente": "Luna Suave",
+        "destino": "Groundbreaker",
+        "peso": 6
+      },
+      {
+        "fuente": "Problemas",
+        "destino": "Pelaje Gris",
+        "peso": 2
+      }
+    ]
+  },
+  "palabras_por_dia": {
+    "labels": [
+      "Día 1",
+      "Día 2",
+      "Día 3",
+      "Día 4",
+      "Día 5",
+      "Día 6",
+      "Día 7",
+      "Día 8",
+      "Día 9",
+      "Día 10",
+      "Día 11"
+    ],
+    "vals": [
+      3222,
+      8488,
+      3758,
+      11061,
+      3313,
+      3370,
+      7249,
+      8195,
+      20163,
+      6982,
+      8280
+    ]
+  },
+  "misterio": {
+    "secretos_activos": [
+      4,
+      2,
+      10,
+      0,
+      5,
+      0,
+      20,
+      12,
+      14,
+      8,
+      14,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "revelaciones_acum": [
+      9,
+      26,
+      53,
+      53,
+      61,
+      61,
+      74,
+      83,
+      91,
+      99,
+      110,
+      110,
+      110,
+      118,
+      118,
+      118,
+      118,
+      118
+    ]
+  },
+  "lugares": {
+    "montanas-heladas": 7415,
+    "cabana-axel": 2109,
+    "puesto-comercial": 61,
+    "cueva-refugio": 3301,
+    "camino": 8707,
+    "campamento": 1408,
+    "valle-susurradores": 3724,
+    "cueva-murcielagos": 2457,
+    "aldea-zorros-plateros": 2653,
+    "cuevas-minas-abandonadas": 217,
+    "cielo": 43,
+    "cuevas-brillantes": 666,
+    "jardin-intenciones": 1674,
+    "valle-tranquilo": 3280,
+    "otro": 918,
+    "bosque-cuervos-espejo": 3213,
+    "rio-nutrias": 162,
+    "valle-mariposas": 4974
+  }
+}

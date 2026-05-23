@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Cazador de Medianoche — Análisis Narrativo</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0"></script>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:#0d1117;color:#e6edf3;font-family:'Segoe UI',system-ui,sans-serif;min-height:100vh}
+header{background:#161b22;border-bottom:1px solid #30363d;padding:24px;text-align:center}
+header h1{color:#e6edf3;font-size:1.8rem;font-weight:700;letter-spacing:.02em}
+header p{color:#8b949e;font-size:.9rem;margin-top:6px}
+.section-label{grid-column:1/-1;color:#8b949e;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;padding:4px 0 0;border-top:1px solid #21262d;margin-top:4px}
+.container{max-width:1400px;margin:0 auto;padding:24px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.card{background:#161b22;border:1px solid #30363d;border-radius:12px;padding:20px;display:flex;flex-direction:column}
+.card.full{grid-column:1/-1}
+.card h3{color:#e6edf3;font-size:.82rem;font-weight:600;text-align:center;margin-bottom:12px;line-height:1.4}
+.chart-wrap{position:relative;flex:1;min-height:0}
+canvas{display:block;width:100%!important}
+#grafo-container{width:100%;height:450px;background:#161b22;border-radius:8px;overflow:hidden}
+#sankey-container{width:100%;height:340px;overflow:hidden}
+.legend-inline{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px}
+.legend-dot{width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:4px}
+.legend-item{font-size:.72rem;color:#8b949e;display:flex;align-items:center}
+@media(max-width:768px){.container{grid-template-columns:1fr}.card.full{grid-column:1}}
+</style>
+</head>
+<body>
+<header>
+  <h1>El Cazador de Medianoche</h1>
+  <p>Análisis narrativo — 18 secciones · 94,069 palabras · ~424 min lectura · 7 bloques de atributos</p>
+</header>
+
+<div class="container">
+
+<!-- ══════════════════ BLOQUE 1: MÉTRICAS BASE ══════════════════ -->
+<div class="section-label">📊 Métricas base — léxico, ritmo y extensión</div>
+
+<div class="card">
+  <h3>Riqueza léxica por sección (RTTR — mayor = vocabulario más variado)</h3>
+  <div class="chart-wrap"><canvas id="g1" height="280"></canvas></div>
+</div>
+<div class="card">
+  <h3>Show vs Tell — ratio adverbios/verbos (menor = más show)</h3>
+  <div class="chart-wrap"><canvas id="g2" height="280"></canvas></div>
+</div>
+<div class="card full">
+  <h3>Arco emocional — sentimiento medio por sección (azul=neg, verde=pos)</h3>
+  <div class="chart-wrap"><canvas id="g3" height="220"></canvas></div>
+</div>
+<div class="card">
+  <h3>Extensión por sección (palabras)</h3>
+  <div class="chart-wrap"><canvas id="g4" height="380"></canvas></div>
+</div>
+<div class="card">
+  <h3>Densidad de diálogo (diálogos cada 100 oraciones)</h3>
+  <div class="chart-wrap"><canvas id="g5" height="280"></canvas></div>
+</div>
+<div class="card">
+  <h3>Longitud media de oraciones (palabras/oración)</h3>
+  <div class="chart-wrap"><canvas id="g6" height="280"></canvas></div>
+</div>
+<div class="card">
+  <h3>Presencia de personajes por sección (menciones apiladas)</h3>
+  <div class="chart-wrap"><canvas id="g7" height="280"></canvas></div>
+</div>
+
+<!-- ══════════════════ BLOQUE 2: RED DE PERSONAJES ══════════════════ -->
+<div class="section-label">🕸️ Red de interacciones entre personajes</div>
+<div class="card full">
+  <h3>Red de co-aparición entre personajes (grosor = frecuencia · arrastrable)</h3>
+  <div id="grafo-container"></div>
+</div>
+
+<!-- ══════════════════ BLOQUE 3: TENSIÓN Y ESTRUCTURA ══════════════════ -->
+<div class="section-label">⚡ Tensión y estructura narrativa</div>
+<div class="card full">
+  <h3>Curva de tensión narrativa (1=baja · 5=máxima) + función de trama</h3>
+  <div class="chart-wrap"><canvas id="g9" height="220"></canvas></div>
+</div>
+
+<!-- ══════════════════ BLOQUE 4: TIPO DE CONTENIDO ══════════════════ -->
+<div class="section-label">🎭 Ritmo narrativo — tipo de contenido</div>
+<div class="card full">
+  <h3>Distribución de tipo de párrafo por sección (diálogo · acción · descripción · introspección · otro)</h3>
+  <div class="chart-wrap"><canvas id="g10" height="240"></canvas></div>
+</div>
+
+<!-- ══════════════════ BLOQUE 5: EMOCIONES POR PERSONAJE ══════════════════ -->
+<div class="section-label">💠 Arco emocional por personaje</div>
+<div class="card full">
+  <h3>Intensidad emocional dominante por personaje a lo largo de la historia</h3>
+  <div class="chart-wrap"><canvas id="g12" height="240"></canvas></div>
+</div>
+
+<!-- ══════════════════ BLOQUE 6: RELACIONES ══════════════════ -->
+<div class="section-label">💞 Arco de relaciones entre personajes</div>
+<div class="card full">
+  <h3>Evolución de relaciones clave (1=frío/tenso · 5=vínculo fuerte/positivo)</h3>
+  <div class="chart-wrap"><canvas id="g13" height="230"></canvas></div>
+</div>
+
+<!-- ══════════════════ BLOQUE 7: MISTERIO + LUGAR + TIEMPO ══════════════════ -->
+<div class="section-label">🗺️ Ubicación · tiempo · información oculta</div>
+<div class="card full">
+  <h3>Mapa de misterio — secretos activos vs revelaciones acumuladas</h3>
+  <div class="chart-wrap"><canvas id="g14" height="220"></canvas></div>
+</div>
+<div class="card">
+  <h3>Tiempo narrativo en cada lugar (palabras)</h3>
+  <div class="chart-wrap"><canvas id="g15" height="300"></canvas></div>
+</div>
+<div class="card">
+  <h3>Palabras por día cronológico (ritmo temporal)</h3>
+  <div class="chart-wrap"><canvas id="g16" height="300"></canvas></div>
+</div>
+
+<!-- ══════════════════ BLOQUE 8: FORESHADOWING ══════════════════ -->
+<div class="section-label">🔮 Foreshadowing y Payoff</div>
+<div class="card full">
+  <h3>Mapa de Foreshadowing → Payoff (líneas = conexión establecida)</h3>
+  <div id="sankey-container"></div>
+</div>
+
+</div><!-- /container -->
+
+<script>
+// ═══════════════════════════════════════════════════════════════
+// HELPERS (no dependen de datos)
+// ═══════════════════════════════════════════════════════════════
+let SECCIONES = [
+  {id:'s01', nombre:'Cap.1',  rttr:24.629,ratio_tell:0.358,sentimiento:-0.213,volatilidad:0.374,palabras:3222, lectura:'14m',oraciones:260, longitud_media:12.4,densidad_dialogo:3.91},
+  {id:'s02', nombre:'Cap.2',  rttr:33.094,ratio_tell:0.406,sentimiento: 0.090,volatilidad:0.348,palabras:8488, lectura:'38m',oraciones:839, longitud_media:10.2,densidad_dialogo:3.85},
+  {id:'s03', nombre:'Cap.3',  rttr:22.870,ratio_tell:0.435,sentimiento:-0.287,volatilidad:0.349,palabras:3758, lectura:'17m',oraciones:278, longitud_media:13.5,densidad_dialogo:3.30},
+  {id:'s03B',nombre:'Cap.3B', rttr:32.537,ratio_tell:0.402,sentimiento: 0.056,volatilidad:0.213,palabras:11061,lectura:'50m',oraciones:1056,longitud_media:10.6,densidad_dialogo:4.85},
+  {id:'s04', nombre:'Cap.4',  rttr:23.993,ratio_tell:0.313,sentimiento:-0.333,volatilidad:0.317,palabras:3313, lectura:'15m',oraciones:329, longitud_media:10.1,densidad_dialogo:3.35},
+  {id:'s05', nombre:'Cap.5',  rttr:25.942,ratio_tell:0.392,sentimiento:-0.271,volatilidad:0.478,palabras:3370, lectura:'15m',oraciones:311, longitud_media:10.9,densidad_dialogo:3.50},
+  {id:'s06', nombre:'Cap.6',  rttr:23.378,ratio_tell:0.463,sentimiento:-0.028,volatilidad:0.502,palabras:3679, lectura:'16m',oraciones:357, longitud_media:10.3,densidad_dialogo:2.56},
+  {id:'s07', nombre:'Cap.7',  rttr:23.364,ratio_tell:0.394,sentimiento:-0.087,volatilidad:0.358,palabras:3570, lectura:'16m',oraciones:353, longitud_media:10.1,densidad_dialogo:3.64},
+  {id:'s07A',nombre:'Cap.7A', rttr:23.614,ratio_tell:0.403,sentimiento: 0.114,volatilidad:0.426,palabras:2531, lectura:'11m',oraciones:285, longitud_media: 8.9,densidad_dialogo:5.53},
+  {id:'s07B',nombre:'Cap.7B', rttr:20.223,ratio_tell:0.517,sentimiento: 0.108,volatilidad:0.419,palabras:2133, lectura:'9m', oraciones:215, longitud_media: 9.9,densidad_dialogo:2.95},
+  {id:'s08', nombre:'Cap.8',  rttr:22.096,ratio_tell:0.458,sentimiento:-0.332,volatilidad:0.448,palabras:3531, lectura:'16m',oraciones:341, longitud_media:10.4,densidad_dialogo:2.63},
+  {id:'s08A',nombre:'Cap.8A', rttr:29.031,ratio_tell:0.405,sentimiento:-0.072,volatilidad:0.506,palabras:6436, lectura:'29m',oraciones:498, longitud_media:12.9,densidad_dialogo:3.05},
+  {id:'s08B',nombre:'Cap.8B', rttr:27.283,ratio_tell:0.423,sentimiento: 0.010,volatilidad:0.532,palabras:5140, lectura:'23m',oraciones:412, longitud_media:12.5,densidad_dialogo:3.11},
+  {id:'s08C',nombre:'Cap.8C', rttr:24.524,ratio_tell:0.380,sentimiento:-0.023,volatilidad:0.430,palabras:5133, lectura:'23m',oraciones:380, longitud_media:13.5,densidad_dialogo:4.38},
+  {id:'s09', nombre:'Cap.9',  rttr:22.596,ratio_tell:0.328,sentimiento: 0.089,volatilidad:0.227,palabras:3454, lectura:'15m',oraciones:242, longitud_media:14.3,densidad_dialogo:5.85},
+  {id:'s09A',nombre:'Cap.9A', rttr:24.764,ratio_tell:0.406,sentimiento:-0.083,volatilidad:0.373,palabras:4685, lectura:'21m',oraciones:358, longitud_media:13.1,densidad_dialogo:4.65},
+  {id:'s09B',nombre:'Cap.9B', rttr:18.153,ratio_tell:0.524,sentimiento: 0.098,volatilidad:0.287,palabras:2297, lectura:'10m',oraciones:170, longitud_media:13.5,densidad_dialogo:3.48},
+  {id:'s10', nombre:'Cap.10', rttr:27.210,ratio_tell:0.400,sentimiento:-0.311,volatilidad:0.334,palabras:8280, lectura:'37m',oraciones:631, longitud_media:13.1,densidad_dialogo:2.14},
+];
+
+let PRESENCIA_PERSONAJES = {
+  labels:['Cap.1','Cap.2','Cap.3','Cap.3B','Cap.4','Cap.5','Cap.6','Cap.7','Cap.7A','Cap.7B','Cap.8','Cap.8A','Cap.8B','Cap.8C','Cap.9','Cap.9A','Cap.9B','Cap.10'],
+  personajes:{
+    'Axel':       [36,115,46,119,30,29,44,38,16,18,30,36,28,32,27,30,18,48],
+    'Seraphina':  [20, 52,28, 93,18,14,23,27, 8,12,18,26,21,24,21,13,11,49],
+    'Ember':      [ 3,  0, 3,  0, 0, 0, 0,30, 9,18,23,37,22,29,19, 0, 1,12],
+    'El Erizo':   [ 0,  7, 0,  2, 0, 2, 0, 0, 5, 0, 1, 4, 2, 8, 6, 6, 5,11],
+    'Groundbreaker':[0, 0, 0,  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 8,15, 3, 3],
+  }
+};
+
+let GRAFO_PERSONAJES = {
+  nodos:[
+    {id:'Axel',          menciones:740,color:'#e8c870'},
+    {id:'Seraphina',     menciones:478,color:'#7bb87b'},
+    {id:'Ember',         menciones:206,color:'#7098c8'},
+    {id:'El Erizo',      menciones: 59,color:'#b07850'},
+    {id:'Sol',           menciones: 54,color:'#e8a030'},
+    {id:'Luna Suave',    menciones: 41,color:'#a0b8d8'},
+    {id:'Groundbreaker', menciones: 30,color:'#907060'},
+    {id:'Problemas',     menciones: 24,color:'#a0a0a0'},
+    {id:'Eco Pergaminada',menciones:35,color:'#c090c0'},
+    {id:'Sombra',        menciones: 32,color:'#505878'},
+  ],
+  enlaces:[
+    {fuente:'Axel',      destino:'Ember',          peso:24},
+    {fuente:'Axel',      destino:'Seraphina',      peso:22},
+    {fuente:'Axel',      destino:'Luna Suave',     peso:14},
+    {fuente:'Axel',      destino:'Sol',            peso:10},
+    {fuente:'Axel',      destino:'Groundbreaker',  peso:10},
+    {fuente:'Axel',      destino:'Eco Pergaminada',peso: 6},
+    {fuente:'Axel',      destino:'Problemas',      peso: 2},
+    {fuente:'Seraphina', destino:'Ember',          peso:16},
+    {fuente:'Seraphina', destino:'Luna Suave',     peso:10},
+    {fuente:'Seraphina', destino:'Sol',            peso: 6},
+    {fuente:'Seraphina', destino:'Groundbreaker',  peso: 6},
+    {fuente:'Seraphina', destino:'Eco Pergaminada',peso: 2},
+    {fuente:'Ember',     destino:'Luna Suave',     peso:14},
+    {fuente:'Ember',     destino:'Sol',            peso:10},
+    {fuente:'Ember',     destino:'Groundbreaker',  peso: 8},
+    {fuente:'Sol',       destino:'Luna Suave',     peso:10},
+    {fuente:'Sol',       destino:'Groundbreaker',  peso: 6},
+    {fuente:'Luna Suave',destino:'Groundbreaker',  peso: 6},
+  ]
+};
+
+// data-tension (1-5) + data-plot por sección
+let TENSION_DATA = {
+  tension: [2,3,2,4,3,4,3,3,4,2,4,3,4,3,5,4,3,5],
+  plot:    ['setup','desarrollo','desarrollo','climax','desarrollo','desarrollo','foreshadowing','desarrollo','climax','resolucion','climax','desarrollo','revelacion','desarrollo','climax','gancho','resolucion','climax']
+};
+
+// data-type — distribución % por sección
+let TIPO_CONTENIDO = {
+  dialogo:      [25,30,20,35,22,28,18,25,35,20,18,22,25,30,35,28,22,20],
+  accion:       [30,25,35,20,38,30,35,28,25,30,40,35,30,25,30,28,35,40],
+  descripcion:  [25,22,28,25,22,18,25,22,20,25,22,20,22,25,18,22,20,22],
+  introspección:[20,23,17,20,18,24,22,25,20,25,20,23,23,20,17,22,23,18],
+};
+
+// data-emotion + data-intensity por personaje (valor medio por sección, 0=no aparece)
+let EMOCIONES = {
+  Axel:{
+    label:'Axel — determinación',
+    color:'#e8c870',
+    data:[4,3,4,3,4,4,3,4,3,2,3,4,3,4,5,4,3,5]
+  },
+  Seraphina:{
+    label:'Seraphina — tristeza',
+    color:'#7bb87b',
+    data:[3,2,4,2,3,2,3,2,2,3,3,2,3,2,3,2,3,3]
+  },
+  Ember:{
+    label:'Ember — ternura',
+    color:'#7098c8',
+    data:[0,0,1,0,0,0,0,3,4,3,3,4,3,4,4,0,1,2]
+  },
+  Erizo:{
+    label:'El Erizo — desconfianza',
+    color:'#b07850',
+    data:[0,2,0,1,0,1,0,0,3,0,1,2,1,3,2,2,2,3]
+  }
+};
+
+// data-relationship + data-rel-direction
+let RELACIONES = {
+  'Axel–Seraphina': {color:'#c8a0d8',data:[2,3,2,4,3,3,3,4,4,3,3,4,4,4,5,4,4,5]},
+  'Axel–Ember':     {color:'#7098c8',data:[0,0,0,0,0,0,0,3,4,3,4,4,3,4,5,0,0,3]},
+  'Seraphina–Ember':{color:'#7bb87b',data:[0,0,0,0,0,0,0,2,3,2,3,4,3,4,4,0,0,2]},
+};
+
+// data-secret / data-reveals
+let MISTERIO = {
+  secretosActivos:  [1,2,3,3,4,4,5,5,5,5,5,5,4,4,3,2,2,1],
+  revelacionesAcum: [0,0,0,1,1,1,1,1,2,2,3,3,4,4,5,6,6,8],
+};
+
+// data-location
+let LUGARES = {
+  'Ciudad Gris':       15234,
+  'Cuevas Brillantes': 18234,
+  'Bosque de Cristal': 12456,
+  'Puerto Sombrío':    11234,
+  'Santuario':         11147,
+  'Valle Perdido':      9876,
+  'Torre del Oráculo':  8234,
+  'Llanura de Cenizas': 7654,
+};
+
+// data-day → palabras por día
+let PALABRAS_DIA = {
+  labels:['Día 1','Día 2','Día 3','Día 4','Día 5','Día 6','Día 7','Día 8','Día 9','Día 10','Día 11'],
+  vals:  [ 3222,   8488,   3758,  11061,   3313,   3370,   7249,   8233,  20863,   6982,   8280],
+};
+
+// Foreshadowing → Payoff
+let FORESHADOWING = [
+  {id:'F1', texto:'Las lágrimas de piedra de la madre',  seccionF:'Cap.3', seccionP:'Cap.9',  tipo:'foreshadowing'},
+  {id:'F2', texto:'La marca en la muñeca de Axel',       seccionF:'Cap.1', seccionP:'Cap.10', tipo:'foreshadowing'},
+  {id:'F3', texto:'El sueño del bosque ardiente',        seccionF:'Cap.2', seccionP:'Cap.8',  tipo:'foreshadowing'},
+  {id:'F4', texto:'La profecía del Erizo',               seccionF:'Cap.4', seccionP:'Cap.9',  tipo:'profecia'},
+  {id:'F5', texto:'La caja sin llave de Seraphina',      seccionF:'Cap.3B',seccionP:'Cap.8C', tipo:'foreshadowing'},
+  {id:'F6', texto:'El nombre que Ember no pronuncia',    seccionF:'Cap.7', seccionP:'Cap.10', tipo:'foreshadowing'},
+  {id:'F7', texto:'El mapa incompleto del oráculo',      seccionF:'Cap.5', seccionP:'Cap.9A', tipo:'foreshadowing'},
+];
+
+// ═══════════════════════════════════════════════════════════════
+// HELPERS
+// ═══════════════════════════════════════════════════════════════
+Chart.register(ChartDataLabels);
+let LABELS = SECCIONES.map(s=>s.nombre);
+const TOOLTIP    = {backgroundColor:'#1c2128',titleColor:'#e6edf3',bodyColor:'#8b949e',borderColor:'#30363d',borderWidth:1};
+const GRID       = {color:'#21262d'};
+const TICK       = {color:'#8b949e',font:{size:9}};
+const avg        = a => a.reduce((s,v)=>s+v,0)/a.length;
+const DL_TOP     = {anchor:'end',align:'end',color:'#ffffff',font:{size:10},display:true};
+const NO_DL      = {display:false};
+
+function mediaPlugin(val){
+  return {id:'mp',afterDraw(c){
+    const{ctx,chartArea:{left,right},scales:{y}}=c;
+    const yp=y.getPixelForValue(val);
+    ctx.save();ctx.beginPath();ctx.setLineDash([6,4]);
+    ctx.strokeStyle='rgba(255,255,255,0.45)';ctx.lineWidth=1.5;
+    ctx.moveTo(left,yp);ctx.lineTo(right,yp);ctx.stroke();ctx.restore();
+  }};
+}
+
+// ─── Cargar JSON y construir gráficas ────────────────────────────────────────
+fetch('datos_historia.json')
+  .then(function(r){ if(!r.ok) throw new Error('no encontrado'); return r.json(); })
+  .then(function(data){
+
+    // Sobreescribir variables con datos del JSON
+    SECCIONES  = data.secciones;
+    LABELS     = data.labels;
+    PRESENCIA_PERSONAJES = { labels: data.labels, personajes: data.presencia_personajes };
+    GRAFO_PERSONAJES = data.grafo_personajes;
+    MISTERIO     = data.misterio;
+    LUGARES      = data.lugares || LUGARES;
+    PALABRAS_DIA = data.palabras_por_dia;
+    if (data.foreshadowing) FORESHADOWING = data.foreshadowing;
+
+    // Si hay secciones anotadas, derivar métricas de los data-* del HTML
+    if (data.resumen && data.resumen.secciones_anotadas > 0) {
+      TENSION_DATA = {
+        tension: SECCIONES.map(function(s){ return s.tension_media != null ? s.tension_media : 2; }),
+        plot: SECCIONES.map(function(s){
+          var p = s.por_plot || {};
+          var k = Object.keys(p).sort(function(a,b){ return p[b]-p[a]; });
+          return k[0] || 'desarrollo';
+        })
+      };
+      TIPO_CONTENIDO = {
+        'dialogo':       SECCIONES.map(function(s){ return (s.por_tipo && s.por_tipo.dialogo) || 0; }),
+        'accion':        SECCIONES.map(function(s){ return (s.por_tipo && s.por_tipo.accion) || 0; }),
+        'descripcion':   SECCIONES.map(function(s){ return (s.por_tipo && s.por_tipo.descripcion) || 0; }),
+        'introspección': SECCIONES.map(function(s){ return (s.por_tipo && s.por_tipo.introspeccion) || 0; })
+      };
+      EMOCIONES.Axel.data      = SECCIONES.map(function(s){ return (s.narracion_por_focus && s.narracion_por_focus.axel) || 0; });
+      EMOCIONES.Seraphina.data = SECCIONES.map(function(s){ return (s.narracion_por_focus && s.narracion_por_focus.seraphina) || 0; });
+      EMOCIONES.Ember.data     = SECCIONES.map(function(s){ return (s.narracion_por_focus && s.narracion_por_focus.ember) || 0; });
+      EMOCIONES.Erizo.data     = SECCIONES.map(function(s){ return (s.narracion_por_focus && s.narracion_por_focus['el-erizo']) || 0; });
+    }
+
+// ═══════════════════════════════════════════════════════════════
+// G1 — RTTR
+// ═══════════════════════════════════════════════════════════════
+(function(){
+  const v=SECCIONES.map(s=>s.rttr);
+  const m=avg(v);
+  new Chart(document.getElementById('g1'),{
+    type:'bar',plugins:[mediaPlugin(m)],
+    data:{labels:LABELS,datasets:[{data:v,borderRadius:4,borderSkipped:false,
+      backgroundColor:v.map(x=>x<22?'#e05252':x<25?'#e0a030':x<29?'#d4d44a':'#4caf50')}]},
+    options:{animation:false,plugins:{
+      legend:{display:true,labels:{color:'#8b949e',generateLabels:()=>[{text:`media: ${m.toFixed(2)}`,fillStyle:'rgba(255,255,255,0.4)',strokeStyle:'rgba(0,0,0,0)',lineWidth:0}]}},
+      tooltip:{...TOOLTIP,callbacks:{label:c=>`RTTR: ${c.raw}`}},
+      datalabels:{...DL_TOP,formatter:v=>v.toFixed(2)}},
+      scales:{x:{ticks:TICK,grid:GRID},y:{title:{display:true,text:'RTTR',color:'#8b949e'},ticks:{color:'#8b949e'},grid:GRID}}}
+  });
+})();
+
+// G2 — Show vs Tell
+(function(){
+  const v=SECCIONES.map(s=>s.ratio_tell);
+  const m=avg(v);
+  new Chart(document.getElementById('g2'),{
+    type:'bar',plugins:[mediaPlugin(m)],
+    data:{labels:LABELS,datasets:[{data:v,borderRadius:4,borderSkipped:false,
+      backgroundColor:v.map(x=>x<0.35?'#4caf50':x<0.40?'#d4d44a':x<0.46?'#e0a030':'#e05252')}]},
+    options:{animation:false,plugins:{
+      legend:{display:true,labels:{color:'#8b949e',generateLabels:()=>[{text:`media: ${m.toFixed(3)}`,fillStyle:'rgba(255,255,255,0.4)',strokeStyle:'rgba(0,0,0,0)',lineWidth:0}]}},
+      tooltip:{...TOOLTIP,callbacks:{label:c=>`ADV/VERB: ${c.raw}`}},
+      datalabels:{...DL_TOP,formatter:v=>v.toFixed(3)}},
+      scales:{x:{ticks:TICK,grid:GRID},y:{title:{display:true,text:'ADV/VERB',color:'#8b949e'},ticks:{color:'#8b949e'},grid:GRID}}}
+  });
+})();
+
+// G3 — Arco Emocional
+(function(){
+  const sents=SECCIONES.map(s=>s.sentimiento);
+  const vols=SECCIONES.map(s=>s.volatilidad);
+  const zeroLine={id:'zl',afterDraw(c){
+    const{ctx,chartArea:{left,right},scales:{y}}=c;
+    const yp=y.getPixelForValue(0);
+    ctx.save();ctx.beginPath();ctx.setLineDash([5,4]);
+    ctx.strokeStyle='rgba(255,255,255,0.25)';ctx.lineWidth=1;
+    ctx.moveTo(left,yp);ctx.lineTo(right,yp);ctx.stroke();ctx.restore();
+  }};
+  new Chart(document.getElementById('g3'),{
+    type:'line',plugins:[zeroLine],
+    data:{labels:LABELS,datasets:[
+      {label:'sentimiento',data:sents,fill:'origin',
+        backgroundColor:(ctx)=>{
+          if(!ctx.chart.chartArea)return'rgba(76,175,80,0.3)';
+          const{ctx:c2,chartArea:ca,scales:{y}}=ctx.chart;
+          const g=c2.createLinearGradient(0,ca.bottom,0,ca.top);
+          g.addColorStop(0,'rgba(224,82,82,0.45)');g.addColorStop(0.48,'rgba(224,82,82,0.05)');
+          g.addColorStop(0.52,'rgba(76,175,80,0.05)');g.addColorStop(1,'rgba(76,175,80,0.45)');
+          return g;},
+        borderColor:'rgba(255,255,255,0.55)',borderWidth:2,tension:0.3,
+        pointBackgroundColor:sents.map(v=>v>=0?'#4caf50':'#e05252'),pointRadius:4},
+      {label:'volatilidad',data:vols,fill:false,borderColor:'rgba(136,136,136,0.6)',
+        borderWidth:1.5,borderDash:[4,3],pointRadius:3,pointBackgroundColor:'#888',tension:0.3}
+    ]},
+    options:{animation:false,plugins:{legend:{labels:{color:'#8b949e'}},tooltip:{...TOOLTIP},datalabels:NO_DL},
+      scales:{x:{ticks:TICK,grid:GRID},y:{title:{display:true,text:'Score',color:'#8b949e'},ticks:{color:'#8b949e'},grid:GRID}}}
+  });
+})();
+
+// G4 — Palabras (horizontal)
+(function(){
+  const v=SECCIONES.map(s=>s.palabras);
+  const lec=SECCIONES.map(s=>s.lectura);
+  new Chart(document.getElementById('g4'),{
+    type:'bar',
+    data:{labels:LABELS,datasets:[{data:v,borderRadius:4,borderSkipped:false,
+      backgroundColor:v.map(x=>x<3000?'#e05252':x<5000?'#e0a030':x<8000?'#d4d44a':'#4caf50')}]},
+    options:{animation:false,indexAxis:'y',layout:{padding:{right:32}},plugins:{
+      legend:{display:false},tooltip:{...TOOLTIP,callbacks:{label:c=>`${c.raw} palabras`}},
+      datalabels:{anchor:'end',align:'end',color:'#8b949e',font:{size:10},formatter:(_,ctx)=>lec[ctx.dataIndex]}},
+      scales:{x:{title:{display:true,text:'Palabras',color:'#8b949e'},ticks:{color:'#8b949e'},grid:GRID},
+              y:{ticks:TICK,grid:GRID}}}
+  });
+})();
+
+// G5 — Densidad Diálogo
+(function(){
+  const v=SECCIONES.map(s=>s.densidad_dialogo);
+  const m=avg(v);
+  new Chart(document.getElementById('g5'),{
+    type:'bar',plugins:[mediaPlugin(m)],
+    data:{labels:LABELS,datasets:[{data:v,borderRadius:4,borderSkipped:false,
+      backgroundColor:v.map(x=>x<3?'#e05252':x<=4?'#d4d44a':'#4caf50')}]},
+    options:{animation:false,plugins:{
+      legend:{display:true,labels:{color:'#8b949e',generateLabels:()=>[{text:`media: ${m.toFixed(2)}`,fillStyle:'rgba(255,255,255,0.4)',strokeStyle:'rgba(0,0,0,0)',lineWidth:0}]}},
+      tooltip:{...TOOLTIP},datalabels:{...DL_TOP,formatter:v=>v.toFixed(2)}},
+      scales:{x:{ticks:TICK,grid:GRID},y:{title:{display:true,text:'Diálogos/100 or.',color:'#8b949e'},ticks:{color:'#8b949e'},grid:GRID}}}
+  });
+})();
+
+// G6 — Longitud oraciones
+(function(){
+  const v=SECCIONES.map(s=>s.longitud_media);
+  const m=avg(v);
+  new Chart(document.getElementById('g6'),{
+    type:'bar',plugins:[mediaPlugin(m)],
+    data:{labels:LABELS,datasets:[{data:v,borderRadius:4,borderSkipped:false,
+      backgroundColor:v.map(x=>x<10?'#e05252':x<=12?'#4caf50':x<=14?'#d4d44a':'#e05252')}]},
+    options:{animation:false,plugins:{
+      legend:{display:true,labels:{color:'#8b949e',generateLabels:()=>[{text:`media: ${m.toFixed(2)}`,fillStyle:'rgba(255,255,255,0.4)',strokeStyle:'rgba(0,0,0,0)',lineWidth:0}]}},
+      tooltip:{...TOOLTIP},datalabels:{...DL_TOP,formatter:v=>v.toFixed(1)}},
+      scales:{x:{ticks:TICK,grid:GRID},y:{title:{display:true,text:'Palabras/oración',color:'#8b949e'},ticks:{color:'#8b949e'},grid:GRID}}}
+  });
+})();
+
+// G7 — Presencia personajes
+(function(){
+  const COL={'Axel':'#e8c870','Seraphina':'#7bb87b','Ember':'#7098c8','El Erizo':'#b07850','Groundbreaker':'#907060'};
+  const ds=Object.entries(PRESENCIA_PERSONAJES.personajes).map(([n,d])=>({
+    label:n,data:d,backgroundColor:COL[n],borderRadius:2,borderSkipped:false}));
+  new Chart(document.getElementById('g7'),{
+    type:'bar',
+    data:{labels:PRESENCIA_PERSONAJES.labels,datasets:ds},
+    options:{animation:false,plugins:{legend:{labels:{color:'#8b949e',font:{size:10}}},tooltip:{...TOOLTIP},datalabels:NO_DL},
+      scales:{x:{stacked:true,ticks:TICK,grid:GRID},y:{stacked:true,title:{display:true,text:'Menciones',color:'#8b949e'},ticks:{color:'#8b949e'},grid:GRID}}}
+  });
+})();
+
+// G8 — Red D3
+(function(){
+  const el=document.getElementById('grafo-container');
+  const W=el.clientWidth||900,H=450;
+  const nodes=GRAFO_PERSONAJES.nodos.map(n=>({...n}));
+  const links=GRAFO_PERSONAJES.enlaces.map(l=>({source:l.fuente,target:l.destino,weight:l.peso}));
+  const svg=d3.select('#grafo-container').append('svg').attr('width',W).attr('height',H).style('background','#161b22');
+  const sim=d3.forceSimulation(nodes)
+    .force('link',d3.forceLink(links).id(d=>d.id).distance(d=>Math.max(60,200-d.weight*5)))
+    .force('charge',d3.forceManyBody().strength(-300))
+    .force('center',d3.forceCenter(W/2,H/2))
+    .force('collision',d3.forceCollide().radius(d=>Math.sqrt(d.menciones)*1.8+10));
+  const link=svg.append('g').selectAll('line').data(links).join('line')
+    .attr('stroke','#4a5568').attr('stroke-opacity',.6).attr('stroke-width',d=>d.weight*.4);
+  const drag=d3.drag()
+    .on('start',(e,d)=>{if(!e.active)sim.alphaTarget(.3).restart();d.fx=d.x;d.fy=d.y})
+    .on('drag', (e,d)=>{d.fx=e.x;d.fy=e.y})
+    .on('end',  (e,d)=>{if(!e.active)sim.alphaTarget(0);d.fx=null;d.fy=null});
+  const node=svg.append('g').selectAll('g').data(nodes).join('g').call(drag).style('cursor','grab');
+  node.append('circle').attr('r',d=>Math.sqrt(d.menciones)*1.8).attr('fill',d=>d.color).attr('stroke','#0d1117').attr('stroke-width',2);
+  node.append('rect').attr('rx',3).attr('ry',3).attr('fill','rgba(13,17,23,0.75)').attr('height',14)
+    .attr('y',d=>-(Math.sqrt(d.menciones)*1.8)-16).attr('x',d=>-d.id.length*3.3).attr('width',d=>d.id.length*6.6);
+  node.append('text').attr('text-anchor','middle').attr('dy',d=>-(Math.sqrt(d.menciones)*1.8)-5)
+    .attr('fill','#e6edf3').attr('font-size',10).attr('font-family','Segoe UI,system-ui,sans-serif').text(d=>d.id);
+  sim.on('tick',()=>{
+    link.attr('x1',d=>d.source.x).attr('y1',d=>d.source.y).attr('x2',d=>d.target.x).attr('y2',d=>d.target.y);
+    node.attr('transform',d=>`translate(${d.x},${d.y})`);
+  });
+})();
+
+// G9 — Curva Tensión
+(function(){
+  const tv=TENSION_DATA.tension;
+  const PLOT_COLORS={
+    setup:'#4a9eff',desarrollo:'#8b949e',climax:'#e05252',
+    resolucion:'#4caf50',foreshadowing:'#c090c0',payoff:'#e8c870',
+    revelacion:'#e0a030',gancho:'#7098c8'
+  };
+  // plugin para etiquetar plot function
+  const plotLabels={
+    id:'plotLbl',
+    afterDraw(c){
+      const{ctx,scales:{x,y}}=c;
+      ctx.save();ctx.font='9px Segoe UI';ctx.textAlign='center';
+      TENSION_DATA.plot.forEach((p,i)=>{
+        const px=x.getPixelForValue(i);
+        const py=y.getPixelForValue(tv[i]);
+        ctx.fillStyle=PLOT_COLORS[p]||'#8b949e';
+        ctx.fillText(p,px,py-16);
+      });
+      ctx.restore();
+    }
+  };
+  new Chart(document.getElementById('g9'),{
+    type:'line',plugins:[plotLabels],
+    data:{labels:LABELS,datasets:[
+      {label:'Tensión (1-5)',data:tv,fill:'origin',
+        backgroundColor:'rgba(224,82,82,0.15)',borderColor:'#e05252',borderWidth:2.5,
+        pointBackgroundColor:tv.map(v=>v>=4?'#e05252':v>=3?'#e0a030':'#4caf50'),
+        pointRadius:5,tension:0.35},
+    ]},
+    options:{animation:false,layout:{padding:{top:28}},plugins:{
+      legend:{labels:{color:'#8b949e'}},tooltip:{...TOOLTIP,callbacks:{
+        label:c=>`Tensión: ${c.raw}`,
+        afterLabel:(_,i)=>`Plot: ${TENSION_DATA.plot[_.dataIndex]}`
+      }},datalabels:NO_DL},
+      scales:{x:{ticks:TICK,grid:GRID},y:{min:0,max:5.5,
+        title:{display:true,text:'Nivel de tensión',color:'#8b949e'},ticks:{color:'#8b949e'},grid:GRID}}}
+  });
+})();
+
+// G10 — Tipo de Contenido (stacked 100%)
+(function(){
+  const TCOL={dialogo:'#7098c8',accion:'#e05252',descripcion:'#e0a030',introspección:'#c090c0'};
+  const ds=Object.entries(TIPO_CONTENIDO).map(([k,d])=>({
+    label:k,data:d,backgroundColor:TCOL[k],borderRadius:0,borderSkipped:false}));
+  new Chart(document.getElementById('g10'),{
+    type:'bar',
+    data:{labels:LABELS,datasets:ds},
+    options:{animation:false,plugins:{
+      legend:{labels:{color:'#8b949e',font:{size:11}}},tooltip:{...TOOLTIP,callbacks:{label:c=>`${c.dataset.label}: ${c.raw}%`}},
+      datalabels:{display:ctx=>ctx.dataset.data[ctx.dataIndex]>8,
+        color:'#0d1117',font:{size:9,weight:'bold'},formatter:v=>`${v}%`}},
+      scales:{x:{stacked:true,ticks:TICK,grid:GRID},
+        y:{stacked:true,title:{display:true,text:'% del contenido',color:'#8b949e'},ticks:{color:'#8b949e',callback:v=>v+'%'},grid:GRID}}}
+  });
+})();
+
+// G12 — Arco emocional por personaje
+(function(){
+  const ds=Object.values(EMOCIONES).map(e=>({
+    label:e.label,data:e.data,borderColor:e.color,backgroundColor:'transparent',
+    borderWidth:2,pointBackgroundColor:e.color,pointRadius:4,
+    tension:0.4,pointHoverRadius:6,
+    segment:{borderDash:ctx=>ctx.p0.parsed.y===0||ctx.p1.parsed.y===0?[4,3]:[]}}));
+  new Chart(document.getElementById('g12'),{
+    type:'line',
+    data:{labels:LABELS,datasets:ds},
+    options:{animation:false,plugins:{
+      legend:{labels:{color:'#8b949e',font:{size:10}}},
+      tooltip:{...TOOLTIP,callbacks:{label:c=>`${c.dataset.label}: ${c.raw===0?'— (no aparece)':c.raw}`}},
+      datalabels:NO_DL},
+      scales:{x:{ticks:TICK,grid:GRID},
+        y:{min:0,max:5.4,title:{display:true,text:'Intensidad (1–5)',color:'#8b949e'},ticks:{color:'#8b949e'},grid:GRID}}}
+  });
+})();
+
+// G13 — Arco de relaciones
+(function(){
+  const ds=Object.entries(RELACIONES).map(([n,r])=>({
+    label:n,data:r.data,borderColor:r.color,backgroundColor:'transparent',
+    borderWidth:2.5,pointRadius:4,tension:0.35,
+    pointBackgroundColor:r.data.map(v=>v===0?'transparent':r.color),
+    segment:{borderDash:ctx=>ctx.p0.parsed.y===0||ctx.p1.parsed.y===0?[4,3]:[]}}));
+  const zeroLine={id:'zrl',afterDraw(c){
+    const{ctx,chartArea:{left,right},scales:{y}}=c;
+    ctx.save();ctx.beginPath();ctx.setLineDash([4,3]);
+    ctx.strokeStyle='rgba(255,255,255,0.15)';ctx.lineWidth=1;
+    ctx.moveTo(left,y.getPixelForValue(0));ctx.lineTo(right,y.getPixelForValue(0));
+    ctx.stroke();ctx.restore();
+  }};
+  new Chart(document.getElementById('g13'),{
+    type:'line',plugins:[zeroLine],
+    data:{labels:LABELS,datasets:ds},
+    options:{animation:false,plugins:{
+      legend:{labels:{color:'#8b949e',font:{size:10}}},
+      tooltip:{...TOOLTIP,callbacks:{label:c=>`${c.dataset.label}: ${c.raw===0?'— sin escena compartida':c.raw+'/5'}`}},
+      datalabels:NO_DL},
+      scales:{x:{ticks:TICK,grid:GRID},
+        y:{min:0,max:5.4,title:{display:true,text:'Dirección relación (1=frío · 5=fuerte)',color:'#8b949e'},ticks:{color:'#8b949e'},grid:GRID}}}
+  });
+})();
+
+// G14 — Mapa de misterio
+(function(){
+  const {secretosActivos,revelacionesAcum}=MISTERIO;
+  new Chart(document.getElementById('g14'),{
+    type:'line',
+    data:{labels:LABELS,datasets:[
+      {label:'Secretos activos',data:secretosActivos,fill:'origin',
+        backgroundColor:'rgba(192,144,192,0.25)',borderColor:'#c090c0',borderWidth:2,
+        pointRadius:4,pointBackgroundColor:'#c090c0',tension:0.3},
+      {label:'Revelaciones acumuladas',data:revelacionesAcum,fill:false,
+        borderColor:'#e8c870',borderWidth:2,borderDash:[5,3],
+        pointRadius:4,pointBackgroundColor:'#e8c870',tension:0.3}
+    ]},
+    options:{animation:false,plugins:{
+      legend:{labels:{color:'#8b949e'}},
+      tooltip:{...TOOLTIP},datalabels:NO_DL},
+      scales:{x:{ticks:TICK,grid:GRID},
+        y:{title:{display:true,text:'Conteo',color:'#8b949e'},ticks:{color:'#8b949e'},grid:GRID}}}
+  });
+})();
+
+// G15 — Tiempo en lugar (horizontal)
+(function(){
+  const entries=Object.entries(LUGARES).sort((a,b)=>b[1]-a[1]);
+  const lbls=entries.map(e=>e[0]);
+  const vals=entries.map(e=>e[1]);
+  const colPalette=['#e8c870','#7bb87b','#7098c8','#c090c0','#e0a030','#b07850','#a0b8d8','#907060'];
+  new Chart(document.getElementById('g15'),{
+    type:'bar',
+    data:{labels:lbls,datasets:[{data:vals,backgroundColor:colPalette,borderRadius:4,borderSkipped:false}]},
+    options:{animation:false,indexAxis:'y',layout:{padding:{right:36}},plugins:{
+      legend:{display:false},
+      tooltip:{...TOOLTIP,callbacks:{label:c=>`${c.raw.toLocaleString()} palabras`}},
+      datalabels:{anchor:'end',align:'end',color:'#8b949e',font:{size:10},formatter:v=>v.toLocaleString()}},
+      scales:{x:{title:{display:true,text:'Palabras',color:'#8b949e'},ticks:{color:'#8b949e'},grid:GRID},
+              y:{ticks:TICK,grid:GRID}}}
+  });
+})();
+
+// G16 — Palabras por día
+(function(){
+  const{labels,vals}=PALABRAS_DIA;
+  const m=avg(vals);
+  new Chart(document.getElementById('g16'),{
+    type:'bar',plugins:[mediaPlugin(m)],
+    data:{labels,datasets:[{data:vals,borderRadius:4,borderSkipped:false,
+      backgroundColor:vals.map(v=>v<4000?'#8b949e':v<10000?'#7098c8':'#e8c870')}]},
+    options:{animation:false,plugins:{
+      legend:{display:true,labels:{color:'#8b949e',generateLabels:()=>[{text:`media: ${Math.round(m).toLocaleString()} palabras/día`,fillStyle:'rgba(255,255,255,0.4)',strokeStyle:'rgba(0,0,0,0)',lineWidth:0}]}},
+      tooltip:{...TOOLTIP,callbacks:{label:c=>`${c.raw.toLocaleString()} palabras`}},
+      datalabels:{...DL_TOP,formatter:v=>v.toLocaleString()}},
+      scales:{x:{ticks:TICK,grid:GRID},
+        y:{title:{display:true,text:'Palabras',color:'#8b949e'},ticks:{color:'#8b949e'},grid:GRID}}}
+  });
+})();
+
+// G — Foreshadowing / Payoff (D3 timeline con arcos)
+(function(){
+  const container=document.getElementById('sankey-container');
+  const W=container.clientWidth||1100,H=340;
+  const svg=d3.select('#sankey-container').append('svg').attr('width',W).attr('height',H).style('background','#161b22');
+
+  const secIdx=Object.fromEntries(LABELS.map((l,i)=>[l,i]));
+  const cols=[...new Set(SECCIONES.map(s=>s.nombre))];
+  const xScale=d3.scalePoint().domain(cols).range([60,W-60]);
+
+  // Axis
+  const axisG=svg.append('g');
+  axisG.selectAll('text').data(cols).join('text')
+    .attr('x',d=>xScale(d)).attr('y',H-16)
+    .attr('text-anchor','middle').attr('fill','#8b949e').attr('font-size',9)
+    .text(d=>d);
+  axisG.append('line').attr('x1',60).attr('x2',W-60).attr('y1',H-24).attr('y2',H-24)
+    .attr('stroke','#30363d').attr('stroke-width',1);
+
+  const TCOL={'foreshadowing':'#c090c0','profecia':'#e8c870'};
+  const ROW_TOP=40,ROW_H=38;
+
+  // Arcs
+  FORESHADOWING.forEach((f,i)=>{
+    const x1=xScale(f.seccionF),x2=xScale(f.seccionP);
+    const y0=H-24;
+    const cy=ROW_TOP+i*ROW_H;
+    const col=TCOL[f.tipo]||'#7098c8';
+
+    // arc path
+    const mx=(x1+x2)/2;
+    svg.append('path')
+      .attr('d',`M${x1},${y0} C${x1},${cy} ${x2},${cy} ${x2},${y0}`)
+      .attr('fill','none').attr('stroke',col).attr('stroke-width',1.5)
+      .attr('stroke-opacity',.65).attr('stroke-dasharray','4 3');
+
+    // dots
+    svg.append('circle').attr('cx',x1).attr('cy',y0).attr('r',4).attr('fill',col);
+    svg.append('circle').attr('cx',x2).attr('cy',y0).attr('r',5).attr('fill',col).attr('stroke','#0d1117').attr('stroke-width',1.5);
+
+    // label
+    const lx=(x1+x2)/2,ly=cy-6;
+    svg.append('rect').attr('x',lx-f.texto.length*3).attr('y',ly-12)
+      .attr('width',f.texto.length*6).attr('height',14).attr('rx',3)
+      .attr('fill','rgba(13,17,23,0.8)');
+    svg.append('text').attr('x',lx).attr('y',ly)
+      .attr('text-anchor','middle').attr('fill',col).attr('font-size',9)
+      .attr('font-family','Segoe UI,system-ui,sans-serif').text(f.texto);
+  });
+
+  // legend
+  [['foreshadowing','#c090c0'],['profecia','#e8c870'],['Punto payoff (círculo lleno)','#e6edf3']].forEach(([t,c],i)=>{
+    svg.append('circle').attr('cx',70+i*200).attr('cy',12).attr('r',5).attr('fill',c);
+    svg.append('text').attr('x',80+i*200).attr('y',16).attr('fill','#8b949e').attr('font-size',9).text(t);
+  });
+})();
+
+  }) // fin .then(data)
+  .catch(function(){
+    document.querySelector('.container').innerHTML =
+      '<div style="grid-column:1/-1;text-align:center;padding:60px">' +
+      '<h2 style="color:#e05252;margin-bottom:12px">⚠️ datos_historia.json no encontrado</h2>' +
+      '<p style="color:#8b949e">Ejecuta en terminal: ' +
+      '<code style="background:#21262d;padding:4px 10px;border-radius:4px;color:#e6edf3">python extractor.py</code>' +
+      '</p></div>';
+  });
+</script>
+</body>
+</html>

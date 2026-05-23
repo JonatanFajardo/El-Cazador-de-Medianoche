@@ -1,0 +1,60 @@
+exportar minimal
+python filter.py --section seccion_01.html --minimal --output ../story_temp.html
+
+
+
+importar nuevcos cambios
+cd "C:\Users\nayel\OneDrive\Documentos\Libros\El Cazador de Medianoche\Analisis\scripts"
+python patch.py --input ../story_temp.html
+
+
+
+
+
+PRONT PARA HISTORIA
+"Lee este texto y marca con [TELLING] cada vez que el narrador interrumpe la acción para explicar lo que el lector ya debería sentir o deducir solo. No corrijas el tono ni la estructura. Solo marca y sugiere la versión recortada. Ejemplo: 'un traqueteo deliberado, como el de alguien que sabe lo que hace' → [TELLING] → 'un traqueteo deliberado'."
+
+
+
+
+
+
+Cuando agregas párrafos nuevos, no les pongas data-id — patch.py los genera automáticamente al insertar.
+
+El formato correcto para insertar después de un párrafo existente:
+
+<p class="texto-narrativo" data-id="NEW" data-after="ec73e141">
+    Texto del nuevo párrafo aquí.
+</p>
+
+data-id="NEW" — señal para patch.py de que es nuevo
+
+data-after="xxxx" — el data-id del párrafo ANTES del nuevo (donde se inserta)
+
+Si quieres insertar un diálogo:
+
+<p class="dialogo" data-id="NEW" data-after="ec73e141">
+    —Texto del diálogo—
+</p>
+
+
+Puedes encadenar varios seguidos:
+
+<p class="texto-narrativo" data-id="NEW" data-after="ec73e141">
+    Primer párrafo nuevo.
+</p>
+<p class="dialogo" data-id="NEW" data-after="ec73e141">
+    —Segundo párrafo nuevo, también después de ec73e141—
+</p>
+
+
+
+para eliminar un párrafo, en story_temp.html pones:
+
+<p data-id="ec73e141" data-delete="true"></p>
+
+
+
+patch.py los inserta en orden, uno tras otro, después del ancla indicada.
+DAME SOLO LOS CAMBIOS, ELIMINADOS ETC, EN LA HISTORIA  PARA AHORRAR TOKENS, EN UN SOLO ARCHIVO
+

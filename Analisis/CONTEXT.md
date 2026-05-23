@@ -35,6 +35,15 @@ proyecto/
 | `filter.py` | Filtra párrafos por `data-*` y genera `story_temp.html` con contexto h2/h3 para la IA |
 | `patch.py` | Aplica los cambios del `story_temp.html` editado de vuelta a los HTMLs originales |
 
+### Flags especiales de filter.py
+
+| Flag | Efecto | Cuándo usarla |
+|---|---|---|
+| `--text "palabra"` | Filtra párrafos cuyo texto contenga esa cadena (case-insensitive, sin acentos). AND con otros filtros. | Buscar ocurrencias de un término específico sin escribir scripts ad-hoc |
+| `--minimal` | Output solo con `data-id` + texto. Sin atributos `data-*`. **60% menos tokens.** | Siempre que el objetivo sea edición narrativa |
+| `--section seccion_XX.html` | Limita la búsqueda a una sección específica. Solo con este flag ya es filtro suficiente (extrae todos los párrafos de esa sección). | Cuando se quiere exportar una sección completa |
+| `--output ruta.html` | Ruta de salida del archivo generado. Default: `story_temp.html` en la carpeta scripts/. | Usar `--output ../story_temp.html` para guardar en Analisis/ |
+
 ---
 
 ## Flujo completo
@@ -85,11 +94,28 @@ Nunca debe eliminar ni mover los `<section>`, `<h2>` ni `<h3>`.**
 
 ## Cómo patch.py identifica cada párrafo
 
-Usa una "huella" compuesta por:
-- `data-day` + `data-scene` + `data-type` + `data-focus` + `data-speaker`
-- Primeros 60 caracteres del texto
+Usa `data-id` como huella primaria (8 caracteres hex únicos por párrafo). Fallback: huella compuesta por `data-day` + `data-scene` + `data-type` + `data-focus` + `data-speaker` + primeros 60 chars del texto.
 
-Si la IA externa cambia estos atributos clave en un párrafo, patch.py puede no encontrarlo en el original y lo reportará como **NO ENCONTRADO**. En ese caso hay que aplicar el cambio manualmente.
+**Comparación por texto:** patch.py compara solo el contenido interno del párrafo, no los atributos. Esto permite usar `--minimal` en filter.py sin borrar los atributos `data-*` del original.
+
+### Convenciones en story_temp.html
+
+| Convención | Efecto |
+|---|---|
+| `data-id="NEW" data-after="xxxx"` | Insertar párrafo nuevo después de `xxxx` |
+| `data-id="NEW" data-before="xxxx"` | Insertar párrafo nuevo antes de `xxxx` |
+| `data-id="xxxx" data-delete="true"` | Eliminar el párrafo con ese id |
+
+**Anti-duplicados:** si un párrafo NEW tiene el mismo texto que uno ya existente, patch.py lo reemplaza en lugar de insertar un duplicado.
+
+### Flags especiales de patch.py
+
+| Flag | Efecto |
+|---|---|
+| `--dry-run` | Muestra qué haría sin modificar nada |
+| `--backup` | Crea `.bak` del archivo antes de modificar |
+| `--stamp seccion_XX.html` | Marca todos los párrafos sin `data-updated` como `data-status="original"` con timestamp actual |
+| `--force` | Fuerza `data-status="modified"` y `data-updated` en párrafos del story_temp aunque el texto no haya cambiado |
 
 ---
 
@@ -167,8 +193,133 @@ pip install beautifulsoup4
 
 ---
 
+## Estrategia de filtrado
+
+### Cómo elegir los parámetros correctos para filter.py
+
+**Paso 1 — Leer index.json para saber qué valores existen**
+
+Antes de filtrar, consulta `index.json` → sección `"por_seccion"` para ver qué atributos
+tiene la sección que te interesa. Así evitas filtros que devuelvan 0 resultados.
+
+```python
+# Ver qué speakers/focus existen en una sección concreta
+import json
+idx = json.load(open("index.json", encoding="utf-8"))
+print(idx["por_seccion"]["seccion_08.html"]["data-speaker"])
+print(idx["por_seccion"]["seccion_08.html"]["data-focus"])
+```
+
+**Paso 2 — Elegir el atributo más preciso según lo que buscas**
+
+| Qué quieres encontrar | Atributo recomendado | Motivo |
+|---|---|---|
+| Diálogos de un personaje específico | `--speaker nombre` | Solo captura cuando ese personaje habla |
+| Escenas donde aparece un personaje (habla o no) | `--focus nombre` | Más amplio, incluye narrativa |
+| Escenas de un lugar concreto | `--location nombre` | Útil para escenas de ambiente |
+| Momentos de tensión/giro | `--plot revelacion,climax` | Filtra por función narrativa |
+| Secretos u info oculta al lector | `--secret true` | Solo párrafos con `data-secret="true"` |
+| Escenas de un día cronológico | `--day 8` | Útil para bloques temporales |
+| Una escena específica dentro de una sección | `--scene 03` | Muy preciso, combinar con `--section` |
+| Párrafos que contienen una palabra específica | `--text "palabra"` | Reemplaza búsquedas ad-hoc con Python |
+
+**Paso 3 — Usar `--section` para acotar cuando el atributo aparece en muchas secciones**
+
+```bash
+# Sin acotar → trae Lyra de las 18 secciones (ruido)
+python filter.py --focus lyra
+
+# Acotado → solo Lyra en seccion_02
+python filter.py --focus lyra --section seccion_02.html
+```
+
+**Paso 4 — Combinar atributos con AND para máxima precisión**
+
+Todos los filtros se combinan con AND. Ejemplo: párrafos donde Axel habla
+a Seraphina en el bosque de cuervos espejo:
+
+```bash
+python filter.py --speaker axel --to seraphina --location bosque-cuervos-espejo
+```
+
+**Paso 5 — Iterar si hay demasiado ruido o pocos resultados**
+
+- Demasiados párrafos → agregar más filtros o `--section`
+- Cero párrafos → revisar index.json, el valor puede tener typo o no existir en esa sección
+- Resultados de escenas incorrectas → agregar `--scene` o `--day`
+
+### Ejemplos reales usados en este proyecto
+
+```bash
+# Escena de cuervos en seccion_08 (cuervo es el foco)
+python filter.py --focus cuervo-primario --section seccion_08.html
+
+# Despedida de Ember + puntos de Lyra en seccion_09 (dos focos en una extracción)
+python filter.py --focus ember,lyra --section seccion_09.html
+
+# Confesión de Seraphina — solo sus diálogos directos
+python filter.py --speaker seraphina --section seccion_09B.html
+
+# Escenas del padre + arco + Vex en seccion_10 (tres focos)
+python filter.py --focus padre-axel,vex-sangrante,arco --section seccion_10.html
+
+# Todos los párrafos con secretos revelados
+python filter.py --secret true
+
+# Párrafos de foreshadowing en todas las secciones
+python filter.py --plot foreshadowing
+
+# ── Nuevas flags ──────────────────────────────────────────────────────────
+
+# Buscar párrafos con la palabra "lince" donde Lyra es foco (sin scripts ad-hoc)
+python filter.py --text "lince" --focus lyra
+
+# Buscar todos los párrafos con "entrenamiento" en los diálogos de Seraphina
+python filter.py --text "entrenamiento" --speaker seraphina
+
+# Extraer para edición narrativa en Claude Web: modo minimal (60% menos tokens)
+python filter.py --focus seraphina --section seccion_01.html --minimal
+
+# Combinado: buscar texto específico + minimal para envío directo a Claude Web
+python filter.py --text "lince" --focus lyra --minimal
+```
+
+### Regla general
+
+```
+Específico primero → ampliar solo si faltan resultados
+Siempre usar --section cuando el personaje/lugar aparece en más de 3 secciones
+```
+
+---
+
+## Sistema de tracking visual de cambios (mark-changes.js)
+
+Cada párrafo modificado o insertado por patch.py recibe automáticamente:
+- `data-status="new"` / `"modified"` / `"original"`
+- `data-updated="2026-04-24T19:05:44"` (timestamp con segundos)
+
+El archivo `mark-changes.js` (raíz del proyecto) lee estos atributos y aplica bordes de color en el browser:
+- **Verde** — párrafo nuevo
+- **Dorado** — párrafo modificado (brillo según antigüedad)
+- **Gris sutil** — párrafo original sin editar
+
+Todas las secciones tienen `<script src="../mark-changes.js"></script>` al final del `<body>`.
+
+**Flujo para sellar una sección nueva:**
+```bash
+python patch.py --stamp seccion_XX.html
+```
+
+---
+
 ## Estado del proyecto
 
-- [ ] Secciones anotadas con `data-*`: pendiente confirmar cuáles
-- [ ] `index.json` generado: ejecutar `index.py` para crearlo
-- [ ] Inconsistencia pendiente: descripción de Lyra (seccion_02 vs referencia canónica)
+- [x] Secciones anotadas con `data-*`: 17/18 completas (seccion_03B pendiente — 388 párrafos sin anotar)
+- [x] `index.json` generado
+- [x] `data-id` únicos asignados a 2,729 párrafos en 18 secciones (`stamp.py`)
+- [x] `patch.py` actualizado: data-id primario, inserciones NEW, eliminaciones, anti-duplicados, timestamps
+- [x] `filter.py` actualizado: búsqueda sin acentos, --section sin filtro adicional, --output configurable
+- [x] `mark-changes.js` creado: tracking visual de cambios por color en el browser
+- [x] Backstory v2 aplicado (24-abr-2026): nuevo canon Kira/madre/padre de Axel en seccion_01
+- [x] seccion_01: 191 párrafos sellados con --stamp

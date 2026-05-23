@@ -35,7 +35,7 @@
 ### Eventos clave
 
 1. Apertura in media res — huellas que no pertenecen a la montaña
-2. Rutina de Axel establecida: soledad de 3 años, arco heredado, mapa de piel de ciervo
+2. Rutina de Axel establecida: soledad de 2 años, arco heredado, mapa de piel de ciervo, ausencia reciente del búho "Problemas"
 3. Rastreo de las huellas hasta el paso del este
 4. Encuentro con Seraphina herida entre las rocas
 5. Seraphina revela que su madre está siendo convertida en piedra por una maldición
@@ -54,7 +54,7 @@
 
 | Personaje | Al entrar | Motivación | Al salir |
 |-----------|-----------|------------|----------|
-| Axel | Solitario, 3 años sin objetivo, montañas como prisión dorada | El gemido de Seraphina le recuerda a su padre; su naturaleza compasiva supera su entrenamiento | Comprometido con la misión, primera conexión humana en meses, esperanza de entender la desaparición del padre |
+| Axel | Solitario, 2 años sin objetivo (Ember se fue hace 3), montañas como prisión dorada | El gemido de Seraphina le recuerda a su padre; su naturaleza compasiva supera su entrenamiento | Comprometido con la misión, primera conexión humana en meses, esperanza de entender la desaparición del padre |
 | Seraphina | Desconocida para el lector, herida, presentada como víctima desesperada | Necesita sobrevivir para cumplir su misión real (oculta al lector) | Establecida como víctima creíble, recuperada físicamente, en viaje con un aliado |
 
 ---
@@ -76,7 +76,9 @@
 - El arco élfico da un pulso **frío** — diferente a su comportamiento habitual (calor = peligro / tibio = reconocimiento). Axel lo archiva sin resolverlo
 - La historia de la "madre maldecida" es la versión manipulada de la verdad real
 - El padre de Axel buscaba lugares similares (Valle de los Susurradores, Cuevas Brillantes) → conecta con el Templo Celestial en sección 10
-- Axel lleva 3 años solo → vulnerabilidad emocional ante la primera conexión real, lo que hace plausible su decisión de acompañarla
+- Axel lleva 2 años solo → vulnerabilidad emocional ante la primera conexión real, lo que hace plausible su decisión de acompañarla
+- **Mirror temático invisible**: Axel y Seraphina perdieron a sus familias en el mismo período (2 años). Breadcrumb para la relectura.
+- El arco del padre se encontró "limpio, intacto, como dejado a propósito" — abre la puerta interpretativa de que la desaparición no fue muerte inmediata (Seraphina lo cazó después)
 
 ### Payoff (de secciones anteriores)
 
@@ -86,7 +88,7 @@
 
 ### Temas presentes
 
-- **Soledad vs comunidad** — primera conexión de Axel en 3 años; el aislamiento lo hace más susceptible
+- **Soledad vs comunidad** — primera conexión de Axel en 2 años; el aislamiento lo hace más susceptible
 - **Compasión vs cautela** — tensión central de la decisión de ayudar
 - **Herencia paterna** — el arco como guía moral, los recuerdos del padre como motor de acción
 

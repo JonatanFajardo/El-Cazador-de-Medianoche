@@ -1,0 +1,54 @@
+Impacto real del cambio de backstory
+Cambios pequeños y quirúrgicos (fáciles)
+seccion_08.html — 3 líneas específicas:
+
+Línea 180: —Seis gatos. Mi padre... → adaptar a "mi padre estaba en ese grupo"
+Línea 215: ...historias necesitaban víctimas, y cada víctima alimentaba al odio... → reescribir sin implicar múltiples operaciones previas
+Línea 374: la mano del hijo de su sexta víctima → quitar "sexta"
+seccion_08A.html — 2 líneas:
+
+Línea 421: La sexta víctima en mis registros → cambiar
+Los 6 nombres de víctimas en metadata → actualizar
+seccion_10.html — 2 líneas en epílogo + 1 en desarrollo:
+
+Línea 197-201: el conteo de 47 mantis / 12 células que sienten la onda → reescribir con escala menor (las 7 mantis del templo + algunas más)
+Línea 272: séptima víctima de la red (Luna Platino, hermana de Lyra) → cambiar
+El problema estructural real (aquí está el trabajo gordo)
+seccion_09.html tiene una subtrama completa construida sobre la red de mantis:
+
+"Cuarenta y siete signatures mágicas. Doce células operativas. Dos de esas células se desplazaron hacia las rutas de Valle Tranquilo."
+
+Eso es lo que hace que Ember tenga que irse a proteger a su familia. Sin esa amenaza concreta, ¿qué lo obliga a volver?
+
+También en seccion_09: el momento donde Seraphina le da a Ember información táctica para proteger el valle. Y el beat narrativo de que Seraphina "está traicionando a su propia red" — que es uno de los momentos más fuertes de su arco.
+
+Eso necesita replantearse, no solo ajustarse.
+
+Solución que propongo (para tu consideración)
+En lugar de eliminar la amenaza, reducirla en escala y cambiar su origen:
+
+Antes	Después
+Red organizada de 47 mantis / 12 células	Grupo pequeño (8-12 mantis) que se formó espontáneamente por el mismo dolor — mantis que perdieron familia en incidentes con gatos, que encontraron a la madre de Seraphina y se organizaron alrededor de su causa
+Seraphina las lideró activamente	Seraphina era su símbolo, no su comandante. Ellas siguieron actuando solas cuando ella desapareció
+Luna Platino = víctima #7 de operación deliberada	Luna Platino = muerta en una de las peleas de huida de Seraphina (no calculado — Seraphina escapaba, no cazaba)
+Esto mantiene:
+
+La urgencia para Ember de volver
+El beat de Seraphina traicionando a "las suyas"
+La motivación de Lyra (pero más moralmente ambigua)
+Las 7 mantis en el Templo
+Y elimina:
+
+Las 47 signatures / 12 células (escala de ejército que no encaja con el nuevo backstory)
+Cualquier implicación de organización criminal premeditada
+Resumen del trabajo real
+Sección	Tipo de cambio	Magnitud
+seccion_08	3 párrafos específicos	Pequeño
+seccion_08A	2-3 referencias	Pequeño
+seccion_09	Reescribir subtrama de amenaza (mantener estructura, cambiar escala)	Mediano-grande
+seccion_09B	1 referencia	Pequeño
+seccion_10	3-4 referencias + epílogo de células	Mediano
+CLAUDE.md + memory	Actualizar datos históricos	Pequeño
+En total: las secciones 08, 08A, 09B y 10 son cambios de palabras específicas. La única que requiere trabajo narrativo real es seccion_09, porque la subtrama de amenaza a Valle Tranquilo está construida sobre la red.
+
+¿Quieres que empiece por definir cómo queda la amenaza en seccion_09, o prefieres que ataque primero los cambios pequeños mientras lo piensas?
