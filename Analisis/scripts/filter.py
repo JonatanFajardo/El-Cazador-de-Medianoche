@@ -121,12 +121,9 @@ def generar_texto_plano(resultados, output_path):
 
     for seccion, h2, h3, tag in resultados:
         if seccion != seccion_actual:
-            if seccion_actual is not None:
-                lineas.append("")
             lineas.append(f"{'═' * 50}")
             lineas.append(f"  {seccion}")
             lineas.append(f"{'═' * 50}")
-            lineas.append("")
             seccion_actual = seccion
 
         texto = tag.get_text(strip=True)
