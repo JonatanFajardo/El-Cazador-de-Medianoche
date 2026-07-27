@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Cazador de Medianoche — Capítulo 5</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="historia-interactiva.css">
+<script src="seccion-05-historia.js"></script>
+<style>
+
+/* ═══════════════════════════════════════════════════════════
+   LAYOUT BASE — pantalla full-scroll, sin bordes de libro
+   ═══════════════════════════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  background: #0d0b06;
+  color: #c8bfa6;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.story-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 1.5rem 8rem;
+}
+
+/* ── ENCABEZADO DE CAPÍTULO ── */
+.chapter-header {
+  text-align: center;
+  padding: 4rem 0 3rem;
+  margin-bottom: 0.5rem;
+}
+.chapter-eyebrow {
+  display: block;
+  font-family: 'Cinzel', 'Cinzel Decorative', Georgia, serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(205,133,63,0.7);
+  margin-bottom: 0.8rem;
+}
+.chapter-title {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 1.55rem;
+  font-weight: 400;
+  color: #d4af37;
+  margin: 0 0 2rem;
+  line-height: 1.35;
+}
+.chapter-rule {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+.chapter-rule-line {
+  flex: 1;
+  max-width: 120px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(212,175,55,0.25), transparent);
+}
+.chapter-rule-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(212,175,55,0.45);
+}
+
+/* ── IMAGEN DE CABECERA (primera — siempre visible) ── */
+.header-image {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  margin: 0 0 3rem;
+}
+.header-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  box-shadow: 0 16px 80px rgba(0,0,0,0.8);
+}
+.header-image .illus-caption {
+  padding-top: 0.5rem;
+}
+
+/* ── BLOQUES DE IMAGEN (revelables) ── */
+.illustration-block {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  margin: 2.5rem 0 2rem;
+}
+.illustration-scene img {
+  width: 100%;
+  height: auto;
+  display: block;
+  box-shadow: 0 12px 60px rgba(0,0,0,0.75);
+}
+.illus-caption {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 0.83rem;
+  color: rgba(205,133,63,0.65);
+  text-align: center;
+  padding: 0.55rem 2rem 0;
+  border-top: 1px solid rgba(205,133,63,0.15);
+}
+
+/* ── HEADINGS DE SECCIÓN (h3) ── */
+#story-content h3 {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(205,133,63,0.65);
+  text-align: center;
+  margin: 4rem 0 2.2rem;
+}
+#story-content h3::before,
+#story-content h3::after {
+  content: '— ';
+  color: rgba(212,175,55,0.25);
+}
+
+/* ── TEXTOS — espaciado de roco: 1.13rem / 1.8 / 1.1em entre párrafos ── */
+.texto-narrativo {
+  font-size: 1.13rem;
+  line-height: 1.8;
+  margin: 0 0 1.1em;
+  text-align: justify;
+  hyphens: auto;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   MODO REVEAL-CLICK — imagen oculta hasta tocar el párrafo
+   ═══════════════════════════════════════════════════════════ */
+body.reveal-click .illustration-block:not(.revealed) .illustration-scene {
+  display: none;
+}
+body.reveal-click .illustration-block:not(.revealed) .illus-caption {
+  display: none;
+}
+
+/* Párrafo trigger: subrayado punteado + flecha */
+body.reveal-click p.img-trigger {
+  cursor: pointer;
+  border-bottom: 1px dashed rgba(212,175,55,0.25);
+  padding-bottom: 0.12em;
+}
+body.reveal-click p.img-trigger::after {
+  content: ' ↓';
+  color: rgba(212,175,55,0.35);
+  font-style: normal;
+  font-size: 0.8em;
+}
+body.reveal-click p.img-trigger:hover {
+  color: #e0d4b4;
+}
+body.reveal-click p.img-trigger:hover::after {
+  color: rgba(212,175,55,0.65);
+}
+
+/* Animación de revelado */
+body.reveal-click .illustration-block.revealed .illustration-scene img {
+  animation: imgFadeIn 0.9s ease forwards;
+}
+body.reveal-click .illustration-block.revealed .illus-caption {
+  display: block;
+  animation: imgFadeIn 0.6s ease 0.75s both;
+}
+@keyframes imgFadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   BOTONES DE MODO (esquina superior derecha)
+   ═══════════════════════════════════════════════════════════ */
+#mode-buttons {
+  position: fixed;
+  top: 1rem;
+  right: 1.2rem;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+}
+.mode-label {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(184,168,130,0.3);
+}
+.mode-btn {
+  background: rgba(12,9,4,0.88);
+  color: rgba(200,185,150,0.45);
+  border: 1px solid rgba(184,168,130,0.15);
+  padding: 0.25rem 0.7rem;
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.07em;
+  cursor: pointer;
+  border-radius: 3px;
+  backdrop-filter: blur(10px);
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  width: 100%;
+  text-align: right;
+}
+.mode-btn:hover {
+  background: rgba(45,70,28,0.75);
+  color: #e8dfc0;
+  border-color: rgba(212,175,55,0.3);
+}
+.mode-btn.active {
+  background: rgba(45,70,28,0.5);
+  color: #d4c89a;
+  border-color: rgba(184,168,130,0.38);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   PORTADA HORIZONTAL DE CAPÍTULO
+   ═══════════════════════════════════════════════════════════ */
+.chapter-cover {
+  position: relative;
+  width: 100%;
+  min-height: 72vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.chapter-cover-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  z-index: 0;
+}
+
+.chapter-cover-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to bottom,
+    rgba(13,11,6,0.35) 0%,
+    rgba(13,11,6,0.05) 30%,
+    rgba(13,11,6,0.15) 55%,
+    rgba(13,11,6,0.88) 100%
+  );
+}
+
+.chapter-cover-text {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 3rem 2rem 3.5rem;
+  width: 100%;
+}
+
+.chapter-cover-serie {
+  display: block;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: rgba(205,133,63,0.6);
+  margin-bottom: 0.7rem;
+}
+
+.chapter-cover-titulo {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: clamp(1.6rem, 5vw, 2.8rem);
+  font-weight: 400;
+  color: #d4af37;
+  margin: 0 0 0.4rem;
+  line-height: 1.2;
+  text-shadow: 0 2px 24px rgba(0,0,0,0.9), 0 1px 6px rgba(0,0,0,0.8);
+}
+
+.chapter-cover-subtitulo {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: clamp(0.95rem, 2.5vw, 1.2rem);
+  color: rgba(220,205,170,0.7);
+  margin: 0 0 1.6rem;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.85);
+}
+
+.chapter-cover-cap {
+  display: inline-block;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(205,133,63,0.55);
+  border-top: 1px solid rgba(212,175,55,0.2);
+  padding-top: 0.9rem;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   DIÁLOGOS — override completo para el lector de pantalla
+   ═══════════════════════════════════════════════════════════ */
+
+/* Quitar la comilla " flotante: los — ya identifican el diálogo en español */
+.dialogo::before {
+  display: none;
+}
+
+/* Redefinir el estilo base para un look literario, sin caja web */
+.dialogo {
+  font-family: 'Cormorant Garamond', 'EB Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 1.08rem;
+  line-height: 1.8;
+  color: #ddd0a8;
+
+  /* Rail dorado: línea fina, sin caja */
+  border-left: 2px solid rgba(212,175,55,0.4);
+  background: linear-gradient(90deg, rgba(212,175,55,0.05) 0%, transparent 52%);
+  border-radius: 0;
+
+  padding: 0.08rem 0 0.08rem 1.25rem;
+  margin: 0 0 1.1em;
+  position: relative;
+}
+
+/* Entrada a diálogo desde narración: espacio igual al de roco entre párrafos */
+.texto-narrativo + .dialogo {
+  margin-top: 0;   /* el 1.1em del narrativo anterior ya separa */
+}
+
+/* Beat de acción tras un diálogo — unidad dramática pegada */
+.dialogo + .texto-narrativo {
+  margin-top: 0;
+  margin-bottom: 1.1em;
+  font-size: 0.97em;
+  color: rgba(200,191,166,0.82);
+}
+
+/* Intercambio rápido de réplicas */
+.dialogo + .dialogo {
+  margin-top: -0.4em;   /* contrae el espacio al fluir entre bocas */
+  border-left-color: rgba(212,175,55,0.22);
+}
+
+</style>
+</head>
+<body class="reveal-click">
+
+<!-- ══════════════════════════════════════════ -->
+<!-- PORTADA HORIZONTAL                         -->
+<!-- ══════════════════════════════════════════ -->
+<div class="chapter-cover">
+  <img class="chapter-cover-img"
+       src="../img/seccion-05/portada.jpg"
+       alt="Aldea de los zorros herreros bajo la sombra de los Lobos de la Garra Negra">
+  <div class="chapter-cover-overlay"></div>
+  <div class="chapter-cover-text">
+    <span class="chapter-cover-serie">El Cazador de Medianoche y las Lágrimas Robadas</span>
+    <h1 class="chapter-cover-titulo">Dilema Familiar y Separación</h1>
+    <p class="chapter-cover-subtitulo">forjas tributarias, lobos negros y decisiones imposibles</p>
+    <span class="chapter-cover-cap">Capítulo 5</span>
+  </div>
+</div>
+
+<!-- Botones de modo de ilustraciones -->
+<div id="mode-buttons">
+  <span class="mode-label">Imágenes</span>
+  <button class="mode-btn" id="mode-instant" onclick="setIllustrationMode('instant')">Inmediatas</button>
+  <button class="mode-btn active" id="mode-click"  onclick="setIllustrationMode('click')">Al tocar</button>
+</div>
+
+<div class="story-wrapper">
+
+  <!-- Encabezado -->
+  <div class="chapter-header">
+    <span class="chapter-eyebrow">Capítulo 5</span>
+    <h1 class="chapter-title" id="cap-titulo"></h1>
+    <div class="chapter-rule">
+      <div class="chapter-rule-line"></div>
+      <div class="chapter-rule-dot"></div>
+      <div class="chapter-rule-dot" style="background:rgba(205,133,63,0.35)"></div>
+      <div class="chapter-rule-line" style="background:linear-gradient(to left,transparent,rgba(212,175,55,0.25),transparent)"></div>
+    </div>
+  </div>
+
+  <!-- Contenido renderizado por JS -->
+  <div id="story-content"></div>
+
+</div><!-- /story-wrapper -->
+
+<script>
+// ═══════════════════════════════════════════════════════════════════════════
+//  RENDERIZADO desde CAPITULO_05 (seccion-05-historia.js)
+// ═══════════════════════════════════════════════════════════════════════════
+
+(function render() {
+  var content = document.getElementById('story-content');
+  document.getElementById('cap-titulo').textContent = CAPITULO_05.subtitulo;
+
+  var ilustCounter  = 0;
+  var firstImage    = true;  // la primera imagen va como header, siempre visible
+
+  CAPITULO_05.parrafos.forEach(function(item, idx) {
+
+    // ── H3 HEADING ──────────────────────────────────────────────────────
+    if (item.tipo === 'h3') {
+      var h = document.createElement('h3');
+      h.textContent = item.texto;
+      content.appendChild(h);
+
+    // ── IMAGEN ──────────────────────────────────────────────────────────
+    } else if (item.tipo === 'imagen') {
+      ilustCounter++;
+      var block = document.createElement('div');
+
+      if (firstImage) {
+        // Primera imagen: cabecera de sección, nunca entra en reveal-click
+        block.className = 'header-image';
+        firstImage = false;
+      } else {
+        block.className = 'illustration-block';
+        block.id = 'illus-' + ilustCounter;
+      }
+
+      var scene = document.createElement('div');
+      scene.className = 'illustration-scene';
+      var img = document.createElement('img');
+      img.src     = item.src;
+      img.alt     = item.alt;
+      img.loading = 'lazy';
+      scene.appendChild(img);
+
+      var cap = document.createElement('div');
+      cap.className   = 'illus-caption';
+      cap.textContent = item.caption;
+
+      block.appendChild(scene);
+      block.appendChild(cap);
+      content.appendChild(block);
+
+    // ── PÁRRAFO (narrativo / dialogo) ────────────────────────────────────
+    } else {
+      var p = document.createElement('p');
+      p.className  = item.tipo === 'dialogo' ? 'dialogo' : 'texto-narrativo';
+      p.innerHTML  = item.texto;  // innerHTML preserva <em> para itálicas
+      p.dataset.idx = idx;
+      content.appendChild(p);
+    }
+  });
+})();
+
+
+// ═══════════════════════════════════════════════════════════════════════════
+//  SISTEMA REVEAL-CLICK
+// ═══════════════════════════════════════════════════════════════════════════
+
+var triggerCounter = 0;
+
+function initClickReveal() {
+  document.querySelectorAll('.illustration-block').forEach(function(block) {
+    if (!block.id) block.id = 'illus-' + (++triggerCounter);
+
+    // Buscar el <p> inmediatamente anterior como trigger
+    var triggerP = null;
+    var prev = block.previousElementSibling;
+    while (prev) {
+      if (prev.tagName === 'P') { triggerP = prev; break; }
+      if (prev.tagName === 'H3') break;  // no cruzar headings de sección
+      prev = prev.previousElementSibling;
+    }
+
+    if (!triggerP) {
+      // Sin párrafo anterior → imagen siempre visible
+      block.classList.add('revealed');
+      return;
+    }
+
+    triggerP.classList.add('img-trigger');
+    var existing = triggerP.dataset.revealsId || '';
+    triggerP.dataset.revealsId = existing
+      ? existing + ',' + block.id
+      : block.id;
+  });
+}
+
+// Click delegado en todo el documento
+document.addEventListener('click', function(e) {
+  if (!document.body.classList.contains('reveal-click')) return;
+  var trigger = e.target.closest('p.img-trigger');
+  if (!trigger) return;
+
+  var ids = (trigger.dataset.revealsId || '').split(',').filter(Boolean);
+  var revealedAny = false;
+  ids.forEach(function(id) {
+    var block = document.getElementById(id);
+    if (block && !block.classList.contains('revealed')) {
+      block.classList.add('revealed');
+      revealedAny = true;
+    }
+  });
+  if (revealedAny) trigger.classList.remove('img-trigger');
+});
+
+
+// ═══════════════════════════════════════════════════════════════════════════
+//  CAMBIO DE MODO DE ILUSTRACIONES
+// ═══════════════════════════════════════════════════════════════════════════
+
+function setIllustrationMode(mode) {
+  // Limpiar estado anterior
+  document.querySelectorAll('p.img-trigger').forEach(function(p) {
+    p.classList.remove('img-trigger');
+    delete p.dataset.revealsId;
+  });
+  document.querySelectorAll('.illustration-block.revealed').forEach(function(b) {
+    b.classList.remove('revealed');
+  });
+
+  document.body.classList.remove('reveal-click');
+
+  if (mode === 'click') {
+    document.body.classList.add('reveal-click');
+    initClickReveal();
+  }
+
+  document.querySelectorAll('.mode-btn').forEach(function(b) {
+    b.classList.remove('active');
+  });
+  var btn = document.getElementById('mode-' + mode);
+  if (btn) btn.classList.add('active');
+
+  localStorage.setItem('cazador-05-img-mode', mode);
+}
+
+
+// ═══════════════════════════════════════════════════════════════════════════
+//  INICIALIZACIÓN
+// ═══════════════════════════════════════════════════════════════════════════
+
+initClickReveal();
+
+var savedMode = localStorage.getItem('cazador-05-img-mode');
+if (savedMode && savedMode !== 'click') {
+  setIllustrationMode(savedMode);
+}
+</script>
+
+</body>
+</html>
